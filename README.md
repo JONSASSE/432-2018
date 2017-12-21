@@ -11,10 +11,6 @@ The [course schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDU
 
 Course notes will be available at https://thomaselove.github.io/432-notes/ in due time.
 
-## Before the Class Begins
-
-To get help on anything related to the course before it begins, email Dr. Love at `thomas.love@case.edu`.
-
 ## Key Links
 
 - [Assignments](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) material.
@@ -23,4 +19,8 @@ To get help on anything related to the course before it begins, email Dr. Love a
 - Presentation [Slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides) from class. 
     - This is where you'll find audio files of each day's presentation, too.
 - Outside [Texts](https://github.com/THOMASELOVE/432-2018/tree/master/texts) and other suggested reading materials.
-    - The required texts for Spring 2018 include Jeff Leek's [How to be a Modern Scientist](https://leanpub.com/modernscientist).
+    - The required texts for Spring 2018 will include Jeff Leek's [How to be a Modern Scientist](https://leanpub.com/modernscientist), which you should purchase as soon as you can.
+
+## Before the Class Begins
+
+To get help on anything related to the course before it begins, email Dr. Love at `thomas.love@case.edu`.
