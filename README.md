@@ -1,5 +1,5 @@
 # 432-2018
-This is the home page for the Spring 2018 version of PQHS / CRSP / MPHP 432: Data Science for Biological, Medical and Health Research II, taught by Professor Thomas Love. The course is given on Tuesdays and Thursdays from 1:00 to 2:15 PM, in a location to be announced.
+This is the home page for the Spring 2018 version of PQHS / CRSP / MPHP 432: Data Science for Biological, Medical and Health Research II, taught by Professor Thomas Love. The course is given on Tuesdays and Thursdays from 1:00 to 2:15 PM, in E 321-323 at the School of Medicine (same classroom as 431 this past Fall.)
 
 ## The Course Syllabus and Schedule
 
