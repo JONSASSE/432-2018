@@ -1,6 +1,6 @@
 # Schedule for 432, Spring 2018
 
-All classes meet from 1:00 to 2:15 PM
+All classes meet from 1:00 to 2:15 PM in E 321-323 at the School of Medicine.
 
 Class | Date | Topics and Deliverables
 -----: | ---------: | ---------------------------------
