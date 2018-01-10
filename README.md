@@ -30,8 +30,8 @@ To get help on anything related to the course before it begins, email Dr. Love a
 Those of you wondering when I'm going to post material on the 432 website beyond the basic stuff that's already there, the answer is, not yet, and many things may not arrive until the morning of our first class, on Tuesday January 16. But if you are wondering what you can do in advance to feel better prepared. I can think of four things:
 
 1. Software stuff:
-  a. Get yourself a free GitHub account, and come to the first class prepared to tell me your GitHub user name. We won't need this on Day 1, but it would be helpful.
-  b. Also, update your R (to 3.4.3 or later) and R Studio (to 1.1.383 or later) so you'll be ready to go on the first day. Details on software installation [can be found here](https://github.com/THOMASELOVE/431/blob/master/software-installation-431.md). It is not imperative, but definitely useful to have a laptop that can run R and R Studio in class. 
+    - a. Get yourself a free GitHub account, and come to the first class prepared to tell me your GitHub user name. We won't need this on Day 1, but it would be helpful.
+    - b. Also, update your R (to 3.4.3 or later) and R Studio (to 1.1.383 or later) so you'll be ready to go on the first day. Details on software installation [can be found here](https://github.com/THOMASELOVE/431/blob/master/software-installation-431.md). It is not imperative, but definitely useful to have a laptop that can run R and R Studio in class. 
 
 2. Get a copy of Jeff Leek's book [How to be a Modern Scientist](https://leanpub.com/modernscientist), which you can obtain from LeanPub. The book is about how to be a scientist the modern, open-source way. We're going to read this together over the first half of the semester, but there's nothing stopping you from starting in advance. The sections on Data Sharing and Scientific Code are most directly relevant to this course, so you might start with them.
 
