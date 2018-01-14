@@ -27,7 +27,7 @@ Class | Date | Topics and Deliverables
 --  | Mon 2018-03-05 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
 15 | Tue 2018-03-06 | Generalized Linear Models 5
 16 | Thu 2018-03-08 | Generalized Linear Models 6
--- | Week of 2018-03-12 | **SPRING BREAK at CWRU - NO CLASS**
+-- | 2018-03-12 to 16 | **SPRING BREAK at CWRU - NO CLASS**
 -- | Fri 2018-03-16 | Dr. Love gives a seminar at MetroHealth 9-10:30 AM on "Rethinking Statistical Significance"
 -- | Mon 2018-03-19 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at noon
 17 | Tue 2018-03-20 | **Special Session**: The Statistical Crisis in Science
