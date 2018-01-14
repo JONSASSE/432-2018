@@ -1,56 +1,109 @@
+# Topics by Section
+
+The course is divided into several sections. See [the Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) for more details on the timing of these sections.
+
+## Section 1. Linear Regression
+
+The material we'll present on linear regression includes:
+
+- review of the fundamentals
+- fitting non-linear relationships through predictor transformation
+- variable selection
+- multi-factor analysis of variance (ANOVA)
+- analysis of covariance (ANCOVA)
+- cross-validation approaches
+- dealing with missing data
+- weighted linear regression
+- robust linear regression
+
+## Section 2. Logistic Regression
+
+The material we'll present on logistic regression includes:
+
+- fundamentals of the models (link function, interpretation, etc.)
+- models for binary outcomes
+- models for proportions
+- discrimination through C statistics, etc.
+- calibration of logistic regression models
+- building risk adjustment models
+
+## Section 3. Generalized Linear Models
+
+The material we'll present on generalized linear models (of which linear and logistic regression are subsets) includes:
+
+- Models for count outcomes, and this will include: 
+    - Poisson regression 
+    - Negative Binomial regression
+    - Zero-inflated approaches
+    - Dealing with overdispersion
+    - Hurdle models
+- Models for Multi-categorical outcomes
+    - Ordered logistic regression
+    - Nominal multi-categorical models
+
+## Section 4. The Statistical (Replicability) Crisis in Science
+
+To be determined, but I'll clearly pull a lot of materials from [Andrew Gelman's blog](http://andrewgelman.com/) and from Jeff Leek's [How to be a Modern Scientist](https://leanpub.com/modernscientist).
+
+- Problems with P values, Garden of Forking Paths, Registering Your Analyses
+- Moving past Post-Hoc Power Calculations
+
+## Section 5. Cluster Analysis
+
+Specifically, I'll present a demonstration or two of principal components analysis to reduce dimensionality in a regression problem.
+
+## Section 6. Survival Analysis
+
+- Kaplan-Meier curve estimation and interpretation
+- Cox proportional hazards regression models
+
+## Sections 7 and beyond. To be determined
+
+- We will determine what else we will discuss as the semester progresses.
+- I will spend one session near the end of the course talking about estimating **causal effects** which is the main focus of my **PQHS 500** course on Observational Studies.
+
 # Potential 432 Topics So Far
 
 This post was developed during 431. I have placed it here for ease of reference as I craft the course. I do not guarantee to stick to this.
-
-My goal, honestly, is to write the course in terms of a series of case studies, and discuss them through the semester. So far, I have three years of past notes and slides, and no desire to use any of them as they are. We'll see what happens between December 15 and January 15.
 
 Topic | Covered in 432?
 -----------------------------------------------------------------------: | :---------------:
 Two Projects, Short(er) Quizzes, [Minute Papers](http://oncourseworkshop.com/self-awareness/one-minute-paper/), Statistics in Action, Live R demos, Working in Pairs, 431-help, Teaching Assistants, Love-boost as an R package | Definitely the plan.
 Better Distribution of Work Throughout the Term | A major goal.
-Logistic Regression | Yes
-Imputation and analysis with missing values | Yes (sorry this didn't make 431)
-Weighted Linear Regression and Robust Linear Regression | Yes
-Transforming predictors, polynomial regression, restricted cubic splines | Yes
-Approaches other than stepwise AIC and hypothesis tests for variable selection | Yes
-C_p and Best Subsets Regression | Yes
-How many observations do I need to fit [a linear](https://www.sciencedirect.com/science/article/pii/S0895435615000141) or [a logistic model](https://twitter.com/f2harrell/status/936230071219707913) reasonably? | Yes
+Audio-recording of lectures | Yes, I believe so.
+Jeff Leek's "[How To Be a Modern Scientist](https://leanpub.com/modernscientist)" | Yes, we'll read it all.
+Building a Decent Table 1 without going nuts | Class 1
+Transforming predictors, polynomial regression, restricted cubic splines | Section 1
+Approaches other than stepwise AIC and hypothesis tests for variable selection | Section 1
+C_p and Best Subsets Regression | Section 1
+Multi-factor ANOVA, designing experiments | Section 1
+Imputation and analysis with missing values | Section 1
+Weighted Linear Regression and Robust Linear Regression | Section 1
 [Cross Validation](https://www.youtube.com/watch?v=OwPQHmiJURI) to avoid [Overfitting](https://www.youtube.com/watch?v=CmEqvD_ov2o) | Yes
-Jeff Leek's "[How To Be a Modern Scientist](https://leanpub.com/modernscientist)" | Yes, we'll read it all
-Regression models for count data (Poisson, Negative Binomial) | Yes
-Regression models for multi-categorical outcomes | Yes
-Data Management: Wrangling/Rectangling using the Tidyverse and [R for Data Science](http://r4ds.had.co.nz/) | Yes
-Merging Data Sets, and the notion of Split-Apply-Combine | Yes
-Communicating the Results of Statistical Models Well | Yes
-Multi-factor ANOVA, designing experiments | Yes
-Kaplan-Meier estimator, Cox proportional hazards models | Yes
-[Beyond Power Calculations](http://www.stat.columbia.edu/~gelman/research/published/retropower_final.pdf): Gelman's retrodesign function to assess an inference after the fact | Yes (sorry this didn't make 431)
-Non-linear regression models | I expect so.
-Reading and Critiquing the Code of Other People, Reproducible Examples | I really hope so.
-Using GitHub and [Happy Git with R](http://happygitwithr.com/) for more than we did this term | I really hope so.
-Building a Web-Based Presentation of Your Work | I really hope so.
-Learning [a little Shiny](https://shiny.rstudio.com/) | I really hope so.
-P values, Garden of Forking Paths, Registering Your Analyses | I really hope so.
-Building a Decent Table 1 without going nuts | I really hope so.
-Log-Linear Models for Contingency Tables | I really hope so.
-Mixed Effect Models | I really hope so, but we'll see.
-Repeated Measures ANOVA | I hope so, but we'll see.
-Hierarchical Linear Models | I hope so, but we'll see.
-Longitudinal Analysis other than that | Not really, no.
-Other Survival Analysis topics | Nope (we have a course in this subject)
-Cluster Analysis, Principal Components Analysis | I hope so, but we'll see.
-Machine learning methods like the lasso and elastic net | A bit, maybe.
-Scraping data from the web | At least one example.
-Sensitivity, Specificity, ROC analysis | A bit, maybe
-Special Methods for Clinical Trials | Not much outside of experiments
-Propensity Scores, Observational Studies, Causal Effects | Just enough to encourage you to take 500
-The problem of multiple comparisons and when to worry about it | I don't know.
-Sophisticated strategies for simulating in power calculations | I doubt it.
-ASA Statement on P values | Probably.
-The mathematics behind all of this stuff | As little as possible.
-Bayesian statistics | Not a lot, outside of some hierarchical modeling.
-Model Matrices, Markov Chains | Nope
-Audio-recording of lectures | I hope so. Tech?
-Little "lecture" videos about key concepts | From others - sure. From me - tech + time issues.
-BART | Maybe?
-Other Things That I've Forgotten Here | Probably
+How many observations do I need to fit [a linear](https://www.sciencedirect.com/science/article/pii/S0895435615000141) or [a logistic model](https://twitter.com/f2harrell/status/936230071219707913) reasonably? | Sections 1,2
+Logistic Regression | Section 2
+Regression models for count data (Poisson, Negative Binomial) | Section 3
+Regression models for multi-categorical outcomes | Section 3
+P values, Garden of Forking Paths, Registering Your Analyses | Section 4
+ASA Statement on P values | Section 4
+[Beyond Power Calculations](http://www.stat.columbia.edu/~gelman/research/published/retropower_final.pdf): Gelman's retrodesign function to assess an inference after the fact | Section 4
+Cluster Analysis, Principal Components Analysis | Section 5
+Kaplan-Meier estimator, Cox proportional hazards models | Section 6
+Causal Effects | Just enough to encourage you to take 500
+Data Management: Wrangling/Rectangling using the Tidyverse and [R for Data Science](http://r4ds.had.co.nz/) | Projects, Homework
+Merging Data Sets, and the notion of Split-Apply-Combine | Projects, Homework
+Communicating the Results of Statistical Models Well | Projects, Homework
+Reading and Critiquing the Code of Other People, Reproducible Examples | Projects, Homework
+Building a Web-Based Presentation of Your Work | Projects, I hope
+Pulling data from the web | Homework
+
+## Other Things I hope to Get To but cannot yet promise
+
+- Using GitHub and [Happy Git with R](http://happygitwithr.com/) for more than we did in 431
+- Learning [a little Shiny](https://shiny.rstudio.com/)
+- Log-Linear Models for Contingency Tables 
+- Mixed Effect Models 
+- Hierarchical Linear Models
+- Machine learning methods like the lasso and elastic net
+- Sensitivity, Specificity, ROC analysis 
+- BART
