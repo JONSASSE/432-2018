@@ -7,22 +7,27 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 1 | Tue 2018-01-16 | Introduction, Building Table 1
 2 | Thu 2018-01-18 | **Linear Regression** 1
 3 | Tue 2018-01-23 | Linear Regression 2 
-- | - | (Read **R4DS** 22-23.3, 26-27, **Leek** Data Sharing & Scientific Code by now)
+3 | READINGS | **R4DS** 22-23.3, 26-27, **Leek** Data Sharing & Scientific Code by now
 4 | Thu 2018-01-25 | Linear Regression 3
 -- | Fri 2018-01-26 | [Assignment 1](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-5 | Tue 2018-01-30 | Linear Regression 4 (Read **R4DS** 23.4-23.6, 30, **Leek** Reading scientific papers by now)
+5 | Tue 2018-01-30 | Linear Regression 4 
+5 | READINGS | **R4DS** 23.4-23.6, 30, **Leek** Reading scientific papers by now
 6 | Thu 2018-02-01 | Linear Regression 5
 -- | Fri 2018-02-02 | [Assignment 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-7 | Tue 2018-02-06 | Linear Regression 6 (Read **R4DS** 28, **Leek** Paper writing, Peer review, Internal Scientific Communication by now)
+7 | Tue 2018-02-06 | Linear Regression 6 
+7 | READINGS | **R4DS** 28, **Leek** Paper writing, Peer review, Internal Scientific Communication by now
 8 | Thu 2018-02-08 | **Logistic Regression** 1
 -- | Fri 2018-02-09 | [Assignment 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-9 | Tue 2018-02-13 | Logistic Regression 2 (Read **R4DS** 24 by now, **Leek** Career Planning & Your Online Identity by now)
+9 | Tue 2018-02-13 | Logistic Regression 2 
+9 | READINGS | **R4DS** 24 by now, **Leek** Career Planning & Your Online Identity by now
 10 | Thu 2018-02-15 | Logistic Regression 3
 -- | Fri 2018-02-16 | [Assignment 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-11 | Tue 2018-02-20 | Logistic Regression 4 (Read **R4DS** 25 by now, **Leek** Scientific Blogging, Scientific Talks by now)
+11 | Tue 2018-02-20 | Logistic Regression 4 
+11 | READINGS | **R4DS** 25 by now, **Leek** Scientific Blogging, Scientific Talks by now
 12 | Thu 2018-02-22 | **Generalized Linear Models** 1
 -- | Fri 2018-02-23 | [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-13 | Tue 2018-02-27 | Generalized Linear Models 2 (Read **R4DS** 1-12 and 15 by now, **Leek** finish book by now)
+13 | Tue 2018-02-27 | Generalized Linear Models 2 
+13 | READINGS | **R4DS** 1-12 and 15 by now, **Leek** finish book by now
 14 | Thu 2018-03-01 | Generalized Linear Models 3
 -- | Fri 2018-03-02 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
 --  | Mon 2018-03-05 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
