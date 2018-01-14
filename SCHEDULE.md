@@ -34,7 +34,7 @@ Class | Date | Topics and Deliverables
 19 | Tue 2018-03-27 | Cluster Analysis 2
 20 | Thu 2018-03-29 | Survival Analysis 1
 -- | Fri 2018-03-30 | Assignment 6 due at noon
-21 | Tue 2018-04-03 | Survival Analysis 2
+21 | Tue 2018-04-03 | Survival Analysis 2 (project presentation dates announced)
 22 | Thu 2018-04-05 | Survival Analysis 3
 -- | Fri 2018-04-06 | Assignment 7 due at noon
 23 | Tue 2018-04-10 | To Be Determined
