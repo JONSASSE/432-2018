@@ -5,20 +5,20 @@ All classes meet from 1:00 to 2:15 PM in E 321-323 at the School of Medicine.
 Class | Date | Topics and Deliverables
 :----: | ---------- | ------------------------------------------------------------
 1 | Tue 2018-01-16 | Introduction, Building Table 1
-2 | Thu 2018-01-18 | Linear Regression 1
+2 | Thu 2018-01-18 | **Linear Regression** 1
 3 | Tue 2018-01-23 | Linear Regression 2
 4 | Thu 2018-01-25 | Linear Regression 3
 -- | Fri 2018-01-26 | [Assignment 1](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 5 | Tue 2018-01-30 | Linear Regression 4
 6 | Thu 2018-02-01 | Linear Regression 5
 -- | Fri 2018-02-02 | [Assignment 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-7 | Tue 2018-02-06 | Logistic Regression 1
+7 | Tue 2018-02-06 | **Logistic Regression** 1
 8 | Thu 2018-02-08 | Logistic Regression 2
 -- | Fri 2018-02-09 | [Assignment 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 9 | Tue 2018-02-13 | Logistic Regression 3
 10 | Thu 2018-02-15 | Logistic Regression 4
 -- | Fri 2018-02-16 | [Assignment 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-11 | Tue 2018-02-20 | Generalized Linear Models 1
+11 | Tue 2018-02-20 | **Generalized Linear Models** 1
 12 | Thu 2018-02-22 | Generalized Linear Models 2
 -- | Fri 2018-02-23 | [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 13 | Tue 2018-02-27 | Generalized Linear Models 3
@@ -28,11 +28,12 @@ Class | Date | Topics and Deliverables
 15 | Tue 2018-03-06 | Generalized Linear Models 5
 16 | Thu 2018-03-08 | Generalized Linear Models 6
 -- | Week of 2018-03-12 | **SPRING BREAK at CWRU - NO CLASS**
+-- | Fri 2018-03-16 | Dr. Love gives a seminar at MetroHealth 9-10:30 AM on "Rethinking Statistical Significance"
 -- | Mon 2018-03-19 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at noon
-17 | Tue 2018-03-20 | Reproducibility, *p* Values, etc.
-18 | Thu 2018-03-22 | Cluster Analysis 1
+17 | Tue 2018-03-20 | **Special Session**: The Statistical Crisis in Science
+18 | Thu 2018-03-22 | **Cluster Analysis** 1
 19 | Tue 2018-03-27 | Cluster Analysis 2
-20 | Thu 2018-03-29 | Survival Analysis 1
+20 | Thu 2018-03-29 | **Survival Analysis** 1
 -- | Fri 2018-03-30 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 21 | Tue 2018-04-03 | Survival Analysis 2 (project presentation dates announced)
 22 | Thu 2018-04-05 | Survival Analysis 3
@@ -44,7 +45,7 @@ Class | Date | Topics and Deliverables
 25 | Tue 2018-04-17 | *To Be Determined*
 26 | Thu 2018-04-19 | *To Be Determined*
 -- | Fri 2018-04-20 | [Assignment 8](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-27 | Tue 2018-04-24 | Propensity Scores and Causal Effects
+27 | Tue 2018-04-24 | Estimating **Causal Effects**
 28 | Thu 2018-04-26 | Final Class
 -- | Thu 2018-05-03 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md), 1
 -- | Mon 2018-05-07 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md), 2
