@@ -6,7 +6,8 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 :----: | ---------- | ------------------------------------------------------------
 1 | Tue 2018-01-16 | Introduction, Building Table 1
 2 | Thu 2018-01-18 | **Linear Regression** 1
-3 | Tue 2018-01-23 | Linear Regression 2 (Read **R4DS** 22-23.3, 26-27, **Leek** Data Sharing & Scientific Code by now)
+3 | Tue 2018-01-23 | Linear Regression 2 
+- | - | (Read **R4DS** 22-23.3, 26-27, **Leek** Data Sharing & Scientific Code by now)
 4 | Thu 2018-01-25 | Linear Regression 3
 -- | Fri 2018-01-26 | [Assignment 1](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 5 | Tue 2018-01-30 | Linear Regression 4 (Read **R4DS** 23.4-23.6, 30, **Leek** Reading scientific papers by now)
