@@ -10,7 +10,7 @@ The material we'll present on linear regression includes:
 - Building a Linear Regression Model to Make Accurate Predictions
 - Building a Linear Regression Model to Describe an Association Accurately
 - Building a Linear Regression Model for Risk Adjustment
-- Proper use of a Spearman rho^2 plot
+- Proper use of a Spearman Rho-Squared plot
 - Incorporating Predictor Transformations in a Regression Model
 - Variable Selection with Cp, AIC, BIC and adjusted R^2
     - Best Subsets approaches to Variable Selection
