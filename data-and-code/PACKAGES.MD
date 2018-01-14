@@ -2,7 +2,7 @@
 
 Copy and paste the following two lines of code into the Console window of R Studio to install the packages you'll need for this course.
 
-`pkgs <- c("aplpack", "arm", "babynames", "boot", "broom", "car", "cowplot", "devtools", "Epi", "faraway", "forcats", "foreign", "gapminder", "GGally", "ggridges", "gridExtra", "Hmisc", "infer", "knitr", "lme4", "magrittr", "markdown", "MASS", "mice", "mosaic", "multcomp", "NHANES", "pander", "psych", "pwr", "qcc", "rmarkdown", "rms", "sandwich", "skimr", "survival", "tableone", "tidyverse", "vcd", "viridis")`
+`pkgs <- c("afex", "aplpack", "arm", "babynames", "boot", "car", "cowplot", "devtools", "Epi", "ez", "faraway", "fivethirtyeight", "gapminder", "gee", "geepack", "GGally", "ggrepel", "ggridges", "ggthemes", "gridExtra", "Hmisc", "infer", "knitr", "lars", "lattice", "leaps", "lme4", "lmerTest", "magrittr", "markdown", "MASS", "mice", "mosaic", "multcomp", "NHANES", "OIsurv", "pander", "pROC", "pscl", "psych", "pwr", "qcc", "QuantPsyc", "rmarkdown", "rmdformats", "rms", "ROCR", "rstanarm", "sandwich", "skimr", "survival", "survminer", "tableone", "tidyverse", "vcd", "viridis")`
 
 `install.packages(pkgs)`
 
