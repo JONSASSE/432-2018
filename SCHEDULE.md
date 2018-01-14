@@ -8,7 +8,7 @@ Class | Date | Topics and Deliverables
 2 | Thu 2018-01-18 | Linear Regression 1
 3 | Tue 2018-01-23 | Linear Regression 2
 4 | Thu 2018-01-25 | Linear Regression 3
--- | Fri 2018-01-26 | [Assignment 1](https://github.com/THOMASELOVE/432-2018/tree/master/assignments due at noon
+-- | Fri 2018-01-26 | [Assignment 1](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 5 | Tue 2018-01-30 | Linear Regression 4
 6 | Thu 2018-02-01 | Linear Regression 5
 -- | Fri 2018-02-02 | [Assignment 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
