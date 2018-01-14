@@ -7,14 +7,27 @@ The course is divided into several sections. See [the Schedule](https://github.c
 The material we'll present on linear regression includes:
 
 - review of the fundamentals
-- fitting non-linear relationships through predictor transformation
-- variable selection
-- multi-factor analysis of variance (ANOVA)
-- analysis of covariance (ANCOVA)
-- cross-validation approaches
+- Building a Linear Regression Model to Make Accurate Predictions
+- Building a Linear Regression Model to Describe an Association Accurately
+- Building a Linear Regression Model for Risk Adjustment
+- Proper use of a Spearman rho^2 plot
+- Incorporating Predictor Transformations in a Regression Model
+- Variable Selection with Cp, AIC, BIC and adjusted R^2
+    - Best Subsets approaches to Variable Selection
+- Two-Way Analysis of Variance, with and without interaction
+- Analysis of Covariance
+- Multi-factor ANOVA, designing experiments
+- K-Fold Cross-Validation in a Regression Model
 - dealing with missing data
-- weighted linear regression
-- robust linear regression
+    - Incorporating Simple Imputation in a Regression Model
+    - Incorporating Multiple Imputation in a Regression Model
+- Weighted Linear Regression
+- Robust Linear Regression
+
+### Maybe we'll also include...
+
+- Machine learning methods like the lasso and elastic net 
+- What you should do inferentially with matched groups larger than pairs (liked matched trios) in analyzing quantitative outcomes.
 
 ## Section 2. Logistic Regression
 
@@ -97,11 +110,13 @@ Reading and Critiquing the Code of Other People, Reproducible Examples | Project
 Building a Web-Based Presentation of Your Work | Projects, I hope
 Pulling data from the web | Homework
 
-## Other Things I hope to Get To but cannot yet promise
+## Other Things I Hope to get to but cannot yet promise
 
 - Using GitHub and [Happy Git with R](http://happygitwithr.com/) for more than we did in 431
 - Learning [a little Shiny](https://shiny.rstudio.com/)
 - Log-Linear Models for Contingency Tables 
+- Classification and Regression Trees
+- Building a Quantile Regression Model
 - Mixed Effect Models 
 - Hierarchical Linear Models
 - Machine learning methods like the lasso and elastic net
