@@ -1,6 +1,8 @@
 # Schedule for 432, Spring 2018
 
-All classes meet from 1:00 to 2:15 PM in E 321-323 at the School of Medicine. Readings refer to the **Leek** and **R4DS** books described on [the Texts page](https://github.com/THOMASELOVE/432-2018/tree/master/texts). 
+All classes meet from 1:00 to 2:15 PM in E 321-323 at the School of Medicine. 
+
+- Readings posted here refer to the **Leek** and **R4DS** books described on [the Texts page](https://github.com/THOMASELOVE/432-2018/tree/master/texts). 
 
 Class | Date | Topics, Reading Suggestions, Deliverables
 :----: | ---------- | ------------------------------------------------------------
