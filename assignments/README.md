@@ -2,8 +2,8 @@
 
 There are a total of 8 regular homework assignments this semester.
 
-Link | Due at noon on | Material
--------: | -------------: | ----------------------------------------------------------
+Link to Details | Due at noon on | Material Covered in the Assignment
+:-------: | :----------: | ----------------------------------------------------------
 HW 1 | Fri 2018-01-26 | Building Table 1, Linear Regression
 HW 2 | Fri 2018-02-02 | Linear Regression, ANOVA
 HW 3 | Fri 2018-02-09 | Linear Regression
