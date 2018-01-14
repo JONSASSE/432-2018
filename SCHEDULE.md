@@ -1,6 +1,6 @@
 # Schedule for 432, Spring 2018
 
-All classes meet from 1:00 to 2:15 PM in E 321-323 at the School of Medicine. Readings refer to the **Leek** and **R4DS** books described on [the Texts page](https://github.com/THOMASELOVE/432-2018/tree/master/texts). I expect you've already read **R4DS** Sections 1-12 and 15 as part of 431. If you didn't, be certain you've done that by 2018-02-27 as indicated below.
+All classes meet from 1:00 to 2:15 PM in E 321-323 at the School of Medicine. Readings refer to the **Leek** and **R4DS** books described on [the Texts page](https://github.com/THOMASELOVE/432-2018/tree/master/texts). 
 
 Class | Date | Topics, Reading Suggestions, Deliverables
 :----: | ---------- | ------------------------------------------------------------
@@ -11,23 +11,23 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 4 | Thu 2018-01-25 | Linear Regression 3
 -- | Fri 2018-01-26 | [Assignment 1](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 5 | Tue 2018-01-30 | Linear Regression 4 
-5 | Read by 01-30 | **R4DS** 23.4-23.6, 30, **Leek** Reading scientific papers
+-- | Read by 01-30 | **R4DS** 23.4-23.6, 30, **Leek** Reading scientific papers
 6 | Thu 2018-02-01 | Linear Regression 5
 -- | Fri 2018-02-02 | [Assignment 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 7 | Tue 2018-02-06 | Linear Regression 6 
-7 | READINGS | **R4DS** 28, **Leek** Paper writing, Peer review, Internal Scientific Communication by now
+-- | Read by 02-06 | **R4DS** 28, **Leek** Paper writing & Peer review & Internal Scientific Communication
 8 | Thu 2018-02-08 | **Logistic Regression** 1
 -- | Fri 2018-02-09 | [Assignment 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 9 | Tue 2018-02-13 | Logistic Regression 2 
-9 | READINGS | **R4DS** 24 by now, **Leek** Career Planning & Your Online Identity by now
+-- | Read by 02-13 | **R4DS** 24, **Leek** Career Planning & Your Online Identity
 10 | Thu 2018-02-15 | Logistic Regression 3
 -- | Fri 2018-02-16 | [Assignment 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 11 | Tue 2018-02-20 | Logistic Regression 4 
-11 | READINGS | **R4DS** 25 by now, **Leek** Scientific Blogging, Scientific Talks by now
+-- | Read by 02-20 | **R4DS** 25, **Leek** Scientific Blogging & Scientific Talks
 12 | Thu 2018-02-22 | **Generalized Linear Models** 1
 -- | Fri 2018-02-23 | [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 13 | Tue 2018-02-27 | Generalized Linear Models 2 
-13 | READINGS | **R4DS** 1-12 and 15 by now, **Leek** finish book by now
+-- | Read by 02-27 | **R4DS** 1-12 and 15 (which you probably did in 431), **Leek** finish book
 14 | Thu 2018-03-01 | Generalized Linear Models 3
 -- | Fri 2018-03-02 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
 --  | Mon 2018-03-05 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
