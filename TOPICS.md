@@ -6,7 +6,7 @@ The course is divided into several sections. See [the Schedule](https://github.c
 
 The material we'll present on linear regression includes:
 
-- review of the fundamentals
+- Review of the Fundamentals
 - Building a Linear Regression Model to Make Accurate Predictions
 - Building a Linear Regression Model to Describe an Association Accurately
 - Building a Linear Regression Model for Risk Adjustment
@@ -18,7 +18,7 @@ The material we'll present on linear regression includes:
 - Analysis of Covariance
 - Multi-factor ANOVA, designing experiments
 - K-Fold Cross-Validation in a Regression Model
-- dealing with missing data
+- Dealing with Missing Data
     - Incorporating Simple Imputation in a Regression Model
     - Incorporating Multiple Imputation in a Regression Model
 - Weighted Linear Regression
