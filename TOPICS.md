@@ -79,7 +79,7 @@ C_p and Best Subsets Regression | Section 1
 Multi-factor ANOVA, designing experiments | Section 1
 Imputation and analysis with missing values | Section 1
 Weighted Linear Regression and Robust Linear Regression | Section 1
-[Cross Validation](https://www.youtube.com/watch?v=OwPQHmiJURI) to avoid [Overfitting](https://www.youtube.com/watch?v=CmEqvD_ov2o) | Yes
+[Cross Validation](https://www.youtube.com/watch?v=OwPQHmiJURI) to avoid [Overfitting](https://www.youtube.com/watch?v=CmEqvD_ov2o) | Section 1
 How many observations do I need to fit [a linear](https://www.sciencedirect.com/science/article/pii/S0895435615000141) or [a logistic model](https://twitter.com/f2harrell/status/936230071219707913) reasonably? | Sections 1,2
 Logistic Regression | Section 2
 Regression models for count data (Poisson, Negative Binomial) | Section 3
