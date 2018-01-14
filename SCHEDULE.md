@@ -12,21 +12,21 @@ Class | Date | Topics and Deliverables
 5 | Tue 2018-01-30 | Linear Regression 4
 6 | Thu 2018-02-01 | Linear Regression 5
 -- | Fri 2018-02-02 | [Assignment 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-7 | Tue 2018-02-06 | **Logistic Regression** 1
-8 | Thu 2018-02-08 | Logistic Regression 2
+7 | Tue 2018-02-06 | Linear Regression 6
+8 | Thu 2018-02-08 | **Logistic Regression** 1
 -- | Fri 2018-02-09 | [Assignment 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-9 | Tue 2018-02-13 | Logistic Regression 3
-10 | Thu 2018-02-15 | Logistic Regression 4
+9 | Tue 2018-02-13 | Logistic Regression 2
+10 | Thu 2018-02-15 | Logistic Regression 3
 -- | Fri 2018-02-16 | [Assignment 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-11 | Tue 2018-02-20 | **Generalized Linear Models** 1
-12 | Thu 2018-02-22 | Generalized Linear Models 2
+11 | Tue 2018-02-20 | Logistic Regression 4
+12 | Thu 2018-02-22 | **Generalized Linear Models** 1
 -- | Fri 2018-02-23 | [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
-13 | Tue 2018-02-27 | Generalized Linear Models 3
-14 | Thu 2018-03-01 | Generalized Linear Models 4
+13 | Tue 2018-02-27 | Generalized Linear Models 2
+14 | Thu 2018-03-01 | Generalized Linear Models 3
 -- | Fri 2018-03-02 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
 --  | Mon 2018-03-05 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
-15 | Tue 2018-03-06 | Generalized Linear Models 5
-16 | Thu 2018-03-08 | Generalized Linear Models 6
+15 | Tue 2018-03-06 | Generalized Linear Models 4
+16 | Thu 2018-03-08 | Generalized Linear Models 5
 -- | 2018-03-12 to 16 | **SPRING BREAK at CWRU - NO CLASS**
 -- | Fri 2018-03-16 | Dr. Love gives a seminar at MetroHealth 9-10:30 AM on "Rethinking Statistical Significance"
 -- | Mon 2018-03-19 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at noon
