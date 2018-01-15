@@ -11,7 +11,7 @@ The [course schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDU
 
 ## Course Notes
 
-Course notes will be available at https://thomaselove.github.io/432-notes/ in due time.
+Course notes are available at https://thomaselove.github.io/432-notes/. This, too, is a work in progress.
 
 ## Key Links
 
