@@ -36,8 +36,8 @@ Project 1 involves the development of linear and logistic regression models for 
 In your project, you will be analyzing, presenting and discussing a pair of regression models, specifically a linear regression and a logistic regression, describing a data set you identify. 
 
 1. **Shareable with the World**. The data must be available to you, and shared with me and everyone else in the world (without any identifying information) as a well-tidied .csv file on 2018-02-19. If the data is from another source, the source (web or other) must be completely identified to me. Ongoing projects that require anyone's approval to share data are not appropriate for Project 1, but are likely appropriate for Project 2. 
-    - For Project 1, you may not use any data set that was used in 431, nor may you revisit your 431 project, and you cannot use any data sets used in the teaching materials for 432. You may not use any data set included in [an R package that we are installing](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD) this semester, other than NHANES. 
-    - You are allowed to use NHANES data in Project 1 **or** in Project 2, but not in both.
+    - For Project 1, you may not use any data set that was used in 431, nor may you revisit the data discussed in your 431 project, and you cannot use any data sets used in the teaching materials for 432. You may not use any data set included in [an R package that we are installing](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD) this semester, other than NHANES. 
+    - You **are** allowed to use NHANES data in Project 1 **or** in Project 2, but not in both. If you do use NHANES data for Project 1, you should be combining information from at least two NHANES data sets. If you used NHANES data in your 431 project, you can use NHANES data again this semester, but you must study new outcomes.
 
 2. **Size**. A **minimum** of 100 complete observations are required on each variable. It is fine if there are some missing values, as well, so long as there are at least 100 rows with complete observations on all variables you intend to use in each model. The **maximum** data set size is 1000 observations, so if you have something larger than that, you'll need to select a subset.
 
@@ -96,13 +96,13 @@ These tasks should absolutely be built up from your proposal, by adding the last
     + Your variable selection process in developing the model, which should be more than just a stepwise approach. Why did you select the predictors you did? 
     + Your calibration and validation results. What is an appropriate estimate of the likely performance of this model for new data, according to a validated R-squared statistic?
     + An appropriate summary of the final model you landed on, including a listing of the equation, a description of the effect sizes, and an annotated nomogram with a demonstration of a prediction (and appropriate prediction interval) for a new subject of interest.
-    + Be sure to read and heed the section 10 advice in the evaluation materials below.
+    + Be sure to read and heed [the section 10 advice in the evaluation materials below](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#what-should-i-consider-doing-in-developing-linear-models-for-task-10).
 - 11. A section on your logistic regression model.
     + Your approach to capturing potential non-linearity. What did the Spearman rho-squared plot suggest, and how did you spend your degrees of freedom?
     + Your variable selection process in developing the model, which can be a stepwise approach here. Why did you select the predictors you did? 
     + Your calibration and validation results. What is an appropriate estimate of the likely performance of this model for new data, according to a validated C statistic?
     + An appropriate summary of the final model you landed on, including a listing of the equation, a description of the effect sizes, and an annotated nomogram with a demonstration of a predicted probability of having the outcome of interest for a new subject.
-    + Be sure to read and heed the section 11 advice in the evaluation materials below.
+    + Be sure to read and heed [the section 11 advice in the evaluation materials below](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#what-should-i-consider-doing-in-developing-logistic-models-for-task-11).
 - 12. A 100-250 word discussion of your thoughts on the process. 
     + What was substantially harder or easier than you expected? 
     + What do you wish you'd known at the start of this process that you know now?
@@ -133,12 +133,12 @@ Every bit of your output should commented on in your work. No output without com
 Your presentation needs to land on a single, final model, using both statistical and non-statistical considerations to make a decision. Your presentation may need to explore other models, but this should be done as a way of helping us understand the reasons for your final selection, not as a way of impressing us with the amount of effort you've put into the project. We're interested in clarity, and demonstrated understanding of variation, but not volume.
 
 1. A fitted model using `lm` including an assessment of confidence intervals associated with the fitted coefficients, and an overall ANOVA F test.
-2. A fitted model using `ols` including an assessment of summary statistics like R^2^, adjusted R^2^ and the root mean squared error.
+2. A fitted model using `ols` including an assessment of summary statistics like R-square, adjusted R-square and the root mean squared error.
 3. A summary plot of predictor effects with meaningful confidence intervals, appropriately interpreted.
 4. A graph (perhaps with a table as well) showing predictions for new observations of interest.
 5. A partitioning of your sample into training and test batches, with an effort to assess the quality of predictions in a test sample for several candidate models. This is particularly appropriate in combination with things like the next two items on this list.
 6. A "best subsets" set of four graphs used to help justify variable selection decisions, followed by additional work to make a final choice.
-7. A Spearman $\rho^2$ plot leading to an analysis incorporating non-linear predictor terms, an assessment of whether those non-linear terms are helpful, and if so, a nomogram to help illustrate the effect of non-linear predictors on your outcome.
+7. A Spearman rho-squared plot leading to an analysis incorporating non-linear predictor terms, an assessment of whether those non-linear terms are helpful, and if so, a nomogram to help illustrate the effect of non-linear predictors on your outcome.
 8. An effort to validate the summary statistics of your model or models, perhaps with a backwards stepwise approach baked in to validate variable selection at the same time, but also perhaps not.
 9. An effort to describe how well your model is calibrated, and where predicted values are more or less trustworthy as a result.
 10. An assessment of residuals, leverage and influence that helps guide you to meaningful conclusions - and isn't just a list of the biggest outliers for a particular model-data combination.
@@ -152,10 +152,10 @@ As with linear models, it is **not** a good idea for all of these elements to ap
 Your presentation in Task 11 needs to land on a single, final model, using *both* statistical and non-statistical considerations to make a decision. Your presentation may need to explore other models, but this should be done as a way of helping us understand the reasons for your final selection, not as a way of impressing us with the amount of effort you've put into the project. We're interested in clarity, and demonstrated understanding of variation, but not volume.
 
 1. A fitted model using `glm` including an assessment of confidence intervals associated with the (exponentiated) fitted coefficients.
-2. A fitted model using `lrm` including an assessment of summary statistics like Nagelkerke R^2^, C and the Brier score, and an overall likelihood ratio test.
+2. A fitted model using `lrm` including an assessment of summary statistics like Nagelkerke R-square, C and the Brier score, and an overall likelihood ratio test.
 3. A summary plot of predictor effects with meaningful confidence intervals, appropriately interpreted.
 4. A graph (perhaps with a table as well) showing predictions for new observations of interest.
-5. A Spearman $\rho^2$ plot leading to an analysis incorporating non-linear predictor terms, an assessment of whether those non-linear terms are helpful, and if so, a nomogram to help illustrate the effect of non-linear predictors on your outcome. 
+5. A Spearman rho-square plot leading to an analysis incorporating non-linear predictor terms, an assessment of whether those non-linear terms are helpful, and if so, a nomogram to help illustrate the effect of non-linear predictors on your outcome. 
 6. Actually, a nomogram is useful in logistic regression (especially if it describes fitted probabilities) even if you don't include any non-linear predictors.
 7. An effort to validate the summary statistics of your model or models, perhaps with a backwards stepwise approach baked in to validate variable selection at the same time, but also perhaps not.
 8. An effort to describe how well your model is calibrated, and where predicted values are more or less trustworthy as a result.
