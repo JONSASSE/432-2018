@@ -94,20 +94,20 @@ Your final portfolio will include
 
 These tasks should absolutely be built up from your proposal, by adding the last three sections to the work you did there. The use of [the Project 1 template](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/project1-template.Rmd) is required. 
 
-- 1-9. The materials from your proposal, after editing, as needed, to reflect what you actually did and clarifying any points of confusion.
-- 10.  A section on your linear regression model. This should include all relevant code used to prepare your final results. We should be easily capable of finding:
+- Tasks 1-9. The materials from your proposal, after editing, as needed, to reflect what you actually did and clarifying any points of confusion.
+- Task 10.  A section on your linear regression model. This should include all relevant code used to prepare your final results. We should be easily capable of finding:
     + Your approach to capturing potential non-linearity. What did the Spearman rho-squared plot suggest, and how did you spend your degrees of freedom?
     + Your variable selection process in developing the model, which should be more than just a stepwise approach. Why did you select the predictors you did? 
     + Your calibration and validation results. What is an appropriate estimate of the likely performance of this model for new data, according to a validated R-squared statistic?
     + An appropriate summary of the final model you landed on, including a listing of the equation, a description of the effect sizes, and an annotated nomogram with a demonstration of a prediction (and appropriate prediction interval) for a new subject of interest.
     + Be sure to read and heed [the section 10 advice in the evaluation materials below](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#what-should-i-consider-doing-in-developing-linear-models-for-task-10).
-- 11. A section on your logistic regression model.
+- Task 11. A section on your logistic regression model.
     + Your approach to capturing potential non-linearity. What did the Spearman rho-squared plot suggest, and how did you spend your degrees of freedom?
     + Your variable selection process in developing the model, which can be a stepwise approach here. Why did you select the predictors you did? 
     + Your calibration and validation results. What is an appropriate estimate of the likely performance of this model for new data, according to a validated C statistic?
     + An appropriate summary of the final model you landed on, including a listing of the equation, a description of the effect sizes, and an annotated nomogram with a demonstration of a predicted probability of having the outcome of interest for a new subject.
     + Be sure to read and heed [the section 11 advice in the evaluation materials below](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#what-should-i-consider-doing-in-developing-logistic-models-for-task-11).
-- 12. A 100-250 word discussion of your thoughts on the process. 
+- Task 12. A 100-250 word discussion of your thoughts on the process. 
     + What was substantially harder or easier than you expected? 
     + What do you wish you'd known at the start of this process that you know now?
     + What was the most confusing part of doing the project?
