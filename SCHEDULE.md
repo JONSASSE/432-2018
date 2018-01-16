@@ -63,7 +63,9 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 -- | Tue 2018-05-08 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md), 3
 -- | Wed 2018-05-09 | [Final Project](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) Portfolio Due at noon
 
-**Teaching Assistant Office Hours** begin 2018-01-23. All of these locations are on the ground floor of the Wood Building in the School of Medicine.
+## Teaching Assistant Office Hours
+
+Teaching Assistant Hours begin 2018-01-23. All of these locations are on the ground floor of the Wood Building in the School of Medicine. To contact the TAs (and Dr. Love) email **431-help at case dot edu**
 
 Day | Time | Location
 --------: | :----------------: | -----------------
