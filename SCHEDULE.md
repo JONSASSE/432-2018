@@ -24,12 +24,14 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 -- | Read by 02-13 | **R4DS** 24, **Leek** Career Planning & Your Online Identity
 10 | Thu 2018-02-15 | Logistic Regression 3
 -- | Fri 2018-02-16 | [Assignment 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
+-- | Mon 2018-02-19 | [Project 1 Proposal](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due at noon.
 11 | Tue 2018-02-20 | Logistic Regression 4 
 -- | Read by 02-20 | **R4DS** 25, **Leek** Scientific Blogging & Scientific Talks
 12 | Thu 2018-02-22 | **Generalized Linear Models** 1
 -- | Fri 2018-02-23 | [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 13 | Tue 2018-02-27 | Generalized Linear Models 2 
 -- | Read by 02-27 | **R4DS** 1-12 and 15 (which you probably did in 431), **Leek** finish book
+-- | Wed 2018-02-28 | First Draft of Project 1 due (for colleague reviews) by noon
 14 | Thu 2018-03-01 | Generalized Linear Models 3
 -- | Fri 2018-03-02 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
 --  | Mon 2018-03-05 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
