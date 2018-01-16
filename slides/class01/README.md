@@ -1,5 +1,7 @@
 # 432 Spring 2018 Class 01: 2018-01-16
 
+**An audio recording** (.mp3) of Class 1 is now available, above.
+
 There are no presentation slides today. We'll spend the session discussing the course materials, including:
 
 1. The course [web site](https://github.com/THOMASELOVE/432-2018)
