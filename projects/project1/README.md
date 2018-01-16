@@ -6,8 +6,8 @@ As a substantial part of your course grade, you will complete a pair of Projects
 
 There are three Tasks associated with Project 1.
 
-1. Your proposal and data.
-    - You will identify a study of interest and write a brief proposal, which will include a .csv copy of your data, and an R Markdown file (with HTML result) addressing a set of nine pieces of information described below.
+1. Your [proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) and data.
+    - You will identify a study of interest and write a brief proposal, which will include a .csv copy of your data, and an R Markdown file (with HTML result) addressing a set of nine pieces of information [described below](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal).
     - These proposals will be shared with your colleagues, so anonymity is impossible.
     - The proposal is due XXXXXXXXXXXXXXXXXXXX.
 2. Your review of the portfolios (in progress) of 3-4 of your colleagues.
