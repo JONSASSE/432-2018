@@ -4,5 +4,5 @@ Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later th
 
 Start a separate R Project for Homework 2, as your first step, and place all of your work in that project's directory.
 
-Details to come.
+*Details to come.*
 
