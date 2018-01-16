@@ -7,7 +7,7 @@ There are a total of 8 regular homework assignments this semester.
 Link to Details | Due at noon on | Material Covered in the Assignment
 :-------: | :----------: | ----------------------------------------------------------
 [Homework 1](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw1) | Fri 2018-01-26 | Building Table 1, Linear Regression, a little ANOVA/ANCOVA
-HW 2 | Fri 2018-02-02 | Linear Regression
+[Homework 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2) (*not yet available*) | Fri 2018-02-02 | Linear Regression
 HW 3 | Fri 2018-02-09 | Linear Regression
 HW 4 | Fri 2018-02-16 | Logistic Regression
 HW 5 | Fri 2018-02-23 | Logistic Regression
