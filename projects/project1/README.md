@@ -9,12 +9,12 @@ There are three Tasks associated with Project 1.
 1. Your [proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) and data.
     - You will identify a study of interest and write a brief proposal, which will include a .csv copy of your data, and an R Markdown file (with HTML result) addressing a set of nine pieces of information [described below](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal).
     - These proposals will be shared with your colleagues, so anonymity is impossible.
-    - The proposal is due XXXXXXXXXXXXXXXXXXXX.
+    - The proposal is due Monday 2018-02-19 at noon. Submission will be through [canvas](https://canvas.case.edu/)
 2. Your review of the portfolios (in progress) of 3-4 of your colleagues.
     - Using R Markdown, you will build a detailed portfolio of your work for Project 1 which can be used to replicate all of your main analyses, and which also includes a discussion of your reactions to the results. You will generate both the hardworking source code (the R Markdown) and the front-facing report (as HTML, likely) that comes from knitting your Markdown document. This will be posted online so that it can be viewed by evaluators.
     - You will be meeting (in person and electronically) with your colleagues to give them feedback on their work in February and March.
 3. Your final portfolio of analyses is due at noon on Monday 2018-03-19. 
-    - At this time, you will submit your final data, Markdown file, and your HTML output.
+    - At this time, you will submit your final data, Markdown file, and your HTML output, through [canvas](https://canvas.case.edu/)
 
 ## Introduction
 
@@ -36,7 +36,7 @@ In your project, you will be analyzing, presenting and discussing a pair of regr
 
 4. **Predictors**. You will need at least four regression inputs for each of your two models. At least one of the four must be quantitative (with a minimum of 10 different, ordered, observed values), *and* at least one must be multi-categorical (with at least 3 categories) for each model. Your other predictors can be any type of variable (including binary, multi-categorical or quantitative). You can examine different candidate predictors for each outcome, or use the same ones in each model. Depending on your sample size, you can study more regression inputs. Specifically, if you have N complete observations in your data set, you are permitted to study up to 4 + (N-100)/100 candidate regression inputs, rounding down.
 
-## The Proposal
+## The Proposal, due Monday 2018-02-19 at noon.
 
 Your proposal will include 
     - (a) a `.csv` file of the data, 
