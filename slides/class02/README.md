@@ -14,7 +14,7 @@
 
 5. Email **431-help at case dot edu** to ask almost any questions about the course. This email is followed by all of the TAs and by Professor Love, and will guarantee you the fastest response possible.
     - If you have any special concerns or questions that require only Dr. Love's attention, please email him at `Thomas dot Love at case dot edu`, or speak with him before or after class.
-6. **Teaching Assistant Office Hours** begin next Tuesday, 2018-01-23. All of these locations are a few steps from each other, on the ground floor of the Wood Building in the School of Medicine. The schedule is as follows:
+6. **Teaching Assistant Office Hours** begin next Tuesday, 2018-01-23. All of these locations are a few steps from each other, on the ground floor of the Wood Building in the School of Medicine. The schedule is as follows, and this information is always available in the [Course Syllabus](https://thomaselove.github.io/432-syllabus/) and at the bottom of the [Course Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md).
 
 Day | Time | Location
 --------: | :----------------: | -----------------
