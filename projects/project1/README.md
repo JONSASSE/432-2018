@@ -1,6 +1,6 @@
 # 432 Project 1 Instructions
 
-As a substantial part of your course grade, you will complete a pair of Projects this semester. This document describes Project 1. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) will be due at the end of the semester, in April.
+As a substantial part of your course grade, you will complete two Projects this semester. This document describes Project 1. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) is due at the end of the semester.
 
 ## Submission Guidelines and Deliverables
 
@@ -30,11 +30,11 @@ In your project, you will be analyzing, presenting and discussing a pair of regr
     - You may not use any data set that was used in 431 teaching materials or in your 431 project, nor any data sets used in the teaching materials for 432.
     - You may not use any data set included in [an R package that we are installing](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD) this semester. This means that you cannot use, for example, NHANES data for Project 1. You will be permitted to use NHANES data in Project 2.
 
-2. **Size**. A **minimum** of 150 complete observations are required on each variable. It is fine if there are some missing values, as well, so long as there are at least 150 available observations for each variable. The **maximum** data set size is 1000 observations, so if you have something larger than that, you'll need to select a subset.
+2. **Size**. A **minimum** of 100 complete observations are required on each variable. It is fine if there are some missing values, as well, so long as there are at least 100 available observations for each variable. The **maximum** data set size is 1000 observations, so if you have something larger than that, you'll need to select a subset.
 
 3. **Outcomes**. The columns must include at least one quantitative outcome and one binary categorical outcome. If necessary, the binary outcome can be generated from the quantitative outcome (as an example, your quantitative outcome could be resting heart rate in beats per minute, and your binary outcome could be whether the resting heart rate is below 70 beats per minute.)
 
-4. **Predictors**. You will need at least four candidate predictors for each of your two outcomes. At least one of the four must be quantitative, *and* at least one must be categorical (with at least 3 categories) for each outcome. Your other predictors can be any type of variable (including binary, multi-categorical or quantitative). You can examine different candidate predictors for each outcome, or use the same ones in each model. Additional predictors are welcome, up to a **maximum** of (# complete observations in your data set / 15).
+4. **Predictors**. You will need at least four regression inputs for each of your two models. At least one of the four must be quantitative (with a minimum of 10 different, ordered, observed values), *and* at least one must be multi-categorical (with at least 3 categories) for each model. Your other predictors can be any type of variable (including binary, multi-categorical or quantitative). You can examine different candidate predictors for each outcome, or use the same ones in each model. Depending on your sample size, you can study more regression inputs. Specifically, if you have N complete observations in your data set, you are permitted to study up to 4 + (N-100)/100 candidate regression inputs, rounding down.
 
 ## The Proposal
 
@@ -65,5 +65,5 @@ The nine pieces of information we should find in the Markdown and HTML versions 
 
 ### Evaluating the Project 1 Proposal
 
-- Your project will be evaluated by Professor Love and the teaching assistants on a scale of 0-10, with one point for getting all of the necessary materials (.csv, .Rmd and HTML) in and then one additional point for each of the nine tasks if they are successfully completed. 
+- Your project will be evaluated on a scale of 0-10, with one point for getting all of the necessary materials (.csv, .Rmd and HTML) in and then one additional point for each of the nine tasks if they are successfully completed. 
 - If you receive a grade lower than 10, you will need to redo until you reach 10. Redos are expected within 48 hours of receipt of the redo request.
