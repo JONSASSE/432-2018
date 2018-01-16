@@ -1,0 +1,113 @@
+---
+title: "Your Title Goes Here"
+author: "Your Name Goes Here"
+date: "`r Sys.time()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    number_sections: yes
+    code_folding: show
+---
+
+## Preliminaries
+
+```{r setup, echo=FALSE, cache=FALSE}
+library(knitr); library(rmdformats)
+
+## Global options
+opts_chunk$set(cache=FALSE,
+               prompt=FALSE,
+               tidy=FALSE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+```{r load packages here}
+# if you need to load other packages besides the tidyverse,
+# do so by deleting these comments and adding them in,
+# before loading the tidyverse
+library(tidyverse)
+```
+
+When using this template, please retain my headings (for example: Task 1: Data Source). Otherwise, delete my instructions, comments and examples (including *these* words), and replace my words with your own. Remember that the Proposal requires Tasks 1-9, and the final Portfolio requires Tasks 1-12. Complete project 1 instructions [are available here](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1)
+
+# Task 1: Data Source
+
+Specify the source of your data here, including a URL if appropriate.
+
+# Task 2: Load and Tidy the Data
+
+```{r load your data here}
+# here is the chunk where you should load your csv file
+# I would use aardvark <- read.csv("aardvark.csv") %>% tbl_df
+# to accomplish this for example
+
+
+# make sure that you also include any tidying activities here
+```
+
+Write some text here to explain what tidying you did.
+
+# Task 3: Listing of My Tibble
+
+```{r listing of your tibble}
+# if your data was called aardvark, then the commands I would use are
+
+# aardvark
+# glimpse(aardvark)
+# and/or str(aardvark)
+
+# don't use more than two of these three (just one should be enough)
+```
+
+Specify the dimensions of your tibble (\# subjects [rows] and \# variables [columns]) in writing here.
+
+# Task 4: Code Book
+
+Here, I suggest you create a table like this, but if you've got a more effective way to accomplish the goal, please use it. A sample is shown below.
+
+Variable   | Type        | Details
+---------: | ----------: | ----------------------------------------
+`subject`  | character   | aardvark identification code (1 to 200)
+`snoutsize`| quantitative | Snout size, in cm (range is 3 to 27)
+`maturity`  | binary | Juvenile (20\%) or Adult (80\%)
+`weight`   | quantitative | Weight in kg (range is 60 to 80)
+`length`   | quantitative | Length in cm (range is 105 to 130), with 1 NA for unknown reason
+`nosesize` | multi-categorical | Nose size: Small, Medium, Large
+`teeth`    | binary | More ($\geq$ 24), Less (< 24), with 2 NA for unknown reasons
+
+# Task 5: My Subjects
+
+Describe the subjects (rows) of your data set, in a sentence of two. In my case, for example, the data describe a sample of 200 aardvarks found originally in sub-Saharan Africa.
+
+# Task 6: My Variables
+
+Describe each the variables (columns) of your data set, in a sentence or two. Build on the very brief descriptions you included in your Task 4 response.
+
+# Task 7: My Planned Linear Regression Model
+
+Specify in a sentence or two exactly which (quantitative) variable will be your outcome, and then which four (or more) candidate predictors (one of which must be multi-categorical) will be considered for your linear regression model.
+
+# Task 8: My Planned Logistic Regression Model
+
+Specify in a sentence or two exactly which (binary) variable will be your outcome, and then which four (or more) candidate predictors (one of which must be multi-categorical) will be considered for your logistic regression model.
+
+# Task 9: Affirmation
+
+Please affirm that your data set meets all of the requirements specified in the project instructions, for instance regarding minimum and maximum sample size, number and type of predictors. Conclude your affirmation with the statement below:
+
+- I am certain that it is completely appropriate for these data to be shared with anyone, without any conditions. There are no concerns about privacy or security.
+
+# Task 10 Analysis: Linear Regression
+
+Linear regression analyses go here. Remove this section from your Proposal.
+
+# Task 11 Analysis: Logistic Regression
+
+Logistic regression analyses go here. Remove this section from your Proposal.
+
+# Task 12: Conclusions
+
+Conclusions and reflections go here. Remove this section from your Proposal.
