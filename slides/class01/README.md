@@ -23,3 +23,11 @@ To follow along, download the following files into a fresh directory:
 or, if you prefer, take a look at the HTML file by visiting:
 
 - http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class01/class01-2018.html
+
+Tweet of the Day is from the great [Jenny Bryan](https://twitter.com/jennybryan/status/953051131822796800?refsrc=email&s=11&ref_src=twcamp%5Eshare%7Ctwsrc%5Eios%7Ctwgr%5Eemail):
+
+> Hardwon lesson about teaching data analysis via programming:
+
+> You = 1 : 100 ratio of system setup & syntax puzzles to data fun time
+
+> Newcomer = 100 : 1 ratio
