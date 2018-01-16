@@ -96,13 +96,70 @@ These tasks should absolutely be built up from your proposal, by adding the last
     + Your variable selection process in developing the model, which should be more than just a stepwise approach. Why did you select the predictors you did? 
     + Your calibration and validation results. What is an appropriate estimate of the likely performance of this model for new data, according to a validated R-squared statistic?
     + An appropriate summary of the final model you landed on, including a listing of the equation, a description of the effect sizes, and an annotated nomogram with a demonstration of a prediction (and appropriate prediction interval) for a new subject of interest.
+    + Be sure to read and heed the section 10 advice in the evaluation materials below.
 - 11. A section on your logistic regression model.
     + Your approach to capturing potential non-linearity. What did the Spearman rho-squared plot suggest, and how did you spend your degrees of freedom?
     + Your variable selection process in developing the model, which can be a stepwise approach here. Why did you select the predictors you did? 
     + Your calibration and validation results. What is an appropriate estimate of the likely performance of this model for new data, according to a validated C statistic?
     + An appropriate summary of the final model you landed on, including a listing of the equation, a description of the effect sizes, and an annotated nomogram with a demonstration of a predicted probability of having the outcome of interest for a new subject.
+    + Be sure to read and heed the section 11 advice in the evaluation materials below.
 - 12. A 100-250 word discussion of your thoughts on the process. 
     + What was substantially harder or easier than you expected? 
     + What do you wish you'd known at the start of this process that you know now?
     + What was the most confusing part of doing the project?
     + What was the most useful thing you learned while doing the project?
+
+### Final Portfolio Evaluation
+
+To receive a B ... 
+
+0. Meet all submission requirements, on time, with code that works seamlessly with the data you provide.
+1. Complete all of the elements from the proposal (tasks 1-9)
+2. Present a curated but detailed, appropriate set of linear regression analyses that leads, inexorably, to the selection of a "best choice" model for your data. (task 10)
+3. Present a curated but detailed, appropriate set of logistic regression analyses that leads, inexorably, to the selection of a "best choice" model for your data. (task 11)
+4. Present your conclusions/reflections about the process, your data and your models (task 12), being sure to address each issue effectively in at least 2-3 sentences apiece.
+5. Present attractive and easy-to-understand graphs that stand on their own thanks to good labeling, well-constructed tables whose message is clear, and clear, nicely presented code. 
+6. Build and present output that is courteous to the reader, in that it is pleasing to the eye, and in particular doesn't include useless information, like warning messages the reader doesn't need to heed, or long listings of raw data or other overpowering materials. If it takes longer to scroll through your project than the **example I have provided**, you are on the wrong track.
+7. Avoid crippling mistakes, incomplete sentences, and clearly inappropriate conclusions.
+
+A project receiving an "A" grade will **not** be longer, rather it will be better, with more concentrated "useful" stuff throughout, and with more evidence of careful decision-making about what goes into each piece to make it as effective as possible. Dazzle us with your very best work. **Clarity** is the ultimate goal. We seek clear thinking, clear code, clear modeling and clear conclusions. 
+
+Our best advice: To write and code clearly and effectively, have someone else read and criticize your work.
+
+### What should I CONSIDER doing in developing linear models for Task 10?
+
+Every bit of your output should commented on in your work. No output without commentary. We envision your final presentation will show no more than 8 of these items in detail. As few as 4-5 might be sufficient. Many of you will wind up running nearly all of these things, some on multiple models, and then choosing from among them wisely in presenting your final analyses. That is the goal. 
+
+Your presentation needs to land on a single, final model, using both statistical and non-statistical considerations to make a decision. Your presentation may need to explore other models, but this should be done as a way of helping us understand the reasons for your final selection, not as a way of impressing us with the amount of effort you've put into the project. We're interested in clarity, and demonstrated understanding of variation, but not volume.
+
+1. A fitted model using `lm` including an assessment of confidence intervals associated with the fitted coefficients, and an overall ANOVA F test.
+2. A fitted model using `ols` including an assessment of summary statistics like R^2^, adjusted R^2^ and the root mean squared error.
+3. A summary plot of predictor effects with meaningful confidence intervals, appropriately interpreted.
+4. A graph (perhaps with a table as well) showing predictions for new observations of interest.
+5. A partitioning of your sample into training and test batches, with an effort to assess the quality of predictions in a test sample for several candidate models. This is particularly appropriate in combination with things like the next two items on this list.
+6. A "best subsets" set of four graphs used to help justify variable selection decisions, followed by additional work to make a final choice.
+7. A Spearman $\rho^2$ plot leading to an analysis incorporating non-linear predictor terms, an assessment of whether those non-linear terms are helpful, and if so, a nomogram to help illustrate the effect of non-linear predictors on your outcome.
+8. An effort to validate the summary statistics of your model or models, perhaps with a backwards stepwise approach baked in to validate variable selection at the same time, but also perhaps not.
+9. An effort to describe how well your model is calibrated, and where predicted values are more or less trustworthy as a result.
+10. An assessment of residuals, leverage and influence that helps guide you to meaningful conclusions - and isn't just a list of the biggest outliers for a particular model-data combination.
+11. If there are missing data in your study, a complete case analysis to avoid problems with missing data, followed by a model fit using multiple imputation appropriately, with a careful judgment as to the impact of missingness on your conclusions about the data. In general, it is likely that imputation will become more important the more missingness is in your data, but it's worth it to find out.
+12. If you are sampling from a larger pool of data, an attempt to see if the conclusions you draw hold up in a newly drawn sample, or perhaps if predictions you make appear to be effective in another, different, sample.
+
+### What should I CONSIDER doing in developing logistic models for Task 11?
+
+As with linear models, it is **not** a good idea for all of these elements to appear in your final project, and you are likely going to want to limit yourself in Task 11 to a detailed presentation of 4-8 of these. Choose wisely. Repeating the key advice from above ...
+
+Your presentation in Task 11 needs to land on a single, final model, using *both* statistical and non-statistical considerations to make a decision. Your presentation may need to explore other models, but this should be done as a way of helping us understand the reasons for your final selection, not as a way of impressing us with the amount of effort you've put into the project. We're interested in clarity, and demonstrated understanding of variation, but not volume.
+
+1. A fitted model using `glm` including an assessment of confidence intervals associated with the (exponentiated) fitted coefficients.
+2. A fitted model using `lrm` including an assessment of summary statistics like Nagelkerke R^2^, C and the Brier score, and an overall likelihood ratio test.
+3. A summary plot of predictor effects with meaningful confidence intervals, appropriately interpreted.
+4. A graph (perhaps with a table as well) showing predictions for new observations of interest.
+5. A Spearman $\rho^2$ plot leading to an analysis incorporating non-linear predictor terms, an assessment of whether those non-linear terms are helpful, and if so, a nomogram to help illustrate the effect of non-linear predictors on your outcome. 
+6. Actually, a nomogram is useful in logistic regression (especially if it describes fitted probabilities) even if you don't include any non-linear predictors.
+7. An effort to validate the summary statistics of your model or models, perhaps with a backwards stepwise approach baked in to validate variable selection at the same time, but also perhaps not.
+8. An effort to describe how well your model is calibrated, and where predicted values are more or less trustworthy as a result.
+9. An assessment of influence that helps guide you to meaningful conclusions - and isn't just a list of the biggest outliers for a particular model-data combination.
+10. If there are missing data in your study, a complete case analysis to avoid problems with missing data, followed by a model fit using multiple imputation appropriately, with a careful judgment as to the impact of missingness on your conclusions about the data. In general, it is likely that imputation will become more important the more missingness is in your data, but it's worth it to find out.
+11. If you are sampling from a larger pool of data, an attempt to see if the conclusions you draw hold up in a newly drawn sample, or perhaps if predictions you make appear to be effective in another, different, sample.
+12. If your binary outcome uses an arbitrary cutpoint for an underlying quantitative outcome, a sensitivity analysis addressing the question of what happens to your conclusions if you change cutpoints.
