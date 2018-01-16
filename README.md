@@ -20,4 +20,4 @@ Course notes are available at https://thomaselove.github.io/432-notes/. This, to
     - This is where you'll find audio files and announcements associated with each class, too.
 - Outside [Texts](https://github.com/THOMASELOVE/432-2018/tree/master/texts) and other suggested reading materials.
     - The required texts for Spring 2018 will include Jeff Leek's [How to be a Modern Scientist](https://leanpub.com/modernscientist), which you should purchase as soon as you can.
-
+- Teaching Assistant [Office Hours](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md#teaching-assistant-office-hours) begin 2018-01-23 and run on Tuesdays - Fridays.
