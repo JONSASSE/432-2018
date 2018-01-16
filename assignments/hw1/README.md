@@ -32,7 +32,7 @@ Variable    | Description
 `sbp`       | subject's most recently obtained systolic blood pressure, in mm Hg
 `dbp`       | subject's most recently obtained diastolic blood pressure, in mm Hg
 
-## Question 1. 
+## Question 1. (40 points)
 
 Build a Table 1 to compare the subjects in practice A to the subjects in practice B on the following nine variables: age, race, Hispanic ethnicity, sex, primary insurance, body mass index, BMI category, and systolic and diastolic blood pressure. Make the Table as well as you can within R, and display the result as part of your HTML file. **Include a description of the results of your Table 1 that does not exceed 100 words, using complete English sentences**.
 
@@ -42,15 +42,15 @@ Build a Table 1 to compare the subjects in practice A to the subjects in practic
 - Note that body mass index (BMI) and BMI category are not supplied in the data, although you do have height and weight. 
 - For BMI categories, use the four groups specified in the [How is BMI interpreted for Adults section of this description](https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html) of Adult BMI by the Centers for Disease Control.
 
-## Question 2.
+## Question 2. (30 points)
 
-Does which **practice** a person attends seem to have a meaningful impact on their **systolic blood pressure**, adjusting for whether or not they are on a **blood pressure medication**? Decide whether your model should include an interaction term sensibly, and then fit your choice of model and interpret and display the findings carefully. Be sure to provide a written explanation of your findings, in complete sentences.
+Does which **practice** a person attends seem to have a meaningful impact on their **systolic blood pressure**, adjusting for whether or not they are on a **blood pressure medication**? Decide whether your model should include an interaction term sensibly, and then fit your choice of model and interpret and display the findings carefully. Be sure to provide a written explanation of your findings, in complete sentences. Responses without graphs are not complete.
 
-## Question 3.
+## Question 3. (25 points)
 
-Does the addition of the subject's **age** add meaningful predictive value to the model you developed in question 2? Does it change the nature of the conclusions you can draw from the model? How do you know?  Be sure to provide a written explanation of your findings, in complete sentences, to accompany any output you choose to include.
+Does the addition of the subject's **age** add meaningful predictive value to the model you developed in question 2? Does it change the nature of the conclusions you can draw from the model? How do you know?  Be sure to provide a written explanation of your findings, in complete sentences, to accompany any output you choose to include. Responses without graphs are not complete.
 
-## Question 4.
+## Question 4. (5 points)
 
 Please specify your GitHub user name. If you don't have a (free) GitHub account, get one.
 
