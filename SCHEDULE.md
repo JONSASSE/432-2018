@@ -31,12 +31,13 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 -- | Fri 2018-02-23 | [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at noon
 13 | Tue 2018-02-27 | Generalized Linear Models 2 
 -- | Read by 02-27 | **R4DS** 1-12 and 15 (which you probably did in 431), **Leek** finish book
--- | Wed 2018-02-28 | First Draft of Project 1 due (for colleague reviews) by noon
+-- | Wed 2018-02-28 | [First Draft of Project 1](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due (for colleague reviews) by noon
 14 | Thu 2018-03-01 | Generalized Linear Models 3
 -- | Fri 2018-03-02 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
 --  | Mon 2018-03-05 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
 15 | Tue 2018-03-06 | Generalized Linear Models 4 
 16 | Thu 2018-03-08 | Generalized Linear Models 5
+-- | Fri 2018-03-09 | Group Reviews of [Project 1 First Drafts](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) complete by noon
 -- | 2018-03-12 to 16 | **SPRING BREAK at CWRU - NO CLASS**
 -- | Fri 2018-03-16 | Dr. Love gives a seminar at MetroHealth 9-10:30 AM on "Rethinking Statistical Significance"
 -- | Mon 2018-03-19 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at noon
