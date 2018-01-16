@@ -62,3 +62,14 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 -- | Mon 2018-05-07 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md), 2
 -- | Tue 2018-05-08 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md), 3
 -- | Wed 2018-05-09 | [Final Project](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) Portfolio Due at noon
+
+**Teaching Assistant Office Hours** begin 2018-01-23. All of these locations are on the ground floor of the Wood Building in the School of Medicine.
+
+Day | Time | Location
+--------: | :----------------: | -----------------
+Tuesdays  | 11:45am to 12:45pm | Wood **WG-82C**
+Tuesdays  | 2:30pm to 4:30pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
+Wednesdays | Noon to 12:50pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
+Thursdays | 11:45am to 12:45pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
+Thursdays  | 2:30pm to 4:30pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
+Fridays | 12:15pm to 1:00pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
