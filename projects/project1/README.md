@@ -25,9 +25,15 @@ An R Markdown template document [is available here](https://raw.githubuserconten
 - To see what this template looks like when rendered in HTML, [visit this link](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/project1-template.html).
 - Note that you can view most HTML files in Github by adding `http://htmlpreview.github.io/?` before the complete URL.
 
-## Sample Project
+## Sample Project Proposal
 
-**Coming Soon** There is a complete sample project available for your review, built using the template, by Dr. Love.
+There is a complete sample project proposal available for your review now, built using the template, by Dr. Love.
+
+- You can get the `cardiac.dat` data used in the proposal either [above](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/cardiac.dat), or at [the Data and Code page](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code).
+- You can get the `example-project-proposal-432-spring2018.Rmd` [markdown file used to generate the results](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/example-project-proposal-432-spring2018.Rmd),
+- and you can [view the HTML result](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/example-project-proposal-432-spring2018.html).
+
+Note that Dr. Love will post a *complete* sample project, adding Tasks 10-12, **later this semester**.
 
 ## Introduction
 
