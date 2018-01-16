@@ -1,8 +1,12 @@
 # 432 Homework 1 for Spring 2018
 
-Submit your response **via canvas.case.edu no later than **noon on Friday 2018-01-26**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file to the `hbp330.csv` data. Start a separate R Project for this assignment, as your first step.
+Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **noon on Friday 2018-01-26**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file to the `hbp330.csv` data. 
 
-This assignment involves the `hbp330.csv` data set, available on the Data and Code page, and also above. The data describe 330 patients with hypertension (high blood pressure) diagnoses who receive care in one of two practices. The data are based on real clinical information, but with a small amount of noise included in all data.
+Start a separate R Project for Homework 1, as your first step, and place the data in that project's specific directory.
+
+This homework involves the `hbp330.csv` data set, available for download at [the Data and Code page](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code), and also above. 
+
+The data describe 330 patients with hypertension (high blood pressure) diagnoses who receive primary care in one of two practices. The data are based on real clinical information, but with a small amount of noise included in every variable.
 
 The available information includes:
 
@@ -17,7 +21,7 @@ Variable    | Description
 `sex`       | subject's sex (F or M)
 `insurance` | subject's primary insurance (Medicare, Commercial, Medicaid, Uninsured)
 `income`    | estimated median income of subject's home neighborhood (via American Community Survey, to nearest $100)
-`hsgrad`    | estimated % of adults who are high school graduates in subject's home neighborhood (ACS, to nearest %)
+`hsgrad`    | estimated percentage of adults living in the subject's home neighborhood who have graduated from high school (via American Community Survey, to the nearest percent)
 `tobacco`   | tobacco use status (current, former, never)
 `depdiag`   | does subject have depression diagnosis? Yes or No
 `height`    | subject's height in meters, rounded to two decimal places
@@ -30,8 +34,9 @@ Variable    | Description
 
 ## Question 1. 
 
-Build a Table 1 to compare the subjects in practice A to the subjects in practice B on the following nine variables: age, race, Hispanic ethnicity, sex, primary insurance, body mass index, BMI category, and systolic and diastolic blood pressure. Make the Table as well as you can within R, and display the result as part of your HTML file.
+Build a Table 1 to compare the subjects in practice A to the subjects in practice B on the following nine variables: age, race, Hispanic ethnicity, sex, primary insurance, body mass index, BMI category, and systolic and diastolic blood pressure. Make the Table as well as you can within R, and display the result as part of your HTML file. **Include a description of the results of your Table 1 that does not exceed 100 words, using complete English sentences**.
 
+- Be sure that your table specifies the number of subjects in each practice.
 - Note that you'll have to deal with some missingness in the data, in an appropriate way. Be sure to specify what you did with the missing data (and how much you had to deal with) in a footnote to the table.
 - Be sure, too, to make reasoned choices about whether means and standard deviations or instead medians and quartiles are more appropriate displays for the quantitative variables, and whether or not to use exact tests for categorical ones. Include your reasons in a footnote to the table.
 - Note that body mass index (BMI) and BMI category are not supplied in the data, although you do have height and weight. 
