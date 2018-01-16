@@ -14,7 +14,13 @@
 
 5. Email **431-help at case dot edu** to ask almost any questions about the course. This email is followed by all of the TAs and by Professor Love, and will guarantee you the fastest response possible.
     - If you have any special concerns or questions that require only Dr. Love's attention, please email him at `Thomas dot Love at case dot edu`, or speak with him before or after class.
-6. **Teaching Assistant Office Hours** will begin next Monday. Details are available **XXXXXXXXXXXXXX**.
+6. **Teaching Assistant Office Hours** begin next Tuesday, 2018-01-23. 
+    - The tentative schedule is:
+        - Tuesdays 11:45 AM to 12:45 PM and 2:30 to 4:30 PM
+        - Wednesdays 12 noon to 12:50 PM
+        - Thursdays 11:45 AM to 12:45 PM and 2:30 to 4:30 PM
+        - Fridays 12:15 to 1 PM
+    - Office Hours for TAs are held in either **WG-56** (Computing Lab) or **WG-67** (Student Lounge) generally. On Tuesday mornings, Youjun will hold his 11:45 - 12:45 hours in **WG-82E**. All of these rooms are steps from each other, on the ground floor of the Wood Building in the School of Medicine.
 
 ## Announcements
 
