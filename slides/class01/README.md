@@ -3,7 +3,7 @@
 There are no presentation slides today. We'll spend the session discussing the course materials, including:
 
 1. The course [web site](https://github.com/THOMASELOVE/432-2018)
-2. The [Syllabus](https://thomaselove.github.io/432-syllabus/)
+2. The [Syllabus](https://thomaselove.github.io/432-syllabus/), including introductions for our Teaching Assistants
 3. The [Assignments and other Deliverables](https://github.com/THOMASELOVE/432-2018/tree/master/assignments)
 4. The [Things we'll Read](https://github.com/THOMASELOVE/432-2018/tree/master/texts)
 5. The [Course Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md)
