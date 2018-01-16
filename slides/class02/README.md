@@ -21,7 +21,7 @@
 7. R and R Studio software installation and updates
     - Details on software installation [from 431 are here](https://github.com/THOMASELOVE/431/blob/master/software-installation-431.md). 
     - Be sure to update your R (to 3.4.3 or later) and R Studio (to 1.1.383 or later). 
-    - The list of packages you need to install in R Studio [at this link](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD).
+    - The list of packages you need to install in R Studio is [at this link](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD).
     - More software information is available at the [Data and Code section](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code) of this site.
 8. Hadley Wickham's [Whole Game Video on YouTube](https://youtu.be/go5Au01Jrvs) with [code and data here](https://github.com/hadley/building-permits) may be of interest. Hadley does a nice job of showing you how people actually do data analysis work, and will remind you of some of the things we do to use the `tidyverse` and R Studio well. 
 9. The old [431 Course Notes](https://thomaselove.github.io/431notes/) will be online until May. You may be interested in reviewing them, in particular Part C (sections 37-49) for some details we'll run through quickly this term.
