@@ -23,7 +23,7 @@ An R Markdown template document [is available here](https://raw.githubuserconten
 
 - Note that using the template will require the installation of both the `knitr` and `rmdformats` packages, each of which is [part of the required installations for 432](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD).
 - To see what this template looks like when rendered in HTML, [visit this link](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/project1-template.html).
-- Note that in general, you can view HTML files in Github by adding `http://htmlpreview.github.io/?` before the complete URL.
+- Note that you can view most HTML files in Github by adding `http://htmlpreview.github.io/?` before the complete URL.
 
 ## Sample Project
 
