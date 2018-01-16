@@ -28,6 +28,15 @@
 
 ## Tweet of the Day
 
-**XXXXXXXXXComing soon.XXXXXXXXXXXX**
+- From Jenny Bryan's [tweet](https://twitter.com/JennyBryan/status/904884391171678208):
+    - "A space in a file or chunk name is a space in your soul."
 
+## Link(s) of the Day
+
+- Kyle Walker's [tidycensus](https://github.com/walkerke/tidycensus) is an R package that allows users to interface with the US Census Bureau's decennial Census and five-year American Community APIs and return tidyverse-ready data frames, optionally with simple feature geometry included.
+    - Ezra Haber Glenn's [acs package](https://cran.r-project.org/web/packages/acs/index.html) allows you to download, manipulate, and present American Community Survey and Decennial Data from the US Census
+
+## Just for Fun
+
+- [Linear Regression](https://xkcd.com/1725/) from XKCD
 
