@@ -19,11 +19,15 @@ There are three Tasks associated with Project 1.
 
 ## The Project 1 Template
 
-**Coming Soon** An R Markdown template document **is available here** for this purpose. The template has headings for each of the nine tasks below. **Please** use this template in preparing your response, as it facilitates grading and redos.
+An R Markdown template document [is available here](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/project1-template.Rmd) for this purpose. The template has headings for each of the nine tasks below. **Please** use this template in preparing your response, as it facilitates grading and redos. 
+
+- Note that using the template will require the installation of both the `knitr` and `rmdformats` packages, each of which is [part of the required installations for 432](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD).
+- To see what this template looks like when rendered in HTML, [visit this link](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/project1-template.html).
+- Note that in general, you can view HTML files in Github by adding `http://htmlpreview.github.io/?` before the complete URL.
 
 ## Sample Project
 
-**Coming Soon** There is a complete sample project available for your review, built by Dr. Love.
+**Coming Soon** There is a complete sample project available for your review, built using the template, by Dr. Love.
 
 ## Introduction
 
@@ -115,9 +119,9 @@ To receive a B ...
 
 0. Meet all submission requirements, on time, with code that works seamlessly with the data you provide.
 1. Complete all of the elements from the proposal (tasks 1-9)
-2. Present a curated but detailed, appropriate set of linear regression analyses that leads, inexorably, to the selection of a "best choice" model for your data. (task 10)
-3. Present a curated but detailed, appropriate set of logistic regression analyses that leads, inexorably, to the selection of a "best choice" model for your data. (task 11)
-4. Present your conclusions/reflections about the process, your data and your models (task 12), being sure to address each issue effectively in at least 2-3 sentences apiece.
+2. Present a curated but detailed, appropriate set of linear regression analyses that leads, inexorably, to the selection of a "best choice" model for your data. See the advice on task 10 below.
+3. Present a curated but detailed, appropriate set of logistic regression analyses that leads, inexorably, to the selection of a "best choice" model for your data. See the advice on task 11 below.
+4. Present your conclusions/reflections about (a) the process, (b) your data and (c) your models (task 12), being sure to address (a), (b) and (c) effectively in at least 2-3 sentences apiece.
 5. Present attractive and easy-to-understand graphs that stand on their own thanks to good labeling, well-constructed tables whose message is clear, and clear, nicely presented code. 
 6. Build and present output that is courteous to the reader, in that it is pleasing to the eye, and in particular doesn't include useless information, like warning messages the reader doesn't need to heed, or long listings of raw data or other overpowering materials. If it takes longer to scroll through your project than the **example I have provided**, you are on the wrong track.
 7. Avoid crippling mistakes, incomplete sentences, and clearly inappropriate conclusions.
@@ -139,11 +143,12 @@ Your presentation needs to land on a single, final model, using both statistical
 5. A partitioning of your sample into training and test batches, with an effort to assess the quality of predictions in a test sample for several candidate models. This is particularly appropriate in combination with things like the next two items on this list.
 6. A "best subsets" set of four graphs used to help justify variable selection decisions, followed by additional work to make a final choice.
 7. A Spearman rho-squared plot leading to an analysis incorporating non-linear predictor terms, an assessment of whether those non-linear terms are helpful, and if so, a nomogram to help illustrate the effect of non-linear predictors on your outcome.
-8. An effort to validate the summary statistics of your model or models, perhaps with a backwards stepwise approach baked in to validate variable selection at the same time, but also perhaps not.
-9. An effort to describe how well your model is calibrated, and where predicted values are more or less trustworthy as a result.
-10. An assessment of residuals, leverage and influence that helps guide you to meaningful conclusions - and isn't just a list of the biggest outliers for a particular model-data combination.
-11. If there are missing data in your study, a complete case analysis to avoid problems with missing data, followed by a model fit using multiple imputation appropriately, with a careful judgment as to the impact of missingness on your conclusions about the data. In general, it is likely that imputation will become more important the more missingness is in your data, but it's worth it to find out.
-12. If you are sampling from a larger pool of data, an attempt to see if the conclusions you draw hold up in a newly drawn sample, or perhaps if predictions you make appear to be effective in another, different, sample.
+8. The use of the lasso approach to identify variables (main effects) which might be productively included in your model.
+9. An effort to validate the summary statistics of your model or models, perhaps with a backwards stepwise approach baked in to validate variable selection at the same time, but also perhaps not.
+10. An effort to describe how well your model is calibrated, and where predicted values are more or less trustworthy as a result.
+11. An assessment of residuals, leverage and influence that helps guide you to meaningful conclusions - and isn't just a list of the biggest outliers for a particular model-data combination.
+12. If there are missing data in your study, a complete case analysis to avoid problems with missing data, followed by a model fit using multiple imputation appropriately, with a careful judgment as to the impact of missingness on your conclusions about the data. In general, it is likely that imputation will become more important the more missingness is in your data, but it's worth it to find out.
+13. If you are sampling from a larger pool of data, an attempt to see if the conclusions you draw hold up in a newly drawn sample, or perhaps if predictions you make appear to be effective in another, different, sample.
 
 ### What should I CONSIDER doing in developing logistic models for Task 11?
 
