@@ -17,7 +17,7 @@ There are three Tasks associated with Project 1.
 3. Your [final portfolio](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#the-portfolio-due-2018-03-19-at-noon-submit-via-canvas) of analyses is due at noon on Monday 2018-03-19. 
     - At this time, you will submit your final data, Markdown file, and your HTML output, through [canvas](https://canvas.case.edu/)
 
-## The Project 1 Template
+## The (REQUIRED) Project 1 Template
 
 An R Markdown template document [is available here](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/project1-template.Rmd) for this purpose. The template has headings for each of the nine tasks below. **Please** use this template in preparing your response, as it facilitates grading and redos. 
 
@@ -53,7 +53,7 @@ In your project, you will be analyzing, presenting and discussing a pair of regr
 
 Your proposal will include 
     - (a) a `.csv` file of the [data](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#characteristics-of-an-acceptable-data-set), 
-    - (b) a R Markdown file built on **the Project 1 template** containing the information listed below, and 
+    - (b) a R Markdown file built on [the Project 1 template](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/project1-template.Rmd) containing the information listed below, and 
     - (c) an HTML document which is the unedited result of knitting your Markdown file.
 
 The nine pieces of information we should find in the Markdown and HTML versions of your proposal are:
@@ -87,12 +87,12 @@ You will be meeting with a group of 2-3 other people in the class to work throug
 
 Your final portfolio will include 
     - (a) a `.csv` file of the [data](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#characteristics-of-an-acceptable-data-set), 
-    - (b) a R Markdown file built on **the Project 1 template** containing the information listed below, and 
+    - (b) a R Markdown file built on [the Project 1 template](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/project1-template.Rmd) containing the information listed below, and 
     - (c) an HTML document which is the unedited result of knitting your Markdown file.
 
 ### The twelve tasks that should be included in the final portfolio.
 
-These tasks should absolutely be built up from your proposal, by adding the last three sections. 
+These tasks should absolutely be built up from your proposal, by adding the last three sections to the work you did there. The use of [the Project 1 template](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/project1-template.Rmd) is required. 
 
 - 1-9. The materials from your proposal, after editing, as needed, to reflect what you actually did and clarifying any points of confusion.
 - 10.  A section on your linear regression model. This should include all relevant code used to prepare your final results. We should be easily capable of finding:
