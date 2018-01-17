@@ -25,15 +25,19 @@ Thursdays | 11:45am to 12:45pm | Either **WG-56** (Computing Lab) or **WG-67** (
 Thursdays  | 2:30pm to 4:30pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
 Fridays | 12:15pm to 1:00pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
 
+## Follow-up on Class 01
+
+7. I added some new materials to Chapter 1 of [the Course Notes](https://thomaselove.github.io/432-notes/), describing what plots I would build in real data situations to help decide whether to use normal (t-based) or non-normal (Wilcoxon rank sum-based) analyses in a Table 1. Look in section 1.5.1.
+
 ## Announcements
 
-7. R and R Studio software installation and updates
+8. R and R Studio software installation and updates
     - Details on software installation [from 431 are here](https://github.com/THOMASELOVE/431/blob/master/software-installation-431.md). 
     - Be sure to update your R (to 3.4.3 or later) and R Studio (to 1.1.383 or later). 
     - The list of packages you need to install in R Studio is [at this link](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD).
     - More software information is available at the [Data and Code section](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code) of this site.
-8. Hadley Wickham's [Whole Game Video on YouTube](https://youtu.be/go5Au01Jrvs) with [code and data here](https://github.com/hadley/building-permits) may be of interest. Hadley does a nice job of showing you how people actually do data analysis work, and will remind you of some of the things we do to use the `tidyverse` and R Studio well. 
-9. The old [431 Course Notes](https://thomaselove.github.io/431notes/) will be online until May. You may be interested in reviewing them, in particular Part C (sections 37-49) for some details we'll run through quickly this term.
+9. Hadley Wickham's [Whole Game Video on YouTube](https://youtu.be/go5Au01Jrvs) with [code and data here](https://github.com/hadley/building-permits) may be of interest. Hadley does a nice job of showing you how people actually do data analysis work, and will remind you of some of the things we do to use the `tidyverse` and R Studio well. 
+10. The old [431 Course Notes](https://thomaselove.github.io/431notes/) will be online until May. You may be interested in reviewing them, in particular Part C (sections 37-49) for some details we'll run through quickly this term.
 
 ## Tweet of the Day
 
