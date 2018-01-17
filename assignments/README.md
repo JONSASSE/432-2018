@@ -17,7 +17,7 @@ HW 8 | Fri 2018-04-20 | Survival Analysis
 
 ## Other Deliverables
 
-- Students are required to **participate** actively in the course, including meaningful contributions in group work, in-class participation, emails to 431-help, visits to TAs, etc. We're more concerned about the breadth of your participation rather than just its quantity. Most students score between 80% and 100% on this element.
+- Students are required to **participate** actively in the course, including meaningful contributions in group work, in-class participation, completion of "minute paper" forms after several classes, emails to 431-help, visits to TAs, etc. We're more concerned about the breadth of your participation rather than just its quantity. Most students score between 80% and 100% on this element.
 - Students are required to complete two **quizzes**. Quiz [details are found here](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes).
 - Students are required to complete two **project** assignments. Project [details are found here](https://github.com/THOMASELOVE/432-2018/tree/master/projects).
 
