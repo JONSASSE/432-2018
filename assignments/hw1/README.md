@@ -39,8 +39,8 @@ Build a Table 1 to compare the subjects in practice A to the subjects in practic
 - Be sure that your table specifies the number of subjects in each practice.
 - Note that you'll have to deal with some missingness in the data, in an appropriate way. Be sure to specify what you did with the missing data (and how much you had to deal with) in a footnote to the table.
 - Be sure, too, to make reasoned choices about whether means and standard deviations or instead medians and quartiles are more appropriate displays for the quantitative variables, and whether or not to use exact tests for categorical ones. Include your reasons in a footnote to the table.
-- Note that body mass index (BMI) and BMI category are not supplied in the data, although you do have height and weight. 
-- For BMI categories, use the four groups specified in the [How is BMI interpreted for Adults section of this description](https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html) of Adult BMI by the Centers for Disease Control.
+- Note that body mass index (BMI) and BMI category are not supplied in the data, although you do have height and weight. **So, you'll have to calculate the BMI and add it to the data set.** If you don't know the formula for BMI, you have Google to help you figure it out.
+- For BMI categories, use the four groups specified in the [How is BMI interpreted for Adults section of this description](https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html) of Adult BMI by the Centers for Disease Control. **Again, you'll need to use your calculated BMI values and then create the categories in your data set.**
 
 ## Question 2. (30 points)
 
