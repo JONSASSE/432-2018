@@ -2,7 +2,7 @@
 
 ## Deliverables
 
-1. **Roster Check**. An initial course roster is available at **XXXXXXXXXXXXXXXXXX**. Please enter the Google Doc, and verify the information (adding whatever might be missing.) If you are not on this roster, email Dr. Love, and fill in your information.
+1. **Roster Check**. An initial course roster is available in [this Google Spreadsheet](https://docs.google.com/spreadsheets/d/1ZbTK4ldaex03ez-TSTq7btOW15XOv9J2ZpIbKh0GBYU/edit?usp=sharing). Please visit the Google Doc, and verify the information (editing where needed, and adding whatever is missing, especially including the name I should call you.) If you are not on this roster, email Dr. Love, and fill in your information.
 2. **Post-Class Minute Paper**. Please fill out [this Google Form](https://goo.gl/forms/qfzI3jro5wyi6vEC2) as soon as possible **after** today's class, for some class participation credit, and to provide us with some feedback about how things are going so far. Thanks in advance.
 
 ## Audio Recordings
