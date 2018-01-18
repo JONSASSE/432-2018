@@ -1,9 +1,16 @@
 # 432 Spring 2018 Class 02: 2018-01-18
 
-## Tweet of the Day
+## Tweets of the Day
 
 - From Jenny Bryan's [tweet](https://twitter.com/JennyBryan/status/904884391171678208):
     - "A space in a file or chunk name is a space in your soul."
+- From Roger Peng's [tweet](https://twitter.com/rdpeng/status/953511725570998277): (on the importance of deciding if your model might be actionable before you get too far along...)
+    - "There’s something to be said about looking down the line a little to see if anyone will care about the answers you come up with."
+
+## Today's Slides
+
+- I'm not sure yet whether I'm going to use any slides today. If I do, I'll post them above. 
+- We will be discussing Chapter 2 from [the Course Notes](https://thomaselove.github.io/432-notes/). I added substantial material last night.
 
 ## Announcements
 
