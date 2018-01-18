@@ -1,0 +1,636 @@
+---
+title: "432 Class 2 Slides"
+author: "github.com/THOMASELOVE/432-2018"
+date: "`r Sys.Date()`"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    colortheme: "lily"
+    fonttheme: "structurebold"
+    fig_caption: FALSE
+---
+
+```{r set-options, echo=FALSE, cache=FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 60)
+```
+
+## BRFSS and SMART 
+
+The Centers for Disease Control analyzes Behavioral Risk Factor Surveillance System (BRFSS) survey data for specific metropolitan and micropolitan statistical areas (MMSAs) in a program called the [Selected Metropolitan/Micropolitan Area Risk Trends of BRFSS](https://www.cdc.gov/brfss/smart/Smart_data.htm) (SMART BRFSS.)
+
+In this work, we will focus on [data from the 2016 SMART](https://www.cdc.gov/brfss/smart/smart_2016.html), and in particular on data from the Cleveland-Elyria, OH, Metropolitan Statistical Area. 
+
+## Setup
+
+```{r, warning = FALSE, message = FALSE}
+library(skimr)
+library(broom)
+# library(magrittr)
+library(modelr)
+library(tidyverse)
+
+smartcle1 <- read.csv("data/smartcle1.csv")
+```
+
+## Key resources
+
+- the full data are available in the form of the 2016 SMART BRFSS MMSA Data, found in a zipped [SAS Transport Format](https://www.cdc.gov/brfss/smart/2016/MMSA2016_XPT.zip) file. The data were released in August 2017.
+- the [MMSA Variable Layout PDF](https://www.cdc.gov/brfss/smart/2016/mmsa_varlayout_16.pdf) which simply lists the variables included in the data file
+- the [Calculated Variables PDF](https://www.cdc.gov/brfss/annual_data/2016/pdf/2016_calculated_variables_version4.pdf) which describes the risk factors by data variable names - there is also an [online summary matrix of these calculated variables](https://www.cdc.gov/brfss/annual_data/2016/Summary_Matrix_16.html), as well.
+- the lengthy [2016 Survey Questions PDF](https://www.cdc.gov/brfss/questionnaires/pdf-ques/2016_BRFSS_Questionnaire_FINAL.pdf) which lists all questions asked as part of the BRFSS in 2016
+- the enormous [Codebook for the 2016 BRFSS Survey PDF](https://www.cdc.gov/brfss/annual_data/2016/pdf/codebook16_llcp.pdf) which identifies the variables by name for us.
+
+## The `smartcle1` Cookbook, 1
+
+Variable | Description
+---------: | --------------------------------------------------------
+`SEQNO` | respondent identification number (all begin with 2016)
+`physhealth` | Now thinking about your physical health, which includes physical illness and injury, for how many days during the past 30 days was your physical health not good?
+`menthealth` | Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?
+`poorhealth` | During the past 30 days, for about how many days did poor physical or mental health keep you from doing your usual activities, such as self-care, work, or recreation?
+`genhealth` | Would you say that in general, your health is ... (five categories: Excellent, Very Good, Good, Fair or Poor)
+
+## The `smartcle1` Cookbook, 2
+
+Variable | Description
+---------: | --------------------------------------------------------
+`bmi` | Body mass index, in kg/m^2^
+`female` | Sex, 1 = female, 0 = male
+`internet30` | Have you used the internet in the past 30 days? (1 = yes, 0 = no)
+`exerany` | During the past month, other than your regular job, did you participate in any physical activities or exercises such as running, calisthenics, golf, gardening, or walking for exercise? (1 = yes, 0 = no)
+`sleephrs` | On average, how many hours of sleep do you get in a 24-hour period?
+`alcdays` | How many days during the past 30 days did you have at least one drink of any alcoholic beverage such as beer, wine, a malt beverage or liquor?
+
+## `smartcle2`: Omitting Missing Observations: Complete-Case Analyses
+
+To start, look only at the *complete cases* in our `smartcle1` data. 
+
+```{r, eval = FALSE}
+smartcle1 %>% 
+    skim(-SEQNO)
+```
+
+Results on next slide...
+
+## `skim` results...
+
+![](figs/fig01.png)
+
+## Create a new tibble called `smartcle2`
+
+Contains every variable in `smartcle1` except `poorhealth`, and all respondents with complete data on the variables (other than `poorhealth`).
+
+```{r create_smartcle2}
+smartcle2 <- smartcle1 %>% 
+    select(-poorhealth) %>%
+    filter(complete.cases(.))
+```
+
+## `skim(smartcle2)`
+
+![](figs/fig02.png)
+
+## `summary` results
+
+```{r}
+summary(smartcle2)
+```
+
+## The `describe` function in `Hmisc`
+
+```{r}
+Hmisc::describe(select(smartcle2, bmi))
+```
+
+## Counting as exploratory data analysis
+
+How many respondents had exercised in the past 30 days? Did this vary by sex?
+
+```{r c2_eda_exerany_female_smartcle2}
+smartcle2 %>% 
+  count(female, exerany) %>% 
+  mutate(percent = 100*n / sum(n))
+```
+
+42.3% of the subjects in our data were women who exercised.
+
+## More counting...
+
+```{r c2_eda_female_exerany_percentages_smartcle2}
+smartcle2 %>%
+    count(female, exerany) %>%
+    group_by(female) %>%
+    mutate(prob = 100*n / sum(n)) 
+```
+
+## What's the distribution of `sleephrs`?
+
+```{r c2_eda_sleephrs}
+smartcle2 %>% count(sleephrs)
+```
+
+## Graphical summary: code for histogram
+
+```{r c2_histogram_sleephrs_smartcle2, eval = FALSE}
+ggplot(smartcle2, aes(sleephrs)) +
+    geom_histogram(binwidth = 1, 
+                   fill = "dodgerblue", col = "white")
+```
+
+## The Resulting Histogram
+
+```{r c2_histogram_sleephrs_smartcle2a, echo = FALSE}
+ggplot(smartcle2, aes(sleephrs)) +
+    geom_histogram(binwidth = 1, 
+                   fill = "dodgerblue", col = "white")
+```
+
+## What's the distribution of `BMI`?
+
+```{r c2_histogram_bmi_smartcle2, echo = FALSE}
+ggplot(smartcle2, aes(bmi)) +
+    geom_histogram(bins = 30, col = "white")
+```
+
+## How many of the respondents have a BMI below 30?
+
+```{r eda_bmilt30_smartcle2}
+smartcle2 %>% count(bmi < 30) %>% 
+  mutate(proportion = n / sum(n))
+```
+
+## How many of the respondents who have a BMI < 30 exercised?
+
+```{r eda_bmilt30_exerany_smartcle2}
+smartcle2 %>% count(exerany, bmi < 30) %>%
+    group_by(exerany) %>%
+    mutate(percent = 100*n/sum(n))
+```
+
+## Is obesity associated with sex, in these data?
+
+```{r eda_bmilt30_female_smartcle2}
+smartcle2 %>% count(female, bmi < 30) %>%
+    group_by(female) %>%
+    mutate(percent = 100*n/sum(n))
+```
+
+## Comparing `sleephrs` summaries by obesity status
+
+```{r}
+smartcle2 %>%
+    group_by(bmi < 30) %>%
+    summarize(mean(sleephrs), median(sleephrs), 
+              q75 = quantile(sleephrs, 0.75))
+```
+
+## The `skim` function within a pipe
+
+```{r, eval = FALSE}
+smartcle2 %>%
+    group_by(exerany) %>%
+    skim(bmi, sleephrs)
+```
+
+## The `skim` function within a pipe (results)
+
+![](figs/fig03.png)
+
+# Time to Model: Can We Predict `physhealth` with `bmi`?
+
+## First Modeling Attempt: Can `bmi` predict `physhealth`?
+
+We'll start with an effort to predict `physhealth` using `bmi`. A natural graph would be a scatterplot.
+
+```{r scatter_physhealth_bmi_1, eval = FALSE}
+ggplot(data = smartcle2, aes(x = bmi, y = physhealth)) +
+    geom_point(col = "royalblue", size = 2, alpha = 0.5)
+```
+
+## For what BMI range can we predict `physhealth`?
+
+```{r scatter_physhealth_bmi_1a, echo = FALSE}
+ggplot(data = smartcle2, aes(x = bmi, y = physhealth)) +
+    geom_point(col = "royalblue", size = 2, alpha = 0.5)
+```
+
+## Add a simple linear model ...
+
+```{r c2_scatter_physhealth_bmi_2, eval = FALSE}
+ggplot(data = smartcle2, aes(x = bmi, y = physhealth)) +
+    geom_point(col = "royalblue", size = 2, alpha = 0.5) +
+    geom_smooth(method = "lm", se = FALSE, col = "red")
+```
+
+which fits the same model as ...
+
+```{r fitmodelA_c2}
+model_A <- lm(physhealth ~ bmi, data = smartcle2)
+model_A
+```
+
+## Linear Model (`physhealth` = -1.45 + 0.195 `bmi`)
+
+```{r c2_scatter_physhealth_bmi_2a, echo = FALSE}
+ggplot(data = smartcle2, aes(x = bmi, y = physhealth)) +
+    geom_point(col = "royalblue", size = 2, alpha = 0.5) +
+    geom_smooth(method = "lm", se = FALSE, col = "red")
+```
+
+## Linear Model Summary
+
+![](figs/fig04.png)
+
+## Confidence Intervals for Coefficients
+
+```{r}
+confint(model_A)
+```
+
+## Equation for Adjusted R^2^
+
+We can obtain the adjusted R^2^ from the raw R^2^, the number of observations *N* and the number of predictors *p* included in the model:
+
+$$
+R^2_{adj} = 1 - \frac{(1 - R^2)(N - 1)}{N - p - 1},
+$$
+
+## The `tidy` function
+
+`tidy` builds a data frame/tibble containing information about the coefficients in the model, their standard errors, t statistics and *p* values.
+
+```{r broom_tools_chapter2_model_A_tidy}
+tidy(model_A)
+```
+
+## The `glance` function
+
+glance` builds a data frame/tibble containing summary statistics about the model, including
+
+- the (raw) multiple R^2^ and adjusted R^2
+- `sigma` which is the residual standard error
+- the F `statistic`, `p.value` model `df` and `df.residual` associated with the global ANOVA test, plus
+- several statistics that will be useful in comparing models down the line:
+- the model's log likelihood function value, `logLik`
+- the model's Akaike's Information Criterion value, `AIC`
+- the model's Bayesian Information Criterion value, `BIC`
+- and the model's `deviance` statistic
+
+## `glance` output
+
+```{r broom_tools_chapter2_model_A_glance}
+glance(model_A)
+```
+
+## The `augment` function
+
+`augment` builds a data frame/tibble which adds fitted values, residuals and other diagnostic summaries that describe each observation to the original data used to fit the model, and this includes 
+
+- `.fitted` and `.resid`, the fitted and residual values, in addition to
+- `.hat`, the leverage value for this observation
+- `.cooksd`, the Cook's distance measure of *influence* for this observation
+- `.stdresid`, the standardized residual (think of this as a z-score - a measure of the residual divided by its associated standard deviation `.sigma`)
+- and `se.fit` which will help us generate prediction intervals for the model downstream
+
+## `augment` results (first 3 observations)
+
+New columns begin with `.` to avoid overwriting any data.
+
+```{r broom_tools_chapter2_model_A_augment}
+head(augment(model_A), 3)
+```
+
+## How does the model do? (Residuals vs. Fitted Values)
+
+- Remember that the R^2^ value was about 2%.
+
+```{r chapter2_first_resid_plot_model_A, eval = FALSE}
+plot(model_A, which = 1)
+```
+
+This is a plot of residuals vs. fitted values. The goal here is for this plot to look like a random scatter of points, perhaps like a "fuzzy football". Is that what we have (see next slide). Why?
+
+## Residuals vs. Fitted (model_A)
+
+```{r chapter2_first_resid_plot_model_Aa, echo = FALSE}
+plot(model_A, which = 1)
+```
+
+## Is `physhealth` a good candidate for a linear model?
+
+```{r histogram_of_physhealth_smartcle2, echo = FALSE}
+ggplot(smartcle2, aes(x = physhealth)) +
+  geom_histogram(bins = 30, 
+               fill = "dodgerblue", color = "white")
+```
+
+## Normal Q-Q plot of model_A residuals
+
+```{r chapter2_second_resid_plot_model_A}
+plot(model_A, which = 2)
+```
+
+
+## Cutting our Losses
+
+
+We're going to need a method to deal with this sort of outcome, that has both a floor and a ceiling. We'll get there eventually, but linear regression alone doesn't look promising.
+
+All right, so that didn't go anywhere great. Let's try again, with a new outcome.
+
+# Predicting `bmi`?
+
+## A New Small Study: Predicting BMI
+
+We'll begin by investigating the problem of predicting `bmi`, at first with just three regression inputs: `sex`, `exerany` and `sleephrs`, in our new `smartcle2` data set. 
+
+- The outcome of interest is `bmi`.
+- Inputs to the regression model are:
+    - `female` = 1 if the subject is female, and 0 if they are male
+    - `exerany` = 1 if the subject exercised in the past 30 days, and 0 if they didn't
+    - `sleephrs` = hours slept in a typical 24-hour period (treated as quantitative)
+
+## Does `female` predict `bmi`?
+
+```{r c2_sex_bmi_plot1, fig.height = 4}
+ggplot(smartcle2, aes(x = female, y = bmi)) +
+    geom_point()
+```
+
+## Not so helpful. Try again?
+
+```{r c2_sex_bmi_plot2, fig.height = 4}
+ggplot(smartcle2, aes(x = factor(female), y = bmi)) +
+    geom_boxplot(notch = TRUE)
+```
+
+## `c2_m1`: A simple t-test model
+
+```{r c2_sex-bmi_m1}
+c2_m1 <- lm(bmi ~ female, data = smartcle2)
+c2_m1
+confint(c2_m1)
+```
+
+## `summary(c2_m1)`
+
+![](figs/fig05.png)
+
+## Interpreting `c2_m1`
+
+The model suggests, based on these 896 subjects, that 
+
+- our best prediction for males is BMI = 28.36 kg/m^2^, and 
+- our best prediction for females is BMI = 28.36 - 0.85 = 27.51 kg/m^2^.
+- the mean difference between females and males is -0.85 kg/m^2^ in BMI
+- a 95% confidence (uncertainty) interval for that mean female - male difference in BMI ranges from -1.69 to -0.01
+- the model accounts for 0.4% of the variation in BMI, so that knowing the respondent's sex does very little to reduce the size of the prediction errors as compared to an intercept only model that would predict the overall mean (regardless of sex) for all subjects.
+- the model makes some enormous errors, with one subject being predicted to have a BMI 38 points lower than his/her actual BMI.
+
+## `c2_m1` is just a t test
+
+Note that this simple regression model just gives us the t-test.
+
+```{r c2_sex-bmi_m1_asttest}
+t.test(bmi ~ female, var.equal = TRUE, data = smartcle2)
+```
+
+## Impact of `exerany` on `bmi-female` relationship?
+
+```{r c2_smartcle2_plot_bmi_hist_by_female_exerany, eval = FALSE}
+ggplot(smartcle2, aes(x = bmi)) +
+    geom_histogram(bins = 30) +
+    facet_grid(female ~ exerany, labeller = label_both)
+```
+
+## Impact of `exerany` on `bmi-female` plot?
+
+```{r c2_smartcle2_plot_bmi_hist_by_female_exeranya, echo = FALSE}
+ggplot(smartcle2, aes(x = bmi)) +
+    geom_histogram(bins = 30) +
+    facet_grid(female ~ exerany, labeller = label_both)
+```
+
+## Or maybe boxplots?
+
+```{r c2_smartcle2_plot_bmi_box_by_female_exerany, echo = FALSE}
+ggplot(smartcle2, aes(x = factor(female), y = bmi)) +
+    geom_boxplot() +
+    facet_wrap(~ exerany, labeller = label_both)
+```
+
+## Fit model `c2_m2`
+
+```{r c2_sex-exerany-bmi_m2}
+c2_m2 <- lm(bmi ~ female + exerany, data = smartcle2)
+c2_m2
+```
+
+How many different values does this predict?
+
+## Four predicted values from `c2_m2`
+
+Model is `bmi` = 30.334 - 1.095 `female` - 2.384 `exerany`
+
+- `bmi` = 30.334 if the subject is male and did not exercise (so `female` = 0 and `exerany` = 0)
+- `bmi` = 30.334 - 1.095 = 29.239 if the subject is female and did not exercise (`female` = 1 and `exerany` = 0)
+- `bmi` = 30.334 - 2.384 = 27.950 if the subject is male and exercised (so `female` = 0 and `exerany` = 1), and, finally
+- `bmi` = 30.334 - 1.095 - 2.384 = 26.855 if the subject is female and exercised (so both `female` and `exerany` = 1).
+
+## Two-way ANOVA model without interaction
+
+For those who did not exercise, the model `c2_m2` is:
+
+- `bmi` = 30.334 - 1.095 `female`
+
+and for those who did exercise, the model `c2_m2` is:
+
+- `bmi` = 27.95 - 1.095 `female`
+
+Only the intercept of the `bmi-female` model changes depending on `exerany`.
+
+## summary and confint for `c2_m2`
+
+![](figs/fig06.png)
+
+## `anova(c2_m2)`
+
+```{r, echo = FALSE}
+anova(c2_m2)
+```
+
+## `c2_m3`: Adding the interaction term
+
+Suppose we want to let the effect of `female` vary depending on the `exerany` status. Then we need to incorporate an interaction term in our model.
+
+```{r c2_sex-exerany-bmi_m3}
+c2_m3 <- lm(bmi ~ female * exerany, data = smartcle2)
+c2_m3
+```
+
+## Two-Way ANOVA model with interaction
+
+The model `c2_m3` is:
+
+`bmi` = 30.136 - 0.810 `female` - 2.145 `exerany` - 0.359 `female:exerany`
+
+So for a female who exercises, model predicts `bmi` = 30.136 - 0.810 - 2.145 - 0.359 = 26.822
+
+For those who did not exercise, the model is:
+
+- `bmi` = 30.136 - 0.81 `female`
+
+But for those who did exercise, the model is:
+
+- `bmi` = (30.136 - 2.145) + (-0.810 + (-0.359)) `female`, or ,,,
+- `bmi` = 27.991 - 1.169 `female`
+
+Now, both the slope and the intercept of the `bmi-female` model change depending on `exerany`.
+
+## The interaction term doesn't change very much here.
+
+![](figs/fig07.png)
+
+## `anova(c2_m3)`
+
+```{r, echo = FALSE}
+anova(c2_m3)
+```
+
+## Using `female` and `sleephrs` in a model for `bmi`
+
+```{r graph_to_set_up_c2_m4, echo = FALSE}
+ggplot(smartcle2, aes(x = sleephrs, y = bmi, color = factor(female))) +
+    geom_point() + 
+    guides(col = FALSE) +
+    geom_smooth(method = "lm", se = FALSE) +
+    facet_wrap(~ female, labeller = label_both) 
+```
+
+## Building `c2_m4`
+
+Does the difference in slopes of `bmi` and `sleephrs` for males and females appear to be substantial and important?
+
+```{r fit_c2_m4}
+c2_m4 <- lm(bmi ~ female * sleephrs, data = smartcle2)
+
+c2_m4
+```
+
+## Comparing Nested Models via `glance`
+
+Since the `c2_m4` model contains the `c2_m1` model's predictors as a subset and the outcome is the same for each model, we consider the models *nested* and have some extra tools available to compare them.
+
+```{r ch2_compare_glance_m4_to_m1_m4results}
+glance(c2_m4)
+```
+
+```{r ch2_compare_glance_m4_to_m1_m1results}
+glance(c2_m1)
+```
+
+## ANOVA comparison for nested m1 vs. m4
+
+We might also consider a significance test by looking at an ANOVA model comparison. This is only appropriate because `c2_m1` is nested in `c2_m4`.
+    
+```{r ch2_compare_anova_m4_to_m1}
+anova(c2_m4, c2_m1)
+```
+
+## `c2_m5`
+
+```{r fit_c2_m5}
+c2_m5 <- lm(bmi ~ female + exerany + sleephrs + 
+              internet30 + alcdays,
+         data = smartcle2)
+
+c2_m5
+```
+
+## `summary(c2_m5)`
+
+![](figs/fig08.png)
+
+## What can we study with this? 
+
+```{r anova_c2_m5}
+anova(c2_m5)
+```
+
+## Now what can we study?
+
+```{r anova_c2_m5_reorder}
+anova(lm(bmi ~ exerany + internet30 + alcdays + 
+           female + sleephrs,
+         data = smartcle2))
+```
+
+## What does this output let us conclude?
+
+```{r anova_compare_c2_m5_to_smaller_model}
+anova(lm(bmi ~ exerany + internet30 + alcdays + 
+           female + sleephrs, 
+         data = smartcle2),
+      lm(bmi ~ exerany + female + alcdays, 
+         data = smartcle2))
+```
+
+## `c2_m6`: Would adding self-reported health help?
+
+```{r fit_c2_m6}
+c2_m6 <- lm(bmi ~ female + exerany + sleephrs + 
+              internet30 + alcdays + genhealth,
+         data = smartcle2)
+
+c2_m6
+```
+
+## `summary(c2_m6)`
+
+![](figs/fig09.png)
+
+## Residuals Normally distributed?
+
+```{r c2_m6_residuals_normality}
+plot(c2_m6, which = 2)
+```
+
+## `c2_m7`: What if we added days of work missed?
+
+```{r fit_c2_m7}
+c2_m7 <- lm(bmi ~ female + exerany + sleephrs + internet30 + alcdays + 
+                genhealth + physhealth + menthealth,
+         data = smartcle2)
+c2_m7
+```
+
+
+## `summary(c2_m7)`
+
+![](figs/fig10.png)
+
+## Checking Assumptions for `c2_m7`
+
+```{r residual_plot1_c2_m7}
+plot(c2_m7, which = 1)
+```
+
+## Residuals/Leverage/Influence for `c2_m7`
+
+```{r residual_plot5_c2_m7}
+plot(c2_m7, which = 5)
+```
+
+## Coming Soon ...
+
+1. How do we validate this model?
+2. Would stepwise regression help us build a better model for `bmi`?
+    - Is there a better approach for variable selection? What's this I hear about "best subsets", for example?
+3. How should we think about potential transformations of these predictors?
+    - What's a Spearman rho-squared plot, and how might it help us decide how to spend degrees of freedom on non-linear terms better?
+4. How do we deal with missing data in fitting and evaluating a linear regression model if we don't actually want to drop all of the incomplete cases?
+5. How can we use the `ols` tool in the `rms` package to fit regression models?
+6. How can we use the tools in the `arm` package to fit and evaluate regression models?
+
+
