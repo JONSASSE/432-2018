@@ -105,7 +105,7 @@ Hmisc::describe(select(smartcle2, bmi))
 
 ## Counting as exploratory data analysis
 
-How many respondents had exercised in the past 30 days? Did this vary by sex?
+How many respondents had exercised in the past 30 days? Did this vary by `female`?
 
 ```{r c2_eda_exerany_female_smartcle2}
 smartcle2 %>% 
@@ -343,7 +343,7 @@ All right, so that didn't go anywhere great. Let's try again, with a new outcome
 
 ## A New Small Study: Predicting BMI
 
-We'll begin by investigating the problem of predicting `bmi`, at first with just three regression inputs: `sex`, `exerany` and `sleephrs`, in our new `smartcle2` data set. 
+We'll begin by investigating the problem of predicting `bmi`, at first with just three regression inputs: `female`, `exerany` and `sleephrs`, in our new `smartcle2` data set. 
 
 - The outcome of interest is `bmi`.
 - Inputs to the regression model are:
@@ -624,6 +624,7 @@ plot(c2_m7, which = 5)
 
 ## Coming Soon ...
 
+0. Learning more about analysis of variance and interaction (product) terms.
 1. How do we validate this model?
 2. Would stepwise regression help us build a better model for `bmi`?
     - Is there a better approach for variable selection? What's this I hear about "best subsets", for example?
@@ -632,5 +633,4 @@ plot(c2_m7, which = 5)
 4. How do we deal with missing data in fitting and evaluating a linear regression model if we don't actually want to drop all of the incomplete cases?
 5. How can we use the `ols` tool in the `rms` package to fit regression models?
 6. How can we use the tools in the `arm` package to fit and evaluate regression models?
-
 
