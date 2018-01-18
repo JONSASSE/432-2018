@@ -7,7 +7,7 @@
 
 ## Today's Slides
 
-- I'm not sure yet whether I'm going to use any slides today. If I do, I'll post them above. 
+- are [hot off the presses](https://github.com/THOMASELOVE/432-2018/blob/master/slides/class02/432_2018_slides02.pdf).
 - We will be discussing Chapter 2 from [the Course Notes](https://thomaselove.github.io/432-notes/). I added substantial material last night.
 
 ## Announcements
