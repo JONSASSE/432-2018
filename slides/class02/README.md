@@ -7,7 +7,7 @@
 
 ## Today's Slides
 
-- The Class 02 slides are [hot off the presses](https://github.com/THOMASELOVE/432-2018/blob/master/slides/class02/432_2018_slides02.pdf). You can also get the [R Markdown file](https://github.com/THOMASELOVE/432-2018/blob/master/slides/class02/432_2018_slides02.Rmd) that generates them.
+- The Class 02 slides are [hot off the presses (in pdf)](https://github.com/THOMASELOVE/432-2018/blob/master/slides/class02/432_2018_slides02.pdf). You can also get the [R Markdown file](https://github.com/THOMASELOVE/432-2018/blob/master/slides/class02/432_2018_slides02.Rmd) that generates them.
 - We will be discussing Chapter 2 from [the Course Notes](https://thomaselove.github.io/432-notes/). I added substantial material last night.
 
 ## Announcements
