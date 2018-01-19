@@ -37,7 +37,7 @@ Fridays | 12:15pm to 1:00pm | Either **WG-56** (Computing Lab) or **WG-67** (Stu
 
 ### Follow-up on Class 1
 
-6. An audio recording of Class 01 [has been posted](https://github.com/THOMASELOVE/432-2018/blob/master/slides/class01/class01_audio_2018-01-16.mp3). We're still working on reducing the file size without hampering the quality too much. An audio recording of Class 02 will be posted above, when it becomes available.
+6. An audio recording of Class 01 [has been posted](https://github.com/THOMASELOVE/432-2018/blob/master/slides/class01/class01_audio_2018-01-16.mp3). We're still working on reducing the file size without hampering the quality too much. An audio recording of Class 02 [is now available](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class02), too.
 7. I added some new materials to Chapter 1 of [the Course Notes](https://thomaselove.github.io/432-notes/), describing what plots I would build in real data situations to help decide whether to use normal (t-based) or non-normal (Wilcoxon rank sum-based) analyses in a Table 1. Look in section 1.5.1.
 
 ### General Announcements
