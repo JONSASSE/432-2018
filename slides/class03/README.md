@@ -31,19 +31,42 @@ In today's class, we'll focus on:
     - Cleaning up data is time-consuming and not trivial but worthwhile.
     - You need to "listen fast" in this course. It moves quickly.
     
-2. What question(s) remain uppermost in your mind at this point? (roughly from more common to less common)
+2. What question(s) remain uppermost in your mind at this point?
     - How do you fit a model to describe a response that has a floor and a ceiling? A hurdle model?
+        + We'll tackle this later in the semester, as soon as I figure out all of things I need to present first. 
+        + A hurdle model is one way of attacking one particular piece of this problem, specifically, when we have a floor.
+        + It is a two-part model that specifies one process for zero counts and another process for positive counts. 
+            + The idea is that positive counts occur once a threshold is crossed, or put another way, a hurdle is cleared. 
+            + If the hurdle is not cleared, then we have a count of 0.
     - How do you select the best variables to include in a regression model?
-    - How do you interpret interaction terms in a model? Is this a "multiplicative interaction"?
+        + So far, we've learned a stepwise approach to variable selection (in 431.) 
+        + We will soon learn a method called "best subsets" that will be of interest here, although it's hardly the only alternative.
+    - How do you interpret interaction terms in a model? 
+        + If there's an interaction term, we interpret that first. 
+        + If it's largely ignorable, we may wind up with a main effects model. 
+        + This is covered in the ANOVA material we'll discuss today.
     - What do we learn from the ANOVA as opposed to the summary of a linear model?
+        + Several things. They look at different hypothesis tests, for example.
+        + The `anova` function in R can be used to compare two nested models.
     - Why do we need to use R to build a Table 1 instead of Excel?
+        1. How would you calculate the summary values to include in the Table in Excel?
+        2. What if you built the Table 1 in Excel and then realized that one person in the treatment group was actually in the control group? If you've coded the work in R, then this will take a few seconds to fix. If you've done it in a spreadsheet, you're basically starting over from the beginning.
     - How do I deal with missing data without ignoring it? How much missingness can we ignore, safely?
+        - Imputation is the strategy we'll be using to deal with missing data.
+        - The amount of missingness that can be "ignored" varies substantially from problem to problem.
     - What do we do about reporting missing values in Table 1? Should we impute in building Table 1?
+        - Use footnotes to specify the number of people who have missing values.
+        - Table 1 should show real data, not imputed data.
     - How do you customize the HTML appearance of a Markdown, like with the Project 1 template?
+        - Take a look at R Studio's [R Markdown Formats page](http://rmarkdown.rstudio.com/formats.html).
     - What is the difference between linear and logistic regression analysis?
+        - Linear regression models are built to describe quantitative outcomes. Logistic regression models are built to describe categorical outcomes: most often, *binary* outcomes.
+        - For example, if you want to predict the number of days that the subject will spend in the hospital, that's a linear model. If you want to predict the probability that the patient will have to go to the hospital, that's a logistic model.
     - Why do I need a GitHub account?
         + We're hoping that before the semester is over, we can figure out a way to facilitate your posting the best and most sharable parts of your project work to GitHub rather than just to Canvas.
     - Are you going to discuss **this thing I care about a lot** this semester?
+        + I have no more information for you than I've provided in [the Topics list](https://github.com/THOMASELOVE/432-2018/blob/master/TOPICS.md). 
+        + If something you want to see is not there, or not there to your satisfaction yet, then please realize that threats, prayers, entreaties will all lead to me keeping a note in a file, but none of those things will have any immediate effect. Once we get to Spring Break, I'll revisit these issues, but not (much) before, and I can offer no promises.
 
 3. How confident are you about your ability to successfully complete Homework 1, due Friday 2018-01-26?
 
