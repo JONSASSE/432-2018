@@ -56,26 +56,26 @@ In today's class, we'll focus on:
         + Several things. They look at different hypothesis tests, for example.
         + The `anova` function in R can be used to compare two nested models, but applied to a single regression model, it instead provides us with a sequential set of hypothesis tests. 
         + Again, this is covered in class today.
-    - Why do we need to use R to build a Table 1 instead of Excel?
+    5. **Why do we need to use R to build a Table 1 instead of Excel?**
         1. How would you calculate the summary values to include in the Table in Excel?
         2. **Reproducibility.** What if you built the Table 1 in Excel and then realized that one person in the treatment group was actually in the control group? 
             - If you've done the work in a script or R Markdown, then this will take somewhere between a few seconds and a few minutes to fix. Your work is reproducible, reusable, and shareable.
             - If you've done it in a spreadsheet, you're basically starting over from the beginning.
         - For more on why R vs. Excel, try [this link from the Revolutions blog](http://blog.revolutionanalytics.com/2014/10/why-r-is-better-than-excel.html) or maybe [this one from yhat](http://blog.yhat.com/posts/R-for-excel-users.html) 
-    - How do I deal with missing data without ignoring it? How much missingness can we ignore, safely?
+    6. **How do I deal with missing data without ignoring it? How much missingness can we ignore, safely?**
         - Imputation is the strategy we'll be using to deal with missing data.
         - The amount of missingness that can be "ignored" varies substantially from problem to problem.
-    - What do we do about reporting missing values in Table 1? Should we impute in building Table 1?
+    7. **What do we do about reporting missing values in Table 1? Should we impute in building Table 1?**
         - Use footnotes to specify the number of people who have missing values.
         - Table 1 should show real data, not imputed data.
-    - How do you customize the HTML appearance of a Markdown, like with the Project 1 template?
+    8. **How do you customize the HTML appearance of a Markdown, like with the Project 1 template?**
         - Take a look at R Studio's [R Markdown Formats page](http://rmarkdown.rstudio.com/formats.html).
-    - What is the difference between linear and logistic regression analysis?
+    9. **What is the difference between linear and logistic regression analysis?**
         - Linear regression models are built to describe quantitative outcomes. Logistic regression models are built to describe categorical outcomes: most often, *binary* outcomes.
         - For example, a linear model might predict the number of days that the subject will spend in the hospital, but a logistic model would estimate the probability that the patient will have to go to the hospital.
-    - Why do I need a GitHub account?
+    10. **Why do I need a GitHub account?**
         + We're hoping that before the semester is over, we can figure out a way to facilitate your posting the best and most sharable parts of your project work to GitHub rather than just to Canvas.
-    - Are you going to discuss **this thing I care about a lot** this semester?
+    11. **Are you going to discuss *this thing I care about a lot* this semester?**
         + I have no more information for you than I've provided in [the Topics list](https://github.com/THOMASELOVE/432-2018/blob/master/TOPICS.md). 
         + If something you want to see is not there, or not there to your satisfaction yet, then please realize that threats, prayers, entreaties will all lead to me keeping a note in a file, but none of those things will have any immediate effect. Once we get to Spring Break, I'll revisit these issues, but not (much) before, and I can offer no promises.
 
