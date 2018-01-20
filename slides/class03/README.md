@@ -25,9 +25,10 @@ In today's class, we'll focus on:
     - Building Table 1. (x15)
     - How a response with a "floor" and a "ceiling" can adversely affect a linear model (x7)
     - Interaction terms / product terms and how to evaluate them (x6)
-    - Data Sample Summary methods, including using `skew`, `count` and `table` functions. (x3)
-    - The process of choosing an appropriate linear regression model. (x2)
-    - Look at the data carefully before launching into modeling. (x2)
+    - Data Sample Summary methods, including using `skew`, `count` and `table` functions. 
+    - The process of choosing an appropriate linear regression model.
+        + Although don't get the idea that there is one "correct" model in any real setting. "[All models are wrong, some are useful.](https://en.wikipedia.org/wiki/All_models_are_wrong)" - George Box.
+    - Look at the data carefully before launching into modeling. 
     - Cleaning up data is time-consuming and not trivial but worthwhile.
     - You need to "listen fast" in this course. It moves quickly.
     
