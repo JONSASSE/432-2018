@@ -32,25 +32,32 @@ In today's class, we'll focus on:
     - You need to "listen fast" in this course. It moves quickly.
     
 2. What question(s) remain uppermost in your mind at this point?
-    - How do you fit a model to describe a response that has a floor and a ceiling? A hurdle model?
+    1. **How do you fit a model to describe a response that has a floor and a ceiling? A hurdle model?**
         + We'll tackle this later in the semester, as soon as I figure out all of things I need to present first. 
         + A hurdle model is one way of attacking one particular piece of this problem, specifically, when we have a floor.
         + It is a two-part model that specifies one process for zero counts and another process for positive counts. 
             + The idea is that positive counts occur once a threshold is crossed, or put another way, a hurdle is cleared. 
             + If the hurdle is not cleared, then we have a count of 0.
-    - How do you select the best variables to include in a regression model?
+    2. **How do you select the best variables to include in a regression model?**
         + So far, we've learned a stepwise approach to variable selection (in 431.) 
         + We will soon learn a method called "best subsets" that will be of interest here, although it's hardly the only alternative.
-    - How do you interpret interaction terms in a model? 
-        + If there's an interaction term, we interpret that first. 
-        + If it's largely ignorable, we may wind up with a main effects model. 
-        + This is covered in the ANOVA material we'll discuss today.
-    - What do we learn from the ANOVA as opposed to the summary of a linear model?
+    3. **How do you interpret interaction terms in a model?**
+        + If there's an interaction term, we interpret that first, making decisions about its inclusion based on:
+            - whether or not it has a large effect on the outcome
+            - whether or not it accounts for a meaningful percentage of the outcome's variation and improves the model's fit
+            - whether or not it accounts for statistically significant predictive value
+        + If it's largely ignorable, we may wind up instead with a main effects model, excluding the product term.
+        + This is covered in the material we'll discuss in class today.
+    4. **What do we learn from the ANOVA as opposed to the summary of a linear model?**
         + Several things. They look at different hypothesis tests, for example.
-        + The `anova` function in R can be used to compare two nested models.
+        + The `anova` function in R can be used to compare two nested models, but applied to a single regression model, it instead provides us with a sequential set of hypothesis tests. 
+        + Again, this is covered in class today.
     - Why do we need to use R to build a Table 1 instead of Excel?
         1. How would you calculate the summary values to include in the Table in Excel?
-        2. What if you built the Table 1 in Excel and then realized that one person in the treatment group was actually in the control group? If you've coded the work in R, then this will take a few seconds to fix. If you've done it in a spreadsheet, you're basically starting over from the beginning.
+        2. **Reproducibility.** What if you built the Table 1 in Excel and then realized that one person in the treatment group was actually in the control group? 
+            - If you've done the work in a script or R Markdown, then this will take somewhere between a few seconds and a few minutes to fix. Your work is reproducible, reusable, and shareable.
+            - If you've done it in a spreadsheet, you're basically starting over from the beginning.
+        - For more on why R vs. Excel, try [this link from the Revolutions blog](http://blog.revolutionanalytics.com/2014/10/why-r-is-better-than-excel.html) or maybe [this one from yhat](http://blog.yhat.com/posts/R-for-excel-users.html) 
     - How do I deal with missing data without ignoring it? How much missingness can we ignore, safely?
         - Imputation is the strategy we'll be using to deal with missing data.
         - The amount of missingness that can be "ignored" varies substantially from problem to problem.
@@ -72,7 +79,7 @@ In today's class, we'll focus on:
 
 Very confident | Somewhat confident | Not confident | I don't know yet | Responses | Enrolled Students
 :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------:
-9 | 20 | 2 | 7 | 38 | 44
+9 | 21 | 2 | 7 | 39 | 44
 
 
 ## Announcements After Class 03
