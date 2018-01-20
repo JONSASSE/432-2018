@@ -33,7 +33,7 @@ In today's class, we'll focus on:
     - You need to "listen fast" in this course. It moves quickly.
     - Using R to analyze data
     
-2. What question(s) remain uppermost in your mind at this point?
+2. What question(s) remain uppermost in your mind at this point? (roughly from more common to less common)
     - How do you fit a model to describe a response that has a floor and a ceiling? A hurdle model?
     - How do you select the best variables to include in a regression model?
     - How do you interpret interaction terms in a model?
