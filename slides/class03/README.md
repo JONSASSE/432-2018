@@ -47,7 +47,7 @@ In today's class, we'll focus on:
 3. How confident are you about your ability to successfully complete Homework 1, due Friday 2018-01-26?
 
 Very confident | Somewhat confident | Not confident | I don't know yet | Responses | Enrolled Students
---------------: | -----------------: | -------------: | ---------------: | -----------: | -----------------
+:-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------:
 9 | 20 | 2 | 7 | 38 | 44
 
 
