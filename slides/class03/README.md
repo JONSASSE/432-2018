@@ -42,11 +42,11 @@ In today's class, we'll focus on:
         + So far, we've learned a stepwise approach to variable selection (in 431.) 
         + We will soon learn a method called "best subsets" that will be of interest here, although it's hardly the only alternative.
     3. **How do you interpret interaction terms in a model?**
-        + If there's an interaction term, we interpret that first, making decisions about its inclusion based on:
-            - whether or not it has a large effect on the outcome
-            - whether or not it accounts for a meaningful percentage of the outcome's variation and improves the model's fit
-            - whether or not it accounts for statistically significant predictive value
-        + If it's largely ignorable, we may wind up instead with a main effects model, excluding the product term.
+        + If there's an interaction term, we interpret that first, making decisions about the inclusion of an interaction based on whether the interaction:
+            - has a large effect on the outcome (as seen in a plot or table of the data),
+            - accounts for a meaningful percentage of the outcome's variation and/or substantially improves the model's fit,
+            - accounts for statistically significant predictive value
+        + If the interaction is largely ignorable on several of those counts, we may wind up instead with a main effects model, excluding the product term.
         + This is covered in the material we'll discuss in class today.
     4. **What do we learn from the ANOVA as opposed to the summary of a linear model?**
         + Several things. They look at different hypothesis tests, for example.
