@@ -5,7 +5,7 @@
 As they become available, [the slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class03) and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class03) will be posted above.
 
 In today's class, we'll focus on:
-+ Analysis of Variance and related topics from Chapter 3 of the Course Notes
++ Analysis of Variance and related topics from the Course Notes
 + Validation of a linear regression model
 
 ## Announcements Before Class 03
