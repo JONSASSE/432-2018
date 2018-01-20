@@ -42,6 +42,7 @@ In today's class, we'll focus on:
     - How do you customize the HTML appearance of a Markdown, like with the Project 1 template?
     - What is the difference between linear and logistic regression analysis?
     - Why do I need a GitHub account?
+        + We're hoping that before the semester is over, we can figure out a way to facilitate your posting the best and most sharable parts of your project work to GitHub rather than just to Canvas.
     - Are you going to discuss **this thing I care about a lot** this semester?
 
 3. How confident are you about your ability to successfully complete Homework 1, due Friday 2018-01-26?
