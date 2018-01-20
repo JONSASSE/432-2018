@@ -6,11 +6,11 @@ Start a separate R Project for Homework 2, as your first step, and place all of 
 
 ## Question 1. (20 points)
 
-Consider the `hbp330` data used in Homework 1. Fit and interpret an ANOVA model to evaluate the effect of `race` on `income`. What conclusions can you draw? In developing an answer, please decide whether collapsing the `race` factor into a smaller number of levels would be sensible in this case. Be sure to provide a written explanation of your findings, in complete sentences.
+Consider the `hbp330` data used in Homework 1. Fit and interpret an ANOVA model to evaluate the effect of `race` on `income`. What conclusions can you draw? In developing an answer, please decide whether collapsing the `race` factor into a smaller number of levels would be sensible in this case. You'll also want to assess the role of missingness in this work, and consider removing the cases with missing values if they include only a small fraction of the total sample. Be sure to provide a written explanation of your findings, in complete sentences.
 
 ## Question 2. (15 points)
 
-Now fit a two-factor ANOVA model to evaluate the effects of `race` and `sex` on `income`. What can you conclude? Be sure to provide a written explanation of your findings, in complete sentences.
+Now fit a two-factor ANOVA model to evaluate the effects of `race` (either collapsed or uncollapsed, as you decide) and `sex` on `income`. What can you conclude? Be sure to provide a written explanation of your findings, in complete sentences.
 
 ## Question 3. (15 points)
 
