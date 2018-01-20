@@ -44,10 +44,13 @@ In today's class, we'll focus on:
     3. **How do you interpret interaction terms in a model?**
         + If there's an interaction term, we interpret that first, making decisions about the inclusion of an interaction based on whether the interaction:
             - has a large effect on the outcome (as seen in a plot or table of the data),
-            - accounts for a meaningful percentage of the outcome's variation and/or substantially improves the model's fit,
+            - accounts for a meaningful percentage of the outcome's variation and/or substantially improves model fit,
             - accounts for statistically significant predictive value
-        + If the interaction is largely ignorable on several of those counts, we may wind up instead with a main effects model, excluding the product term.
-        + This is covered in the material we'll discuss in class today.
+        + If the interaction is largely ignorable on several of those counts, we may wind up instead with a main effects model, excluding the product term. 
+            - A main effects model is appealing because we can then study the individual factors more conveniently. 
+            - Otherwise, the answer to the question "which level of factor A is better for this outcome" is always "it depends on factor B".
+            - But, as we'll see, for interesting real-world problems, product terms often make an important difference in our interpretation of a model, and the quality of its fit.
+        + Some of this is covered in the material we'll discuss in class today.
     4. **What do we learn from the ANOVA as opposed to the summary of a linear model?**
         + Several things. They look at different hypothesis tests, for example.
         + The `anova` function in R can be used to compare two nested models, but applied to a single regression model, it instead provides us with a sequential set of hypothesis tests. 
