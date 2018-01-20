@@ -72,7 +72,7 @@ In today's class, we'll focus on:
         - Take a look at R Studio's [R Markdown Formats page](http://rmarkdown.rstudio.com/formats.html).
     - What is the difference between linear and logistic regression analysis?
         - Linear regression models are built to describe quantitative outcomes. Logistic regression models are built to describe categorical outcomes: most often, *binary* outcomes.
-        - For example, if you want to predict the number of days that the subject will spend in the hospital, that's a linear model. If you want to predict the probability that the patient will have to go to the hospital, that's a logistic model.
+        - For example, a linear model might predict the number of days that the subject will spend in the hospital, but a logistic model would estimate the probability that the patient will have to go to the hospital.
     - Why do I need a GitHub account?
         + We're hoping that before the semester is over, we can figure out a way to facilitate your posting the best and most sharable parts of your project work to GitHub rather than just to Canvas.
     - Are you going to discuss **this thing I care about a lot** this semester?
