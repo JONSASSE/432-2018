@@ -16,11 +16,12 @@ In today's class, we'll focus on:
 
 2. Stuck on how to build categories in **Homework 1**?
     + You might try the `cut2` function from the `Hmisc` package, or
-    + You might try using `case_when` as demonstrated in Chapter 3 of the [Course Notes](https://thomaselove.github.io/432-notes/).
+    + You might try using `case_when` as demonstrated in the Analysis of Variance chapter in the [Course Notes](https://thomaselove.github.io/432-notes/).
 
 3. Thinking about simple imputation?
     + We'll use the `simputation` package later in the term to do this. I've just added this to our [packages to install](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD) list.
     + This approach works very well (and is quite flexible) for predicting quantitative variables, as well as categorical variables expressed with numerical codes. Sometimes, we'll impute the numerical code (as an integer variable) and then convert to a factor.
+    + I've added a chapter on this in the [Course Notes](https://thomaselove.github.io/432-notes/).
 
 ## **Minute Papers** after Class 02 (edited responses)
 
@@ -67,6 +68,7 @@ In today's class, we'll focus on:
         - For more on why R vs. Excel, try [this link from the Revolutions blog](http://blog.revolutionanalytics.com/2014/10/why-r-is-better-than-excel.html) or maybe [this one from yhat](http://blog.yhat.com/posts/R-for-excel-users.html) 
     6. **How do I deal with missing data without ignoring it? How much missingness can we ignore, safely?**
         - Imputation is the strategy we'll be using to deal with missing data. As mentioned, the `simputation` package is a pretty good choice for simple imputation, and we'll have several solutions for multiple imputation before the semester is over.
+        - There's a new chapter in the [Course Notes](https://thomaselove.github.io/432-notes/) on missing data and single imputation methods.
         - The amount of missingness that can be "ignored" varies substantially from problem to problem.
     7. **What do we do about reporting missing values in Table 1? Should we impute in building Table 1?**
         - Use footnotes to specify the number of people who have missing values.
