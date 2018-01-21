@@ -12,7 +12,7 @@ In today's class, we'll focus on:
 
 1. **Taking Notes?** A student in the class requires the help of a note-taker. If you are willing to provide a copy of your accurate and legible in-class notes to a fellow student (and receive a small stipend for this service) then **thank you**.
     + Please contact ESS Disability Resources at 216.368.5230 to schedule a brief interview and get more information.
-    + You'll need to provide them with your name, the name of the course (PQHS 432/CRSP 432) and the instructor's name (Thomas Love). 
+    + You'll need to provide them with your name, the name of the course (PQHS 432/CRSP 432) and the instructor. 
 
 2. Stuck on how to build categories in **Homework 1**?
     + You might try the `cut2` function from the `Hmisc` package, or
