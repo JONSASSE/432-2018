@@ -21,6 +21,7 @@ In today's class, we'll focus on:
 
 3. Thinking about simple imputation?
     + We'll use the `simputation` package later in the term to do this. I've just added this to our [packages to install](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD) list.
+    + This approach works very well (and is quite flexible) for predicting quantitative variables, as well as categorical variables expressed with numerical codes. Sometimes, we'll impute the numerical code (as an integer variable) and then convert to a factor.
 
 ## **Minute Papers** after Class 02 (edited responses)
 
