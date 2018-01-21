@@ -19,6 +19,9 @@ In today's class, we'll focus on:
     + You might try the `cut2` function from the `Hmisc` package, or
     + You might try using `case_when` as demonstrated in Chapter 3 of the [Course Notes](https://thomaselove.github.io/432-notes/).
 
+3. Thinking about simple imputation?
+    + We'll use the `simputation` package later in the term to do this. I've just added this to our [packages to install](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD) list.
+
 ## **Minute Papers** after Class 02 (edited responses)
 
 1. What was the most important thing you learned during the 432 class so far?
@@ -63,11 +66,11 @@ In today's class, we'll focus on:
             - If you've done it in a spreadsheet, you're basically starting over from the beginning.
         - For more on why R vs. Excel, try [this link from the Revolutions blog](http://blog.revolutionanalytics.com/2014/10/why-r-is-better-than-excel.html) or maybe [this one from yhat](http://blog.yhat.com/posts/R-for-excel-users.html) 
     6. **How do I deal with missing data without ignoring it? How much missingness can we ignore, safely?**
-        - Imputation is the strategy we'll be using to deal with missing data.
+        - Imputation is the strategy we'll be using to deal with missing data. As mentioned, the `simputation` package is a pretty good choice for simple imputation, and we'll have several solutions for multiple imputation before the semester is over.
         - The amount of missingness that can be "ignored" varies substantially from problem to problem.
     7. **What do we do about reporting missing values in Table 1? Should we impute in building Table 1?**
         - Use footnotes to specify the number of people who have missing values.
-        - Table 1 should show real data, not imputed data.
+        - Any Table 1 (not just in this assignment) should show real data, not imputed data.
     8. **How do you customize the HTML appearance of a Markdown, like with the Project 1 template?**
         - Take a look at R Studio's [R Markdown Formats page](http://rmarkdown.rstudio.com/formats.html).
     9. **What is the difference between linear and logistic regression analysis?**
