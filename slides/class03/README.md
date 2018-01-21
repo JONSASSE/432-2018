@@ -74,8 +74,8 @@ In today's class, we'll focus on:
     8. **How do you customize the HTML appearance of a Markdown, like with the Project 1 template?**
         - Take a look at R Studio's [R Markdown Formats page](http://rmarkdown.rstudio.com/formats.html).
     9. **What is the difference between linear and logistic regression analysis?**
-        - Linear regression models are built to describe quantitative outcomes. Logistic regression models are built to describe categorical outcomes: most often, *binary* outcomes.
-        - For example, a linear model might predict the number of days that the subject will spend in the hospital, but a logistic model would estimate the probability that the patient will have to go to the hospital.
+        - Linear regression models are built to describe quantitative outcomes. Logistic regression models are built to describe categorical outcomes: most often, *binary* outcomes. Linear regressions predict *numbers*, logistic models predict the presence or absence of *attributes*.
+        - For example, to estimate whether or not a patient presenting at the emergency department will be admitted to the hospital, we'd use a logistic model. To estimate the patient's heart rate at the time they present to the ED, a linear model would be used.
     10. **Why do I need a GitHub account?**
         + We're hoping that before the semester is over, we can figure out a way to facilitate your posting the best and most sharable parts of your project work to GitHub rather than just to Canvas.
     11. **Are you going to discuss *this thing I care about a lot* this semester?**
