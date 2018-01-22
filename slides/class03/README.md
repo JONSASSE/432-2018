@@ -20,6 +20,10 @@ In today's class, we'll focus on Analysis of Variance, Analysis of Covariance an
     + I've added a chapter on this in the [Course Notes](https://thomaselove.github.io/432-notes/).
     + We'll use the `simputation` package to do simple imputation. It's now one of our [packages to install](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD).
 
+4. By today, you were to have read R4DS 22-23.3, 26-27 and Leek Data Sharing & Scientific Code. I hope you have. Remember that the complete R4DS text is at http://r4ds.had.co.nz/ and those are the section numbers to which I refer.
+
+5. The [Course Notes](https://thomaselove.github.io/432-notes/) exploded in size over the weekend, including things that will bs useful for the first two homework assignments. Sorry that I'm not further ahead of you.
+
 ## **Minute Papers** after Class 02 (edited responses)
 
 1. What was the most important thing you learned during the 432 class so far?
