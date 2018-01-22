@@ -23,7 +23,7 @@ In today's class, we'll focus on Analysis of Variance, Analysis of Covariance an
 ## **Minute Papers** after Class 02 (edited responses)
 
 1. What was the most important thing you learned during the 432 class so far?
-    - Building Table 1. (x15)
+    - Building Table 1. (x16 - this means that 16 people suggested this)
     - How a response with a "floor" and a "ceiling" can adversely affect a linear model (x7)
     - Interaction terms / product terms and how to evaluate them (x6)
     - Data Sample Summary methods, including using `skew`, `count` and `table` functions. 
@@ -85,7 +85,7 @@ In today's class, we'll focus on Analysis of Variance, Analysis of Covariance an
 
 Very confident | Somewhat confident | Not confident | I don't know yet | Responses | Enrolled Students
 :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------:
-9 | 21 | 2 | 7 | 39 | 44
+11 | 22 | 2 | 8 | 43 | 44
 
 
 ## Announcements After Class 03
