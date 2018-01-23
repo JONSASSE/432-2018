@@ -21,7 +21,7 @@
 
 Day | Time | Location
 --------: | :----------------: | -----------------
-Tuesdays  | 11:45am to 12:45pm | Wood **WG-82C**
+Tuesdays  | 11:45am to 12:45pm | Wood **WG-82E**
 Tuesdays  | 2:30pm to 4:30pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
 Wednesdays | Noon to 12:50pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
 Thursdays | 11:45am to 12:45pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
