@@ -1,0 +1,300 @@
+---
+title: "432 Class 4 Slides"
+author: "github.com/THOMASELOVE/432-2018"
+date: "2018-01-25"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    colortheme: "lily"
+    fonttheme: "structurebold"
+    fig_caption: FALSE
+---
+
+```{r set-options, echo=FALSE, cache=FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 60)
+```
+
+## Setup
+
+```{r, warning = FALSE, message = FALSE}
+library(skimr)
+library(simputation)
+library(broom)
+library(modelr)
+library(tidyverse)
+
+smartcle1 <- read.csv("data/smartcle1.csv")
+```
+
+## Today's Materials
+
+- Prediction and Confidence Intervals
+- Centering and Rescaling Predictors
+- Two-Factor Analysis of Variance
+- More to come...
+
+## Last time, we built `smartcle3` and two models...
+
+```{r create_smartcle3}
+set.seed(20180123)
+
+smartcle3 <- smartcle1 %>%
+  select(SEQNO, bmi, sleephrs, female, alcdays, exerany) %>%
+  impute_rhd(exerany ~ 1) %>%
+  impute_pmm(sleephrs ~ 1) %>%
+  impute_rlm(bmi ~ female + sleephrs) %>%
+  impute_cart(alcdays ~ .) 
+
+model_int <- lm(bmi ~ female * sleephrs, data = smartcle3)
+model_noint <- lm(bmi ~ female + sleephrs, data = smartcle3)
+```
+
+## Building Predictions for New Data (Individual Subjects)
+
+What do we predict for the `bmi` of a female subject who gets 10 hours of sleep per night? What if the subject was male, instead?
+
+```{r}
+new1 <- data_frame(female = c(1, 0), sleephrs = c(10,10))
+
+predict(model_int, newdata = new1, 
+        interval = "prediction", level = 0.95)
+```
+
+## Building Predictions for New Data (Average Predictions)
+
+What do we predict for the average `bmi` of a population of female subjects who sleep for 10 hours? What about the population of male subjects?
+
+```{r}
+new1 <- data_frame(female = c(1, 0), sleephrs = c(10,10))
+
+predict(model_int, newdata = new1, 
+        interval = "confidence", level = 0.95)
+```
+
+# Centering and Rescaling Predictors (See Notes sections 2.13, 2.14 and 4.7)
+
+## Centering `sleephrs` to ease interaction description
+
+```{r}
+smartcle3 <- smartcle3 %>% 
+  mutate(sleep_c = sleephrs - mean(sleephrs))
+
+model_int_c <- lm(bmi ~ female * sleep_c, data = smartcle3)
+model_int_c
+```
+
+## Interpreting Interaction: Centered `sleephrs`
+
+`bmi` = 28.23 - 0.68 `female` + 0.04 centered `sleep_c` - 0.45 `female` x centered `sleep_c`
+
+- Now, 28.23 is the predicted `bmi` for a male who gets the average amount of sleep (7.02 hours)
+- And 28.23 - 0.68 = 27.55 is the predicted `bmi` for a female who gets the average amount of sleep.
+- So, the main effect of `female` is the predictive difference (female - male) in `bmi` for mean `sleephrs`,
+- the product term is the change in the slope of centered `sleephrs_c` on `bmi` for a female rather than a male, and
+- the residual standard deviation and the R-squared values remain unchanged from the model before centering.
+
+```{r}
+glance(model_int_c) %>% round(., 3)
+```
+
+## Plotting `bmi` on centered `sleep_c` by `female`
+
+```{r, echo = FALSE}
+ggplot(smartcle3, aes(x = sleep_c, y = bmi, group = female, col = factor(female))) +
+    geom_point(alpha = 0.5, size = 2) +
+    geom_smooth(method = "lm", se = FALSE) +
+    guides(color = FALSE) +
+    labs(x = "Sleep Hours, centered", y = "Body Mass Index",
+         title = "Model for `bmi` using `sleep_c` and `female`") +
+    facet_wrap(~ female, labeller = label_both)
+```
+
+## Rescaling?
+
+Centering helped us interpret the main effects in the regression, but it still leaves a scaling problem.
+
+- The female coefficient estimate is much larger than that of sleephrs, but this is misleading, considering that we are comparing the complete change in one variable (sex = female or not) to a 1-hour change in average sleep.
+- Gelman and Hill (2007) recommend all continuous predictors be scaled by dividing by 2 standard deviations
+    - A 1-unit change in the rescaled predictor corresponds to a change from 1 standard deviation below the mean, to 1 standard deviation above.
+    - An unscaled binary (1/0) predictor with 50% probability of occurring will be exactly comparable
+
+## Rescaling to `sleep_z` and re-fitting the model
+
+```{r}
+smartcle3 <- smartcle3 %>%
+    mutate(sleep_z = (sleephrs - mean(sleephrs)) /
+             (2*sd(sleephrs)))
+
+model_int_z <- lm(bmi ~ female * sleep_z, data = smartcle3)
+
+model_int_z
+```
+
+## Comparing our Interaction Models
+
+Original Model
+
+- `bmi` = 27.95 + 2.47 `female` + 0.04 `sleephrs` - 0.45 `female` x `sleephrs`
+
+Centered Model
+
+- `bmi` = 28.23 - 0.68 `female` + 0.04 `sleep_c` - 0.45 `female` x `sleep_c`
+
+Centered, Rescaled Model
+
+- `bmi` = 28.23 - 0.68 `female` + 0.12 `sleep_z` - 1.37 `female` x `sleep_z`
+
+## Interpreting the Centered, Rescaled Model
+
+- Main effect of `female`, -0.68, is still the predictive difference (female - male) in `bmi` with `sleephrs` at its mean, 7.02 hours,
+- Intercept (28.23) is still the predicted `bmi` for a male who sleeps the mean number of hours, and
+- the residual standard deviation and the R-squared values remain unchanged
+
+but now we also have:
+
+- the coefficient of `sleep_z` is the predictive difference in bmi associated with a change in `sleephrs` of 2 standard deviations (from one standard deviation below the mean of 7.02 to one standard deviation above 7.02.)
+    - Since sd(sleephrs) is 1.52, this corresponds to a change from 5.50 hours per night to 8.54 hours per night.
+- the coefficient of the product term (-1.37) corresponds to the change in the coefficient of `sleep_z` for females as compared to males.
+
+## Plotting the Rescaled, Centered Model
+
+```{r, echo = FALSE}
+ggplot(smartcle3, aes(x = sleep_z, y = bmi, 
+                      group = female, col = factor(female))) +
+    geom_point(alpha = 0.5) +
+    geom_smooth(method = "lm", size = 1.5) +
+    scale_color_discrete(name = "Is subject female?") +
+    labs(x = "Sleep Hours, centered and standardized (2 sd)", y = "Body Mass Index",
+         title = "Interaction model on centered, rescaled sleephrs")
+```
+
+# Two-Factor Analysis of Variance (see Notes Chapter 3)
+
+## How do `female` and `exerany` relate to `bmi`?
+
+```{r}
+smart3_sum <- smartcle3 %>%
+  group_by(female, exerany) %>%
+  summarize(mean.bmi = mean(bmi), sd.bmi = sd(bmi))
+```
+
+## Resulting tibble for `smart3_sum`
+
+```{r}
+smart3_sum
+```
+
+This would be more useful as a plot.
+
+## Building a Means Plot (result on next slide)
+
+```{r, eval = FALSE}
+pd <- position_dodge(0.2)
+
+ggplot(smart3_sum, aes(x = exerany, y = mean.bmi, col = factor(female))) +
+  geom_errorbar(aes(ymin = mean.bmi - sd.bmi,
+                    ymax = mean.bmi + sd.bmi),
+                width = 0.2, position = pd) +
+  geom_point(size = 2, position = pd) + 
+  geom_line(aes(group = female), position = pd) +
+  scale_color_discrete(name = "Female?") +
+  theme_bw() +
+  labs(y = "Body Mass Index", x = "Exercise at all in past 30 days?",
+       title = "Observed Means (+/- SD) of BMI by Exercise and Sex")
+```
+
+## Means Plot (Do we have a strong interaction effect?)
+
+```{r, echo = FALSE}
+pd <- position_dodge(0.2)
+
+ggplot(smart3_sum, aes(x = exerany, y = mean.bmi, col = factor(female))) +
+  geom_errorbar(aes(ymin = mean.bmi - sd.bmi,
+                    ymax = mean.bmi + sd.bmi),
+                width = 0.2, position = pd) +
+  geom_point(size = 2, position = pd) + 
+  geom_line(aes(group = female), position = pd) +
+  scale_color_discrete(name = "Female?") +
+  theme_bw() +
+  labs(y = "Body Mass Index", x = "Exercise at all in past 30 days?",
+       title = "Observed Means (+/- SD) of BMI by Exercise and Sex")
+```
+
+## Two-Way ANOVA model with Interaction
+
+```{r}
+model2 <- lm(bmi ~ female * exerany, data = smartcle3)
+
+anova(model2)
+```
+
+Does it seem like we need the interaction term in this case?
+
+## Summary of Two-Factor ANOVA with Interaction
+
+![](figs/fig02.png)
+
+## What if we wanted the model with no interaction?
+
+Here's the key plot, then...
+
+```{r, eval = FALSE}
+p1 <- ggplot(smartcle3, aes(x = factor(female), y = bmi)) + 
+    geom_boxplot()
+p2 <- ggplot(smartcle3, aes(x = factor(exerany), y = bmi)) +
+    geom_boxplot()
+
+gridExtra::grid.arrange(p1, p2, nrow = 1)
+```
+
+## Key Plot for Two-Way ANOVA, no interaction
+
+```{r, echo = FALSE}
+p1 <- ggplot(smartcle3, aes(x = factor(female), y = bmi)) + 
+    geom_boxplot()
+p2 <- ggplot(smartcle3, aes(x = factor(exerany), y = bmi)) +
+    geom_boxplot()
+
+gridExtra::grid.arrange(p1, p2, nrow = 1)
+```
+
+## Two-Way ANOVA model without Interaction
+
+```{r}
+model2_noint <- lm(bmi ~ female + exerany, data = smartcle3)
+
+anova(model2_noint)
+```
+
+## Summary of Two-Factor No Interaction ANOVA
+
+![](figs/fig03.png)
+
+## Tukey HSD Comparisons (no interaction)
+
+```{r, echo = FALSE}
+par(mfrow=c(1,2))
+plot(TukeyHSD(aov(bmi ~ factor(female) + factor(exerany), data = smartcle3)))
+par(mfrow=c(1,1))
+```
+
+## Tukey HSD Comparisons (without interaction)
+
+```{r, echo = FALSE}
+TukeyHSD(aov(bmi ~ factor(female) + factor(exerany), data = smartcle3))
+```
+
+## Tukey HSD comparisons WITH interaction
+
+```{r, echo = FALSE}
+par(mfrow=c(1,3))
+plot(TukeyHSD(aov(bmi ~ factor(female) * factor(exerany), data = smartcle3)))
+par(mfrow=c(1,1))
+```
+
+## Tukey HSD comparisons WITH interaction
+
+![](figs/fig04.png)
+
+# More to come...
