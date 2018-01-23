@@ -107,5 +107,5 @@ Very confident | Somewhat confident | Not confident | I don't know yet | Respons
 
 ## Announcements After Class 03
 
-We got through Slide 22. I'll post a new version of the slides soon, only containing those slides, and correcting some typos.
+I've posted a new version of the slides, only containing those we discussed and correcting some typos. The audio files are up, too.
 
