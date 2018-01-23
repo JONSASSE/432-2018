@@ -26,6 +26,8 @@ In today's class, we'll focus on Analysis of Variance, Analysis of Covariance an
 
 6. TA office hours have begun. All are on the ground floor of the Wood Building in the School of Medicine. The schedule is as follows, and this information is always available in the [Course Syllabus](https://thomaselove.github.io/432-syllabus/) and at the bottom of the [Course Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md).
 
+7. The CaseWireless wifi is (deliberately) much faster than CaseGuest. Log in is just your usual CWRU login.
+
 Day | Time | Location
 --------: | :----------------: | -----------------
 Tuesdays  | 11:45am to 12:45pm | Wood **WG-82E** (sorry, I had the room wrong - now correct)
