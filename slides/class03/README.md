@@ -24,6 +24,18 @@ In today's class, we'll focus on Analysis of Variance, Analysis of Covariance an
 
 5. The [Course Notes](https://thomaselove.github.io/432-notes/) exploded in size over the weekend, including things that will be useful for the first two homework assignments. Sorry that I'm not further ahead of you.
 
+6. TA office hours have begun. All are on the ground floor of the Wood Building in the School of Medicine. The schedule is as follows, and this information is always available in the [Course Syllabus](https://thomaselove.github.io/432-syllabus/) and at the bottom of the [Course Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md).
+
+Day | Time | Location
+--------: | :----------------: | -----------------
+Tuesdays  | 11:45am to 12:45pm | Wood **WG-82E** (sorry, I had the room wrong - now correct)
+Tuesdays  | 2:30pm to 4:30pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
+Wednesdays | Noon to 12:50pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
+Thursdays | 11:45am to 12:45pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
+Thursdays  | 2:30pm to 4:30pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
+Fridays | 12:15pm to 1:00pm | Either **WG-56** (Computing Lab) or **WG-67** (Student Lounge)
+
+
 ## **Minute Papers** after Class 02 (edited responses)
 
 1. What was the most important thing you learned during the 432 class so far?
