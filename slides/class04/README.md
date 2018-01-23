@@ -4,7 +4,7 @@
 
 As they become available, [the slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class04) and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class04) will be posted above.
 
-In today's class, we'll focus on ... **topics to be announced**.
+In today's class, we'll focus on making predictions, centering and rescaling predictors, analysis of variance, and model validation.
 
 ## Announcements Before Class 04
 
