@@ -1,0 +1,23 @@
+# 432 Class 04: 2018-01-25
+
+### Key Materials
+
+As they become available, [the slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class04) and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class04) will be posted above.
+
+In today's class, we'll focus on ... **topics to be announced**.
+
+## Announcements Before Class 04
+
+1. Don't forget to submit HW 1 by 1 PM on Friday 2018-01-26.
+
+2. I had some typos in the original Class 03 Slides. These will be reposted soon to 
+    a. include only the slides (1-22) that I got to in class, and
+    b. fix the issues on slides 5 and 19
+
+3. I will write something about the distinction between an additive and a multiplicative interaction.
+
+4. I will write something about why we use 1/0 for indicator variables (like 1 = female, 0 = male) rather than 1/2 (1 = male, 2 = female) and what the impact of doing things the other way would be, practically.
+
+Other suggestions or questions? - please email 431-help at case dot edu
+
+## Announcements After Class 04
