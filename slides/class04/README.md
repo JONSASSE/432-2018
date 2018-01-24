@@ -9,6 +9,9 @@ In today's class, we'll focus on making predictions, centering and rescaling pre
 ## Announcements Before Class 04
 
 1. Don't forget to [submit Homework 1](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw1) by 1 PM on Friday 2018-01-26. Use [Canvas](https://canvas.case.edu) to do so. If you have questions about the homework, please ask them at 431-help at case dot edu, or during [TA office hours](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md#teaching-assistant-office-hours).
+    - Re: footnotes. I would list the notes as a bulleted list in the Markdown file, and do everything in Markdown, as a result.
+    - Re: dealing with missingness. It's not usually appropriate to report results that include imputation in a Table 1, so I expect the best choice is to build a note specifying the amount of missing data.
+    - Re: building BMI categories. Try `cut2` from the Hmisc package, or `case_when` in the tidyverse.
 
 2. You'll also have a Minute Paper to do after Class 04. **Details to come.**
 
