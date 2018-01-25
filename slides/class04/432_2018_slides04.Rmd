@@ -24,7 +24,7 @@ library(broom)
 library(modelr)
 library(tidyverse)
 
-smartcle1 <- read.csv("data/smartcle1.csv")
+smartcle1 <- read.csv("data/smartcle1.csv") 
 ```
 
 ## Today's Materials
@@ -44,7 +44,8 @@ smartcle3 <- smartcle1 %>%
   impute_rhd(exerany ~ 1) %>%
   impute_pmm(sleephrs ~ 1) %>%
   impute_rlm(bmi ~ female + sleephrs) %>%
-  impute_cart(alcdays ~ .) 
+  impute_cart(alcdays ~ .) %>%
+  tbl_df()
 
 model_int <- lm(bmi ~ female * sleephrs, data = smartcle3)
 model_noint <- lm(bmi ~ female + sleephrs, data = smartcle3)
@@ -101,12 +102,13 @@ glance(model_int_c) %>% round(., 3)
 ## Plotting `bmi` on centered `sleep_c` by `female`
 
 ```{r, echo = FALSE}
-ggplot(smartcle3, aes(x = sleep_c, y = bmi, group = female, col = factor(female))) +
+ggplot(smartcle3, aes(x = sleep_c, y = bmi, group = female, 
+                      col = factor(female))) +
     geom_point(alpha = 0.5, size = 2) +
     geom_smooth(method = "lm", se = FALSE) +
     guides(color = FALSE) +
     labs(x = "Sleep Hours, centered", y = "Body Mass Index",
-         title = "Model for `bmi` using `sleep_c` and `female`") +
+         title = "Model bmi using sleep_c and female") +
     facet_wrap(~ female, labeller = label_both)
 ```
 
@@ -161,12 +163,13 @@ but now we also have:
 
 ```{r, echo = FALSE}
 ggplot(smartcle3, aes(x = sleep_z, y = bmi, 
-                      group = female, col = factor(female))) +
+                  group = female, col = factor(female))) +
     geom_point(alpha = 0.5) +
     geom_smooth(method = "lm", size = 1.5) +
     scale_color_discrete(name = "Is subject female?") +
-    labs(x = "Sleep Hours, centered and standardized (2 sd)", y = "Body Mass Index",
-         title = "Interaction model on centered, rescaled sleephrs")
+    labs(x = "Sleep Hours, centered and standardized (2 sd)",
+         y = "Body Mass Index",
+         title = "Interaction model: centered, rescaled sleephrs")
 ```
 
 # Two-Factor Analysis of Variance (see Notes Chapter 3)
@@ -192,7 +195,8 @@ This would be more useful as a plot.
 ```{r, eval = FALSE}
 pd <- position_dodge(0.2)
 
-ggplot(smart3_sum, aes(x = exerany, y = mean.bmi, col = factor(female))) +
+ggplot(smart3_sum, aes(x = exerany, y = mean.bmi, 
+                       col = factor(female))) +
   geom_errorbar(aes(ymin = mean.bmi - sd.bmi,
                     ymax = mean.bmi + sd.bmi),
                 width = 0.2, position = pd) +
@@ -200,8 +204,9 @@ ggplot(smart3_sum, aes(x = exerany, y = mean.bmi, col = factor(female))) +
   geom_line(aes(group = female), position = pd) +
   scale_color_discrete(name = "Female?") +
   theme_bw() +
-  labs(y = "Body Mass Index", x = "Exercise at all in past 30 days?",
-       title = "Observed Means (+/- SD) of BMI by Exercise and Sex")
+  labs(y = "Body Mass Index", 
+       x = "Exercise at all in past 30 days?",
+       title = "Means (+/- SD) of BMI by Exercise and Sex")
 ```
 
 ## Means Plot (Do we have a strong interaction effect?)
@@ -209,7 +214,8 @@ ggplot(smart3_sum, aes(x = exerany, y = mean.bmi, col = factor(female))) +
 ```{r, echo = FALSE}
 pd <- position_dodge(0.2)
 
-ggplot(smart3_sum, aes(x = exerany, y = mean.bmi, col = factor(female))) +
+ggplot(smart3_sum, aes(x = exerany, y = mean.bmi, 
+                       col = factor(female))) +
   geom_errorbar(aes(ymin = mean.bmi - sd.bmi,
                     ymax = mean.bmi + sd.bmi),
                 width = 0.2, position = pd) +
@@ -217,8 +223,9 @@ ggplot(smart3_sum, aes(x = exerany, y = mean.bmi, col = factor(female))) +
   geom_line(aes(group = female), position = pd) +
   scale_color_discrete(name = "Female?") +
   theme_bw() +
-  labs(y = "Body Mass Index", x = "Exercise at all in past 30 days?",
-       title = "Observed Means (+/- SD) of BMI by Exercise and Sex")
+  labs(y = "Body Mass Index", 
+       x = "Exercise at all in past 30 days?",
+       title = "Means (+/- SD) of BMI by Exercise and Sex")
 ```
 
 ## Two-Way ANOVA model with Interaction
@@ -275,21 +282,24 @@ anova(model2_noint)
 
 ```{r, echo = FALSE}
 par(mfrow=c(1,2))
-plot(TukeyHSD(aov(bmi ~ factor(female) + factor(exerany), data = smartcle3)))
+plot(TukeyHSD(aov(bmi ~ factor(female) + factor(exerany), 
+                  data = smartcle3)))
 par(mfrow=c(1,1))
 ```
 
 ## Tukey HSD Comparisons (without interaction)
 
 ```{r, echo = FALSE}
-TukeyHSD(aov(bmi ~ factor(female) + factor(exerany), data = smartcle3))
+TukeyHSD(aov(bmi ~ factor(female) + factor(exerany), 
+             data = smartcle3))
 ```
 
 ## Tukey HSD comparisons WITH interaction
 
 ```{r, echo = FALSE}
 par(mfrow=c(1,3))
-plot(TukeyHSD(aov(bmi ~ factor(female) * factor(exerany), data = smartcle3)))
+plot(TukeyHSD(aov(bmi ~ factor(female) * factor(exerany), 
+                  data = smartcle3)))
 par(mfrow=c(1,1))
 ```
 
@@ -297,4 +307,276 @@ par(mfrow=c(1,1))
 
 ![](figs/fig04.png)
 
-# More to come...
+## Indicator Variables
+
+What if I used (1 = yes, 2 = no) instead of (1 = yes, 0 = no) for `exerany`? What if I tell R that `exerany` is a factor?
+
+```{r}
+smartcle3 <- smartcle3 %>%
+  mutate(exer_12 = 2 - exerany,
+    exer_yn = fct_recode(factor(exerany), Y = "1", N = "0"))
+
+smartcle3 %>% count(exerany, exer_12, exer_yn)
+```
+
+## Two-Predictor model with `exerany` (1 = yes, 0 = no)
+
+```{r}
+lm(bmi ~ exerany * alcdays, data = smartcle3)
+```
+
+## Two-Predictor model with `exer_12` (1 = yes, 2 = no)
+
+```{r}
+lm(bmi ~ exer_12 * alcdays, data = smartcle3)
+```
+
+Compare to 
+
+` (Intercept)    exerany    alcdays  exerany:alcdays`  
+`   29.79211    -2.10499   -0.10141          0.02546`  
+
+## Two-Predictor model with `exer_yn` (factor)
+
+```{r}
+lm(bmi ~ exer_yn * alcdays, data = smartcle3)
+```
+
+Compare to 
+
+` (Intercept)    exerany    alcdays  exerany:alcdays`  
+`   29.79211    -2.10499   -0.10141          0.02546`  
+
+# Fitting Linear Regressions, and then Validating Them
+
+## A Linear Regression for `bmi` from `smartcle3`
+
+```{r}
+mod_ks <- lm(bmi ~ female + sleephrs + alcdays + exerany, 
+             data = smartcle3)
+round(coef(mod_ks),2)
+glance(mod_ks)
+```
+
+## `tidy(mod_ks)`
+
+```{r, echo = FALSE}
+tidy(mod_ks)
+```
+
+## ANOVA for sequential testing of predictors
+
+```{r}
+anova(mod_ks)
+```
+
+## Different order but the same model?
+
+```{r}
+anova(lm(bmi ~ exerany + alcdays + female + sleephrs, 
+         data = smartcle3))
+```
+
+## Does Order Matter? Comparing Slopes 
+
+`model_ks` Order | Estimate 
+-------------: | ---------: 
+Intercept | 32.32 
+`female` | -1.19 
+`sleephrs` | -0.24 
+`alcdays` |  -0.10 
+`exerany` |  -2.15 
+
+Revised Order | Estimate 
+-------------: | ---------: 
+Intercept | 32.32 
+`exerany` |  -2.15 
+`alcdays` |  -0.10 
+`female` |  -1.19 
+`sleephrs` |  -0.24 
+
+## Does Order Matter? Comparing *t* test and CI results
+
+- t tests in `summary` and `tidy` test value as "last predictor in"
+
+`model_ks` Order | Estimate | t test *p*  | 95% CI
+-------------: | ---------: | ---------: | -------------
+Intercept | 32.32 | < 2e-16  | (30.3, 34.3)
+`female` | -1.19 |    0.0028 | (-2.0, -0.4)
+`sleephrs` | -0.24 |  0.0499 | (-0.5, -0.0)
+`alcdays` |  -0.10 | 7.9e-05 | (-0.14, -0.05)
+`exerany` |  -2.15 | 1.8e-06 | (-3.0, -1.2)
+
+Revised Order | Estimate | t test *p*  | 95% CI
+-------------: | ---------: | ---------: | -------------
+Intercept | 32.32 | < 2e-16 |  (30.3, 34.3)
+`exerany` |  -2.15 | 1.8e-06 | (-2.0, -0.4)
+`alcdays` |  -0.10 | 7.9e-05 | (-0.5, -0.0)
+`female` |  -1.19 |  0.0028 | (-0.14, -0.05)
+`sleephrs` |  -0.24 | 0.0499 | (-3.0, -1.2)
+
+## Does Order Matter? Comparing Slopes and *p* values
+
+- t tests in `summary` and `tidy` test value as "last predictor in"
+- anova tests of a single `lm` consider predictive value "in sequence"
+
+`model_ks` Order | Estimate | t test *p*  | ANOVA *p*
+-------------: | ---------: | ---------: | ---------: 
+Intercept | 32.32 | < 2e-16 | -
+`female` | -1.19 |    0.0028 | 0.075
+`sleephrs` | -0.24 |  0.0499 | 0.073
+`alcdays` |  -0.10 | 7.9e-05 | 2.1e-05
+`exerany` |  -2.15 | 1.8e-06 | 1.8e-06
+
+Revised Order | Estimate | t test *p*  | ANOVA *p*
+-------------: | ---------: | ---------: | ---------: 
+Intercept | 32.32 | < 2e-16 | -
+`exerany` |  -2.15 | 1.8e-06 | 1.7e-06
+`alcdays` |  -0.10 | 7.9e-05 | 0.0007
+`female` |  -1.19 |  0.0028 | 0.0025
+`sleephrs` |  -0.24 | 0.0499 | 0.0499
+
+# Do we need all of those variables in `mod_ks`? (Sections 7-8)
+
+## Stepwise Regression (backwards elimination)
+
+```{r}
+step(mod_ks)
+```
+
+## Stepwise Regression (forwards selection)
+
+```{r, eval = FALSE}
+with(smartcle3,
+     step(lm(bmi ~ 1),
+          scope = (~ exerany + alcdays + female + sleephrs),
+          direction = "forward"))
+```
+
+## Forward Selection Stepwise Regression, Results: 1
+
+![](figs/fig05.png)
+
+## Forward Selection Stepwise Regression, Results: 2
+
+![](figs/fig06.png)
+
+## Forward Selection Stepwise Regression, Results: 3
+
+![](figs/fig07.png)
+
+## Conclusions?
+
+- Forward selection and backwards elimination show the same model, which is also the kitchen sink model.
+    - Does that mean that the model is right?
+    - Does that mean that the model is good?
+    - Does that mean that the model is the best possible combination of these predictors?
+
+>- Should we feel substantially more confident about the above statements when the forward selection result = the backwards elimination result, as in our model for `bmi` using `smartcle3`?
+
+>- No.
+
+# Validating the Model (See Section 6)
+
+## Training and Test Samples (as in 431)
+
+Suppose we want to evaluate whether our `model_ks` predicts effectively in new data. 
+
+One approach (used, for instance, in 431) would be to split our sample into a separate training (perhaps 70% of the data) and test (perhaps 30% of the data) samples, and then:
+
+1. fit the model in the training sample,
+2. use the resulting model to make predictions for `bmi` in the test sample, and
+3. evaluate the quality of those predictions, perhaps by comparing the results to what we'd get using a different model.
+
+But there are problems with this approach, especially if *n* is small.
+
+## What else could we do?
+
+Suppose we're afraid that our model building and testing will be hampered by a small sample size. 
+
+- A potential solution is the idea of **cross-validation**, which involves partitioning our data into a series of training-test subsets, multiple times, and then combining the results. 
+- So, in the next slides, I'll show you how to do something called **10-fold cross validation** using some tools from the `modelr` package, which is a non-core part of the `tidyverse`.
+
+## 10-fold cross validation: The idea
+
+1. Split the 1,036 observations in our `smartcle3` data frame into a partition of about 90% (so about 932 observations) for a training sample, leaving the remaining 10% (about 104 observations) for a test sample. Label the test sample `.id` = 1 in R.
+2. Refit our model (here, kitchen sink) to the training sample, and use it to predict our outcome (`bmi`) in the test sample.
+3. Store the prediction results for the subjects in the test sample.
+4. Split the observations again, ensuring that a completely new 10% gets held out for the test sample, labeling this new test sample `.id` = 2 in R. Then redo parts 2 and 3. Now you have prediction results for 20% of the subjects in the original data.
+5. Repeat the process (10x in total) until you have prediction results for all 100% of the subjects in the original data. Thus, each observation is used 9 times in the training sample, and once in the test sample.
+
+## 10-fold cross-validation of `mod_ks`
+
+```{r}
+set.seed(432021)
+
+sink_models <- smartcle3 %>%
+    crossv_kfold(k = 10) %>%
+    mutate(model = map(train, ~ 
+                         lm(bmi ~ female + sleephrs + 
+                              alcdays + exerany, data = .)))
+
+sink_predictions <- sink_models %>%
+    unnest(map2(model, test, ~ augment(.x, newdata = .y)))
+```
+
+## The first few cross-validated predictions
+
+```{r}
+head(sink_predictions, 3)
+```
+
+## Graphing the Cross-Validated Prediction Errors of `bmi` (code)
+
+```{r, eval = FALSE}
+sink_predictions %>%
+    mutate(errors = bmi - .fitted) %>%
+    ggplot(., aes(x = errors)) +
+    geom_histogram(bins = 30, fill = "darkviolet", 
+                   col = "yellow") + 
+    labs(title = "Cross-Validated Errors Predicting BMI",
+         subtitle = "Kitchen Sink model, smartcle3",
+         x = "Error in predicting BMI")
+```
+
+## Cross-Validated Prediction Errors of `bmi`
+
+```{r, echo = FALSE}
+sink_predictions %>%
+    mutate(errors = bmi - .fitted) %>%
+    ggplot(., aes(x = errors)) +
+    geom_histogram(bins = 30, fill = "darkviolet", 
+                   col = "yellow") + 
+    labs(title = "Cross-Validated Errors Predicting BMI",
+         subtitle = "Kitchen Sink model, smartcle3",
+         x = "Error in predicting BMI")
+```
+
+## Summary Statistics Based on Cross-Validated Prediction Errors
+
+We'll look at the **root mean squared prediction error** or RMSE, and the **mean absolute error**, too.
+
+```{r}
+sink_predictions %>%
+    summarize(RMSE_sink = sqrt(mean((bmi - .fitted) ^2)),
+              MAE_sink = mean(abs(bmi - .fitted)))
+```
+
+## Comparison to a Model with the Intercept Only (predict mean BMI)?
+
+```{r}
+sink_predictions %>%
+    summarize(RMSE_sink = sqrt(mean((bmi - .fitted) ^2)),
+        RMSE_intercept = sqrt(mean((bmi - mean(bmi))^2)),
+        MAE_sink = mean(abs(bmi - .fitted)),
+        MAE_intercept = mean(abs(bmi - mean(bmi)))) %>%
+  round(., 3)
+```
+
+## Next Week
+
+- Homework 1 discussion in class Tuesday
+- Stepwise Regression via the Allen-Cady Procedure
+- Best Subsets approaches to Variable Selection
+- Making Decisions about Non-Linearity in Y or in the Xs
+
