@@ -14,7 +14,7 @@ In today's class, we'll focus on making predictions, centering and rescaling pre
     - Re: building BMI categories. Try `cut2` from the Hmisc package, or `case_when` in the tidyverse.
     - Remaining office hours for TAs include 2:30 - 4:30 Thursday and 12:15 - 1 PM on Friday.
 
-2. **Post-Class Minute Paper**. Please fill out [this Google Form](https://goo.gl/forms/N281latgrk3wqJvf1) as soon as possible **after** today's class, for some class participation credit, and no later than 9 AM Monday, to provide us with some feedback about how things are going so far. Thanks so much.
+2. **Post-Class Minute Paper**. Please fill out [this Google Form](https://goo.gl/forms/N281latgrk3wqJvf1) as soon as possible **after** today's class, for some class participation credit (if you get it in by 9 AM Monday) and to provide us with some feedback about how things are going so far. Thanks so much.
 
 3. **Types of Interaction** 
     - The usual definitions of additive and multiplicative interaction in epidemiology refer to risks of binary outcomes, rather than to departures from linear models for quantitative outcomes.
