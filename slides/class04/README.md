@@ -2,7 +2,7 @@
 
 ### Key Materials
 
-As they become available, [the slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class04) and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class04) will be posted above.
+[The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class04) are online, and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class04) will be posted above when they become available.
 
 In today's class, we'll focus on making predictions, centering and rescaling predictors, analysis of variance, and model validation.
 
@@ -20,11 +20,5 @@ In today's class, we'll focus on making predictions, centering and rescaling pre
     - In linear regression, the regression coefficient of the product term reflects interaction as departure from additivity. 
     - However, in logistic regression, the product term's coefficient reflects interaction as departure from multiplicativity. 
     - There's a series of [papers by Mirjam Knol and others](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3115067/) on estimating measures of interaction on an additive scale in the context of logistic regression, which is appealing from a population health perspective.
-
-4. **Dr. Love plans to write** 
-    - something about why we use 1/0 for indicator variables (like 1 = female, 0 = male) rather than 1/2 (1 = male, 2 = female) and what the impact of doing things the other way would be, practically.
-    - something about whether it matters what order you enter predictors into a regression model (or, more accurately, *when* it matters.
-
-Other suggestions or questions? - please email `431-help at case dot edu`
 
 ## Announcements After Class 04
