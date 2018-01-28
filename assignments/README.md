@@ -10,7 +10,7 @@ Link to Details | Due at 1 PM on | Material Covered in the Assignment
 [Homework 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2) | Fri 2018-02-02 | Linear Regression
 [Homework 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw3) | Fri 2018-02-09 | Linear Regression, Data Visualization
 [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) | Fri 2018-02-16 | Logistic Regression
-HW 5 | Fri 2018-02-23 | Logistic Regression
+[Homework 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) | Fri 2018-02-23 | Logistic Regression
 HW 6 | Fri 2018-03-30 | Generalized Linear Models (+ Presentation Time Selection)
 HW 7 | Fri 2018-04-06 | Cluster Analysis, GLM
 HW 8 | Fri 2018-04-20 | Survival Analysis
