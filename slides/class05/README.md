@@ -12,7 +12,8 @@ In today's class, we'll focus on model selection and validation.
 
 2. Homework 1 and Grading, in general. 
     - The [Homework 1 Answer Sketch](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/README.md) is now available in R Markdown, HTML and PDF.
-    - Once Homework 1 has been graded, we'll post grades and a few TA comments, in a list, with students identified by HW ID number. At that time, we'll also post our grading rubric.
+    - The [Grading Rubric](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/README.md) is also available.
+    - Once Homework 1 has been graded, we'll post grades and a few TA comments, in a list, with students identified by HW ID number.
         + You'll receive an email from Professor Love with your HW ID number in time to view the grades. Those of you who took 431 with Professor Love this past semester will have the same number as last term.
     - Should you have questions about the Homework's concepts or other **non-grading** issues, please contact us at 431-help or in office hours.
         + The TAs are available to help you understand an appropriate way to tackle each problem, and also to help you understand potential concerns related to your answer.
