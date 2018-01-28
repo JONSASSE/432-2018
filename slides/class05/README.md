@@ -25,6 +25,6 @@ In today's class, we'll focus on model selection and validation.
 3. Here's a little progress report on course materials.
     1. We've corrected typos in Chapters 3, 4, 6 and 7 of the [Course Notes](https://thomaselove.github.io/432-notes/), all found by students. Thanks!
     2. There were some minor additions (hints, really) to [Homework 2](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/README.md) this weekend.
-    3. [Homework 3](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw3/README.md) and [Homework 4](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/README.md) are now available, too.
+    3. [Homework 3](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw3/README.md) and [Homework 4](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/README.md) and [Homework 5](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw5/README.md) are now available, too. So you're set for HW through February.
 
 4. Deadline Questions? Check the [SCHEDULE](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md), please. 
