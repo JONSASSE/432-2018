@@ -21,3 +21,5 @@ In today's class, we'll focus on model selection and validation.
         + Dr. Love will provide a Google Form to use for this task. He will review all such requests at the **end of the term**.
         + If you've already got an A in the course without any additional credit on homework assignments, then he won't bother to review those grading requests, but if you don't, he will do so carefully, at the end of the term.
         + Please **don't** expect the TAs to address grading issues: Dr. Love will do that, at the end of the semester.
+
+3. We've corrected typos in Chapters 3, 4, 6 and 7 of the [Course Notes](https://thomaselove.github.io/432-notes/), all found by students. Thanks!
