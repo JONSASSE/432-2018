@@ -22,4 +22,9 @@ In today's class, we'll focus on model selection and validation.
         + If you've already got an A in the course without any additional credit on homework assignments, then Dr. Love won't bother to review your regrading requests in May, but if you don't have an A yet, he will do so very carefully after noon on 2018-05-09.
         + Please **don't** expect the TAs to address grading issues: Dr. Love will do that, at the end of the semester.
 
-3. We've corrected typos in Chapters 3, 4, 6 and 7 of the [Course Notes](https://thomaselove.github.io/432-notes/), all found by students. Thanks!
+3. Some progress over the weekend on course materials.
+a. We've corrected typos in Chapters 3, 4, 6 and 7 of the [Course Notes](https://thomaselove.github.io/432-notes/), all found by students. Thanks!
+b. There were some minor additions (hints, really) to [Homework 2](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/README.md) this weekend.
+c. [Homework 3](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw3/README.md) and [Homework 4](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/README.md) are now available, too.
+
+4. Deadline Questions? Check the [SCHEDULE](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md), please. 
