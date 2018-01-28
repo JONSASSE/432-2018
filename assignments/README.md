@@ -15,6 +15,10 @@ HW 6 | Fri 2018-03-30 | Generalized Linear Models (+ Presentation Time Selection
 HW 7 | Fri 2018-04-06 | Cluster Analysis, GLM
 HW 8 | Fri 2018-04-20 | Survival Analysis
 
+### Want to request a regrade of a homework assignment?
+
+Dr. Love takes care of such requests in a batch at the end of the term. Fill out [this Google Form](https://goo.gl/forms/aQNPnlAWGIn72a7h1) before noon on Wednesday 2018-05-09 to request a regrade of any homework assignment.
+
 ## Other Deliverables
 
 - Students are required to **participate** actively in the course, including meaningful contributions in group work, in-class participation, completion of "minute paper" forms after several classes, emails to 431-help, visits to TAs, etc. We're more concerned about the breadth of your participation rather than just its quantity. Most students score between 80% and 100% on this element.
