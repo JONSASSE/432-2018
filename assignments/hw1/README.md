@@ -4,7 +4,11 @@
 
 - Answer Sketch: [Download R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw1/hw1sketch.Rmd), or [View HTML result](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/hw1sketch.html), or [Download or View PDF result](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/hw1sketch.pdf)
 - Grading Rubric [is now available](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/hw1rubric.md).
-- Google Spreadsheet Containing Grades, Arranged by HW-ID number (Check your email.)
+- Google Spreadsheet Containing Grades, Arranged by HW-ID number (Check your email for your HW-ID number.)
+
+### Want to request a regrade of a homework assignment?
+
+Dr. Love takes care of such requests in a batch at the end of the term. Fill out [this Google Form](https://goo.gl/forms/aQNPnlAWGIn72a7h1) before noon on Wednesday 2018-05-09 to request a regrade of any homework assignment.
 
 ## The Actual Assignment
 
