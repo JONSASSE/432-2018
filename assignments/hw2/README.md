@@ -6,7 +6,7 @@ Start a separate R Project for Homework 2, as your first step, and place all of 
 
 ## Question 1. (30 points)
 
-Consider the `hbp330` data used in Homework 1. Fit and interpret an ANOVA model to evaluate the effect of `race` on `income`. What conclusions can you draw? In developing an answer, please decide whether collapsing the `race` factor into a smaller number of levels would be sensible in this case. You'll also want to assess the role of missingness in this work, and consider removing the cases with missing values if they include only a small fraction of the total sample. Be sure to provide a written explanation of your findings, in complete sentences.
+Consider the `hbp330` data used in Homework 1. Fit and interpret an ANOVA model to evaluate the effect of `race` on `income`. What conclusions can you draw? In developing an answer, please decide whether collapsing the `race` factor into a smaller number of levels would be sensible in this case. You'll also want to assess the role of missingness in this work, and consider removing the cases with missing values (or imputing them with simple imputation) if they include only a small fraction of the total sample. Be sure to provide a written explanation of your findings, in complete sentences.
 
 ## Question 2. (20 points)
 
@@ -18,6 +18,11 @@ Now attempt to fit a two-factor ANOVA model to evaluate the effect of `race` and
 
 ## Question 4. (30 points)
 
-Again, consider the `hbp330` data used in Homework 1. Build your best model for the prediction of body-mass index, considering the following 14 predictors: `practice`, `age`, `race`, `eth_hisp`, `sex`, `insurance`, `income`, `hsgrad`, `tobacco`, `depdiag`, `sbp`, `dbp`, `statin` and `bpmed`. Limit your investigation to models containing no more than seven of these candidate predictors, and do not transform any variables. 
+Again, consider the `hbp330` data used in Homework 1. Build your best model for the prediction of body-mass index, considering the following 14 predictors: `practice`, `age`, `race`, `eth_hisp`, `sex`, `insurance`, `income`, `hsgrad`, `tobacco`, `depdiag`, `sbp`, `dbp`, `statin` and `bpmed`. Use an appropriate best subsets procedure to aid in your search, and use a cross-validation strategy to assess and compare potential models.
 
-Use an appropriate best subsets procedure to aid in your search, and use a cross-validation strategy (like partitioning the data into training and test samples prior to fitting models) to assess and compare potential models. Be sure to provide a written explanation of your conclusions and specify the variables in your final model, in complete sentences.
+- Feel free to omit cases with missing values among these predictors, or the `bmi` outcome before proceeding.
+- Use the `nvmax = 7` command within your callto `regsubsets` to limit your investigation to models containing no more than seven of these candidate predictors.
+- Do not transform any variables, and consider models with main effects only so that no product terms are used.
+- A 5-fold cross-validation strategy would be very appropriate. Another reasonable choice would involve partitioning the data once (prior to fitting any models) into training and test samples, as we did in 431.
+
+Be sure to provide a written explanation of your conclusions and specify the variables in your final model, in complete sentences.
