@@ -23,6 +23,10 @@ Variable  | Description
 `smokeyr` | subject's years smoking
 `cigs`    | subject's cigarettes smoked per day
 
+### Reference
+
+-  Holst, P.A., Kromhout, D. and Brand, R. (1988). For Debate: Pet Birds as an Independent Risk Factor for Lung Cancer, *British Medical Journal 297*: 13-21.
+
 ## Question 1 (60 points)
 
 You will fit a logistic regression model to address the key research question here, which is:
@@ -49,6 +53,3 @@ Some specific suggestions:
 
 2. Then, in an essay of 4-8 additional sentences, describe why this particular piece of advice was meaningful or useful for you, personally, and how it will affect the way you move forward. You are encouraged to provide a specific example of a past or current scientific experience of yours that would have been (or is being) helped by this new approach or idea. Why is this idea important and worth sharing?
 
-### Reference
-
--  Holst, P.A., Kromhout, D. and Brand, R. (1988). For Debate: Pet Birds as an Independent Risk Factor for Lung Cancer, *British Medical Journal 297*: 13-21.
