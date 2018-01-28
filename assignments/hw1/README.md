@@ -1,5 +1,13 @@
 # 432 Homework 1 for Spring 2018
 
+## Links to Post-Deadline Materials will go live as they become available
+
+- Answer Sketch
+- Grading Rubric
+- Google Spreadsheet Containing Grades, Arranged by HW-ID number (Check your email.)
+
+## The Actual Assignment
+
 Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **1 PM on Friday 2018-01-26**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file to the `hbp330.csv` data. 
 
 Start a separate R Project for Homework 1, as your first step, and place the data in that project's specific directory.
