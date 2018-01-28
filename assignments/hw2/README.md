@@ -20,8 +20,8 @@ Now attempt to fit a two-factor ANOVA model to evaluate the effect of `race` and
 
 Again, consider the `hbp330` data used in Homework 1. Build your best model for the prediction of body-mass index, considering the following 14 predictors: `practice`, `age`, `race`, `eth_hisp`, `sex`, `insurance`, `income`, `hsgrad`, `tobacco`, `depdiag`, `sbp`, `dbp`, `statin` and `bpmed`. Use an appropriate best subsets procedure to aid in your search, and use a cross-validation strategy to assess and compare potential models.
 
-- Feel free to omit cases with missing values among these predictors, or the `bmi` outcome before proceeding.
-- Use the `nvmax = 7` command within your callto `regsubsets` to limit your investigation to models containing no more than seven of these candidate predictors.
+- Feel free to omit the cases with missing values in the variables you are considering (these 14 predictors, plus the `bmi` outcome) before proceeding. This should not materially affect your sample size very much.
+- Use the `nvmax = 7` command within your call to `regsubsets` to limit your investigation to models containing no more than seven of these candidate predictors.
 - Do not transform any variables, and consider models with main effects only so that no product terms are used.
 - A 5-fold cross-validation strategy would be very appropriate. Another reasonable choice would involve partitioning the data once (prior to fitting any models) into training and test samples, as we did in 431.
 
