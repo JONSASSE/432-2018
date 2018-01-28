@@ -3,7 +3,7 @@
 ## Links to Post-Deadline Materials will go live as they become available
 
 - Answer Sketch: [Download R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw1/hw1sketch.Rmd), or [View HTML result](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/hw1sketch.html), or [Download or View PDF result](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/hw1sketch.pdf)
-- Grading Rubric
+- Grading Rubric [is now available](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/hw1rubric.md).
 - Google Spreadsheet Containing Grades, Arranged by HW-ID number (Check your email.)
 
 ## The Actual Assignment
