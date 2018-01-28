@@ -10,7 +10,7 @@ In today's class, we'll focus on model selection and validation.
 
 1. R Studio version 1.1.419 is now [available for download](https://www.rstudio.com/products/rstudio/download/#download). You probably want to do so.
 
-2. Homework Grading. 
+2. Homework 1 and Grading, in general. 
     - An answer sketch for HW 1 is now available.
     - Once Homework 1 has been graded, we'll post grades and a few TA comments, in a list, with students identified by HW ID number. At that time, we'll also post our grading rubric.
         + You'll receive an email from Professor Love with your HW ID number in time to view the grades. Those of you who took 431 with Professor Love this past semester will have the same number as last term.
