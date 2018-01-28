@@ -23,7 +23,7 @@ I merged files on the basis of the respondent sequence number (SEQN). The variab
 1. `SEQN` - the *respondent sequence number* (there are 1,576 subject in the `nnyfs1.csv` file made available to you)
 2. `RIASEX` (from the Demographics files) - *sex of subject (1 = male, 2 = female)*
 3. `RIDAGEYR` (from the Demographics files) - *age in years at screening (3-15)*
-4. `RIDRETH1` (from the Demographics files) - *race/hispanic origin (codes range from 1-5)*
+4. `RIDRETH1` (from the Demographics files) - *race/hispanic origin (1 = Mexican-American, 2 = Other Hispanic, 3 = Non-Hispanic White, 4 = Non-Hispanic Black, 5 = Other Race including Multi-Racial)*
 5. `INDFMPIR` (from the Demographics files; **impute** all subjects with missing values on the basis of `RIDRETH1` and `RIDAGEYR`) - *ratio of family income to poverty (data show 0-4.99, and then truncated as 5 for all who are in fact greater than or equal to 5)*
 6. `MCQ010` (from the Medical Conditions files; all subjects should have values of 1 [Yes] or 2 [No]) - *has the child ever been told they have asthma*
 7. `PAQ706` (from the Physical Activity files; **drop** all subjects with values other than 0, 1, 2, 3, 4, 5, 6, or 7) - *days (in the past 7) physically active at least 60 minutes*
