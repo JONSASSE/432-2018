@@ -29,6 +29,10 @@ In today's class, we'll focus on model selection and validation.
 
 4. Deadline Questions? Check the [SCHEDULE](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md), please. 
 
-5. Here's a hint for question 3 in Homework 2. R may well warn you about "singularities" in your output, but we'd like a clearer answer than that from you. To obtain it, consider exploratory data analysis, specifically the value of counting things. In particular, ask yourself questions like "How many people fall into the levels of the product term I've created?" or "What if I build a table, say with race in the rows and insurance in the columns - how many people fall into each cell of that table?" as a way to figure out what the real problem is.
+5. Here's a hint for question 3 in [Homework 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2), which I've added [to the assignment](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2) as well. 
+    - R may well warn you about something like "singularities" in your output, but we'd like a clearer answer than that from you. 
+    - To obtain it, look at the output, and then look at your data. 
+    - Looking at the output is easy-ish. To look at the data, consider specifically the value of counting things. 
+    - In particular, ask yourself questions like "How many people fall into the levels of the product term I've created?" or "What if I build a table, say with race in the rows and insurance in the columns - how many people fall into each cell of that table?" as a way to figure out what the real problem is in terms more understandable than R's warning message.
 
 
