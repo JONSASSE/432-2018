@@ -28,3 +28,7 @@ In today's class, we'll focus on model selection and validation.
     3. [Homework 3](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw3/README.md) and [Homework 4](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/README.md) and [Homework 5](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw5/README.md) are now available, too. So you're set for HW through February.
 
 4. Deadline Questions? Check the [SCHEDULE](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md), please. 
+
+5. Here's a hint for question 3 in Homework 2. R may well warn you about "singularities" in your output, but we'd like a clearer answer than that from you. To obtain it, consider exploratory data analysis, specifically the value of counting things. In particular, ask yourself questions like "How many people fall into the levels of the product term I've created?" or "What if I build a table, say with race in the rows and insurance in the columns - how many people fall into each cell of that table?" as a way to figure out what the real problem is.
+
+
