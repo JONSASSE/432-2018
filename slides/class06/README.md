@@ -6,11 +6,9 @@
 
 In today's class, we'll continue to focus on linear regression model selection and cross-validation. 
 
-## Announcements After Class 06
-
 ## Announcements Before Class 06
 
-1. Please don't forget to complete [Homework 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2) by 1 PM Friday.
+1. Please don't forget to complete [Homework 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2) by 1 PM Friday. Office Hours continue this afternoon from 2:30 - 4:30 and Friday from 12:15 to 1 PM.
 
 2. There is a [minute paper Google Form](https://goo.gl/forms/uylKCzjUMAMeim0w2) for you to complete after Class 06, and before 10 AM on Monday 2018-02-05. Thanks! 
 
