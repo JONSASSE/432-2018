@@ -75,15 +75,16 @@ By now, you should have read Leek on "Reading scientific papers" as well, plus y
 1. When should we center and/or rescale predictors?
     - It's especially helpful when you are trying to interpret an interaction term between a factor and a quantitative variable, or when you are trying to describe the importance of each of a set of predictors with different scales in a model, to answer questions like "does BMI or SBP have a bigger association with my outcome"?
 2. Is ANOVA a useful approach for variable selection in a linear regression model? When using ANOVA to compare two models with one nested in the other, if there is statistically significant value, does it mean the bigger model is better or the other model is better?
-    - If you compare two **nested** models (so, say model 1 is A, B and C and model 2 is A, B, C, D, E, and F) and find a significant difference between them, it means that D, E, and F add significant value over and above what you get from model 1.
+    - If you compare two **nested** models (so, say model 1 is A, B and C and model 2 is A, B, C, D, E, and F) and find a significant difference between them, it means that D, E, and F add significant value over and above what you get from model 1. 
     - But, of course, statistical significance of a predictor set within the sample in which you built the model is just one approach to finding a good model, or declaring one model better than another. A useful step, but it leaves out prediction in new data, for instance.
     - And if the models you want to compare aren't **nested**, ANOVA is not especially helpful in sorting out the issues involved.
+    - We'll do an example today that (among other things) includes an ANOVA comparison of three nested candidate models.
 3. How do we decide if an interaction term is worth including in a model, or not worth including?
     - Relevant approaches include 
         - face validity (if the interaction is an important part of the underlying theory behind the data analysis)
         - tests of statistical significance (via t test of the interaction term in the simplest case of two factors each with two levels, or via sequential `anova` testing of the group of variables included in the interaction term
         - comparisons of model fit with and without the interaction within the sample used to estimate models (including AIC, BIC and adjusted R^2^)
-        - comparisons of model prediction quality via cross-validation, comparing the models with and without interaction using the root mean squared prediction error, and the mean absolute prediction error, and yes, I'll talk more about this in the days to come.
+        - comparisons of model prediction quality via cross-validation, comparing the models with and without interaction using the root mean squared prediction error, and the mean absolute prediction error, and yes, I'll talk more about this today, though not in the context of assessing an interaction term.
 4. Does it make sense to use categorical variables to predict numeric ones?
     - Sure. Which would you predict to be taller knowing nothing else about them: a 25-year old man or a 25-year old woman?
     - But of course, sex is a categorical variable, and height is a numeric one. So it's the same idea in other settings.
@@ -91,16 +92,23 @@ By now, you should have read Leek on "Reading scientific papers" as well, plus y
     - Build more complicated product terms. This gets harder and harder to graph effectively, though, so that's a real challenge.
 6. If we run an ANOVA model (i.e. all predictors are categorical) then our residuals plots look strange, particularly the residuals vs. fitted plots and the scale-location plots. How do we deal with this?
     - Focus on the interaction plots (means plots with standard deviation bars) to assess directly whether non-linearity (in the form of an interaction) is important, and on whether there are meaningful differences in variation across the groups (heteroscedasticity.)
-    - You can run the same means plots on the residuals, too.
+    - You can run the same means plots on the residuals, too, to help assess heteroscedasticity, at least.
 7. If we could possibly use a piece of information (like BMI) either as a categorical predictor or a continuous one, the continuous one is more appealing if you want to do prediction, right, because with the categorical version, our predictions will clump together?
-    - Right. You throw away a lot of data every time you cluster a quantitative predictor into a categorical representation. If your goal is effective prediction, that's almost never a good idea. Use the most granular form of a predictor that you can is the best course.
-8. Is stepwise regression ever useful? Do you ever use forward selection, or always backwards elimination.
-    - Sure. Lots of times it's helpful to get a quick-and-dirty answer, practically. I've used three different methods - those described in the Course Notes. We'll touch on all three this week.
+    - Right. You throw away a lot of data every time you cluster a quantitative predictor into a categorical representation. If your goal is effective prediction, that's almost never a good idea. Use the most granular form of a predictor that you can.
+8. Is stepwise regression ever useful? Do you ever use forward selection, or always backwards elimination?
+    - Sure, stepwise can be useful. Lots of times it's helpful to get a quick-and-dirty answer, practically. I've used three different stepwise methods - those described in the Course Notes. We'll touch on all three in class.
     - If you're really trying to settle on one "best" model, though, there's no reason stepwise should be your only answer.
 9. When is it better to use simple imputation rather than complete case analyses? Which of the many available imputation methods in `simputation` should I choose? How does multiple imputation fit in?
-    - I need time to write a chapter about some of these points. Haven't found it yet. I will before we're done.
     - A related question is "how much missingness can I ignore" - the answer is that it depends on what's missing and what questions you're trying to answer. Bluntly, I don't like trying to impute outcomes or key predictors, but I impute covariates all the time.
-    - Some of you may be expecting that you'll get a very simple and clear answer about what to do with missing data from me. Disabuse yourself of that notion. I won't provide a universal response that works in every setting, but we will spend meaningful time with real data problems, and discuss some useful approaches to getting a handle on the impact of missingness on your conclusions. Best I can do.
+    - Some of you may be expecting that you'll get a very simple and clear answer about what to do with missing data from me. Disabuse yourself of that notion. I won't provide a universal response that works in every setting, but we will spend meaningful time with real data problems, and discuss some useful approaches to getting a handle on the impact of missingness on your conclusions. 
+    - The shortest answer I'll give you is that there are two extremes: complete case analysis and multiple imputation, and that simple imputation typically falls somewhere in between those two extremes, both in terms of how effective it is, and how easy it is to do. 
+    - Multiple imputation involves three steps (nicely summarized [by Stef Van Buuren](http://www.stefvanbuuren.nl/mi/mi.html)):
+        1. Imputing the missing data, several times - let's say m times.
+        2. Analyzing each of the m resulting completed data sets
+        3. Pooling the m results into a final result, using some fairly simple rules developed by Donald Rubin and others.
+    - I need time to write a chapter in the Course Notes about some of these points. Haven't found that time yet. I will before we're done with linear regression, I hope.
+        - If you want to see how we'll make this happen in R, I'll be basing a part of it on [this great tutorial from Thomas Leeper](http://thomasleeper.com/Rcourse/Tutorials/mi.html), adapted a bit to use tidy tools, and with a pair of examples, not just one.
+        - [Stef Van Buuren's page on multiple imputation](http://www.stefvanbuuren.nl/mi/mi.html) also provides links to a number of key research papers from the past, and demonstrates the use of several software strategies, in and out of R. 
 10. How can we fit a prediction model that is non-linear in the predictors? Is this related to using splines and polynomial functions?
     - Yes, and it's coming next week.
 11. When are we going to be getting to logistic regression? What other types of regression models will we learn in the course?
