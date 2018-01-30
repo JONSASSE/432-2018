@@ -8,7 +8,7 @@ In today's class, we'll focus on model selection via best subsets and on cross-v
 
 ## Announcements Before Class 05
 
-1. R Studio version 1.1.419 is now [available for download](https://www.rstudio.com/products/rstudio/download/#download). You probably want to do so.
+1. R Studio version 1.1.419 is now [available for download](https://www.rstudio.com/products/rstudio/download/#download). You probably want to do so, but, really, that's up to you.
 
 2. Homework 1 and Grading, in general. 
     - The [Homework 1 Answer Sketch](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/README.md) is now available in R Markdown, HTML and PDF.
