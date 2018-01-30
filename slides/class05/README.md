@@ -8,10 +8,9 @@ In today's class, we'll focus on model selection via best subsets and on cross-v
 
 ## Announcements After Class 05
 
-- We got through slide 39 of the originally posted materials. I will correct small typos in a few of the slides, and repost just slides 1-39 later tonight.
-- The other slides will be moved to Class 06.
-- I'll also post a mild revision to Chapter 8 of the Course Notes, to adjust the subsection labels.
-- The audio files are already posted!
+- We got through slide 39 of the originally posted materials. I have corrected the screen shots in a few places to match the final variable names I selected, and have reposted slides 1-39 (and a closing slide.) The other slides will appear in Class 06.
+- I've posted a very small revision to Chapter 8 of the Course Notes, to adjust the subsection labels.
+- The audio files for Class 05 are now posted.
 
 ## Announcements Before Class 05
 
