@@ -35,7 +35,7 @@ In today's class, we'll focus on model selection via best subsets and on cross-v
     - Looking at the output is easy-ish. To look at the data, consider specifically the value of counting things. 
     - In particular, ask yourself questions like "How many people fall into the levels of the product term I've created?" or "What if I build a table, say with race in the rows and insurance in the columns - how many people fall into each cell of that table?" as a way to figure out what the real problem is in terms more understandable than R's warning message.
 
-## Minute Papers after Class 04 (40/42 responses)
+## Minute Papers after Class 04 (40/42 responses; THANK YOU!)
 
 ### What was the most important thing you learned related to 432 this week? (edited responses)
 
