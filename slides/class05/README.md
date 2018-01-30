@@ -51,7 +51,7 @@ In today's class, we'll focus on model selection via best subsets and on cross-v
 - Using Tukey's HSD (Honestly Significant Differences) approach for pairwise comparisons of subgroup means
 - "Plot, early and often"
 
-### How confident are you about your ability to successfully complete Homework 1, due Friday 2018-01-26 at 1 PM?
+### How confident are you about your ability to successfully complete Homework 1?
 
 Response | Count | %
 --------------------------------------: | -----: | -----:
@@ -67,6 +67,8 @@ Response | Count | %
 Yes, and in fact I've read some other parts of the book, too. | 5 | 12.5%
 Yes, I'm up to date, but I haven't read any other parts of the book. | 19 | 47.5%
 No, but I'll get to that soon, because it'll help me do my project. | 16 | 40%
+
+By now, you should have read Leek on "Reading scientific papers" as well, plus you should have read [R4DS](http://r4ds.had.co.nz/) sections 22, 23 (on Model Basics - some of which aren't so basic) and 26, 27 (R Markdown) and 30 (R Markdown workflow).
 
 ### What question(s) remain uppermost in your mind at this point? (edited responses)
 
