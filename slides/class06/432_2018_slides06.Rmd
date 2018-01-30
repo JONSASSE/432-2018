@@ -1,0 +1,652 @@
+---
+title: "432 Class 6 Slides"
+author: "github.com/THOMASELOVE/432-2018"
+date: "2018-02-01"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    colortheme: "lily"
+    fonttheme: "structurebold"
+    fig_caption: FALSE
+---
+
+```{r set-options, echo=FALSE, cache=FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 60)
+```
+
+## Setup
+
+```{r, warning = FALSE, message = FALSE}
+library(skimr)
+library(broom)
+library(modelr)
+library(leaps)
+library(tidyverse)
+
+oh_count <- read.csv("data/counties2017a.csv") %>% tbl_df
+lbw <- read.csv("data/lbw.csv") %>% tbl_df
+```
+
+## Today's Materials
+
+- Ohio County Health Rankings Data
+- Variable Selection via Best Subsets
+- Cross-Validating to Compare Model-Building Approaches
+- Assessing Residual Diagnostic Plots
+- Dealing with Non-Linearity: Spending Degrees of Freedom
+
+# Last time, we looked at Ohio County Health Rankings Data http://www.countyhealthrankings.org/rankings/data/oh
+
+## Codebook (2017 County Health Rankings), I
+
+Variable       | Description
+-------------: | -------------------------------------------------- 
+`fips`           | FIPS code for county (an ID)
+`state`          | Ohio in all cases
+`county`         | County Name (88 counties in Ohio)
+`years_lost`     | Years of potential life lost before age 75 per 100,000 population (age-adjusted, 2012-14)
+`population`     | County population, Census Population Estimates, 2015
+`female`         | % female (Census Population Estimates, 2015)
+`rural`          | 3 categories from % rural (0-20: Urban, 20.1-50: Suburban, 50.1+: Rural; Census 2015)
+`non_white`      | 4 categories from 100 - % white non-hispanic: (> 20: High, 10.1-20: Medium, 5.1-10: Low, <=5: Very Low, Census 2015)
+
+## Codebook (2017 County Health Rankings), II
+
+Variable       | Description
+-------------: | -------------------------------------------------- 
+`sroh_fairpoor`  | % of adults reporting fair or poor health (age-adjusted via 2015 BRFSS)
+`smoker_pct`     | % of adults who currently smoke (2015 BRFSS)
+`food_envir`     | Food environment index (0 = worst, 10 = best) (via USDA Map the Meal 2014)
+`exer_access`    | % of population with adequate access to locations for physical activity (several sources)
+`income_ratio`   | Ratio of household income at the 80th percentile to income at the 20th percentile (ACS 2011-15)
+`air_pollution`  | Mean daily density of fine particulate matter in micrograms per cubic meter (PM2.5)
+`health_costs`   | Health Care Costs (from Dartmouth Atlas, 2014)
+
+# Using "Best Subsets" to Select Variables
+
+## Using "Best Subsets" to Select Variables
+
+We'll consider models using some combination of the 11 available meaningful predictors.
+
+```{r}
+bs_preds <- with(oh_count, cbind(population, female, rural, 
+                              non_white, sroh_fairpoor, 
+                              smoker_pct, food_envir, 
+                              exer_access, income_ratio, 
+                              air_pollution, health_costs))
+```
+
+We'll look for models using up to 8 of those predictors.
+
+```{r}
+bs_subs <- regsubsets(bs_preds, 
+                      y = oh_count$years_lost, 
+                      nvmax = 8)
+bs_mods <- summary(bs_subs)
+
+bs_mods$aic.c <- 88*log(bs_mods$rss / 88) + 2*(2:9) + 
+    (2 * (2:9) * ((2:9)+1) / (88 - (2:9) - 1))
+```
+
+## Place winning results in `bs_winners`
+
+```{r}
+bs_winners <- tbl_df(bs_mods$which)
+bs_winners$k <- 2:9 ## in general, this is 2:(nvmax + 1)
+bs_winners$r2 <- bs_mods$rsq
+bs_winners$adjr2 <- bs_mods$adjr2
+bs_winners$cp <- bs_mods$cp
+bs_winners$aic.c <- bs_mods$aic.c
+bs_winners$bic <- bs_mods$bic
+```
+
+## Building the "Best Subsets" Plots
+
+Code not shown here, but it's in the Markdown file.
+
+```{r, echo = FALSE}
+p1 <- ggplot(bs_winners, aes(x = k, y = adjr2, 
+                       label = round(adjr2,3))) +
+    geom_line() +
+    geom_label() +
+    geom_label(data = subset(bs_winners, 
+                             adjr2 == max(adjr2)),
+               aes(x = k, y = adjr2, label = round(adjr2,3)), 
+               fill = "yellow", col = "blue") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:9) +
+    labs(x = "# of predictors (including intercept)",
+         y = "Adjusted R-squared")
+
+p2 <- ggplot(bs_winners, aes(x = k, y = cp, 
+                             label = round(cp,1))) +
+    geom_line() +
+    geom_label() +
+    geom_abline(intercept = 0, slope = 1, 
+                col = "red") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:9) +
+    labs(x = "# of predictors (including intercept)",
+         y = "Mallows' Cp")
+
+p3 <- ggplot(bs_winners, aes(x = k, y = aic.c, 
+                             label = round(aic.c,1))) +
+    geom_line() +
+    geom_label() +
+    geom_label(data = subset(bs_winners, 
+                             aic.c == min(aic.c)),
+               aes(x = k, y = aic.c), 
+               fill = "pink", col = "red") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:9) +
+    labs(x = "# of predictors (including intercept)",
+         y = "Bias-Corrected AIC")
+
+p4 <- ggplot(bs_winners, aes(x = k, y = bic, 
+                             label = round(bic,1))) +
+    geom_line() +
+    geom_label() +
+    geom_label(data = subset(bs_winners, bic == min(bic)),
+               aes(x = k, y = bic), 
+               fill = "lightgreen", col = "blue") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:9) +
+    labs(x = "# of predictors (including intercept)",
+         y = "BIC")
+```
+
+## The Four Plots
+
+```{r, echo = FALSE}
+gridExtra::grid.arrange(p1, p2, p3, p4, nrow = 2)
+```
+
+## Candidate Models include
+
+Inputs | Raw r^2^ | Adj. r^2^ | C~p~ | BIC | AIC_c
+-----: | ---: | ---: | ---: | ---: | ---: 
+3 | .640 | .631 | 4.6 | **-76.4** | **1209.9**
+5 | .653 | .636 | **5.4** | -70.8 | 1211.0
+8 | .678 | **.650** | 5.3 | -64.0 | 1211.4
+
+- 3: `smoker_pct` + `health_costs`
+- 5: Model 3 + `food_envir` + `income_ratio`
+- 8: Model 5 + `female` + `exer_access` + `sroh_fairpoor`
+
+# Comparing our Candidate Models in our Training Sample
+
+## In-Sample Comparisons of our Candidate Models
+
+```{r}
+m3 <- lm(years_lost ~ smoker_pct + health_costs,
+         data = oh_count)
+m5 <- lm(years_lost ~ smoker_pct + health_costs +
+             food_envir + income_ratio, data=oh_count)
+m8 <- lm(years_lost ~ smoker_pct + health_costs +
+              food_envir + income_ratio + female + 
+             exer_access + sroh_fairpoor, data=oh_count)
+```
+
+Models are **nested** so comparisons within samples are straightforward.
+
+## Comparisons in-sample with `anova` 
+
+```{r}
+anova(m3, m5, m8)
+```
+
+## Comparisons in-sample with `AIC` 
+
+```{r}
+a <- AIC(m3, m5, m8)
+b <- BIC(m3, m5, m8); b$model <- row.names(b)
+left_join(a, b)
+```
+
+## What if the models you're comparing aren't nested?
+
+What if you're comparing:
+
+- Model A: `lm(y = x1 + x2 + x3, data = dataset)`
+- Model B: `lm(y = x1 + x4 + x5, data = dataset)`
+
+Then ... 
+
+- default *p* values from the ANOVA table comparing Model A to Model B aren't reasonable
+- AIC and BIC are OK, can also used adjusted R^2^ to help make a decision within the model building sample
+- Still useful to think about out-of-sample prediction and cross-validation
+
+# Comparing out-of-sample predictive ability of our Candidate Models with cross-validation
+
+## 10-fold Cross-Validation for Model 3
+
+```{r}
+set.seed(432012)
+
+cv_3 <- oh_count %>%
+  crossv_kfold(k = 10) %>%
+  mutate(model = map(train, ~ lm(years_lost ~ 
+                     smoker_pct + health_costs, data = .)))
+
+cv3_pred <- cv_3 %>%
+  unnest(map2(model, test, ~ augment(.x, newdata = .y)))
+
+cv3_res <- cv3_pred %>%
+  summarize(Model = "3",
+            RMSE = sqrt(mean((years_lost - .fitted) ^2)),
+            MAE = mean(abs(years_lost - .fitted)))
+```
+
+## 10-fold Cross-Validation for Model 5
+
+```{r}
+set.seed(432013)
+
+cv_5 <- oh_count %>%
+  crossv_kfold(k = 10) %>%
+  mutate(model = map(train, ~ lm(years_lost ~ 
+                     smoker_pct + health_costs +
+                     food_envir + income_ratio, data = .)))
+
+cv5_pred <- cv_5 %>%
+  unnest(map2(model, test, ~ augment(.x, newdata = .y)))
+
+cv5_res <- cv5_pred %>%
+  summarize(Model = "5",
+            RMSE = sqrt(mean((years_lost - .fitted) ^2)),
+            MAE = mean(abs(years_lost - .fitted)))
+```
+
+
+## 10-fold Cross-Validation for Model 8
+
+```{r}
+set.seed(432014)
+
+cv_8 <- oh_count %>%
+  crossv_kfold(k = 10) %>%
+  mutate(model = map(train, ~ lm(years_lost ~ 
+                     smoker_pct + health_costs +
+                     food_envir + income_ratio +
+                     female + exer_access +
+                     sroh_fairpoor, data = .)))
+
+cv8_pred <- cv_8 %>%
+  unnest(map2(model, test, ~ augment(.x, newdata = .y)))
+
+cv8_res <- cv8_pred %>%
+  summarize(Model = "8",
+            RMSE = sqrt(mean((years_lost - .fitted) ^2)),
+            MAE = mean(abs(years_lost - .fitted)))
+```
+
+## Cross-Validation Results
+
+```{r}
+bind_rows(cv3_res, cv5_res, cv8_res)
+```
+
+# Fitting the Chosen Model
+
+## Fitting the Chosen Model
+
+```{r}
+m3 <- lm(years_lost ~ smoker_pct + health_costs, 
+         data = oh_count)
+
+arm::display(m3)
+```
+
+## Fitting the Chosen Model
+
+```{r}
+glance(m3)
+```
+
+## Residual Plots for the Chosen Model
+
+```{r}
+par(mfrow = c(1,2)); plot(m3, which = c(1, 5))
+```
+
+# The Low Birth Weight Data (`lbw.csv`) from Hosmer and Lemeshow and Sturdivant, 3rd edition
+
+## Code Book (n = 189 infants)
+
+Variable | Description
+-------: | ------------------------------------------------
+`subject` | id code
+`low` | indicator of low birth weight (< 2500 g)
+`age` | age of mother in years
+`lwt` | mom's weight at last menstrual period (lbs.)
+`race` | 1 = white, 2 = black, 3 = other
+`smoke` | 1 = smoked during pregnancy, 0 = did not
+`ptl` | count of prior premature labors (we see 0, 1, 2, 3)
+`ht` | history of hypertension: 1 = yes, 0 = no
+`ui` | presence of uterine irritability: 1 = yes, 0 = no
+`ftv` | count of physician visits in first trimester (0 to 6)
+`bwt` | recorded birth weight (in g)
+
+Data from Baystate Medical Center, Springfield MA in 1986.
+
+## A closer look at our outcome, `bwt`
+
+```{r, echo = FALSE}
+slo <- diff( quantile(lbw$bwt, c(0.25, 0.75)) ) / 
+    diff( qnorm(c(0.25, 0.75)) )
+int <- quantile(lbw$bwt, c(0.25, 0.75))[1L] - 
+    slo * qnorm(c(0.25, 0.75))[1L]
+
+p1 <- ggplot(lbw, aes(x = bwt)) + 
+    geom_histogram(bins = 20, 
+                   fill = "#002C74", col = "#FF4A00") +
+    labs(x = "Birth Weight (g)", 
+         y = "Number of Observations")
+
+p2 <- ggplot(lbw, aes(sample = bwt)) +
+    geom_qq(col = "#FF4A00", size = 2) +
+    geom_abline(intercept = int, slope = slo, 
+                col = "#002C74") +
+    labs(y = "Birth Weight (g)", 
+         x = "Standard Normal Quantiles")
+
+gridExtra::grid.arrange(p1, p2, nrow = 1,
+   top = "Birth Weights (grams) for 189 infants in lbw")
+
+```
+
+## Code for Plot on Previous Slide
+
+```{r, eval = FALSE}
+slo <- diff( quantile(lbw$bwt, c(0.25, 0.75)) ) / 
+    diff( qnorm(c(0.25, 0.75)) )
+int <- quantile(lbw$bwt, c(0.25, 0.75))[1L] - 
+    slo * qnorm(c(0.25, 0.75))[1L]
+
+p1 <- ggplot(lbw, aes(x = bwt)) + 
+    geom_histogram(bins = 20, 
+                   fill = "#002C74", col = "#FF4A00") +
+    labs(x = "Birth Weight (g)", 
+         y = "Number of Observations")
+```
+
+(continues on next slide)
+
+---
+
+```{r, eval = FALSE}
+p2 <- ggplot(lbw, aes(sample = bwt)) +
+    geom_qq(col = "#FF4A00", size = 2) +
+    geom_abline(intercept = int, slope = slo, 
+                col = "#002C74") +
+    labs(y = "Birth Weight (g)", 
+         x = "Standard Normal Quantiles")
+
+gridExtra::grid.arrange(p1, p2, nrow = 1,
+   top = "Birth Weights (grams) for 189 infants in lbw")
+```
+
+## Specifying some factors
+
+1. Specify `race` as a factor (`race_f`), and order its levels "White", "Black", "Other".
+2. Specify that the 1/0 variables `ht`, `smoke` and `ui` are 1/0 factors.
+3. Specify `preterm` as a yes/no factor with yes meaning ptl > 0, so no means ptl = 0
+
+```{r}
+lbw <- lbw %>% 
+    mutate(race_f = fct_recode(factor(race), white = "1",
+                               black = "2", other = "3"),
+         race_f = fct_relevel(race_f, "white", "black")) %>%
+    mutate_at(c("ht", "smoke", "ui"), funs(factor(.))) %>%
+    mutate(preterm = fct_recode(factor(ptl > 0), 
+                                yes = "TRUE",
+                                no = "FALSE"))
+```
+
+## Describing the Data
+
+```{r, eval = FALSE}
+lbw %>% select(-subject, -low, -race, -ptl) %>% skim() 
+```
+
+![](figures/fig01.png)
+
+## Building the best predictor subsets to predict `bwt`
+
+We'll build the best model of size 2:9 again, but this time, forcing in the `lwt` variable.
+
+```{r}
+lbw.out <- regsubsets(bwt ~ age + race_f + smoke + ftv + 
+                          lwt + ht + ui + preterm,
+                      data = lbw, nvmax = NULL, nbest = 1,
+                      force.in = c("lwt"))
+
+lbw.sum <- summary(lbw.out)
+```
+
+## Results of `lbw.sum`
+
+![](figures/fig02.png)
+
+## Building the corrected AIC values
+
+Data includes `nrow(lbw)` = `r nrow(lbw)` observations, and we run models of size 2:9, when you include the intercept term.
+
+```{r}
+lbw.sum$aic.c <- 189*log(lbw.sum$rss / 189) + 2*(2:9) + 
+    (2 * (2:9) * ((2:9)+1) / (189 - (2:9) - 1))
+```
+
+## Place winning results in `lbw_win`
+
+```{r}
+lbw_win1 <- data_frame(
+    k = 2:9,
+    r2 = lbw.sum$rsq,
+    adjr2 = lbw.sum$adjr2,
+    cp = lbw.sum$cp,
+    aic.c = lbw.sum$aic.c,
+    bic = lbw.sum$bic)
+
+lbw_win <- bind_cols(lbw_win1, tbl_df(lbw.sum$which))
+```
+
+## View `lbw_win`
+
+![](figures/fig03.png)
+
+## Building The Four Plots for `lbw`
+
+Code in R Markdown file...
+
+```{r, echo = FALSE}
+lbwp1 <- ggplot(lbw_win, aes(x = k, y = adjr2, 
+                       label = round(adjr2,3))) +
+    geom_line() +
+    geom_label() +
+    geom_label(data = subset(lbw_win, 
+                             adjr2 == max(adjr2)),
+               aes(x = k, y = adjr2, label = round(adjr2,3)), 
+               fill = "yellow", col = "blue") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:9) +
+    labs(x = "# of predictors (including intercept)",
+         y = "Adjusted R-squared")
+
+lbwp2 <- ggplot(lbw_win, aes(x = k, y = cp, 
+                             label = round(cp,1))) +
+    geom_line() +
+    geom_label() +
+    geom_abline(intercept = 0, slope = 1, 
+                col = "red") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:9) +
+    labs(x = "# of predictors (including intercept)",
+         y = "Mallows' Cp")
+
+lbwp3 <- ggplot(lbw_win, aes(x = k, y = aic.c, 
+                             label = round(aic.c,1))) +
+    geom_line() +
+    geom_label() +
+    geom_label(data = subset(lbw_win, 
+                             aic.c == min(aic.c)),
+               aes(x = k, y = aic.c), 
+               fill = "pink", col = "red") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:9) +
+    labs(x = "# of predictors (including intercept)",
+         y = "Bias-Corrected AIC")
+
+lbwp4 <- ggplot(lbw_win, aes(x = k, y = bic, 
+                             label = round(bic,1))) +
+    geom_line() +
+    geom_label() +
+    geom_label(data = subset(lbw_win, bic == min(bic)),
+               aes(x = k, y = bic), 
+               fill = "lightgreen", col = "blue") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:9) +
+    labs(x = "# of predictors (including intercept)",
+         y = "BIC")
+```
+
+## The Four Plots
+
+```{r, echo = FALSE}
+gridExtra::grid.arrange(lbwp1, lbwp2, lbwp3, lbwp4, nrow = 2)
+```
+
+## Candidate Models are of sizes k = 6 and k = 7
+
+```{r, eval = FALSE}
+lbw_win %>% filter(k %in% c(6, 7))
+```
+
+![](figures/fig04.png)
+
+The candidate models are:
+
+```{r}
+lbw_m6 <- lm(bwt ~ lwt + race_f + smoke + ht + ui, 
+             data = lbw)
+lbw_m7 <- lm(bwt ~ lwt + race_f + smoke + ht + ui + preterm, 
+             data = lbw)
+```
+
+## ANOVA comparison of `lbw_m6` and `lbw_m7`
+
+```{r}
+anova(lbw_m6, lbw_m7)
+```
+
+## AIC and BIC within-sample comparisons
+
+```{r}
+AIC(lbw_m6, lbw_m7)
+BIC(lbw_m6, lbw_m7)
+```
+
+## 5-fold cross-validation of `lbw_m6`
+
+```{r}
+set.seed(43202201)
+
+cv_lbw6 <- lbw %>%
+  crossv_kfold(k = 5) %>%
+  mutate(model = map(train, ~ lm(bwt ~ lwt + race_f +
+                                     smoke + ht + ui, 
+                                 data = .)))
+
+cv_lbw6_pred <- cv_lbw6 %>%
+  unnest(map2(model, test, ~ augment(.x, newdata = .y)))
+
+cv_lbw6_results <- cv_lbw6_pred %>%
+  summarize(Model = "lbw_m6",
+            RMSE = sqrt(mean((bwt - .fitted) ^2)),
+            MAE = mean(abs(bwt - .fitted)))
+```
+
+## 5-fold cross-validation of `lbw_m7`
+
+```{r}
+set.seed(43202202)
+
+cv_lbw7 <- lbw %>%
+  crossv_kfold(k = 5) %>%
+  mutate(model = map(train, ~ lm(bwt ~ lwt + race_f + 
+                                     smoke + ht + ui +
+                                     preterm, 
+                                 data = .)))
+
+cv_lbw7_pred <- cv_lbw7 %>%
+  unnest(map2(model, test, ~ augment(.x, newdata = .y)))
+
+cv_lbw7_results <- cv_lbw7_pred %>%
+  summarize(Model = "lbw_m7",
+            RMSE = sqrt(mean((bwt - .fitted) ^2)),
+            MAE = mean(abs(bwt - .fitted)))
+```
+
+## Comparison on cross-validated prediction error summaries
+
+```{r}
+bind_rows(cv_lbw6_results, cv_lbw7_results)
+```
+
+It looks like `lbw_m6` is a little better in terms of predictive accuracy.
+
+## What if we included an interaction term?
+
+What if we include an interaction between `race_f` and `smoke`? 
+
+- This time, we won't force anything into the model.
+- This doesn't work nicely with interactions including a multi-categorical variable like `race_f`.
+
+```{r}
+lbw.out2 <- regsubsets(bwt ~ age + race_f * smoke + ftv + 
+                          lwt + ht + ui + preterm,
+                      data = lbw, nvmax = 6, nbest = 1)
+
+lbw.sum2 <- summary(lbw.out2)
+```
+
+## Results of `lbw.sum2$which`, transposed
+
+![](figures/fig05.png)
+
+## Models Identified as "Winners" in `lbw.sum2`
+
+k | Predictors
+--: | -----------------------------------------------------
+2 | `ui`
+3 | `ui` `ht`
+4 | `ui` `ht` `lwt`
+5 | `ui` `race_fblack` `race_fother` `smoke`
+6 | `ui` `race_fblack` `race_fother` `smoke` `race_fother:smoke`
+
+And how do we interpret an interaction term that doesn't use all of the levels in `race_f`?
+
+## Limitations of "Best Subsets"
+
+- Works only with quantitative outcomes (linear regression)
+- Useful only for variable selection of main effects
+- Generates a useful pool of candidate models, but doesn't usually center all of its energy on the same model
+- Doesn't take into account potential product terms
+
+Possible Solutions for the last issue: 
+
+1. Consider interactions beforehand, force them in.
+2. Consider interaction terms only after selection of main effects.
+3. Do something else entirely.
+
+## Next Week
+
+- Spending Degrees of Freedom on Non-Linearity
+- The Spearman $\rho^2$ (rho-squared) plot
+- Building Non-Linear Predictors with 
+    + Polynomial Functions
+    + Product Terms
+    + Splines, including Restricted Cubic Splines
+- Building a Nomogram for a Linear Regression Model
+- Getting Started with Logistic Regression
