@@ -14,4 +14,4 @@ In today's class, we'll continue to focus on linear regression model selection a
 
 2. There is a minute paper Google Form for you to complete after Class 06. Please complete it by 10 AM Monday 2018-02-05.
 
-3. I've decided not to discuss stepwise regression any further at this time, but you can read about it further in the [Class Notes](https://thomaselove.github.io/432-notes/), Chapter 7.
+3. I've decided not to discuss stepwise regression any further today, but you can read about it further in the [Class Notes](https://thomaselove.github.io/432-notes/), Chapter 7.
