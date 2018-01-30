@@ -430,6 +430,38 @@ Inputs | Raw r^2^ | Adj. r^2^ | C~p~ | BIC | AIC_c
 - 5: Model 3 + `food_envir` + `income_ratio`
 - 8: Model 5 + `female` + `exer_access` + `sroh_fairpoor`
 
+# Comparing our Candidate Models in our Training Sample
+
+## In-Sample Comparisons of our Candidate Models
+
+```{r}
+m3 <- lm(years_lost ~ smoker_pct + health_costs,
+         data = oh_count)
+m5 <- lm(years_lost ~ smoker_pct + health_costs +
+             food_envir + income_ratio, data=oh_count)
+m8 <- lm(years_lost ~ smoker_pct + health_costs +
+              food_envir + income_ratio + female + 
+             exer_access + sroh_fairpoor, data=oh_count)
+```
+
+Models are **nested** so comparisons within samples are straightforward.
+
+## Comparisons in-sample with `anova` 
+
+```{r}
+anova(m3, m5, m8)
+```
+
+## Comparisons in-sample with `AIC` 
+
+```{r}
+a <- AIC(m3, m5, m8)
+b <- BIC(m3, m5, m8); b$model <- row.names(b)
+left_join(a, b)
+```
+
+# Comparing out-of-sample predictive ability of our Candidate Models with cross-validation
+
 ## 10-fold Cross-Validation for Model 3
 
 ```{r}
@@ -526,4 +558,6 @@ par(mfrow = c(1,2)); plot(m3, which = c(1, 5))
 - Best Subsets (more)
 - Stepwise Regression and the Allen-Cady Procedure
 - (soon) Making Decisions about Non-Linearity in Y or the Xs
+
+
 
