@@ -8,26 +8,28 @@ In today's class, we'll focus on model selection via best subsets and on cross-v
 
 ## Announcements Before Class 05
 
-1. R Studio version 1.1.419 is now [available for download](https://www.rstudio.com/products/rstudio/download/#download). You probably want to do so, but, really, that's up to you.
+1. TODAY'S OFFICE HOURS for TAs will be 2:30 - 3:30, but we have to cancel 3:30 - 4:30 due to illness. Sorry.
 
-2. Here's a little progress report on course materials.
+2. R Studio version 1.1.419 is now [available for download](https://www.rstudio.com/products/rstudio/download/#download). You probably want to do so, but, really, that's up to you.
+
+3. Here's a little progress report on course materials.
     1. We've corrected typos in Chapters 3, 4, 6 and 7 of the [Course Notes](https://thomaselove.github.io/432-notes/), all found by students. Thanks!
     2. There were some minor additions (hints, really) to [Homework 2](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/README.md) this weekend.
     3. [Homework 3](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw3/README.md) and [Homework 4](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/README.md) and [Homework 5](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw5/README.md) are now available, too. So you're set for HW through February.
 
-3. The [Course Notes](https://thomaselove.github.io/432-notes/) received a more substantial update this morning in Chapter 8 (Best Subsets) and we'll discuss that material today. That should help considerably with [Homework 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2), question 4.
+4. The [Course Notes](https://thomaselove.github.io/432-notes/) received a more substantial update this morning in Chapter 8 (Best Subsets) and we'll discuss that material today. That should help considerably with [Homework 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2), question 4.
     - I added more details on the estimation of bias-corrected AIC.
     - I added ggplot2 approaches to building the four main plots for best subsets.
     - I included material on in-sample model checking via anova, AIC and BIC, and out-of-sample cross-validation.
     - I provided more details on interpretation of the prostate cancer study, and I cleaned up some other details.
 
-4. Here's a hint for question 3 in [Homework 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2), which I've added [to the assignment](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2) as well. 
+5. Here's a hint for question 3 in [Homework 2](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2), which I've added [to the assignment](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw2) as well. 
     - R may well warn you about something like "singularities" in your output, but we'd like a clearer answer than that from you. 
     - To obtain it, look at the output, and then look at your data. 
     - Looking at the output is easy-ish. To look at the data, consider specifically the value of counting things. 
     - In particular, ask yourself questions like "How many people fall into the levels of the product term I've created?" or "What if I build a table, say with race in the rows and insurance in the columns - how many people fall into each cell of that table?" as a way to figure out what the real problem is in terms more understandable than R's warning message.
 
-5. Homework 1 and Grading, in general. 
+6. Homework 1 and Grading, in general. 
     - The [Homework 1 Answer Sketch](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/README.md) is now available in R Markdown, HTML and PDF.
     - The [Grading Rubric](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw1/README.md) is also available.
     - Once Homework 1 has been graded, we'll post grades and a few TA comments, in a list, with students identified by HW ID number.
@@ -39,7 +41,7 @@ In today's class, we'll focus on model selection via best subsets and on cross-v
         + If you've already got an A in the course without any additional credit on homework assignments, then Dr. Love won't bother to review your regrading requests in May, but if you don't have an A yet, he will do so very carefully after noon on 2018-05-09.
         + Please **don't** expect the TAs to address grading issues: Dr. Love will do that, at the end of the semester.
 
-6. Deadline Questions? Check the [SCHEDULE](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md), please. 
+7. Deadline Questions? Check the [SCHEDULE](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md), please. 
 
 ## Minute Papers after Class 04 (40/42 responses; THANK YOU!)
 
@@ -124,5 +126,5 @@ By now, you should have read Leek on "Reading scientific papers" as well, plus y
     - Not much, no. Some of what I've assigned you in R4DS is critical. Those things will also get discussed in class as they come up. Others provide more details for people who are getting involved in specific issues related to their projects, mostly. Those may or may not get discussed in class. We'll talk about 23.4.4.'s topic - transformations next week.
 13. Are R and R Studio pretty stable? I'm worried I'll be updating all the time...
     - It is my intent to use only stuff in this class that I have personally tested on both a Mac and a PC using the minimum requirements listed on the [main Data and Code page](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code). I can make no further promises than that about what will and won't be an issue for you personally. This is part of the reason we have 6 TAs. 
-    - There will be a new version of R coming in the Spring, I assume R 3.4.0. No one yet knows when, but a typical release date would be in early March. 
+    - There will be a new version of R coming in the Spring, I assume R 3.5.0. No one yet knows when, but a typical release date would be in early March. 
     - R Studio updates more frequently, but I didn't go to the [r-studio::conf2018](https://www.rstudio.com/conference/) this week (instead, I'm here with you!) so I don't have the inside scoop yet.
