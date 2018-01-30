@@ -2,9 +2,15 @@
 
 ### Key Materials
 
-[The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class05), and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class05) will be posted above when they become available.
+[The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class05), and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class05) are posted above.
 
 In today's class, we'll focus on model selection via best subsets and on cross-validation.
+
+## Announcements After Class 05
+
+- We got through slide 39 of the originally posted materials. I will correct small typos in a few of the slides, and repost just slides 1-39 later tonight.
+- The other slides will be moved to Class 06.
+- The audio files are already posted!
 
 ## Announcements Before Class 05
 
