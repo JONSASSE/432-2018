@@ -10,6 +10,7 @@ In today's class, we'll focus on model selection via best subsets and on cross-v
 
 - We got through slide 39 of the originally posted materials. I will correct small typos in a few of the slides, and repost just slides 1-39 later tonight.
 - The other slides will be moved to Class 06.
+- I'll also post a mild revision to Chapter 8 of the Course Notes, to adjust the subsection labels.
 - The audio files are already posted!
 
 ## Announcements Before Class 05
