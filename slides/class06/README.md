@@ -2,7 +2,7 @@
 
 ### Key Materials
 
-[The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class06) are posted, and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class06) will appear as they become available.
+[The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class06) and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class06) are now available.
 
 In today's class, we'll continue to focus on linear regression model selection and cross-validation. 
 
