@@ -18,7 +18,7 @@ By 432 staff. This is a draft. If additional edits are needed, we'll post a fina
 # Question 3 (25 points)
 
 - 15 points for developing the new model using the model without interaction.
-- 5 points for plotting residuals (ideally both vs. fitted values in a plot of residuals, leverage and influence) and then provide an explanation of the conclusions drawn from that graph.
+- 5 points for plotting residuals (ideally both vs. fitted values and in a plot of residuals, leverage and influence) and then provide an explanation of the conclusions drawn from that graph.
 - 5 points for an appropriate conclusion comparing the fitted models. 
     + Does it change the nature of the conclusions you can draw from the model? 
         - The adjustment for `age` does not change the fundamental conclusions from the no-interaction model. 
