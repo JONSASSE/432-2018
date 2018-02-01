@@ -4,8 +4,8 @@ By 432 staff. This is a draft. If additional edits are needed, we'll post a fina
 
 # Question 1. (40 points)
 
-- 30 points for successfully creating a table one stratified appropriately 
-- 10 points for giving a conclusion comparing both groups (including all the variables)
+- 30 points for successfully creating an appropriately stratified Table 1 
+- 10 points for giving a conclusion comparing both groups (including comments on all variables)
 - A reasonable but unsuccessful attempt at the table will receive no more than 20 points
 
 # Question 2. (30 points)
