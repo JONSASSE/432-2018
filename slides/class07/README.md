@@ -8,4 +8,8 @@ In today's class, we'll discuss the incorporation of non-linear terms in a linea
 
 ## Announcements Before Class 07
 
-1. I've made some meaningful edits to Section 8 of the Course Notes, and I'll expect that I will be streamlining and amplifying that Section a little more after HW 2 is complete. In particular, I added some material in a section 8.3.2 (and at the end of 8.3.1) to clarify the calculation of *uncorrected* AIC, and how it (a) differs from bias-corrected AIC, (b) provides no new information beyond what we get from Mallows' Cp in the linear regression setting, and so we don't plot it and (c) is only defined up to an additive constant, so `extractAIC` and `AIC` give different results when applied to a single model, but when comparing two models, either can be used.
+1. Homework 2 Answer Sketch is available in [R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw2/hw2sketch.Rmd), or [HTML](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.html), or [PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.pdf).
+
+2. Updates in the Course Notes
+    - I've made a few small edits in Chapters 1-7. 
+    - I've made some meaningful edits to Chapter 8. In particular, I added some material in a section 8.3.2 (and at the end of 8.3.1) to clarify the calculation of *uncorrected* AIC, and how it (a) differs from bias-corrected AIC, (b) provides no new information beyond what we get from Mallows' Cp in the linear regression setting, and so we don't plot it and (c) is only defined up to an additive constant, so `extractAIC` and `AIC` give different results when applied to a single model, but when comparing two models, either can be used.
