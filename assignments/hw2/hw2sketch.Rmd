@@ -1,0 +1,406 @@
+---
+title: "432 Homework 2 Answer Sketch"
+author: "Thomas E. Love"
+date: "Due 2018-02-02. Version: `r Sys.Date()`"
+output: 
+  pdf_document:
+    toc: TRUE
+    number_sections: TRUE
+  html_document:
+    code_folding: show
+    toc: TRUE
+    toc_float: TRUE
+    number_sections: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+## Setup and Data Ingest
+
+```{r}
+library(skimr)
+library(broom)
+library(leaps)
+library(modelr)
+library(tidyverse)
+
+skim_with(numeric = list(hist = NULL), integer = list(hist = NULL))
+```
+
+**Note**: I loaded the data for this assignment into a subfolder of my R Project directory for Homework 2 called `data`. Hence, I use the following command to load in the `hbp330.csv` data.
+
+```{r}
+hbp330 <- read.csv("data/hbp330.csv") %>% tbl_df
+```
+
+# Question 1 (30 points)
+
+> Consider the `hbp330` data used in Homework 1. Fit and interpret an ANOVA model to evaluate the effect of race on income. What conclusions can you draw? In developing an answer, please decide whether collapsing the race factor into a smaller number of levels would be sensible in this case. Be sure to provide a written explanation of your findings, in complete sentences.
+
+## A Smaller Data Set
+
+We'll select the variables we need for questions 1-3 in this homework, and then look over that new data set.
+
+```{r}
+hw2_small <- hbp330 %>%
+  select(subject, income, race, sex, insurance)
+
+skim(hw2_small)
+```
+
+We have two missing values in the `race` variable, out of a total of 330 people, and given that this only affects less than 1% of the subjects in all, I think we'll just omit those cases for questions 1-3.
+
+```{r}
+hw2_q13 <- hw2_small %>% na.omit()
+
+hw2_q13
+```
+
+## Should we collapse the `race` categories?
+
+```{r}
+hw2_q13 %>% count(race)
+```
+
+The Asian/Pacific Islander and Multi-Racial categories are quite small. Perhaps it would make sense to collapse them together. We'll do so, into a new factor called race_3 (for three categories) and we'll also reorder the categories in order of median income.
+
+```{r}
+hw2_q13 <- hw2_q13 %>% 
+  mutate(race_3 = fct_collapse(race, 
+                     Other = c("Asian/PI", "Multi-Racial"))) %>%
+  mutate(race_3 = fct_reorder(race_3, income, median))
+```
+
+and, as a sanity check ...
+
+```{r}
+hw2_q13 %>% group_by(race_3, race) %>% 
+  summarize(n = n(), median(income))
+```
+
+## EDA for `income` by `race_3` group
+
+We need to do some exploratory data analysis. Let's look at the `income` data within the three `race_3` categories. 
+
+```{r}
+ggplot(hw2_q13, aes(x = income, fill = race_3)) +
+  geom_histogram(bins = 20, col = "white") +
+  guides(fill = FALSE) +
+  facet_wrap(~ race_3)
+```
+
+There are three large outliers in the "Black/AA" group, which is a bit surprising, although otherwise there's at most a modest skew apparent in each group. These data look a little right-skewed in each case, but generally sufficiently well-approximated by Normal distributions to let me feel comfortable summarizing them with means and standard deviations, at least to start. Our numerical summaries are:
+
+```{r}
+hw2_q13 %>% group_by(race_3) %>%
+  skim(income)
+```
+
+## Building the ANOVA model
+
+This is a one-way analysis of variance model.
+
+```{r}
+hw2_model1 <- lm(income ~ race_3, data = hw2_q13)
+anova(hw2_model1)
+```
+
+```{r}
+summary(hw2_model1)
+```
+
+```{r}
+TukeyHSD(aov(income ~ race_3, data = hw2_q13))
+```
+
+Our conclusion from the Tukey HSD comparisons, and from the ANOVA F test in the `anova` and `summary` output for the linear model is that there are no statistically significant differences in income across our three race groups. This is still true (see below) even if we don't separate out the two small groups in the original `race` variable.
+
+```{r}
+anova(lm(income ~ race, data = hw2_q13))
+```
+
+# Question 2 (20 points)
+
+> Now fit a two-factor ANOVA model to evaluate the effects of `race` and `sex` on `income`. What can you conclude? Be sure to provide a written explanation of your findings, in complete sentences.
+
+## The ANOVA model with interaction
+
+### A Means Plot to look for meaningful interaction
+
+```{r}
+hw2q2_summary <- hw2_q13 %>%
+  group_by(race_3, sex) %>%
+  summarize(meaninc = mean(income), seinc = sd(income)/sqrt(n()) )
+
+pd <- position_dodge(0.2)
+
+ggplot(hw2q2_summary, aes(x = race_3, y = meaninc, color = sex)) +
+  geom_errorbar(aes(ymin = meaninc - seinc, 
+                    ymax = meaninc + seinc),
+                width = 0.2, position = pd) +
+  geom_point(size = 2, position = pd) +
+  geom_line(aes(group = sex), position = pd) +
+  labs(y = "Income ($)",
+       x = "Race (collapsed to 3 categories)",
+       title = "Observed Means (+/- standard error) for Income")
+```
+
+Note that if you fail to collapse the Race groups, then the Multi-Racial group will throw an error when you try to plot error bars, because a standard deviation (and thus a standard error) cannot be estimated.
+
+It looks like an interaction might be useful in this situation, as the lines are not parallel, but it's not clear that the Other group is providing a lot of useful information.
+
+### ANOVA test for the model
+
+```{r}
+hw2_model2_with_int <- lm(income ~ race_3*sex, data = hw2_q13)
+anova(hw2_model2_with_int)
+```
+
+It doesn't look like the interaction term is significant, however, although it does account for more variation than the `race_3` or `sex` main effects within this model. The conclusion would be that there aren't any statistically significant differences in `income` attributable to either `race_3` or `sex`.
+
+```{r}
+summary(hw2_model2_with_int)
+```
+
+## The ANOVA model without interaction
+
+A model without interaction also finds no statistically significant differences in `income` by either `race_3` or `sex`.
+
+```{r}
+hw2_model2_without <- lm(income ~ race + sex, data = hw2_q13)
+anova(hw2_model2_without)
+```
+
+# Question 3 (20 points)
+
+> Now attempt to fit a two-factor ANOVA model to evaluate the effect of (uncollapsed) `race` and `insurance` on `income`. A problem should occur when you fit this `race` and `insurance` model, that doesn't happen, for instance, when you evaluate the effects of both `race` and `sex` on `income`. So what happens when you fit the `race`-`insurance` model, exactly, and why does it happen?
+
+```{r}
+hw2_model3 <- lm(income ~ race_3*insurance, data = hw2_q13)
+anova(hw2_model3)
+```
+
+That *p* value for the interaction term looks a little high. What's happening?
+
+```{r}
+summary(hw2_model3)
+```
+
+Aha - we've got some terms that the model cannot fit - `NA` values in the estimates are a big problem. 
+
+## Exploring the Data - Why Can't We Estimate all of our Coefficients?
+
+As to why this happens, a little more exploratory data analysis would tell us...
+
+```{r}
+hw2_q13 %>% count(race_3, insurance)
+```
+
+We see that for the "Other" `race_3` group, we only observe subjects with Medicaid and Medicare insurance. So the model cannot fit the interaction of `race_3` with `insurance`, because it cannot make either a "Other race, Commercial" or "Other race, Uninsured" estimate. 
+
+- Note that the `NA` values don't correspond to the counts of 0. That's because of the order in which the models are estimated. If, instead of running `race_3 * insurance` you instead run `insurance * race_3` you get the following...
+
+
+```{r}
+hw2_model3a <- lm(income ~ insurance*race_3, data = hw2_q13)
+summary(hw2_model3a)
+```
+
+Now, at least one of the two NAs corresponds to a count of zero. Changing the order of the levels in the `race_3` and/or insurance factors which also have an impact on which estimates are missing in this output. 
+
+- There's no doubt about it. You really do need to look at the data closely.
+
+# Question 4 (30 points)
+
+> Again, consider the `hbp330` data used in Homework 1. Build your best model for the prediction of body-mass index, considering the following 14 predictors: `practice`, `age`, `race`, `eth_hisp`, `sex`, `insurance`, `income`, `hsgrad`, `tobacco`, `depdiag`, `sbp`, `dbp`, `statin` and `bpmed`. Use an appropriate best subsets procedure to aid in your search, and use a cross-validation strategy to assess and compare potential models.
+
+- Feel free to omit the cases with missing values in the variables you are considering (these 14 predictors, plus the `bmi` outcome) before proceeding. This should not materially affect your sample size very much.
+- Use the `nvmax = 7` command within your call to `regsubsets` to limit your investigation to models containing no more than seven of these candidate predictors.
+- Do not transform any variables, and consider models with main effects only so that no product terms are used.
+- A 5-fold cross-validation strategy would be very appropriate. Another reasonable choice would involve partitioning the data once (prior to fitting any models) into training and test samples, as we did in 431.
+
+> Be sure to provide a written explanation of your conclusions and specify the variables in your final model, in complete sentences.
+
+```{r}
+hw2q4 <- hbp330 %>%
+  mutate( bmi = weight / (height*height) ) %>%
+  select(subject, bmi, practice, age, race, eth_hisp, sex, 
+                    insurance, income, hsgrad, tobacco, 
+                    depdiag, sbp, dbp, statin, bpmed) %>%
+  drop_na
+
+skim(hw2q4)
+```
+
+We lose a total of five observations by dropping missing values. Next, we'll establish the "best subsets" groups.
+
+```{r}
+q4_preds <- with(hw2q4,
+              cbind(practice, age, race, eth_hisp, sex, 
+                    insurance, income, hsgrad, tobacco, 
+                    depdiag, sbp, dbp, statin, bpmed))
+
+q4_subs <- regsubsets(q4_preds, y = hw2q4$bmi, nvmax = 7)
+
+q4_rs <- summary(q4_subs)
+
+q4_rs
+```
+
+```{r}
+round(q4_rs$adjr2, 4)
+round(q4_rs$cp, 1)
+round(q4_rs$bic, 1)
+
+# since n for hw2q4 is 325, and we are looking at 2-8 inputs
+q4_rs$aic.corr <- 325*log(q4_rs$rss / 325) + 2*(2:8) +
+               (2 * (2:8) * ((2:8)+1) / (325 - (2:8) - 1))
+
+round(q4_rs$aic.corr, 1)
+```
+
+So, here are our "best subsets" models:
+
+Inputs | Predictors Included | Adj. r^2^ | C~p~ | BIC | corr. AIC
+-----: | --------------------------- | ----: | ----: | ----: | ----:
+2 | `sex` | 0.0373 | 19.1 | **-1.8** | 1345.3
+3 | `sex`, `age` | 0.0476 | 16.4 | -0.5 | 1342.8
+4 | `sex`, `age`, `bpmed` | 0.0634 | 11.8 | -1.2 | 1338.4
+5 | `sex`, `age`, `bpmed`, `tobacco` | 0.0750 | 8.7 | -0.5 | 1335.4
+6 | `sex`, `age`, `bpmed`, `practice`, `race` | 0.0889 | **4.8** | -0.6 | 1331.6
+7 | `sex`, `age`, `bpmed`, `tobacco`, `practice`, `race` | 0.1006 | 1.8 | 0.0 | **1328.5**
+8 | `sex`, `age`, `bpmed`, `tobacco`, `practice`, `race`, `depdiag` | **0.1008** | 2.7 | 4.6 | 1329.4
+
+## Building our 4 Plots
+
+```{r}
+par(mfrow = c(2,2))
+m2 <- max(q4_rs$adjr2) 
+m1 <- which.max(q4_rs$adjr2) + 1
+plot(q4_rs$adjr2 ~ I(2:8), ylab="Adjusted R-squared",
+     xlab="# of Inputs, including intercept",
+     main = "Adjusted R-squared")
+lines(spline(q4_rs$adjr2 ~ I(2:8)))
+arrows(m1, m2-0.02, m1, m2)
+
+plot(q4_rs$cp ~ I(2:8),
+     ylab="Cp Statistic",
+     xlab="# of Regression Inputs, including Intercept",
+     pch=16, main="Cp Plot")
+abline(0,1, col = "purple")
+
+plot(q4_rs$aic.corr ~ I(2:8), ylab="AIC, corrected", xlab="# of Fitted Inputs",
+     pch=16, cex=1.5, col="tomato", main="AIC (corrected) Plot")
+
+plot(q4_rs$bic ~ I(2:8), ylab="BIC", xlab="# of Fitted Inputs",
+     pch=16, cex=1.5, col="slateblue", main="BIC Plot")
+```
+
+## Selecting a Winner
+
+The models we'll consider are:
+
+Inputs | Predictors Included | Reason
+-----: | --------------------------- | ---------------
+2 | `sex` | lowest BIC
+6 | `sex`, `age`, `bpmed`, `practice`, `race` | suggested by C~p~
+7 | `sex`, `age`, `bpmed`, `tobacco`, `practice`, `race` | lowest AIC (corr.)
+8 | `sex`, `age`, `bpmed`, `tobacco`, `practice`, `race`, `depdiag` | highest adj. R^2^
+
+We'll fit each of these four models in turn, and then perform a 5-fold cross validation for each, then compare results. In each case, we'll calculate the root mean squared error of the predictions, and the mean absolute prediction error across the complete samples.
+
+### Model 2 cross-validation
+
+```{r}
+set.seed(4320142)
+
+q4m2 <- hw2q4 %>%
+  crossv_kfold(k = 5) %>%
+  mutate(model = map(train, ~ lm(bmi ~ sex, data = .)))
+
+q4m2_pred <- q4m2 %>%
+  unnest(map2(model, test, ~ augment(.x, newdata = .y)))
+
+res2 <- q4m2_pred %>%
+  summarize(Model = "2",
+            RMSE = sqrt(mean((bmi - .fitted) ^2)),
+            MAE = mean(abs(bmi - .fitted)))
+```
+
+
+### Model 6 cross-validation
+
+```{r}
+set.seed(4320146)
+
+q4m6 <- hw2q4 %>%
+  crossv_kfold(k = 5) %>%
+  mutate(model = map(train, 
+                     ~ lm(bmi ~ sex + age + bpmed + 
+                            practice + race, data = .)))
+
+q4m6_pred <- q4m6 %>%
+  unnest(map2(model, test, ~ augment(.x, newdata = .y)))
+
+res6 <- q4m6_pred %>%
+  summarize(Model = "6",
+            RMSE = sqrt(mean((bmi - .fitted) ^2)),
+            MAE = mean(abs(bmi - .fitted)))
+```
+
+### Model 7 cross-validation
+
+```{r}
+set.seed(4320147)
+
+q4m7 <- hw2q4 %>%
+  crossv_kfold(k = 5) %>%
+  mutate(model = map(train, 
+                     ~ lm(bmi ~ sex + age + bpmed + tobacco +
+                            practice + race, data = .)))
+
+q4m7_pred <- q4m7 %>%
+  unnest(map2(model, test, ~ augment(.x, newdata = .y)))
+
+res7 <- q4m7_pred %>%
+  summarize(Model = "7",
+            RMSE = sqrt(mean((bmi - .fitted) ^2)),
+            MAE = mean(abs(bmi - .fitted)))
+```
+
+### Model 8 cross-validation
+
+```{r}
+set.seed(4320148)
+
+q4m8 <- hw2q4 %>%
+  crossv_kfold(k = 5) %>%
+  mutate(model = map(train, 
+                     ~ lm(bmi ~ sex + age + bpmed + tobacco +
+                            practice + race + depdiag, data = .)))
+
+q4m8_pred <- q4m8 %>%
+  unnest(map2(model, test, ~ augment(.x, newdata = .y)))
+
+res8 <- q4m8_pred %>%
+  summarize(Model = "8",
+            RMSE = sqrt(mean((bmi - .fitted) ^2)),
+            MAE = mean(abs(bmi - .fitted)))
+```
+
+### Summary Table
+
+```{r}
+bind_rows(res2, res6, res7, res8) 
+```
+
+Model 7 yielded slightly better predictions in terms of RMSE or MAE than the other options here. So that's the model including `sex`, `age`, `bpmed`, `tobacco`, `practice`, and `race`. 
+
+Refitting this model to the complete case sample of 325 people, we have the following summary results.
+
+```{r}
+summary(lm(bmi ~ sex + age + bpmed + tobacco + practice +
+             race, data = hw2q4))
+```
