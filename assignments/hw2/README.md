@@ -1,5 +1,12 @@
 # 432 Homework 2 for Spring 2018
 
+## Links to Post-Deadline Materials will go live as they become available
+
+- Answer Sketch: [Download R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw2/hw2sketch.Rmd), or [View HTML result](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.html), or [Download or View PDF result](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.pdf)
+- Grading Rubric and Grades coming as soon as they are available.
+
+# The Assignment
+
 Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **1 PM on Friday 2018-02-02**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file. 
 
 Start a separate R Project for Homework 2, as your first step, and place all of your work in that project's directory.
