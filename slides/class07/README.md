@@ -13,6 +13,6 @@ In today's class, we'll discuss the incorporation of non-linear terms in a linea
 2. Updates in the [Course Notes](https://thomaselove.github.io/432-notes/)
     - I've made a few small edits in Chapters 1 and 5. 
     - I've made some meaningful edits to Chapter 8. 
-        - In particular, I added some material in a section 8.3.2 (and at the end of 8.3.1) to clarify the calculation of *uncorrected* AIC, and how it (a) differs from bias-corrected AIC, (b) provides no new information beyond what we get from Mallows' Cp in the linear regression setting, and so we don't plot it and (c) is only defined up to an additive constant, so `extractAIC` and `AIC` give different results when applied to a single model, but when comparing two models, either can be used. 
+        - In particular, I added some material to clarify the calculation of *uncorrected* AIC, and how it (a) differs from bias-corrected AIC, (b) provides no new information beyond what we get from Mallows' Cp in the linear regression setting, and so we don't plot it and (c) is only defined up to an additive constant, so `extractAIC` and `AIC` give different results when applied to a single model, but when comparing two models, either can be used. 
         - I also dropped the non-ggplot2 approach to plotting, and 
         - I added some material on interaction terms, and on the limitations of best subsets regarding the development of best subsets work with multicategorical variables.
