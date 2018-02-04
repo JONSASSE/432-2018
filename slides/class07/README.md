@@ -11,7 +11,7 @@ In today's class, we'll discuss the incorporation of non-linear terms in a linea
 1. Homework 2 Answer Sketch is available in [R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw2/hw2sketch.Rmd), or [HTML](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.html), or [PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.pdf).
 
 2. Updates in the [Course Notes](https://thomaselove.github.io/432-notes/)
-    - I added Chapters 9 (on Non-Linearity), 10 (on using `ols` to fit linear models) and 11 (on ridge regression and the lasso). 
+    - New Chapters 9 (on Non-Linearity), 10 (on using `ols` to fit linear models) and 11 (on ridge regression and the lasso). 
     - Chapters coming soon include demonstrations of Logistic Regression and Multiple Imputation.
     - I've made a few small edits in Chapters 1 and 5. 
     - I've made some meaningful edits to Chapter 8. 
