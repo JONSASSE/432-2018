@@ -20,5 +20,5 @@ In today's class, we'll discuss the incorporation of non-linear terms in a linea
         - 9 (on Non-Linearity), 
         - 10 (on using `ols` to fit linear models), 
         - 11 (on ridge regression and the lasso), 
-        - 12 (intro to logistic regression)
-    - Chapters on my "to do" list include (a) demonstrations of using `lrm` to fit a logistic regression and (b) Multiple Imputation, for sure.
+        - 12 (introduction to logistic regression, including both `glm` and `lrm` approaches to fit and evaluate models)
+    - The next chapters on my "to do" list involve (a) another logistic regression example, and (b) the use of multiple imputation procedures, in some order.
