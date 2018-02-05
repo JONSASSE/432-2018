@@ -17,8 +17,8 @@ In today's class, we'll discuss the incorporation of non-linear terms in a linea
         - I also dropped the non-ggplot2 approach to plotting, and 
         - I added some material on interaction terms, and on the limitations of best subsets regarding the development of best subsets work with multicategorical variables.
     - New Chapters:
-        - 9 (on Non-Linearity), 
-        - 10 (on using `ols` to fit linear models), 
-        - 11 (on ridge regression and the lasso), 
+        - 9 (on incorporating non-linearity in a linear regression model, particularly polynomial regression and spline models), 
+        - 10 (on using `ols` to fit and evaluate linear models), 
+        - 11 (which provides brief demonstrations of the use of ridge regression and the lasso), 
         - 12 (introduction to logistic regression, including both `glm` and `lrm` approaches to fit and evaluate models)
     - The next chapters on my "to do" list involve (a) another logistic regression example, and (b) the use of multiple imputation procedures, in some order.
