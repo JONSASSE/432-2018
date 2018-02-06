@@ -15,15 +15,15 @@ There are lots of good resources in the world. Several excellent books are liste
     - [Biostatistics for Biomedical Research](http://fharrell.com/doc/bbr.pdf) by Frank Harrell and James Slaughter. I've posted the [2018-01-29 version here].
     - [Course Notes for Regression Modeling Strategies](http://fharrell.com/doc/rms.pdf) by Frank Harrell. I've posted the [2018-01-29 version here].
     - [Frank's web page of links to his other materials](http://www.fharrell.com/#links)
-    - The second edition of Frank's Regression Modeling Strategies is available as an e-book to CWRU affiliates.
+    - The second edition is **available as an e-book** to CWRU affiliates. [Access here (CWRU login required)](https://drive.google.com/drive/folders/1vN8dfqtz-hGyu7hrsPpBRnJptKI1B0BV?usp=sharing).
 - Julian Faraway's two books are great, and provided lots of source materials for early versions of this course.
     - "Linear Models with R" [Amazon link to 2nd edition](https://www.amazon.com/Linear-Models-Chapman-Statistical-Science/dp/1439887330/ref=sr_1_2?s=books&ie=UTF8&qid=1517953413&sr=1-2&refinements=p_27%3AJulian+J.+Faraway) and 
     - "Extending the Linear Model with R" [Amazon link to 2nd edition](https://www.amazon.com/Extending-Linear-Model-Generalized-Nonparametric/dp/149872096X/ref=sr_1_1?s=books&ie=UTF8&qid=1517953413&sr=1-1&refinements=p_27%3AJulian+J.+Faraway) 
     - A free book which includes some of this content and is available online is Faraway's 2002 [Practical Regression and ANOVA using R](https://github.com/THOMASELOVE/432-2018/blob/master/texts/Faraway-PRA.pdf)
 - Eric Vittinghoff, David Glidden, Stephen Shiboski and Charles McCulloch at UCSF have a great book called "Regression Methods in Biostatistics: Linear, Logistic, Survival, and Repeated Measures Models" but they use STATA rather than R.
-    - The second edition of the Vittinghoff test is available as an e-book to CWRU affiliates.
+    - The second edition is **available as an e-book** to CWRU affiliates. [Access it here (CWRU login required)](https://drive.google.com/drive/folders/1vN8dfqtz-hGyu7hrsPpBRnJptKI1B0BV?usp=sharing).
 - Simon J. Sheather's "A Modern Approach to Regression with R" has a lot of interesting material.
-    - The Sheather text is available as an e-book to CWRU affiliates.
+    - The Sheather text is **available as an e-book** to CWRU affiliates. [Access it here (CWRU login required)](https://drive.google.com/drive/folders/1vN8dfqtz-hGyu7hrsPpBRnJptKI1B0BV?usp=sharing).
 - Daniel Wright and Kamala London's book "Modern Regression Techniques Using R" [Amazon link](https://www.amazon.com/Modern-Regression-Techniques-Using-2009-03-05/dp/B01FKWRTE2/ref=sr_1_3?ie=UTF8&qid=1517954445&sr=8-3&keywords=Wright+and+London+regression) is subtitled a practical guide for students and researchers. Like all of these books, it's pre-tidyverse, but otherwise very helpful.
 - Andrew Gelman's book with Jennifer Hill entitled "Data Analysis using Regression and Multilevel/Hierarchical Models" is outstanding, and uses R, but I've never been able to figure out how to teach the multilevel material well in two semesters. 
 - Another book anyone interested in data mining and machine learning should read is Hastie and Tibshriani's [Elements of Statistical Learning](https://web.stanford.edu/~hastie/Papers/ESLII.pdf) I regret never making my way all the way through the book, but I've read some parts of it dozens of times. Very eye-opening.
