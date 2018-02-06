@@ -2,7 +2,7 @@
 
 ### Key Materials
 
-[The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) are posted above, and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) will be posted as soon as they are available.
+[The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) as **revised** to fix the typos unearthed in class on slides 19 and 38 are posted above, and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) will be posted as soon as they are available.
 
 In today's class, we'll discuss the incorporation of non-linear terms in a linear regression model. That material is in Chapter 9 of our Course Notes.
 
