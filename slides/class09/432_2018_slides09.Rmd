@@ -1,0 +1,747 @@
+---
+title: "432 Class 9 Slides"
+author: "github.com/THOMASELOVE/432-2018"
+date: "2018-02-13"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    colortheme: "lily"
+    fonttheme: "structurebold"
+    fig_caption: FALSE
+---
+
+```{r set-options, echo=FALSE, cache=FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 60)
+```
+
+## Setup
+
+```{r, warning = FALSE, message = FALSE}
+library(skimr)
+library(broom)
+library(Hmisc)
+library(rms)
+library(pROC)
+library(ROCR)
+library(tidyverse)
+```
+
+## Today's Materials
+
+- Logistic Regression and the Low Birth Weight data
+- Receiver Operating Characteristic Curve Analysis
+    - The C statistic (Area under the curve)
+- Assessing Residual Plots for a Logistic Regression
+- A "Kitchen Sink" Logistic Regression Model
+    - Comparing Models
+    - Interpreting Models with Multiple Predictors
+- Fitting a Logistic Model with `lrm`
+    - Nagelkerke R^2^, Somers' d etc.
+    - Validating Summary Statistics
+    - Summaries of Effects
+    - Plotting In-Sample Predictions
+    - Influence
+    - Calibration
+    - Nomograms
+
+## The Low Birth Weight data, again
+
+```{r}
+lbw1 <- read.csv("data/lbw.csv") %>% tbl_df
+
+lbw1 <- lbw1 %>% 
+    mutate(race_f = fct_recode(factor(race), white = "1",
+                               black = "2", other = "3"),
+         race_f = fct_relevel(race_f, "white", "black")) %>%
+    mutate(preterm = fct_recode(factor(ptl > 0), 
+                                yes = "TRUE",
+                                no = "FALSE")) %>%
+    select(subject, low, lwt, age, ftv, ht, race_f, 
+           preterm, smoke, ui)
+```
+
+## The `lbw1` data (n = 189 infants)
+
+Variable | Description
+-------: | ------------------------------------------------
+`subject` | id code
+`low` | indicator of low birth weight (< 2500 g)
+`lwt` | mom's weight at last menstrual period (lbs.)
+`age` | age of mother in years
+`ftv` | count of physician visits in first trimester (0 to 6)
+`ht` | history of hypertension: 1 = yes, 0 = no
+`race_f` | race of mom: white, black, other
+`preterm` | prior premature labor: 1 = yes, 0 = no
+`smoke` | 1 = smoked during pregnancy, 0 = did not
+`ui` | presence of uterine irritability: 1 = yes, 0 = no
+
+Source: Hosmer, Lemeshow and Sturdivant, *Applied Logistic Regression* 3rd edition. Data from Baystate Medical Center, Springfield MA in 1986.
+
+# Model 1
+
+## Our current model
+
+```{r}
+model.1 <- glm(low ~ lwt, data = lbw1, family = binomial)
+model.1
+```
+
+## Plotting a Simple Logistic Model using `binomial_smooth`
+
+```{r, eval = FALSE}
+binomial_smooth <- function(...) {
+  geom_smooth(method = "glm", 
+              method.args = list(family = "binomial"), ...)
+}
+
+ggplot(lbw1, aes(x = lwt, y = low)) +
+  geom_jitter(height = 0.05) +
+  binomial_smooth() + 
+    ## ...smooth(se=FALSE) to leave out interval
+  labs(title = "Logistic Regression Model 1") +
+  theme_bw()
+```
+
+## The Resulting Plot
+
+```{r, echo = FALSE}
+binomial_smooth <- function(...) {
+  geom_smooth(method = "glm", 
+              method.args = list(family = "binomial"), ...)
+}
+
+ggplot(lbw1, aes(x = lwt, y = low)) +
+  geom_jitter(height = 0.05) +
+  binomial_smooth() + 
+    ## ...smooth(se=FALSE) to leave out interval
+  labs(title = "Logistic Regression Model 1") +
+  theme_bw()
+```
+
+# The C Statistic (Area under the ROC Curve)
+
+## Our Model as Diagnostic Test
+
+We want to assess predictive accuracy of our model. 
+
+- One approach: Receiver Operating Characteristic (ROC) curve analysis.
+- A common choice for assessing diagnostic tests in medicine.
+
+Consider two types of errors made by our model, in combination with a classification rule.
+
+- Our model uses Mom's weight at last period to predict Pr(low birth weight).
+- Lighter moms had higher model probabilities, so our rule would be: Predict low birth weight if Mom's last weight is no more than R pounds.
+
+But the choice of R is available to us. Any value we select can lead to good outcomes (of our prediction) or to errors.
+
+## Test Results
+
+- One good outcome of our "model/test" would be if the Mom's weight is less than R and her baby is born at a low birth weight.
+- The other good outcome is if Mom's weight is greater than R and her baby is born at a non-low weight.
+
+But we can make errors, too.
+
+- A false positive occurs when we predict Pr(low = 1) to be small, but the baby is born at a low birth weight.
+- A false negative occurs when we predict Pr(low = 1) to be large, but the baby is born at a non-low weight.
+
+We identify two key summaries:
+
+- The true positive fraction (TPF) for a specific weight cutoff R is Pr(Mom weight < R | baby actually has low = 1).
+- The false positive fraction (FPF) for a specific weight cutoff R is Pr(Mom weight < R | baby has low = 0).
+
+## The ROC Curve
+
+Since the cutoff $R$ is not fixed in advanced, we can plot the value of TPF (on the y axis) against FPF (on the x axis) for all possible values of $R$, and this is what the ROC curve is. 
+
+- We calculate AUC = the area under the ROC curve (a value between 0 and 1) and use it to help summarize the effectiveness of the predictions made by the model on the following scale:
+    + AUC above 0.9 = excellent discrimination of low = 1 from low = 0
+    + AUC between 0.8 and 0.9 = good discrimination
+    + AUC between 0.6 and 0.8 = mediocre/fair discrimination
+    + AUC of 0.5 = random guessing
+    + AUC below 0.5 = worse than guessing
+
+Others refer to the Sensitivity on the Y axis, and 1-Specificity on the X axis, and this is the same idea. The TPF is called the sensitivity. 1 - FPF is the true negative rate, called the specificity.
+
+## A Simulation
+
+```{r}
+set.seed(43223)
+sim.temp <- data_frame(x = rnorm(n = 200), 
+                       prob = exp(x)/(1 + exp(x)), 
+                       y = as.numeric(1 * runif(200) < prob))
+
+sim.temp <- sim.temp %>%
+    mutate(p_guess = 1,
+           p_perfect = y, 
+           p_bad = exp(-2*x) / (1 + exp(-2*x)),
+           p_ok = prob + (1-y)*runif(1, 0, 0.05),
+           p_good = prob + y*runif(1, 0, 0.27))
+```
+
+
+## What if we are guessing?
+
+If we're guessing completely at random, then the model should correctly classify a subject (as died or not died) about 50% of the time, so the TPR and FPR will be equal. This yields a diagonal line in the ROC curve, and an area under the curve (C statistic) of 0.5.
+
+Plot is on the next slide...
+
+## What if we are guessing?
+
+```{r, echo = FALSE}
+pred_guess <- prediction(sim.temp$p_guess, sim.temp$y)
+perf_guess <- performance(pred_guess, measure = "tpr", 
+                          x.measure = "fpr")
+auc_guess <- performance(pred_guess, measure="auc")
+
+auc_guess <- round(auc_guess@y.values[[1]],3)
+roc_guess <- data.frame(fpr=unlist(perf_guess@x.values),
+                        tpr=unlist(perf_guess@y.values),
+                        model="GLM")
+
+ggplot(roc_guess, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    labs(title = paste0("Guessing: ROC Curve w/ AUC=", 
+                        auc_guess)) +
+    theme_bw()
+```
+
+## Building that ROC curve, Code part 1
+
+This approach requires the loading of the ROCR package...
+
+```{r, eval = FALSE}
+pred_guess <- prediction(sim.temp$p_guess, sim.temp$y)
+perf_guess <- performance(pred_guess, measure = "tpr", 
+                          x.measure = "fpr")
+auc_guess <- performance(pred_guess, measure="auc")
+
+auc_guess <- round(auc_guess@y.values[[1]],3)
+roc_guess <- data.frame(fpr=unlist(perf_guess@x.values),
+                        tpr=unlist(perf_guess@y.values),
+                        model="GLM")
+```
+
+## Building that ROC curve, Code part 2
+
+```{r, eval = FALSE}
+ggplot(roc_guess, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    labs(title = paste0("Guessing: ROC Curve w/ AUC=", 
+                        auc_guess)) +
+    theme_bw()
+```
+
+## What if our model classifies things perfectly?
+
+If we're classifying subjects perfectly, then we have a TPR of 1 and an FPR of 0. 
+
+- That yields an ROC curve that looks like the upper and left edges of a box. 
+- If our model correctly classifies a subject (as died or not died) 100% of the time, the area under the curve (c statistic) will be 1.0. 
+
+I added in a diagonal dashed black line to show how this model compares to random guessing.
+
+
+## What if our model classifies things perfectly?
+
+```{r, echo = F}
+pred_perf <- prediction(sim.temp$p_perfect, sim.temp$y)
+perf_perf <- performance(pred_perf, measure = "tpr", x.measure = "fpr")
+auc_perf <- performance(pred_perf, measure="auc")
+
+auc_perf <- round(auc_perf@y.values[[1]],3)
+roc_perf <- data.frame(fpr=unlist(perf_perf@x.values),
+                        tpr=unlist(perf_perf@y.values),
+                        model="GLM")
+
+ggplot(roc_perf, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    geom_abline(intercept = 0, slope = 1, lty = "dashed") +
+    labs(title = paste0("Perfect Prediction: ROC Curve w/ AUC=", auc_perf)) +
+    theme_bw()
+```
+
+
+## What does "worse than guessing" look like?
+
+```{r, echo = FALSE}
+pred_bad <- prediction(sim.temp$p_bad, sim.temp$y)
+perf_bad <- performance(pred_bad, measure = "tpr", x.measure = "fpr")
+auc_bad <- performance(pred_bad, measure="auc")
+
+auc_bad <- round(auc_bad@y.values[[1]],3)
+roc_bad <- data.frame(fpr=unlist(perf_bad@x.values),
+                        tpr=unlist(perf_bad@y.values),
+                        model="GLM")
+
+ggplot(roc_bad, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    geom_abline(intercept = 0, slope = 1, lty = "dashed") +
+    labs(title = paste0("A Bad Model: ROC Curve w/ AUC=", auc_bad)) +
+    theme_bw()
+```
+
+## What does "better than guessing" look like?
+
+```{r, echo = FALSE}
+pred_ok <- prediction(sim.temp$p_ok, sim.temp$y)
+perf_ok <- performance(pred_ok, measure = "tpr", x.measure = "fpr")
+auc_ok <- performance(pred_ok, measure="auc")
+
+auc_ok <- round(auc_ok@y.values[[1]],3)
+roc_ok <- data.frame(fpr=unlist(perf_ok@x.values),
+                        tpr=unlist(perf_ok@y.values),
+                        model="GLM")
+
+ggplot(roc_ok, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    geom_abline(intercept = 0, slope = 1, lty = "dashed") +
+    labs(title = paste0("A Mediocre Model: ROC Curve w/ AUC=", auc_ok)) +
+    theme_bw()
+```
+
+## What does "pretty good" look like?
+
+```{r, echo = FALSE}
+pred_good <- prediction(sim.temp$p_good, sim.temp$y)
+perf_good <- performance(pred_good, measure = "tpr", x.measure = "fpr")
+auc_good <- performance(pred_good, measure="auc")
+
+auc_good <- round(auc_good@y.values[[1]],3)
+roc_good <- data.frame(fpr=unlist(perf_good@x.values),
+                        tpr=unlist(perf_good@y.values),
+                        model="GLM")
+
+ggplot(roc_good, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    geom_abline(intercept = 0, slope = 1, lty = "dashed") +
+    labs(title = paste0("A Pretty Good Model: ROC Curve w/ AUC=", auc_good)) +
+    theme_bw()
+```
+
+## The ROC plot for our Model 1 (code)
+
+```{r, eval = FALSE}
+## requires ROCR package
+prob <- predict(model.1, lbw1, type="response")
+pred <- prediction(prob, lbw1$low)
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+auc <- performance(pred, measure="auc")
+
+auc <- round(auc@y.values[[1]],3)
+roc.data <- data.frame(fpr=unlist(perf@x.values),
+                       tpr=unlist(perf@y.values),
+                       model="GLM")
+
+ggplot(roc.data, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    geom_abline(intercept = 0, slope = 1, lty = "dashed") +
+    labs(title = paste0("Model 1 ROC Curve w/ AUC=", auc)) +
+    theme_bw()
+```
+
+
+## The ROC plot for our Model 1 (Result)
+
+```{r, echo = FALSE}
+## requires ROCR package
+prob <- predict(model.1, lbw1, type="response")
+pred <- prediction(prob, lbw1$low)
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+auc <- performance(pred, measure="auc")
+
+auc <- round(auc@y.values[[1]],3)
+roc.data <- data.frame(fpr=unlist(perf@x.values),
+                       tpr=unlist(perf@y.values),
+                       model="GLM")
+
+ggplot(roc.data, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    geom_abline(intercept = 0, slope = 1, lty = "dashed") +
+    labs(title = paste0("Model 1 ROC Curve w/ AUC=", auc)) +
+    theme_bw()
+```
+
+## Interpreting the C statistic (0.613) for Model 1
+
+C statistic | Interpretation
+----------: | ---------------------------------------------
+0.90 to 1.00 | model does an excellent job at discriminating "yes" from "no" (A)
+0.80 to 0.90 | model does a good job (B)
+0.70 to 0.80 | model does a fair job (C)
+0.60 to 0.70 | model does a poor job (D)
+0.50 to 0.60 | model fails (F)
+below 0.50 | model is worse than random guessing
+
+## Another way to plot the ROC Curve
+
+If we've loaded the `pROC` package, we can also use the following (admittedly simpler) approach to plot the ROC curve, without `ggplot2`, and to obtain the C statistic, and a 95% confidence interval around that C statistic.
+
+```{r, message=FALSE}
+## requires pROC package
+roc.mod1 <- 
+    roc(lbw1$low ~ predict(model.1, type="response"),
+        ci = TRUE)
+```
+
+![](figures/fig01.png)
+
+## Result of `plot(roc.mod1)`
+
+```{r, echo = FALSE}
+plot(roc.mod1)
+```
+
+# Plotting Residuals of a Logistic Regression
+
+## Residual Plots for `model.1`?
+
+- Yes/No outcomes contain less information than quantitative outcomes
+- Residuals cannot be observed - predicted
+    + There are several different types of residuals defined
+- Assumptions of logistic regression are different
+    + Model is deliberately non-linear
+    + Error variance is a function of the mean, so it isn't constant
+    + Errors aren't assumed to follow a Normal distribution
+    + Only thing that's the same: leverage and influence
+
+So, plot 5 (residuals/leverage/influence) can be a little useful, but that's it.
+
+- We'll need better diagnostic tools down the line.
+
+## Semi-Useful Residual Plot
+
+```{r}
+plot(model.1, which = 5)
+```
+
+# Building a Bigger Model
+
+## Model 2: A "Kitchen Sink" Logistic Regression
+
+```{r}
+model.2 <- glm(low ~ lwt + age + ftv + ht + race_f + 
+                   preterm + smoke + ui, 
+               data = lbw1, family = binomial)
+```
+
+
+Variable | Description
+--------: | -----------------------------------------------
+`low` | indicator of low birth weight (< 2500 g)
+`lwt` | mom's weight at last menstrual period (lbs.)
+`age` | age of mother in years
+`ftv` | physician visits in first trimester (0 to 6)
+`ht` | history of hypertension: 1 = yes, 0 = no
+`race_f` | race of mom: white, black, other
+`preterm` | prior premature labor: 1 = yes, 0 = no
+`smoke` | 1 = smoked during pregnancy, 0 = did not
+`ui` | uterine irritability: 1 = yes, 0 = no
+
+## `model.2`
+
+```{r, echo = FALSE}
+model.2
+```
+
+## Comparing `model.2` to `model.1`
+
+```{r}
+anova(model.1, model.2)
+```
+
+```{r}
+pchisq(31.94, 8, lower.tail = FALSE)
+```
+
+## Comparing `model.2` to `model.1`
+
+```{r}
+glance(model.2)
+
+glance(model.1)
+```
+
+## Interpreting `model.2`
+
+![](figures/fig02.png)
+
+- Larger Mom `lwt` is associated with a smaller log odds of LBW holding all other predictors constant.
+
+## Impact of these predictors via odds ratios
+
+```{r, eval = FALSE}
+exp(coef(model.2)); exp(confint(model.2))
+```
+
+Variable | OR est. | 2.5% | 97.5%
+----------: | ------: | ------: | ------:
+lwt | 0.985 | 0.971 | 0.998
+age | 0.961 | 0.890 | 1.035
+ftv | 1.052 | 0.739 | 1.478
+ht | 6.426 | 1.662 | 28.187
+race_fblack | 3.383 | 1.192 | 9.808
+race_fother | 2.269 | 0.947 | 5.597
+pretermyes | 3.382 | 1.378 | 8.575
+smoke | 2.362 | 1.067 | 5.375
+ui | 2.053 | 0.818 | 5.101
+
+- Larger Mom `lwt` is associated with a smaller odds of LBW (est OR 0.985, 95% CI 0.971, 0.998) holding all other predictors constant.
+- What appears to be associated with larger odds of LBW?
+
+## ROC curve for Model 2 (Code)
+
+```{r, eval = FALSE}
+prob <- predict(model.2, lbw1, type="response")
+pred <- prediction(prob, lbw1$low)
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+auc <- performance(pred, measure="auc")
+
+auc <- round(auc@y.values[[1]],3)
+roc.data <- data.frame(fpr=unlist(perf@x.values),
+                       tpr=unlist(perf@y.values),
+                       model="GLM")
+
+ggplot(roc.data, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    geom_abline(intercept = 0, slope = 1, lty = "dashed") +
+    labs(title = paste0("Model 2: ROC Curve w/ AUC=", auc)) +
+    theme_bw()
+```
+
+## ROC curve for Model 2 (Result)
+
+```{r, echo = FALSE}
+prob <- predict(model.2, lbw1, type="response")
+pred <- prediction(prob, lbw1$low)
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+auc <- performance(pred, measure="auc")
+
+auc <- round(auc@y.values[[1]],3)
+roc.data <- data.frame(fpr=unlist(perf@x.values),
+                       tpr=unlist(perf@y.values),
+                       model="GLM")
+
+ggplot(roc.data, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    geom_abline(intercept = 0, slope = 1, lty = "dashed") +
+    labs(title = paste0("Model 2: ROC Curve w/ AUC=", auc)) +
+    theme_bw()
+```
+
+## Using `augment` to capture the fitted probabilities
+
+```{r}
+mod2_aug <- augment(model.2, lbw1, 
+                     type.predict = "response")
+head(mod2_aug, 3)
+```
+
+## Plotting Model 2 Fits by Observed LBW status
+
+```{r, echo = FALSE}
+ggplot(mod2_aug, aes(x = factor(low), y = .fitted, 
+                     col = factor(low))) +
+    geom_boxplot() +
+    geom_jitter(width = 0.1) + 
+    guides(col = FALSE)
+```
+
+## Residuals, Leverage and Influence
+
+```{r}
+plot(model.2, which = 5)
+```
+
+# Logistic Regression using the `lrm` function
+
+## Fitting Model 2 again (as Model 3)
+
+```{r}
+dd <- datadist(lbw1)
+options(datadist = "dd")
+
+model.3 <- lrm(low ~ lwt + age + ftv + ht + race_f +
+                   preterm + smoke + ui, 
+               data = lbw1, x = TRUE, y = TRUE)
+```
+
+## `model.3` output
+
+![](figures/fig03.png)
+
+## The Top Section
+
+![](figures/fig04.png)
+
+- Likelihood ratio test = drop in deviance test
+- R2 = Nagelkerke $R^2$ = not a percentage of anything
+- C = Area under the ROC curve
+- Dxy = Somers' d, and note C = 0.5 + Dxy/2
+
+## The Coefficients Summary
+
+![](figures/fig05.png)
+
+## ROC Curve Analysis (code)
+
+- Note: change `prob` to describe `type = "fitted"`
+- Note: make sure `lbw1` in `prob` is a data frame
+
+```{r, eval = FALSE}
+prob <- predict(model.3, data.frame(lbw1), type="fitted")
+pred <- prediction(prob, lbw1$low)
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+auc <- performance(pred, measure="auc")
+auc <- round(auc@y.values[[1]],3)
+roc.data <- data.frame(fpr=unlist(perf@x.values),
+                       tpr=unlist(perf@y.values),
+                       model="GLM")
+
+ggplot(roc.data, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    geom_abline(intercept = 0, slope = 1, lty = "dashed") +
+    labs(title = paste0("Model 3: ROC Curve w/ AUC=", auc)) +
+    theme_bw()
+```
+
+
+## ROC Curve Analysis (resulting plot)
+
+```{r, echo = FALSE}
+prob <- predict(model.3, data.frame(lbw1), type="fitted")
+pred <- prediction(prob, lbw1$low)
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+auc <- performance(pred, measure="auc")
+auc <- round(auc@y.values[[1]],3)
+roc.data <- data.frame(fpr=unlist(perf@x.values),
+                       tpr=unlist(perf@y.values),
+                       model="GLM")
+ggplot(roc.data, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2, fill = "blue") +
+    geom_line(aes(y=tpr), col = "blue") +
+    geom_abline(intercept = 0, slope = 1, lty = "dashed") +
+    labs(title = paste0("Model 3: ROC Curve w/ AUC=", auc)) +
+    theme_bw()
+```
+
+## Validating Logistic Model Summary Statistics
+
+`lrm` has a `validate` tool to help perform resampling validation of a model, with or without backwards step-wise variable selection. Here, we'll validate our model's summary statistics using 100 bootstrap replications.
+
+```{r, eval = FALSE}
+set.seed(432001) 
+validate(model.3, B = 100)
+```
+
+![](figures/fig06.png)
+
+## Plotting the Summary of the `lrm` approach
+
+The `summary` function applied to an `lrm` fit shows the effect size comparing the 25^th^ to the 75^th^ percentile of each predictor. 
+
+```{r, fig.height = 5}
+plot(summary(model.3))
+```
+
+## `summary(model.3)`
+
+![](figures/fig07.png)
+
+## Plot In-Sample Predictions from Model 3
+
+```{r, eval = FALSE}
+ggplot(Predict(model.3))
+```
+
+This will plot the effect of each predictor variable (and 95% CI for that effect) across the range of observed values for that predictor, on the log odds of low birth weight. (see next slide)
+
+- To get these plots on the **probability** scale, we add `fun = plogis` (see two slides from now)
+
+## `ggplot(Predict(model.3))`
+
+```{r, echo = FALSE}
+ggplot(Predict(model.3))
+```
+
+## `ggplot(Predict(model.3, fun = plogis))`
+
+```{r, echo = FALSE}
+ggplot(Predict(model.3, fun = plogis))
+```
+
+## ANOVA from the `lrm` approach
+
+```{r}
+anova(model.3)
+```
+
+Wald test for the model as a whole shows p = 0.0008
+
+## Any influential points?
+
+```{r}
+inf.3 <- which.influence(model.3, cutoff=0.3)
+inf.3
+```
+
+## Influence within the Data Frame
+
+```{r}
+show.influence(object = inf.3, dframe = data.frame(lbw1))
+```
+
+## A plot of the model's calibration curve
+
+The `calibrate` function applied to a `lrm` fit provides an assessment of the impact of overfitting on our model. 
+
+- The function uses bootstrapping (or cross-validation) to get bias-corrected estimates of predicted vs. observed values based on nonparametric smoothers for logistic regressions. 
+- In order to obtain this curve, you need to set both `x = TRUE` and `y = TRUE` when fitting the model. 
+- The errors here refer to the difference between the model predicted values and the corresponding bias-corrected calibrated values.
+
+```{r, eval = FALSE}
+plot(calibrate(model.3))
+```
+
+## Calibration Curve Plot
+
+```{r, echo = FALSE}
+plot(calibrate(model.3))
+```
+
+## A Nomogram for Model 3
+
+With `lrm`, we can fit a nomogram. 
+
+- We use the `plogis` function within a nomogram call to get R to produce fitted probabilities (of our outcome, `low`) in this case.
+
+```{r, eval = FALSE}
+plot(nomogram(model.3, fun=plogis, 
+              fun.at=c(0.05, seq(0.1, 0.9, by = 0.1), 0.95), 
+              funlabel="Pr(low = 1)"))
+```
+
+## Model 3 Nomogram
+
+```{r, echo = FALSE}
+plot(nomogram(model.3, fun=plogis, 
+              fun.at=c(0.05, seq(0.1, 0.9, by = 0.1), 0.95), 
+              funlabel="Pr(low = 1)"))
+```
+
+## Next Up...
+
+Linear Regression using the `ols` function
+
+
