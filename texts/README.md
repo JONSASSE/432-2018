@@ -9,15 +9,23 @@ The two key books we're reading this semester (see [the Course Schedule](https:/
     - I assume you already read **Sections 1-12 and 15** of this book in 431, so if you haven't, you'll want to do that before the end of February.
     - This term, we'll read Part IV (Model) and Part V (Communicate), before the first project is due in March.
 
-There are lots of good resources in the world. Several excellent books on regression analysis are listed below, but I don't recommend you **read** anything, really. Instead, I recommend you develop a project with data you care about where such an analysis seems likely to be appropriate, and do the work, then look to see what happens when you make different decisions. That's the best way to start actually gaining useful experience.
+There are lots of good resources in the world. Several excellent books are listed below. 
 
-- Frank Harrell's stuff is intimidating but great at http://www.fharrell.com/#links, and his Regression Modeling Strategies materials are especially relevant to our course.
-- Julian Faraway's two books "Linear Models with R" and "Extending the Linear Model with R" are great, too, and provided a lot of source material for early versions of this course.
-- Eric Vittinghoff and colleagues at UCSF have a great book called "Regression Methods in Biostatistics: Linear, Logistic, Survival, and Repeated Measures Models" but they use STATA rather than R.
-- In a few years, I expect the best book on regression and many related matters is likely to be the new two-volume epic coming from Andrew Gelman and colleagues. But that doesn't yet have a release date. Gelman's book with Jennifer Hill entitled "Data Analysis using Regression and Multilevel/Hierarchical Models" is outstanding, and uses R, but I've never been able to figure out how to teach the multilevel material well in two semesters. 
-- Daniel Wright and Kamala London's book "Modern Regression Techniques Using R" is subtitled a practical guide for students and researchers. Like all of these books, it's pre-tidyverse, but otherwise very helpful.
-- Another useful resource is Simon J. Sheather's "A Modern Approach to Regression with R"
-- 
+- Frank Harrell's stuff is intimidating but great at http://www.fharrell.com/#links, and his Regression Modeling Strategies materials are especially relevant to 432.
+    - [Biostatistics for Biomedical Research](http://fharrell.com/doc/bbr.pdf) by Frank Harrell and James Slaughter. I've posted the [2018-01-29 version here].
+    - [Course Notes for Regression Modeling Strategies](http://fharrell.com/doc/rms.pdf) by Frank Harrell. I've posted the [2018-01-29 version here].
+    - [Frank's web page of links to his other materials](http://www.fharrell.com/#links)
+    - The second edition of Frank's Regression Modeling Strategies is available as an e-book to CWRU affiliates.
+- Julian Faraway's two books are great, and provided lots of source materials for early versions of this course.
+    - "Linear Models with R" [Amazon link to 2nd edition](https://www.amazon.com/Linear-Models-Chapman-Statistical-Science/dp/1439887330/ref=sr_1_2?s=books&ie=UTF8&qid=1517953413&sr=1-2&refinements=p_27%3AJulian+J.+Faraway) and 
+    - "Extending the Linear Model with R" [Amazon link to 2nd edition](https://www.amazon.com/Extending-Linear-Model-Generalized-Nonparametric/dp/149872096X/ref=sr_1_1?s=books&ie=UTF8&qid=1517953413&sr=1-1&refinements=p_27%3AJulian+J.+Faraway) 
+    - A free book which includes some of this content and is available online is Faraway's 2002 [Practical Regression and ANOVA using R](https://github.com/THOMASELOVE/432-2018/blob/master/texts/Faraway-PRA.pdf)
+- Eric Vittinghoff, David Glidden, Stephen Shiboski and Charles McCulloch at UCSF have a great book called "Regression Methods in Biostatistics: Linear, Logistic, Survival, and Repeated Measures Models" but they use STATA rather than R.
+    - The second edition of the Vittinghoff test is available as an e-book to CWRU affiliates.
+- Simon J. Sheather's "A Modern Approach to Regression with R" has a lot of interesting material.
+    - The Sheather text is available as an e-book to CWRU affiliates.
+- Daniel Wright and Kamala London's book "Modern Regression Techniques Using R" [Amazon link](https://www.amazon.com/Modern-Regression-Techniques-Using-2009-03-05/dp/B01FKWRTE2/ref=sr_1_3?ie=UTF8&qid=1517954445&sr=8-3&keywords=Wright+and+London+regression) is subtitled a practical guide for students and researchers. Like all of these books, it's pre-tidyverse, but otherwise very helpful.
+- Andrew Gelman's book with Jennifer Hill entitled "Data Analysis using Regression and Multilevel/Hierarchical Models" is outstanding, and uses R, but I've never been able to figure out how to teach the multilevel material well in two semesters. 
 - Another book anyone interested in data mining and machine learning should read is Hastie and Tibshriani's [Elements of Statistical Learning](https://web.stanford.edu/~hastie/Papers/ESLII.pdf) I regret never making my way all the way through the book, but I've read some parts of it dozens of times. Very eye-opening.
 
 Other required and recommended materials coming here as the semester progresses.
