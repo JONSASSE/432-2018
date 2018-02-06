@@ -2,15 +2,15 @@
 
 ### Key Materials
 
-[The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) will be posted as soon as they are available.
+[The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) are posted above, and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) will be posted as soon as they are available.
 
-In today's class, we'll discuss the incorporation of non-linear terms in a linear regression model, and discuss the use of `ols` to fit and evaluate linear models. That material is in Chapters 9-10 of our Course Notes.
+In today's class, we'll discuss the incorporation of non-linear terms in a linear regression model. That material is in Chapter 9 of our Course Notes.
 
 ## Announcements Before Class 07
 
 1. Homework 2 Answer Sketch is available in [R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw2/hw2sketch.Rmd), or [HTML](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.html), or [PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.pdf).
 
-2. We'll spend a few minutes reminding you about [Course Project 1](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) during Class 08 on Thursday. 
+2. We'll spend a few minutes today reminding you about [Course Project 1](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1). 
     - Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is due on 2018-02-19.
 
 3. Updates in the [Course Notes](https://thomaselove.github.io/432-notes/) over the weekend
@@ -28,12 +28,19 @@ In today's class, we'll discuss the incorporation of non-linear terms in a linea
     - The next chapters on my "to do" list involve (a) another, more complex logistic regression example, including some material on probit regression, and (b) the use of multiple imputation procedures, in some order.
 
 4. **What's coming up?** (A tentative plan)
-    - Class 07: discuss materials in Chapters 9 and (some of) 10 on linear regression
-    - Class 08 and likely 09 and maybe also 10: discuss materials in Chapters 12 and 13 on logistic regression
-    - After that: return to linear regression and finish things from Chapters 10 (if needed) and 11
-    - And then: more logistic regression, probit regression, and multiple imputation
+    - Class 07: discuss materials in Chapter 9 on linear regression
+    - Class 08: discuss materials in Chapter 12 (and some of 13) on logistic regression
+    - Classes 09 and 10: discuss Chapter 13 stuff on logistic regression and Chapter 10 stuff on linear regression in some order
+    - After that: return to linear regression and finish things from Chapter 11, then, in some order, we'll get to ...
+        - more logistic regression in the binary case and in the estimating probabilities case, 
+        - probit regression, 
+        - multiple imputation, 
+        - robust linear regression
+        - weighted linear regression
+        - ordered logistic regression
+        - multinomial logistic regression
     - I may wind up reordering the Course Notes at some point.
-    
+
 ## Comments on the Minute Papers after Class 06
 
 ### What was the most important thing you learned related to 432 this week? 
