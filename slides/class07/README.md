@@ -8,9 +8,10 @@ In today's class, we'll discuss the incorporation of non-linear terms in a linea
 
 ## Announcements Before Class 07
 
-1. Homework 2 Answer Sketch is available in [R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw2/hw2sketch.Rmd), or [HTML](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.html), or [PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.pdf).
+1. Homework 2 Answer Sketch is available in [R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw2/hw2sketch.Rmd), or [HTML](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.html), or [PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.pdf). 
+    + Remember that [Homework 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw3) is due at 1 PM on Friday 2018-02-09.
 
-2. We'll spend a few minutes today reminding you about [Course Project 1](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1). 
+2. We'll spend a minute or two today (and again Thursday) reminding you about [Course Project 1](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1). 
     - Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is due on 2018-02-19.
 
 3. Updates in the [Course Notes](https://thomaselove.github.io/432-notes/) over the weekend
