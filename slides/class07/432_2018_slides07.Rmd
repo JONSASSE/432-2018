@@ -161,7 +161,7 @@ For example:
 - Quartic: $y = \beta_0 + \beta_1 x + \beta_2 x^2 + \beta_3 x^3 + \beta_4 x^4$
 - Quintic: $y = \beta_0 + \beta_1 x + \beta_2 x^2 + \beta_3 x^3 + \beta_4 x^4 + \beta_5 x^5$
 
-Fitting such a model creates a **polynomial regression*.
+Fitting such a model creates a **polynomial regression**.
 
 ## Raw Quadratic Model for `ptsd` using `over2`
 
@@ -392,7 +392,7 @@ modE4.aug <- augment(modE4, maleptsd)
 
 p1 <- ggplot(maleptsd, aes(x = over3, y = ptsd)) +
     geom_point() +
-    geom_smooth(method = "loess", col = "black", se = F) +
+    geom_smooth(method = "lm", col = "black", se = F) +
     labs(title = "Linear Fit") +
     theme_bw()
 
