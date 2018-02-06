@@ -2,7 +2,8 @@
 
 Link  | Date  | Topics Discussed include...
 --------: | ---------- | -------------------------------------------------------------
-[Class 7](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) | 2018-02-06 | Deliberately Incorporating Non-Linearity in a  Linear Regression Model
+[Class 8](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) | 2018-02-08 | Logistic Regression: The Basics
+[Class 7](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) | 2018-02-06 | Incorporating Non-Linearity in a  Linear Regression Model
 [Class 6](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class06) | 2018-02-01 | Linear Models: Validation and Variable Selection
 [Class 5](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class05) | 2018-01-30 | Linear Models: Validation and Variable Selection
 [Class 4](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class04) | 2018-01-25 | Making Predictions, Rescaling Predictors, ANOVA, Model Validation
