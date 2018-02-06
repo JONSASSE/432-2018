@@ -30,9 +30,10 @@ In today's class, we'll discuss the incorporation of non-linear terms in a linea
 
 4. **What's coming up?** (A tentative plan)
     - Class 07: discuss materials in Chapter 9 on linear regression
-    - Class 08: discuss materials in Chapter 12 (and some of 13) on logistic regression
-    - Classes 09 and 10: discuss Chapter 13 stuff on logistic regression and Chapter 10 stuff on linear regression in some order
-    - After that: return to linear regression and finish things from Chapter 11, then, in some order, we'll get to ...
+    - Class 08: discuss materials in Chapter 12 (and some of 13) on logistic regression ([Draft slides available](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08).)
+    - Class 09: discuss additional materials from Chapters 12-13 on logistic regression ([Draft slides available](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09).)
+    - Class 10: discuss materials in Chapter 10 on linear regression with `ols` rather than `lm`
+    - After that: cleanup loose ends, discuss linear regression issues raised in Chapter 11, then, in some order, we'll get to ...
         - more logistic regression in the binary case and in the estimating probabilities case, 
         - probit regression, 
         - multiple imputation, 
