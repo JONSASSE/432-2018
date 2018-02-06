@@ -15,7 +15,7 @@ There are lots of good resources in the world. Several excellent books are liste
     - [Biostatistics for Biomedical Research](http://fharrell.com/doc/bbr.pdf) by Frank Harrell and James Slaughter. I've posted the [2018-01-29 version here].
     - [Course Notes for Regression Modeling Strategies](http://fharrell.com/doc/rms.pdf) by Frank Harrell. I've posted the [2018-01-29 version here].
     - [Frank's web page of links to his other materials](http://www.fharrell.com/#links)
-    - The second edition is **available as an e-book** to CWRU affiliates. [Access here (CWRU login required)](https://drive.google.com/drive/folders/1vN8dfqtz-hGyu7hrsPpBRnJptKI1B0BV?usp=sharing).
+    - The second edition is **available as an e-book** to CWRU affiliates. [Access it here (CWRU login required)](https://drive.google.com/drive/folders/1vN8dfqtz-hGyu7hrsPpBRnJptKI1B0BV?usp=sharing).
 - Julian Faraway's two books are great, and provided lots of source materials for early versions of this course.
     - "Linear Models with R" [Amazon link to 2nd edition](https://www.amazon.com/Linear-Models-Chapman-Statistical-Science/dp/1439887330/ref=sr_1_2?s=books&ie=UTF8&qid=1517953413&sr=1-2&refinements=p_27%3AJulian+J.+Faraway) and 
     - "Extending the Linear Model with R" [Amazon link to 2nd edition](https://www.amazon.com/Extending-Linear-Model-Generalized-Nonparametric/dp/149872096X/ref=sr_1_1?s=books&ie=UTF8&qid=1517953413&sr=1-1&refinements=p_27%3AJulian+J.+Faraway) 
