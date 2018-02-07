@@ -592,6 +592,524 @@ This data set meets all requirements specified in the project instructions.
 - We are considering at least four predictors for each regression model, and we include at least one quantitative (for example, `baseEF`) and multi-categorical variable (for example, `ecg`) in each model. 
 - Dr. Love is certain that it is completely appropriate for these data to be shared with anyone, without any conditions. There are no concerns about privacy or security, mostly because the data have been on a public website for many years, and are completely free of identifying information about individual subjects.
 
+
+# An Analysis: Linear Regression
+
+We'll start with a model motivated by the Spearman $\rho^2$ plot developed previously, and repeated below.
+
+```{r}
+plot(spearman2(dobEF ~ age + female + bhr + basebp + baseEF + hx_smoking + dose + ecg, data = stressEcho))
+```
+
+## Model A. Modified Kitchen Sink
+
+Let's start with a model including just four of our candidate predictors, including a restricted cubic spline with 5 knots in `baseEF`, an interaction between `baseEF` and `female` and then main effects for `ecg` and the other five candidate predictors, ignoring the missing values for a while.
+
+```{r model A}
+d <- datadist(stressEcho)
+options(datadist = "d")
+
+m.A <- ols(dobEF ~ rcs(baseEF, 5) * female + ecg + hx_smoking +
+               bhr + basebp + age + dose, 
+           data = stressEcho, x = T, y = T)
+m.A
+
+```
+
+### ANOVA plot
+
+```{r}
+anova(m.A)
+plot(anova(m.A))
+```
+
+According to the ANOVA, `baseEF` and `dose` are the only statistically significant pieces of the puzzle, and the nonlinear part of the model doesn't seem to have a real impact. Later, we'll use the "Best Subsets" approach to do some variable selection. But first, let's run this Model A again, but this time accounting for the missing values through multiple imputation.
+
+## Model A (with imputation)
+
+### Imputation Model
+
+I'll build the imputation model using my outcome, and the variables with at least one missing value, in this case.
+
+```{r model A imputation}
+f.A <- aregImpute(~ dobEF + baseEF + bhr + basebp + 
+                      hx_smoking, 
+                  data = stressEcho, 
+                  n.impute = 100, 
+                  pr = FALSE, x = TRUE)
+f.A
+```
+
+### Fitting the Model after Imputation
+
+```{r model A fit with imputed values}
+fmi.m.A <- fit.mult.impute(dobEF ~ rcs(baseEF, 5) * female + ecg +
+                               hx_smoking + bhr + basebp + age +
+                               dose,
+                           ols, f.A, data = stressEcho)
+fmi.m.A
+```
+
+### ANOVA plot after imputation
+
+```{r}
+plot(anova(fmi.m.A))
+```
+
+### Effects plot after imputation
+
+```{r}
+summary(fmi.m.A)
+plot(summary(fmi.m.A))
+```
+
+### Nomogram after imputation
+
+```{r, fig.height = 8}
+plot(nomogram(fmi.m.A))
+```
+
+## Running "Best Subsets" to select predictors
+
+Mostly for completeness, next we'll consider models with main effects only, again just excluding the observations with missing values, and run our "best subsets" comparisons to consider potential models.
+
+```{r leaps for linear model}
+preds <- with(na.omit(stressEcho), cbind(baseEF, female, ecg, hx_smoking, bhr, basebp, age, dose))
+x1 <- regsubsets(preds, na.omit(stressEcho)$dobEF, nvmax=8)
+rs <- summary(x1)
+rs
+```
+
+### Building the Four Summary Plots
+
+While there are `nrows(stressEcho)` rows in the `stressEcho` tibble, we have restricted ourselves here to the `nrows(na.omit(stressEcho))` rows in the tibble after we have applied tha `na.omit` function. We are fitting models including 1-8 predictors, hence 2-9 coefficients. In this case, I'll use the old non-ggplot approach, although I expect that students in this year's class will use the `ggplot2` approach.
+
+```{r best subsets for stressEcho, fig.width=8, fig.height=8}
+# Note: 544 subjects, models for 1-8 predictors (2-9 coeffs.)
+
+par(mfrow=c(2,2))
+
+# Adjusted R-squared Plot
+m2 <- max(rs$adjr2)
+m1 <- which.max(rs$adjr2)
+plot(rs$adjr2 ~ I(2:9), ylab="Adjusted R-squared", 
+     xlab="# of Fitted Coefficients, with Intercept",
+     main="Adjusted R-Squared")
+lines(spline(rs$adjr2 ~ I(2:9)))
+arrows(m1+1, m2-0.0005, m1+1, m2)
+text(m1+1, m2-0.001, paste("max =", format(m2, digits=3)))
+text(m1+1, m2-0.0015, paste("with", format(m1+1, digits=1), 
+                        "coeffs."), pos=3)
+
+# Cp Plot
+plot(rs$cp ~ I(2:9), 
+     ylab="Cp Statistic", 
+     xlab="p = # of Fitted Coefficients", 
+     pch=16, main="Cp")
+abline(0,1)
+
+# Next calculate bias-corrected AIC
+# recall n = 544, and we have 8 models
+# so that's 2-9 coefficients to fit
+
+rs$aic.corr <- 544*log(rs$rss / 544) + 2*(2:9) +
+               (2 * (2:9) * ((2:9)+1) / (544 - (2:9) - 1))
+
+# Bias-Corrected AIC plot with arrow included
+# to indicate minimum AIC-corrected
+m2 <- min(rs$aic.corr)
+m1 <- which.min(rs$aic.corr)
+plot(rs$aic.corr ~ I(2:9), ylab="Bias-Corrected AIC", 
+     xlab="# of Fitted Coefficients", pch=16, cex=1.5, 
+     col="tomato", main="Bias-Corrected AIC")
+arrows(m1+1, m2+3, m1+1, m2+1)
+
+# plot BIC with indicating arrow for minimizer
+m2 <- min(rs$bic)
+m1 <- which.min(rs$bic)
+plot(rs$bic ~ I(2:9), ylab="BIC", xlab="# of Fitted Coefficients", 
+     pch=16, cex=1.5, col="slateblue", main="BIC")
+arrows(m1+1, m2+4, m1+1, m2+1)
+
+par(mfrow=c(1,1))
+```
+
+### Candidate Models from "Best Subsets"
+
+Tool | Inputs | Predictors
+---: | ---------: | ----------------
+BIC | 2 | `baseEF`
+AIC~c~, C~p~ | 5 | `baseEF`, `dose`, `age`, `female`
+R^2^ (adj.) | 7 | `baseEF`, `dose`, `age`, `female`, `hx_smoking`, `bhr`
+
+### Comparison of Candidate Models via ANOVA
+
+```{r}
+lm0 <- lm(dobEF ~ 1, data = na.omit(stressEcho))
+lm2 <- lm(dobEF ~ baseEF + female, data = na.omit(stressEcho))
+lm5 <- lm(dobEF ~ baseEF + female + age + dose, data = na.omit(stressEcho))
+lm7 <- lm(dobEF ~ baseEF + female + hx_smoking + bhr + basebp + age + dose, 
+           data = na.omit(stressEcho))
+lm8 <- lm(dobEF ~ baseEF + female + ecg + hx_smoking + bhr + basebp + age + dose, 
+           data = na.omit(stressEcho))
+```
+
+```{r}
+anova(lm8, lm7, lm5, lm2, lm0)
+```
+
+The ANOVA suggests the model with four predictors, and five inputs (including the intercept). Let's run that as our model B.
+
+## Model B
+
+```{r model B}
+m.B <- ols(dobEF ~ baseEF + female + age + dose, 
+           data = stressEcho, x = T, y = T)
+m.B
+```
+
+We lose very little in R^2^, and gain some improvement in the significance testing results here, and, as a bonus, there are no missing values here, so we can fit the model to the whole data set.
+
+### ANOVA plot for Model B
+
+The ANOVA plot after an `ols` fit just re-iterates the information from the *t* tests.
+
+```{r}
+plot(anova(m.B))
+```
+
+### Validation of Model B Summary Statistics
+
+```{r validate model B}
+set.seed(432); validate(m.B)
+```
+
+### Nomogram of Model B
+
+The nomogram is very simple, since each predictor only enters the model linearly.
+
+```{r}
+plot(nomogram(m.B))
+```
+
+The `baseEF` really drives the model almost to the exclusion of everything else.
+
+### Some Predictions
+
+Suppose we want to make a prediction with this Model B, where `baseEF` can vary from 20 to 80, and dose ranges from 10 to 40, while the other variables (`female` and `age`) remain at their medians. Can we plot the results? 
+
+```{r}
+Predict(m.B, baseEF = seq(20, 80, 20), dose = c(10, 40))
+ggplot(Predict(m.B, baseEF = 20:80, dose = c(10, 40)))
+```
+
+Does the `dose` really have a noticeable impact, once we know the baseline ejection fraction?
+
+### Fitting Model B with `lm`
+
+We can fit Model B using `lm` and then plot residuals, if we like.
+
+```{r}
+model.B <- lm(dobEF ~ baseEF + female + age + dose, 
+              data = stressEcho)
+display(model.B)
+```
+
+### Residual Plots for Model B
+
+```{r}
+par(mfrow=c(2,2))
+plot(model.B)
+par(mfrow=c(1,1))
+```
+
+# An Analysis: Logistic Regression
+
+We'll start with a model motivated by the Spearman $\rho^2$ plot developed above, and repeated below.
+
+```{r}
+plot(spearman2(event ~ age + female + bhr + basebp + 
+                   baseEF + dobEF + hx_smoking + ecg + 
+                   chestpain_c + SE_res, 
+               data = stressEcho))
+```
+
+## Model 1 (a screening model - essentially the kitchen sink)
+
+Our model (m.1) will include restricted cubic splines with four knots for the two ejection fraction variables, interaction terms between `SE_res` and `dobEF`, as well as `SE_res` and `ecg`, and then main effects of the other six candidate predictors. We'll ignore the potential impact of missing data, and just fit the model to the complete cases. Another, probably better, option would have been to first do simple imputation and then move forward.
+
+```{r model 1 logistic}
+dd <- datadist(stressEcho)
+options(datadist = "dd")
+m.1 <- lrm(event ~ SE_res * ecg + rcs(dobEF,4) * SE_res + rcs(baseEF,4) +
+               female + chestpain_c + age + hx_smoking + basebp + bhr, 
+           data = stressEcho, x = T, y = T)
+m.1
+```
+
+### ANOVA for Model 1
+
+The ANOVA plot from `rms` is one of the nicer features of building a model with `rms`, in my view.
+
+```{r}
+anova(m.1)
+plot(anova(m.1))
+```
+
+From the ANOVA plot, it looks like a model with `SE_res` and `dobEF`, plus maybe their interaction, might be sufficient, ignoring the missing data.
+
+### Plotting Predictions from Model 1
+
+We can use `ggplot` and the `Predict` function from `rms` to plot predictions across a range of levels for up to three predictors simultaneously, as long as only one of them is quantitative. Here, we'll build a plot of the predicted event probabilities according to the model, while letting:
+
+- `dobEF` range from 60 to 85
+- for each level of `SE_res` and of `ecg`
+- while holding all other variables at their medians.
+
+The `fun = plogis` command here plots the probabilities, rather than the log odds.
+
+```{r}
+ggplot(Predict(m.1, dobEF = 60:85, SE_res, ecg, fun=plogis)) +
+    theme_bw() +
+    labs(x = "dobutamine ejection fraction",
+         y = "Pr(event in the next year)",
+         title = "Model 1 Predictions",
+         subtitle = "Across levels of dobEF, SE_res, and ecg, holding all other predictors at their medians")
+```
+
+### Plotting the ROC curve for Model 1
+
+First, we need to fit Model 1 in `glm`, rather than `rms`. 
+
+```{r}
+model.1 <- glm(event ~ SE_res * ecg + rcs(dobEF,4) * SE_res + 
+                   rcs(baseEF,4) + female + chestpain_c + age + 
+                   hx_smoking + basebp + bhr, 
+               data = stressEcho, family = binomial(link = logit))
+```
+
+We have to omit the missing values from `stressEcho` in the first two lines below in order to get the ROC curve to run.
+
+```{r}
+# requires ROCR package
+prob <- predict(model.1, data = na.omit(stressEcho), type="response")
+pred <- prediction(prob, na.omit(stressEcho)$event)
+# rest of this doesn't need much adjustment except for titles
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+auc <- performance(pred, measure="auc")
+auc <- round(auc@y.values[[1]],3)
+roc.data <- data.frame(fpr=unlist(perf@x.values),
+                       tpr=unlist(perf@y.values),
+                       model="GLM")
+ggplot(roc.data, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2) +
+    geom_line(aes(y=tpr)) +
+    labs(title = paste0("ROC Curve w/ AUC=", auc),
+         subtitle = "Model 1 for stressEcho data")
+```
+
+You'll note that the listed C statistic here (0.782) is calculated slightly differently than the one produced in the `rms` model summary (0.783).
+
+### Coefficients from Model 1 on the Odds Ratio Scale
+
+It's difficult to interpret odds ratios well from a logistic regression model with non-linear terms. 
+
+Suppose we look specifically at the `female` variable. What can we conclude about that specific predictor, which only enters the model in a linear way? Note that it helps that there are no missing values in the `female` data.
+
+```{r}
+exp(coef(model.1)[c("female")])
+exp(confint(model.1)[c("female"),])
+```
+
+Now, what about a predictor, like `chestpain_c`, with some missing values? In that case, we need to refit the model to use only the complete cases in the stressEcho data set.
+
+```{r}
+model.1a <- glm(event ~ SE_res * ecg + rcs(dobEF,4) * SE_res + 
+                   rcs(baseEF,4) + female + chestpain_c + age + 
+                   hx_smoking + basebp + bhr, 
+               data = na.omit(stressEcho), 
+               family = binomial(link = logit))
+
+display(model.1a)
+exp(coef(model.1a)[c("chestpain_c1")])
+exp(confint(model.1a)[c("chestpain_c1"),])
+```
+
+Holding everything else constant (a tall order in this setting), we see a modest (but not significant) association between chestpain_c and having an event. 
+
+Specifically, the odds ratio associated with having chest pain vs. not having chest pain on experiencing an event is estimated to be 1.19 (95\% CI: 0.68, 2.06). This implies that the odds of having an event increase by a factor of about 1.19 (about 19\%) when a patient has chest pain as compared to an otherwise identical patient without chest pain.
+
+### Calibration Plot for Model 1
+
+```{r}
+plot(calibrate(m.1))
+```
+
+Model 1 appears to overpredict a bit, especially at the higher predicted values.
+
+### Validation of Model 1, with backwards elimination
+
+What if we try a validation step, with a stepwise backwards elimination approach?
+
+```{r}
+set.seed(432); validate(m.1, bw = TRUE, B = 10)
+```
+
+Note that the cross-validated Somers' Dxy statistic is 0.4454. To calculate the cross-validated area under the ROC curve, called C, we use
+
+$$
+C = 0.5  + \frac{Dxy}{2} = 0.5 + \frac{.4454}{2} = 0.5 + 0.2227 = 0.722
+$$
+which is a cross-validated estimate of the value of the C statistic we might reasonably expect using this model. Compare this to the nominal C = 0.783 shown in the initial Model 1 summary
+
+So, it looks like this model is pretty seriously overfitting the data. The next model to try involves only `SE_res` and `dobEF` with an interaction between them and a restricted cubic spline for `dobEF`. We'll look at that in Model 2.
+
+
+## Model 2 (a smaller model with promising predictors)
+
+Let's run our Model 2.
+
+```{r run model 2}
+dd <- datadist(stressEcho)
+options(datadist = "dd")
+m.2 <- lrm(event ~ SE_res * rcs(dobEF,4), 
+           data = stressEcho, x = T, y = T)
+m.2
+```
+
+### ANOVA for Model 2
+
+```{r}
+anova(m.2)
+plot(anova(m.2))
+```
+
+### Effects Summary for Model 2
+
+Here is the summary of effects for this model.
+
+```{r}
+summary(m.2)
+plot(summary(m.2))
+```
+
+### Calibration Plot for Model 2
+
+The calibration plot isn't great here.
+
+```{r}
+plot(calibrate(m.2))
+```
+
+### Nomogram for Model 2
+
+And here is the nomogram.
+
+```{r}
+plot(nomogram(m.2))
+```
+
+### Making Predictions with Model 2
+
+Let's make a mean prediction for two subjects, each with `dobEF = 60` but one with `SE_res` = "Positive" and the other with `SE_res` = "Negative", using a 90\% confidence interval.
+
+```{r}
+Predict(m.2, SE_res = c("Positive", "Negative"), dobEF = 60, conf.int = 0.90)
+```
+
+It would be more useful if that prediction (and its confidence interval) was on a probability scale...
+
+```{r}
+Predict(m.2, SE_res = c("Positive", "Negative"), dobEF = 60, 
+        fun = plogis, conf.int = 0.90)
+```
+
+### Plotting Model 2 Predictions
+
+Here is a plot of the predictions across the two levels of `SE_res` for patients with `dobEF` ranging from 60 to 85.
+
+```{r}
+ggplot(Predict(m.2, dobEF = 60:85, 
+               SE_res = c("Positive", "Negative"), fun=plogis)) +
+    theme_bw() +
+    labs(x = "dobutamine ejection fraction",
+         y = "Pr(event in the next year)",
+         title = "Model 2 Predictions")
+```
+
+### Plotting the ROC curve for Model 2
+
+Again, we need to fit Model 2 in `glm`, rather than `rms`.
+
+```{r}
+model.2 <- glm(event ~ SE_res * rcs(dobEF,4), data = stressEcho, 
+               family = binomial(link = logit))
+
+```
+
+Model 2 has no predictors with missing values, so the next step is relatively straightforward. 
+
+```{r}
+# requires ROCR package
+prob <- predict(model.2, data = stressEcho, type="response")
+pred <- prediction(prob, stressEcho$event)
+# rest of this doesn't need much adjustment except for titles
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+auc <- performance(pred, measure="auc")
+auc <- round(auc@y.values[[1]],3)
+roc.data <- data.frame(fpr=unlist(perf@x.values),
+                       tpr=unlist(perf@y.values),
+                       model="GLM")
+ggplot(roc.data, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2) +
+    geom_line(aes(y=tpr)) +
+    labs(title = paste0("ROC Curve w/ AUC=", auc),
+         subtitle = "Model 2 for stressEcho data")
+```
+
+## Model 3 (with imputation)
+
+Let's consider a model that includes some variables with missing values, just to see how that works out. We'll create a model 3 with an interaction for `SE_res` and `dobEF` plus main effects for `baseEF` and `hx_smoking`, since `baseEF` and `hx_smoking` each have a few missing values.
+
+### Imputation Model
+
+```{r model 3 imputation}
+f.3 <- aregImpute(~event + SE_res + dobEF + baseEF + hx_smoking, 
+                  n.impute = 100, data = stressEcho, pr = FALSE, x = TRUE)
+f.3
+```
+
+### Fitting the Model after Imputation
+
+```{r model 3 fit with imputed values}
+fmi.m.3 <- fit.mult.impute(event ~ SE_res * dobEF + baseEF + hx_smoking, 
+                           lrm, f.3, data = stressEcho)
+fmi.m.3
+```
+
+### ANOVA plot after imputation
+
+```{r}
+plot(anova(fmi.m.3))
+```
+
+### Effects plot after imputation
+
+```{r}
+summary(fmi.m.3)
+plot(summary(fmi.m.3))
+```
+
+### Nomogram after imputation
+
+```{r, fig.height = 6}
+plot(nomogram(fmi.m.3))
+```
+
+Note that the `Predict`, `validate` and `calibrate` ideas don't play well with `fit.mult.impute`, so we won't address those here. If we wanted to address those issues for Model 3, we would simply refit the model using only the complete cases, or do a simple imputation and then run them.
+
+# Endnotes
+
 [^1]: The four cardiac outcomes under study are death, myocardial infarction, percutaneous transluminal coronary angioplasty (PTCA), and coronary artery bypass graft surgery (CABG) and whether any of these occurred in the 12 months following dobutamine stress echocardiography.
 
 [^2]: I know this because I've spent some time analyzing these data in the past. Note that some other versions of these data produce 89 patients with events, and not 90, including the version at the Vanderbilt Biostatistics wiki, but this derived `event` variable is what we'll go with.
