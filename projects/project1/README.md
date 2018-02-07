@@ -25,15 +25,23 @@ An R Markdown template document [is available here](https://raw.githubuserconten
 - To see what this template looks like when rendered in HTML, [visit this link](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/project1-template.html).
 - Note that you can view most HTML files in Github by adding `http://htmlpreview.github.io/?` before the complete URL.
 
-## Sample Project Proposal
+## Sample Project 
 
-There is a complete sample project proposal available for your review now, built using the template, by Dr. Love.
+### Proposal Only
+
+There is a complete sample **project proposal** available for your review now, built using the template, by Dr. Love. Note that this contains only the proposal (Tasks 1-9). This example was mostly built in Spring 2017, and the code here has largely NOT been updated to reflect changes in the way I am teaching 432 this year. See the note in Section 0.1 of [the HTML file](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/example-project-proposal-432-spring2018.html).
 
 - You can get the `cardiac.dat` data used in the proposal either [above](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/cardiac.dat), or at [the Data and Code page](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code).
 - You can get the `example-project-proposal-432-spring2018.Rmd` [markdown file used to generate the results](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/example-project-proposal-432-spring2018.Rmd),
 - and you can [view the HTML result](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/example-project-proposal-432-spring2018.html).
 
-Note that Dr. Love will post a *complete* sample project, adding Tasks 10-12, **later this semester**.
+### Full Sample Project
+
+There is now a complete sample **project** (not just the proposal) available now, built using the template, by Dr. Love. This adds the Analyses (Section 10 on Linear Regression and Section 11 on Logistic Regression) to the Proposal document. Again, this example was mostly built in Spring 2017, and the code here has largely NOT been updated to reflect changes in the way I am teaching 432 this year. See the note in Section 0.1 of [the HTML file](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/example-project-432-spring2018.html).
+
+- You can get the `cardiac.dat` data used in the project either [above](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/cardiac.dat), or at [the Data and Code page](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code).
+- You can get the full sample project's `example-project-432-spring2018.Rmd` [markdown file used to generate the results](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project1/example-project-432-spring2018.Rmd),
+- and you can [view the full project HTML result](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/example-project-432-spring2018.html).
 
 ## Introduction
 
