@@ -2,7 +2,7 @@
 
 ## Homework Assignments
 
-There are a total of 8 regular homework assignments this semester.
+There are a total of 8 regular homework assignments this semester. All submissions should be made through [Canvas](https://canvas.case.edu/).
 
 Link to Details | Due at 1 PM on | Material Covered in the Assignment
 :-------: | :----------: | ----------------------------------------------------------
