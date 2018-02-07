@@ -9,7 +9,7 @@ The two key books we're reading this semester (see [the Course Schedule](https:/
     - I assume you already read **Sections 1-12 and 15** of this book in 431, so if you haven't, you'll want to do that before the end of February.
     - This term, we'll read Part IV (Model) and Part V (Communicate), before the first project is due in March.
 
-There are lots of good resources in the world. Several excellent books are listed below. 
+There are lots of good resources in the world which help fill out [our Course Notes](https://thomaselove.github.io/432-notes/). Several excellent books are listed below. 
 
 - Frank Harrell's stuff is intimidating but great at http://www.fharrell.com/#links, and his Regression Modeling Strategies materials are especially relevant to 432.
     - [Biostatistics for Biomedical Research](http://fharrell.com/doc/bbr.pdf) by Frank Harrell and James Slaughter. I've posted the [2018-01-29 version here](https://github.com/THOMASELOVE/432-2018/blob/master/texts/Harrell_and_Slaughter_Biostatistics_for_Biomedical_Research_2018-01-29.pdf).
