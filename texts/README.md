@@ -12,8 +12,8 @@ The two key books we're reading this semester (see [the Course Schedule](https:/
 There are lots of good resources in the world. Several excellent books are listed below. 
 
 - Frank Harrell's stuff is intimidating but great at http://www.fharrell.com/#links, and his Regression Modeling Strategies materials are especially relevant to 432.
-    - [Biostatistics for Biomedical Research](http://fharrell.com/doc/bbr.pdf) by Frank Harrell and James Slaughter. I've posted the [2018-01-29 version here].
-    - [Course Notes for Regression Modeling Strategies](http://fharrell.com/doc/rms.pdf) by Frank Harrell. I've posted the [2018-01-29 version here].
+    - [Biostatistics for Biomedical Research](http://fharrell.com/doc/bbr.pdf) by Frank Harrell and James Slaughter. I've posted the [2018-01-29 version here](https://github.com/THOMASELOVE/432-2018/blob/master/texts/Harrell_and_Slaughter_Biostatistics_for_Biomedical_Research_2018-01-29.pdf).
+    - [Course Notes for Regression Modeling Strategies](http://fharrell.com/doc/rms.pdf) by Frank Harrell. I've posted the [2018-01-29 version here](https://github.com/THOMASELOVE/432-2018/blob/master/texts/Harrell_Regression_Modeling_Strategies_Course_Notes_2018-01-29.pdf).
     - [Frank's web page of links to his other materials](http://www.fharrell.com/#links)
     - The second edition (2015) is **available as an e-book** to CWRU affiliates. [Access it here (CWRU login required)](https://drive.google.com/drive/folders/1vN8dfqtz-hGyu7hrsPpBRnJptKI1B0BV?usp=sharing).
 - Julian Faraway's two books are great, and provided lots of source materials for early versions of this course.
