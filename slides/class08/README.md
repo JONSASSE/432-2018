@@ -10,9 +10,9 @@ In today's class, we'll introduce the logistic regression model. We'll cover all
 
 1. [Homework 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw3) is due at 1 PM on Friday 2018-02-09.
 
-2. The [Minute Paper after Class 08](https://goo.gl/forms/IRPizcTN8Y7k8Y2f1) is now available. Please complete this by 10 AM Monday.
+2. The [Minute Paper after Class 08](https://goo.gl/forms/IRPizcTN8Y7k8Y2f1) is now available. Please complete this by 10 AM on Monday 2018-02-12.
 
-3. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is due on 2018-02-19.
+3. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is due the following Monday, 2018-02-19 at noon. Submit it via [Canvas](https://canvas.case.edu/).
 
 4. I've added considerable material to the [Texts page](https://github.com/THOMASELOVE/432-2018/tree/master/texts) to provide some suggestions (including several downloadable books) which may help you move forward.
 
