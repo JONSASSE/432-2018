@@ -18,7 +18,7 @@ In today's class, we'll introduce the logistic regression model. We'll cover all
         - You can get the `cardiac.dat` data used in the sample project at [the Data and Code page](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code).
 
 4. I've added considerable material to the [Texts page](https://github.com/THOMASELOVE/432-2018/tree/master/texts) to provide some suggestions (including several downloadable books) which may help you move forward.
-    - In particular, I built a [Google Drive folder which you can access via CWRU](https://drive.google.com/drive/folders/1vN8dfqtz-hGyu7hrsPpBRnJptKI1B0BV?usp=sharing) containing several items.
+    - In particular, I built a [Google Drive folder which you can access via CWRU](https://drive.google.com/drive/folders/1vN8dfqtz-hGyu7hrsPpBRnJptKI1B0BV?usp=sharing) containing four e-books.
 
 5. Useful item of the day is this [tutorial by Joyce Robbins on re-ordering the bars in a bar chart](https://github.com/jtr13/codehelp/blob/master/R/reorder.md), which explains lots of useful things in the `forcats` package, and links to the great "[Be the boss of your factors](http://stat545.com/block029_factors.html)" materials from Jenny Bryan.
 
