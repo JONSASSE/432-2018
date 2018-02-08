@@ -41,7 +41,7 @@ In today's class, we'll introduce the logistic regression model. We'll cover all
 
 > The 20:1 rule is as follows. Let m denote the effective sample size (the number of subjects if the response variable is a fully-observed continuous one; the number of events if doing a survival analysis; the lower of the number of events and number of non-events if the response is dichotomous) and p denote the number of candidate predictor terms that were examined in any way with respect to the response variable. p includes nonlinear terms, product terms, different transformations attempted, the total number of cutoffs attempted to be applied to continuous predictors, and the number of variables dropped from the final model in a way that was unblinded to the response. If the ratio of m to p exceeds 20, the model is likely to be reliable and there is less need for the model to be validated.
 
-Frank has several other related comments in that checklist:
+Frank has several other related comments in that [checklist](http://biostat.mc.vanderbilt.edu/wiki/Main/ManuscriptChecklist):
 
 > Researchers frequently formulate their first model in such a way that it encapsulates a model specification bias that affects all later analytical steps.  
 
