@@ -2,7 +2,7 @@
 
 ### Key Materials
 
-[The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) are posted above, and the [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) will be posted as soon as they are available.
+**Note After Class**: [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) have now been **reposted** above, correcting my terrible error in slide 30, and eliminating slides 33-43 that we didn't cover (those slides will be in Class 09's materials.) The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) are now posted, too.
 
 In today's class, we'll introduce the logistic regression model. We'll cover all of Chapter 12 and some of Chapter 13 in the [Course Notes](https://thomaselove.github.io/432-notes/). Next week, we'll finish that logistic regression material, then move forward to look at Chapter 10's material on using `ols` to fit linear models.
 
