@@ -8,7 +8,7 @@ In today's class, we'll introduce the logistic regression model. We'll cover all
 
 ## Announcements Before Class 08
 
-1. [Homework 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw3) is due at 1 PM on Friday 2018-02-09.
+1. [Homework 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw3) is due at 1 PM on Friday 2018-02-09. The link on [Canvas](https://canvas.case.edu) should be open now.
 
 2. The [Minute Paper after Class 08](https://goo.gl/forms/IRPizcTN8Y7k8Y2f1) is now available. Please complete this by 10 AM on Monday 2018-02-12.
 
@@ -47,5 +47,9 @@ Frank has several other related comments in that checklist:
 
 > Stepwise variable selection, univariable screening, and any method that eliminates "insignificant" predictor variables from the final model causes [a multitude of serious problems](http://www.stata.com/support/faqs/statistics/stepwise-regression-problems) related to bias, significance, improper confidence intervals, and multiple comparisons. See also [this Stack Exchange post](http://stats.stackexchange.com/questions/20836/algorithms-for-automatic-model-selection).
 
-One issue that was raised last week is addressed there: **when can you get reliable answers with data splitting into a 50-50 training-test split**? Frank's answer [see partway down the page here](https://stats.stackexchange.com/questions/20836/algorithms-for-automatic-model-selection) is that in a logistic regression model, where you're interested in ROC curve analysis, with 50 parameters examined, you needed **n > 20,000** to get reliable results. The reason you need big samples there is because of poor precision. Lots of times, people consider 100 repeats of 10-fold cross validation, or bootstrapping, to deal with this sort of issue. Frank recommends the bootstrap for validation, and tools in the `rms` package that we will learn can help.
+A practical issue related to an issue we discussed last time (**is it better to split the data and validate your model in a completely new sample as opposed to doing cross validation?**) is addressed there, specifically: **when can you get reliable answers with data splitting into a 50-50 training-test split**? 
+    
+-  Frank's answer [see partway down the page here](https://stats.stackexchange.com/questions/20836/algorithms-for-automatic-model-selection) is that in a logistic regression model, where you're interested in ROC curve analysis, with 50 parameters examined, you needed **n > 20,000** to get reliable results. The story's not quite as bad for linear regression, but you need really really big samples.
+- The reason you need big samples is because of poor precision. Lots of times, people consider 100 repeats of 10-fold cross validation, or bootstrapping, to deal with this sort of issue. 
+- Frank recommends the bootstrap for validation when possible, especially for summary statistics like R-squared, and tools in the `rms` package that we will learn can help accomplish this sort of validation. Our k-fold cross-validation approach is also reasonable, although it looks like for important issues, you may want to run it several times (with different random seeds) to see how the answers evolve.
 
