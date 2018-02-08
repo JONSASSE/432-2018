@@ -36,6 +36,7 @@ In today's class, we'll introduce the logistic regression model. We'll cover all
         - Your subject matter understanding allows you to identify potentially appealing predictors that you want to include in a model.
         - Your understanding, though, is limited when it comes to identifying important non-linearity in the data, or interactions that must be included to maintain face validity.
         - Your data aren't large enough to meet the 20:1 rule (as explained below, from [Frank Harrell's manuscript checklist](http://biostat.mc.vanderbilt.edu/wiki/Main/ManuscriptChecklist).)
+    - Also, the plot isn't a great choice if you have lots of multi-categorical predictors.
 
 **The 20:1 Rule**
 
