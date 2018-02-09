@@ -3,7 +3,8 @@
 ## Links to Post-Deadline Materials will go live as they become available
 
 - Answer Sketch: [Download R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw2/hw2sketch.Rmd), or [View HTML result](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.html), or [Download or View PDF result](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2sketch.pdf)
-- Grading Rubric and Grades coming as soon as they are available.
+- [Grading Rubric](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2rubric.md) now available.
+- Grades coming as soon as they are available.
 
 # The Assignment
 
