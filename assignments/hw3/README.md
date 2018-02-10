@@ -1,5 +1,14 @@
 # 432 Homework 3 for Spring 2018
 
+## Links to Post-Deadline Materials
+
+- Answer Sketch: [Download R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw3/hw3sketch.Rmd), or [View HTML result](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw3/hw3sketch.html), or [Download or View PDF result](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw3/hw3sketch.pdf)
+- [Grading Rubric](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw3/hw3rubric.md) now available.
+- [Grades](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw3/hw3grades.pdf) **will appear as they become available**.
+
+
+## The Assignment
+
 Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **1 PM on Friday 2018-02-09**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file. 
 
 Start a separate R Project for Homework 3 as your first step, and place all of your work in that project's directory.
