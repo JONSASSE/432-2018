@@ -10,8 +10,13 @@ In today's class, we'll continue our discussion of logistic regression.
 ## Announcements Before Class 09
 
 1. [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) is due at 1 PM on Friday 2018-02-16.
+    - The ambiguity regarding controlling for smoking, for instance, is deliberate. You need to make a decision about what best to include in your model, and justify that decision. All I'll say is that there is more than one possible appealing approach.
+    - The Homework 3 answer sketch and a draft of the grading rubric [are now available](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw3).
+    - [Grades on HW2](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2grades.pdf) are now available, too.
 
 2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) which is due next Monday, 2018-02-19.
 
-3. [Grades on HW2](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2grades.pdf) are now available.
+## Minute Papers after Class 08
+
+Responses to come.
 
