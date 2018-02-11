@@ -2,7 +2,7 @@
 
 Link  | Date  | Topics Discussed include...
 --------: | ---------- | -------------------------------------------------------------
-[Class 10](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class10) | 2018-02-15 | Linear Regression using `ols` (maybe, but I expect an extension of Class 09)
+[Class 10](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class10) | 2018-02-15 | Linear Regression using `ols` (maybe, but I expect an extension of Class 9)
 [Class 9](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09) | 2018-02-13 | Logistic Regression: A Detailed Example
 [Class 8](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) | 2018-02-08 | Logistic Regression: The Basics
 [Class 7](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class07) | 2018-02-06 | Incorporating Non-Linearity in a  Linear Regression Model
