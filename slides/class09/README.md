@@ -14,7 +14,7 @@ In today's class, we'll continue our discussion of logistic regression.
     - The Homework 3 answer sketch and a draft of the grading rubric [are now available](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw3).
     - [Grades on HW2](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2grades.pdf) are now available, too.
 
-2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) which is due next Monday, 2018-02-19.
+2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is due at noon  Monday, 2018-02-19.
 
 3. R Studio version 1.1.423 [is now available](https://www.rstudio.com/products/rstudio/download/#download). I updated.
 
