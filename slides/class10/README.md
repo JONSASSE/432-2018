@@ -11,4 +11,4 @@ In today's class, we'll discuss the use of the `ols` function and related materi
 
 1. [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) is due at 1 PM on Friday 2018-02-16.
 
-2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is due next Monday, 2018-02-19.
+2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is due at noon  Monday, 2018-02-19.
