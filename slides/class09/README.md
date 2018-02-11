@@ -16,6 +16,8 @@ In today's class, we'll continue our discussion of logistic regression.
 
 2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) which is due next Monday, 2018-02-19.
 
+3. R Studio version 1.1.423 [is now available](https://www.rstudio.com/products/rstudio/download/#download). I updated.
+
 ## Minute Papers after Class 08
 
 Responses to come.
