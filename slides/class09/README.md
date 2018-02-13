@@ -15,16 +15,24 @@ In today's class, we'll continue our discussion of logistic regression.
 
 ## Announcements Before Class 09
 
-1. [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) is due at 1 PM on Friday 2018-02-16.
+1. I've adjusted the [Course Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) rather extensively, in every case to give you at least as much time as you had previously to do things.
+    - [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) is now due at 1 PM on Friday 2018-02-23. So you have an extra week.
+    - Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is now also due at the same time: 1 PM on Friday, 2018-02-23. So you have an extra four days.
+    - [Homework 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) is now due at 1 PM on Friday 2018-03-02. So you have an extra week.
+    - [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) is unchanged. You will receive it by noon on Friday 2018-03-02 and it is still due at noon on Monday 2018-03-05. Quiz 1 will cover materials in the Course Notes as they exist today, and is focused on linear regression and logistic regression ideas.
+    - The first draft of your actual Project 1 will now be due by 1 PM on Thursday 2018-03-08, when you will meet with your colleagues to discuss it during class time. There is no longer a draft due 2018-02-28.
+    - The actual Project 1 is now due at 1 PM on Friday 2018-03-23, which gives you an extra four days.
+
+2. [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) is now due at 1 PM on Friday, 2018-02-23.
     - The ambiguity regarding controlling for smoking, for instance, is deliberate. You need to make a decision about what best to include in your model, and justify that decision. All I'll say is that there is more than one possible appealing approach.
     - The Homework 3 answer sketch and a draft of the grading rubric [are now available](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw3).
     - [Grades on HW2](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw2/hw2grades.pdf) are now available, too.
 
-2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is due at noon  Monday, 2018-02-19.
+3. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is now due at 1 PM on Friday, 2018-02-23.
 
-3. R Studio version 1.1.423 [is now available](https://www.rstudio.com/products/rstudio/download/#download). I updated.
+4. R Studio version 1.1.423 [is now available](https://www.rstudio.com/products/rstudio/download/#download). I updated.
 
-4. No substantial progress on the [Course Notes](https://thomaselove.github.io/432-notes/) this week. Only change is a typo repair in section 10.3.1, about simultaneous confidence intervals in an `ols` fit.
+5. No substantial progress on the [Course Notes](https://thomaselove.github.io/432-notes/) this week. Only change is a typo repair in section 10.3.1, about simultaneous confidence intervals in an `ols` fit.
 
 ## Minute Papers after Class 08 
 
