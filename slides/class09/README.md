@@ -23,6 +23,7 @@ In today's class, we'll continue our discussion of logistic regression.
     - [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) is unchanged. You will receive it by noon on Friday 2018-03-02 and it is still due at noon on Monday 2018-03-05. Quiz 1 covers materials and readings for this class through 2018-02-28.
     - The first draft of your actual Project 1 will now be due by 1 PM on Thursday 2018-03-08, when you will meet with your colleagues to discuss it during class time. There is no longer a draft due 2018-02-28.
     - The actual Project 1 is now due at 1 PM on Friday 2018-03-23, which gives you an extra four days.
+    - I think I've made these changes everywhere (if you see what looks like contradictory information about timing, please let us know.) But the final word is always the [Course Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) if you're unsure. That's where Dr. Love looks when people ask about timing of things.
 
 2. [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) is now due at 1 PM on Friday, 2018-02-23.
     - The ambiguity regarding controlling for smoking, for instance, is deliberate. You need to make a decision about what best to include in your model, and justify that decision. All I'll say is that there is more than one possible appealing approach.
