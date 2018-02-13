@@ -1,11 +1,18 @@
 # 432 Class 09: 2018-02-13
 
-### Key Materials
+### Post-Class Announcements
 
 - [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09) are posted above (including some of the material originally scheduled for Class 08.) 
-    + I expect that we'll get through a bit more than half of these slides, and that the rest will be covered in Class 10, plus/minus another logistic regression example. 
+    + We got through Slide 36 or so. After class, I fixed the typos in earlier slides 13, 21 and 22.
+    + I'm leaving slides 37-78 up here, even though I'm **not** going to discuss them in class. 
+    + Instead, in Class 10, I'm going to cover the  material in these slides using a different example, and that will ensure that you have at least three worked examples for logistic regression using my 2018 approach, specifically:
+        - the `lbw` example in slides for class 9
+        - a new example in the slides for class 10
+        - and the resect example in the Course Notes.
     + Next week, we will cover the `ols` approach to linear regression, ridge regression and the lasso.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09) will be posted as soon as they are available.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09) are now available.
+
+### Pre-Class Specifics
 
 In today's class, we'll continue our discussion of logistic regression.
 
