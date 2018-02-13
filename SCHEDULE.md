@@ -33,7 +33,7 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 -- | Fri 2018-03-02 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon, [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 --  | Mon 2018-03-05 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
 15 | Tue 2018-03-06 | Generalized Linear Models, 3
-16 | Thu 2018-03-08 | [First Draft of Project 1](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due (for colleague reviews) posted by 1 PM. Group Reviews of [Project 1 First Drafts](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) during class
+16 | Thu 2018-03-08 | [Project 1 Draft](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due at 1 PM. Group Reviews.
 -- | 2018-03-12 to 16 | **SPRING BREAK at CWRU - NO CLASS**
 -- | Fri 2018-03-16 | Dr. Love gives a seminar at MetroHealth 9-10:30 AM on "Rethinking Statistical Significance"
 17 | Tue 2018-03-20 | **Special Session**: The Statistical Crisis in Science
