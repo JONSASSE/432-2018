@@ -20,7 +20,7 @@ In today's class, we'll continue our discussion of logistic regression.
     - [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) is now due at 1 PM on Friday 2018-02-23. So you have an extra week.
     - Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is now also due at the same time: 1 PM on Friday, 2018-02-23. So you have an extra four days.
     - [Homework 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) is now due at 1 PM on Friday 2018-03-02. So you have an extra week.
-    - [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) is unchanged. You will receive it by noon on Friday 2018-03-02 and it is still due at noon on Monday 2018-03-05. Quiz 1 will cover materials in the Course Notes as they exist today, and is focused on linear regression and logistic regression ideas.
+    - [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) is unchanged. You will receive it by noon on Friday 2018-03-02 and it is still due at noon on Monday 2018-03-05. Quiz 1 covers materials and readings for this class through 2018-02-28.
     - The first draft of your actual Project 1 will now be due by 1 PM on Thursday 2018-03-08, when you will meet with your colleagues to discuss it during class time. There is no longer a draft due 2018-02-28.
     - The actual Project 1 is now due at 1 PM on Friday 2018-03-23, which gives you an extra four days.
 
