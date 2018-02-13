@@ -5,7 +5,7 @@
 - [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class10) will be posted as soon as they are available. They will largely be drawn from what's left over after Class 09.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class10) will be posted as soon as they are available.
 
-In today's class, we'll discuss the use of the `ols` function and related materials from `rms` and `Hmisc` in fitting linear regression models.
+In today's class, we'll continue our discussion of logistic regression, amplifying the material in [Chapter 13 of the Course Notes](https://thomaselove.github.io/432-notes/logistic-regression-and-the-resect-data.html).
 
 ## Announcements Before Class 10
 
