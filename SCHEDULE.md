@@ -22,32 +22,28 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 -- | Fri 2018-02-09 | [Assignment 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 9 | Tue 2018-02-13 | Logistic Regression, 2 
 -- | Read by 02-13 | **R4DS** 24, **Leek** Career Planning & Your Online Identity
-10 | Thu 2018-02-15 | Linear Regression with `ols` as well as `lm`
--- | Fri 2018-02-16 | [Assignment 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
--- | Mon 2018-02-19 | [Project 1 Proposal](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due at noon.
-11 | Tue 2018-02-20 | Ridge Regression and the Lasso
+10 | Thu 2018-02-15 | Logistic Regression, 3
+11 | Tue 2018-02-20 | Linear Regression with `ols` as well as `lm`
 -- | Read by 02-20 | **R4DS** 25, **Leek** Scientific Blogging & Scientific Talks
-12 | Thu 2018-02-22 | **Generalized Linear Models**, 1
--- | Fri 2018-02-23 | [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
-13 | Tue 2018-02-27 | Generalized Linear Models, 2 
+12 | Thu 2018-02-22 | Ridge Regression and the Lasso
+-- | Fri 2018-02-23 | [Project 1 Proposal](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due at 1 PM, and .[Assignment 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
+13 | Tue 2018-02-27 | **Generalized Linear Models**, 1 
 -- | Read by 02-27 | **R4DS** 1-12 and 15 (which you probably did in 431), **Leek** finish book
--- | Wed 2018-02-28 | [First Draft of Project 1](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due (for colleague reviews) by noon
-14 | Thu 2018-03-01 | Generalized Linear Models, 3
--- | Fri 2018-03-02 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
+14 | Thu 2018-03-01 | Generalized Linear Models, 2
+-- | Fri 2018-03-02 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon, [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 --  | Mon 2018-03-05 | [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
-15 | Tue 2018-03-06 | Generalized Linear Models, 4 
-16 | Thu 2018-03-08 | Generalized Linear Models, 5
--- | Fri 2018-03-09 | Group Reviews of [Project 1 First Drafts](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) complete by noon
+15 | Tue 2018-03-06 | Generalized Linear Models, 3
+16 | Thu 2018-03-08 | [First Draft of Project 1](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due (for colleague reviews) posted by 1 PM. Group Reviews of [Project 1 First Drafts](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) during class
 -- | 2018-03-12 to 16 | **SPRING BREAK at CWRU - NO CLASS**
 -- | Fri 2018-03-16 | Dr. Love gives a seminar at MetroHealth 9-10:30 AM on "Rethinking Statistical Significance"
--- | Mon 2018-03-19 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at 1 PM
 17 | Tue 2018-03-20 | **Special Session**: The Statistical Crisis in Science
-18 | Thu 2018-03-22 | **Cluster Analysis** 1
-19 | Tue 2018-03-27 | Cluster Analysis 2 
-20 | Thu 2018-03-29 | **Survival Analysis** 1
+18 | Thu 2018-03-22 | **Generalized Linear Models** 4
+-- | Fri 2018-03-23 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at 1 PM
+19 | Tue 2018-03-27 | Survival Analysis, 1
+20 | Thu 2018-03-29 | Survival Analysis, 2
 -- | Fri 2018-03-30 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
-21 | Tue 2018-04-03 | Survival Analysis 2 (project presentation dates announced)
-22 | Thu 2018-04-05 | Survival Analysis 3
+21 | Tue 2018-04-03 | *To Be Determined* (project presentation dates announced)
+22 | Thu 2018-04-05 | *To Be Determined*
 -- | Fri 2018-04-06 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 23 | Tue 2018-04-10 | *To Be Determined*
 24 | Thu 2018-04-12 | *To Be Determined*
