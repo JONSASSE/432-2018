@@ -16,7 +16,7 @@ In today's class, we'll continue our discussion of logistic regression.
 
 ## Announcements Before Class 09
 
-1. **IMPORTANT** I've adjusted the [Course Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) rather extensively, in every case to give you at least as much time as you had previously to do things.
+1. **IMPORTANT** I've adjusted the [Course Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) rather extensively, in every case to give you *at least* as much time as you had previously to do things.
     - [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) is now due at 1 PM on Friday 2018-02-23. So you have an extra week.
     - Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is now also due at the same time: 1 PM on Friday, 2018-02-23. So you have an extra four days.
     - [Homework 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) is now due at 1 PM on Friday 2018-03-02. So you have an extra week.
