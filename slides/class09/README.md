@@ -7,6 +7,7 @@
 
 In today's class, we'll continue our discussion of logistic regression.
 
++ The material discussed today builds on what you'll find in Chapters 12 and 13 of the [Course Notes](https://thomaselove.github.io/432-notes/).
 + Note that it's not **logistical regression** or **log(istic) regression**. 
 + Logistic regression is a generalized linear model approach used to predict a binary (yes/no represented as 1/0) outcome using a linear function of predictors.
     + The linear function of predictors is connected to the respnse with a logit link, so that we actually predict the log odds of an outcome on a linear scale of the predictors.
