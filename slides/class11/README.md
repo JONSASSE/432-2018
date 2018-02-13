@@ -5,7 +5,7 @@
 - [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class11) are posted above for our discussion of linear regression using the `ols` function in the `rms` package. 
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class10) will be posted as soon as they are available.
 
-In today's class, we'll discuss the use of the `ols` function and related materials from `rms` and `Hmisc` in fitting linear regression models.
+In today's class, we'll discuss the use of the `ols` function and related materials from `rms` and `Hmisc` in fitting linear regression models, amplifying what you'll find in [Chapter 10 of the Course Notes](https://thomaselove.github.io/432-notes/using-ols-from-the-rms-package-to-fit-linear-models.html).
 
 ## Announcements Before Class 11
 
