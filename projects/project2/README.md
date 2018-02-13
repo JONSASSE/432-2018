@@ -1,3 +1,3 @@
 # 432 Project 2 Instructions
 
-Coming soon.
+Coming in mid-March.
