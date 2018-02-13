@@ -2,7 +2,9 @@
 
 ### Key Materials
 
-- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09) are posted above (including some of the material originally scheduled for Class 08.) I expect that we'll get through a bit more than half of these slides, and that the rest will be covered in Class 10.
+- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09) are posted above (including some of the material originally scheduled for Class 08.) 
+    + I expect that we'll get through a bit more than half of these slides, and that the rest will be covered in Class 10, plus/minus another logistic regression example. 
+    + Next week, we will cover the `ols` approach to linear regression, ridge regression and the lasso.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09) will be posted as soon as they are available.
 
 In today's class, we'll continue our discussion of logistic regression.
@@ -13,6 +15,7 @@ In today's class, we'll continue our discussion of logistic regression.
     + The linear function of predictors is connected to the respnse with a logit link, so that we actually predict the log odds of an outcome on a linear scale of the predictors.
     + Exponentiation can allow us to describe the effects of the model predictors in terms of odds ratios.
     + An additional mathematical transformation can allow us to estimate predictions in terms of probabilities that the outcome = 1 or yes.
+
 
 ## Announcements Before Class 09
 
@@ -128,3 +131,14 @@ Count | Description
     + There's a whole lot of [data published by fivethirtyeight.com](https://github.com/fivethirtyeight/data), which might be of interest, although you have to avoid the stuff that's in the [`fivethirtyeight` package in R](https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html) already.
 12. (a) When will we learn about the details for Project Two and (b) what can we be doing to prepare in the meantime?
     + (a) After Project 1 is over. (b) Do Project 1, and identify data of interest to you for a new project.
+
+### Miscellany
+
+1. [R Studio](https://blog.rstudio.com/2018/02/12/summer-interns/) is looking for summer interns.
+    + Last year's interns blogged [about it here](https://www.tidyverse.org/articles/2017/09/ggplot2-internship/), [and here](https://www.tidyverse.org/articles/2017/09/lucy-internship/).
+    
+2. I like this [Gentle Guide to Statistics in R, by Thomas Mock](https://towardsdatascience.com/a-gentle-guide-to-statistics-in-r-a1da223e08b7). Maybe you will, too.
+
+3. I am Chief Data Scientist at Better Health Partnership, and will be talking about our work at the [City Club of Cleveland next week](http://betterhealthpartnership.org/community_report_20.asp) (sorry, it has sold out.) [February](http://www.crainscleveland.com/article/20180211/news/151526/personal-view-when-collaboration-beats-competition-health-care) has been a [big month](http://betterhealthpartnership.org/health_affairs_feb_18.asp) for [us](https://twitter.com/betterhealthcle/status/962070906779529217).
+
+4. If I may be permitted a personal note... I won't answer email tomorrow, as today is my last day of being 50. Some people are simply delighted by the fact that my birthday falls on February 14, and that my last name is what it is. If that combination of facts delights you, great. Either way, Happy Valentine's Day.
