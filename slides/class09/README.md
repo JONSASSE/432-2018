@@ -5,9 +5,10 @@
 - [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09) are posted above (including some of the material originally scheduled for Class 08.) I expect that we'll get through a bit more than half of these slides, and that the rest will be covered in Class 10.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09) will be posted as soon as they are available.
 
-In today's class, we'll continue our discussion of logistic regression. 
-    + Note that it's not **logistical regression** or **log(istic) regression**. 
-    + Logistic regresison is a generalized linear model approach used to predict a binary (yes/no represented as 1/0) outcome using a linear function of predictors.
+In today's class, we'll continue our discussion of logistic regression.
+
++ Note that it's not **logistical regression** or **log(istic) regression**. 
++ Logistic regresison is a generalized linear model approach used to predict a binary (yes/no represented as 1/0) outcome using a linear function of predictors.
     + The linear function of predictors is connected to the respnse with a logit link, so that we actually predict the log odds of an outcome on a linear scale of the predictors.
     + Exponentiation can allow us to describe the effects of the model predictors in terms of odds ratios.
     + An additional mathematical transformation can allow us to estimate predictions in terms of probabilities that the outcome = 1 or yes.
