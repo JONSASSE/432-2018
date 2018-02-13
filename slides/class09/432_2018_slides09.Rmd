@@ -157,7 +157,7 @@ glance(model.1)
 
 ## `summary` of `model.1`
 
-![](figures/fig02.png)
+![](figures/fig00.png)
 
 ## Coefficients output
 
@@ -253,22 +253,33 @@ This rule might be a problem for us. What % are correct?
 ggplot(mod1.aug, aes(x = low, y = .fitted, 
                      col = factor(low))) + 
     geom_jitter(size = 3, width = 0.1) + 
+    geom_text(x = 0.3, y = 0.3, label = "130", 
+              size = 7, col = "#F8766D") +
+    geom_text(x = 0.7, y = 0.3, label = "59", 
+              size = 7, col = "#00BFC4") +
     guides(col = FALSE) +
-    geom_hline(yintercept = 0.5, col = "red")
+    geom_hline(yintercept = 0.5, col = "red") + 
+    labs(x = "Low Birth Weight (0 = no, 1 = yes)",
+         y = "Fitted Prob(Low Birth Weight = 1)")
 ```
 
 ## How Well Does Our `model.1` Classify Subjects?
 
-A new rule: if predicted Pr(low = 1) $\geq 0.3$, then we predict "low birth weight"
+A new rule: if predicted Pr(low = 1) $\geq 0.3$, then we predict "high risk of low birth weight" and otherwise, we predict "low risk of low birth weight"
 
 ```{r}
 mod1.aug$rule.3 <- ifelse(mod1.aug$.fitted >= 0.3, 
-                       "Predict Low", "Predict Not Low")
+                       "High Risk of LBW", "Low Risk of LBW")
+mod1.aug <- mod1.aug %>% 
+    mutate(outcome_f = fct_recode(factor(low), 
+                                "Low Birth Weight" = "1",
+                                "OK Birth Weight" = "0"),
+           outcome_f = fct_relevel(outcome_f, "Low Birth Weight"))
 
-table(mod1.aug$rule.3, mod1.aug$low)
+table(mod1.aug$rule.3, mod1.aug$outcome_f)
 ```
 
-What percentage of these classifications are correct?
+For how many of the 189 births in the data is this classification correct?
 
 ## A plot of classifications with the 0.3 rule
 
@@ -278,13 +289,13 @@ ggplot(mod1.aug, aes(x = low, y = .fitted,
     geom_jitter(size = 3, pch = 21, width = 0.15) + 
     guides(col = FALSE) +
     geom_hline(yintercept = 0.3, col = "red") + 
-    geom_text(x = 0.3, y = 0.2, label = "79", 
+    geom_text(x = 0.3, y = 0.2, label = "51", 
               size = 7, col = "#F8766D") +
-    geom_text(x = 0.3, y = 0.4, label = "51", 
+    geom_text(x = 0.3, y = 0.4, label = "79", 
               size = 7, col = "#F8766D") +
-    geom_text(x = 0.7, y = 0.2, label = "45", 
+    geom_text(x = 0.7, y = 0.2, label = "14", 
               size = 7, col = "#00BFC4") +
-    geom_text(x = 0.7, y = 0.4, label = "14", 
+    geom_text(x = 0.7, y = 0.4, label = "45", 
               size = 7, col = "#00BFC4") 
 ```
 
@@ -495,6 +506,8 @@ ggplot(roc_good, aes(x=fpr, ymin=0, ymax=tpr)) +
     theme_bw()
 ```
 
+# This is as far as we got in Class 09
+
 ## The ROC plot for our Model 1 (code)
 
 ```{r, eval = FALSE}
@@ -569,6 +582,8 @@ roc.mod1 <-
 ```{r, echo = FALSE}
 plot(roc.mod1)
 ```
+
+
 
 # Plotting Residuals of a Logistic Regression
 
