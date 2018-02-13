@@ -38,7 +38,11 @@ In today's class, we'll continue our discussion of logistic regression.
 
 ## Minute Papers after Class 08 
 
-Thanks very much to the 35 of you who completed the task. I appreciate it.
+Thanks very much to the 35 of you who completed the task. I appreciate it. 
+
+- This affects your course participation grade. I'd appreciate it if you didn't skip more than 2 of these this semester. 
+- So far, everyone has completed at least 2 of the first 4, and most people (29) have done all 4. Thank you.
+- If you miss a class, you can still fill out the Minute Paper. If you miss a week, you probably shouldn't.
 
 ### What was the most important thing you learned related to 432 this week?
 
