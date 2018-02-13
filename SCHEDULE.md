@@ -36,11 +36,11 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 16 | Thu 2018-03-08 | [Project 1 Draft](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due at 1 PM. Group Reviews.
 -- | 2018-03-12 to 16 | **SPRING BREAK at CWRU - NO CLASS**
 -- | Fri 2018-03-16 | Dr. Love gives a seminar at MetroHealth 9-10:30 AM on "Rethinking Statistical Significance"
-17 | Tue 2018-03-20 | **Special Session**: The Statistical Crisis in Science
-18 | Thu 2018-03-22 | **Generalized Linear Models** 4
+17 | Tue 2018-03-20 | Catch up and Project Review 4
+18 | Thu 2018-03-22 | **Special Session**: The Statistical Crisis in Science
 -- | Fri 2018-03-23 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at 1 PM
-19 | Tue 2018-03-27 | Survival Analysis, 1
-20 | Thu 2018-03-29 | Survival Analysis, 2
+19 | Tue 2018-03-27 | **Survival Analysis**, 1
+20 | Thu 2018-03-29 | **Survival Analysis**, 2
 -- | Fri 2018-03-30 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 21 | Tue 2018-04-03 | *To Be Determined* (project presentation dates announced)
 22 | Thu 2018-04-05 | *To Be Determined*
