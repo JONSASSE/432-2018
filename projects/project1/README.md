@@ -6,7 +6,7 @@ As a substantial part of your course grade, you will complete two Projects this 
 
 There are three Tasks associated with Project 1.
 
-1. Your [proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) and [data](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#characteristics-of-an-acceptable-data-set).
+1. Your [proposal](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#the-proposal) and [data](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#characteristics-of-an-acceptable-data-set).
     - You will identify a study of interest and write a brief proposal, which will include a .csv copy of your data, and an R Markdown file (with HTML result) addressing a set of nine pieces of information [described below](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal).
     - These proposals will be shared with your colleagues, so anonymity is impossible.
     - The proposal is due Friday 2018-02-23 at 1 PM. Submission will be through [canvas](https://canvas.case.edu/)
@@ -14,7 +14,7 @@ There are three Tasks associated with Project 1.
     - Using R Markdown, you will build a detailed portfolio of your work for Project 1 which can be used to replicate all of your main analyses, and which also includes a discussion of your reactions to the results. You will generate both the hardworking source code (the R Markdown) and the front-facing report (as HTML, likely) that comes from knitting your Markdown document. This will be posted online so that it can be viewed by evaluators.
     - You will be meeting (in person during class time as well as electronically) with your colleagues to give them feedback on their work in February and March.
     - You'll post a first draft of your work online by 2018-03-08 at 1 PM and you will review the work of your colleagues in class that day, as well as outside of class.
-3. Your [final portfolio](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#the-portfolio-due-2018-03-19-at-noon-submit-via-canvas) of analyses is due at 1 PM on Friday 2018-03-23. 
+3. Your [final portfolio](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#the-portfolio) of analyses is due at 1 PM on Friday 2018-03-23. 
     - At this time, you will submit your final data, Markdown file, and your HTML output, through [canvas](https://canvas.case.edu/)
 
 ## The (REQUIRED) Project 1 Template
