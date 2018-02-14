@@ -18,4 +18,4 @@ In today's class, we'll continue our discussion of logistic regression, amplifyi
 
 2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is also due at 1 PM on Friday, 2018-02-23. **Note** the change in deadline.
 
-3. The [Minute Paper After Class 10](https://goo.gl/forms/e61YelaxU5H2apoF3) is now available. It is due Monday 2018-02-19 at 10 AM. Thank you for the help with this task.
+3. The [Minute Paper After Class 10](https://goo.gl/forms/e61YelaxU5H2apoF3) is now available. It is due Monday 2018-02-19 at 10 AM. Thank you for the help.
