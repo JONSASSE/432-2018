@@ -3,7 +3,7 @@
 ### Key Materials
 
 - [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class10) are posted above. 
-    - In Class 10, I'm going to introduce a new example, based on the Framingham Heart Study. That way, you'll have three complete logistic regression examples using my 2018 methods, specifically:
+    - In Class 10, I'm going to introduce a new example, based on the [Framingham Heart Study](http://www.framinghamheartstudy.org/). That way, you'll have three complete logistic regression examples using my 2018 methods, specifically:
         - the `lbw` example found in slides for class 9
         - a new example using the `fram_new` data above, found in the slides for class 10 (today)
         - and the `resect` example in the Course Notes, Chapter 13.
