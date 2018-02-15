@@ -1,5 +1,9 @@
 # 432 Class 10: 2018-02-15
 
+## After Class
+
+- I fixed a typo (AUC = 0.5, not 1) in Slide 23 and we got through slides 1-67. I will add Slides 68- to the materials for Class 11, but also leave them here.
+
 ### Key Materials
 
 - [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class10) are posted above. 
