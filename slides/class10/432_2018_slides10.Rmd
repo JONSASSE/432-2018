@@ -215,7 +215,7 @@ glance(m_01)
 ## How ROC works
 
 - If we're guessing completely at random, then we should classify a subject correctly (as CHD or no CHD) about 50% of the time.
-    - In that case, the Specificity and the Sensitivity will be equal so we get a diagonal line in the plot, and AUC = 1.
+    - In that case, the Specificity and the Sensitivity will be equal so we get a diagonal line in the plot, and AUC = 0.5.
 - If we're classifying subjects perfectly, then we have a true positive rate (Sensitivity) of 1 and an false positive rate (1 - Specificity) of 0.
     - In that case, the area under the curve (AUC) will be 1.
 - Values of the C statistic = AUC below 0.5 indicate models worse than guessing.
