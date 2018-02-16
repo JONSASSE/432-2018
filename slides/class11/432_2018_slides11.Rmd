@@ -18,8 +18,10 @@ options(width = 60)
 ## Setup
 
 ```{r, warning = FALSE, message = FALSE}
-library(rms) # note: also loads Hmisc
 library(skimr)
+library(pROC)
+library(ROCR)
+library(rms) # note: also loads Hmisc
 library(simputation)
 library(broom)
 library(tidyverse)
@@ -27,12 +29,247 @@ library(tidyverse)
 
 ## Today's Materials
 
+- Logistic Regression and the Framingham Study (part 2)
 - Performing Linear Regression with `ols`
 - Hormone Therapy and Baseline LDL in the `HERS` trial 
 
 The HERS trial is described in Vittinghoff et al., especially Chapter 4.
 
+# Logistic Regression and Framingham
+
+## Data Ingest, Cleanup (from Class 10)
+
+```{r}
+fram <- read.csv("data/fram_new.csv") %>% tbl_df
+set.seed(432001)
+fram1 <- fram %>%
+    impute_pmm(educ + cigs_day + heart_r ~ age + smoker) %>%
+    impute_rlm(bmi + tot_chol ~ sex + age + sbp + heart_r) %>%
+    impute_pmm(bp_meds ~ hx_htn + bmi + tot_chol) %>%
+    impute_rlm(glucose ~ hx_dm + bmi + tot_chol + age) %>%
+    mutate(ed_f = fct_recode(factor(educ),
+                   "1_Some_HS" = "1", "2_HS_grad" = "2",
+                   "3_Some_Col" = "3", "4_Col_grad" = "4"))
+fram2 <- fram1 %>%
+    select(subj, sex, age, smoker, cigs_day, bp_meds,
+           hx_stroke, hx_htn, hx_dm, ed_f, tot_chol,
+           sbp, dbp, bmi, heart_r, glucose, CHD_10)
+```
+
+## The Models We've Fit (predicting `CHD_10`)
+
+```{r}
+m_01 <- glm(CHD_10 ~ hx_htn, data = fram2, 
+            family = binomial)
+
+d <- datadist(fram2)
+options(datadist = "d")
+m_01_lrm <- lrm(CHD_10 ~ hx_htn, data = fram2, x = T, y = T)
+
+m_02 <- glm(CHD_10 ~ hx_htn + tot_chol, 
+            data = fram2, family = binomial)
+m_02_lrm <- lrm(CHD_10 ~ hx_htn + tot_chol, data = fram2,
+                x = TRUE, y = TRUE)
+```
+
+# Goal 3. Kitchen Sink Model for `CHD_10`
+
+## Focus on model with `lrm` first!
+
+```{r}
+m_03 <- glm(CHD_10 ~ hx_htn + tot_chol + sex + age +
+                    smoker + cigs_day + bp_meds + 
+                    hx_stroke + hx_dm + ed_f + sbp + dbp +
+                    bmi + heart_r + glucose, 
+                data = fram2, family = binomial)
+
+d <- datadist(fram2)
+options(datadist = "d")
+m_03_lrm <- lrm(CHD_10 ~ hx_htn + tot_chol + sex + age +
+                    smoker + cigs_day + bp_meds + 
+                    hx_stroke + hx_dm + ed_f + sbp + dbp +
+                    bmi + heart_r + glucose, 
+                data = fram2, x = TRUE, y = TRUE)
+```
+
+## `m_03_lrm` (first section of output)
+
+![](figures/figF_07.png)
+
+## `m_03_lrm` (second section of output)
+
+![](figures/figF_08.png)
+
+## Validating our Summary Statistics
+
+```{r}
+set.seed(432020) # probably better to set a seed
+validate(m_03_lrm)[1:4,] # to fit things in the slide
+```
+
+## `plot(summary(m_03_lrm))`
+
+```{r, echo = FALSE}
+plot(summary(m_03_lrm))
+```
+
+## `plot(anova(m_03_lrm))`
+
+```{r, echo = FALSE}
+plot(anova(m_03_lrm))
+```
+
+## Can we see the prediction results?
+
+```{r}
+ggplot(Predict(m_03_lrm), 
+       anova = anova(m_03_lrm), pval = TRUE)
+```
+
+## What about on a better scale?
+
+```{r}
+ggplot(Predict(m_03_lrm, fun = plogis))
+```
+
+## Calibration of `mod_03_lrm`
+
+```{r}
+set.seed(432029); plot(calibrate(m_03_lrm))
+```
+
+## Nomogram of `mod_03_lrm`
+
+```{r}
+plot(nomogram(m_03_lrm, fun = plogis))
+```
+
+## Comparing our Three Nested Models
+
+```{r}
+anova(m_01, m_02, m_03)
+```
+
+## Model 2 vs. Model 3 at a glance
+
+```{r}
+glance(m_02)
+glance(m_03)
+```
+
+# Fitting a 6-predictor, but still useful model
+
+## What looks useful?
+
+By ANOVA on `m_03_lrm` it looks like `age`, `sex`, `sbp`, `cigs_day`, `glucose`, `hx_stroke` for sure.
+
+```{r, fig.height = 3}
+plot(spearman2(CHD_10 ~ age + sex + sbp + cigs_day + 
+                   glucose + hx_stroke, data = fram2))
+```
+
+## New Model 4
+
+```{r}
+m_04 <- glm(CHD_10 ~ rcs(age, 5) + rcs(sbp, 3) + sex + 
+                    hx_stroke + glucose + cigs_day, 
+                data = fram2, family = binomial)
+
+
+dd <- datadist(fram2)
+options(datadist = "dd")
+
+m_04_lrm <- lrm(CHD_10 ~ rcs(age, 5) + rcs(sbp, 3) + sex + 
+                    hx_stroke + glucose + cigs_day,
+                data = fram2, x = TRUE, y = TRUE)
+```
+
+## `m_04_lrm`
+
+![](figures/figF_09.png)
+
+## Validating our Summary Statistics
+
+```{r}
+set.seed(432329); validate(m_04_lrm)[1:4,]
+```
+
+## `plot(summary(m_04_lrm))`
+
+```{r, echo = FALSE}
+plot(summary(m_04_lrm))
+```
+
+## `plot(anova(m_04_lrm))`
+
+```{r, echo = FALSE}
+plot(anova(m_04_lrm))
+```
+
+## Can we see the prediction results?
+
+```{r}
+ggplot(Predict(m_04_lrm), 
+       anova = anova(m_04_lrm), pval = TRUE)
+```
+
+## What about on a better scale?
+
+```{r}
+ggplot(Predict(m_04_lrm, fun = plogis))
+```
+
+## Calibration of `mod_04_lrm`
+
+```{r}
+set.seed(432612); plot(calibrate(m_04_lrm))
+```
+
+## Nomogram of `mod_04_lrm`
+
+```{r}
+plot(nomogram(m_04_lrm, fun = plogis))
+```
+
+## Comparing Models 3 and 4 (which aren't nested)
+
+```{r}
+glance(m_03) # kitchen sink but no non-linear terms
+glance(m_04) # six predictors but with non-linear terms
+```
+
+## Checking Residuals?
+
+- Yes/No outcomes contain less information than quantitative outcomes
+- Residuals cannot be observed - predicted
+    + There are several different types of residuals defined
+- Assumptions of logistic regression are different
+    + Model is deliberately non-linear
+    + Error variance is a function of the mean, so it isn't constant
+    + Errors aren't assumed to follow a Normal distribution
+    + Only thing that's the same: leverage and influence
+
+So, plot 5 (residuals/leverage/influence) can be a little useful, but that's it.
+
+- We'll need better diagnostic tools for generalized linear models.
+
+## Any observations particularly influential on Model 4?
+
+```{r}
+which.influence(m_04_lrm, cutoff = 0.3)
+```
+
+## Influence and Model 4?
+
+```{r}
+plot(m_04, which = 5)
+```
+
+# The HERS Trial
+
 ## Hormone Therapy and Baseline LDL in the HERS Trial
+
+HERS clinical trial of hormone therapy (HT). We're excluding the women with diabetes here.
 
 ```{r}
 hers <- read.csv("data/hersdata.csv") %>% tbl_df
@@ -96,6 +333,23 @@ hers1 %>% select(-subject) %>% skim()
 na.pattern(hers1) # from Hmisc
 names(hers1)
 ```
+
+### Next slide
+
+```{r, eval = FALSE}
+par(mfrow = c(2,2))
+naplot(naclus(hers1))
+par(mfrow = c(1,1))
+```
+
+## `naplot(naclus(hers1))`
+
+```{r, echo = FALSE}
+par(mfrow = c(2,2))
+naplot(naclus(hers1))
+par(mfrow = c(1,1))
+```
+
 
 # Simple Imputation into `hers2`
 
