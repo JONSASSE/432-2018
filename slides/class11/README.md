@@ -13,7 +13,7 @@ In today's class, we'll finish our discussion of the logistic regression models 
 
 2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is also due at 1 PM on Friday, 2018-02-23.
 
-3. A coding tip. If you filter a data set in R to focus on specific levels of a factor, R retains all of those factor levels by default. If this is a problem, use the `droplevels` function. [See here](https://stackoverflow.com/questions/32059343/when-filtering-with-dplyr-in-r-why-do-filtered-out-levels-of-a-variable-remain) for more details.
+3. A coding tip: If you filter a data set in R to focus on specific levels of a factor, R retains all of those factor levels by default. If this is a problem, use the `droplevels` function. [See here](https://stackoverflow.com/questions/32059343/when-filtering-with-dplyr-in-r-why-do-filtered-out-levels-of-a-variable-remain) for more details.
 
 ## Minute Papers After Class 10
 
