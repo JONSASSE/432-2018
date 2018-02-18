@@ -15,5 +15,7 @@ In today's class, we'll finish our discussion of the logistic regression models 
 
 3. A coding tip: If you filter a data set in R to focus on specific levels of a factor, R retains all of those factor levels by default. If this is a problem, use the `droplevels` function. [See here](https://stackoverflow.com/questions/32059343/when-filtering-with-dplyr-in-r-why-do-filtered-out-levels-of-a-variable-remain) for more details.
 
+4. Having trouble developing a reproducible example, or just need help asking a question? Take a look at the `reprex` package and [this help page](https://www.tidyverse.org/help/).
+
 ## Minute Papers After Class 10
 
