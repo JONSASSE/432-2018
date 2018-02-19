@@ -72,6 +72,58 @@ m_02_lrm <- lrm(CHD_10 ~ hx_htn + tot_chol, data = fram2,
                 x = TRUE, y = TRUE)
 ```
 
+## Assessing Predictive Quality: Discrimination
+
+Key measures: C statistic, Nagelkerke R^2^
+
+Model | C statistic | Nagelkerke R^2^
+----------: | ------: | -------:
+`m_01_lrm` | 0.614 | 0.051
+`m_02_lrm` | 0.640 | 0.055
+
+and we could use `validate(model)` to address how well these results might hold up in new data.
+
+## Assessing Predictive Quality: Calibration Curves
+
+```{r, eval = FALSE}
+plot(calibrate(m_01_lrm), main = "Calibration for m_01_lrm")
+plot(calibrate(m_02_lrm), main = "Calibration for m_02_lrm")
+```
+
+![](figures/figX.png)
+
+## Assessing Predictive Quality: Goodness of Fit Test
+
+This uses the le Cessie-van Houwelingen-Copas-Hosmer unweighted sum of squares test statistic. to produce (using up just one degree of freedom) a global goodness of fit test. It's available through `residuals` applied to a `lrm` fit, with `type = "gof"`). 
+
+The essential components of a logistic regression fit are:
+
+1. The logit transformation is the correct function linking the covariates with the conditional mean,
+2. The linear predictor is correct (we don't need to include additional variables, transformations of predictors or interaction terms), and
+3. The variance follows a Bernoulli distribution.
+
+See [\textcolor{blue}{Hosmer et al. 1997}](http://stat.duke.edu/~zo2/dropbox/goflogistic.pdf)
+
+## The Omnibus Goodness of Fit Test
+
+As in any omnibus test, a significant result here is difficult to interpret, but it means that something somewhere in the model is probably wrong. 
+
+- [\textcolor{blue}{Harrell}](http://r.789695.n4.nabble.com/Q-Goodness-of-fit-test-of-a-logistic-regression-model-using-rms-package-td2403618.html): I focus on directed tests such as allowing all continuous variables to have nonlinear effects or allowing selected interactions, and finding out how important the complex model terms are. 
+
+```{r, eval = FALSE}
+round(residuals(m_01_lrm, type = "gof"),3)
+round(residuals(m_02_lrm, type = "gof"),3)
+```
+
+```
+       Sum of squared   Expected
+           errors       value|H0      SD          Z      P 
+Model 1   528.985        528.985   0.000  -2268.981  0.000 
+Model 2   527.948        527.291   0.331      1.986  0.047
+```
+
+Looking better in `m_02_lrm` but still some work to do. 
+
 # Goal 3. Kitchen Sink Model for `CHD_10`
 
 ## Focus on model with `lrm` first!
@@ -136,6 +188,12 @@ ggplot(Predict(m_03_lrm, fun = plogis))
 
 ```{r}
 set.seed(432029); plot(calibrate(m_03_lrm))
+```
+
+## Goodness of fit test?
+
+```{r}
+round(residuals(m_03_lrm, type = "gof"),3)
 ```
 
 ## Nomogram of `mod_03_lrm`
@@ -223,6 +281,12 @@ ggplot(Predict(m_04_lrm, fun = plogis))
 
 ```{r}
 set.seed(432612); plot(calibrate(m_04_lrm))
+```
+
+## Goodness of fit test?
+
+```{r}
+round(residuals(m_04_lrm, type = "gof"),3)
 ```
 
 ## Nomogram of `mod_04_lrm`
