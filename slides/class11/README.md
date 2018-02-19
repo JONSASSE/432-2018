@@ -38,15 +38,9 @@ Count (%) | Description
 
 #### How confident do you feel about your ability to complete the Project 1 Proposal?
 
-Count (%) | Score
----------: | -------------------------
-11 (29%) | 5 = Extremely confident
-17 (45%) | 4
-8 (21%) | 3
-2 (5%) | 2
-0 (0%) | 1 = Not confident at all
-
-Class Mean = 3.97
+Result | 5 = Extremely Confident | 4 | 3 | 2 | 1 = Not confident at all | Total | Mean
+---------: | ----------------: | -----: | -----: | -----: | -----: | ----: | ----:
+Count (%) | 11 (29) | 17 (45) | 8 (21) | 2 (5) | 0 (0) | 38 | 3.97
 
 ### What was the most important thing you learned related to 432 this week?
 
@@ -67,11 +61,9 @@ The most common responses were:
     - The Nagelkerke R-square and C statistics reflect the discrimination of a model, not its calibration.
     - A model that discriminates well will accurately place low-risk people below high-risk people, and will show a high C statistic, for example.
     - But we cannot use the C statistic alone to assess the quality of predictions our model makes, for instance, see [this paper by Nancy Cook](http://circ.ahajournals.org/content/115/7/928.full.pdf).
-    - Some people think of calibration as "goodness of fit" and discrimination as "predictive power". Models can be 
+    - Some people think of calibration as "goodness of fit" and discrimination as "predictive power". That can be a helpful split. 
     - Sometimes a poorly calibrated model could be improved by including interaction or other non-linear terms.
-    - The most popular statistic for testing goodness of fit is the Hosmer-Lemeshow test, which has several problems associated with it as pointed out [by Frank Harrell here](https://stats.stackexchange.com/questions/169438/evaluating-logistic-regression-and-interpretation-of-hosmer-lemeshow-goodness-of), and as a result, we don't recommend its use. 
-    - Instead, we use the bootstrap to estimate overfitting and get an overfitting-corrected high-resolution smooth calibration curve, with `plot(calibrate(model))`.
-    - If a test is needed, Frank suggests that you assess calibration with a different Hosmer et al. test that uses one degree of freedom and is implemented in the `residuals.lrm` function.
+    - The most popular statistic for testing goodness of fit is the Hosmer-Lemeshow test, which has several problems associated with it as pointed out [by Frank Harrell here](https://stats.stackexchange.com/questions/169438/evaluating-logistic-regression-and-interpretation-of-hosmer-lemeshow-goodness-of), and as a result, we don't recommend its use. Instead, we use the bootstrap to estimate overfitting and get an overfitting-corrected high-resolution smooth calibration curve, with `plot(calibrate(model))`. If a test is needed, Frank suggests that you assess calibration with a different Hosmer et al. test that uses one degree of freedom and is implemented in the `residuals.lrm` function.
 
 2. How do we do variable selection for logistic regression?
     - Stepwise procedures still work, as do ANOVA, AIC and BIC.
@@ -85,8 +77,28 @@ The most common responses were:
 4. What if our outcome is multi-categorical, rather than binary?
     - Then you'll need a different kind of generalized linear model. There are separate types of logistic regression models for non-binary ordinal and non-binary nominal categorical outcomes.
 
-Other questions I'm still pondering:
+5. Can you say more about sample size in regression models?
+    - The sample size you need depends on the research question you are trying to answer, just as it always has.
+    - The two main uses of regression models are (1) *prediction*, which includes *classification* and (2) *explanation*.
+    - If you're using the model to explain whether a particular hypothesized relationship holds, then you should be able to specify the details on what groups are being compared, and how, and apply methods from power analyses to see what sort of sample you require. One natural tendency is to look at the widths of the confidence intervals for your key parameter of interest (often the slope of the key "treatment" variable) to understand the power of your regression study for explanation of the link between the treatment and the outcome.
+    - In terms of the number of observations needed to fit a reliable (i.e. consistent) regression model for prediction, the 20:1 rule discussed in [the Class 8 README](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) is a useful one. Repeating the key bits here:
 
-- How to merge >2 dataframes with different lengths based on same ID.  
-- Can you say more about sample size in regression models?
+**The 20:1 Rule** 
+
+- Let *m* denote the effective sample size 
+    + If you have a quantitative outcome with no missing values, then *m* is the number of subjects.
+    + If you have a binary outcome (1 or 0) with no missing values, then *m* is the **smaller** of (number of 1s, number of 0s).
+    + If you are building a model for a time-to-event analysis, then *m* is the number of events that are observed.
+    + Do not impute missing outcome values, nor count those subjects with missing outcomes in establishing *m*.
+- Let *p* denote the number of candidate predictor terms that were examined in any way with respect to the outcome.
+    + *p* includes non-linear terms, product terms, different transformations attempted, the total number of cutoffs attempted to be applied to continuous predictors, and the number of variables dropped from the final model in a way that was unblinded to the response.
+- Now, calculate *m/p*. 
+    + If this ratio exceeds 20, the model is likely to be fairly reliable, and a validation is appealing but less critical.
+    + If this ratio is less than 20, the model is especially in need of validation, and even then may be unreliable when applied to new data.
+
+6. How can I learn more about merging two data sets?
+    - I usually do this with one of the `join` functions from the `dplyr` package. 
+        + Here are some thoughts on [joining two tbls together](http://dplyr.tidyverse.org/reference/join.html).
+        + I can also recommend the R Studio cheatsheet on [data transformation](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf) (which has a whole section devoted to combining data tables/tibbles.
+
 
