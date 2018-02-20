@@ -19,28 +19,28 @@ In today's class, we'll finish our discussion of the logistic regression models 
 
 ## Minute Papers After Class 10
 
-### Project 1 Progress (n = 38/41)
+### Project 1 Progress (n = 39/41)
 
 #### Tell me about your progress towards getting data for Project 1
 
 Count (%) | Description
 ---------: | -------------------------------------------------------------------------------------
-32 (84%) | I have a data set in hand that I can use that is shareable with the world, of appropriate size.
-6 (16%) | I have a data set in mind, but I don't have the data in my hands yet.
+33 (85%) | I have a data set in hand that I can use that is shareable with the world, of appropriate size.
+6 (15%) | I have a data set in mind, but I don't have the data in my hands yet.
 0 (0%) | I don't yet have a data set in mind. I need to get going on that.
 
 #### Have you opened the Project 1 Template and typed in any new information yet?
 
 Count (%) | Description
 ---------: | -------------------------------------------------------------------------------------
-29 (76%) | Yes, I've opened the template and done something.
-9 (24%) | Not yet. I should do that soon.
+29 (74%) | Yes, I've opened the template and done something.
+10 (26%) | Not yet. I should do that soon.
 
 #### How confident do you feel about your ability to complete the Project 1 Proposal?
 
 Result | 5 = Extremely Confident | 4 | 3 | 2 | 1 = Not confident at all | Total | Mean
 ---------: | ----------------: | -----: | -----: | -----: | -----: | ----: | ----:
-Count (%) | 11 (29) | 17 (45) | 8 (21) | 2 (5) | 0 (0) | 38 | 3.97
+Count (%) | 12 (31) | 17 (44) | 8 (21) | 2 (5) | 0 (0) | 38 | 3.97
 
 ### What was the most important thing you learned related to 432 this week?
 
@@ -68,11 +68,15 @@ The most common responses were:
 2. How do we do variable selection for logistic regression?
     - Stepwise procedures still work, as do ANOVA, AIC and BIC.
     - Cross-validation is still relevant, as is splitting into training and test samples.
-    - Making decisions about non-linearity is still relevant, and still done in the same way.
+    - Making decisions about non-linearity is still relevant, and still done in the same way as in a linear regression model.
 
 3. Should we use imputation instead of eliminating missing cases in all logistic regression examples?
     - Which kind of regression you're doing doesn't matter. The same advice applies to any sort of regression model.
-    - Complete Case analyses have problems. Simple imputation has problems. Multiple imputation has problems. None is always a dominant strategy over the others. There are plenty of settings where you will need to make a choice. In general, multiple imputation is the most defensible approach, but it also restricts what we can do more than the other methods. It might be worth it to see the value of all  three approaches.
+    - Complete Case analyses have problems. Simple imputation has problems. Multiple imputation has problems. 
+    - None of these approaches is always a dominant strategy over the others. 
+    - There are plenty of settings where you will need to make a choice. I encourage you to see the value of adding all three approaches to the set of things you can do in practice, rather than looking for a "one size fits all" answer.
+    - In general, multiple imputation is the most defensible approach, but it also restricts what we can do more than the other methods. In many, many settings, I'll use complete case analysis to fit an initial model and check to be sure that my code does what I expect, and then develop an imputation strategy after that's accomplished. The decision between simple and multiple imputation often depends on how much missingness I actually have, and which variables have missing data. 
+    - For instance, I tend not to impute outcomes or key predictors if I can avoid it, but I might use simple imputation if ancillary covariates are all that is missing, or if there is very little missingness on any predictor I consider to be important.
 
 4. What if our outcome is multi-categorical, rather than binary?
     - Then you'll need a different kind of generalized linear model. There are separate types of logistic regression models for non-binary ordinal and non-binary nominal categorical outcomes.
@@ -80,7 +84,11 @@ The most common responses were:
 5. Can you say more about sample size in regression models?
     - The sample size you need depends on the research question you are trying to answer, just as it always has.
     - The two main uses of regression models are (1) *prediction*, which includes *classification* and (2) *explanation*.
-    - If you're using the model to explain whether a particular hypothesized relationship holds, then you should be able to specify the details on what groups are being compared, and how, and apply methods from power analyses to see what sort of sample you require. One natural tendency is to look at the widths of the confidence intervals for your key parameter of interest (often the slope of the key "treatment" variable) to understand the power of your regression study for explanation of the link between the treatment and the outcome.
+    - If you're using the model to **explain** whether a particular hypothesized relationship holds, then you should be able to specify the details on what groups are being compared, and how, and apply standard power analysis methods to see what sort of sample you require. 
+        + One natural starting point is to look at the widths of the confidence intervals for your key parameter of interest (often the slope of the key "treatment" variable) to understand the power of your regression study for explanation of the link between the treatment and the outcome, while accounting for other covariates.
+        + Another is to generate a model without covariates, which likely corresponds to a straightforward ANOVA comparison, which can be powered (for example) with the `power.anova.test` function (for a balanced one-way ANOVA) or equivalently with the `pwr.anova.test` approach (from the `pwr` package) and by the `pwr.2p2n.test` in the `pwr` package for a comparison of two proportions with (potentially) differing sample sizes.
+        + Specialized software, [like G*Power](http://www.gpower.hhu.de/en.html) can help in this setting. See [Faul, Erdfelder, Buchner and Lang](http://www.gpower.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPower31-BRM-Paper.pdf). [UCLA also has a page](https://stats.idre.ucla.edu/other/gpower/) explaining the use of G*Power in several contexts, including multiple regression.
+        + Power analyses for more complex situations usually rely on simulation.
     - In terms of the number of observations needed to fit a reliable (i.e. consistent) regression model for prediction, the 20:1 rule discussed in [the Class 8 README](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) is a useful one. Repeating the key bits here:
 
 **The 20:1 Rule** 
