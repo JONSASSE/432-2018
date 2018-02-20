@@ -3,9 +3,14 @@
 ### Key Materials
 
 - [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class11) are posted above. They include some leftover materials from Class 10 on logistic regression, followed by a discussion of linear regression using the `ols` function in the `rms` package. 
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class10) will be posted as soon as they are available.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class11) are now posted.
 
 In today's class, we'll finish our discussion of the logistic regression models for the Framingham Heart Study that we began in Class 10. All of this material is also contained in a new [Chapter 14 of the Course Notes](https://thomaselove.github.io/432-notes/). Then we'll discuss the use of the `ols` function and related materials from `rms` and `Hmisc` in fitting linear regression models, amplifying what you'll find in [Chapter 10 of the Course Notes](https://thomaselove.github.io/432-notes/using-ols-from-the-rms-package-to-fit-linear-models.html).
+
+## After Class
+
+- Audio file is posted above.
+- We got through slides 1-24. We'll pick up from slide 25 in Class 12.
 
 ## Announcements Before Class 11
 
