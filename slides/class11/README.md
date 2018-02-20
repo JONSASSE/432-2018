@@ -89,7 +89,7 @@ The most common responses were:
         + Another is to generate a model without covariates, which likely corresponds to a straightforward ANOVA comparison, which can be powered (for example) with the `power.anova.test` function (for a balanced one-way ANOVA) or equivalently with the `pwr.anova.test` approach (from the `pwr` package) and by the `pwr.2p2n.test` in the `pwr` package for a comparison of two proportions with (potentially) differing sample sizes.
         + Specialized software, [like G*Power](http://www.gpower.hhu.de/en.html) can help in this setting. See [Faul, Erdfelder, Buchner and Lang](http://www.gpower.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPower31-BRM-Paper.pdf). [UCLA also has a page](https://stats.idre.ucla.edu/other/gpower/) explaining the use of G*Power in several contexts, including multiple regression.
         + Power analyses for more complex situations usually rely on simulation.
-    - In terms of the number of observations needed to fit a reliable (i.e. consistent) regression model for prediction, the 20:1 rule discussed in [the Class 8 README](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) is a useful one. Repeating the key bits here:
+    - In terms of the number of observations needed to fit a reliable (i.e. consistent) regression model for **prediction**, the 20:1 rule discussed in [the Class 8 README](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) is a useful one. Repeating the key bits here:
 
 **The 20:1 Rule** 
 
