@@ -40,7 +40,7 @@ Count (%) | Description
 
 Result | 5 = Extremely Confident | 4 | 3 | 2 | 1 = Not confident at all | Total | Mean
 ---------: | ----------------: | -----: | -----: | -----: | -----: | ----: | ----:
-Count (%) | 12 (31) | 17 (44) | 8 (21) | 2 (5) | 0 (0) | 38 | 3.97
+Count (%) | 12 (31) | 17 (44) | 8 (21) | 2 (5) | 0 (0) | 39 | 4.0
 
 ### What was the most important thing you learned related to 432 this week?
 
