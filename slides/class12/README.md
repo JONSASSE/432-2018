@@ -2,7 +2,7 @@
 
 ### Key Materials
 
-- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) above cover logistic regression on the Framingham data, and then linear regression with `ols` in the HERS trial.
+- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) above cover logistic regression on the Framingham data, and then linear regression with `ols` in the HERS trial. In the context of that `ols` fit, we'll be running multiple imputation.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) will be posted as soon as they are available.
 
 ## Announcements Before Class 12
