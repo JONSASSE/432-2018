@@ -2,10 +2,8 @@
 
 ### Key Materials
 
-- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) above cover ridge regression and the lasso, but I don't know whether we'll get to this until Class 13. It depends on how much of the material currently in the Class 11 slides spills over.
+- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) above cover logistic regression on the Framingham data, and then linear regression with `ols` in the HERS trial.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) will be posted as soon as they are available.
-
-In today's class, we'll discuss ridge regression and the lasso, amplifying on what you'll find in [Chapter 11 of the Course Notes](https://thomaselove.github.io/432-notes/other-variable-selection-strategies.html).
 
 ## Announcements Before Class 12
 
