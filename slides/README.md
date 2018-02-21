@@ -2,8 +2,9 @@
 
 Link  | Date  | Topics Discussed include...
 --------: | ---------- | -------------------------------------------------------------
-[Class 12](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) | 2018-02-22 | Ridge Regression and the Lasso
-[Class 11](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class11) | 2018-02-20 | Linear Regression using `ols`
+[Class 13](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class13) | 2018-02-27 | Ridge Regression and the Lasso
+[Class 12](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) | 2018-02-22 | Logistic Models (again), Linear Regression via `ols`
+[Class 11](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class11) | 2018-02-20 | Logistic Regression with `lrm`
 [Class 10](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class10) | 2018-02-15 | Logistic Regression using `lrm`
 [Class 9](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class09) | 2018-02-13 | Logistic Regression: A Detailed Example
 [Class 8](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class08) | 2018-02-08 | Logistic Regression: The Basics
