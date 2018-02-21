@@ -14,3 +14,5 @@
     - Try to match your response to the question I actually posed, rather than demonstrating that you *can* answer a much more involved question than I asked.
 
 2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is also due at 1 PM on Friday, 2018-02-23.
+
+3. Chapter 14 in the [Course Notes](https://thomaselove.github.io/432-notes/) is complete. It builds a pair of logistic regression models to predict the binary `exerany` variable in the BRFSS data we've analyzed earlier. The Chapter includes a complete case analysis (to be sure the code runs) and full logistic regression model analyses, first using simple imputation, and then using multiple imputation. Happy reading!
