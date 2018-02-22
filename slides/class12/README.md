@@ -14,6 +14,10 @@
     - Try to match your response to the question I actually posed, rather than demonstrating that you *can* answer a much more involved question than I asked.
 
 2. Your [project 1 proposal](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/README.md#the-proposal) is also due at 1 PM on Friday, 2018-02-23.
+    - As of noon today, I have received and reviewed **10** proposals. 2 didn't have real titles. Those people need to add a title, just as a comment in their Canvas submission, if they have no other problems.
+        - If you received a score of 10/10 (look on Canvas), you're done with the proposal, as long as you have a real title.
+        - If you received a score below 10/10, then you need to redo the proposal to fix whatever I specified in the comments. 
+        - For the people with a score below 10 in this original group of 10 submissions, this is in every case a small thing, so I expect a speedy revision.  
 
 3. Chapter 14 in the [Course Notes](https://thomaselove.github.io/432-notes/) is complete. 
     - It builds a pair of logistic regression models to predict the binary `exerany` variable in the BRFSS data we've analyzed earlier.
