@@ -613,7 +613,7 @@ par(mfrow = c(1,1))
 plot(summary(m3imp))
 ```
 
-## `plot(resid(m1imp) ~ fitted(m1imp))`
+## `plot(resid(m3imp) ~ fitted(m3imp))`
 
 ```{r, echo = FALSE}
 plot(resid(m3imp) ~ fitted(m3imp))
