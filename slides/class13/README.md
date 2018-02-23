@@ -18,3 +18,9 @@ In today's class, we'll discuss ridge regression and the lasso, amplifying on wh
 3. Assignment 5 is due this Friday, 2018-03-02 at 1 PM.
 
 4. Quiz 1 will be made available to you by noon on Friday 2018-03-02. It is due at noon on Monday 2018-03-05.
+
+5. `lrm` and `ols` and `rms` functions in general, are usually looking for categorical data to be included using numerical codes. If, for instance, you try to do something after you've included a sex variable that has the values M/F, rather than something like female = 1/0, you may get error messages like **Error: Can't use matrix or array for column indexing**. That's an indication that R is looking for a numeric variable and not finding it for some categorical data. This comes up, for instance, when plotting an ROC curve from an `rms`-based fit. But it's not an issue with `glm` or `lm`. Just another reason to know both approaches.
+
+
+
+
