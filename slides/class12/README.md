@@ -2,8 +2,9 @@
 
 ### Key Materials
 
-- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) above cover logistic regression on the Framingham data, and then linear regression with `ols` in the HERS trial. In the context of that `ols` fit, we'll be running multiple imputation.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) will be posted as soon as they are available.
+- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) above cover logistic regression on the Framingham data, and then linear regression with `ols` in the HERS trial. In the context of that `ols` fit, we'll be running multiple imputation. 
+    + We discussed all of the slides in class today.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) are now posted.
 
 ## Announcements Before Class 12
 
@@ -21,3 +22,5 @@
 3. Chapter 14 in the [Course Notes](https://thomaselove.github.io/432-notes/) is complete. 
     - It builds a pair of logistic regression models to predict the binary `exerany` variable in the BRFSS data we've analyzed earlier.
     - The Chapter includes a complete case logistic regression analysis (to be sure the code runs) and then full logistic regression model analyses, first using simple imputation, and then using multiple imputation.
+
+4. There is no Minute Paper this week.
