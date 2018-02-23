@@ -3,7 +3,7 @@
 ### Key Materials
 
 - [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) above cover logistic regression on the Framingham data, and then linear regression with `ols` in the HERS trial. In the context of that `ols` fit, we'll be running multiple imputation. 
-    + We discussed all of the slides in class today.
+    + **After Class Notes**: We discussed all of the slides in class today. I have placed a revision above that fixes the two typos we unearthed during class.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) are now posted.
 
 ## Announcements Before Class 12
