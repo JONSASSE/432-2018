@@ -10,7 +10,7 @@ In today's class, we'll finish our discussion of the logistic regression models 
 ## After Class
 
 - Audio file is posted above.
-- We got through slides 1-24. We'll pick up from slide 25 in Class 12.
+- We got through slides 1-24, and so the slides above have now been edited to show only that material. The remaining slides are now to be found in the slides for [Class 12](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12).
 
 ## Announcements Before Class 11
 
