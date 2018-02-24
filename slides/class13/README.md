@@ -9,7 +9,7 @@ In today's class, we'll discuss ridge regression and the lasso, amplifying on wh
 
 ## Announcements Before Class 13
 
-1. [Answer Sketch and Grading Rubric](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) are up for Assignment 4.
+1. [Answer Sketch and Grading Rubric](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) are up for Assignment 4. I've also posted grades for HW1 - HW3 on [Canvas](https://canvas.case.edu/). If you see an error in those posted grades, please let me know.
 
 2. [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) is due this Friday, 2018-03-02 at 1 PM.
 
@@ -22,7 +22,7 @@ In today's class, we'll discuss ridge regression and the lasso, amplifying on wh
 ## Project Proposals
 
 1. All Project 1 Proposals have been reviewed by Dr. Love at least once. 
-    + If your grade on Canvas is 10/10, you're done, and your project will be listed below.
+    + If your grade on [Canvas](https://canvas.case.edu/) is 10/10, you're done, and your project will be listed below.
     + If it isn't 10/10, you need to fix the issues I described in my note on [Canvas](https://canvas.case.edu/), and resubmit.
 
 Here is the current list of accepted proposals. As of 10:45 PM on 2018-02-23, 24 of 41 are accepted.
