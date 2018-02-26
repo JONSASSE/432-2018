@@ -33,7 +33,7 @@ All Project 1 Proposals have been reviewed by Dr. Love, as have all revisions to
     + If your grade on [Canvas](https://canvas.case.edu/) is 10/10, you're done, and your project will be listed below.
     + If it isn't 10/10, you need to fix the issues I described in my note on [Canvas](https://canvas.case.edu/), and resubmit.
 
-Here is the current list of accepted proposals. As of 11:30 AM on 2018-02-26, 30 of 41 are accepted.
+Here is the current list of accepted proposals. As of 11:30 AM on 2018-02-26, 32 of 41 are accepted.
 
 Name | Project 1 Title
 -----------------------------: | -------------------------------------------------------------
@@ -49,6 +49,7 @@ Gwendolyn Donley |	Predicting Outpatient Visits and Self-Reported Physical Limit
 Caroline El Sanadi | Predicting Subject Plasma Triglycerides and Metabolic Syndrome using BMI and Basic Liver Health Indicators
 Dongze He	| Predicting duration and result of endovascular aortic repair opeartion by disease history and physical indexes.
 Ryan Honomichl |	The Role of Problem- and Emotion-Focused Coping in the Prediction of Blood Pressure and Hypertension
+Jiajian Huang | What factors affect drug use in middle-aged people?
 Maher Kazimi |	Would health insurance keep your sugar controlled?
 Nikolas Krieger |	Predicting Child Povery and Home Ownership in Counties of the Western Continental United States
 Carli Lehr |	Pleural Effusions After Lung Transplant and Their Relationship to Acute Cellular Rejection
@@ -56,6 +57,7 @@ Kedar Mahajan |	What makes you sad or cognitively impaired?
 John McDonnell |	#PureEmotion
 Elina Misicka	| Transition of Multiple Sclerosis Patients from Relapsing-Remitting to Secondary Progressive Disease
 Haeun Park	| It’s all about women’s hormones
+Preeti Pathak | Risk factors in accidental drug related deaths
 Sarah Planchon Pope	| Effect of Physical, Social, and Economic Factors on Obesity
 Kaylee Sarna |	Income Level and how it predicts systolic blood pressure in African Americans Age 25 and older
 Andrew Shan | Sleep Quality for Single Males
