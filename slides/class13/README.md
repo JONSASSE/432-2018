@@ -13,19 +13,27 @@ In today's class, we'll discuss ridge regression and the lasso, amplifying on wh
 
 2. [Assignment 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) is due this Friday, 2018-03-02 at 1 PM.
 
-3. Quiz 1 will be made available to you by noon on Friday 2018-03-02. It is due at noon on Monday 2018-03-05.
+3. [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1) will be made available to you by noon on Friday 2018-03-02. It is due at noon on Monday 2018-03-05. 
+    - The data you'll need to do the quiz is now [available for download](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1).
+    - Quiz 1 is taken on a Google Form (like our Minute Papers), requires you to log into Google via CWRU, contains 32 questions, and covers:
+        - material discussed in Chapters 1-15 of the Course Notes, and 
+        - material in the [required readings](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) from [How to be a Modern Scientist](https://github.com/THOMASELOVE/432-2018/tree/master/texts) and [R for Data Science](http://r4ds.had.co.nz/), and 
+        - material discussed in class through Class 14, 
+        - with the single exception being that I promise that ridge regression and the lasso will not appear on Quiz 1.
 
-4. `lrm` and `ols` and `rms` functions in general, are usually looking for categorical data to be included using **numerical codes**. 
+4. Chapter 15 of the [Course Notes](https://thomaselove.github.io/432-notes/) is now posted. It recapitulates the material we discussed in Class 12 on using `ols` to fit linear models.
+
+5. `lrm` and `ols` and `rms` functions in general, are usually looking for categorical data to be included using **numerical codes**. 
     - If, for instance, you try to do something after you've included a sex variable that has the values M/F, rather than something like female = 1/0, you may get error messages like **Error: Can't use matrix or array for column indexing**. That's an indication that R is looking for a numeric variable and not finding it for some categorical data. 
     - This comes up, for instance, when plotting an ROC curve from an `rms`-based fit. But it's not an issue with `glm` or `lm`. Just another reason to know both approaches.
 
 ## Project Proposals
 
-1. All Project 1 Proposals have been reviewed by Dr. Love, as have all revisions to date. 
+All Project 1 Proposals have been reviewed by Dr. Love, as have all revisions to date. 
     + If your grade on [Canvas](https://canvas.case.edu/) is 10/10, you're done, and your project will be listed below.
     + If it isn't 10/10, you need to fix the issues I described in my note on [Canvas](https://canvas.case.edu/), and resubmit.
 
-Here is the current list of accepted proposals. As of 8:45 AM on 2018-02-26, 29 of 41 are accepted.
+Here is the current list of accepted proposals. As of 11:30 AM on 2018-02-26, 30 of 41 are accepted.
 
 Name | Project 1 Title
 -----------------------------: | -------------------------------------------------------------
@@ -50,6 +58,7 @@ Elina Misicka	| Transition of Multiple Sclerosis Patients from Relapsing-Remitti
 Haeun Park	| It’s all about women’s hormones
 Sarah Planchon Pope	| Effect of Physical, Social, and Economic Factors on Obesity
 Kaylee Sarna |	Income Level and how it predicts systolic blood pressure in African Americans Age 25 and older
+Andrew Shan | Sleep Quality for Single Males
 Sandra Silva Camargo |	Predicting mortality after a prostate cancer diagnosis
 Andrew Tang	| Repair, Reconstruct, or Resect: The Fate of the Perforated Esophagus
 Vinh Trinh | Predicting Student Academic Performance and Alcohol Consumption
