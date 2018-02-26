@@ -21,17 +21,18 @@ In today's class, we'll discuss ridge regression and the lasso, amplifying on wh
 
 ## Project Proposals
 
-1. All Project 1 Proposals have been reviewed by Dr. Love at least once. 
+1. All Project 1 Proposals have been reviewed by Dr. Love, as have all revisions to date. 
     + If your grade on [Canvas](https://canvas.case.edu/) is 10/10, you're done, and your project will be listed below.
     + If it isn't 10/10, you need to fix the issues I described in my note on [Canvas](https://canvas.case.edu/), and resubmit.
 
-Here is the current list of accepted proposals. As of 12:45 AM on 2018-02-26, 28 of 41 are accepted.
+Here is the current list of accepted proposals. As of 8:45 AM on 2018-02-26, 29 of 41 are accepted.
 
 Name | Project 1 Title
 -----------------------------: | -------------------------------------------------------------
 Khaled Alayed	| Bug Prediction Using Code Metrics
 Haimeng Bai	| Regression Statistical Analysis of NBA Final Champions
 Laura Baldassari |	The Effect of Smoking on Vitamin B12 Deficiency
+Sophia Cao | What factors affect the income of Mexican immigrants in the US?
 Estee Cramer |	Prediction Models for Extramarital Affairs
 Vaishali Deo | Socio-demographic Characteristics of Young Adult Smokers
 Abhishek Deshpande |	Effect of Intravenous Fat Emulsions on Outcomes in Critically Ill Patients
