@@ -25,7 +25,7 @@ In today's class, we'll discuss ridge regression and the lasso, amplifying on wh
     + If your grade on [Canvas](https://canvas.case.edu/) is 10/10, you're done, and your project will be listed below.
     + If it isn't 10/10, you need to fix the issues I described in my note on [Canvas](https://canvas.case.edu/), and resubmit.
 
-Here is the current list of accepted proposals. As of 10:45 PM on 2018-02-23, 24 of 41 are accepted.
+Here is the current list of accepted proposals. As of 12:45 AM on 2018-02-26, 28 of 41 are accepted.
 
 Name | Project 1 Title
 -----------------------------: | -------------------------------------------------------------
@@ -37,6 +37,7 @@ Vaishali Deo | Socio-demographic Characteristics of Young Adult Smokers
 Abhishek Deshpande |	Effect of Intravenous Fat Emulsions on Outcomes in Critically Ill Patients
 Katherine Dobbs |	Perinatal HIV exposure and child health in the first 24 months of life
 Gwendolyn Donley |	Predicting Outpatient Visits and Self-Reported Physical Limitation
+Caroline El Sanadi | Predicting Subject Plasma Triglycerides and Metabolic Syndrome using BMI and Basic Liver Health Indicators
 Dongze He	| Predicting duration and result of endovascular aortic repair opeartion by disease history and physical indexes.
 Ryan Honomichl |	The Role of Problem- and Emotion-Focused Coping in the Prediction of Blood Pressure and Hypertension
 Maher Kazimi |	Would health insurance keep your sugar controlled?
@@ -50,6 +51,9 @@ Sarah Planchon Pope	| Effect of Physical, Social, and Economic Factors on Obesit
 Kaylee Sarna |	Income Level and how it predicts systolic blood pressure in African Americans Age 25 and older
 Sandra Silva Camargo |	Predicting mortality after a prostate cancer diagnosis
 Andrew Tang	| Repair, Reconstruct, or Resect: The Fate of the Perforated Esophagus
+Vinh Trinh | Predicting Student Academic Performance and Alcohol Consumption
 Sneha Vakamudi	| Does Anticoagulation Prevent Thrombus Formation in Cardiac Amyloidosis?
 Frances Wang	| Predicting Development and Time to Onset of Depression in Multiple Sclerosis Patients
 Ruipeng Wei	| Relationships in Body Dimensions
+Peter Wilkinson | Correlation of Heath factors to BMI and Sleep Trouble
+Bilal Zonjy | The Financial Meltdown and house prices in Ames, Iowa
