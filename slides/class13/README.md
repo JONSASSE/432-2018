@@ -33,11 +33,12 @@ All Project 1 Proposals have been reviewed by Dr. Love, as have all revisions to
     + If your grade on [Canvas](https://canvas.case.edu/) is 10/10, you're done, and your project will be listed below.
     + If it isn't 10/10, you need to fix the issues I described in my note on [Canvas](https://canvas.case.edu/), and resubmit.
 
-Here is the current list of accepted proposals. As of 11:30 AM on 2018-02-26, 32 of 41 are accepted.
+Here is the current list of accepted proposals. As of 6:30 PM on 2018-02-26, 35 of 41 are accepted.
 
 Name | Project 1 Title
 -----------------------------: | -------------------------------------------------------------
 Khaled Alayed	| Bug Prediction Using Code Metrics
+Zainab Albar | Liver fibrosis and prediction accuracy of liver ultrasound in bariatric patient surgery
 Haimeng Bai	| Regression Statistical Analysis of NBA Final Champions
 Laura Baldassari |	The Effect of Smoking on Vitamin B12 Deficiency
 Sophia Cao | What factors affect the income of Mexican immigrants in the US?
@@ -51,9 +52,11 @@ Dongze He	| Predicting duration and result of endovascular aortic repair opearti
 Ryan Honomichl |	The Role of Problem- and Emotion-Focused Coping in the Prediction of Blood Pressure and Hypertension
 Jiajian Huang | What factors affect drug use in middle-aged people?
 Maher Kazimi |	Would health insurance keep your sugar controlled?
+Hyun Jo Kim | Biological Predictors for Diabetes Mellitus Type II
 Nikolas Krieger |	Predicting Child Povery and Home Ownership in Counties of the Western Continental United States
 Carli Lehr |	Pleural Effusions After Lung Transplant and Their Relationship to Acute Cellular Rejection
 Kedar Mahajan |	What makes you sad or cognitively impaired?
+Roberto Martinez | How effectively can diet predict Plasma Glucose in the HHANES Hispanic population sample of 1982-1984?
 John McDonnell |	#PureEmotion
 Elina Misicka	| Transition of Multiple Sclerosis Patients from Relapsing-Remitting to Secondary Progressive Disease
 Haeun Park	| It’s all about women’s hormones
