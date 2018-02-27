@@ -2,7 +2,7 @@
 
 Copy and paste the following two lines of code into the Console window of R Studio to install the packages you'll need for this course.
 
-`pkgs <- c("afex", "aplpack", "arm", "babynames", "boot", "car", "cowplot", "devtools", "Epi", "ez", "faraway", "fivethirtyeight", "gapminder", "gee", "geepack", "GGally", "ggrepel", "ggridges", "ggthemes", "gridExtra", "Hmisc", "infer", "knitr", "lars", "lattice", "leaps", "lme4", "lmerTest", "magrittr", "markdown", "MASS", "mice", "mosaic", "multcomp", "NHANES", "OIsurv", "pander", "pROC", "pscl", "psych", "pwr", "qcc", "QuantPsyc", "rmarkdown", "rmdformats", "rms", "ROCR", "rstanarm", "sandwich", "simputation", "skimr", "styler", "survival", "survminer", "tableone", "tidyverse", "vcd", "viridis")`
+`pkgs <- c("afex", "aplpack", "arm", "babynames", "boot", "car", "cowplot", "devtools", "Epi", "ez", "faraway", "fivethirtyeight", "gapminder", "gee", "geepack", "GGally", "ggrepel", "ggridges", "ggthemes", "gridExtra", "Hmisc", "infer", "knitr", "lars", "lattice", "leaps", "lme4", "lmerTest", "lmtest", "magrittr", "markdown", "MASS", "mice", "mosaic", "multcomp", "NHANES", "OIsurv", "pander", "pROC", "pscl", "psych", "pwr", "qcc", "QuantPsyc", "quantreg", "rmarkdown", "rmdformats", "rms", "robustbase", "ROCR", "rstanarm", "sandwich", "simputation", "skimr", "styler", "survival", "survminer", "tableone", "tidyverse", "vcd", "viridis")`
 
 `install.packages(pkgs)`
 
