@@ -63,6 +63,7 @@ Elina Misicka	| Transition of Multiple Sclerosis Patients from Relapsing-Remitti
 Haeun Park	| It’s all about women’s hormones
 Preeti Pathak | Risk factors in accidental drug related deaths
 Sarah Planchon Pope	| Effect of Physical, Social, and Economic Factors on Obesity
+Gabrielle Rieth | Criminal Offenses in New York State, by City
 Kaylee Sarna |	Income Level and how it predicts systolic blood pressure in African Americans Age 25 and older
 Andrew Shan | Sleep Quality for Single Males
 Sandra Silva Camargo |	Predicting mortality after a prostate cancer diagnosis
