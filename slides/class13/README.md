@@ -37,6 +37,8 @@ As a quick example, to what extent did you allow yourself the time to ensure tha
     
 6. You may be interested in [this online learning community](https://www.jessemaegan.com/post/r4ds-march-challenge-participate-in-a-viewing-party/), which is working its way through R for Data Science, and holding a viewing party as its March challenge. Here's [more on the community and how to join](https://www.jessemaegan.com/post/join-the-r-for-data-science-online-learning-community/).
 
+7. I added [several new packages](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD) to the list we want you to install. These packages, specifically `robustbase`, `quantreg`, `lmtest`, `sandwich` and `boot` will be used in Class 14's discussion of robust linear regression models.
+
 ## Project Proposals
 
 All Project 1 Proposals have been reviewed by Dr. Love, as have all revisions to date. 
