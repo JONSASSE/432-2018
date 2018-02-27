@@ -11,7 +11,7 @@ But first, we'll discuss a few of my thoughts on the project proposals, which I'
 
 1. The most challenging and rewarding place to put your effort is in obtaining good data that can actually speak to an issue of interest. Such data are very, very hard to find, even in our data-centric times. From [Sean Taylor](https://twitter.com/seanjtaylor/status/968147593845813250?ref_src=twcamp%5Eshare%7Ctwsrc%5Eios%7Ctwgr%5Eemail%7Ctwcon%5E7100%7Ctwterm%5E1) "Unpopular advice: if OLS doesn't work then you should give up and get better data.
 2. An essential part of any statistical activity is how you communicate what you did, and what the findings are. The number one issue is clarity. Writing/speaking/presenting clearly takes time, and effort. 
-3. Statistics is a details business. You need to get all of the details right. 
+3. Statistics in particular and Science more generally is a details business. You need to get all of the details right. This means spelling, grammar, syntax, capitalization, formatting, labels, fonts, outlining, everything. Everything matters.
 
 As a quick example, to what extent did you allow yourself the time to ensure that the HTML output you created was edited in such a way as to make your key points clearly, without the distraction of errors, mislabeled materials, problematic formatting, and so forth?
 
