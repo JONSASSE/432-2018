@@ -42,8 +42,9 @@ As a quick example, to what extent did you allow yourself the time to ensure tha
 ## Project Proposals
 
 All Project 1 Proposals have been reviewed by Dr. Love, as have all revisions to date. 
-    + If your grade on [Canvas](https://canvas.case.edu/) is 10/10, you're done, and your project will be listed below.
-    + If it isn't 10/10, you need to fix the issues I described in my note on [Canvas](https://canvas.case.edu/), and resubmit.
+
++ If your grade on [Canvas](https://canvas.case.edu/) is 10/10, you're done, and your project will be listed below.
++ If it isn't 10/10, you need to fix the issues I described in my note on [Canvas](https://canvas.case.edu/), and resubmit.
 
 Here is the current list of accepted proposals. As of 12:50 PM on 2018-02-27, all but three students have completed this task.
 
