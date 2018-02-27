@@ -33,7 +33,7 @@ All Project 1 Proposals have been reviewed by Dr. Love, as have all revisions to
     + If your grade on [Canvas](https://canvas.case.edu/) is 10/10, you're done, and your project will be listed below.
     + If it isn't 10/10, you need to fix the issues I described in my note on [Canvas](https://canvas.case.edu/), and resubmit.
 
-Here is the current list of accepted proposals. As of 6:30 PM on 2018-02-26, 35 of 41 are accepted.
+Here is the current list of accepted proposals. As of 7 AM on 2018-02-27, 36 of 41 are accepted.
 
 Name | Project 1 Title
 -----------------------------: | -------------------------------------------------------------
@@ -48,6 +48,7 @@ Abhishek Deshpande |	Effect of Intravenous Fat Emulsions on Outcomes in Critical
 Katherine Dobbs |	Perinatal HIV exposure and child health in the first 24 months of life
 Gwendolyn Donley |	Predicting Outpatient Visits and Self-Reported Physical Limitation
 Caroline El Sanadi | Predicting Subject Plasma Triglycerides and Metabolic Syndrome using BMI and Basic Liver Health Indicators
+Jenny Feng | Evaluating Baseline Characteristics of Patients with Progressive Multiple Sclerosis
 Dongze He	| Predicting duration and result of endovascular aortic repair opeartion by disease history and physical indexes.
 Ryan Honomichl |	The Role of Problem- and Emotion-Focused Coping in the Prediction of Blood Pressure and Hypertension
 Jiajian Huang | What factors affect drug use in middle-aged people?
@@ -57,7 +58,7 @@ Nikolas Krieger |	Predicting Child Povery and Home Ownership in Counties of the 
 Carli Lehr |	Pleural Effusions After Lung Transplant and Their Relationship to Acute Cellular Rejection
 Kedar Mahajan |	What makes you sad or cognitively impaired?
 Roberto Martinez | How effectively can diet predict Plasma Glucose in the HHANES Hispanic population sample of 1982-1984?
-John McDonnell |	#PureEmotion
+John McDonnell | #PureEmotion
 Elina Misicka	| Transition of Multiple Sclerosis Patients from Relapsing-Remitting to Secondary Progressive Disease
 Haeun Park	| It’s all about women’s hormones
 Preeti Pathak | Risk factors in accidental drug related deaths
