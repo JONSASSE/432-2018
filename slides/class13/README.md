@@ -81,6 +81,7 @@ Gabrielle Rieth | Criminal Offenses in New York State, by City
 Kaylee Sarna |	Income Level and how it predicts systolic blood pressure in African Americans Age 25 and older
 Andrew Shan | Sleep Quality for Single Males
 Sandra Silva Camargo |	Predicting mortality after a prostate cancer diagnosis
+Connor Swingle | Predicting Minimum Wage Violations in Ohio
 Andrew Tang	| Repair, Reconstruct, or Resect: The Fate of the Perforated Esophagus
 Vinh Trinh | Predicting Student Academic Performance and Alcohol Consumption
 Sneha Vakamudi	| Does Anticoagulation Prevent Thrombus Formation in Cardiac Amyloidosis?
