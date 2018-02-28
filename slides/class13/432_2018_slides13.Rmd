@@ -159,12 +159,9 @@ Often, this choice is based on only a tiny difference in the quality of a fit to
 
 - Harrell: not reasonable to assume that a population regression coefficient would be exactly zero just because it failed to meet a criterion for significance. 
 - Efron: this approach is "overly greedy, impulsively eliminating covariates which are correlated with other covariates."
-
-Greenland:
-
-- Stepwise variable selection on confounders leaves important confounders uncontrolled.
-- Shrinkage approaches (like ridge regression and the lasso) are far superior to variable selection.
-- Variable selection does more damage to confidence interval widths than to point estimates.
+- Greenland: Stepwise variable selection on confounders leaves important confounders uncontrolled.
+- Greenland: Shrinkage approaches (like ridge regression and the lasso) are far superior to variable selection.
+- Greenland: Variable selection does more damage to confidence interval widths than to point estimates.
 
 So, what's the alternative?
 
@@ -337,7 +334,7 @@ The main problem with ridge regression is that all it does is shrink the coeffic
 
 ## The Lasso
 
-The lasso works by takes the sum of the **absolute values** of the estimated standardized regression coefficients and constrains it to only be as large as some value *k*.
+The lasso works by constraining the sum of the **absolute values** of the estimated standardized regression coefficients to be no larger than some value *k*.
 
 $$
 \sum \hat{|\beta_j|} \leq k.
@@ -345,7 +342,7 @@ $$
 
 This looks like a minor change from ridge regression's $\sum \hat{\beta_j}^2 \leq k$ constraint, but it's not.
 
-## The Name
+### The Name
 
 The lasso is not an acronym, but rather refers to cowboys using a rope to pull cattle from the herd, much as we will pull predictors from a model.
 
@@ -508,9 +505,9 @@ Or, in medical claims data, where we can have thousands of available codes to se
 
 Sure. The `glmnet` package is an interesting way to do several sets of model-building activities when the number of predictors is much larger than the sample size, especially if the predictors can be rescaled so as to avoid collinearity. We may return to this later in the term. An advantage of `glmnet` is that tidiers from `broom` are available.
 
-Check out, for instance, the elastic net (which bridges the gap between the lasso and ridge regression), and its performance comparison for a simulated study at https://www4.stat.ncsu.edu/~post/josh/LASSO_Ridge_Elastic_Net_-_Examples.html
+Check out, for instance, the elastic net (which bridges the gap between the lasso and ridge regression), and its performance comparison for a simulated study at [\textcolor{blue}{this link}](https://www4.stat.ncsu.edu/~post/josh/LASSO_Ridge_Elastic_Net_-_Examples.html)
 
-Or take a look at the `glmnet` package vignette at http://127.0.0.1:36989/help/library/glmnet/doc/glmnet_beta.pdf
+Or take a look at the `glmnet` package vignette at [\textcolor{blue}{this link}](http://127.0.0.1:36989/help/library/glmnet/doc/glmnet_beta.pdf)
 
 
 
