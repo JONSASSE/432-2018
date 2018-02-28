@@ -21,3 +21,5 @@ In today's class, we'll discuss robust linear regression, mostly using an exampl
         - material in the [required readings](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) from [How to be a Modern Scientist](https://github.com/THOMASELOVE/432-2018/tree/master/texts) and [R for Data Science](http://r4ds.had.co.nz/), and 
         - material discussed in class through Class 12 (plus a few specific "review" items from Classes 13 and 14, but will not include ridge regression, the lasso or robust linear models.
         
+3. All Project 1 Proposals have been reviewed by Dr. Love, and all students have now completed this task. The list of proposals [is now here](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/projects2018.md).
+
