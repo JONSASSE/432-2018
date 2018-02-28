@@ -2,6 +2,7 @@
 
 Link  | Date  | Topics Discussed include...
 --------: | ---------- | -------------------------------------------------------------
+[Class 14](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class14) | 2018-03-01 | Robust Linear Regression Methods
 [Class 13](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class13) | 2018-02-27 | Ridge Regression and the Lasso
 [Class 12](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class12) | 2018-02-22 | Logistic Models (again), Linear Regression via `ols`
 [Class 11](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class11) | 2018-02-20 | Logistic Regression with `lrm`
