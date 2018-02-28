@@ -44,7 +44,7 @@ Use a logistic regression model to predict the following binary outcome:
 
 on the basis of the following variables:
 
-- Female sex
+- sex (captured in an indicator of `female`)
 - subject's age at screening
 - Ratio of family income to poverty
 - Days physically active in the past 7
