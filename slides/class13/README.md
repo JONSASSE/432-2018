@@ -72,7 +72,7 @@ Nikolas Krieger |	Predicting Child Povery and Home Ownership in Counties of the 
 Carli Lehr |	Pleural Effusions After Lung Transplant and Their Relationship to Acute Cellular Rejection
 Kedar Mahajan |	What makes you sad or cognitively impaired?
 Roberto Martinez | How effectively can diet predict Plasma Glucose in the HHANES Hispanic population sample of 1982-1984?
-John McDonnell | #PureEmotion
+John McDonnell | #SweetEmotion
 Elina Misicka	| Transition of Multiple Sclerosis Patients from Relapsing-Remitting to Secondary Progressive Disease
 Haeun Park	| It’s all about women’s hormones
 Preeti Pathak | Risk factors in accidental drug related deaths
