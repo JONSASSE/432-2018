@@ -14,5 +14,5 @@ The [link to actually take the Quiz is here](https://goo.gl/forms/eeckOVxyggvWYA
 ## Enlarged Figures (to ease your viewing, only if necessary)
 
 - Model for Q07 [see pdf](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/model_for_Q07.pdf)
-- Nomogram A for Q08 [see pdf](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/nomogram_A_for_question_08.pdf)
-- Nomogram B for Q08 [see pdf](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/nomogram_B_for_question_08.pdf)
+- Nomogram A for Q08 [see pdf](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/nomogram_A_for_Q08.pdf)
+- Nomogram B for Q08 [see pdf](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/nomogram_B_for_Q08.pdf)
