@@ -15,7 +15,7 @@ Next time, in Class 15, we'll demonstrate five different robust linear regressio
     + In question 4, there was some confusion regarding my original wording of the question, which I revised Wednesday morning. Our goal is to get you to adjust for (among other variables) sex, ideally incorporated as an indicator variable for female, which you'll have to create from the available information.
     + Please make this deadline. We will post an answer sketch as soon as the deadline has passed, so we'll have to deduct points for late work that comes in after that sketch is posted.
     + [Grades for Homework 4](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4grades.pdf) are now available.
-    + We have provided you with a set of [four of the essays we liked from HW 4](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4_essays_we_liked_2018.pdf) which might help you see what we're looking for. Thanks to the students who wrote these essays for their permission to include them in this list.
+    + We have provided you with a set of [four of the essays we liked from HW 4](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4_essays_we_liked_2018.pdf) which might help you see what we're looking for. Thanks to the students who wrote these essays for their assent to include them in this list.
 
 2. [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1) will be made available to you by noon on Friday 2018-03-02. It is due at noon on Monday 2018-03-05. 
     - The data you'll need to do the quiz is now [available for download](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1).
