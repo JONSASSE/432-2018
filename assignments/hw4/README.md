@@ -5,6 +5,7 @@
 - Answer Sketch: [Download R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw4/hw4sketch.Rmd), or [View HTML result](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4sketch.html), or [Download or View PDF result](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4sketch.pdf)
 - [Grading Rubric](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/432-assignment-4-rubric.html) now available.
 - [Grades](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4grades.pdf) are also posted.
+- We have provided you with a set of [four of the essays we liked from HW 4](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4_essays_we_liked_2018.pdf) which might help you see what we're looking for. Thanks to the students who wrote these essays for their permission to include them in this list.
 
 ## Original Instructions
 
