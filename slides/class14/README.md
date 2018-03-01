@@ -5,7 +5,9 @@
 - [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class14) will be posted as they become available.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class14) will be posted as they become available.
 
-In today's class, we'll discuss robust linear regression, mostly using an example based on crime rates in the United States.
+In today's class, we'll discuss robust estimation of standard errors in linear regression and bootstrapping regression coefficients to deal with outlying values, mostly using an example based on crime rates in the United States.
+
+Next time, in Class 15, we'll demonstrate five different robust linear regression modeling approaches, including bounded influence regression, penalized least squares and quantile regression.
 
 ## Announcements Before Class 14
 
