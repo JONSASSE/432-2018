@@ -2,7 +2,8 @@
 
 This is the page where you will find some supplemental materials for Quiz 1.
 
-The [link to actually take the Quiz is here](https://goo.gl/forms/eeckOVxyggvWYAN12). It will go live shortly after class 14 concludes.
+The [link to actually take the Quiz is here](https://goo.gl/forms/eeckOVxyggvWYAN12). It is live now. 
+The deadline is NOON on Monday March 5.
 
 ## Data Sets (you will likely need to download and analyze all of these)
 
