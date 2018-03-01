@@ -17,7 +17,7 @@ Next time, in Class 15, we'll demonstrate five different robust linear regressio
 
 2. [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1) will be made available to you by noon on Friday 2018-03-02. It is due at noon on Monday 2018-03-05. 
     - The data you'll need to do the quiz is now [available for download](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1).
-    - The link to the Quiz will be posted [on the Quiz 1 page, as well](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1).
+    - The [link to actually take the Quiz is here](https://goo.gl/forms/eeckOVxyggvWYAN12). It will go live shortly after class 14 concludes. This link is posted [on the Quiz 1 page, as well](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1).
     - Quiz 1 is taken on a Google Form (like our Minute Papers), requires you to log into Google via CWRU, contains 32 questions, and covers:
         - material discussed in Chapters 1-10 and 12-15 of the Course Notes, and 
         - material in the [required readings](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) from [How to be a Modern Scientist](https://github.com/THOMASELOVE/432-2018/tree/master/texts) and [R for Data Science](http://r4ds.had.co.nz/), and 
