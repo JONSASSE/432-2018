@@ -1,0 +1,482 @@
+---
+title: "432 Class 14 Slides"
+author: "github.com/THOMASELOVE/432-2018"
+date: "2018-03-01"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    colortheme: "lily"
+    fonttheme: "structurebold"
+    fig_caption: FALSE
+---
+
+```{r set-options, echo=FALSE, cache=FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 60)
+```
+
+## Setup
+
+```{r, warning = FALSE, message = FALSE}
+library(skimr); library(MASS)
+library(robustbase); library(quantreg)
+library(lmtest); library(sandwich)
+library(boot); library(broom)
+library(rms)
+library(tidyverse)
+
+decim <- function(x, k) format(round(x, k), nsmall=k)
+```
+
+## Today's Materials
+
+- Crime in the United States
+- Sandwich Estimation of Standard Errors
+- Bootstrapping Regression Coefficients
+
+### Next Time
+
+1. Robust Linear Regression Methods with Huber weights
+2. Robust Linear Regression with bisquare weights (biweights)
+3. Bounded Influence Regression & Least Trimmed Squares
+4. Penalized Least Squares using `ols` in the `rms` package
+5. Quantile Regression on the Median
+
+# Some Motivating Graphs
+
+## A Simple Regression Model
+
+Suppose we were looking at a simple regression on a new batch of data.
+
+```{r}
+set.seed(20170421)
+newd <- data_frame(x = 1:18, y = rnorm(x, mean = x))
+newd$y[2] <- 24
+
+head(newd)
+```
+
+## Scatterplot of `newd`
+
+```{r, echo = FALSE}
+(p <- ggplot(newd, aes(x = x, y = y)) +
+    geom_point(size = 3) + 
+    theme_bw() 
+)
+```
+
+## Code for Last Slide and Next Slide
+
+```{r, eval = FALSE}
+(p <- ggplot(newd, aes(x = x, y = y)) +
+    geom_point(size = 3) + 
+    theme_bw() 
+)
+```
+
+### Add OLS line
+
+```{r, eval = FALSE}
+p + geom_smooth(method = "lm", col = "black")
+```
+
+## OLS regression line
+
+```{r, echo = FALSE}
+p + geom_smooth(method = "lm", col = "black")
+```
+
+## That outlier seems like a problem.
+
+Suppose we compare the ordinary least squares regression line we saw above to a new line, fit without including the outlier at the top left of the plot.
+
+### Code for next plot
+
+```{r, eval = FALSE}
+p + geom_smooth(method = "lm", se = FALSE, col = "black") +
+    geom_smooth(method = "lm", data = filter(newd, y < 20), 
+                col = "purple", linetype = "dashed")
+```
+
+## New Plot showing the outlier effect
+
+```{r, echo = FALSE}
+p + geom_smooth(method = "lm", se = FALSE, col = "black") +
+    geom_smooth(method = "lm", data = filter(newd, y < 20), 
+                col = "purple", linetype = "dashed")
+```
+
+## Add robust regression lines
+
+Now, let's add a line from a robust regression [the robust (Huber weights) line] with the "rlm" method, and a  quantile regression line using the "rq" method. 
+
+- Linear model (OLS) will be in black
+- Linear model (OLS) without the outlier in dashed purple
+- Robust Linear Model (via `rlm`) in blue
+- Quantile Regression Model (via `rq`) in red
+
+## Comparison of models
+
+```{r, echo = FALSE}
+p + geom_smooth(method = "lm", col = "black", se = FALSE) +
+    geom_smooth(method = "lm", data = filter(newd, y < 20), 
+                col = "purple", se = FALSE, 
+                linetype = "dashed") +
+    geom_smooth(method = "rlm", col = "blue", se = FALSE) +
+    geom_smooth(method = "rq", col = "red", se = FALSE)
+```
+
+## Comparison of models (code)
+
+```{r, eval = FALSE}
+p + geom_smooth(method = "lm", col = "black", se = FALSE) +
+    geom_smooth(method = "lm", data = filter(newd, y < 20), 
+                col = "purple", se = FALSE, 
+                linetype = "dashed") +
+    geom_smooth(method = "rlm", col = "blue", se = FALSE) +
+    geom_smooth(method = "rq", col = "red", se = FALSE)
+```
+
+## Sources and Resources
+
+Key sources for this document include:
+
+- \textcolor{blue}{http://stats.idre.ucla.edu/r/dae/robust-regression/}
+- \textcolor{blue}{http://www.alastairsanderson.com/R/tutorials/robust-regression-in-R/}
+- [\textcolor{blue}{John Fox's appendix on Applied Robust Regression}](https://socserv.socsci.mcmaster.ca/jfox/Books/Companion/appendix/Appendix-Robust-Regression.pdf)
+- \textcolor{blue}{https://cran.r-project.org/web/packages/robust/robust.pdf}
+- \textcolor{blue}{https://cran.r-project.org/web/packages/rms/rms.pdf}
+- \textcolor{blue}{http://www.statmethods.net/advstats/bootstrapping.html}
+
+# The `crimestat` Data
+
+## Data Source
+
+The `crimestat` data gathered here refer to 2016, mainly, and were obtained from:
+
+- \textcolor{blue}{http://www.worldatlas.com/articles/the-most-dangerous-states-in-the-u-s.html}
+- \textcolor{blue}{https://www.statista.com/statistics/242302/percentage-of-single-mother-households-in-the-us-by-state/}
+- and a few different Wikipedia sites,
+
+but the use of these data in this context is due to an older data set that appears in *Statistical Methods for Social Sciences*, Third Edition by Alan Agresti and Barbara Finlay (Prentice Hall, 1997), and which is the primary example at \textcolor{blue}{http://stats.idre.ucla.edu/r/dae/robust-regression/}
+
+## The `crimestat` data set
+
+For each of 51 states (including the District of Columbia), we have the state's ID number, postal abbreviation and full name, as well as:
+
+- **crime** - the violent crime rate per 100,000 people
+- **poverty** - the official poverty rate (% of people living in poverty in the state/district) in 2014
+- **single** - the percentage of households in the state/district led by a female householder with no spouse present and with her own children under 18 years living in the household in 2016
+- **trump** - whether Donald Trump won the popular vote in the 2016 presidential election in that state/district (which we'll \textcolor{red}{ignore for today})
+
+## The `crimestat` data set
+
+```{r}
+crimestat <- read.csv("crimestat.csv") %>% tbl_df
+crimestat
+```
+
+## Numerical Summaries
+
+```{r, eval = F}
+crimestat %>% select(poverty, single, crime) %>% skim
+```
+
+![](figures/fig01.png)
+
+## Modeling `crime` with `poverty` and `single`
+
+Our main goal will be to build a linear regression model to predict **crime** using **poverty** and **single**.
+
+We'll start by building an ordinary least squares model on the two predictors (after centering them, so that the intercept is meaningful) and looking at some diagnostics.
+
+```{r}
+crimestat <- crimestat %>%
+    mutate(pov_c = poverty - mean(poverty),
+           single_c = single - mean(single))
+```
+
+# Fitting an OLS model
+
+## Our first model `mod1` using OLS
+
+```{r}
+(mod1 <- lm(crime ~ pov_c + single_c, data = crimestat))
+confint(mod1)
+```
+
+## `glance(mod1)` and `tidy(mod1)`
+
+```{r, echo = FALSE}
+glance(mod1)
+```
+
+```{r, echo = FALSE}
+tidy(mod1)
+```
+
+Neither predictor meets our usual standard of having an estimate which is at least twice as large as the standard error.
+
+## Residual Plots for our model?
+
+```{r, echo = FALSE, fig.height = 6}
+par(mfrow=c(1,2))
+plot(mod1, which = c(1,2))
+```
+
+Potential Problems: States 9, 25 and maybe 2
+
+## Who are the outlier states?
+
+Points 9, 25 and maybe 2 look like they could be problematic. Which states are those?
+
+```{r}
+filter(crimestat, row_number() %in% c(9, 25, 2))
+```
+
+## Augmented Data Set with OLS results
+
+```{r}
+crime_with_mod1 <- augment(mod1, crimestat)
+head(crime_with_mod1, 3)
+```
+
+## Standardized Residuals vs. Fitted Values (code)
+
+```{r, eval = FALSE}
+ggplot(crime_with_mod1, aes(x = .fitted, y = .std.resid, 
+                           size = abs(.std.resid),
+                           col = -abs(.std.resid))) +
+    geom_label(aes(label = state)) +
+    guides(size = FALSE, col = FALSE) +
+    scale_color_continuous(low = "red", high = "black") +
+    theme_bw() +
+    labs(x = "Fitted Value from Linear Model",
+         y = "Standardized Residual")
+
+```
+
+## Standardized Residuals vs. Fitted Values
+
+```{r, echo = FALSE}
+ggplot(crime_with_mod1, aes(x = .fitted, y = .std.resid, 
+                           size = abs(.std.resid),
+                           col = -abs(.std.resid))) +
+    geom_label(aes(label = state)) +
+    guides(size = FALSE, col = FALSE) +
+    scale_color_continuous(low = "red", high = "black") +
+    theme_bw() +
+    labs(x = "Fitted Value from Linear Model",
+         y = "Standardized Residual")
+
+```
+
+## Cook's Distance vs. |Standardized Residuals| (code)
+
+```{r, eval = F}
+ggplot(crime_with_mod1, aes(x = abs(.std.resid), y = .cooksd, 
+                           size = .cooksd, 
+                           col = .cooksd < 0.2)) +
+    geom_label(aes(label = state)) +
+    guides(size = FALSE, col = FALSE) +
+    scale_color_discrete() +
+    theme_bw() +
+    labs(x = "|Standardized Residual from Linear Model|",
+         y = "Cook's Distance from Linear Model")
+```
+
+## Cook's Distance vs. |Standardized Residuals|
+
+```{r, echo = F}
+ggplot(crime_with_mod1, aes(x = abs(.std.resid), y = .cooksd, 
+                           size = .cooksd, 
+                           col = .cooksd < 0.2)) +
+    geom_label(aes(label = state)) +
+    guides(size = FALSE, col = FALSE) +
+    scale_color_discrete() +
+    theme_bw() +
+    labs(x = "|Standardized Residual from Linear Model|",
+         y = "Cook's Distance from Linear Model")
+```
+
+# What about just "robustifying" the standard errors of the coefficients?
+
+## Would Sandwich Estimation help for our original model?
+
+from [\textcolor{blue}{David Freedman}](https://www.stat.berkeley.edu/~census/mlesan.pdf):
+
+> The "Huber Sandwich Estimator" (for which Peter Huber is not to be blamed) can be used to estimate the variance of the MLE (maximum likelihood estimate) when the underlying model is incorrect. If the model is nearly correct, so are the usual standard errors, and robustification is unlikely to help much. On the other hand, if the model is seriously in error, the sandwich may help on the variance side, but the parameters being estimated by the MLE are likely to be meaningless.
+
+Sandwich estimation is mainly used to help address heteroscedasticity in linear regression, not so much with outliers. So, I doubt it will get us all the way to significance, but let's see...
+
+## Using `lmtest::coeftest` to get standard errors
+
+```{r}
+mod1 <- lm(crime ~ pov_c + single_c, data = crimestat)
+
+# requires lmtest package
+coeftest(mod1)
+```
+
+## Using `coeftest` for Robust (Huber) Standard Errors
+
+```{r}
+# requires lmtest and sandwich packages
+coeftest(mod1, vcov = sandwich)
+```
+
+## Using `coefci` for Robust (Huber) Standard Errors
+
+```{r}
+# requires lmtest and sandwich packages
+coefci(mod1, vcov = sandwich, level = 0.95)
+```
+
+# Bootstrapping Regression Coefficients
+
+## Bootstrapped Regression Coefficient Estimates
+
+I'd be happier using bootstrapped estimates in this setting. 
+
+Source: [\textcolor{blue}{statmethods.net link}](http://www.statmethods.net/advstats/bootstrapping.html)
+
+```{r}
+# requires boot package
+# build function to obtain regression weights
+bs <- function(formula, data, indices) {
+  d <- data[indices,] # allows boot to select sample 
+  fit <- lm(formula, data=d)
+  return(coef(fit)) 
+} 
+
+# now do R = 1000 replications
+set.seed(432222)
+results <- boot(data=crimestat, statistic=bs, 
+  	R=1000, formula = crime ~ pov_c + single_c)
+```
+
+## Bootstrapping Estimates with 1,000 replications
+
+```{r}
+results
+```
+
+## Plots of Bootstrapped Estimates (next 3 slides)
+
+```{r, eval = F}
+plot(results, index = 1) # intercept 
+plot(results, index = 2) # pov_c slope
+plot(results, index = 3) # single_c slope
+```
+
+## Intercept Estimates (bootstrap)
+
+```{r, echo = FALSE}
+plot(results, index = 1)
+```
+
+## `pov_c` Slope Estimates (bootstrap)
+
+```{r, echo = FALSE}
+plot(results, index = 2)
+```
+
+## `single_c` Slope Estimates (bootstrap)
+
+```{r, echo = FALSE}
+plot(results, index = 3)
+```
+
+## Obtain 95% Confidence Intervals
+
+```{r, eval = FALSE}
+boot.ci(results, type="bca", index=1) # intercept 
+boot.ci(results, type="bca", index=2) # pov_c slope
+boot.ci(results, type="bca", index=3) # single_c slope
+```
+
+## 95% Bootstrap CI for Intercept
+
+```{r}
+boot.ci(results, type="bca", index=1) # intercept 
+```
+
+## 95% Bootstrap CI for Slope of `pov_c`
+
+```{r}
+boot.ci(results, type="bca", index=2) # pov_c slope 
+```
+
+## 95% Bootstrap CI for Slope of `single_c`
+
+```{r}
+boot.ci(results, type="bca", index=3) # single_c slope 
+```
+
+## Standard, Sandwich and Bootstrapped 95% CIs for the Coefficients of our OLS model
+
+Fitted OLS Model:  `crime` = `r tidy(mod1, conf.int = TRUE) %>% filter(term == "(Intercept)") %>% select(estimate) %>% decim(.,1)` + `r tidy(mod1, conf.int = TRUE) %>% filter(term == "pov_c") %>% select(estimate) %>% decim(.,1)` x `pov_c` + `r tidy(mod1, conf.int = TRUE) %>% filter(term == "single_c") %>% select(estimate) %>% decim(.,1)` x `single_c`
+
+Fit | Intercept CI | `pov_c` CI | `single_c` CI 
+---------: | ----------: | ----------: | ----------: 
+OLS | (`r tidy(mod1, conf.int = TRUE) %>% filter(term == "(Intercept)") %>% select(conf.low) %>% decim(.,1)`, `r tidy(mod1, conf.int = TRUE) %>% filter(term == "(Intercept)") %>% select(conf.high) %>% decim(.,1)`) | (`r tidy(mod1, conf.int = TRUE) %>% filter(term == "pov_c") %>% select(conf.low) %>% decim(.,1)`, `r tidy(mod1, conf.int = TRUE) %>% filter(term == "pov_c") %>% select(conf.high) %>% decim(.,1)`) | (`r tidy(mod1, conf.int = TRUE) %>% filter(term == "single_c") %>% select(conf.low) %>% decim(.,1)`, `r tidy(mod1, conf.int = TRUE) %>% filter(term == "single_c") %>% select(conf.high) %>% decim(.,1)`) 
+OLS with sandwich | (`r decim(coefci(mod1, vcov = sandwich, level = 0.95)[1],1)`, `r decim(coefci(mod1, vcov = sandwich, level = 0.95)[4],1)`) | (`r decim(coefci(mod1, vcov = sandwich, level = 0.95)[2],1)`, `r decim(coefci(mod1, vcov = sandwich, level = 0.95)[5],1)`) | (`r decim(coefci(mod1, vcov = sandwich, level = 0.95)[3],1)`, `r decim(coefci(mod1, vcov = sandwich, level = 0.95)[6],1)`) 
+OLS, bootstrapped | (`r decim(boot.ci(boot.out = results, type = "bca", index = 1)$bca[,4],1)`, `r decim(boot.ci(boot.out = results, type = "bca", index = 1)$bca[,5],1)`) | (`r decim(boot.ci(boot.out = results, type = "bca", index = 2)$bca[,4],1)`, `r decim(boot.ci(boot.out = results, type = "bca", index = 2)$bca[,5],1)`) | (`r decim(boot.ci(boot.out = results, type = "bca", index = 3)$bca[,4],1)`, `r decim(boot.ci(boot.out = results, type = "bca", index = 3)$bca[,5],1)`)
+
+## Comparison Plot (code, next two slides)
+
+```{r, echo = FALSE}
+res_class14 <- data_frame(
+    approach = c(rep("OLS",3), rep("Sandwich",3), rep("Bootstrap",3)),
+    parameter = c(rep(c("Intercept", "Poverty, centered", "Single, centered"),3)),
+    estimate = c(rep(c(364.4, 16.1, 23.8),3)),
+    conf.low = c(318.3, -3.2, -13.1, 319.7, -5.8, -4.2, 328.9, -2.9, -11.2),
+    conf.high = c(410.5, 35.4, 60.8, 409.1, 38.0, 51.9, 421.8, 41.1, 50.4)
+)
+
+ggplot(res_class14, aes(x = approach, y = estimate, col = approach)) +
+    geom_point() +
+    geom_errorbar(aes(ymin = conf.low, ymax = conf.high)) +
+    labs(x = "Estimation Approach", 
+         y = "95% CI bounds using indicated Approach",
+         caption = "Point Estimates from OLS: not varying here by Approach") +
+    guides(col = FALSE) +
+    theme_bw() +
+    facet_wrap(~ parameter, scales = "free_y")
+```
+
+## Code for plot on prior slide (part 1)
+
+```{r, eval = FALSE}
+res_class14 <- data_frame(
+    approach = c(rep("OLS",3), rep("Sandwich",3), 
+                 rep("Bootstrap",3)),
+    parameter = c(rep(c("Intercept", "Poverty, centered", 
+                        "Single, centered"),3)),
+    estimate = c(rep(c(364.4, 16.1, 23.8),3)),
+    conf.low = c(318.3, -3.2, -13.1, 319.7, -5.8, -4.2, 
+                 328.9, -2.9, -11.2),
+    conf.high = c(410.5, 35.4, 60.8, 409.1, 38.0, 51.9, 
+                  421.8, 41.1, 50.4)
+)
+```
+
+## Code for plot on prior slide (part 2)
+
+```{r, eval = FALSE}
+ggplot(res_class14, aes(x = approach, y = estimate, 
+                        col = approach)) +
+    geom_point() +
+    geom_errorbar(aes(ymin = conf.low, ymax = conf.high)) +
+    labs(x = "Estimation Approach", 
+         y = "95% CI bounds using indicated Approach",
+         caption = "Point Estimates from OLS: 
+         not varying here by Approach") +
+    guides(col = FALSE) +
+    theme_bw() +
+    facet_wrap(~ parameter, scales = "free_y")
+```
+
+## Good luck on the Quiz!
+
+Due Monday at Noon.
