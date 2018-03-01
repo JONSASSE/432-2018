@@ -16,7 +16,7 @@ I have provided three essay prompts below. Select **one** of the three available
 
 # The Data for Questions 2-9.
 
-The data come from the [NHANES National Youth Fitness Survey](http://wwwn.cdc.gov/nchs/nhanes/search/nnyfs12.aspx). Data collected in the `nnyf1.csv` file above and on the [Data and Code] page from our site come from the **Demographics** files, and from the **Medical Conditions** and **Physical Activity** files, which are each part of the **Questionnaire** data.
+The data come from the [NHANES National Youth Fitness Survey](http://wwwn.cdc.gov/nchs/nhanes/search/nnyfs12.aspx). Data collected in the `nnyfs1.csv` file above and on the [Data and Code] page from our site come from the **Demographics** files, and from the **Medical Conditions** and **Physical Activity** files, which are each part of the **Questionnaire** data.
 
 I merged files on the basis of the respondent sequence number (SEQN). The variables available to you are:
 
