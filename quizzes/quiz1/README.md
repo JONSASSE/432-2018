@@ -1,6 +1,8 @@
 # Quiz 1
 
-This is the page where you will find some supplemental materials for Quiz 1, as well as the link to complete the Quiz, when the time comes.
+This is the page where you will find some supplemental materials for Quiz 1.
+
+The [link to complete the Quiz is here](https://goo.gl/forms/eeckOVxyggvWYAN12). It will go live shortly after class 14 concludes.
 
 ## Data Sets (you will likely need to download and analyze all of these)
 
