@@ -27,8 +27,9 @@ Next time, in Class 15, we'll demonstrate five different robust linear regressio
 
 4. If you're having trouble with grammar, syntax or other writing requirements of the class, please consider visiting the [CWRU Writing Resource Center](http://writingcenter.case.edu/).
 
-5. If you're having trouble with more than a few typographical errors and misspellings, then consider using the spell check within R Studio. How can you use this in an R Markdown document?
-    - A spell check button to the right of the save button (with "ABC" and a check mark).
-    - Edit > Check Spelling...
-    - The F7 key
+5. If you're having trouble with typographical errors and misspellings, please consider using the spell check within R Studio. 
+    - How can you use this tool in an R Markdown document?
+        + A spell check button to the right of the save button (with "ABC" and a check mark).
+        + Edit > Check Spelling...
+        + The F7 key
 
