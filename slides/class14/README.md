@@ -23,7 +23,9 @@ Next time, in Class 15, we'll demonstrate five different robust linear regressio
         - material in the [required readings](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) from [How to be a Modern Scientist](https://github.com/THOMASELOVE/432-2018/tree/master/texts) and [R for Data Science](http://r4ds.had.co.nz/), and 
         - material discussed in class through Class 12 (plus a few specific "review" items from Classes 13 and 14, but will not include ridge regression, the lasso or robust linear models.
         
-3. All Project 1 Proposals have been reviewed by Dr. Love, and all students have now completed this task. The list of proposals [is now here](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/projects2018.md).
+3. All Project 1 Proposals have been reviewed by Dr. Love, and all students have now completed this task. 
+    - The list of proposals [is now here](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/projects2018.md).
+    - Don't forget that you're going to need to share your progress with colleagues one week from today. You'll do so by submitting your work to Canvas. I hope you'll have at least some 
 
 4. If you're having trouble with grammar, syntax or other writing requirements of the class, please consider visiting the [CWRU Writing Resource Center](http://writingcenter.case.edu/).
 
