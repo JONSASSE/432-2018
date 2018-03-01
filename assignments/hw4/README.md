@@ -4,7 +4,7 @@
 
 - Answer Sketch: [Download R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw4/hw4sketch.Rmd), or [View HTML result](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4sketch.html), or [Download or View PDF result](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4sketch.pdf)
 - [Grading Rubric](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/432-assignment-4-rubric.html) now available.
-- Grades will be posted when they are complete.
+- [Grades](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4grades.pdf) are also posted.
 
 ## Original Instructions
 
