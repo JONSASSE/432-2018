@@ -23,3 +23,10 @@ In today's class, we'll discuss robust linear regression, mostly using an exampl
         
 3. All Project 1 Proposals have been reviewed by Dr. Love, and all students have now completed this task. The list of proposals [is now here](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/projects2018.md).
 
+4. If you're having trouble with grammar, syntax or other writing requirements of the class, please consider visiting the [CWRU Writing Resource Center](http://writingcenter.case.edu/).
+
+5. If you're having trouble with more than a few typographical errors and misspellings, then consider using the spell check within R Studio. How can you use this in an R Markdown document?
+    - A spell check button to the right of the save button (with "ABC" and a check mark).
+    - Edit > Check Spelling...
+    - The F7 key
+
