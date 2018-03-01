@@ -11,7 +11,7 @@ In today's class, we'll discuss robust linear regression, mostly using an exampl
 
 1. [Homework 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) is due this Friday, 2018-03-02 at 1 PM. 
     + In question 4, there was some confusion regarding my original wording of the question, which I revised Wednesday morning. Our goal is to get you to adjust for (among other variables) sex, ideally incorporated as an indicator variable for female, which you'll have to create from the available information.
-    + We'll post grades for Homework 4 as soon as they are available.
+    + [Grades for Homework 4](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw4/hw4grades.pdf) are now available.
 
 2. [Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1) will be made available to you by noon on Friday 2018-03-02. It is due at noon on Monday 2018-03-05. 
     - The data you'll need to do the quiz is now [available for download](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1).
