@@ -20,7 +20,7 @@ The data come from the [NHANES National Youth Fitness Survey](http://wwwn.cdc.go
 
 I merged files on the basis of the respondent sequence number (SEQN). The variables available to you are:
 
-1. `SEQN` - the *respondent sequence number* (there are 1,576 subject in the `nnyfs1.csv` file made available to you)
+1. `SEQN` - the *respondent sequence number* (there are 1,576 subjects in the `nnyfs1.csv` file made available to you)
 2. `RIASEX` (from the Demographics files) - *sex of subject (1 = male, 2 = female)*
 3. `RIDAGEYR` (from the Demographics files) - *age in years at screening (3-15)*
 4. `RIDRETH1` (from the Demographics files) - *race/hispanic origin (1 = Mexican-American, 2 = Other Hispanic, 3 = Non-Hispanic White, 4 = Non-Hispanic Black, 5 = Other Race including Multi-Racial)*
