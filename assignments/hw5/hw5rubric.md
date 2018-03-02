@@ -80,4 +80,4 @@ I expect most of the trouble to be in the interpretation.
 
 # Lateness
 
-The sketch will be posted by 1:10 PM on 2018-03-02. Students turning in the assignment after 2 PM on 2018-03-02 will lose 20 points from their total. TAs shouldn't reduce points, Dr. Love will do that - simply specify that the student turned in the assignment after 2 PM in the comments field in the grading spreadsheet.
+The sketch was posted at 1:05 PM on 2018-03-02. Students turning in the assignment after 2 PM on 2018-03-02 will lose 20 points from their total. TAs shouldn't reduce points, Dr. Love will do that - simply specify that the student turned in the assignment after 2 PM in the comments field in the grading spreadsheet.
