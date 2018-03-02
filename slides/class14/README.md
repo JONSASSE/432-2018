@@ -3,7 +3,7 @@
 ### Key Materials
 
 - The slides for Class 14 are [available in PDF](https://github.com/THOMASELOVE/432-2018/blob/master/slides/class14/432_2018_slides14.pdf) or [in R Markdown format](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class14/432_2018_slides14.Rmd).
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class14) will be posted as they become available.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class14) are now available.
 
 In today's class, we'll discuss robust estimation of standard errors in linear regression and bootstrapping regression coefficients to deal with outlying values, mostly using an example based on crime rates in the United States.
 
