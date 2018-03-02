@@ -26,7 +26,7 @@ I merged files on the basis of the respondent sequence number (SEQN). The variab
 4. `RIDRETH1` (from the Demographics files) - *race/hispanic origin (1 = Mexican-American, 2 = Other Hispanic, 3 = Non-Hispanic White, 4 = Non-Hispanic Black, 5 = Other Race including Multi-Racial)*
 5. `INDFMPIR` (from the Demographics files; **impute** all subjects with missing values on the basis of `RIDRETH1` and `RIDAGEYR`) - *ratio of family income to poverty (data show 0-4.99, and then truncated as 5 for all who are in fact greater than or equal to 5)*
 6. `MCQ010` (from the Medical Conditions files; all subjects should have values of 1 [Yes] or 2 [No]) - *has the child ever been told they have asthma*
-7. `PAQ706` (from the Physical Activity files; **drop** all subjects with values other than 0, 1, 2, 3, 4, 5, 6, or 7) - *days (in the past 7) physically active at least 60 minutes*
+7. `PAQ706` (from the Physical Activity files; **drop** all subjects with values other than 0, 1, 2, 3, 4, 5, 6, or 7) - *days (in the past 7) physically active at least 60 minutes* **I absolutely expect you to treat this as a quantitative variable in your modeling. It is a count, and should be treated as quantitative.**
 
 # Question 2 (5 points)
 
@@ -69,5 +69,5 @@ Use the model you fit in Question 4 to provide a prediction for the probability 
 
 # Question 9 (15 points)
 
-Refit the model you fit in Question 4 but now, add in an additional predictor variable that indicates if the subject's race/Hispanic origin value is Non-Hispanic White (i.e. RIDRETH1 = 3), or not. Decide whether or not an interaction term between age and race/ethnicity is required (but do not consider other interaction terms or other types of non-linearity). Specify the logistic regression equation you wind up with. 
+Refit the model you fit in Question 4 but now, add in an additional predictor variable that indicates if the subject's race/Hispanic origin value is Non-Hispanic White (i.e. RIDRETH1 = 3), or not. Decide whether or not an interaction term between age and race/ethnicity is required (but do not consider other interaction terms or other types of non-linearity). Specify the logistic regression equation you wind up fitting. 
 
