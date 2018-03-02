@@ -3,7 +3,7 @@
 ## After the Deadline
 
 - At 1:05 PM on 2018-03-02, Dr. Love posted the [grading rubric](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw5/hw5rubric.md).
-- He also posted an [answer sketch in PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw5/hw5sketch.pdf), and [as a R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw5/hw5sketch.Rmd) and as a [HTML file you can preview here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw5/hw5sketch.html)
+- He also posted an [answer sketch in PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw5/hw5sketch.pdf), and [as a R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw5/hw5sketch.Rmd) and as a [HTML file you can preview here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw5/hw5sketch.html).
 - Assignments received after 2 PM on Friday 2018-03-02 will lose 20 points out of the total of 100.
 
 ## The Assignment...
