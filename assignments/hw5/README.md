@@ -1,5 +1,12 @@
 # 432 Homework 5 for Spring 2018
 
+## After the Deadline
+
+- We will post a grading rubric and an answer sketch to this page shortly after the deadline, which is 1 PM on Friday 2018-03-02.
+- Assignments received after 2 PM on Friday 2018-03-02 will lose 20 points out of the total of 100.
+
+## The Assignment...
+
 Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **1 PM on Friday 2018-03-02**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file. 
 
 Start a separate R Project for Homework 5 as your first step, and place all of your work in that project's directory.
