@@ -9,4 +9,4 @@ In today's class, we'll demonstrate five different robust linear regression mode
 
 ## Announcements before class.
 
-1. I'm sure I'll have some.
+1. We will meet in Room E321-323 for the rest of the semester, **except for** April 5, when we'll meet in E301 again. Sorry about last Thursday. We're still not sure what happened.
