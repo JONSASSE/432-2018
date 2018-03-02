@@ -43,7 +43,7 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 20 | Thu 2018-03-29 | **Survival Analysis**, 2
 -- | Fri 2018-03-30 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 21 | Tue 2018-04-03 | *To Be Determined* (project presentation dates announced)
-22 | Thu 2018-04-05 | *To Be Determined*
+22 | Thu 2018-04-05 | *To Be Determined* **SPECIAL ROOM: Class to be held in E301**
 -- | Fri 2018-04-06 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 23 | Tue 2018-04-10 | *To Be Determined*
 24 | Thu 2018-04-12 | *To Be Determined*
