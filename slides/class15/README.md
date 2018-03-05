@@ -5,7 +5,7 @@
 - [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15) will be posted as they become available.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15) will be posted as they become available.
 
-In today's class, we'll demonstrate five different robust linear regression modeling approaches, including bounded influence regression, penalized least squares and quantile regression.
+In today's class, we'll demonstrate five different robust linear regression modeling approaches, including bounded influence regression, penalized least squares and quantile regression. We'll also discuss Quiz 1.
 
 ## Announcements before class.
 
