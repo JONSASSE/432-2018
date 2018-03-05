@@ -35,3 +35,6 @@ In today's class, we'll demonstrate five different robust linear regression mode
     - The American Statistical Association has been [celebrating women in statistics and data science](https://www.youtube.com/watch?v=y2udE5N4l_4). There are a lot of terrific [stories here](http://magazine.amstat.org/statisticians-in-history/wis/?utm_content=buffer43082&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). If you're not interested, then you're probably the target audience.
     - I know a pathetically tiny amount about statistical genomics. But even I know that a solution for working with tidy data in bioinformatics is likely to be useful to some people. Consider [this, from Stuart Lee](https://sa-lee.github.io/plyranges/).
     
+## Quiz 1 Results
+
+41 people took the quiz. The high score was 99/100, and the median was 85. Grades will be in your hands before class begins.
