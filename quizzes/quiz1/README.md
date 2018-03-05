@@ -2,8 +2,14 @@
 
 This is the page where you will find some supplemental materials for Quiz 1.
 
-The [link to actually take the Quiz is here](https://goo.gl/forms/eeckOVxyggvWYAN12). It is live now. 
-The deadline is NOON on Monday March 5.
+The quiz is over. A printed version of the questions is available [here as a password-protected PDF](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/quiz01_printed.pdf).
+
+## Results and Answer Sketches
+
+The Quiz 1 answer sketch is [available here as a PDF](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/quiz01.pdf), and can be [viewed in HTML here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/quiz01.html).
+
+- The grades neatly split the 41 students in the class into 4 groups of 8 and one group of 9. 
+- The highest score was 99 and the median was 85, out of 100 points.
 
 ## Data Sets (you will likely need to download and analyze all of these)
 
