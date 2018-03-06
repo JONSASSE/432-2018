@@ -47,14 +47,12 @@ If you have questions about the Quiz or your grade on the Quiz, please email 431
 
 ### How long (in HOURS) did it take you to do Quiz 1?
 
-Here's a little stem-and-leaf plot through the first 38 responses. (n = 38, mean = 6.3, sd = 2.7, median = 5.25)
-
 ```
 03 | 0057
-04 | 00000 00
-05 | 00000 00057
+04 | 00000 000
+05 | 00000 00005 7
 06 | 0000
-07 | 000
+07 | 0000
 08 | 000
 09 |
 10 | 0000
@@ -65,18 +63,21 @@ Here's a little stem-and-leaf plot through the first 38 responses. (n = 38, mean
 15 | 0
 ```
 
+- Note that `03 | 5` means 3.5 hours, and `03 | 7` means 3.75 hours.
+- *n* = 41, mean = 6.2, sd = 2.7, median = 5
+
 ### What was the most difficult question on the Quiz, for you?
 
 Question | Votes | % of Available Points Awarded
 ---: | ---: | --------------:
-Q21 | 13    | a 90%, b 88%, c 85%, d **63%**, e 66%
+Q21 | 14.33 | a 90%, b 88%, c 85%, d **63%**, e 66%
 Q24 | 12.33 | a 76%, b 68%, c 73%, d 66%
-Q19 | 7.33  | **39%**
+Q19 | 8.67  | **39%**
+Q23 | 1.17  | **22%**
 Q01 | 1     | 90%
 Q22 | 1     | 98%
 Q25 | 1     | 88%
 Q28 | 1     | **54%**
-Q23 | 0.83  | **22%**
 Q18 | 0.5   | 85%
 Q15 | 0     | **59%**
 Q29 | 0     | **63%**
