@@ -82,6 +82,8 @@ Q18 | 0.5   | 85%
 Q15 | 0     | **59%**
 Q29 | 0     | **63%**
 
+I'll discuss Questions 15, 19, 21, 23, 24, 28 and 29 in class today.
+
 ## Project 1 Groups for Discussion in Class on Thursday
 
 Group 1 has 5 members, the rest have 4 each.
