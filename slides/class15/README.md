@@ -9,7 +9,7 @@ In today's class, we'll demonstrate five different robust linear regression mode
 
 ## Project 1 Groups for Discussion in Class on Thursday
 
-Group 1 has 5 members, the rest have 4 each. As we're getting started, can you arrange to sit near the other members of your group, so you can make sure you know each others' names?
+Group 1 has 5 members, the rest have 4 each. **As we're getting started, can you arrange to sit near the other members of your group today**, so you can make sure you know each others' names?
 
 Group | Names
 ------: | -----------------------------------------------------------------------------
