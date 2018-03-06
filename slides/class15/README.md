@@ -2,7 +2,7 @@
 
 ### Key Materials
 
-- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15) will be posted as they become available.
+- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15) are now available.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15) will be posted as they become available.
 
 In today's class, we'll demonstrate five different robust linear regression modeling approaches, including bounded influence regression, penalized least squares and quantile regression. We'll also discuss Quiz 1.
@@ -41,4 +41,42 @@ In today's class, we'll demonstrate five different robust linear regression mode
 - The high score was 99/100, and the median was 85. 
 - Grades have been emailed to you, and the [answer sketch is available online](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1).
 
-If you have questions about the Quiz, please email 431-help.
+If you have questions about the Quiz or your grade on the Quiz, please email 431-help or Dr. Love.
+
+## Minute Paper after Quiz 1
+
+### How long (in HOURS) did it take you to do Quiz 1?
+
+Here's a little stem-and-leaf plot through the first 38 responses. (n = 38, mean = 6.3, sd = 2.7, median = 5.25)
+
+```
+03 | 0057
+04 | 00000 00
+05 | 00000 00057
+06 | 0000
+07 | 000
+08 | 000
+09 |
+10 | 0000
+11 | 0
+12 | 0
+13 |
+14 |
+15 | 0
+```
+
+### What was the most difficult question on the Quiz, for you?
+
+Question | Votes | % of Available Points Awarded
+---: | ---: | --------------:
+Q21 | 13    | a 90%, b 88%, c 85%, d **63%**, e 66%
+Q24 | 12.33 | a 76%, b 68%, c 73%, d 66%
+Q19 | 7.33  | **39%**
+Q01 | 1     | 90%
+Q22 | 1     | 98%
+Q25 | 1     | 88%
+Q28 | 1     | **54%**
+Q23 | 0.83  | **22%**
+Q18 | 0.5   | 85%
+Q15 | 0     | **59%**
+Q29 | 0     | **63%**
