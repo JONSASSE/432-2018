@@ -37,4 +37,8 @@ In today's class, we'll demonstrate five different robust linear regression mode
     
 ## Quiz 1 Results
 
-41 people took the quiz. The high score was 99/100, and the median was 85. Grades will be in your hands before class begins.
+- 41 people took the quiz. 
+- The high score was 99/100, and the median was 85. 
+- Grades have been emailed to you, and the [answer sketch is available online](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1).
+
+If you have questions about the Quiz, please email 431-help.
