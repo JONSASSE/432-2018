@@ -56,7 +56,8 @@ You need to submit your project as it currently stands to Canvas for review by y
     - I encourage anyone who is interested to attend the Center for Health Care Research and Policy's weekly Health Services Research Seminars. The next two weeks should be especially interesting:
         - On Friday March 9 from 9 to 10:30 AM, Professor Adam Perzynski will discuss "What are We Going to do about the Social Determinants of Health? Challenges, Opportunities, Dead Ends and Solutions."
         - On Friday March 16 from 9 to 10:30 AM, Professor Thomas Love will discuss "Rethinking Statistical Significance"
-        - Both talks are set at a level that will be of interest to graduate students in PQHS, and we encourage you to join us. Seminars are held in room R219, on the second floor of the Rammelkamp Research and Education Building at MetroHealth Medical Center, 2500 MetroHealth Drive, Cleveland OH 44109-1998. PQHS students are welcome at all HSR Seminars. The schedule can be found at chrp.org/events.
+        - Both talks are set at a level that will be of interest to graduate students in PQHS, and we encourage you to join us. 
+        - PQHS 432 students are welcome at all HSR Seminars. The schedule can be found at chrp.org/events. Seminars are held in room R219, on the second floor of the Rammelkamp Research and Education Building at MetroHealth Medical Center, 2500 MetroHealth Drive, Cleveland OH 44109-1998.
 
 7. On other topics:
     - For Project 2, you will need some nice data to chew on. One possible source of interesting ideas is the [Data is Plural](https://tinyletter.com/data-is-plural) newsletter of useful/curious data sets.
