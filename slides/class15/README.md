@@ -7,7 +7,7 @@
 
 In today's class, we'll demonstrate five different robust linear regression modeling approaches, including bounded influence regression, penalized least squares and quantile regression. We'll also discuss Quiz 1.
 
-## Announcements before class.
+## Announcements before class
 
 1. We will meet in Room E321-323 for the rest of the semester, **except for** April 5, when we'll meet in E301 again. Sorry about last Thursday. We're still not sure what happened.
 
@@ -80,3 +80,22 @@ Q23 | 0.83  | **22%**
 Q18 | 0.5   | 85%
 Q15 | 0     | **59%**
 Q29 | 0     | **63%**
+
+## Project 1 Groups for Discussion in Class on Thursday
+
+Group 1 has 5 members, the rest have 4 each.
+
+Group | Names
+------: | -----------------------------------------------------------------------------
+1 | Laura Baldassari, Jenny Feng, Maher Kazimi, Satyakam Mishra, Vinh Trinh
+2 | Zainab (Albar) Albar, Dongze (Zaza) He, Nik Krieger, Andrew Shan
+3 | Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson
+4 | Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang
+5 | Ryan Honomichl, JJ Huang, Xin Xin Yu, Bilal Zonjy
+6 | Khaled Alayed, Kedar Mahajan, Preeti Pathak, Sarah Planchon Pope
+7 | Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez
+8 | Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth
+9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
+10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
+
+You need to submit your project as it currently stands to Canvas for review by your colleagues in your group on Thursday. Submit your work before class begins, please.
