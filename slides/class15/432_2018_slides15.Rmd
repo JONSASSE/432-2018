@@ -37,11 +37,210 @@ decim <- function(x, k) format(round(x, k), nsmall=k)
 4. Penalized Least Squares using `ols` in the `rms` package
 5. Quantile Regression on the Median
 
-## Comments on Quiz 1
+- Looking forward to Thursday
 
-I've probably said most of what should be said.
+# Project 1 Groups
 
-If you have a complaint or question about grading on Quiz 1 after looking over the answer sketch, including the Results section, the most useful thing to do is email it to me, or to 431-help.
+## Project 1 Groups for Discussion in Class on Thursday
+
+Group | Names
+------: | -----------------------------------------------------------------------------
+1 | Laura Baldassari, Jenny Feng, Maher Kazimi, Satyakam Mishra, Vinh Trinh
+2 | Zainab (Albar) Albar, Dongze (Zaza) He, Nik Krieger, Andrew Shan
+3 | Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson
+4 | Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang
+5 | Ryan Honomichl, JJ Huang, Xin Xin Yu, Bilal Zonjy
+6 | Khaled Alayed, Kedar Mahajan, Preeti Pathak, Sarah Planchon Pope
+7 | Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez
+8 | Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth
+9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
+10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
+
+
+# Quiz 1
+
+## Quiz 1: How Long Did It Take?
+
+```{r, echo = FALSE}
+q1min <- read.csv("q1minute.csv") %>% tbl_df
+
+ggplot(q1min, aes(x = time_on_quiz)) +
+    geom_histogram(binwidth = 1, fill = "royalblue", col = "white") +
+    scale_y_continuous(breaks = c(0, 2, 4, 6, 8, 10)) +
+    scale_x_continuous(breaks = c(3, 6, 9, 12, 15)) + 
+    labs(y = "Number of Students",
+         x = "How long (in hours) did it take to do Quiz 1?") +
+    geom_label(x = 11, y = 8, label = "n = 41, mean = 6.23 hours, sd = 2.69 hours") +
+    geom_label(x = 11, y = 7, label = "min = 3, q25 = 4, med = 5, q75 = 7, max = 15")
+```
+
+## Is Time Taken Associated with Score?
+
+```{r, echo = FALSE}
+ggplot(q1min, aes(x = time_on_quiz, y = grade_on_quiz)) +
+    geom_jitter(width = 0.2, size = 2, pch = 21, fill = "royalblue") + 
+    labs(y = "(Truncated) Final Score on Quiz 1 (out of 100)",
+         x = "(Jittered) How long (in hours) did it take to do Quiz 1?")
+```
+
+## Time and Grade? (with OLS and loess fits)
+
+```{r, echo = FALSE}
+ggplot(q1min, aes(x = time_on_quiz, y = grade_on_quiz)) +
+    geom_smooth(method = "lm", se = FALSE, col = "red") +
+    geom_smooth(method = "loess", col = "blue") +
+    geom_jitter(width = 0.2, size = 2, pch = 21, fill = "royalblue") + 
+    labs(y = "(Truncated) Final Score on Quiz 1 (out of 100)",
+         x = "(Jittered) How long (in hours) did it take to do Quiz 1?",
+         caption = "with OLS (red) and LOESS (blue) fits")
+```
+
+## OLS fit
+
+```
+Linear Regression Model
+ 
+ ols(formula = grade_on_quiz ~ time_on_quiz, data = q1min)
+ 
+                  Model Likelihood      Discrimination    
+                     Ratio Test            Indexes        
+ Obs       41     LR chi2      0.95     R2       0.023    
+ sigma 7.7226     d.f.            1     R2 adj  -0.002    
+ d.f.      39     Pr(> chi2) 0.3296     g        1.240    
+
+               Coef     S.E.    t      Pr(>|t|)
+ Intercept     86.8956  3.0707  28.30   <0.0001 
+ time_on_quiz  -0.4333  0.4532  -0.96    0.3448  
+```
+
+## Quiz 1: What question was hardest?
+
+Question | Votes | % of Available Points Awarded
+---: | ---: | --------------:
+Q21 | 14.33 | a 90%, b 88%, c 85%, d **63%**, e 66%
+Q24 | 12.33 | a 76%, b 68%, c 73%, d 66%
+Q19 | 8.67  | **39%**
+Q23 | 1.17  | **22%**
+Q01 | 1     | 90%
+Q22 | 1     | 98%
+Q25 | 1     | 88%
+Q28 | 1     | **54%**
+Q18 | 0.5   | 85%
+Q15 | 0     | **59%**
+Q29 | 0     | **63%**
+
+I'll discuss Questions 15, 19, 21, 23, 24, 28 and 29 in class today.
+
+## Scoring on the questions you thought were hardest?
+
+```{r, echo = FALSE}
+ggplot(q1min, aes(x = percent_on_hardest)) +
+    geom_histogram(bins = 12, fill = "royalblue", col = "white") +
+    scale_y_continuous(breaks = c(0, 3, 6, 9, 12, 15)) +
+    labs(y = "Number of Students",
+         x = "% of Available Points Scored on Question Deemed Hardest") +
+    geom_label(x = 50, y = 12, label = "n = 41, mean = 62.3, sd = 38.5") +
+    geom_label(x = 50, y = 10, label = "min = 0, q25 = 33.3, med = 75, q75 = 100, max = 100") +
+    geom_label(x = 50, y = 8, label = "14/41 (34%) scored 100% on their 'hardest' question")
+```
+
+## Q21
+
+For each row, identify the model-fitting approach that most directly leads to the specified summary.
+
+Model-fitting options are: `ols`, `lrm`, `glm` with binomial, none of these
+
+- `a`. C statistic
+- `b`. Adjusted R^2^
+- `c`. odds ratio estimate showing effect of increasing a quantitative predictor by 1 unit, while holding the others constant
+- `d`. odds ratio estimate showing effect of increasing a quantitative predictor from the 25th to the 75th percentile of its distribution, while holding the others constant
+- `e`. estimate of effect on a quantitative outcome associated with changing a binary predictor from 0 to 1
+- `f`. Nagelkerke R-squared
+
+## Q24
+
+```
+R-square: 0.212, Adjusted R-square: 0.204
+
+         index.orig training   test optimism index.corrected
+R-square      0.212    0.224  0.199    0.023          0.189 
+``` 
+
+Consider the model summaries above. Identify the value in the columns that matches the description for each row.
+
+- `a`. % of variation explained using this model for the data used to fit this model
+- `b`. estimate of % of variation that will be explained by this model in a new data set
+- `c`. value that is plotted in a best subsets analysis
+- `d`. square of correlation between observed and predicted baby weights
+
+## Q19
+
+Linear Regression: must include four predictors: age (in years), female (1 = female, 0 = male), severity (three categories: High, Medium, Low) and temperature (in degrees Celsius). 
+
+Examine the Spearman rho-squared plot shown on the next slide. Suppose you are permitted to spend an additional **three** degrees of freedom. Which model? 
+
+- `a`. `ols(outcome ~ rcs(age, 3) + temperature + rcs(severity, 3) + female %ia% age, data = data_19)`
+- `b`. `ols(outcome ~ rcs(age, 4) + rcs(temperature, 3) + severity + female, data = data_19)`
+- `c`. `ols(outcome ~ female*age + temperature*severity, data = data_19)`
+- `d`. `ols(outcome ~ rcs(age, 3) + rcs(temperature, 5) + severity + female, data = data_19)`
+- `e`. None of these models are appropriate.
+
+## Q19 Spearman Plot
+
+![](fig19.png)
+
+## Q23 (beginning)
+
+Variable | `gestation` | `mom.age` | `mom.ht` | `mom.wt` | `dad.age` | `dad.ht` | `dad.wt`
+--------: | ----: | ----: |  ----: |  ----: |  ----: |  ----: |  ----: 
+VIF | 1.00 | 1.63 | 1.59 | 1.58 | 1.64 | 13.578 | 13.582
+
+A child's birth weight depends on many things, among them the parents' genetic makeup, gestation period, and mother's activities during pregnancy. Suppose we are fitting a model using the `data_23` data set (which I have provided to you, **so you should take a look at it**) to predict a child's weight at birth using seven continuous predictors: gestation period (in days), mother's age (in years), height (in inches) and (pre-pregnancy) weight (in pounds); and father's age, height and weight. We run a full model containing main effects of all predictors, and obtain the variance inflation factors shown above. 
+
+## Q23 (actual question)
+
+Which of the following statements best describes the most appropriate next step to take in light of this output and your examination of the `data_23` data set?
+
+- `a`. We should calculate and examine the leverage values for our observations.
+- `b`. We should draw pictures, and study the distributions of the predictors in our model.
+- `c`. We should drop the `dad.wt` variable and fit a new model.
+- `d`. We should drop the `dad.ht` variable and fit a new model.
+- `e`. We definitely need to drop one of the predictors about the father's size, but we're not sure which one.
+- `f`. We should calculate and examine the Cook's distance for our observations.
+- `g`. There isn't a substantial problem here. We can confidently make predictions using this model.
+
+## Q23 (skim)
+
+![](fig23.png)
+
+## Q28 and Q29
+
+were the "best subsets" questions.
+
+It seems that most people who got them wrong miscounted. When the plot says "# of predictors, including the intercept" then a model with x = 4 is model containing four predictors, including the intercept, or a model with intercept PLUS THREE actually interesting predictors.
+
+## Q15
+
+Suppose you are reviewing an academic paper and you have the four options listed below. In "How to be a Modern Scientist", Jeff Leek suggests that there is a #1 way to be a jerk reviewer. Which of the following recommendation decisions could be made by someone who was actively TRYING TO BE a jerk reviewer? (Select any that apply.)
+
+a. Reject
+b. **Major revisions**
+c. **Minor revisions**
+d. Accept
+
+Leek: "The #1 way to be a jerk reviewer is ... [to ask for either major or minor revisions] ... even if you think the paper is uninteresting and you wouldn't accept it even if they did everything you said."
+
+## General Comments on Quiz 1
+
+I've probably said most of what should be said. 8-10 people scored within each of the following ranges:
+
+- 90-99 (A: congratulations!)
+- 87-89 (A-/B+, no problems)
+- 84-86 (B+/B, near the median, no problems)
+- 78-83 (a reasonable B grade, room to improve)
+- below 78 (needs to improve)
+
+If you have a complaint or question about grading on Quiz 1 after looking over the answer sketch, including the Results section, the most useful thing to do is **email it to me, or to 431-help**.
 
 # The `crimestat` data and an OLS fit
 
@@ -338,3 +537,17 @@ Quantile (median) | `r decim(AIC(rob.quan), 1)` | `r decim(glance(rob.quan)$BIC[
     - Bisquare weights can have difficulties converging or may yield multiple solutions. 
     - Quantile regression approaches have some nice properties, but describe medians (or other quantiles) rather than means.
 
+## Project 1 Groups for Discussion in Class on Thursday
+
+Group | Names
+------: | -----------------------------------------------------------------------------
+1 | Laura Baldassari, Jenny Feng, Maher Kazimi, Satyakam Mishra, Vinh Trinh
+2 | Zainab (Albar) Albar, Dongze (Zaza) He, Nik Krieger, Andrew Shan
+3 | Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson
+4 | Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang
+5 | Ryan Honomichl, JJ Huang, Xin Xin Yu, Bilal Zonjy
+6 | Khaled Alayed, Kedar Mahajan, Preeti Pathak, Sarah Planchon Pope
+7 | Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez
+8 | Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth
+9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
+10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
