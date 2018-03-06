@@ -7,6 +7,25 @@
 
 In today's class, we'll demonstrate five different robust linear regression modeling approaches, including bounded influence regression, penalized least squares and quantile regression. We'll also discuss Quiz 1.
 
+## Project 1 Groups for Discussion in Class on Thursday
+
+Group 1 has 5 members, the rest have 4 each. As we're getting started, can you arrange to sit near the other members of your group, so you can make sure you know each others' names?
+
+Group | Names
+------: | -----------------------------------------------------------------------------
+1 | Laura Baldassari, Jenny Feng, Maher Kazimi, Satyakam Mishra, Vinh Trinh
+2 | Zainab (Albar) Albar, Dongze (Zaza) He, Nik Krieger, Andrew Shan
+3 | Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson
+4 | Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang
+5 | Ryan Honomichl, JJ Huang, Xin Xin Yu, Bilal Zonjy
+6 | Khaled Alayed, Kedar Mahajan, Preeti Pathak, Sarah Planchon Pope
+7 | Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez
+8 | Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth
+9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
+10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
+
+You need to submit your project as it currently stands to Canvas for review by your colleagues in your group on Thursday. Submit your work before class begins, please.
+
 ## Announcements before class
 
 1. We will meet in Room E321-323 for the rest of the semester, **except for** April 5, when we'll meet in E301 again. Sorry about last Thursday. We're still not sure what happened.
@@ -30,7 +49,16 @@ In today's class, we'll demonstrate five different robust linear regression mode
 5. NOVA did a special on February 28 entitled "[Prediction by the Numbers](http://www.pbs.org/wgbh/nova/physics/prediction-numbers.html)". Some people I know were involved.
     - [Rethinking Science's Magic Number](http://www.pbs.org/wgbh/nova/next/body/rethinking-sciences-magic-number/) from Tiffany Dill at NOVA is definitely worth a read.
 
-6. On other topics:
+6. Training Opportunities
+    - You may be interested in [Data Days CLE](http://datadayscle.strikingly.com/) April 5-6 downtown. "Data Days is an annual celebration of open data where participants engage, ideate, and learn around the use of data and technology from a civic lens."
+    - The Cleveland Chapter of the American Statistical Association is holding its thirty second annual workshop, this year on "[Successful Data Mining in Practice](http://www.bio.ri.ccf.org/ASA/cspring.html)" taught by Dick De Veaux on April 13, 2018 from 8:30 AM to 4:30 PM. I'll be there, as Dick is a leader in this field and one of the best teachers of statistics alive. The price is $50 for full-time students, and $170 for ASA members and $200 for non-members if you register before March 19. From  the course description:
+        - "Many of the standard techniques of data mining, including a review of modern model selection strategies for multiple regression such as the lasso, elastic net, etc. will be presented. In addition we'll cover classification and regression trees, neural networks, principal component regression, naive Bayes, bagging, and boosting. The course will be problem solving based, using real case studies from industry to illustrate which methods work well, when and why. We will emphasize problem formulation, the challenges of the data, and the communication back to decision makers in order to effect maximum impact in the organization. No prerequisities other than a knowledge of the basics of regression are assumed."
+    - I encourage anyone who is interested to attend the Center for Health Care Research and Policy's weekly Health Services Research Seminars. The next two weeks should be especially interesting:
+        - On Friday March 9 from 9 to 10:30 AM, Professor Adam Perzynski will discuss "What are We Going to do about the Social Determinants of Health? Challenges, Opportunities, Dead Ends and Solutions."
+        - On Friday March 16 from 9 to 10:30 AM, Professor Thomas Love will discuss "Rethinking Statistical Significance"
+        - Both talks are set at a level that will be of interest to graduate students in PQHS, and we encourage you to join us. Seminars are held in room R219, on the second floor of the Rammelkamp Research and Education Building at MetroHealth Medical Center, 2500 MetroHealth Drive, Cleveland OH 44109-1998. PQHS students are welcome at all HSR Seminars. The schedule can be found at chrp.org/events.
+
+7. On other topics:
     - For Project 2, you will need some nice data to chew on. One possible source of interesting ideas is the [Data is Plural](https://tinyletter.com/data-is-plural) newsletter of useful/curious data sets.
     - The American Statistical Association has been [celebrating women in statistics and data science](https://www.youtube.com/watch?v=y2udE5N4l_4). There are a lot of terrific [stories here](http://magazine.amstat.org/statisticians-in-history/wis/?utm_content=buffer43082&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). If you're not interested, then you're probably the target audience.
     - I know a pathetically tiny amount about statistical genomics. But even I know that a solution for working with tidy data in bioinformatics is likely to be useful to some people. Consider [this, from Stuart Lee](https://sa-lee.github.io/plyranges/).
@@ -84,21 +112,3 @@ Q29 | 0     | **63%**
 
 I'll discuss Questions 15, 19, 21, 23, 24, 28 and 29 in class today.
 
-## Project 1 Groups for Discussion in Class on Thursday
-
-Group 1 has 5 members, the rest have 4 each.
-
-Group | Names
-------: | -----------------------------------------------------------------------------
-1 | Laura Baldassari, Jenny Feng, Maher Kazimi, Satyakam Mishra, Vinh Trinh
-2 | Zainab (Albar) Albar, Dongze (Zaza) He, Nik Krieger, Andrew Shan
-3 | Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson
-4 | Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang
-5 | Ryan Honomichl, JJ Huang, Xin Xin Yu, Bilal Zonjy
-6 | Khaled Alayed, Kedar Mahajan, Preeti Pathak, Sarah Planchon Pope
-7 | Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez
-8 | Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth
-9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
-10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
-
-You need to submit your project as it currently stands to Canvas for review by your colleagues in your group on Thursday. Submit your work before class begins, please.
