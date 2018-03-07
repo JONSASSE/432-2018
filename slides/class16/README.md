@@ -38,7 +38,7 @@ Group | Names
 
 3. Remember that we do not have class next week. Enjoy the break. Our next class is Tuesday 2018-03-20. 
     - After today's class, and before 5 PM this Friday, please complete this Minute Paper.
-    - By Tuesday 2018-03-20, you'll need to resubmit your Progress to Date on Project 1 to facilitate review by your group.
+    - By Tuesday 2018-03-20, resubmit your Progress to Date on Project 1 to facilitate review by your group.
     - The next major deliverable is your Project 1 final portfolio, which is due at 1 PM on Friday 2018-03-23.
 
 4. **Changes in Deliverables and Deadlines** 
