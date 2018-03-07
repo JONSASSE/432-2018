@@ -2,7 +2,7 @@
 
 ### Key Materials
 
-- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) will appear as soon as they are available.
+- No slides today, I think. There's more than enough in this README as it is.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) will appear as soon as they are available.
 
 In today's class, we'll demonstrate five different robust linear regression modeling approaches, including bounded influence regression, penalized least squares and quantile regression. We'll also discuss Quiz 1.
@@ -53,7 +53,7 @@ Group | Names
 
 ## Choosing From My Lists in Project 1
 
-I provided lists of potential analyses for your Project 1. But you should be **choosing wisely** from that list to produce a curated and appropriate final set of analyses in Task 10 and Task 11, not demonstrating your ability to do all of those things.
+I provided lists of potential analyses for [Task 10](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#what-should-i-consider-doing-in-developing-linear-models-for-task-10) and for [Task 11](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#what-should-i-consider-doing-in-developing-logistic-models-for-task-11) for your Project 1. But you should be **choosing wisely** to produce a curated and appropriate final set of analyses responding to each Task, not demonstrating your ability to do all of those things.
 
 - You need to settle on a single model for a quantitative outcome (in Task 10) and a single model for a binary outcome (in Task 11.) Be sure you've done this, clearly.
      There are 13 items listed in the [linear regression model list](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#what-should-i-consider-doing-in-developing-linear-models-for-task-10) and you need to decide which 4-8 of these you actually need to show us.
