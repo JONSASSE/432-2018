@@ -2,8 +2,8 @@
 
 ### Key Materials
 
-- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15) are now available.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15) are now available.
+- [The slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) will appear as soon as they are available.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) will appear as soon as they are available.
 
 In today's class, we'll demonstrate five different robust linear regression modeling approaches, including bounded influence regression, penalized least squares and quantile regression. We'll also discuss Quiz 1.
 
@@ -22,11 +22,19 @@ Group | Names
 9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
 10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
 
+### Your Tasks Today
+
+1. Everyone should discuss their project with the group for 2-3 minutes, helping the other people to understand what they're trying to do. Everyone should have a question to ask about their project. Be sure that you raise your question when describing your project. Also, make sure everyone in the group can see the current work of everyone in the group on Canvas. 
+2. The group should try to tackle each question that is raised as a group first. If as a group you can't settle on a resolution, and need some "outside" help, let us know, and a TA or Dr. Love will come by and try to be helpful. 
+3. Appoint someone to keep track of time. Try not to spend about 10 minutes of group time on any one project.
+
 ## Announcements before class
 
 1. We will meet in Room E321-323 for the rest of the semester, **except for** April 5, when we'll meet in E301 again. Sorry about last Thursday. We're still not sure what happened.
 
 2. Remember that we do not have class next week. Enjoy the break.
+
+3. I updated some of the Python advice in the [Class 15 README](https://github.com/THOMASELOVE/432-2018/edit/master/slides/class15/README.md). Thanks to several people for getting me some information there. I also fixed the spelling of Mississippi in the [Class 15 Slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15).
 
 ## Project 1 Tips
 
