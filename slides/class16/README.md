@@ -41,9 +41,13 @@ Group | Names
     - By Tuesday 2018-03-20, you'll need to resubmit your Progress to Date on Project 1 to facilitate review by your group.
     - The next major deliverable is your Project 1 final portfolio, which is due at 1 PM on Friday 2018-03-23.
 
-4. Assignment 8 has been eliminated. Assignment 6 is now due on April 6, and Assignment 7 is now due on April 13. The [schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) now reflects these changes.
+4. **Changes in Deliverables and Deadlines** 
+    - Homework 8 is cancelled. 
+    - Homework 6 is now due on April 6, and Homework 7 is now due on April 13. 
+    - Quiz 2 has been moved. It will now be available to you on April 20 and is due on April 23 at noon.
+    - The [schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) and [syllabus](https://thomaselove.github.io/432-syllabus/) now reflect these changes. If you see something different somewhere, please let me know.
 
-5. Quiz 2 has been moved. It will now be available to you on April 20 and is due on April 23 at noon. The [schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) now reflects this.
+5. You will specify your preferred time for your Project 2 Portfolio presentation at the end of March, after complete instructions for Project 2 are available.
 
 6. As mentioned above, there is a Minute Paper to complete after today's class. Please do so by the end of the day on Friday 2018-03-09. Thank you.
 
