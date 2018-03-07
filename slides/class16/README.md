@@ -36,11 +36,11 @@ Group | Names
     - There are 12 items listed in the [logistic regression model list](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#what-should-i-consider-doing-in-developing-logistic-models-for-task-11) and you need to decide which 4-8 of these you actually need to show us.
     - It's **not** a wise choice to use the Spearman rho-squared plot for anything other than identifying non-linear terms. Using it for variable selection, for instance, is not recommended.
     - It's not smart to show both best subsets and the lasso and stepwise regression for the same outcome, unless there's a reason you're going to evaluate models from each approach.
-    - A project receiving an "A" grade will **not** be longer, rather it will be better, in the sense that is has 
-        a. more concentrated "useful" stuff throughout, 
-        b. evidence of careful decision-making about what goes into each piece to make it as effective as possible, 
-        c. a very clear presentation throughout Tasks 1-11 of the process, your data and the models you fit to the data, and
-        d. a thoughtful set of conclusions and reflections (Task 12) that address the process you used, the data you used and the models you developed.
+    - A project receiving an "A" grade will **not** be longer, rather it will be better.
+        - It will have more concentrated "useful" stuff throughout.
+        - It will show evidence of careful decision-making about what to present in each Task.
+        - In Task 12, it will include a thoughtful set of conclusions and reflections that address the process you used, the data you used and the models you developed.
+        - Above all, the presentation will be clear and concise. You'll include everything we need to see, and nothing we don't, everything will be appropriately annotated to guide our reading, and our attention will be drawn to the most important material.
 
 2. **Best Subsets while Forcing in a Variable**. When fitting a **best subsets** approach to a linear regression, suppose you want to force in variable "a" and then let the software decide about variables b, c, d, e and f. So you are asking best subsets to evaluate models that contain an intercept and variable "a" and then 1-5 of the remaining variables b-f. So the k values for such a model would be 3-7. Note that when you force a variable to be in, the output table listing which variables are forced in and forced out may be incorrect (it's a problem in leaps) but the actual models fit should be correct.
 
