@@ -335,7 +335,7 @@ ggplot(crime_with_huber, aes(x = w, y = abs(.resid))) +
 
 ## Conclusions from the Plot of Weights
 
-- The district of Columbia will be down-weighted the most, followed by Alaska and then Nevada and Mississppi. 
+- The district of Columbia will be down-weighted the most, followed by Alaska and then Nevada and Mississippi. 
 - But many of the observations will have a weight of 1. 
 - In ordinary least squares, all observations would have weight 1.
 - So the more cases in the robust regression that have a weight close to one, the closer the results of the OLS and robust procedures will be.
