@@ -22,19 +22,28 @@ Group | Names
 9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
 10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
 
-### Your Tasks Today
+### Your Group Tasks Today
 
-1. Everyone should discuss their project with the group for 2-3 minutes, helping the other people to understand what they're trying to do. Everyone should have a question to ask about their project. Be sure that you raise your question when describing your project. Also, make sure everyone in the group can see the current work of everyone in the group on Canvas. 
-2. The group should try to tackle each question that is raised as a group first. If as a group you can't settle on a resolution, and need some "outside" help, let us know, and a TA or Dr. Love will come by and try to be helpful. 
-3. Appoint someone to keep track of time. Try not to spend about 10 minutes of group time on any one project.
+1. Appoint someone to keep track of time. Try not to spend about 10 minutes of group time on any one project.
+2. Everyone should discuss their project with the group for 2-3 minutes, helping the other people to understand what they're trying to do. Everyone should have a question to ask about their project. Be sure that you raise your question when describing your project, so the group has a meaningful place to start its discussions.
+3. The group should try to tackle each question that is raised as a group first. If as a group you can't settle on a resolution, and need some "outside" help, let us know, and a TA or Dr. Love will come by and try to be helpful. 
+4. Make sure everyone in the group can see the current work of everyone else in the group on Canvas by the end of class today. This may require some intervention by Dr. Love. We'll see.
+5. Over the break, you'll be finishing up your analyses, and so forth. Submit a revised version of your work on Canvas before our next class, on Tuesday 2018-03-20. At that class, you and your group will have time to discuss and address residual concerns, before the project due date (Friday 2018-03-23 at 1 pm).
 
 ## Announcements before class
 
-1. We will meet in Room E321-323 for the rest of the semester, **except for** April 5, when we'll meet in E301 again. Sorry about last Thursday. We're still not sure what happened.
+1. We will meet in Room E321-323 for the rest of the semester, **except for** April 5, when we'll meet in E301 again. 
 
-2. Remember that we do not have class next week. Enjoy the break.
+2. I updated some of the Python advice in the [Class 15 README](https://github.com/THOMASELOVE/432-2018/edit/master/slides/class15/README.md). Thanks to several people for getting me some information there. I also fixed the spelling of Mississippi in the [Class 15 Slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15).
 
-3. I updated some of the Python advice in the [Class 15 README](https://github.com/THOMASELOVE/432-2018/edit/master/slides/class15/README.md). Thanks to several people for getting me some information there. I also fixed the spelling of Mississippi in the [Class 15 Slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15).
+3. Remember that we do not have class next week. Enjoy the break. Our next class is Tuesday 2018-03-20. 
+    - The next major deliverable is your Project 1 final portfolio, which is due at 1 PM on Friday 2018-03-23.
+
+4. Assignment 8 has been eliminated. Assignment 6 is now due on April 6, and Assignment 7 is now due on April 13. The [schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) now reflects these changes.
+
+5. Quiz 2 has been moved. It will now be available to you on April 20 and is due on April 23 at noon. The [schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) now reflects this.
+
+6. There is a Minute Paper to complete after today's class. Please do so by the end of the day on Friday 2018-03-09. Thank you.
 
 ## Project 1 Tips
 
