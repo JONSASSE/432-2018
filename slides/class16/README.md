@@ -28,7 +28,7 @@ Group | Names
 2. Everyone should discuss their project with the group for 2-3 minutes, helping the other people to understand what they're trying to do. Everyone should have a question to ask about their project. Be sure that you raise your question when describing your project, so the group has a meaningful place to start its discussions.
 3. The group should try to tackle each question that is raised as a group first. If as a group you can't settle on a resolution, and need some "outside" help, let us know, and a TA or Dr. Love will come by and try to be helpful. 
 4. Make sure everyone in the group can see the current work of everyone else in the group on Canvas by the end of class today. This may require some intervention by Dr. Love. We'll see.
-5. Over the break, you'll be finishing up your analyses, and so forth. Submit a revised version of your work on Canvas before our next class, on Tuesday 2018-03-20. At that class, you and your group will have time to discuss and address residual concerns, before the project due date (Friday 2018-03-23 at 1 pm).
+5. Over the break, you'll be finishing up your analyses, in preparation for an additional group discussion at our next class, on Tuesday 2018-03-20, and for your final submission of the project in advance of the deadline, which is Friday 2018-03-23 at 1 pm.
 
 ## Announcements before class
 
@@ -37,8 +37,8 @@ Group | Names
 2. I updated some of the Python advice in the [Class 15 README](https://github.com/THOMASELOVE/432-2018/edit/master/slides/class15/README.md). Thanks to several people for getting me some information there. I also fixed the spelling of Mississippi in the [Class 15 Slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15).
 
 3. Remember that we do not have class next week. Enjoy the break. Our next class is Tuesday 2018-03-20. 
-    - After today's class, and before 5 PM this Friday, please complete this Minute Paper.
-    - By Tuesday 2018-03-20, resubmit your Progress to Date on Project 1 to facilitate review by your group.
+    - After today's class, and before 5 PM this Friday, please complete [this Minute Paper](https://goo.gl/forms/kv5GJhm9Pjpcc5y73).
+    - By Tuesday 2018-03-20, resubmit your Progress to Date on Project 1 to Canvas to facilitate review by your group.
     - The next major deliverable is your Project 1 final portfolio, which is due at 1 PM on Friday 2018-03-23.
 
 4. **Changes in Deliverables and Deadlines** 
@@ -49,7 +49,7 @@ Group | Names
 
 5. You will specify your preferred time for your Project 2 Portfolio presentation at the end of March, after complete instructions for Project 2 are available.
 
-6. As mentioned above, there is a Minute Paper to complete after today's class. Please do so by the end of the day on Friday 2018-03-09. Thank you.
+6. As mentioned above, there is a [Minute Paper](https://goo.gl/forms/kv5GJhm9Pjpcc5y73) to complete after today's class. Please do so by the end of the day on Friday 2018-03-09. Thank you.
 
 ## Choosing From My Lists in Project 1
 
