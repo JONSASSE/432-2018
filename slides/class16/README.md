@@ -37,13 +37,15 @@ Group | Names
 2. I updated some of the Python advice in the [Class 15 README](https://github.com/THOMASELOVE/432-2018/edit/master/slides/class15/README.md). Thanks to several people for getting me some information there. I also fixed the spelling of Mississippi in the [Class 15 Slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15).
 
 3. Remember that we do not have class next week. Enjoy the break. Our next class is Tuesday 2018-03-20. 
+    - After today's class, and before 5 PM this Friday, please complete this Minute Paper.
+    - By Tuesday 2018-03-20, you'll need to resubmit your Progress to Date on Project 1 to facilitate review by your group.
     - The next major deliverable is your Project 1 final portfolio, which is due at 1 PM on Friday 2018-03-23.
 
 4. Assignment 8 has been eliminated. Assignment 6 is now due on April 6, and Assignment 7 is now due on April 13. The [schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) now reflects these changes.
 
 5. Quiz 2 has been moved. It will now be available to you on April 20 and is due on April 23 at noon. The [schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) now reflects this.
 
-6. There is a Minute Paper to complete after today's class. Please do so by the end of the day on Friday 2018-03-09. Thank you.
+6. As mentioned above, there is a Minute Paper to complete after today's class. Please do so by the end of the day on Friday 2018-03-09. Thank you.
 
 ## Project 1 Tips
 
