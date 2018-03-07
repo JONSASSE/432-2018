@@ -2,7 +2,7 @@
 
 ## Homework Assignments
 
-There are a total of 8 regular homework assignments this semester. All submissions should be made through [Canvas](https://canvas.case.edu/).
+There are a total of 7 regular homework assignments this semester. All submissions should be made through [Canvas](https://canvas.case.edu/).
 
 Link to Details | Due at 1 PM on | Material Covered in the Assignment
 :-------: | :----------: | ----------------------------------------------------------
@@ -11,9 +11,10 @@ Link to Details | Due at 1 PM on | Material Covered in the Assignment
 [Homework 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw3) | Fri 2018-02-09 | Linear Regression, Data Visualization
 [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) | Fri 2018-02-23 | Logistic Regression
 [Homework 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) | Fri 2018-03-02 | Logistic Regression
-HW 6 | Fri 2018-03-30 | Generalized Linear Models (+ Presentation Time Selection)
-HW 7 | Fri 2018-04-06 | Survival Analysis
-HW 8 | Fri 2018-04-20 | To Be Determined
+HW 6 | Fri 2018-04-06 | Generalized Linear Models 
+HW 7 | Fri 2018-04-13 | Survival Analysis
+
+Homework 8 is cancelled.
 
 ### Want to request a regrade of a homework assignment?
 
@@ -30,7 +31,7 @@ Dr. Love takes care of such requests in a batch at the end of the term. Fill out
 The final course grade is weighted as follows:
 
 - 15% Class Participation / Group Work
-- 25% Eight Homework Assignments
+- 25% Seven Homework Assignments
 - 25% Two Quizzes
 - 35% Two Projects, including the Final Portfolio Presentation
 
