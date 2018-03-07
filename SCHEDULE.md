@@ -41,17 +41,16 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 -- | Fri 2018-03-23 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at 1 PM
 19 | Tue 2018-03-27 | **Survival Analysis**, 1
 20 | Thu 2018-03-29 | **Survival Analysis**, 2
--- | Fri 2018-03-30 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 21 | Tue 2018-04-03 | *To Be Determined* (project presentation dates announced)
 22 | Thu 2018-04-05 | *To Be Determined* **SPECIAL ROOM: Class to be held in E301**
--- | Fri 2018-04-06 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
+-- | Fri 2018-04-06 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 23 | Tue 2018-04-10 | *To Be Determined*
 24 | Thu 2018-04-12 | *To Be Determined*
 --  | Fri 2018-04-13 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
 --  | Mon 2018-04-16 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
 25 | Tue 2018-04-17 | *To Be Determined*
 26 | Thu 2018-04-19 | *To Be Determined*
--- | Fri 2018-04-20 | [Assignment 8](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
+-- | Fri 2018-04-20 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 27 | Tue 2018-04-24 | Estimating **Causal Effects**
 28 | Thu 2018-04-26 | Final Class
 -- | Thu 2018-05-03 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md), 1
