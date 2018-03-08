@@ -53,8 +53,9 @@ Group | Names
 
 ## Most Important Tip for Future Homework or Project 1
 
-For the rest of the semester, make it your business to avoid turning in any HTML file with WARNINGS or MESSAGES. We don't want to see them. You should figure out what to do to avoid the warning or message, when possible. 
-    - When it's not possible (for instance, when you load packages) you should use `{r , warning = FALSE, message = FALSE}` in your chunk name so that those messages are NOT printed in your HTML.
+For the rest of the semester, make it your business to ensure that your HTML file for finished work shows **ZERO WARNINGS and ZERO MESSAGES**. We don't want to see them. 
+- You should figure out what to do to avoid the warning or message, when possible. 
+- When it's not possible (for instance, when you load packages) you should use `{r , warning = FALSE, message = FALSE}` in your chunk name so that those messages are NOT printed in your HTML.
 
 ## Choosing From My Lists in Project 1
 
