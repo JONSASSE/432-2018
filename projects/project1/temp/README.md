@@ -10,7 +10,7 @@ Group | Name in **Bold** if HTML is available in the directory above.
 4 | **Gwen Donley, Carli Lehr**, Connor Swingle, **Frances Wang**
 5 | Ryan Honomichl, **JJ Huang, Xin Xin Yu**, Bilal Zonjy
 6 | Khaled Alayed, Kedar Mahajan, **Preeti Pathak, Sarah Planchon Pope**
-7 | **Estee Cramer**, Laura Cremer, **Hyun Jo Kim, Roberto Martinez**
+7 | **Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez**
 8 | **Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth**
 9 | **Haimeng Bai, Sophia Cao**, Kate Dobbs, **Elina Misicka**
 10 | **Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo**
