@@ -51,6 +51,11 @@ Group | Names
 
 6. As mentioned above, there is a [Minute Paper](https://goo.gl/forms/kv5GJhm9Pjpcc5y73) to complete after today's class. Please do so by the end of the day on Friday 2018-03-09. Thank you.
 
+## Most Important Tip for Future Homework or Project 1
+
+For the rest of the semester, make it your business to avoid turning in any HTML file with WARNINGS or MESSAGES. We don't want to see them. You should figure out what to do to avoid the warning or message, when possible. 
+    - When it's not possible (for instance, when you load packages) you should use `{r , warning = FALSE, message = FALSE}` in your chunk name so that those messages are NOT printed in your HTML.
+
 ## Choosing From My Lists in Project 1
 
 I provided lists of potential analyses for [Task 10](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#what-should-i-consider-doing-in-developing-linear-models-for-task-10) and for [Task 11](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#what-should-i-consider-doing-in-developing-logistic-models-for-task-11) for your Project 1. But you should be **choosing wisely** to produce a curated and appropriate final set of analyses responding to each Task, not demonstrating your ability to do all of those things.
@@ -122,3 +127,4 @@ If you still have degrees of freedom you're willing to spend after this, proceed
 
 6. **Apparently Singular Matrix error in R**. This can occur when running `anova` on an `rms`-generated model, like `ols` or `lrm`. It usually happens when the default tolerance level for flagging an invertible matrix is too low. You can usually fix this with `anova(modelname, tol = 1e-13)`. If that isn't effective, be sure that you don't have any interaction terms with constant values of the outcome. If that doesn't seem to be the problem, try centering and rescaling your predictors before running the `lrm` or `ols` model.
 
+7. **Interpreting Effect Sizes Correctly**. I've written up a note that we'll discuss in class.
