@@ -6,7 +6,7 @@ Group | Name in **Bold** if HTML is available in the directory above.
 ------: | -----------------------------------------------------------------------------
 1 | **Laura Baldassari, Jenny Feng**, Maher Kazimi, **Satyakam Mishra**, Vinh Trinh
 2 | Zainab (Albar) Albar, Dongze (Zaza) He (*Rmd only*), **Nik Krieger, Andrew Shan**
-3 | Andrew Tang (*Rmd only*), **Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson**
+3 | **Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson**
 4 | **Gwen Donley, Carli Lehr**, Connor Swingle, **Frances Wang**
 5 | Ryan Honomichl, **JJ Huang, Xin Xin Yu**, Bilal Zonjy
 6 | Khaled Alayed, Kedar Mahajan, **Preeti Pathak, Sarah Planchon Pope**
