@@ -1,6 +1,4 @@
-Here is a place to see the HTML files submitted to Canvas, as of 2018-03-08 at 11:30 AM.
-
-Names in **bold** have HTMLs available, as of 2018-03-08 at 11:44 AM.
+Names in **bold** have HTMLs available, as of 2018-03-08 at 12:06 PM.
 
 Group | Name in **Bold** if HTML is available in the directory above.
 ------: | -----------------------------------------------------------------------------
