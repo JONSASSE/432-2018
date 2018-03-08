@@ -1,0 +1,841 @@
+---
+title: "Predicting duration and result of endovascular aortic repair opeartion by disease history and physical indexes."
+author: "Dongze HE"
+date: "`r Sys.time()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    number_sections: yes
+    code_folding: show
+---
+
+## An Important Note Regarding this Example
+
+This example was mostly built in Spring 2017, and the code here has largely **NOT** been updated to reflect changes in the way I am teaching 432 this year. In particular, I expect that people writing their project in 2018 will probably:
+
+1. use simple imputation rather than complete case analyses when there are missing data
+2. use a multiple imputation approach other than the ones presented here, or focus only on simple imputation
+3. cross-validate more frequently, and in different ways than are presented here
+4. use `lm` and `glm` methods more frequently than is shown here
+5. use `ols` and `lrm` methods less frequently than is shown here
+6. use `ggplot2` approaches to build plots in all cases
+7. make better use of some of the tools from the `tidyverse`, especially `forcats` to deal with factors.
+8. choose to include some of the materials represented here, but not all.
+
+## Preliminaries
+
+```{r knitr_init}
+library(knitr); library(rmdformats)
+
+## Global options
+opts_chunk$set(comment = NA,
+               warning = FALSE,
+               message = FALSE)
+#opts_knit$set(width=75)
+```
+
+```{r load_packages}
+library(arm)
+library(leaps)
+library(tableone)
+library(pander)
+library(ROCR)
+library(skimr)
+library(rms)
+library(broom)
+library(tidyverse)
+```
+
+Be sure to add any additional packages you want to use, and leave the `tidyverse` last.
+
+# Task 1: Data Source
+
+This dataset is download from the website of Lerner research institute of Cleveland Clinic (http://www.lerner.ccf.org/qhs/datasets/).
+
+The dataset represents data from the study by Perez-Protto et al. decease Donor Hyperglycemia and Liver Graft DysfunctionS. Prog Trans 2014; 24(1): 106-112.
+
+This study included adults who had endovascular aortic repair at the Cleveland Clinic, whether abdominal or thoracic, between June 2005 and March 2007. Patients with pre-existing renal failure (as defined by requiring dialysis) and repeat endovascular aortic repair operations were excluded. 501 consecutive patients were identified, but 13 patients were removed due to missing serum creatinine measurements (n = 9), missing statin use data (n = 5), or both, leaving data from 488 patients available for analysis.
+
+
+## Explanation of the Study from lerner research institute of Cleveland clinic.
+
+Excerpted from: http://www.lerner.ccf.org/qhs/datasets/GFR.docx
+
+The primary outcome was postoperative GFR (after adjusting for a preoperative GFR as a covariable). This study also evaluated the incidence of a decrease in the GFR of .25% as a secondary endpoint, as this reduction in the GFR is used to define contrast nephropathy. 
+
+This study, then, was partly an attempt to see if the patient died was effected by history of disease and some index. More specifically, though, the study sought to pinpoint which measurements taken of patients who had endovascular aortic repair were most helpful in predicting whether or not a patient's survival. 
+
+# Task 2: Load and Tidy the Data
+
+##Read in data
+
+```{r readIn_Data}
+GFR.raw <- read.csv("GFR.csv") %>% tbl_df()
+```
+
+As originally loaded, the `GFR.raw` data contain `488` rows and `34` columns. Explanations of each of the original variables in the `GFR.csv` set is found at http://www.lerner.ccf.org/qhs/datasets/GFRDD.docx
+
+## Tidying, Data Cleaning and Data Management
+
+In below code, I will load my raw data which was download from website directly, choose my predictors, impute it by simple imputation, and create `BMI` variable by using `Weight` and `Height`, then I will create 3 level categorical variable `BMI.cat`  by using `BMI`
+###Select data
+
+This dataset has 488 observations, so I could have not more than 4 + (488-100)/100 = 7(rounding down) candidate regression imputes.
+
+```{r select_data}
+GFR.select <- GFR.raw %>%
+
+  mutate(Heart.Disease = ifelse(Cardiac == 0 & Heart.Repair==0 & CHF == 0 & Afib == 0,                                  "0","1")) %>%
+  mutate(Patient = 1:nrow(GFR.raw),
+         Death=factor(Epired, 
+                           levels = c(0, 1), 
+                           labels = c("No","Yes")),
+         Female=factor(Female, 
+                           levels = c(0, 1), 
+                           labels = c("No","Yes")),
+         Heart.Disease=factor(Heart.Disease, 
+                           levels = c(0, 1), 
+                           labels = c("No","Yes")),
+         Emergency=factor(Emergency, 
+                           levels = c(0, 1), 
+                           labels = c("No","Yes")),
+         Statins=factor(Statins, 
+                           levels = c(0, 1), 
+                           labels = c("No","Yes")))%>%
+  select(Patient,Death, Duration, Age, Female,Emergency, Statins, Heart.Disease,Systolic,Crystalloid,RBC,EBL, Height, Weight)
+  Hmisc::describe(GFR.select)
+```
+
+There are 1 NA in `Death`, 5 NA in `eCcr.Pre`,5 NA in `eCcr.Post`, 56 NA in `Height`, 5 NA in `Weight` . For the reason why values arr missing , the description of this data don't mention, so I assume that they are all missingness completely at random, so I treat them as NA. And I'm going to impute my NAs by simple Imputation.
+
+###Deal with abnormal values and missing values.
+
+Notice that there are also some abnormal values in `Height` such as 0 or 0.7 inchs, which is impossible, so I treat these abnormal values as NA.
+
+```{r eliminate_abnormal_values}
+GFR.select$Height[which(GFR.select$Height <= 40|GFR.select$Height >= 100)] <- NA
+```
+
+###Simple impute my selected dataset
+
+
+```{r Impute_data}
+set.seed(42)
+GFR.tidy <- GFR.select%>%
+as.data.frame() %>%
+simputation::impute_cart(Death ~ .)  %>%
+simputation::impute_cart(Systolic ~ .)%>%
+simputation::impute_cart(Height ~ .)%>%
+simputation::impute_cart(Weight ~ .)
+summary(GFR.tidy)
+```
+
+Well, Now my data has no missing value and all values are in proper ranges.
+
+###Create BMI.cat - my 3-levels categorical variable
+
+```{r Create_BMI.cat}
+ GFR.tidy$BMI <- GFR.tidy$Weight / (GFR.tidy$Height*0.025)^2
+GFR.tidy <- GFR.tidy%>%
+  mutate(BMI.cat = factor(case_when(
+      BMI <= 18.5                 ~ "underWeight",
+      BMI > 18.5 & BMI <=24.9 ~ "normalWeight",
+      BMI > 24.9 & BMI <= 29.9     ~  "overWeight" ,
+      BMI >29.9                 ~"obesity"))) %>%
+  mutate(BMI.cat = relevel(BMI.cat, "underWeight", "normalWeight", "overWeight", "obesity")) 
+summary(GFR.tidy$BMI.cat)
+```
+
+# Task 3: Tidied Tibble
+
+
+```{r Skim_selected_data}
+skim_with(numeric = list(hist = NULL), integer = list(hist = NULL))
+skim(GFR.tidy)
+```
+
+Well now all values are in normal range, let's create my final dataset.
+
+```{r Final_tidy_dataset}
+GFR <- GFR.tidy %>%
+    select(Patient,Death, Duration, Age, Female,Emergency, Statins, Heart.Disease,Systolic,Crystalloid,RBC,EBL,BMI.cat)
+Hmisc::describe(GFR)
+```
+
+# Task 4: Code Book
+
+```{r}
+tableOne <- CreateTableOne(data = GFR, 
+               factorVars = c("female", "Death", 
+                               "Emergency", "Statins", "Heart.Disease", "BMI.cat"))
+summary(tableOne)
+```
+
+```{r}
+a <- dput(names(GFR))
+b <- c("Patient identification code",
+       "Whether died(Yes, No)",
+       "Case duration",
+       "Age",
+       "Female (Yes, No)",
+       "Whether emergenct surgery(Yes, No)",
+       "Statin use(Yes, No)",
+       "History of heart disease (Yes, No)",
+       "Baseline systolic blood pressure", 
+       "Blood Crystalloids",
+       "Red blood cells",
+       "Estimated blood loss",
+       "BMI categorical level(underWeight, normalWeight,overWeight,obesity)")
+c <- map(GFR, function(x) class(x))
+d <- map(GFR, function(x) sum(is.na(x)))
+e <- map(GFR, function(x) ifelse(is.factor(x) == T, "--", min(x, na.rm=T)))
+f <- map(GFR, function(x) ifelse(is.factor(x) == T, "--", max(x, na.rm=T)))
+
+GFR.CB <- data_frame(Variable = a, Description = b, Class = c, Missing = d, Min = e, Max = f)
+
+pander(GFR.CB)
+
+rm(a, b, c, d, e,f)
+```
+
+
+# Task 5: The Subjects
+
+These data describe 361 men and 127 women who participated in the [study by Argalious et al.](https://www.ncbi.nlm.nih.gov/pubmed/22628391) (2012). Details on the inclusion and exclusion criteria are available in the [GFR file](http://www.lerner.ccf.org/qhs/datasets/datasets.php). 
+
+# Task 6: The Variables
+
+There are 13 variables in the `stressEcho` data set.
+
+1. **Patient**
+    - This is a patient identification code, ranging from 1-558.
+2. **Age**
+    - This is the patient's age at baseline in years (baseline = the time when they underwent dobutamine stress echocardiography.)
+3. **Female**
+    - This is an indicator (1 = female, 0 = male) of the patient's sex.
+4. **Death**
+    - This indicates whether the patient dead because of the operation(1 = Yes,  0 = No).
+5. **Duration**
+    - this is patient's operation duration in minutes.
+6. **RBC**
+    - This is the patient's d intraoperative red blood cell transfusion volume
+7. **Emergency**
+    -  This indicates whether the patient's operation is emergency surgery(1 = Yes,  0 = No).
+8. **Statins**
+    -  This indicates whether the patient use statins during opeartion.
+9. **Heart.Disease**
+    - This indicates whether the patient has history of heart disease(1 = Yes,  0 = No).
+10. **Systolic**
+    - This is the patient's basal systolic blood pressure, in mililiters. 
+11. **Crystalloids** 
+    - This is the patient's crystalloids, in mililiters.
+12. **EBL**
+    - This is the patient's estimated blood loss, in mililiters. 
+13. **BMI.cat**
+    - This indicates the patient's BMI level, which are underweight, normal weight, overweight and 
+
+# Task 7: Linear Model Plans
+
+
+We will predict the quantitative outcome **Duration** using some combination of the following six variables:
+
+- `Heart.Disease`
+- `Systolic`
+- `BMI.cat`
+- `Crystalloid`
+- `RBC`
+- `EBL`
+
+In advance, I might anticipate that `RBC` and `EBL` will be key predictors, although I don't claim to know much about it. The cardiologists in the room will have better insight.
+
+## Spearman $\rho^2$ Plot
+
+A Spearman $\rho^2$ plot suggests that `EBL` is important, but it's not clear that `dose` will be particularly useful. In this example, note that we fit this plot without accounting for the missing values of any of these predictors, so that may have some effect.
+
+```{r}
+plot(spearman2(Duration ~ Heart.Disease + Systolic + BMI.cat + Crystalloid + RBC + EBL, data = GFR))
+```
+
+# Task 8: Logistic Model Plans
+
+We will predict the binary outcome **Death** using some combination of the following ten variables:
+
+- `Age`
+- `Female`
+- `BMI.cat`
+- `RBC`
+- `Emergency`
+- `Statins`
+
+Here, knowing essentially nothing about it, we might expect that ejection fraction and `Emergency` status would be of primary importance. Again, the cardiologists in the room will have better insight.
+
+## Spearman $\rho^2$ Plot
+
+A Spearman $\rho^2$ plot certainly seems to back up the notion that the ejection fraction information and `emergency` status are important, but the `RBC` is even more important. Of course, that makes sense. Again, here we fit this plot without accounting for missing predictor values.
+
+```{r}
+plot(spearman2(Death ~ Age + Female + BMI.cat + RBC + Emergency + Statins, data = GFR))
+```
+
+# Task 9: Affirmation
+
+This data set meets all requirements specified in the project instructions.
+
+- The data set contains `r nrow(GFR)` observations on `r ncol(GFR)` variables, well within the limits of 100-1000 observations on 7-20 variables set in the assignment.
+- While we do have some missing values, so I decide to use simple imputation to deal with these values, after that, we have 488 subjects with complete data on all variables, well above the minimum requirement of 100.
+- We are considering at least four predictors for each regression model, and we include at least one quantitative (for example, `RBC`) and multi-categorical variable (for example, `female`) in each model. 
+- Dongze HE is certain that it is completely appropriate for these data to be shared with anyone, without any conditions. There are no concerns about privacy or security, mostly because the data have been on a public website for many years, and are completely free of identifying information about individual subjects.
+
+
+# An Analysis: Linear Regression
+
+We'll start with a model motivated by the Spearman $\rho^2$ plot developed previously, and repeated below.
+
+```{r}
+plot(spearman2(Duration ~ Heart.Disease + Systolic + BMI.cat + Crystalloid + RBC + EBL, data = GFR))
+```
+
+## Model A. Modified Kitchen Sink
+
+Let's start with a model including just four of our candidate predictors, including a restricted cubic spline with 5 knots in `EBL`, an interaction between `EBL` and `Heart.Disease` and then main effects for `Crystalloid` and the other three candidate predictors.
+
+```{r model A}
+d <- datadist(GFR)
+options(datadist = "d")
+
+m.A <- ols(Duration ~ rcs(EBL, 5) * Heart.Disease + RBC + Crystalloid + BMI.cat +
+               Systolic , 
+           data = GFR, x = T, y = T)
+m.A
+
+```
+
+### ANOVA plot
+
+```{r}
+anova(m.A)
+plot(anova(m.A))
+```
+
+### Effects plots
+
+```{r}
+summary(m.A)
+plot(summary(m.A))
+```
+
+According to the ANOVA, `EBL`, `RBC` and `Crystalloid` are statistically significant pieces of the puzzle, and the nonlinear part of the model doesn't seem to have a real impact. Later, we'll use the "Best Subsets" approach to do some variable selection. 
+
+### Nomogram after imputation
+
+```{r, fig.height = 8}
+plot(nomogram(m.A))
+```
+
+## Running "Best Subsets" to select predictors
+
+Mostly for completeness, next we'll consider models with main effects only, again just excluding the observations with missing values, and run our "best subsets" comparisons to consider potential models.
+
+```{r leaps for linear model}
+bs_preds <- with(GFR, cbind(RBC, EBL, Crystalloid, BMI.cat, Systolic, Heart.Disease))
+x1 <- regsubsets(bs_preds,GFR$Duration, nvmax=6)
+rs <- summary(x1)
+rs
+bs_subs <- regsubsets(bs_preds, 
+                      y = GFR$Duration, 
+                      nvmax = 6)
+bs_mods <- summary(bs_subs)
+
+bs_mods$aic.c <- 488*log(bs_mods$rss / 488) + 2*(2:7) + 
+    (2 * (2:7) * ((2:7)+1) / (488 - (2:7) - 1))
+```
+
+## Place winning results in `bs_winners`
+
+```{r}
+bs_winners <- tbl_df(bs_mods$which)
+bs_winners$k <- 2:7 ## in general, this is 2:(nvmax + 1)
+bs_winners$r2 <- bs_mods$rsq
+bs_winners$adjr2 <- bs_mods$adjr2
+bs_winners$cp <- bs_mods$cp
+bs_winners$aic.c <- bs_mods$aic.c
+bs_winners$bic <- bs_mods$bic
+```
+
+## Building the "Best Subsets" Plots
+
+Code not shown here, but it's in the Markdown file.
+
+```{r, echo = FALSE}
+p1 <- ggplot(bs_winners, aes(x = k, y = adjr2, 
+                       label = round(adjr2,3))) +
+    geom_line() +
+    geom_label() +
+    geom_label(data = subset(bs_winners, 
+                             adjr2 == max(adjr2)),
+               aes(x = k, y = adjr2, label = round(adjr2,3)), 
+               fill = "yellow", col = "blue") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:7) +
+    labs(x = "# of predictors (including intercept)",
+         y = "Adjusted R-squared")
+
+p2 <- ggplot(bs_winners, aes(x = k, y = cp, 
+                             label = round(cp,1))) +
+    geom_line() +
+    geom_label() +
+    geom_abline(intercept = 0, slope = 1, 
+                col = "red") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:7) +
+    labs(x = "# of predictors (including intercept)",
+         y = "Mallows' Cp")
+
+p3 <- ggplot(bs_winners, aes(x = k, y = aic.c, 
+                             label = round(aic.c,1))) +
+    geom_line() +
+    geom_label() +
+    geom_label(data = subset(bs_winners, 
+                             aic.c == min(aic.c)),
+               aes(x = k, y = aic.c), 
+               fill = "pink", col = "red") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:7) +
+    labs(x = "# of predictors (including intercept)",
+         y = "Bias-Corrected AIC")
+
+p4 <- ggplot(bs_winners, aes(x = k, y = bic, 
+                             label = round(bic,1))) +
+    geom_line() +
+    geom_label() +
+    geom_label(data = subset(bs_winners, bic == min(bic)),
+               aes(x = k, y = bic), 
+               fill = "lightgreen", col = "blue") +
+    theme_bw() +
+    scale_x_continuous(breaks = 2:7) +
+    labs(x = "# of predictors (including intercept)",
+         y = "BIC")
+gridExtra::grid.arrange(p1, p2, p3, p4, nrow = 2)
+rm(p1, p2, p3, p4,bs_mods,bs_preds,bs_subs)
+```
+
+## Candidate Models include
+
+Inputs | Adj. r^2^ | C~p~    | BIC       | AIC_c
+-----: | ---:      | ---:    | ---:      | ---: 
+4      | .254      | 4.8     | **-120.9**   | 4408
+5      | .255      | **4.8** | -116.8       | **4408**
+6      | **.256** | 5.0      | -112.4      | 4408.2
+
+RBC EBL Crystalloid BMI.cat Systolic
+
+- 4: `RBC` + `EBL` +`Crystalloid`
+- 5: Model 4 + `Systolic`
+- 6: Model 5 + `BMI.cat` 
+
+### Comparison of Candidate Models via ANOVA
+
+```{r}
+lm4 <- lm(Duration ~ RBC + EBL + Crystalloid, data = GFR)
+lm5 <- lm(Duration ~ RBC + EBL + Crystalloid+ Systolic, data = GFR)
+lm6 <- lm(Duration ~ RBC + EBL + Crystalloid + Systolic+BMI.cat, data = GFR)
+```
+
+```{r}
+anova(lm4, lm5, lm6)
+```
+
+The ANOVA suggests adding new predictors into model 1 has no statistically significant difference, so I will use lm4 as my Model B.
+
+## Model B
+
+```{r model B}
+m.B <- ols(Duration ~ RBC + EBL + Crystalloid, data = GFR, x = T, y = T)
+m.B
+```
+
+We lose very little in R^2^, and gain some improvement in the significance testing results here, and the R^2^ is not really good, only 0.254
+
+### ANOVA plot for Model B
+
+The ANOVA plot after an `ols` fit just re-iterates the information from the *t* tests.
+
+```{r}
+plot(anova(m.B))
+```
+
+### Validation of Model B Summary Statistics
+
+```{r validate model B}
+set.seed(42); validate(m.B)
+```
+
+### Nomogram of Model B
+
+The nomogram is very simple, since each predictor only enters the model linearly.
+
+```{r}
+plot(nomogram(m.B))
+```
+
+The `RBC` really drives the model almost to the exclusion of everything else.
+
+### Some Predictions
+
+Suppose we want to make a prediction with this Model B, where `RBC` can vary from 0 to 8000, and `Crystalloid` ranges from 0 to 26000, while `EBL` remain at their medians.
+
+```{r}
+Predict(m.B, RBC = seq(0, 8000, 1000), Crystalloid = c(0, 26000))
+ggplot(Predict(m.B, RBC = 0:1000, Crystalloid = c(0, 26000)))
+```
+
+Does the `Crystalloid` really have a noticeable impact, once we know the baseline ejection fraction?
+
+### Fitting Model B with `lm`
+
+We can fit Model B using `lm` and then plot residuals, if we like.
+
+```{r}
+model.B <- lm(Duration ~ RBC + EBL + Crystalloid, data = GFR)
+display(model.B)
+```
+
+### Residual Plots for Model B
+
+```{r}
+par(mfrow=c(2,2))
+plot(model.B)
+par(mfrow=c(1,1))
+```
+
+We have a really noticable outliers, #206, others seems pretty good.
+
+using sandwich to deal with it.
+
+# An Analysis: Logistic Regression
+
+We'll start with a model motivated by the Spearman $\rho^2$ plot developed above, and repeated below.
+
+```{r}
+plot(spearman2(Death ~ Age + Female + BMI.cat + RBC + Emergency + Statins, data = GFR))
+```
+
+## Model 1 (a screening model - essentially the kitchen sink)
+
+Our model (m.1) will include restricted cubic splines with four knots for the two ejection fraction variables, interaction terms between `RBC` and `Emergency`, as well as `RBC` and `Age`, and then main effects of the other fpur candidate predictors.
+
+There are some error when i use age, so I change `age` to `Systolic`
+
+```{r model 1 logistic}
+
+GFR$Age <- as.numeric(GFR$Age) 
+
+dd <- datadist(GFR)
+options(datadist = "dd")
+m.1 <- lrm(Death ~ rcs(RBC,3) *Emergency + Age + Female + BMI.cat + Statins,  data = GFR, x = T, y = T)
+m.1
+```
+
+### ANOVA for Model 1
+
+The ANOVA plot from `rms` is one of the nicer features of building a model with `rms`, in my view.
+
+```{r}
+anova(m.1)
+plot(anova(m.1))
+```
+
+From the ANOVA plot, it looks like a model with `RBC` and `Emergency`,might be sufficient.
+
+### Plotting Predictions from Model 1
+
+We can use `ggplot` and the `Predict` function from `rms` to plot predictions across a range of levels for up to three predictors simultaneously, as long as only one of them is quantitative. Here, we'll build a plot of the predicted event probabilities according to the model, while letting:
+
+- `RBC` range from 0 to 7270
+- for each level of `SE_res` and of `ecg`
+- while holding all other variables at their medians.
+
+The `fun = plogis` command here plots the probabilities, rather than the log odds.
+
+```{r}
+ggplot(Predict(m.1, dobEF = 0:7270, SE_res, ecg, fun=plogis)) +
+    theme_bw() +
+    labs(x = "dobutamine ejection fraction",
+         y = "Pr(event in the next year)",
+         title = "Model 1 Predictions",
+         subtitle = "Across levels of dobEF, SE_res, and ecg, holding all other predictors at their medians")
+```
+
+### Plotting the ROC curve for Model 1
+
+First, we need to fit Model 1 in `glm`, rather than `rms`. 
+
+```{r}
+model.1 <- glm(event ~ SE_res * ecg + rcs(dobEF,4) * SE_res + 
+                   rcs(baseEF,4) + female + chestpain_c + age + 
+                   hx_smoking + basebp + bhr, 
+               data = stressEcho, family = binomial(link = logit))
+```
+
+We have to omit the missing values from `stressEcho` in the first two lines below in order to get the ROC curve to run.
+
+```{r}
+# requires ROCR package
+prob <- predict(model.1, data = na.omit(stressEcho), type="response")
+pred <- prediction(prob, na.omit(stressEcho)$event)
+# rest of this doesn't need much adjustment except for titles
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+auc <- performance(pred, measure="auc")
+auc <- round(auc@y.values[[1]],3)
+roc.data <- data.frame(fpr=unlist(perf@x.values),
+                       tpr=unlist(perf@y.values),
+                       model="GLM")
+ggplot(roc.data, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2) +
+    geom_line(aes(y=tpr)) +
+    labs(title = paste0("ROC Curve w/ AUC=", auc),
+         subtitle = "Model 1 for stressEcho data")
+```
+
+You'll note that the listed C statistic here (0.782) is calculated slightly differently than the one produced in the `rms` model summary (0.783).
+
+### Coefficients from Model 1 on the Odds Ratio Scale
+
+It's difficult to interpret odds ratios well from a logistic regression model with non-linear terms. 
+
+Suppose we look specifically at the `female` variable. What can we conclude about that specific predictor, which only enters the model in a linear way? Note that it helps that there are no missing values in the `female` data.
+
+```{r}
+exp(coef(model.1)[c("female")])
+exp(confint(model.1)[c("female"),])
+```
+
+Now, what about a predictor, like `chestpain_c`, with some missing values? In that case, we need to refit the model to use only the complete cases in the stressEcho data set.
+
+```{r}
+model.1a <- glm(event ~ SE_res * ecg + rcs(dobEF,4) * SE_res + 
+                   rcs(baseEF,4) + female + chestpain_c + age + 
+                   hx_smoking + basebp + bhr, 
+               data = na.omit(stressEcho), 
+               family = binomial(link = logit))
+
+display(model.1a)
+exp(coef(model.1a)[c("chestpain_c1")])
+exp(confint(model.1a)[c("chestpain_c1"),])
+```
+
+Holding everything else constant (a tall order in this setting), we see a modest (but not significant) association between chestpain_c and having an event. 
+
+Specifically, the odds ratio associated with having chest pain vs. not having chest pain on experiencing an event is estimated to be 1.19 (95\% CI: 0.68, 2.06). This implies that the odds of having an event increase by a factor of about 1.19 (about 19\%) when a patient has chest pain as compared to an otherwise identical patient without chest pain.
+
+### Calibration Plot for Model 1
+
+```{r}
+plot(calibrate(m.1))
+```
+
+Model 1 appears to overpredict a bit, especially at the higher predicted values.
+
+### Validation of Model 1, with backwards elimination
+
+What if we try a validation step, with a stepwise backwards elimination approach?
+
+```{r}
+set.seed(432); validate(m.1, bw = TRUE, B = 10)
+```
+
+Note that the cross-validated Somers' Dxy statistic is 0.4454. To calculate the cross-validated area under the ROC curve, called C, we use
+
+$$
+C = 0.5  + \frac{Dxy}{2} = 0.5 + \frac{.4454}{2} = 0.5 + 0.2227 = 0.722
+$$
+which is a cross-validated estimate of the value of the C statistic we might reasonably expect using this model. Compare this to the nominal C = 0.783 shown in the initial Model 1 summary
+
+So, it looks like this model is pretty seriously overfitting the data. The next model to try involves only `SE_res` and `dobEF` with an interaction between them and a restricted cubic spline for `dobEF`. We'll look at that in Model 2.
+
+
+## Model 2 (a smaller model with promising predictors)
+
+Let's run our Model 2.
+
+```{r run model 2}
+dd <- datadist(stressEcho)
+options(datadist = "dd")
+m.2 <- lrm(event ~ SE_res * rcs(dobEF,4), 
+           data = stressEcho, x = T, y = T)
+m.2
+```
+
+### ANOVA for Model 2
+
+```{r}
+anova(m.2)
+plot(anova(m.2))
+```
+
+### Effects Summary for Model 2
+
+Here is the summary of effects for this model.
+
+```{r}
+summary(m.2)
+plot(summary(m.2))
+```
+
+### Calibration Plot for Model 2
+
+The calibration plot isn't great here.
+
+```{r}
+plot(calibrate(m.2))
+```
+
+### Nomogram for Model 2
+
+And here is the nomogram.
+
+```{r}
+plot(nomogram(m.2))
+```
+
+### Making Predictions with Model 2
+
+Let's make a mean prediction for two subjects, each with `dobEF = 60` but one with `SE_res` = "Positive" and the other with `SE_res` = "Negative", using a 90\% confidence interval.
+
+```{r}
+Predict(m.2, SE_res = c("Positive", "Negative"), dobEF = 60, conf.int = 0.90)
+```
+
+It would be more useful if that prediction (and its confidence interval) was on a probability scale...
+
+```{r}
+Predict(m.2, SE_res = c("Positive", "Negative"), dobEF = 60, 
+        fun = plogis, conf.int = 0.90)
+```
+
+### Plotting Model 2 Predictions
+
+Here is a plot of the predictions across the two levels of `SE_res` for patients with `dobEF` ranging from 60 to 85.
+
+```{r}
+ggplot(Predict(m.2, dobEF = 60:85, 
+               SE_res = c("Positive", "Negative"), fun=plogis)) +
+    theme_bw() +
+    labs(x = "dobutamine ejection fraction",
+         y = "Pr(event in the next year)",
+         title = "Model 2 Predictions")
+```
+
+### Plotting the ROC curve for Model 2
+
+Again, we need to fit Model 2 in `glm`, rather than `rms`.
+
+```{r}
+model.2 <- glm(event ~ SE_res * rcs(dobEF,4), data = stressEcho, 
+               family = binomial(link = logit))
+
+```
+
+Model 2 has no predictors with missing values, so the next step is relatively straightforward. 
+
+```{r}
+# requires ROCR package
+prob <- predict(model.2, data = stressEcho, type="response")
+pred <- prediction(prob, stressEcho$event)
+# rest of this doesn't need much adjustment except for titles
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+auc <- performance(pred, measure="auc")
+auc <- round(auc@y.values[[1]],3)
+roc.data <- data.frame(fpr=unlist(perf@x.values),
+                       tpr=unlist(perf@y.values),
+                       model="GLM")
+ggplot(roc.data, aes(x=fpr, ymin=0, ymax=tpr)) +
+    geom_ribbon(alpha=0.2) +
+    geom_line(aes(y=tpr)) +
+    labs(title = paste0("ROC Curve w/ AUC=", auc),
+         subtitle = "Model 2 for stressEcho data")
+```
+
+## Model 3 (with imputation)
+
+Let's consider a model that includes some variables with missing values, just to see how that works out. We'll create a model 3 with an interaction for `SE_res` and `dobEF` plus main effects for `baseEF` and `hx_smoking`, since `baseEF` and `hx_smoking` each have a few missing values.
+
+### Imputation Model
+
+```{r model 3 imputation}
+f.3 <- aregImpute(~event + SE_res + dobEF + baseEF + hx_smoking, 
+                  n.impute = 100, data = stressEcho, pr = FALSE, x = TRUE)
+f.3
+```
+
+### Fitting the Model after Imputation
+
+```{r model 3 fit with imputed values}
+fmi.m.3 <- fit.mult.impute(event ~ SE_res * dobEF + baseEF + hx_smoking, 
+                           lrm, f.3, data = stressEcho)
+fmi.m.3
+```
+
+### ANOVA plot after imputation
+
+```{r}
+plot(anova(fmi.m.3))
+```
+
+### Effects plot after imputation
+
+```{r}
+summary(fmi.m.3)
+plot(summary(fmi.m.3))
+```
+
+### Nomogram after imputation
+
+```{r, fig.height = 6}
+plot(nomogram(fmi.m.3))
+```
+
+Note that the `Predict`, `validate` and `calibrate` ideas don't play well with `fit.mult.impute`, so we won't address those here. If we wanted to address those issues for Model 3, we would simply refit the model using only the complete cases, or do a simple imputation and then run them.
+
+# Endnotes
+
+[^1]: The four cardiac outcomes under study are death, myocardial infarction, percutaneous transluminal coronary angioplasty (PTCA), and coronary artery bypass graft surgery (CABG) and whether any of these occurred in the 12 months following dobutamine stress echocardiography.
+
+[^2]: I know this because I've spent some time analyzing these data in the past. Note that some other versions of these data produce 89 patients with events, and not 90, including the version at the Vanderbilt Biostatistics wiki, but this derived `event` variable is what we'll go with.
+
+[^3]: Ejection fraction is a measure of the heart's pumping efficiency.
+
+[^4]: The `MI` category in `ecg` means that the electrocardiogram showed signs of a heart attack.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

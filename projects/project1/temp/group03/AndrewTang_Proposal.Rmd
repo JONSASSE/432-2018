@@ -1,0 +1,274 @@
+---
+title: 'Repair, Reconstruct, or Resect: The Fate of the Perforated Esophagus'
+author: "Andrew Tang"
+date: "2/22/2018"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    number_sections: yes
+    code_folding: show
+---
+## Preliminaries
+
+```{r setup, echo=FALSE, cache=FALSE}
+library(knitr); library(rmdformats)
+
+## Global options
+opts_chunk$set(cache=FALSE,
+               prompt=FALSE,
+               tidy=FALSE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+```{r load packages here}
+library(skimr)
+library(broom)
+library(Hmisc)
+library(rms)
+library(tidyverse)
+library(gapminder)
+library(pROC)
+library(ROCR)
+library(simputation)
+library(car)
+library(leaps)
+eda4 <-
+  function(a.raw)
+  {
+    # Revised September 4, 2007 to change return phrasing
+    # Revised August 28, 2008 to change to describe function
+    library(Hmisc)
+    a <- a.raw[!is.na(a.raw)]
+    par(mfrow=c(1,3))
+    boxplot(a, cex=2, main="Boxplot & mean +/- SD")
+    points(1.3, mean(a), col="blue", pch=16, cex=2)
+    arrows(1.3, mean(a)-sd(a), 
+           1.3, mean(a)+sd(a), code=3, col="blue",
+           angle=40, length=.1, lwd=1.5)
+    hist(a, prob=T, main="Histogram & Normal Fit", 
+         col="powderblue", xlab="", ylab="")
+    temp.x <- seq(min(a), max(a), length=100)
+    temp.y <- dnorm(temp.x, mean(a), sd(a))
+    lines(temp.x, temp.y, lwd=3, col="red")
+    rm(temp.x, temp.y)
+    qqnorm(a, cex=2, main="Normal Q-Q plot")
+    qqline(a, col="red", lwd=2)
+    par(mfrow=c(1,1))
+    return(list(describe(a), cbind("Standard Deviation =", sd(a))))
+    rm(a)  }
+```
+
+# Task 1: Data Source
+The purpose of this study is to determine the factors that predict 90 day survival and hospital length of stay after esophageal perforation that required operation. 
+
+After approval from the Institutional Review Board at the Cleveland Clinic, a retrospective review was performed by myself for 3000 adult patients who were either diagnosed with esophageal perforation or who underwent esophageal surgery from 1996-2016. Patients with oropharyngeal perforations, leaks after esophagectomy and those who underwent esophageal surgery for diagnoses other than perforation were excluded. Patients with esophageal perforations but did not undergo surgery or were not seen by the thoracic surgery department were also excluded. 
+
+After exclusion, 166 patients were determined to fall within the inclusion criteria as having an esophageal perforation that was treated with an operation. The final dataset is de-identified, removing all patient identifiers.
+
+# Task 2: Load and Tidy the Data
+
+```{r load your data here}
+perf <- read.csv("Perf.csv",na.strings=c(""," "))
+
+perf$Surg <- factor(perf$Surg,levels=c("Repair","Esophagectomy","Diversion"))
+perf$CCF.surg <- factor(perf$CCF.surg,levels=c("Repair","Esophagectomy","Diversion"))
+perf$Location <- factor(perf$Location,levels=c("Cervical","Thoracic","Abdominal"))
+
+perf90 <- perf %>%
+  select(ID, CCF.surg, Age, Charlson, Stent, Repair, WBC, Creatinine,
+         Cause, Location, Xfer, Perf_CCFsurg, Bicarb, Albumin, Pitt, LOS, X90_survive)
+```
+
+## Releveling of surgeries
+Surgeries are releveled according to escalating levels of care. Stable patients with small esophageal perforations should ideally receive repairs. Stable patients with large esophageal perforations would receive esophagectomy. And unstable patients would require diversion.
+
+## Releveling of location
+Location of perforation is releveled according to anatomic location.
+
+```{r}
+skim(perf90)
+```
+
+# Task 3: Listing of My Tibble
+
+```{r listing of your tibble}
+str(perf90)
+```
+The tidied dataset consists of 166 subjects and 17 variables
+
+# Task 4: Code Book
+
+Variable   | Type        | Details
+---------: | ----------: | ----------------------------------------
+`ID`       | character   | Patient identification code (1 to 166)
+`CCF.surg` | categorical | Surgery performed at CCF  (Repair, Esophagectomy, Diversion)
+`Age`      | quantitative | Age in years (range is 0-92)
+`Charlson` | quantitative | Charlson Deyo Comorbidity Index (range is 0-14) with 1 NA due to pre EPIC
+`Stent`    | binary | Initial management with stent (0- No 90%, 1- Yes 10%)
+`Repair`   | binary | Initial management with repair (0- No 93%, 1- Yes 7%)
+`WBC`      | quantitative | While blood cell count in cells/microL(range is 1.3-51.78) with 13 NA due to pre EPIC
+`Creatinine`| quantitative | Creatinine in mg/dl (range is 0.3-8.1) with 28 NA due to pre EPIC
+`Cause`    | categorical | Cause of perforation (Boerhaave 50, Iatrogenic 72, Malignant 19, Other 25)
+`Location`    | categorical | Location of perforation along esophagus (Cervical 18, Thoracic 37, Abdominal 111)
+`Perf_adm`    | quantitative | Days from perforation to admission (range -42-358)
+`Xfer`      | binary | Transferred in from outside hospital (0- No 48%, 1- Yes 52%)
+`Perf_CCFsurg` | quantitative | Days from perforation to CCF surgery (range 0-950)
+`Bicarb`    | quantitative | Serum bicarbonate in mEq/dL (range 12-35) with 25 NA due to pre EPIC
+`Albumin`    | quantitative | Serum albumin in mg/dL (range 1.6-5.1) with 63 NA due to pre EPIC
+`Pitt`    | quantitative | Pittsburgh severity score (range 0-15) with 6 NA due to pre EPIC
+`LOS`  | quantitative | Length of stay in days (range 3-176) with 2 NA due to pre EPIC
+`X90_survive` | binary | 90 day death/event (0- No 84%, 1- Yes 16%)
+
+# Task 5: My Subjects
+The data describes the 166 patients who had esophageal perforations that were managed operatively at the Cleveland Clinic (CCF) from 1996-2016. Excluded were patients who were managed nonoperatively, and those who were not seen by the thoracic surgery department. The final dataset is de-identified, removing all patient identifiers.
+
+# Task 6: My Variables
+The dataset contains 17 variables.
+
+1. ID. This is the subject ID.
+
+2. CCF.surg. This is the surgery that was performed at CCF, including any reoperation that the patient required after transfer.
+
+3. Age. This is the patient's age in years at the time of the esophageal perforation.
+
+4. Charlson. This is the Charlson Deyo comorbidity index of a total of 22 conditions assigning each condition a score of 1,2,3, or 6 to give a total possible 33 points
+
+5. Stent. This is whether or not the patient was initially managed with a stent.
+
+6. Repair. This whether or not the patient was initially managed with operative repair.
+
+7. WBC. This is the white blood cell count in cells/microL. This is a measure of inflammation and infection.
+
+8. Creatinine. This is the creatinine in mg/dl. This is a measure of kidney function.
+
+9. Cause. This is the cause of esophageal perforation. Causes include Boerhaaves meaning spontaneous or from food impaction, iatrogenic meaning caused by instrumentation during procedure, malignant meaning due to cancer or cancer related treatments, and other, which include aortoesophageal fistulas and cervical hardware erosion.
+
+10. Location. This is where the esophagus is perforated. Either in the cervical portion (neck), thoracic portion (chest), or abdominal portion (abdomen).
+
+11. Xfer. This is whether or not a patient was transferred from an outside hospital to CCF.
+
+12. Perf_CCFsurg. This is the time in days from perforation to surgery performed at CCF.
+
+13. Bicarb. This is the bicarbonate level in mEq/dl at time of presentation. This tells us the patient's acid/base status, which is an indirect marker of sepsis.
+
+14. Albumin. This is the albumin level in mg/dl at the time of presentation. This tells us the patient's nutrition level.
+
+15. Pitt. This is the Pittsburgh Severity Score. This is a score developed for esophageal perforations to assess the severity level of the perforation and ranges from 0-18 based on several criteria including, age, fever, respiratory distress, tachycardia (fast heart rate), pleural effusion, uncontained leak, hypotension (low blood pressure),and cancer.
+
+16. LOS. This is the length of stay after surgery in days.
+
+17. X90_survive. This is 90 day mortality or whether or not the patient died after 90 days.
+
+# Task 7: My Planned Linear Regression Model
+I will predict the quantitative outcome of length of stay using some combination of the following five variables
+
+Age
+
+Charlson
+
+CCF.surg
+
+Xfer
+
+Perf_CCFsurg
+
+Pitt
+
+I anticipate that Pitt and Perf_CCFsurg will be key predictors.
+
+# Task 8: My Planned Logistic Regression Model
+I will predict the binary outcome of 90 day mortality using some combination of the following four variables 
+
+Age
+
+Charlson
+
+Perf_CCFsurg
+
+Pitt
+
+I anticipate that Pitt will be the only key predictor.
+
+# Task 9: Affirmation
+- I am certain that it is completely appropriate for these data to be shared with anyone, without any conditions. There are no concerns about privacy or security.
+
+# Task 10: Linear Regression
+## Assessing the Need for Transformation
+LOS is right skewed and BoxCox lambda value suggests a log transformation.
+```{r}
+eda4(perf90$LOS)
+boxCox(perf90$LOS ~ perf90$Age + perf90$Charlson + perf90$CCF.surg + perf90$Xfer + perf90$Perf_CCFsurg + perf90$Pitt)
+```
+
+## Spearman Rho Plot
+```{r}
+plot(spearman2(log(LOS) ~ Age + Charlson + CCF.surg + Xfer + Perf_CCFsurg + Pitt, data = perf90))
+```
+
+
+## Modified Kitchen Sink
+R squared for this model is only 0.144.
+```{r}
+d <- datadist(perf90)
+options(datadist = "d")
+
+m.ks <- ols(log(LOS) ~ Age + Charlson + CCF.surg + Xfer + Perf_CCFsurg + Pitt,
+            data = perf90, x = T, y = T)
+m.ks
+```
+
+```{r}
+plot(anova(m.ks))
+```
+
+## Modified Kitchen Sink (with Imputation)
+```{r}
+set.seed(432001)
+perf90.imp <- perf %>%
+  impute_rlm(Pitt ~ Age + Cause + Malignancy + 
+               Perf_CCFsurg + Intub + Pressors) %>%
+  select(ID, CCF.surg, Age, Charlson, Stent, Repair, WBC, Creatinine,
+         Cause, Location, Xfer, Perf_CCFsurg, Bicarb, Albumin, Pitt, LOS, X90_survive)
+```
+
+
+After imputation, the R squared for this model only improves to 0.147.
+```{r}
+d.imp <- datadist(perf90.imp)
+options(datadist = "d.imp")
+
+imp.ks <- ols(log(LOS) ~ Age + Charlson + CCF.surg + Xfer + 
+                Perf_CCFsurg + Pitt,
+            data = perf90.imp, x = T, y = T)
+imp.ks
+```
+Anova suggests that the Pitt and CCF.surg add significant value to the model.
+```{r}
+plot(anova(imp.ks))
+```
+
+## Adding Interaction Term
+The R squared for the model with the interaction term improves to 0.220, however the adjusted R squared remains at 0.142.
+```{r}
+it.ks <- ols(log(LOS) ~ Age + Charlson + Xfer + 
+                Perf_CCFsurg + Pitt*CCF.surg,
+            data = perf90.imp, x = T, y = T)
+it.ks
+```
+
+Anova suggests that the interaction term adds significance to the model.
+```{r}
+plot(anova(it.ks))
+```
+```{r}
+lm_ks <- lm(log(LOS) ~ Age + Charlson + Xfer + 
+                Perf_CCFsurg + Pitt*CCF.surg,
+            data = perf90.imp, x = T, y = T)
+plot(lm_ks)
+```
+
+# Task 11 Logistic Regression
+
