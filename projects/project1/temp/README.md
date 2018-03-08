@@ -1,4 +1,4 @@
-Names in **bold** have HTMLs available, as of 2018-03-08 at 12:26 PM.
+Names in **bold** have HTMLs available, as of 2018-03-08 at 12:36 PM.
 
 Group | Name in **Bold** if HTML is available in the directory above.
 ------: | -----------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Group | Name in **Bold** if HTML is available in the directory above.
 3 | **Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson**
 4 | **Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang**
 5 | **Ryan Honomichl, JJ Huang, Xin Xin Yu**, Bilal Zonjy
-6 | Khaled Alayed, Kedar Mahajan, **Preeti Pathak, Sarah Planchon Pope**
+6 | **Khaled Alayed**, Kedar Mahajan, **Preeti Pathak, Sarah Planchon Pope**
 7 | **Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez**
 8 | **Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth**
 9 | **Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka**
