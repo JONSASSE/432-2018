@@ -2,7 +2,8 @@
 
 ### Key Materials
 
-- No slides today, I think. There's more than enough in this README as it is.
+- No slides today, I think. There's more than enough in this README as it is. At the bottom of this README is a link to a Note I wrote to help us discuss the various types of effect estimates we can generate with `lm`, `ols`, `glm` and `lrm` model fits. 
+    - I've made the note available in [HTML preview](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class16/class16note.html) and in [R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class16/class16note.Rmd) as well.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) will appear as soon as they are available.
 
 In today's class, we'll demonstrate five different robust linear regression modeling approaches, including bounded influence regression, penalized least squares and quantile regression. We'll also discuss Quiz 1.
@@ -128,4 +129,5 @@ If you still have degrees of freedom you're willing to spend after this, proceed
 
 6. **Apparently Singular Matrix error in R**. This can occur when running `anova` on an `rms`-generated model, like `ols` or `lrm`. It usually happens when the default tolerance level for flagging an invertible matrix is too low. You can usually fix this with `anova(modelname, tol = 1e-13)`. If that isn't effective, be sure that you don't have any interaction terms with constant values of the outcome. If that doesn't seem to be the problem, try centering and rescaling your predictors before running the `lrm` or `ols` model.
 
-7. **Interpreting Effect Sizes Correctly**. I've written up a note that we'll discuss in class.
+7. **Interpreting Effect Sizes Correctly**. I've written up a note that we'll discuss in class. It will help us discuss the various types of effect estimates we can generate with `lm`, `ols`, `glm` and `lrm` model fits, and it makes use of the `small.csv` data set posted [above](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16).
+    - I've made the note available in both an [HTML preview](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class16/class16note.html) and in [R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class16/class16note.Rmd).
