@@ -2,7 +2,7 @@
 
 ### Key Materials
 
-- No slides today, I think. There's more than enough in this README as it is. 
+- No slides today. There's more than enough in this README as it is. 
 - At the bottom of this README is a [link to a Note](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class16/class16note.html) I wrote to help us discuss the various types of effect estimates we can generate with `lm`, `ols`, `glm` and `lrm` model fits. 
     - I've made the note available in [HTML preview](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class16/class16note.html) and in [R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class16/class16note.Rmd) as well.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) will appear as soon as they are available.
@@ -56,6 +56,14 @@ Group | Names
 7. The [grades on HW 5](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw5/hw5grades.pdf) are now posted.
 
 8. I told some people that scored below 80 on Quiz 1 that I would provide them with an opportunity to improve their grade, and that they would receive that today. With the Canvas issue, I haven't done that yet. I will get it to you as soon as I can, probably by this Saturday. This "makeup" task will be due at noon on Monday 2018-03-26.
+
+### Quote of the Day, from Hadley Wickham (as quoted by [Database Hulk](https://twitter.com/DATABASE_HULK/status/971765242425499649))
+
+> 80% of the time, importing data is boring and tedious. And then 20% of the time, it's just endless screaming.
+
+### Tweet of the Day
+
+[Some object lessons](https://twitter.com/coolbutuseless/status/971732818312097792) on testing large format ggplot printing.
 
 ## Most Important Tip for Future Homework or Project 1
 
