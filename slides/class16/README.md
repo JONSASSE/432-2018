@@ -29,7 +29,7 @@ Group | Names
 1. Appoint someone to keep track of time. Try not to spend about 10 minutes of group time on any one project.
 2. Everyone should discuss their project with the group for 2-3 minutes, helping the other people to understand what they're trying to do. Everyone should have a question to ask about their project. Be sure that you raise your question when describing your project, so the group has a meaningful place to start its discussions.
 3. The group should try to tackle each question that is raised as a group first. If as a group you can't settle on a resolution, and need some "outside" help, let us know, and a TA or Dr. Love will come by and try to be helpful. 
-4. Make sure everyone in the group can see the current work of everyone else in the group on Canvas by the end of class today. This may require some intervention by Dr. Love. We'll see.
+4. Make sure everyone in the group can see the current work of everyone else in the group on Canvas. This may require some intervention by Dr. Love. In the meantime, Dr. Love has posted the HTML files for everyone [at this temporary location](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1/temp) so you can download and then view them if necessary.
 5. Over the break, you'll be finishing up your analyses, in preparation for an additional group discussion at our next class, on Tuesday 2018-03-20, and for your final submission of the project in advance of the deadline, which is Friday 2018-03-23 at 1 pm.
 
 ## Announcements before class
@@ -53,7 +53,9 @@ Group | Names
 
 6. As mentioned above, there is a [Minute Paper](https://goo.gl/forms/kv5GJhm9Pjpcc5y73) to complete after today's class. Please do so by the end of the day on Friday 2018-03-09. Thank you.
 
-7. Grades for HW 5 [will be posted here](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) by the time class begins.
+7. The [grades on HW 5](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw5/hw5grades.pdf) are now posted.
+
+8. I told some people that scored below 80 on Quiz 1 that I would provide them with an opportunity to improve their grade, and that they would receive that today. With the Canvas issue, I haven't done that yet. I will get it to you as soon as I can, probably by this Saturday. This "makeup" task will be due at noon on Monday 2018-03-26.
 
 ## Most Important Tip for Future Homework or Project 1
 
