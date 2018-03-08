@@ -2,7 +2,8 @@
 
 ### Key Materials
 
-- No slides today, I think. There's more than enough in this README as it is. At the bottom of this README is a link to a Note I wrote to help us discuss the various types of effect estimates we can generate with `lm`, `ols`, `glm` and `lrm` model fits. 
+- No slides today, I think. There's more than enough in this README as it is. 
+- At the bottom of this README is a link to a Note I wrote to help us discuss the various types of effect estimates we can generate with `lm`, `ols`, `glm` and `lrm` model fits. 
     - I've made the note available in [HTML preview](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class16/class16note.html) and in [R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class16/class16note.Rmd) as well.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) will appear as soon as they are available.
 
