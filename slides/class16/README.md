@@ -53,6 +53,8 @@ Group | Names
 
 6. As mentioned above, there is a [Minute Paper](https://goo.gl/forms/kv5GJhm9Pjpcc5y73) to complete after today's class. Please do so by the end of the day on Friday 2018-03-09. Thank you.
 
+7. Grades for HW 5 [will be posted here](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) by the time class begins.
+
 ## Most Important Tip for Future Homework or Project 1
 
 For the rest of the semester, make it your business to ensure that your HTML file for finished work shows **ZERO WARNINGS and ZERO MESSAGES**. We don't want to see them. 
