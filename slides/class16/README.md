@@ -5,9 +5,9 @@
 - No slides today. There's more than enough in this README as it is. 
 - At the bottom of this README is a [link to a Note](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class16/class16note.html) I wrote to help us discuss the various types of effect estimates we can generate with `lm`, `ols`, `glm` and `lrm` model fits. 
     - I've made the note available in [HTML preview](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class16/class16note.html) and in [R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class16/class16note.Rmd) as well.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) will appear as soon as they are available.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) are now available.
 
-In today's class, we'll demonstrate five different robust linear regression modeling approaches, including bounded influence regression, penalized least squares and quantile regression. We'll also discuss Quiz 1.
+In today's class, we discussed Project 1.
 
 ## Project 1 Groups for Discussion in Class
 
