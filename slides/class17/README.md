@@ -44,6 +44,10 @@ A Lot | Little | DK | Topic | High | Some | Not | DK
     - "Not" = Not interested in this topic.
     - "DK" = I don't know enough about this to form an opinion.
 
+### What question(s) about the course are uppermost in your mind now?
+
+Details to come.
+
 
 ## Project 1 Groups for Discussion in Class
 
