@@ -1,8 +1,12 @@
 # Bonus Assignment for those looking to improve a poor grade on Quiz 1
 
+The assignment is only available to those students who scored 80 or lower on Quiz 1.
+
 ## Instructions
 
-1. You will submit your R Markdown and HTML result for this assignment to Canvas. The assignment is only available to those students who scored 80 or lower on Quiz 1.
+1. You will submit your R Markdown and HTML result for this assignment to [Canvas](https://canvas.case.edu). 
+    - If you don't see the assignment on Canvas, and you scored 80 or lower on Quiz 1, let Dr. Love know. 
+    - If you scored 80 or higher, it shouldn't be there.
 2. Your completed work is due at noon on Monday 2018-03-26, although you are welcome to submit it earlier.
 3. If you scored between 75 and 80 on Quiz 1, you are welcome **but not required** to do this bonus work. 
 4. If you scored below 75 on Quiz 1, then I very strongly recommend that you do it.
@@ -26,3 +30,6 @@ The 14 questions that comprise this bonus assignment are available now.
 - View the HTML presentation
 - Download the PDF version
 
+## Answers
+
+Once everyone who is doing this has completed it, we'll post answer sketches.
