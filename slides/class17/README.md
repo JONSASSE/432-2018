@@ -22,7 +22,7 @@ Group | Names
 9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
 10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
 
-### Your Group Tasks Today
+### Your Group Tasks
 
 1. Before class on March 20, you need to post your Progress on Project 1 to Canvas.
     - The work in progress location that is up at Canvas now is a revised setup, which should let you review your colleagues' work if they submit it properly, but still maintain your work as your own, even through multiple passes.
