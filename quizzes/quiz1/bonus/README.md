@@ -12,7 +12,7 @@ The assignment is **only available to those students who scored 80 or lower on Q
 4. If you scored below 75 on Quiz 1, then I very strongly recommend that you do it.
 5. A passing grade on this assignment is 110/130. If you score 110 or more points on this assignment, I will increase your grade on Quiz 1 half of the distance between your current grade and a score of 85.
 6. You will get two chances at this if you make the deadline. If you submit the assignment on time and score below 110, we will return it to you indicating the questions where you lost credit, and let you redo it once (with a 48-hour turnaround.) If you score **115** or more points in this revision, then I will increase your grade on Quiz 1 as indicated above.
-7. You can discuss this assignment with the teaching assistants and with Dr. Love, and no one else, up through the Friday before it is due. You are permitted to ask questions through 431-help or in person.
+7. You can discuss this assignment with the teaching assistants and with Dr. Love, and no one else, any time between now and 5 PM on Friday 2018-03-23. You are permitted to ask questions through 431-help or in person.
 
 ## The Data You'll Need
 
