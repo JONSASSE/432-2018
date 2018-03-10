@@ -1,4 +1,4 @@
-# 432 Class 17: 2018-03-22
+# 432 Class 17: 2018-03-20
 
 ### Key Materials
 
@@ -7,9 +7,33 @@
 
 In today's class, we will discuss Project 1 and other issues.
 
+## Project 1 Groups for Discussion in Class
+
+Group | Names
+------: | -----------------------------------------------------------------------------
+1 | Laura Baldassari, Jenny Feng, Maher Kazimi, Satyakam Mishra, Vinh Trinh
+2 | Zainab (Albar) Albar, Dongze (Zaza) He, Nik Krieger, Andrew Shan
+3 | Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson
+4 | Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang
+5 | Ryan Honomichl, JJ Huang, Xin Xin Yu, Bilal Zonjy
+6 | Khaled Alayed, Kedar Mahajan, Preeti Pathak, Sarah Planchon Pope
+7 | Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez
+8 | Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth
+9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
+10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
+
+### Your Group Tasks Today
+
+1. Before class on March 20, you need to post your Progress on Project 1 to Canvas.
+    - The work in progress location that is up at Canvas now is a revised setup, which should let you review your colleagues' work if they submit it properly, but still maintain your work as your own, even through multiple passes.
+    - The temporary directory I built on GitHub to house HTML files is now gone.
+2. In class today, you and your group should discuss the most pressing question each of you has, at this point, about your project.
+3. During and after class on Tuesday, but before class on Thursday March 22, you'll be looking over the code of the people in your group, and giving them some feedback on what you see. 
+    - At a minimum, be sure to check and see if their HTML file contains anything it should not (like my instructions) or if the labeling doesn't make sense or isn't easy to work with. Make sure they have a real title and their name is provided where it belongs, and that the HTML file contains their name.
+
 ## Announcements before class
 
-1. To come.
+
 
 ## Minute Papers After Class 16 (n = 40/41)
 
@@ -69,10 +93,10 @@ A Lot | Little | DK | Topic | High | Some | Not | DK
     - Exactly.
     
 7. **What about comparing groups in randomized clinical trials?**
-    - That was most of 431 Part B, and then our discussion of analysis of variance. If you're talking about a binary outcome, it's mostly 2x2 tables and chi-square tests so far, but there's a little more to come.
+    - That was most of 431 Part B, and then our discussion of regression models and analysis of variance. If you're talking about a binary outcome, it's mostly logistic regression, 2x2 tables and chi-square tests so far, but there's a little more to come.
 
 8. **What about adjusting for baseline differences?**
-    - In a regression model, that was a large part of 431 Part C, and then our discussion of analysis of covariance.
+    - In a regression model, that was a large part of 431 Part C, and then our discussion of analysis of covariance, as well as, well, about 80% of our examples in 432 for ordinary least squares.
 
 9. **When do we use robust linear regression instead of ordinary least squares?**
     - Well, on some level, whenever you like.
@@ -80,22 +104,4 @@ A Lot | Little | DK | Topic | High | Some | Not | DK
 
 10. **Does the survey you had us take imply `THIS-THING-I-WANT-YOU-TO-DO-WILL-HAPPEN-A-LOT-IN-THE-REST-OF-432`?**
     - No, it doesn't.
-
-## Project 1 Groups for Discussion in Class
-
-Group | Names
-------: | -----------------------------------------------------------------------------
-1 | Laura Baldassari, Jenny Feng, Maher Kazimi, Satyakam Mishra, Vinh Trinh
-2 | Zainab (Albar) Albar, Dongze (Zaza) He, Nik Krieger, Andrew Shan
-3 | Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson
-4 | Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang
-5 | Ryan Honomichl, JJ Huang, Xin Xin Yu, Bilal Zonjy
-6 | Khaled Alayed, Kedar Mahajan, Preeti Pathak, Sarah Planchon Pope
-7 | Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez
-8 | Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth
-9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
-10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
-
-### Your Group Tasks Today
-
 
