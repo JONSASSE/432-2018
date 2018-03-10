@@ -99,6 +99,21 @@ The nine pieces of information we should find in the Markdown and HTML versions 
 
 You will be meeting with a group of 2-3 other people in the class to work through your project 1. You will post a "first draft" of your portfolio materials to [canvas](https://canvas.case.edu) before the end of February, and you will be reviewing and commenting on the work of your colleagues, both in person and electronically, including a meeting in class on 2018-03-08.
 
+### Project 1 Groups
+
+Group | Names
+------: | -----------------------------------------------------------------------------
+1 | Laura Baldassari, Jenny Feng, Maher Kazimi, Satyakam Mishra, Vinh Trinh
+2 | Zainab (Albar) Albar, Dongze (Zaza) He, Nik Krieger, Andrew Shan
+3 | Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson
+4 | Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang
+5 | Ryan Honomichl, JJ Huang, Xin Xin Yu, Bilal Zonjy
+6 | Khaled Alayed, Kedar Mahajan, Preeti Pathak, Sarah Planchon Pope
+7 | Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez
+8 | Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth
+9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
+10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
+
 ## The Portfolio
 
 The portfolio is due Friday 2018-03-23 at 1 PM. Submit via [canvas](https://canvas.case.edu).
