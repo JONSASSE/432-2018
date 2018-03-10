@@ -37,7 +37,7 @@ Group | Names
 
 2. Some students have been using the [431 Project Study 1 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study1-demonstration.pdf) and [431 Project Study 2 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study2-demonstration.pdf) PDF files I built to help you do projects in 431.  There's lots of useful data cleaning information in those documents. I encourage you to look them over.
 
-3. Those of you who scored below 80 on Quiz 1 should look at [this Bonus Assignment for those looking to improve a poor Quiz 1 grade](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus). If you scored 80 or higher on Quiz 1, this isn't open to you. If you scored between 75 and 80, it's optional. Answers will be posted to this assignment in April, if you want to use it as a review for Quiz 2 or something.
+3. Those of you who scored below 80 on Quiz 1 should look at [this Bonus Assignment for those looking to improve a poor Quiz 1 grade](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus). If you scored 80 or higher on Quiz 1, this isn't open to you. If you scored between 75 and 79, it's optional. Answers will be posted to this assignment in April, if you want to use it as a review for Quiz 2 or something.
 
 ## Minute Papers After Class 16 (n = 40/41)
 
