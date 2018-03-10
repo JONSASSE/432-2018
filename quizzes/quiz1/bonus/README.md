@@ -1,6 +1,6 @@
 # Bonus Assignment for those looking to improve a poor grade on Quiz 1
 
-The assignment is only available to those students who scored 80 or lower on Quiz 1.
+The assignment is **only available to those students who scored 80 or lower on Quiz 1**.
 
 ## Instructions
 
@@ -16,20 +16,20 @@ The assignment is only available to those students who scored 80 or lower on Qui
 
 ## The Data You'll Need
 
-There are four data files to get. They are:
+There are [four data files to get](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus). They are:
 
-- dat01.csv
-- dat04.csv
-- dat06.csv
-- dat10.csv
+- [dat01.csv](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/quizzes/quiz1/bonus/dat01.csv)
+- [dat04.csv](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/quizzes/quiz1/bonus/dat04.csv)
+- [dat06.csv](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/quizzes/quiz1/bonus/dat06.csv)
+- [dat10.csv](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/quizzes/quiz1/bonus/dat10.csv)
 
 ## The Questions
 
-The 14 questions that comprise this bonus assignment are available now.
+The 14 questions that comprise this [bonus assignment](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus) are available now. You can use either version, interchangeably.
 
-- View the HTML presentation
-- Download the PDF version
+- View the [HTML presentation](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/bonus/quiz01_bonus.html) of the questions, or
+- Download the [PDF version](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/bonus/quiz01_bonus.pdf)
 
-## Answers
+## Answers?
 
 Once everyone who is doing this has completed it, we'll post answer sketches.
