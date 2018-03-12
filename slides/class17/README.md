@@ -7,37 +7,17 @@
 
 In today's class, we will discuss Project 1 and other issues.
 
-## Project 1 Groups for Discussion in Class
-
-Group | Names
-------: | -----------------------------------------------------------------------------
-1 | Laura Baldassari, Jenny Feng, Maher Kazimi, Satyakam Mishra, Vinh Trinh
-2 | Zainab (Albar) Albar, Dongze (Zaza) He, Nik Krieger, Andrew Shan
-3 | Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson
-4 | Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang
-5 | Ryan Honomichl, JJ Huang, Xin Xin Yu, Bilal Zonjy
-6 | Khaled Alayed, Kedar Mahajan, Preeti Pathak, Sarah Planchon Pope
-7 | Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez
-8 | Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth
-9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
-10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
-
-### Your Group Tasks
-
-1. Before class on March 20, you need to post your Progress on Project 1 to Canvas.
-    - The work in progress location that is up at Canvas now is a revised setup, which should let you review your colleagues' work if they submit it properly, but still maintain your work as your own, even through multiple passes.
-    - The temporary directory I built on GitHub to house HTML files is now gone.
-2. In class today, you and your group should discuss the most pressing question each of you has, at this point, about your project.
-3. During and after class on Tuesday, but before class on Thursday March 22, you'll be looking over the code of the people in your group, and giving them some feedback on what you see. 
-    - At a minimum, be sure to check and see if their HTML file contains anything it should not (like my instructions) or if the labeling doesn't make sense or isn't easy to work with. Make sure they have a real title and their name is provided where it belongs, and that the HTML file contains their name. Your class participation grade will be affected by the quality of the comments you post to Canvas, as well as by the opinions of your fellow project group members about your efforts, as expressed in a Minute Paper to come.
-
 ## Announcements before class
 
-1. In looking over the Homework 5 grades, some were quite low. In a few cases, it seems clear that a mistake was made early on and then you were penalized for it repeatedly, when, in fact, given your mistake early on, you then proceeded to do things correctly. If you find yourself in a situation like this in Homework 5, or any other Homework assignment, I strongly encourage you to submit a regrading request through [this Google Form](https://goo.gl/forms/aQNPnlAWGIn72a7h1) any time between now and noon on Wednesday 2018-05-09, so that I will look your assignment over carefully at the end of the term.
+1. Some students have been using the [431 Project Study 1 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study1-demonstration.pdf) and [431 Project Study 2 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study2-demonstration.pdf) PDF files I built to help you do projects in 431.  There's lots of useful data cleaning information in those documents. I encourage you to look them over.
 
-2. Some students have been using the [431 Project Study 1 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study1-demonstration.pdf) and [431 Project Study 2 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study2-demonstration.pdf) PDF files I built to help you do projects in 431.  There's lots of useful data cleaning information in those documents. I encourage you to look them over.
+2. There is a new [Chapter 16 in the Course Notes](https://thomaselove.github.io/432-notes/colorectal-cancer-screening-and-some-special-cases.html). This briefly illustrates issues related to two topics we've yet to discuss regarding regression models for binary outcomes:
+    - the fitting of logistic regression models to data which have been aggregated, so that we know the counts of "yes" and "no" (or "yes" and "total") within each combination of predictors, but not the data on individual subjects. I briefly demonstrate both the `glm` approach, and the `Glm` approach (which is within `rms`.)
+    - the use of a different link, specifically the `probit`, in the context of a binary regression model. This produces a probit regression model, which is a reasonable alternative in some settings to a logistic regression.
 
 3. Those of you who scored below 80 on Quiz 1 should look at [this Bonus Assignment for those looking to improve a poor Quiz 1 grade](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus). If you scored 80 or higher on Quiz 1, this isn't open to you. If you scored between 75 and 79, it's optional. Answers will be posted to this assignment in April, if you want to use it as a review for Quiz 2 or something.
+
+4. In looking over the Homework 5 grades, some were quite low. In a few cases, it seems clear that a mistake was made early on and then you were penalized for it repeatedly, when, in fact, given your mistake early on, you then proceeded to do things correctly. If you find yourself in a situation like this in Homework 5, or any other Homework assignment, I strongly encourage you to submit a regrading request through [this Google Form](https://goo.gl/forms/aQNPnlAWGIn72a7h1) any time between now and noon on Wednesday 2018-05-09, so that I will look your assignment over carefully at the end of the term.
 
 ## Minute Papers After Class 16 (n = 40/41)
 
@@ -108,3 +88,26 @@ A Lot | Little | DK | Topic | High | Some | Not | DK
 10. **Does the survey you had us take imply `THIS-THING-I-WANT-YOU-TO-DO-WILL-HAPPEN-A-LOT-IN-THE-REST-OF-432`?**
     - No, it doesn't.
 
+## Project 1 Groups for Discussion in Class
+
+Group | Names
+------: | -----------------------------------------------------------------------------
+1 | Laura Baldassari, Jenny Feng, Maher Kazimi, Satyakam Mishra, Vinh Trinh
+2 | Zainab (Albar) Albar, Dongze (Zaza) He, Nik Krieger, Andrew Shan
+3 | Andrew Tang, Sneha Vakamudi, Ruipeng Wei, Peter Wilkinson
+4 | Gwen Donley, Carli Lehr, Connor Swingle, Frances Wang
+5 | Ryan Honomichl, JJ Huang, Xin Xin Yu, Bilal Zonjy
+6 | Khaled Alayed, Kedar Mahajan, Preeti Pathak, Sarah Planchon Pope
+7 | Estee Cramer, Laura Cremer, Hyun Jo Kim, Roberto Martinez
+8 | Abhishek Deshpande, Jack McDonnell, Grace Park, Gabby Rieth
+9 | Haimeng Bai, Sophia Cao, Kate Dobbs, Elina Misicka
+10 | Vaishali (Vee) Deo, Caroline El Sanadi, Kaylee Sarna, Sandra Silva Camargo
+
+### Your Group Tasks
+
+1. Before class on March 20, you need to post your Progress on Project 1 to Canvas.
+    - The work in progress location that is up at Canvas now is a revised setup, which should let you review your colleagues' work if they submit it properly, but still maintain your work as your own, even through multiple passes.
+    - The temporary directory I built on GitHub to house HTML files is now gone.
+2. In class today, you and your group should discuss the most pressing question each of you has, at this point, about your project.
+3. During and after class on Tuesday, but before class on Thursday March 22, you'll be looking over the code of the people in your group, and giving them some feedback on what you see. 
+    - At a minimum, be sure to check and see if their HTML file contains anything it should not (like my instructions) or if the labeling doesn't make sense or isn't easy to work with. Make sure they have a real title and their name is provided where it belongs, and that the HTML file contains their name. Your class participation grade will be affected by the quality of the comments you post to Canvas, as well as by the opinions of your fellow project group members about your efforts, as expressed in a Minute Paper to come.
