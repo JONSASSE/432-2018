@@ -19,6 +19,11 @@ In today's class, we will discuss Project 1 and other issues.
 
 4. In looking over the Homework 5 grades, some were quite low. In a few cases, it seems clear that a mistake was made early on and then you were penalized for it repeatedly, when, in fact, given your mistake early on, you then proceeded to do things correctly. If you find yourself in a situation like this in Homework 5, or any other Homework assignment, I strongly encourage you to submit a regrading request through [this Google Form](https://goo.gl/forms/aQNPnlAWGIn72a7h1) any time between now and noon on Wednesday 2018-05-09, so that I will look your assignment over carefully at the end of the term.
 
+5. Other New Things:
+    - Homework 6 will be available soon.
+    - [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is now posted. It's due 2018-04-13.
+    - Project 2 instructions will be available soon.
+
 ## Minute Papers After Class 16 (n = 40/41)
 
 ### How confident do you feel about your ability to complete Project 1?
