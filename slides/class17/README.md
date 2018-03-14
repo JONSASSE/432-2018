@@ -15,14 +15,15 @@ In today's class, we will discuss Project 1 and other issues.
     - the fitting of logistic regression models to data which have been aggregated, so that we know the counts of "yes" and "no" (or "yes" and "total") within each combination of predictors, but not the data on individual subjects. I briefly demonstrate both the `glm` approach, and the `Glm` approach (which is within `rms`.)
     - the use of a different link, specifically the `probit`, in the context of a binary regression model. This produces a probit regression model, which is a reasonable alternative in some settings to a logistic regression.
 
-3. Those of you who scored below 80 on Quiz 1 should look at [this Bonus Assignment for those looking to improve a poor Quiz 1 grade](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus). If you scored 80 or higher on Quiz 1, this isn't open to you. If you scored between 75 and 79, it's optional. Answers will be posted to this assignment in April, if you want to use it as a review for Quiz 2 or something.
-
-4. In looking over the Homework 5 grades, some were quite low. In a few cases, it seems clear that a mistake was made early on and then you were penalized for it repeatedly, when, in fact, given your mistake early on, you then proceeded to do things correctly. If you find yourself in a situation like this in Homework 5, or any other Homework assignment, I strongly encourage you to submit a regrading request through [this Google Form](https://goo.gl/forms/aQNPnlAWGIn72a7h1) any time between now and noon on Wednesday 2018-05-09, so that I will look your assignment over carefully at the end of the term.
-
-5. Other New Things:
-    - Homework 6 will be available soon.
+3. Other New Things:
+    - [Homework 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw6) is now posted. It's due 2018-04-06.
     - [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is now posted. It's due 2018-04-13.
+    - Remember than Homework 8 has been canceled.
     - Project 2 instructions will be available soon.
+
+4. Those of you who scored below 80 on Quiz 1 should look at [this Bonus Assignment for those looking to improve a poor Quiz 1 grade](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus). If you scored 80 or higher on Quiz 1, this isn't open to you. If you scored between 75 and 79, it's optional. Answers will be posted to this assignment in April, if you want to use it as a review for Quiz 2 or something.
+
+5. In looking over the Homework 5 grades, some were quite low. In a few cases, it seems clear that a mistake was made early on and then you were penalized for it repeatedly, when, in fact, given your mistake early on, you then proceeded to do things correctly. If you find yourself in a situation like this in Homework 5, or any other Homework assignment, I strongly encourage you to submit a regrading request through [this Google Form](https://goo.gl/forms/aQNPnlAWGIn72a7h1) any time between now and noon on Wednesday 2018-05-09, so that I will look your assignment over carefully at the end of the term.
 
 ## Minute Papers After Class 16 (n = 40/41)
 
