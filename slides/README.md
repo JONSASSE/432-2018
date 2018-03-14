@@ -2,6 +2,7 @@
 
 Link  | Date  | Topics Discussed include...
 --------: | ---------- | -------------------------------------------------------------
+[Class 17](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class17) | 2018-03-22 | Class Projects
 [Class 16](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) | 2018-03-08 | Class Projects, Interpreting Effect Estimates
 [Class 15](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class15) | 2018-03-06 | Robust Linear Regression Methods
 [Class 14](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class14) | 2018-03-01 | Sandwich Estimation, Bootstrapping Regression Coefficients
