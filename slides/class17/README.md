@@ -20,7 +20,7 @@ In today's class, we will discuss Project 1 and other issues.
 3. Other New Things:
     - [Homework 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw6) is now posted. It's due 2018-04-06.
     - [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is now posted. It's due 2018-04-13.
-    - Remember than Homework 8 has been canceled.
+    - Remember than Homework 8 has been canceled, so both of the remaining Homeworks are now posted.
     - Project 2 instructions will be available soon.
 
 4. Those of you who scored below 80 on Quiz 1 should look at [this Bonus Assignment for those looking to improve a poor Quiz 1 grade](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus). If you scored 80 or higher on Quiz 1, this isn't open to you. If you scored between 75 and 79, it's optional. Answers will be posted to this assignment in April, if you want to use it as a review for Quiz 2 or something.
