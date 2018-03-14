@@ -15,7 +15,7 @@ The `oh_counties_2017.csv` data set I have provided describes a series of variab
 The available variables are listed below.  Each variable describes data at the **COUNTY** level.
 
 Variable | Description
------------: | ------------------------------------------------------------------------------
+:-----------: | ------------------------------------------------------------------------------
 fips | Federal Information Processing Standard code
 county | name of County
 years_lost_rate | age-adjusted years of potential life lost rate (per 100,000 population)
@@ -50,14 +50,14 @@ freq_phys_distress | % in frequent physical distress
 freq_mental_distress | % in frequent mental distress
 food_insecure | % who are food insecure
 insuff_sleep | % who get insufficient sleep
-health_costs | mean health care costs
-median_income | median income
+health_costs | estimated mean health care costs
+median_income | estimated median income
 population | population size 
 age65plus | % of population who are 65 and over
-african-am | % African-American
-hispanic | % of Hispanic/Latino ethnicity
-white | % White
-female | % Female
+african-am | % of population who are African-American
+hispanic | % of population who are of Hispanic/Latino ethnicity
+white | % of population who are White
+female | % of population who are Female
 rural | % of people in the county who live in rural areas 
 
 # Question 1 (20 points)
