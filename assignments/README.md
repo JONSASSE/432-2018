@@ -12,7 +12,7 @@ Link to Details | Due at 1 PM on | Material Covered in the Assignment
 [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) | Fri 2018-02-23 | Logistic Regression
 [Homework 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) | Fri 2018-03-02 | Logistic Regression
 HW 6 | Fri 2018-04-06 | Generalized Linear Models 
-HW 7 | Fri 2018-04-13 | Survival Analysis
+[Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) | Fri 2018-04-13 | Survival Analysis
 
 Homework 8 is cancelled.
 
