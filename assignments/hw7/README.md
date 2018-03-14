@@ -5,26 +5,21 @@ Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later th
 - Remember to **ask for help** if you are stuck, first by Googling, or visiting the wonderful cheatsheets under the Help menu on the top bar of R Studio, and then by contacting `431-help at case dot edu` or visiting TA office hours.
 - Start a separate R Project for Homework 7 as your first step, and place all of your work in that project's directory.
 
-# Question 1 (35 points)
+# Question 1 (15 points)
 
-Your task in this Question is to create a visualization (using R) of real data on a subject that is meaningful to you, share it (the visualization) with us, and then write a no-longer-than-200-word description of its creation and its meaning, providing us with the context we need to understand why this is a meaningful, and perhaps important visualization. If you decide to create a new visualization based on someone else's work, you should share with us that original work, as well. In your short description, try to react to the following:
+Create a visualization (using R) of real data on a subject that is meaningful to you, and share it (the visualization (and the code you used to build it) with us. The visualization should be of a professional quality, include proper labels and a title, as well as a caption of no more than 50 words that highlights the key result. If you decide to create a new visualization based on a revision of someone else's work, you must share with us that original work, as well.
 
-- **a**. How does this visualization help its audience understand the world better? 
-- **b**. Why is this particular visualization effective, and what are the design features it uses that we can learn from to help us make more effective visualizations?
-- **c**. How is this visualization coded in R? What tools did you use, and why did you select them? 
-
-## Note: In grading Question 1, we will award:
-
-- up to 15 points strictly based on the quality of the visualization, in terms of being attractive, well-labeled and useful for representing the data, and how well it adheres to general principles for good visualizations we've seen in 431 and 432, and
-- up to 20 points (in total) for how well your essay and visualization together address parts a, b and c, listed above.
+We will grade Question 1 strictly based on the quality of the visualization, its title and caption, in terms of being attractive, well-labeled and useful for representing the data, and how well it adheres to general principles for good visualizations we've seen in 431 and 432.
 
 # Question 2 (20 points)
 
-The `remission.csv` file contains contains initial remission times, in days, for 44 leukemia patients who were randomly allocated to two different treatments, labeled A and B. Some patients were right-censored before their remission times could be fully determined, as indicated by values of `censored` = 1 in the data set. 
+Write an essay (between 150 and 300 words) describing the background, creation and meaning of the visualization you created in Question 1, providing us with the context we need to understand why this is a meaningful, and perhaps important visualization.  In your short description, address each of the following issues.
 
-Your task is to plot and compare appropriate estimates of the survival functions for the treatments, including at least a Kaplan-Meier estimate and a log rank test. Compare median and (restricted) mean survival times appropriately. Write a complete sentence (or several) to accompany each of your estimates and plots. Do not use a regression model.
+- How does this visualization help its audience understand the world better? 
+- Why is this particular visualization effective, and what are the design features it uses that we can learn from to help us make more effective visualizations?
+- How is this visualization coded in R? What tools did you use, and why did you select them? 
 
-# Setup for Questions 3-6
+# Setup for Questions 3-5
 
 The `umaru.csv` data file contains information for 575 subjects selected from the UMARU IMPACT study collaborative project done by the University of Massachusetts AIDS Research Unit over 5 years (1989-1994). Various versions of this data set are frequently used in survival analysis texts. I've tweaked your data set enough that you'll see some different results. The study included two concurrent randomized trials of residential treatment for drug abuse. The key question is to compare treatment programs of different planned durations in terms of their ability to reduce drug abuse and prevent high-risk HIV behavior. Here's a codebook:
 
@@ -54,4 +49,10 @@ Apply a Cox regression model to predict the time to return to drug use (incorpor
 # Question 5 (20 points) 
 
 Compare the two models you have fit in Questions 3 and 4, specifying which one you prefer and why. Be sure to include both a comparison of the quality of fit from each model, and an assessment of adherence to the assumptions of a proportional hazards model for your final selection.
+
+# Question 6 (20 points)
+
+The `remission.csv` file contains contains initial remission times, in days, for 44 leukemia patients who were randomly allocated to two different treatments, labeled A and B. Some patients were right-censored before their remission times could be fully determined, as indicated by values of `censored` = 1 in the data set. 
+
+Your task is to plot and compare appropriate estimates of the survival functions for the treatments, including at least a Kaplan-Meier estimate and a log rank test. Compare median and (restricted) mean survival times appropriately. Write a complete sentence (or several) to accompany each of your estimates and plots. Do not use a regression model.
 
