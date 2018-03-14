@@ -7,6 +7,8 @@
 
 In today's class, we will discuss Project 1 and other issues.
 
+- Before today's class, you need to post your Progress on Project 1 to [Canvas](https://canvas.case.edu/), please.
+
 ## Announcements before class
 
 1. Some students have been using the [431 Project Study 1 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study1-demonstration.pdf) and [431 Project Study 2 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study2-demonstration.pdf) PDF files I built to help you do projects in 431.  There's lots of useful data cleaning information in those documents. I encourage you to look them over.
