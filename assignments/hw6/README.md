@@ -74,13 +74,13 @@ Write an essay (between 100 and 200 words) describing the creation and meaning o
 - How does this visualization help its audience understand the data better? 
 - Why is this particular visualization effective, and what are the design features it uses that we can learn from to help us make more effective visualizations?
  
-## Note - for Questions 3-5
+## Note for Questions 3-5
 
 For Questions 3-5, you're going to develop a series of models using **86** of the counties (every county other than Cuyahoga County and Monroe County). In each case, you will fit and select a model using that sample of 86 counties, and then be asked to use that model to make predictions of the outcome of interest for Cuyahoga County and for Monroe County and to assess the quality of those predictions.
  
 # Question 3 (20 points)
 
-Build a reasonable generalized linear model in your development sample (86 counties) to predict one of the outcomes in the `oh_counties_2017.csv` data set that describes a percentage (that must fall between 0 and 100) effectively using at least three and no more than 6 other variables from the list above. Demonstrate how well the model fits as well as the conclusions you draw from the model carefully. Be sure to discuss model assumptions. Then use the model to predict Cuyahoga County and Monroe County results, and assess the quality of those predictions.
+Build a reasonable linear or generalized linear model in your development sample (86 counties) to predict one of the outcomes in the `oh_counties_2017.csv` data set that describes a percentage (that must fall between 0 and 100) effectively using at least three and no more than 6 other variables from the list above. Demonstrate how well the model fits as well as the conclusions you draw from the model carefully. Be sure to discuss model assumptions. Then use the model to predict Cuyahoga County and Monroe County results, and assess the quality of those predictions.
 
 # Question 4 (20 points)
 
