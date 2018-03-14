@@ -48,11 +48,11 @@ Apply a Cox regression model to predict the time to return to drug use (incorpor
 
 # Question 5 (20 points) 
 
-Compare the two models you have fit in Questions 3 and 4, specifying which one you prefer and why. Be sure to include both a comparison of the quality of fit from each model, and an assessment of adherence to the assumptions of a proportional hazards model for your final selection.
+Compare the two models you have fit in Questions 3 and 4, specifying which one you prefer and why. Be sure to include both a comparison of the quality of fit from each model (be sure to at least two ways to assess that quality of fit), and an assessment of adherence to the assumptions of a proportional hazards model for your final selection. Validate the summary statistics describing your chosen model, and explain what those results mean, too.
 
 # Question 6 (20 points)
 
 The `remission.csv` file contains contains initial remission times, in days, for 44 leukemia patients who were randomly allocated to two different treatments, labeled A and B. Some patients were right-censored before their remission times could be fully determined, as indicated by values of `censored` = 1 in the data set. 
 
-Your task is to plot and compare appropriate estimates of the survival functions for the treatments, including at least a Kaplan-Meier estimate and a log rank test. Compare median and (restricted) mean survival times appropriately. Write a complete sentence (or several) to accompany each of your estimates and plots. Do not use a regression model.
+Your task is to plot and compare appropriate estimates of the survival functions for the two treatments, including at least a Kaplan-Meier estimate and a log rank test. Compare median and (restricted) mean survival times appropriately. Write a complete sentence (or several) to accompany each of your estimates and plots. Do not use a regression model.
 
