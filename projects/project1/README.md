@@ -165,7 +165,7 @@ Our best advice: To write and code clearly and effectively, have someone else re
 
 ### What should I CONSIDER doing in developing linear models for Task 10?
 
-Every bit of your output should commented on in your work. No output without commentary. We envision your final presentation will show no more than 8 of these items in detail. As few as 4-5 might be sufficient. Many of you will wind up running nearly all of these things, some on multiple models, and then choosing from among them wisely in presenting your final analyses. That is the goal. 
+Every bit of your output should be commented on in your work. No output without commentary. We envision your final presentation will show no more than 8 of these items in detail. As few as 4-5 might be sufficient. Many of you will wind up running nearly all of these things, some on multiple models, and then choosing from among them wisely in presenting your final analyses. That is the goal. 
 
 Your presentation needs to land on a single, final model, using both statistical and non-statistical considerations to make a decision. Your presentation may need to explore other models, but this should be done as a way of helping us understand the reasons for your final selection, not as a way of impressing us with the amount of effort you've put into the project. We're interested in clarity, and demonstrated understanding of variation, but not volume.
 
