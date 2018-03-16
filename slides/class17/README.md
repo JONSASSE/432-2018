@@ -96,6 +96,11 @@ A Lot | Little | DK | Topic | High | Some | Not | DK
 10. **Does the survey you had us take imply `THIS-THING-I-WANT-YOU-TO-DO-WILL-HAPPEN-A-LOT-IN-THE-REST-OF-432`?**
     - No, it doesn't.
 
+11. **How should I build *numerical* categorical variables?**
+    - For some tools, like best subsets or the lasso, you will occasionally see an error that requires you to have all variables be numerical. If so, then you will have to create numerical versions of your categorical variables. 
+    - You can do that with indicator (1/0) variables for binary things, and with a series of indicator variables for multi-categorical things, or use `as.numeric` with a multi-categorical factor to build a numeric version (although this is less defensible if your multi-categorical factor is only nominal, and not ordered.) 
+        - Note that the codes may not match up as you expect, so you should run a count as a sanity check.
+
 ## Project 1 Groups for Discussion in Class
 
 Group | Names
