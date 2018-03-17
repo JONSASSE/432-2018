@@ -7,4 +7,7 @@ There are two projects due this semester.
 - [Details on Project 1 are here](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1).
 - A [sample Project 1](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#sample-project-proposal) including both proposal materials and the analytic materials [is now available](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1#sample-project-proposal).
 
-2. Project 2 is due as part of a final portfolio at noon on Wednesday 2018-05-09, but students will present their portfolios on 2018-05-03, 2018-05-07 or 2018-05-08. Dates for portfolio presentations will be determined in late March and announced 2018-04-03. This is a much more open-ended activity, and you will be largely responsible for making decisions about how best to present your work. [Details on Project 2 will be available here](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) in mid-March.
+2. Project 2 involves a presentation. Students will present their portfolios on 2018-05-03, 2018-05-07 or 2018-05-08, and need to submit their work three hours prior to that presentation. Follow-up work (if needed) will be completed by noon on 2018-05-09.
+
+- [Details on Project 2 are here](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2).
+
