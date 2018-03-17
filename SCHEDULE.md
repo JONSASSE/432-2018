@@ -47,16 +47,16 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 23 | Tue 2018-04-10 | *To Be Determined*
 24 | Thu 2018-04-12 | *To Be Determined*
 -- | Fri 2018-04-13 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
-25 | Tue 2018-04-17 | *To Be Determined*
+25 | Tue 2018-04-17 | *To Be Determined*, [Project 2 Registration/Scheduling Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) due at 5 PM
 26 | Thu 2018-04-19 | *To Be Determined*
 --  | Fri 2018-04-20 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
 --  | Mon 2018-04-23 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
 27 | Tue 2018-04-24 | Estimating **Causal Effects**
 28 | Thu 2018-04-26 | Final Class
--- | Thu 2018-05-03 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md), 1
--- | Mon 2018-05-07 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md), 2
--- | Tue 2018-05-08 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md), 3
--- | Wed 2018-05-09 | [Final Project](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) Portfolio Due at noon
+-- | Thu 2018-05-03 | Student [Project 2 Presentations](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2), 1
+-- | Mon 2018-05-07 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2), 2
+-- | Tue 2018-05-08 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2), 3
+-- | Wed 2018-05-09 | [Final Project](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Portfolio Due at noon
 
 ## Teaching Assistant Office Hours
 
