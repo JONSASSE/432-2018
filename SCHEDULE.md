@@ -39,7 +39,7 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 17 | Tue 2018-03-20 | Catch up and Project Review
 18 | Thu 2018-03-22 | **Special Session**: Retrospective Power, Type S and Type M errrors
 -- | Fri 2018-03-23 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at 1 PM
-19 | Tue 2018-03-27 | Project 2 instructions, *To Be Determined*
+19 | Tue 2018-03-27 | [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) instructions, *To Be Determined*
 20 | Thu 2018-03-29 | *To Be Determined*
 21 | Tue 2018-04-03 | *To Be Determined* 
 22 | Thu 2018-04-05 | *To Be Determined* **SPECIAL ROOM: Class to be held in E301**
