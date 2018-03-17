@@ -29,7 +29,7 @@ Use the template well. When you submit your project to Canvas,
 - spell-check your work, and have someone else look it over for typographical errors and errors in grammar or syntax, or statements that are unclear.
 - An alternate template or formatting style is acceptable only if it:
     - contains all of the content in these templates, including the restrictions
-    - and uses a **dynamic** and attractive table of contents, as these do.
+    - and uses a **dynamic** and attractive table of contents, as these do. A dynamic table of contents adjusts to account for the section of the work you're working with, and is not merely a floating table of contents.
 
 ## Available Times for Presentations
 
