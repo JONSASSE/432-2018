@@ -1,0 +1,169 @@
+---
+title: "432 Project 2 Instructions for Spring 2018"
+author: "Thomas E. Love"
+date: 'Version: `r Sys.Date()`'
+output:
+  rmdformats::html_clean:
+    highlight: kate
+    number_sections: yes
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE, warning = FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+opts_chunk$set(echo=FALSE,
+	           cache=FALSE,
+               prompt=FALSE,
+               tidy=FALSE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+This document is linked at https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2 and it will be updated as necessary as the semester progresses.
+
+# There are Three Deliverables for Project 2
+
+1. By **April 17 at 5 PM**, you need to complete [this form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) to register your project and specify presentation times for which you are available. Dr. Love will either approve or reject your project, and once he approves it, you can proceed. The form requires your project title, list of research questions, and details on your data set. You are not required to provide Dr. Love (or anyone else) with your data for Project 2.
+
+2. You will use one of two available [templates for Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) and R Markdown to build an HTML portfolio of materials. This includes some background, your research questions, your data management work and codebook, and then your analytic work, data descriptions, results and conclusions. You will submit your R Markdown and HTML files [via canvas](https://canvas.case.edu/) and it is due **three hours before your scheduled presentation time** on May 3, 7, or 8. 
+    - Note that if you and Dr. Love determine during your presentation that changes are required, then you will turn in your final R Markdown and HTML files [via canvas](https://canvas.case.edu/) by noon on May 9, regardless of when you gave your presentation. Based on previous years, most projects require either minor changes or no changes at all. 
+
+3. You need to give a **presentation of your portfolio** to Dr. Love, on either May 3, May 7 or May 8 in his office (Wood WG-82L.) Your presentation time will be finalized on April 19.
+
+# What Data Should I Use?
+
+Project 2 requires you to answer a research question (or two) of your own choosing with data you obtain. You can work individually or in a group of 2 people. You can study any question you like, although I'd steer clear of anything that you think Dr. Love might find inappropriate.
+
+- Jeff Leek, in *How to be a Modern Scientist* has some excellent advice in his section on "How Do You Start a Paper." In particular, you want to identify a research question or (perhaps) two questions that:
+    + are concrete, (and for which you can find useful data), and that
+    + solve a real problem, and that
+    + give you an opportunity to do something new,
+    + that you will feel ownership of, and
+    + that you want to work on.
+- You must have any necessary approvals to use your data in a Project for this course. 
+    + You **do not** need to share the actual data with Dr. Love for Project 2, but he will see the results, naturally.
+- There are no minimum or maximum numbers for observations or variables in Project 2, but I expect most projects to have 100-10,000 observations.
+
+## Where can I get interesting data?
+
+Dr. Love will be **far** more impressed with a data collection effort that puts together at least two different data bases, than he will be with an effort that uses only a single data file. 
+
+- This will require you to learn something about the various joining commands, like `left_join` and `inner_join` that are highlighted in the Combine Data Sets section on the [Data Transformation Cheat Sheet](https://www.rstudio.com/resources/cheatsheets/) at the R Studio web site. 
+    + I heartily recommend Garret Grolemund's YouTube materials on Data Wrangling, for instance [this Introduction to Data Manipulation](https://www.youtube.com/watch?v=AuBgYDCg1Cg) which is about combining multiple data sets.
+    + Another great resource for combining data sets (and most of your other R questions) is [R for Data Science](http://r4ds.had.co.nz/), by Wickham and Grolemund.
+
+- If you want a suggestion for a good choice of data set with a nice utility in R to help you gather the data in a tidy way, you should look into [the nhanesA package](https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html) which is a great and completely appropriate source for accessing data from the National Health and Nutrition Examination Survey (NHANES). Several of the course TAs are familiar with this package, and I encourage you to [read the vignette to learn more](https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html).
+    + Consider combining two or more data sets a minimum requirement if you're using NHANES data.
+    + If you used NHANES data in Project 1, you are welcome to use different NHANES data in Project 2.
+- The [Hospital Compare data sets](https://data.medicare.gov/data/hospital-compare#) might be interesting.
+- The [Behavioral Risk Factor Surveillance System](https://www.cdc.gov/brfss/index.html) is an excellent data source.
+- Many other open data sources are listed at [this link from ropensci](https://github.com/ropensci/opendata). This is a place to find a wide variety of tools that help you identify and work with interesting data sets in R, including `nhanesA` and similar tools for public health work. 
+- Some excellent suggestions are found [at this link](http://guides.lib.berkeley.edu/publichealth/healthstatistics/rawdata) from the library system at UC/Berkeley.
+- Another place that might be worth looking at for interesting and relevant research data is [figshare](https://figshare.com/), perhaps within [its Health Sciences category](https://figshare.com/categories/Health_Sciences/142). The ratio of useful stuff to not-useful stuff isn't great, but you might find a good option. The R package [rfigshare](https://cran.rstudio.com/web/packages/rfigshare/rfigshare.pdf) is designed mainly to help you store data on figshare rather than retrieve it, but it might be worth looking at, too.
+
+- If the data are available online, you must provide a working URL with instructions to access the data.
+
+## Some Restrictions on Your Data Set (What data am I *not* allowed to use?)
+
+- You are not allowed to use data stored as a data set in any R package.
+- You are not allowed to use data from a textbook or other educational resource for learning statistics, data science or related methods (online or otherwise). 
+- You are not allowed to use data Dr. Love or Dr. Briggs or any other faculty member at CWRU has provided to you for educational purposes.
+- You cannot reuse the data you used in Project 1 for 432, although you can use a different data set to answer related questions. You are welcome to reuse data you used in your 431 project if it is suitable and you haven't used it in Project 1 for 432.
+- Dr. Love is a little tired of data from Kaggle and other data analysis competitions. Avoid those unless you can make a very powerful argument for their relevance to a question of real interest to you.
+- We want to powerfully discourage you from working with data that really require the use of multi-level models. For the most part, those require tools we haven't given sufficient emphasis to in 432.
+    + One example would be a model of patient results that contains measures not just for individual patients but also measures for the providers within which patients are grouped, and also for health systems in which providers are grouped. 
+    + Another example would be a model of individual people's outcomes where the covariates are gathered at the state or county level, as well as at the level of individuals.
+    + If your proposed research questions involve the analysis of data that are *nested* like those above, Dr. Love is probably going to reject the project. There simply isn't time to learn the best approaches for that stuff before May.
+
+# Once You Have the data ...
+
+You need to get to the point where you can identify a project title and one or two meaningful research questions, so that you can register your work.
+
+- Cleaning the data is a vitally important step. Dr. Love will assume that you have done it perfectly. The TAs can help you, but this is your responsibility. 
+    + Your cleaning should use tools from the tidyverse when possible, and you should do most of your analytic work on a tibble.
+- After you register your project and sign up for a presentation time, you have only one job - build a spectacularly well-designed and well-analyzed study then present it to Dr. Love (orally and in a written HTML file) beautifully.
+    + Use one of the two templates provided for Project 2 [at this link](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2).
+    + To use either of these templates, you'll have to install the `rmdformats` package in R using the command `install.packages("rmdformats")`
+- Make your HTML file gorgeous, thoughtful and incredibly easy for Dr. Love to use in evaluating your work.
+    + Jeff Leek's material in *How To Be a Modern Scientist* is very useful here, in particular the material on Scientific Talks and on Paper Writing. We especially like the advice to write clearly and simply.
+    + Include all R code and output that you need to help Dr. Love understand the important issues in your study. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) helps here, by providing a way (when viewing the HTML result) to show or hide the code as desired.
+    + Don't include useless warnings or messages from R that we don't need to know about. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) helps here, by defaulting to not showing these things.
+    + Never show long versions of output when short ones will do. A particularly irritating example is showing an entire data set instead of what you get when you print a tibble. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) will **not** help here, as it isn't designed to stop you from making this mistake.
+    + Review your HTML file carefully before submission for copy-editing issues (spelling, grammar and syntax.) It's hard to find errors with these issues in your Markdown file so long as it is running. You really need to look at the HTML result, closely.
+    + Structure your presentation so you (and I) can find things easily. Useful names in the headers (and thus in the table of contents that is generated automatically by the template) helps, certainly, but thoughtful construction of an argument and good NAMES for things in your code, and in the headings of your presentation is really the most important thing. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) is designed to help you fall into a useful structure. Don't try to defeat it: instead, let it work for you.
+- Your HTML file will need to address the following issues:
+    1. What your research question(s) were and why they are important.
+    2. What data you used and why it was relevant to addressing your question(s).
+        + You'll wind up presenting some details on data management, a tidied tibble, and a codebook. See [the template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) for details.
+        + You should present at least two effective visualizations of your data that help Dr. Love understand what can be said about your research question(s), at least one of which should help Dr. Love explore your data, and at least one of which should help Dr. Love evaluate the success of a particular model.
+        + Jeff Leek's best piece of advice in my opinion is to make the **FIGURES** the focus of your writing and your presentation. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) will help.
+        + Another good piece of advice is to acknowledge the work of others appropriately (especially in highlighting where the data come from.) Be gracious. This should go near the top, as indicated in [the Template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2).
+    3. What statistical methods you used to analyze and model the data and why they were appropriate.
+        + In particular, you are required to present at least one result that is derived from an appropriate regression model, using tools developed in 432. Treat this as a minimum standard. Your models should be clearly linked to your eventual conclusions about your research question(s).
+    4. What the results say about your research question(s) - what you have learned by doing this project? 
+        + [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) provides some tips about what we are looking for in the Conclusions section.
+
+# Registering Your Project 
+
+**Deadline: April 17 2017 at 5 PM**
+
+- By 2017-04-17 at 5 PM, you will register your project with Dr. Love by [filling out this form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) to specify the data you will use, and specify project presentation times that work for you. You can fill it out at any time before the deadline. You must be logged into Google via your CWRU ID in order to access [the form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
+- You will register to do your project as an individual or in a team of 2 people. If you are working as a team, only one of you needs to fill out [the form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
+- Filling out the [form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) requires you to specify a title for your project, the details of your data set, and to specify your research question or questions, and it also requires you to specify eight of the available time slots (on different days) when you are available to do your project, and to specify your first choice of time slot.
+- You must completely identify the source of the data, so that Dr. Love understands what data you are using very well, but you will not be required to share the data with him, or anyone else.
+- Failure to [register the project](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) in a timely way is very, very bad. Don't miss the deadline.
+- Dr. Love will begin reviewing [the form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) on April 3, and will do so most days through the deadline of April 17. Dr. Love will approve your project as soon as possible after you register it. 
+    + If he cannot approve your project, he'll tell you why in an email, and you'll need to try again, by editing your response and re-submitting it. 
+    + Project approvals will also be communicated to you quickly, after April 3.
+    + The main reason why Dr. Love doesn't approve projects is that he doesn't understand your description of your data set, or how your research questions are linked to your data set - so focus on making those descriptions and questions as clear as possible.
+
+# Scheduling Your Presentation Time
+
+**Deadline: April 17 2017 at 5 PM**
+
+- As mentioned, by 2017-04-17 at 5 PM, you will also sign up for a project presentation time, as part of [filling out the same form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) you use to register your project. You must be logged into Google via your CWRU ID in order to access [the form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
+- [Available time slots](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/README.md#available-times-for-presentations) are 20 minutes long (you must do a 15 minute presentation, but Dr. Love will ask questions) at the following times:
+    + Thursday, May 3 8:30 to 11:30 AM and 1:30 to 5:20 PM
+    + Monday, May 7 9:30 AM to 12:30 PM and 1:30 to 5:20 PM
+    + Tuesday, May 8 11:30 AM to 3:20 PM
+- You will need to indicate your availability on the [form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) for at least eight different available timeslots on at least 2 different days.
+- Dr. Love will announce the presentation schedule by the start of class on 2017-04-19.
+
+# The Required Project Template
+
+Dr. Love built two templates, using the `rmdformats` package. Use whichever one you prefer to prepare your work.
+
+- Template A uses the same formatting structure built on the `readthedown` template that you used in 432 Project 1.
+- Template B builds on the `html_clean` template, which is also used in these Project 2 Instructions.
+
+An alternate template or formatting style is not recommended, but will be acceptable so long as it:
+
+- contains all of the content in these templates, including the restrictions
+- and uses a *dynamic* and attractive table of contents, as these do. A dynamic table of contents adjusts to account for the section of the work you're working with, and is not merely a floating table of contents.
+
+# Your Presentation on May 3, 7, or 8
+
+- You will submit your final work at least 3 hours before your presentation time as an HTML file on [canvas](https://canvas.case.edu/). The link to submit your Project 2 files will become available there on **2017-04-15**.
+- You are welcome to submit additional materials, but the HTML file must stand alone. In grading, Dr. Love will only be looking at the HTML file. The use of one of the two [provided templates](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) (or their equivalent, including a dynamic table of contents and all content specifications) is required.
+- You will give a 15 minute presentation of the results contained in your HTML file, hitting on these four key points (repeating some of the details here because they are so important):
+    1. What your research question(s) were and why they are important.
+    2. What data you used and why it was relevant to addressing your question(s).
+        + You should present at least two effective visualizations of your data that help Dr. Love understand what can be said about your research question(s), at least one of which should help Dr. Love explore your data, and at least one of which should help Dr. Love evaluate the success of a particular model. Build the presentation around the figures!
+    3. What statistical methods you used to analyze and model the data and why they were appropriate.
+        + In particular, you are required to present at least one result that is derived from an appropriate regression model, using tools developed in 432. Treat this as a minimum standard. Your models should be clearly linked to your eventual conclusions about your research question(s).
+    4. What the results say about your research question(s) - what you have learned by doing this project?
+- Be as clear as possible in both your writing in your HTML file and your speaking about how you address each of the four main issues specified above.
+- You can give your presentation straight out of the HTML file, or via a separate Powerpoint or PDF presentation of slides. But everything in the slides needs to also be in the HTML, and the HTML is the only thing Dr. Love will look at in Canvas when grading your work.
+- You are giving a 15 minute presentation, but the reason the time slots are 20 minutes is that Dr. Love will ask questions of you, during and after your presentation.
+    + Your ability to address those questions effectively, using the results from your portfolio of work, is the thing that will separate mediocre grades from excellent ones, in most cases. 
+    + You will need to be agile in responding to me. Anticipate tough questions. Dr. Love will be looking for clear answers, motivated by your results. 
+- If you work as a team, Dr. Love will pick one of you at random, on the spot, to deliver the first half of the presentation, and the other will do the second half. Dr. Love will address questions to each of you.
+
+# Questions?
+
+Dr. Love will discuss Project 2 during class on 2018-03-27. Questions about Project 2 may be directed to 431-help and the TAs as well as to Dr. Love at any time.
+
