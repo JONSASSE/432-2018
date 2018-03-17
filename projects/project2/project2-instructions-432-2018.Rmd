@@ -83,31 +83,7 @@ Dr. Love will be **far** more impressed with a data collection effort that puts 
 
 You need to get to the point where you can identify a project title and one or two meaningful research questions, so that you can register your work.
 
-- Cleaning the data is a vitally important step. Dr. Love will assume that you have done it perfectly. The TAs can help you, but this is your responsibility. 
-    + Your cleaning should use tools from the tidyverse when possible, and you should do most of your analytic work on a tibble.
-- After you register your project and sign up for a presentation time, you have only one job - build a spectacularly well-designed and well-analyzed study then present it to Dr. Love (orally and in a written HTML file) beautifully.
-    + Use one of the two templates provided for Project 2 [at this link](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2).
-    + To use either of these templates, you'll have to install the `rmdformats` package in R using the command `install.packages("rmdformats")`
-- Make your HTML file gorgeous, thoughtful and incredibly easy for Dr. Love to use in evaluating your work.
-    + Jeff Leek's material in *How To Be a Modern Scientist* is very useful here, in particular the material on Scientific Talks and on Paper Writing. We especially like the advice to write clearly and simply.
-    + Include all R code and output that you need to help Dr. Love understand the important issues in your study. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) helps here, by providing a way (when viewing the HTML result) to show or hide the code as desired.
-    + Don't include useless warnings or messages from R that we don't need to know about. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) helps here, by defaulting to not showing these things.
-    + Never show long versions of output when short ones will do. A particularly irritating example is showing an entire data set instead of what you get when you print a tibble. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) will **not** help here, as it isn't designed to stop you from making this mistake.
-    + Review your HTML file carefully before submission for copy-editing issues (spelling, grammar and syntax.) It's hard to find errors with these issues in your Markdown file so long as it is running. You really need to look at the HTML result, closely.
-    + Structure your presentation so you (and I) can find things easily. Useful names in the headers (and thus in the table of contents that is generated automatically by the template) helps, certainly, but thoughtful construction of an argument and good NAMES for things in your code, and in the headings of your presentation is really the most important thing. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) is designed to help you fall into a useful structure. Don't try to defeat it: instead, let it work for you.
-- Your HTML file will need to address the following issues:
-    1. What your research question(s) were and why they are important.
-    2. What data you used and why it was relevant to addressing your question(s).
-        + You'll wind up presenting some details on data management, a tidied tibble, and a codebook. See [the template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) for details.
-        + You should present at least two effective visualizations of your data that help Dr. Love understand what can be said about your research question(s), at least one of which should help Dr. Love explore your data, and at least one of which should help Dr. Love evaluate the success of a particular model.
-        + Jeff Leek's best piece of advice in my opinion is to make the **FIGURES** the focus of your writing and your presentation. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) will help.
-        + Another good piece of advice is to acknowledge the work of others appropriately (especially in highlighting where the data come from.) Be gracious. This should go near the top, as indicated in [the Template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2).
-    3. What statistical methods you used to analyze and model the data and why they were appropriate.
-        + In particular, you are required to present at least one result that is derived from an appropriate regression model, using tools developed in 432. Treat this as a minimum standard. Your models should be clearly linked to your eventual conclusions about your research question(s).
-    4. What the results say about your research question(s) - what you have learned by doing this project? 
-        + [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) provides some tips about what we are looking for in the Conclusions section.
-
-# Registering Your Project 
+## Registering Your Project 
 
 **Deadline: April 17 2017 at 5 PM**
 
@@ -121,7 +97,7 @@ You need to get to the point where you can identify a project title and one or t
     + Project approvals will also be communicated to you quickly, after April 3.
     + The main reason why Dr. Love doesn't approve projects is that he doesn't understand your description of your data set, or how your research questions are linked to your data set - so focus on making those descriptions and questions as clear as possible.
 
-# Scheduling Your Presentation Time
+## Scheduling Your Presentation Time
 
 **Deadline: April 17 2017 at 5 PM**
 
@@ -133,21 +109,54 @@ You need to get to the point where you can identify a project title and one or t
 - You will need to indicate your availability on the [form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) for at least eight different available timeslots on at least 2 different days.
 - Dr. Love will announce the presentation schedule by the start of class on 2017-04-19.
 
+- After you register your project and sign up for a presentation time, you have only one job - build a spectacularly well-designed and well-analyzed study then present it to Dr. Love (orally and in a written HTML file) beautifully.
+
 # The Required Project Template
 
 Dr. Love built two templates, using the `rmdformats` package. Use whichever one you prefer to prepare your work.
 
 - Template A uses the same formatting structure built on the `readthedown` template that you used in 432 Project 1.
-- Template B builds on the `html_clean` template, which is also used in these Project 2 Instructions.
+    - Here is the [R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project2/project2-templateA-432-2018.Rmd) for Template A, and you can also [view the HTML result](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-templateA-432-2018.html).
+- Template B builds on the `html_clean` template, which is also used in the Project 2 Instructions.
+    - Here is the [R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project2/project2-templateB-432-2018.Rmd) for Template B, and you can also [view the HTML result](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-templateB-432-2018.html).
+- The [cardiac.csv](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project2/cardiac.csv) file was used in these templates to help fix ideas.
 
-An alternate template or formatting style is not recommended, but will be acceptable so long as it:
+Use the template well. When you submit your project to Canvas,
 
-- contains all of the content in these templates, including the restrictions
-- and uses a *dynamic* and attractive table of contents, as these do. A dynamic table of contents adjusts to account for the section of the work you're working with, and is not merely a floating table of contents.
+- include your name in the file name, rather than retaining the original template's name
+- remove all of the sample text in the template and instructions that I included to help you decide where things go,
+- spell-check your work, and have someone else look it over for typographical errors and errors in grammar or syntax, or statements that are unclear.
+- An alternate template or formatting style is acceptable only if it:
+    - contains all of the content in these templates, including the restrictions
+    - and uses a **dynamic** and attractive table of contents, as these do. A dynamic table of contents adjusts to account for the section of the work you're working with, and is not merely a floating table of contents.
+
+## What Dr. Love Wants to See
+
+- Make your HTML file gorgeous, thoughtful and incredibly easy for Dr. Love to use in evaluating your work.
+    + Jeff Leek's material in *How To Be a Modern Scientist* is very useful here, in particular the material on Scientific Talks and on Paper Writing. We especially like the advice to write clearly and simply.
+    + Include all R code and output that you need to help Dr. Love understand the important issues in your study. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) helps here, by providing a way (when viewing the HTML result) to show or hide the code as desired.
+    + Cleaning the data is a vitally important step. Dr. Love will assume that you have done it perfectly. The TAs can help you, but this is your responsibility. 
+    + Your cleaning should use tools from the tidyverse when possible, and you should do most of your analytic work on a tibble.
+    + Don't include useless warnings or messages from R that we don't need to know about. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) helps here, by defaulting to not showing these things.
+    + Never show long versions of output when short ones will do. A particularly irritating example is showing an entire data set instead of what you get when you print a tibble. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) will **not** help here, as it isn't designed to stop you from making this mistake.
+    + Review your HTML file carefully before submission for copy-editing issues (spelling, grammar and syntax.) It's hard to find errors with these issues in your Markdown file so long as it is running. You really need to look at the HTML result, closely.
+    + Structure your presentation so you (and I) can find things easily. Useful names in the headers (and thus in the table of contents that is generated automatically by the template) helps, certainly, but thoughtful construction of an argument and good NAMES for things in your code, and in the headings of your presentation is really the most important thing. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) is designed to help you fall into a useful structure. Don't try to defeat it: instead, let it work for you.
+- Your HTML file will need to address the following issues:
+    1. What your research question(s) were and why they are important.
+    2. What data you used and why it was relevant to addressing your question(s).
+        + You'll wind up presenting some details on data management, a tidied tibble, and a codebook. See [the template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) for details.
+        + You should present at least two effective visualizations of your data that help Dr. Love understand what can be said about your research question(s), at least one of which should help Dr. Love explore your data, and at least one of which should help Dr. Love evaluate the success of a particular model.
+        + Jeff Leek's best piece of advice in my opinion is to make the **FIGURES** the focus of your writing and your presentation. [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) will help.
+        + Another good piece of advice is to acknowledge the work of others appropriately (especially in highlighting where the data come from.) Be gracious. This should go near the top, as indicated in [the Template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2).
+    3. What statistical methods you used to analyze and model the data and why they were appropriate.
+        + In particular, you are required to present at least one result that is derived from an appropriate regression model, using tools developed in 432. Treat this as a minimum standard. Your models should be clearly linked to your eventual conclusions about your research question(s).
+    4. What the results say about your research question(s) - what you have learned by doing this project?
+    
+        + [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) provides some tips about what we are looking for in the Conclusions section.
 
 # Your Presentation on May 3, 7, or 8
 
-- You will submit your final work at least 3 hours before your presentation time as an HTML file on [canvas](https://canvas.case.edu/). The link to submit your Project 2 files will become available there on **2017-04-15**.
+- You will submit your final work at least **3 hours before your presentation time** as an HTML file on [Canvas](https://canvas.case.edu/). The link becomes available on Canvas on 2017-04-15.
 - You are welcome to submit additional materials, but the HTML file must stand alone. In grading, Dr. Love will only be looking at the HTML file. The use of one of the two [provided templates](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) (or their equivalent, including a dynamic table of contents and all content specifications) is required.
 - You will give a 15 minute presentation of the results contained in your HTML file, hitting on these four key points (repeating some of the details here because they are so important):
     1. What your research question(s) were and why they are important.
