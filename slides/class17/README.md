@@ -12,6 +12,7 @@ In today's class, we will discuss Project 1 and other issues.
 ## Announcements before class
 
 1. Some students have been using the [431 Project Study 1 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study1-demonstration.pdf) and [431 Project Study 2 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study2-demonstration.pdf) PDF files I built to help you do projects in 431.  There's lots of useful data cleaning information in those documents. I encourage you to look them over.
+    - I also recommend the series of [four YouTube videos on Data Wrangling with R and the Tidyverse](https://www.youtube.com/channel/UC3xfbCMLCw1Hh4dWop3XtHg) by Garrett Grolemund put out recently by R Studio. I particularly recommend the fourth of these videos, on [Working with Two Datasets](https://www.youtube.com/watch?v=AuBgYDCg1Cg&) which can help you combine two data sets together.
 
 2. There is a new [Chapter 16 in the Course Notes](https://thomaselove.github.io/432-notes/colorectal-cancer-screening-and-some-special-cases.html). This briefly illustrates issues related to two topics we've yet to discuss regarding regression models for binary outcomes:
     - the fitting of logistic regression models to data which have been aggregated, so that we know the counts of "yes" and "no" (or "yes" and "total") within each combination of predictors, but not the data on individual subjects. I briefly demonstrate both the `glm` approach, and the `Glm` approach (which is within `rms`.)
@@ -20,8 +21,8 @@ In today's class, we will discuss Project 1 and other issues.
 3. Other New Things:
     - [Homework 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw6) is now posted. It's due 2018-04-06.
     - [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is now posted. It's due 2018-04-13.
-    - Remember than Homework 8 has been canceled, so both of the remaining Homeworks are now posted.
-    - Project 2 instructions will be available soon.
+    - Remember than Homework 8 has been canceled, so all (both) of the remaining Homeworks are now posted.
+    - [Project 2 instructions](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) are now available. We'll discuss them in class on 2018-03-27, after you've submitted Project 1.
 
 4. Those of you who scored below 80 on Quiz 1 should look at [this Bonus Assignment for those looking to improve a poor Quiz 1 grade](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus). If you scored 80 or higher on Quiz 1, this isn't open to you. If you scored between 75 and 79, it's optional. Answers will be posted to this assignment in April, if you want to use it as a review for Quiz 2 or something.
 
