@@ -22,10 +22,11 @@ Dr. Love built two templates, using the `rmdformats` package. Use whichever one 
 - Template B builds on the `html_clean` template, which is also used in the Project 2 Instructions.
     - Here is the [R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project2/project2-templateB-432-2018.Rmd) for Template B, and you can also [view the HTML result](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-templateB-432-2018.html).
 - The [cardiac.csv](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project2/cardiac.csv) file was used in these templates to help fix ideas.
-- When you submit your project to Canvas,
-    - include your name in the file name,
-    - remove all of the sample text in the template and instructions that I included to help you decide where things go,
-    - spell-check it first, and (ideally) have someone else look it over for typographical errors and errors in grammar or syntax.
+
+Use the template well. When you submit your project to Canvas,
+- include your name in the file name, rather than retaining the original template's name
+- remove all of the sample text in the template and instructions that I included to help you decide where things go,
+- spell-check your work, and have someone else look it over for typographical errors and errors in grammar or syntax, or statements that are unclear.
 - An alternate template or formatting style is acceptable only if it:
     - contains all of the content in these templates, including the restrictions
     - and uses a **dynamic** and attractive table of contents, as these do.
