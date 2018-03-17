@@ -18,19 +18,17 @@ Project 2 Instructions are available in [this HTML document](https://htmlpreview
 Dr. Love built two templates, using the `rmdformats` package. Use whichever one you prefer.
 
 - Template A uses the same formatting structure built on the `readthedown` template that you used in 432 Project 1.
-    - Here is the R Markdown file for Template A, and you can also view the HTML result.
+    - Here is the [R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project2/project2-templateA-432-2018.Rmd) for Template A, and you can also [view the HTML result](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-templateA-432-2018.html).
 - Template B builds on the `html_clean` template, which is also used in the Project 2 Instructions.
-    - Here is the R Markdown file for Template B, and you can also view the HTML result.
-- The cardiac.csv file was used in these templates to help fix ideas.
+    - Here is the [R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project2/project2-templateB-432-2018.Rmd) for Template B, and you can also [view the HTML result](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-templateB-432-2018.html).
+- The [cardiac.csv](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project2/cardiac.csv) file was used in these templates to help fix ideas.
 - When you submit your project to Canvas,
     - include your name in the file name,
     - remove all of the sample text in the template and instructions that I included to help you decide where things go,
     - spell-check it first, and (ideally) have someone else look it over for typographical errors and errors in grammar or syntax.
-
-An alternate template or formatting style is acceptable only if it:
-
-- contains all of the content in these templates, including the restrictions
-- and uses a dynamic and attractive table of contents, as these do.
+- An alternate template or formatting style is acceptable only if it:
+    - contains all of the content in these templates, including the restrictions
+    - and uses a **dynamic** and attractive table of contents, as these do.
 
 ## Available Times for Presentations
 
