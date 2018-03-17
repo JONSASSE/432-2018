@@ -6,7 +6,7 @@ Project 2 Instructions are available in this HTML document, and here's the R Mar
 
 ## There are Three Deliverables for Project 2
 
-1. By **April 17 at 5 PM**, you need to complete [**this form**]() to register your project and specify presentation times for which you are available. Dr. Love will either approve or reject your project, and once he approves it, you can proceed. The form requires your project title, list of research questions, and details on your data set. You are not required to provide Dr. Love (or anyone else) with your data for Project 2. The available presentation times are listed on the form, and [below](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/README.md#available-times-for-presentations).
+1. By **April 17 at 5 PM**, you need to complete [**this form**](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) to register your project and specify presentation times for which you are available. Dr. Love will either approve or reject your project, and once he approves it, you can proceed. The form requires your project title, list of research questions, and details on your data set. You are not required to provide Dr. Love (or anyone else) with your data for Project 2. The available presentation times are listed on [the form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1), and [below](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/README.md#available-times-for-presentations).
 
 2. You will use one of two available [templates for Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) and R Markdown to build an HTML portfolio of materials. This includes some background, your research questions, your data management work and codebook, and then your analytic work, data descriptions, results and conclusions. You will submit your R Markdown and HTML files [via canvas](https://canvas.case.edu/) and it is due **three hours before your scheduled presentation time** on May 3, 7, or 8. 
     - Note that **if you and Dr. Love determine during your presentation that changes are required**, then you will turn in your final R Markdown and HTML files [via canvas](https://canvas.case.edu/) by **noon on May 9**, regardless of when you gave your presentation. Based on previous years, most projects require either minor changes or no changes at all. 
@@ -29,7 +29,7 @@ An alternate template or formatting style is acceptable so long as it:
 
 - Our final 432 class is Thursday 2018-04-26. 
 - The CWRU Reading Days are 2018-05-01 and 2018-05-02, and finals are given in other classes from 2018-05-03 through 2018-05-10.
-- In filling out **the registration and scheduling form due 2018-04-17** you will need to specify at least 8 time slots when you are available, including slots on at least two different days, and you'll need to specify your first choice time slot, as well.
+- In filling out [the registration and scheduling form due 2018-04-17 at 5 PM](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) you will need to specify at least 8 time slots when you are available, including slots on at least two different days, and you'll need to specify your first choice time slot, as well.
 
 ### Time Slots on Thursday 2018-05-03
 
