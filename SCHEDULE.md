@@ -39,16 +39,16 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 17 | Tue 2018-03-20 | Catch up and Project Review
 18 | Thu 2018-03-22 | **Special Session**: Retrospective Power, Type S and Type M errrors
 -- | Fri 2018-03-23 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at 1 PM
-19 | Tue 2018-03-27 | **Survival Analysis**, 1
-20 | Thu 2018-03-29 | **Survival Analysis**, 2
-21 | Tue 2018-04-03 | *To Be Determined* (project presentation dates announced)
+19 | Tue 2018-03-27 | Project 2 instructions, *To Be Determined*
+20 | Thu 2018-03-29 | *To Be Determined*
+21 | Tue 2018-04-03 | *To Be Determined* 
 22 | Thu 2018-04-05 | *To Be Determined* **SPECIAL ROOM: Class to be held in E301**
 -- | Fri 2018-04-06 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 23 | Tue 2018-04-10 | *To Be Determined*
 24 | Thu 2018-04-12 | *To Be Determined*
 -- | Fri 2018-04-13 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 25 | Tue 2018-04-17 | *To Be Determined*, [Project 2 Registration/Scheduling Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) due at 5 PM
-26 | Thu 2018-04-19 | *To Be Determined*
+26 | Thu 2018-04-19 | *To Be Determined* (project presentation dates announced)
 --  | Fri 2018-04-20 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
 --  | Mon 2018-04-23 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
 27 | Tue 2018-04-24 | Estimating **Causal Effects**
