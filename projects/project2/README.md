@@ -29,6 +29,7 @@ An alternate template or formatting style is acceptable so long as it:
 
 - Our final 432 class is Thursday 2018-04-26. 
 - The CWRU Reading Days are 2018-05-01 and 2018-05-02, and finals are given in other classes from 2018-05-03 through 2018-05-10.
+- In filling out **the registration and scheduling form due 2018-04-17** you will need to specify at least 8 time slots when you are available, including slots on at least two different days, and you'll need to specify your first choice time slot, as well.
 
 ### Time Slots on Thursday 2018-05-03
 
