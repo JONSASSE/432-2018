@@ -2,14 +2,12 @@
 
 ### Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class17) will appear when available.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class17) will appear when available. There will only be a few, as there are a lot of announcements today, and I want to leave substantial time for project 1 group work. The slides will cover material from [Chapter 16 in the Course Notes](https://thomaselove.github.io/432-notes/colorectal-cancer-screening-and-some-special-cases.html).
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) will appear when available.
 
-In today's class, we will discuss Project 1 and other issues.
+- Before today's class, remember to post your Progress on Project 1 to [Canvas](https://canvas.case.edu/), please.
 
-- Before today's class, you need to post your Progress on Project 1 to [Canvas](https://canvas.case.edu/), please.
-
-## Announcements before class
+## Announcements at the start of class
 
 1. Some students have been using the [431 Project Study 1 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study1-demonstration.pdf) and [431 Project Study 2 Demonstration](https://github.com/THOMASELOVE/431project/blob/master/TaskE/431-project-study2-demonstration.pdf) PDF files I built to help you do projects in 431.  There's lots of useful data cleaning information in those documents. I encourage you to look them over.
     - I also recommend the series of [four YouTube videos on Data Wrangling with R and the Tidyverse](https://www.youtube.com/channel/UC3xfbCMLCw1Hh4dWop3XtHg) by Garrett Grolemund put out recently by R Studio. I particularly recommend the fourth of these videos, on [Working with Two Datasets](https://www.youtube.com/watch?v=AuBgYDCg1Cg&) which can help you combine two data sets together.
@@ -78,7 +76,11 @@ After that, we'll work on (in this order, I believe):
 3. Models for time-to-event / survival outcomes.
 4. The Statistical Crisis in Science, Retrospective power and Type S and Type M errors
 
-- Later chapters (for which I am still drafting materials) discuss parts 2 and 3 there.
+The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) reflects my current plan.
+
+- Later chapters in the Notes (for which I am still drafting materials) will cover items 2 and 3 in that list.
+- Most of the material for item 4 will come out of [this talk I gave last Friday](https://github.com/THOMASELOVE/rethink).
+    - I'll try to build some new things for the pair of you who made it to that talk.
 - This leaves about four classes as yet unplanned.
     - Linear mixed effects models are easy to do a little bit on, but difficult to do in a lot of detail. I'll see if I can strike a balance, but I will try to at least say something about them.
     - I probably won't do much with cluster analysis, but I'm still thinking about it.
