@@ -68,17 +68,18 @@ A Lot | Little | DK | Topic | High | Some | Not | DK
 
 ### So what will we cover in the rest of the course?
 
-Starting Thursday, we'll work on (in this order, I believe):
+- I've taken the material I planned to show you on probit models for binary outcomes, and logistic regression for outcomes where you have aggregated data and put them in Chapter 16. We'll discuss that lightly today.
+- I expect to discuss retrospective power and Type S and Type M errors in class on Thursday of this week.
+
+Starting next week, we'll work on (in this order, I believe):
 
 1. Models for count outcomes, outcomes with extra zeros, and outcomes which are censored. (That's Chapter 18.)
 2. Models for nominal categorical outcomes and models for ordinal categorical outcomes.
 3. Models for time-to-event / survival outcomes.
 
-- I've taken the material I planned to show you on probit models for binary outcomes, and logistic regression for outcomes where you have aggregated data and put them in Chapter 16. We'll discuss that lightly today.
 - I've taken the detailed materials on cleaning data for the BRFSS SMART study and put that in Chapter 17.
-- Chapter 18 covers models for count outcomes, etc.
 - Later chapters (for which I am still drafting materials) discuss categorical outcomes, and time-to-event outcomes.
-- It's not clear to me how much time it will take to cover these items. When they're done, I'll settle on how much time I have to discuss the other items. 
+- Each of these areas will take at least two class sessions to discuss in any detail. Including today, we have 12 sessions left this semester. It's not clear to me how much time it will take to cover these items. When they're done, I'll settle on how much time I have to discuss other things. 
 - Linear mixed effects models are easy to do a little bit on, but difficult to do in a lot of detail. I'll see if I can strike a balance.
 - I probably won't do much with cluster analysis, but I'm still thinking about it.
 - I have some material on CART prepared, because I did some of that last year. It's an appealing topic to me, because people don't know much about it, but it wasn't quite as popular, so we'll see.
