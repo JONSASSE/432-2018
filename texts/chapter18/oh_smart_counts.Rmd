@@ -1,5 +1,5 @@
 ---
-title: "Modeling a Count Outcome in Ohio SMART"
+title: "Chapter 18: Modeling a Count Outcome in Ohio SMART"
 author: "Thomas E. Love"
 date: "`r Sys.Date()`"
 mainfont: DejaVu Sans
@@ -54,7 +54,7 @@ Note that I will also use the `MASS` package, but won't install it because it co
 Let's consider the following data. I'll include the subset of all observations in `smart_oh` with complete data on these 14 variables.
 
 Variable | Description
---------: | ---------------------------------
+--------: | -----------------------------------------------
 `SEQNO` | Subject identification code
 `MMSANAME` | Name of statistical area
 `genhealth` | Five categories (E, VG, G, F, P) on general health
@@ -1585,6 +1585,49 @@ and we can multiply these last two pieces together to verify that they match our
 head(predict(mod_hur1, type = "zero") * predict(mod_hur1, type = "count"),5)
 ```
 
+## Specify the R^2^ and log (likelihood) values
+
+We can calculate a proxy for R^2^ as the squared correlation of the fitted values and the observed values.
+
+```{r}
+# The correlation of observed and fitted values
+(hur1_r <- with(sm_hur1, cor(physhealth, fitted)))
+
+# R-square
+hur1_r^2
+```
+
+```{r}
+logLik(mod_hur1)
+```
+
+Here, we have
+
+Model | Scale | R^2^ | log(likelihood)
+----------: | ------: | --------: | ---------:
+Hurdle Model (Poisson) | Complex: log(`physhealth`) | .050 | -4184.1
+
+## Check model assumptions
+
+Here is a plot of residuals vs. fitted values on the original `physhealth` scale.
+
+```{r}
+ggplot(sm_hur1, aes(x = fitted, y = resid)) +
+    geom_point() +
+    labs(title = "Residuals vs. Fitted `physhealth`",
+         subtitle = "Hurdle model with Poisson counts")
+```
+
+## Predictions for Harry and Sally
+
+The predictions from this zero-inflated negative binomial regression model are obtained as follows...
+
+```{r}
+predict(mod_hur1, newdata = hs_data, type = "response")
+```
+
+As we've seen in the past, when we use `response` as the type, the predictions fall on the original `physhealth` scale. The prediction for Harry is 5.93 days, and for Sally is 1.47 days. 
+
 # A "hurdle" model (with negative binomial for overdispersion)
 
 Let's account for overdispersion better with a negative binomial model for the counts in our hurdle model. We specify that the positive-count process be fit with this NB model using `dist = negbin`.
@@ -1597,6 +1640,97 @@ mod_hur_nb1 <- hurdle(physhealth ~ bmi_c + smoke100,
 summary(mod_hur_nb1)
 confint(mod_hur_nb1)
 ```
+
+## Comparison to a null model
+
+To show that this model fits better than the null model (the model with intercept only), we can compare them directly with a chi-squared test. Since we have two predictors in the full model, the degrees of freedom for this test is 2.
+
+```{r}
+mod_hur_nb_null <- hurdle(physhealth ~ 1, dist = "negbin", 
+                      zero.dist = "binomial", 
+                      data = sm_oh_A_young)
+
+summary(mod_hur_nb_null)
+
+pchisq(2 * (logLik(mod_hur_nb1) - logLik(mod_hur_nb_null)), df = 2, lower.tail = FALSE)
+```
+
+## Comparison to a Negative Binomial Model: Vuong test
+
+```{r}
+vuong(mod_hur_nb1, mod_nb1)
+```
+
+The hurdle model is a significant improvement over the standard negative binomial model according to the raw and AIC-corrected versions of this test, but not the BIC-corrected version.
+
+## Comparison to a Zero-Inflated NB Model: Vuong test
+
+Is the hurdle model comparable to the zero-inflated Poisson?
+
+```{r}
+vuong(mod_hur_nb1, mod_zinb1)
+```
+
+The hurdle model is just barely a significant improvement over the zero-inflated Negative Binomial model.
+
+## Comparing the Hurdle Models with AIC and BIC
+
+```{r}
+AIC(mod_hur1); BIC(mod_hur1)
+```
+
+```{r}
+AIC(mod_hur_nb1); BIC(mod_hur_nb1)
+```
+
+The negative binomial approach certainly looks better than the Poisson here.
+
+
+## The Fitted Equation
+
+The form of the model equation for this hurdle also requires us to take two separate models into account. First we have a logistic regression model to predict the log odds of zero `physhealth` days...
+
+```
+logit(physhealth = 0) = -0.921 + 0.051 bmi_c + 0.413 smoke100
+```
+
+That takes care of the zeros. Then, to predict the number of `physhealth` days, we use the following truncated negative binomial model:
+
+```
+log(physhealth) = 1.30 + 0.018 bmi_c + 0.576 smoke100
+```
+
+which is truncated to produce only estimates greater than zero, with $\theta$ estimated as `exp(-1.123)` or `r round(exp(-1.123), 3)`.
+
+## Interpreting the Coefficients
+
+We can exponentiate the logistic regression coefficients to obtain results in terms of odds ratios for that model, and that can be of some help in understanding the process behind excess zeros.
+
+```{r}
+exp(coef(mod_hur_nb1))
+```
+
+For example,
+
+- in the model for `physhealth` = 0, the odds of `physhealth` = 0 are 151% as high for subjects with `smoke100` = 1 as for non-smokers with the same BMI.
+
+## Testing the Predictors
+
+We can test the model with and without `bmi_c`, for example, by fitting the model both ways, and comparing the results with either a Wald or Likelihood Ratio test, each of which is available in the `lmtest` package.
+
+```{r}
+mod_hurnb1_nobmi <- hurdle(physhealth ~ smoke100,
+                         dist = "negbin", 
+                         zero.dist = "binomial",
+                         data = sm_oh_A_young)
+
+lmtest::waldtest(mod_hur_nb1, mod_hurnb1_nobmi)
+```
+
+```{r}
+lmtest::lrtest(mod_hur_nb1, mod_hurnb1_nobmi)
+```
+
 
 ## Store fitted values and residuals
 
@@ -1620,19 +1754,50 @@ countreg::rootogram(mod_hur_nb1, max = 30)
 
 This improves the situation, but we're still underfitting the 30s.
 
-## Comparing the Hurdle Models with AIC and BIC
+## Specify the R^2^ and log (likelihood) values
+
+We can calculate a proxy for R^2^ as the squared correlation of the fitted values and the observed values.
 
 ```{r}
-AIC(mod_hur1); BIC(mod_hur1)
+# The correlation of observed and fitted values
+(hurnb1_r <- with(sm_hur_nb1, cor(physhealth, fitted)))
+
+# R-square
+hurnb1_r^2
 ```
 
 ```{r}
-AIC(mod_hur_nb1); BIC(mod_hur_nb1)
+logLik(mod_hur_nb1)
 ```
 
-The negative binomial approach certainly looks better than the Poisson here.
+Here, we have
 
-## Fitting a Different Hurdle Model
+Model | Scale | R^2^ | log(likelihood)
+----------: | ------: | --------: | ---------:
+Hurdle Model (Neg. Bin.) | Complex: log(`physhealth`) | .050 | -2566.3
+
+## Check model assumptions
+
+Here is a plot of residuals vs. fitted values on the original `physhealth` scale.
+
+```{r}
+ggplot(sm_hur_nb1, aes(x = fitted, y = resid)) +
+    geom_point() +
+    labs(title = "Residuals vs. Fitted `physhealth`",
+         subtitle = "Hurdle model with Negative Binomial counts")
+```
+
+## Predictions for Harry and Sally
+
+The predictions from this zero-inflated negative binomial regression model are obtained as follows...
+
+```{r}
+predict(mod_hur_nb1, newdata = hs_data, type = "response")
+```
+
+The prediction for Harry is 6.04 days, and for Sally is 1.45 days. 
+
+## Note: Fitting a Different Hurdle Model for Counts and Pr(zero)
 
 Suppose we wanted to use only `bmi_c` to predict the probability of a zero count, but use both predictors in the model for the positive counts. We use the `|` command.
 
@@ -1653,7 +1818,7 @@ countreg::rootogram(mod_hur_new1, max = 30)
 
 Not a meaningful improvement, certainly.
 
-# Tobit Model approach
+# A Tobit (Censored) Regression Model
 
 The idea of the **tobit** model (sometimes called a **censored regression** model) is to estimate associations for outcomes where we can see either left-censoring (censoring from below) or right-censoring (censoring from above.) 
 
@@ -1671,11 +1836,23 @@ Here's the model, and its summary. Note that the default Lower value for a tobit
 ```{r}
 mod_tob1 <- vglm(physhealth ~ bmi_c + smoke100, 
                  tobit(Lower = 0, Upper = 30),
+                 type.fitted = "censored",
                  data = sm_oh_A_young)
 
 summary(mod_tob1)
 confint(mod_tob1)
 ```
+
+## The Fitted Equation
+
+Because we've used the censoring approach, our model will limit its predictions to the range of [0, 30], where any predictions outside that range are censored. Values below 0 are fitted as 0, and values above 30 are fitted as 30.
+
+The model equation is 
+
+```
+physhealth = -11.00 + 0.49 bmi_c + 5.67 smoke100
+```
+## Interpreting the Coefficients
 
 Tobit model regression coefficients are interpreted as we would a set of OLS coefficients, *except* that the linear effect is on the uncensored *latent variable*, rather than on the observed outcome.
 
@@ -1687,18 +1864,86 @@ In our case,
 - the coefficient labeled `(Intercept):2` is a statistic we can use after we exponentiate it, as follows:
     - here `(Intercept):2` = 2.82, and exp(2.82) = `r exp(2.82)`, which is analogous to the square root of the residual variance in OLS regression, which is summarized for our OLS model as `Residual standard error: 6.609`.
 
+## Testing the Predictors
+
+We can test the model with and without `bmi_c`, for example, by fitting the model both ways, and comparing the results with either a Wald or Likelihood Ratio test, each of which is available in the `lmtest` package.
+
+```{r}
+mod_tob_nobmi <- vglm(physhealth ~ smoke100, 
+                      tobit(Lower = 0, Upper = 30),
+                      type.fitted = "censored",
+                      data = sm_oh_A_young)
+
+lmtest::waldtest(mod_tob1, mod_tob_nobmi)
+```
+
+The likelihood ratio test we have used in some other settings isn't available here.
+
+## Store fitted values and residuals
+
 The residuals and fitted values from the tobit model can be stored and then summarized in several ways:
 
 ```{r}
-sm_oh_A_young1 <- sm_oh_A_young %>%
-    mutate(fitted_tob1 = fitted(mod_tob1),
-           resid_tob1 = resid(mod_tob1, type = "response"))
+sm_tob1 <- sm_oh_A_young %>%
+    mutate(fitted = fitted(mod_tob1,
+                           type.fitted = "censored"),
+           resid = physhealth - fitted)
+
+sm_tob1 %>% 
+    dplyr::select(physhealth, fitted, resid) %>%
+    head()
 ```
+
+## Building Something Like a Rootogram
+
+Building a rootogram is tricky for a tobit model, to say the least, but we can approximate a piece of the issue by plotting the rounded fitted values against the observed `physhealth` data.
+
+```{r}
+ggplot(sm_tob1, aes(x = physhealth, y = round(fitted))) +
+    geom_jitter(width = 0.2) + 
+    geom_abline(intercept = 0, slope = 1, col = "red")
+```
+
+Note that the model never predicts a subject to have an underlying `physhealth` worse than about 12 (remember that larger numbers are worse here.) In fact, the model predicts subjects to have an underlying `physhealth` ranging from `r round(min(sm_tob1$fitted_tob1),1)` to `r round(max(sm_tob1$fitted_tob1),1)` days.
+
+## Tables of the Observed and Fitted `physhealth` from Tobit
+
+```{r}
+addmargins(table(round(sm_tob1$physhealth)))
+```
+
+```{r}
+addmargins(table(round(sm_tob1$fitted)))
+```
+
+## Specify the R^2^ and log (likelihood) values
+
+We can calculate a proxy for R^2^ as the squared correlation of the fitted values and the observed values.
+
+```{r}
+# The correlation of observed and fitted values
+(tob1_r <- with(sm_tob1, cor(physhealth, fitted)))
+
+# R-square
+tob1_r^2
+```
+
+```{r}
+logLik(mod_tob1)
+```
+
+Here, we have
+
+Model | Scale | R^2^ | log(likelihood)
+----------: | ------: | --------: | ---------:
+Tobit | `physhealth` | .021 | -2567.3
+
+## Check model assumptions
 
 Here is a plot of residuals vs. fitted values.
 
 ```{r}
-ggplot(sm_oh_A_young1, aes(x = fitted_tob1, y = resid_tob1)) +
+ggplot(sm_tob1, aes(x = fitted, y = resid)) +
     geom_point() +
     labs(title = "Residuals vs. Fitted Values for Tobit 1")
 ```
@@ -1706,105 +1951,16 @@ ggplot(sm_oh_A_young1, aes(x = fitted_tob1, y = resid_tob1)) +
 Here is a normal Q-Q plot of the Tobit Model 1 residuals.
 
 ```{r}
-qqnorm(sm_oh_A_young1$resid_tob1)
+qqnorm(sm_tob1$resid)
 ```
 
-We can look at the correlation between the actual and model-predicted values of `physhealth` using the tobit model with:
+## Predictions for Harry and Sally
+
+The predictions from this tobit model are obtained as follows...
 
 ```{r}
-# correlation
-(r_tob1 <- with(sm_oh_A_young1, cor(fitted_tob1, physhealth)))
-
-# variance accounted for
-r_tob1^2
+predict(mod_tob1, newdata = hs_data, type = "response")
 ```
 
-and here's the plot comparing the actual and predicted values under the tobit model. Note that the model never predicts a subject to have an underlying `physhealth` worse than about 12 (remember that larger numbers are worse here.) In fact, the model predicts subjects to have an underlying `physhealth` ranging from `r round(min(sm_oh_A_young1$fitted_tob1),1)` to `r round(max(sm_oh_A_young1$fitted_tob1),1)` days.
+The prediction for both Harry and Sally under the tobit model would be truncated to 0 days. 
 
-```{r}
-ggplot(sm_oh_A_young1, aes(x = fitted_tob1, y = physhealth)) +
-    geom_point()
-```
-
-
-# Adding More Predictors
-
-Suppose we decide to add `alcdays` and `incomegroup` to our models. Now what happens?
-
-## A Bigger Scatterplot Matrix
-
-```{r}
-GGally::ggpairs(sm_oh_A_young %>% 
-                    select(bmi_c, smoke100, alcdays, 
-                           incomegroup, physhealth))
-```
-
-## OLS approach
-
-```{r}
-mod_ols2 <- lm(physhealth ~ sleephrs + bmi_c + smoke100 + 
-                   alcdays + incomegroup, 
-               data = sm_oh_A_young)
-
-summary(mod_ols2)
-```
-
-## Tobit Model approach
-
-```{r}
-mod_tob2 <- vglm(physhealth ~ sleephrs + bmi_c + smoke100 + 
-                   alcdays + incomegroup, 
-                 tobit(Lower = 0, Upper = 30),
-                 data = sm_oh_A_young)
-
-summary(mod_tob2)
-confint(mod_tob2)
-```
-
-In our second tobit model, 
-
-- a one-unit increase in `bmi_c` is now associated with a 0.39 day increase in the predicted value of `physhealth`, holding everything else constant
-- the household income groups appear to split between the low group and a higher ($25,000 or more per year) group in terms of impact on `physhealth` with higher income associated with better (lower) `physhealth`.
-- the coefficient labeled `(Intercept):1` is again the intercept for the model. The value is 9.3, which is in the range of `physhealth` values we observed.
-- the coefficient labeled `(Intercept):2` is a statistic we can use after we exponentiate it, as follows:
-    - here `(Intercept):2` = 2.75, and exp(2.75) = `r exp(2.75)`, which is analogous to the square root of the residual variance in OLS regression, which is summarized for our OLS model 2 as `Residual standard error: 6.336`.
-
-Summarizing the tobit 2 residuals and fitted values:
-
-```{r}
-sm_oh_A_young2 <- sm_oh_A_young %>%
-    mutate(fitted_tob2 = fitted(mod_tob2),
-           resid_tob2 = resid(mod_tob2, type = "response"))
-```
-
-Here is a plot of residuals vs. fitted values.
-
-```{r}
-ggplot(sm_oh_A_young2, aes(x = fitted_tob2, y = resid_tob2)) +
-    geom_point() +
-    labs(title = "Residuals vs. Fitted Values for Tobit 2")
-```
-
-Here is a normal Q-Q plot of the Tobit Model 2 residuals.
-
-```{r}
-qqnorm(sm_oh_A_young2$resid_tob2)
-```
-
-And, again, we can look at the correlation between the actual and model-predicted values of `physhealth` using the tobit model with:
-
-```{r}
-# correlation
-(r_tob2 <- with(sm_oh_A_young2, cor(fitted_tob2, physhealth)))
-
-# variance accounted for
-r_tob2^2
-```
-
-Finally, here's the plot comparing the actual and predicted values under the second tobit model. Note that this new model predicts subjects to have an underlying `physhealth` ranging from `r round(min(sm_oh_A_young2$fitted_tob2),1)` to `r round(max(sm_oh_A_young2$fitted_tob2),1)` days.
-
-
-```{r}
-ggplot(sm_oh_A_young2, aes(x = fitted_tob2, y = physhealth)) +
-    geom_point()
-```
