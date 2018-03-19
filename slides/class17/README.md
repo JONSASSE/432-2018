@@ -21,9 +21,10 @@ In today's class, we will discuss Project 1 and other issues.
 3. Chapters 17 and 18 of the Course Notes are also now available for you to review. These are posted separately from the main document, but you'll find the links in the Course Notes themselves.
     - Chapter 17 on Cleaning the BRFSS SMART data [can be read here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/SMART/smart.html), and there's more information in [this README file](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code/SMART).
     - Chapter 18 on Regression Models for Count Outcomes [can be read here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter18/oh_smart_counts.html), and there's more information in [this README file](https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter18/README.md).
-
+    
 4. Other New Things:
     - Typos have been fixed in many of the chapters of the Course Notes.
+    - I added a couple of new packages to install on [the PACKAGES page](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD), including `pscl` and `VGAM`, as well as `countreg` which is only available on R-Forge, and requires a special installation routine, described on [the PACKAGES page](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD).
     - [Homework 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw6) is now posted. It's due 2018-04-06.
     - [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is now posted. It's due 2018-04-13.
     - Remember than Homework 8 has been canceled, so all (both) of the remaining Homeworks are now posted.
