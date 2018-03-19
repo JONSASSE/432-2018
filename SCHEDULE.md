@@ -36,7 +36,7 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 16 | Thu 2018-03-08 | [Project 1 Draft](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due at 1 PM. Group Reviews.
 -- | 2018-03-12 to 16 | **SPRING BREAK at CWRU - NO CLASS**
 -- | Fri 2018-03-16 | Dr. Love gives a seminar at MetroHealth 9-10:30 AM on "Rethinking Statistical Significance"
-17 | Tue 2018-03-20 | Logistic models for aggregated outcomes, Probit Regression, Project Review
+17 | Tue 2018-03-20 | Logistic models for aggregated outcomes, Probit Regression, Project 1 Review
 18 | Thu 2018-03-22 | Models for Count Outcomes
 -- | Fri 2018-03-23 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at 1 PM
 19 | Tue 2018-03-27 | [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) instructions, Models for Count outcomes
