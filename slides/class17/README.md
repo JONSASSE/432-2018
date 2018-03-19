@@ -18,7 +18,7 @@ In today's class, we will discuss Project 1 and other issues.
     - the fitting of logistic regression models to data which have been aggregated, so that we know the counts of "yes" and "no" (or "yes" and "total") within each combination of predictors, but not the data on individual subjects. I briefly demonstrate both the `glm` approach, and the `Glm` approach (which is within `rms`.)
     - the use of a different link, specifically the `probit`, in the context of a binary regression model. This produces a probit regression model, which is a reasonable alternative in some settings to a logistic regression.
     
-3. Chapters 17 and 18 of the Course Notes are also now available for you to review. These are posted separately from the main document, but you'll find the links in the Course Notes themselves.
+3. Chapters 17 and 18 of the [Course Notes](https://thomaselove.github.io/432-notes/cleaning-the-brfss-smart-data.html) are also now available for you to review. The main document contains a brief summary, with links to pages containing the (substantial) details.
     - Chapter 17 on Cleaning the BRFSS SMART data [can be read here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/SMART/smart.html), and there's more information in [this README file](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code/SMART).
     - Chapter 18 on Regression Models for Count Outcomes [can be read here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter18/oh_smart_counts.html), and there's more information in [this README file](https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter18/README.md).
     
