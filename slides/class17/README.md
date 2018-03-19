@@ -69,20 +69,21 @@ A Lot | Little | DK | Topic | High | Some | Not | DK
 ### So what will we cover in the rest of the course?
 
 - I've taken the material I planned to show you on probit models for binary outcomes, and logistic regression for outcomes where you have aggregated data and put them in Chapter 16. We'll discuss that lightly today.
-- I expect to discuss retrospective power and Type S and Type M errors in class on Thursday of this week.
+- I've taken the detailed materials on cleaning data for the BRFSS SMART study and put that in Chapter 17. I'll essentially leave that for you to read.
 
-Starting next week, we'll work on (in this order, I believe):
+After that, we'll work on (in this order, I believe):
 
 1. Models for count outcomes, outcomes with extra zeros, and outcomes which are censored. (That's Chapter 18.)
 2. Models for nominal categorical outcomes and models for ordinal categorical outcomes.
 3. Models for time-to-event / survival outcomes.
+4. The Statistical Crisis in Science, Retrospective power and Type S and Type M errors
 
-- I've taken the detailed materials on cleaning data for the BRFSS SMART study and put that in Chapter 17.
-- Later chapters (for which I am still drafting materials) discuss categorical outcomes, and time-to-event outcomes.
-- Each of these areas will take at least two class sessions to discuss in any detail. Including today, we have 12 sessions left this semester. It's not clear to me how much time it will take to cover these items. When they're done, I'll settle on how much time I have to discuss other things. 
-- Linear mixed effects models are easy to do a little bit on, but difficult to do in a lot of detail. I'll see if I can strike a balance.
-- I probably won't do much with cluster analysis, but I'm still thinking about it.
-- I have some material on CART prepared, because I did some of that last year. It's an appealing topic to me, because people don't know much about it, but it wasn't quite as popular, so we'll see.
+- Later chapters (for which I am still drafting materials) discuss parts 2 and 3 there.
+- This leaves about four classes as yet unplanned.
+    - Linear mixed effects models are easy to do a little bit on, but difficult to do in a lot of detail. I'll see if I can strike a balance, but I will try to at least say something about them.
+    - I probably won't do much with cluster analysis, but I'm still thinking about it.
+    - I have some material on CART prepared, because I did some of that last year. It's an appealing topic to me, because people don't know much about it, but it wasn't quite as popular, so we'll see.
+    - I usually do a class on propensity scores and matching analyses in observational studies, since it's the topic of the more advanced (500) course I teach, it's interesting, and it's my "specialty" field. But we'll see.
 
 ### What question(s) about the course are uppermost in your mind now? (A curated sample.)
 
