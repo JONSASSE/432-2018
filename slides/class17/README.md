@@ -66,6 +66,23 @@ A Lot | Little | DK | Topic | High | Some | Not | DK
     - "Not" = Not interested in this topic.
     - "DK" = I don't know enough about this to form an opinion.
 
+### So what will we cover in the rest of the course?
+
+Starting Thursday, we'll work on (in this order, I believe):
+
+1. Models for count outcomes, outcomes with extra zeros, and outcomes which are censored. (That's Chapter 18.)
+2. Models for nominal categorical outcomes and models for ordinal categorical outcomes.
+3. Models for time-to-event / survival outcomes.
+
+- I've taken the material I planned to show you on probit models for binary outcomes, and logistic regression for outcomes where you have aggregated data and put them in Chapter 16. We'll discuss that lightly today.
+- I've taken the detailed materials on cleaning data for the BRFSS SMART study and put that in Chapter 17.
+- Chapter 18 covers models for count outcomes, etc.
+- Later chapters (for which I am still drafting materials) discuss categorical outcomes, and time-to-event outcomes.
+- It's not clear to me how much time it will take to cover these items. When they're done, I'll settle on how much time I have to discuss the other items. 
+- Linear mixed effects models are easy to do a little bit on, but difficult to do in a lot of detail. I'll see if I can strike a balance.
+- I probably won't do much with cluster analysis, but I'm still thinking about it.
+- I have some material on CART prepared, because I did some of that last year. It's an appealing topic to me, because people don't know much about it, but it wasn't quite as popular, so we'll see.
+
 ### What question(s) about the course are uppermost in your mind now? (A curated sample.)
 
 1. **When should I use `ols` as opposed to `lm`?**
@@ -80,33 +97,39 @@ A Lot | Little | DK | Topic | High | Some | Not | DK
     - I'd argue that **multiple** imputation of outcomes is usually a competitive strategy with complete case analysis, since multiple imputation is primarily a way of taking the missingness into account in a rigorous way, but I don't think I'd say the same for simple imputation of outcomes.
     
 4. **When is it better to use a spline vs. a polynomial fit?**
-    - Another false choice. There's nothing stopping you from doing either in any setting.
+    - Sorry, but this is another false choice. There's nothing stopping you from doing either in any setting.
     - A spline is likely a more obvious choice whenever you want to let the data decide where the bends in the curve are, rather than (essentially) pre-specifying them, so long as you don't care about explaining the guts of the model to other people. Describing what a spline does **inevitably** involves a graph.
     - If you do care deeply about explaining the guts of the model to other people (as opposed to explaining it to computers) then polynomial fits become more attractive than they do otherwise.
 
-5. **How to select best possible regression model for the study?**
+5. **How do we select the best possible regression model for the study?**
     - Get past the idea that there is one model that is best, and you just need to find it. All models are wrong, and many are useful. You just need to maximize your chances of finding something useful.
 
 6. **It seems as though if degrees of freedom are a limiting factor, wouldn't that be really important, and drive our analysis?**
-    - Exactly.
+    - Exactly. That's why you have to think hard about what sort of model you want to fit (in terms of which predictors are to be gathered / included) as often as you can. Getting good data is the hardest part. Fitting all of these various models is the easy piece.
     
 7. **What about comparing groups in randomized clinical trials?**
     - That was most of 431 Part B, and then our discussion of regression models and analysis of variance. If you're talking about a binary outcome, it's mostly logistic regression, 2x2 tables and chi-square tests so far, but there's a little more to come.
+    - The most common scenarios people generate still can be fit well with ordinary least squares. We'll see lots of other options, but the improvements associated with them are sometimes small.
 
 8. **What about adjusting for baseline differences?**
     - In a regression model, that was a large part of 431 Part C, and then our discussion of analysis of covariance, as well as, well, about 80% of our examples in 432 for ordinary least squares.
+    - The fundamental point is that it depends on what sort of analysis you're doing whether simply accounting for differences at baseline with a regression model will be sufficient, or whether some sort of matching/subclassification/weighting approach will be necessary. I teach a whole course in making those decisions in observational studies, called PQHS 500 given every Spring. I hope you'll consider it. I'll spend one class talking about that before the semester ends.
 
 9. **When do we use robust linear regression instead of ordinary least squares?**
     - Well, on some level, whenever you like.
     - But I guess the main point is that robust methods are more appealing when regression assumptions don't hold. 
 
-10. **Does the survey you had us take imply `THIS-THING-I-WANT-YOU-TO-DO-WILL-HAPPEN-A-LOT-IN-THE-REST-OF-432`?**
-    - No, it doesn't.
-
-11. **How should I build *numerical* categorical variables?**
+10. **How should I build *numerical* categorical variables?**
     - For some tools, like best subsets or the lasso, you will occasionally see an error that requires you to have all variables be numerical. If so, then you will have to create numerical versions of your categorical variables. 
     - You can do that with indicator (1/0) variables for binary things, and with a series of indicator variables for multi-categorical things, or use `as.numeric` with a multi-categorical factor to build a numeric version (although this is less defensible if your multi-categorical factor is only nominal, and not ordered.) 
         - Note that the codes may not match up as you expect, so you should run a count as a sanity check.
+
+11. **I have an outcome that is a count of something, or that is a count of something with an upper and lower value, or that has a lot of zeros. What should I do?**
+    - For Project 1, use an ordinary least squares regression model.
+    - After that, we'll have discussed Chapter 18, which is all about such things.
+
+12. **Does the survey you had us take imply `THIS-THING-I-WANT-YOU-TO-DO-WILL-HAPPEN-A-LOT-IN-THE-REST-OF-432`?**
+    - No, it doesn't.
 
 ## Project 1 Groups for Discussion in Class
 
