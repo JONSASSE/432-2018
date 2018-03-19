@@ -71,7 +71,7 @@ A Lot | Little | DK | Topic | High | Some | Not | DK
 
 After that, we'll work on (in this order, I believe):
 
-1. Models for count outcomes, outcomes with extra zeros, and outcomes which are censored. (That's Chapter 18.)
+1. Models for count outcomes, outcomes with extra zeros, and outcomes which are censored. (That's [Chapter 18](https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter18/README.md).)
 2. Models for nominal categorical outcomes and models for ordinal categorical outcomes.
 3. Models for time-to-event / survival outcomes.
 4. The Statistical Crisis in Science, Retrospective power and Type S and Type M errors
