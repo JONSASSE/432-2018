@@ -17,16 +17,21 @@ In today's class, we will discuss Project 1 and other issues.
 2. There is a new [Chapter 16 in the Course Notes](https://thomaselove.github.io/432-notes/colorectal-cancer-screening-and-some-special-cases.html). This briefly illustrates issues related to two topics we've yet to discuss regarding regression models for binary outcomes:
     - the fitting of logistic regression models to data which have been aggregated, so that we know the counts of "yes" and "no" (or "yes" and "total") within each combination of predictors, but not the data on individual subjects. I briefly demonstrate both the `glm` approach, and the `Glm` approach (which is within `rms`.)
     - the use of a different link, specifically the `probit`, in the context of a binary regression model. This produces a probit regression model, which is a reasonable alternative in some settings to a logistic regression.
+    
+3. Chapters 17 and 18 of the Course Notes are also now available for you to review. These are posted separately from the main document, but you'll find the links in the Course Notes themselves.
+    - Chapter 17 on Cleaning the BRFSS SMART data [can be read here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/SMART/smart.html), and there's more information in [this README file](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code/SMART).
+    - Chapter 18 on Regression Models for Count Outcomes [can be read here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter18/oh_smart_counts.html), and there's more information in [this README file](https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter18/README.md).
 
-3. Other New Things:
+4. Other New Things:
+    - Typos have been fixed in many of the chapters of the Course Notes.
     - [Homework 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw6) is now posted. It's due 2018-04-06.
     - [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is now posted. It's due 2018-04-13.
     - Remember than Homework 8 has been canceled, so all (both) of the remaining Homeworks are now posted.
-    - [Project 2 instructions](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) are now available. We'll discuss them in class on 2018-03-27, after you've submitted Project 1.
+    - [Project 2 instructions](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) are now available. We'll discuss them in class on 2018-03-27, after Project 1 is done.
 
-4. Those of you who scored below 80 on Quiz 1 should look at [this Bonus Assignment for those looking to improve a poor Quiz 1 grade](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus). If you scored 80 or higher on Quiz 1, this isn't open to you. If you scored between 75 and 79, it's optional. Answers will be posted to this assignment in April, if you want to use it as a review for Quiz 2 or something.
+5. Those of you who scored below 80 on Quiz 1 should look at [this Bonus Assignment for those looking to improve a poor Quiz 1 grade](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus). If you scored 80 or higher on Quiz 1, this isn't open to you. If you scored between 75 and 79, it's optional. Answers will be posted to this assignment in April, if you want to use it as a review for Quiz 2 or something.
 
-5. In looking over the [Homework 5 grades](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5), some were quite low. In a few cases, it seems clear that a mistake was made early on and then you were penalized for it repeatedly, when, in fact, given your mistake early on, you then proceeded to do things correctly. If you find yourself in a situation like this in **any** Homework assignment, I strongly encourage you to submit a regrading request through [this Google Form](https://goo.gl/forms/aQNPnlAWGIn72a7h1) any time between now and noon on Wednesday 2018-05-09, so that I will look your assignment over carefully at the end of the term, if it has any chance of making a difference in your course grade.
+6. In looking over the [Homework 5 grades](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5), some were quite low. In a few cases, it seems clear that a mistake was made early on and then you were penalized for it repeatedly, when, in fact, given your mistake early on, you then proceeded to do things correctly. If you find yourself in a situation like this in **any** Homework assignment, I strongly encourage you to submit a regrading request through [this Google Form](https://goo.gl/forms/aQNPnlAWGIn72a7h1) any time between now and noon on Wednesday 2018-05-09, so that I will look your assignment over carefully at the end of the term, if it has any chance of making a difference in your course grade.
 
 ## Minute Papers After Class 16 (n = 40/41)
 
