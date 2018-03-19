@@ -36,18 +36,18 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 16 | Thu 2018-03-08 | [Project 1 Draft](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project1) due at 1 PM. Group Reviews.
 -- | 2018-03-12 to 16 | **SPRING BREAK at CWRU - NO CLASS**
 -- | Fri 2018-03-16 | Dr. Love gives a seminar at MetroHealth 9-10:30 AM on "Rethinking Statistical Significance"
-17 | Tue 2018-03-20 | Catch up and Project Review
-18 | Thu 2018-03-22 | **Special Session**: Retrospective Power, Type S and Type M errrors
+17 | Tue 2018-03-20 | Logistic models for aggregated outcomes, Probit Regression, Project Review
+18 | Thu 2018-03-22 | Models for Count Outcomes
 -- | Fri 2018-03-23 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at 1 PM
-19 | Tue 2018-03-27 | [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) instructions, *To Be Determined*
-20 | Thu 2018-03-29 | *To Be Determined*
-21 | Tue 2018-04-03 | *To Be Determined* 
-22 | Thu 2018-04-05 | *To Be Determined* **SPECIAL ROOM: Class to be held in E301**
+19 | Tue 2018-03-27 | [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) instructions, Models for Count outcomes
+20 | Thu 2018-03-29 | Models for Categorical Outcomes
+21 | Tue 2018-04-03 | Models for Categorical Outcomes
+22 | Thu 2018-04-05 | Models for Time-to-Event Outcomes **SPECIAL ROOM: Class to be held in E301**
 -- | Fri 2018-04-06 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
-23 | Tue 2018-04-10 | *To Be Determined*
-24 | Thu 2018-04-12 | *To Be Determined*
+23 | Tue 2018-04-10 | Models for Time-to-Event Outcomes
+24 | Thu 2018-04-12 | Catch-up
 -- | Fri 2018-04-13 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
-25 | Tue 2018-04-17 | *To Be Determined*, [Project 2 Registration/Scheduling Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) due at 5 PM
+25 | Tue 2018-04-17 | **Special Session**: Retrospective Power, Type S and Type M errrors, [Project 2 Registration/Scheduling Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) due at 5 PM
 26 | Thu 2018-04-19 | *To Be Determined* (project presentation dates announced)
 --  | Fri 2018-04-20 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
 --  | Mon 2018-04-23 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
