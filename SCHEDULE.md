@@ -45,13 +45,14 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 22 | Thu 2018-04-05 | Models for Time-to-Event Outcomes **SPECIAL ROOM: Class to be held in E301**
 -- | Fri 2018-04-06 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 23 | Tue 2018-04-10 | Models for Time-to-Event Outcomes
-24 | Thu 2018-04-12 | Catch-up
+24 | Thu 2018-04-12 | *To Be Determined*
 -- | Fri 2018-04-13 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
-25 | Tue 2018-04-17 | **Special Session**: Retrospective Power, Type S and Type M errrors, [Project 2 Registration/Scheduling Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) due at 5 PM
+25 | Tue 2018-04-17 | **Special Session**: Retrospective Power, Type S and Type M errrors
+-- | Tue 2018-04-17 | [Project 2 Registration/Scheduling Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) due at 5 PM
 26 | Thu 2018-04-19 | *To Be Determined* (project presentation dates announced)
 --  | Fri 2018-04-20 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
 --  | Mon 2018-04-23 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
-27 | Tue 2018-04-24 | Estimating **Causal Effects**
+27 | Tue 2018-04-24 | *To Be Determined*
 28 | Thu 2018-04-26 | Final Class
 -- | Thu 2018-05-03 | Student [Project 2 Presentations](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2), 1
 -- | Mon 2018-05-07 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2), 2
