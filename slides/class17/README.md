@@ -4,7 +4,7 @@
 
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class17) for today are now available.
     - We will (briefly) cover material from [Chapter 16 in the Course Notes](https://thomaselove.github.io/432-notes/colorectal-cancer-screening-and-some-special-cases.html) on logistic regression for aggregated outcomes, and for probit regression.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class17) will appear when available.
+- The [audio file](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class17) is now available.
 
 - Before today's class, remember to post your Progress on Project 1 to [Canvas](https://canvas.case.edu/), please.
 
