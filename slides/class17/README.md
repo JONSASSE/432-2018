@@ -2,9 +2,9 @@
 
 ### Key Materials
 
-- At this point, there are no [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class17). If I do build some before class, there will only be a few, as there are a lot of announcements today, and I want to leave substantial time for project 1 group work. 
-    - The agenda suggests that we will cover material from [Chapter 16 in the Course Notes](https://thomaselove.github.io/432-notes/colorectal-cancer-screening-and-some-special-cases.html), but I may choose to do that straight from the Notes, or wait until Thursday, depending on how some other things go.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class16) will appear when available.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class17) for today are now available.
+    - We will (briefly) cover material from [Chapter 16 in the Course Notes](https://thomaselove.github.io/432-notes/colorectal-cancer-screening-and-some-special-cases.html) on logistic regression for aggregated outcomes, and for probit regression.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class17) will appear when available.
 
 - Before today's class, remember to post your Progress on Project 1 to [Canvas](https://canvas.case.edu/), please.
 
