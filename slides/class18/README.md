@@ -5,7 +5,9 @@
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class18) are now available.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class18) will appear as they become available.
 
-Today's class will focus on building regression models for count outcomes. See [Chapter 18 of the Course Notes](https://thomaselove.github.io/432-notes/modeling-a-count-outcome-in-ohio-smart.html#where-to-read-this-chapter-1) for more on this topic.
+Today's class will focus on building regression models for count outcomes, in particular Poisson regression models and Negative Binomial regression models. The data set comes from the `HSAUR` package, which I've added to our list of [packages to install](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD). 
+
+- See [Chapter 18 of the Course Notes](https://thomaselove.github.io/432-notes/modeling-a-count-outcome-in-ohio-smart.html#where-to-read-this-chapter-1) for more on this topic.
 
 ## Announcements at the start of class
 
@@ -24,4 +26,11 @@ Today's class will focus on building regression models for count outcomes. See [
 
 5. We'll discuss [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) in class on Tuesday 2018-03-27. 
     - The first deliverable is the [Registration/Scheduling Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1), due at 5 PM on 2018-04-17.
+    
+6. [Chapter 17 of the Course Notes](https://thomaselove.github.io/432-notes/cleaning-the-brfss-smart-data.html) includes a lot of information on the creation of a tidy data set from the BRFSS SMART data. I encourage you to look that material over on your own time.
+    - You can [read the chapter here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/SMART/smart.html).
+    - This [README file](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code/SMART) has some additional useful information, and links to the sources.
+    - If you're looking for a Project 2 data set and are interested in the BRFSS, you can certainly use data from the BRFSS, or even the Selected Metropolitan/Micropolitan Area Risk Trends of BRFSS that I'm dealing with here, but you'd have to do so including **more locations than just those in the state of Ohio**, since I've looked pretty closely at the Ohio data.
+
+
     
