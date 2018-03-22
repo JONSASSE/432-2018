@@ -16,7 +16,7 @@ Today's class will focus on building regression models for count outcomes. See [
         - an .html file which is the unedited result of knitting your R Markdown file
     - If you have additional materials you wish to submit, OK, but I must be able to grade your work based on the .html file alone.
 
-2. A link is coming to the Minute Paper after Class 18 due at **Noon on Monday 2018-03-26**.
+2. There is a [Minute Paper after Class 18](https://goo.gl/forms/qagV2F1gEguCgJr53). It's due at **Noon on Monday 2018-03-26**, and it is likely better to finish Project 1 and submit it before doing the Minute Paper, since one of the questions is: *What was the most difficult challenge you faced in doing your Project 1?*
 
 3. Those of you doing the [Bonus Assignment to improve a poor Quiz 1 grade](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus) need to submit that to Canvas by **Noon on Monday 2018-03-26**.
 
