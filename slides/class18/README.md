@@ -30,7 +30,7 @@ Today's class will focus on building regression models for count outcomes, in pa
 6. [Chapter 17 of the Course Notes](https://thomaselove.github.io/432-notes/cleaning-the-brfss-smart-data.html) includes a lot of information on the creation of a tidy data set from the BRFSS SMART data. I encourage you to look that material over on your own time.
     - You can [read the chapter here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/SMART/smart.html).
     - This [README file](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code/SMART) has some additional useful information, and links to the sources.
-    - If you're looking for a Project 2 data set and are interested in the BRFSS, you can certainly use data from the BRFSS, or even the Selected Metropolitan/Micropolitan Area Risk Trends of BRFSS that I'm dealing with here, but you'd have to do so including **more locations than just those in the state of Ohio**, since I've looked pretty closely at the Ohio data.
+    - If you're looking for a Project 2 data set and are interested in the BRFSS, you can certainly use data from the BRFSS, or even the Selected Metropolitan/Micropolitan Area Risk Trends of BRFSS that I'm dealing with here, but you'd have to do so including **more locations than just those in the state of Ohio**, since I've looked pretty closely at Ohio.
 
 
     
