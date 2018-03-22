@@ -2,7 +2,7 @@
 
 ### Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class18) will appear as soon as they are available.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class18) are now available.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class18) will appear as they become available.
 
 Today's class will focus on building regression models for count outcomes. See [Chapter 18 of the Course Notes](https://thomaselove.github.io/432-notes/modeling-a-count-outcome-in-ohio-smart.html#where-to-read-this-chapter-1) for more on this topic.
