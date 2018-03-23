@@ -2,7 +2,7 @@
 
 ### Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class18) are now available.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class18) are now available. A typo on slide 4 is now fixed.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class18) will appear as they become available.
 
 Today's class will focus on building regression models for count outcomes, in particular Poisson regression models and Negative Binomial regression models. The data set comes from the `HSAUR` package, which I've added to our list of [packages to install](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD). 
