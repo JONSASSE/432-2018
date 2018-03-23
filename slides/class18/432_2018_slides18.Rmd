@@ -39,7 +39,7 @@ Regression Models for Count Outcomes
 
 ## The `polyps` example
 
-The `polyps` data frame within the `HSAUR` package describes the results of a placebo-controlled trial of a non-steroidal anti-inflammatory drug in the treatment of a condition called familial andenomatous polyposis (FAP).
+The `polyps` data frame within the `HSAUR` package describes the results of a placebo-controlled trial of a non-steroidal anti-inflammatory drug in the treatment of a condition called familial adenomatous polyposis (FAP).
 
 ```{r see head of polyps data}
 head(HSAUR::polyps, 4)
@@ -65,7 +65,9 @@ The tibble includes 20 observations (skim on next slide) on:
 - `treat` = the patient's treatment arm
 - `polyps12m` = (our outcome), the number of colonic polyps at 12 months for this patient
 
-We want to understand how the number of colonic polyps at 12 months is related to both `treat` and `age`. Note that the actual trial was halted after a planned interim analysis suggested compelling evidence in favor of the `drug` over `placebo`. Data sources and the original NEJM reference (1993) may be found in `?HSAUR::polyps`
+We want to understand how the number of colonic polyps at 12 months is related to both `treat` and `age`. 
+
+- Note that the actual trial was halted after a planned interim analysis suggested compelling evidence in favor of the `drug` over `placebo`. Data sources and the original NEJM reference (1993) may be found in `?HSAUR::polyps`
 
 ## Skim of the `pol432` data
 
