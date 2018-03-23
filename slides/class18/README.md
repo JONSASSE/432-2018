@@ -32,5 +32,20 @@ Today's class will focus on building regression models for count outcomes, in pa
     - This [README file](https://github.com/THOMASELOVE/432-2018/tree/master/data-and-code/SMART) has some additional useful information, and links to the sources.
     - If you're looking for a Project 2 data set and are interested in the BRFSS, you can certainly use data from the BRFSS, or even the Selected Metropolitan/Micropolitan Area Risk Trends of BRFSS that I'm dealing with here, but you'd have to do so including **more locations than just those in the state of Ohio**, since I've looked pretty closely at Ohio.
 
+### Posted After Class
+
+Sorry for the late release on this. All good ideas that are in me somewhere work themselves out eventually, but not always in a timely way. Take this as useful advice for Project 1 if it addresses an issue that's bugging you and that you still have time to do something about, or ignore it for now, and use it as advice for Project 2 if you've moved past this in your head.
+
+#### How do you describe a restricted cubic spline that I've fit in a model? Do I write out that equation with the variablename' and variablename'' in it, or ... ?
+
+Tell me how many knots were involved and show me a graph that depicts the impact of the spline. No one explains splines without a graph. Make a graph and use it is excellent advice for many aspects of your presentation. Sensible graphs to accomplish this task in a multivariate regression model include the ggplot with Predict combination or a nomogram.
+
+#### If I have two models that aren't very far apart in terms of validation, where Model 1 is much simpler but less good in terms of validation than Model 2, which model would you focus on?
+
+If the validation results are at all comparable, then I'd definitely focus on the simpler model.
+
+#### If I have a C statistic, do I need to also plot the ROC curve?
+
+I can't think of a compelling reason to do so. This is one of the few places where the plot isn't much additional help, at least in terms of what we're trying to do in Project 1.
 
     
