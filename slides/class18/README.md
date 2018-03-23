@@ -48,4 +48,4 @@ If the validation results are at all comparable, then I'd definitely focus on th
 
 I can't think of a compelling reason to do so. This is one of the few places where the plot isn't much additional help, at least in terms of what we're trying to do in Project 1.
 
-    
+ 
