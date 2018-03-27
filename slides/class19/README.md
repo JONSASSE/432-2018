@@ -20,7 +20,7 @@ See [Chapter 18 of the Course Notes](https://thomaselove.github.io/432-notes/mod
 
 3. Kasia Kulma presents these [Prime Hints for Running a Data Project in R](https://kkulma.github.io/2018-03-18-Prime-Hints-for-Running-a-data-project-in-R/), and I think they're terrific.
 
-4. [This workshop on data mining by Dick De Veaux on April 13](http://www.bio.ri.ccf.org/ASA/cspring.html) is absolutely going to be worth your time.
+4. [This workshop on data mining by Dick De Veaux on April 13](http://www.bio.ri.ccf.org/ASA/cspring.html) is absolutely going to be worth your time. You would need to register by April 2, and the cost for students is now $80. If you're in a PQHS program and interested / going, talk to me for a minute after class.
 
 5. You may be interested in the new [reticulate package from R Studio](https://blog.rstudio.com/2018/03/26/reticulate-r-interface-to-python/) which is billed as "a comprehensive set of tools for interoperability between Python and R."
 
@@ -28,13 +28,15 @@ See [Chapter 18 of the Course Notes](https://thomaselove.github.io/432-notes/mod
 
 ## Minute Papers after Class 18 (comments edited, a lot)
 
+*Thank you for responding!*
+
 ### How satisfied are you with the quality of your Project 1?
 
 Completely dissatisfied (1) | 2 | 3 | 4 | 5 | 6 | Completely satisfied (7) | n | mean 
 --------------------: | ---: | ---: | ---: | ---: | ---: | ----- | ---: | ---:
-1 | 2 | 1 | 6 | 16 | 5 | 2 | 33 | 4.72
+1 | 2 | 1 | 8 | 17 | 7 | 2 | 38 | 4.76
 
-Across 33 students, the Pearson correlation of "score on Project 1" and "satisfaction with Project 1" is about .33
+The Pearson correlation of "score on Project 1" and "satisfaction with Project 1" is .34
 
 ### What is the most important thing you've learned in the past two weeks from the course? 
 
@@ -42,6 +44,7 @@ Across 33 students, the Pearson correlation of "score on Project 1" and "satisfa
 - Building an analytic plan, and making analytic decisions when building linear and logistic regression models
 - Poisson regression and dealing with overdispersion
 - Robust linear regression 
+- Models for count outcomes
 - Interpreting effect sizes (the "note" from Class 16 about effect sizes and how to estimate them, in particular)
 - How easy it is to overfit a model, Cross validation and its importance
 
@@ -52,7 +55,7 @@ Across 33 students, the Pearson correlation of "score on Project 1" and "satisfa
     - How should I choose which analyses are more important / necessary and which aren't?
     - How should I organize my results / interpretations / modeling?
     - In what order should I present these analyses?
-    - Fear / paranoia that led me to include everything under the sun.
+    - Fear / paranoia that led me to include everything under the sun vs. containing the scope.
 - The second most common response related to understanding the notion of "spending degrees of freedom".
     - Having a small data set, so that spending df was important.
     - How do I count the df I have spent?
@@ -90,9 +93,14 @@ Other challenges listed included:
 - How do I save the course notes for future reference?
     - Actually, that one is straightforward. A PDF version is always available to you - I'll demo, and though the notes will disappear in June or so, you can always get the PDF for 431 and 432 for this year from me by just emailing me.
 - For our research question in Project 2, if we know some variables which are directly affecting the outcome variable(let's say smoking for lung cancer), should they be included? Are we looking at them at all? Since we know that there is an association, should they be automatically included in whatever models we make?
-- I'm looking forward to "statistical topic we've identified as coming soon".
-- I hope you can do more of "thing we've touched on already."
-- I hope we can do "thing we're not currently planning to do," if there's time.
+- Is it "OK" to use a zero-inflated model in count data if you aren't sure the zeros arise from a different process than the other counts?
 - I’m starting to envision the end of the course and not having ready access to Dr. Love for coding issues. Wondering if we are going to talk about how to solve coding issues once out of the course (besides just posting on stack overflow) 
+    - My order is usually:
+        - Help files / documentation within R
+        - Google
+        - [R Studio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/) and [R for Data Science](http://r4ds.had.co.nz/)
+        - [UCLA's Data Analysis Examples](https://stats.idre.ucla.edu/other/dae/)
+        - My previous work / [Recommended Texts](https://github.com/THOMASELOVE/432-2018/tree/master/texts)
+        - Talking to Humans / [R Studio Community](https://community.rstudio.com/) / [DataCamp](https://www.datacamp.com/) / Twitter / Github
 
 
