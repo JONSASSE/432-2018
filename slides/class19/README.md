@@ -14,7 +14,7 @@ See [Chapter 18 of the Course Notes](https://thomaselove.github.io/432-notes/mod
 
 ## Announcements at the start of class
 
-1. Feedback on Project 1 is [available on this feedback page](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/FEEDBACK.md) in addition to my specific comments to you on Canvas. You'll also get an email from me with your grade breakdown on Project 1.
+1. Feedback on Project 1 is [available on this feedback page](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/FEEDBACK.md) in addition to my specific comments to you on Canvas. You should have also received an email from me with your grade breakdown on Project 1.
 
 2. An HTML file of the [instructions for Project 2](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html) is available, and there's a [README file with more details](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2), too. 
 
