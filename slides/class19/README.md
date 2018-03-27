@@ -2,8 +2,8 @@
 
 ### Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) are posted. We got through slide 31. 
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) will appear as they become available.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) are posted. We got through slide 31. The `medicare.csv` data are now up, as well. 
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) are now posted, too.
 
 Today's class will address:
 
@@ -12,6 +12,12 @@ Today's class will address:
 - building regression models for count outcomes, in particular zero-inflated and hurdle models. We may also get to tobit models.
 
 See [Chapter 18 of the Course Notes](https://thomaselove.github.io/432-notes/modeling-a-count-outcome-in-ohio-smart.html#where-to-read-this-chapter-1) for more on regression for count outcomes.
+
+## A Special Note on the `countreg` package
+
+To build rootograms to visualize the results of regression models on count outcomes, I will occasionally use the `countreg` package, which is currently available **on R-Forge only**.
+
+To install `countreg`, type `install.packages("countreg", repos="http://R-Forge.R-project.org")` into the R Console within R Studio.
 
 ## Announcements at the start of class
 
