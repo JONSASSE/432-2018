@@ -2,7 +2,8 @@
 
 ### Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) and [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) will appear as they become available.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) are posted. We got through slide 31. 
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) will appear as they become available.
 
 Today's class will address:
 
