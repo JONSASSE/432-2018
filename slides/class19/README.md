@@ -20,6 +20,8 @@ See [Chapter 18 of the Course Notes](https://thomaselove.github.io/432-notes/mod
 
 3. Kasia Kulma presents these [Prime Hints for Running a Data Project in R](https://kkulma.github.io/2018-03-18-Prime-Hints-for-Running-a-data-project-in-R/), and I think they're terrific.
 
+4. [This workshop on data mining by Dick De Veaux on April 13](http://www.bio.ri.ccf.org/ASA/cspring.html) is absolutely going to be worth your time.
+
 4. You may be interested in the new [reticulate package from R Studio](https://blog.rstudio.com/2018/03/26/reticulate-r-interface-to-python/) which is billed as "a comprehensive set of tools for interoperability between Python and R."
 
 5. The next assignment is [Homework 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments), which is currently due at 1 PM on 2018-04-06. We'll see how far I get today. It may be that we'll wind up moving that deadline to a later date.
