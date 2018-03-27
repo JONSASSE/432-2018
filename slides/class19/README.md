@@ -18,6 +18,8 @@ See [Chapter 18 of the Course Notes](https://thomaselove.github.io/432-notes/mod
 
 2. An HTML file of the [instructions for Project 2](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html) is available, and there's a [README file with more details](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2), too. 
 
+3. You may be interested in the new [reticulate package from R Studio](https://blog.rstudio.com/2018/03/26/reticulate-r-interface-to-python/) which is billed as "a comprehensive set of tools for interoperability between Python and R."
+
 ## Minute Papers after Class 18 (comments edited, a lot)
 
 ### How satisfied are you with the quality of your Project 1?
