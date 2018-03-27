@@ -82,9 +82,6 @@ Other challenges listed included:
 - How do I save the course notes for future reference?
     - Actually, that one is straightforward. A PDF version is always available to you - I'll demo, and though the notes will disappear in June or so, you can always get the PDF for 431 and 432 for this year from me by just emailing me.
 - For our research question in Project 2, if we know some variables which are directly affecting the outcome variable(let's say smoking for lung cancer), should they be included? Are we looking at them at all? Since we know that there is an association, should they be automatically included in whatever models we make?
-
-And then, inevitably...
-
 - I'm looking forward to "statistical topic we've identified as coming soon".
 - I hope you can do more of "thing we've touched on already."
 - I hope we can do "thing we're not currently planning to do," if there's time.
