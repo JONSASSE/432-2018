@@ -40,20 +40,20 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 18 | Thu 2018-03-22 | Models for Count Outcomes
 -- | Fri 2018-03-23 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at 1 PM
 19 | Tue 2018-03-27 | [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) instructions, Models for Count outcomes
-20 | Thu 2018-03-29 | Models for Categorical Outcomes
+20 | Thu 2018-03-29 | Models for Count Outcomes
 21 | Tue 2018-04-03 | Models for Categorical Outcomes
-22 | Thu 2018-04-05 | Models for Time-to-Event Outcomes **SPECIAL ROOM: Class to be held in E301**
--- | Fri 2018-04-06 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
+22 | Thu 2018-04-05 | Models for Categorical Outcomes **SPECIAL ROOM: Class to be held in E301**
 23 | Tue 2018-04-10 | Models for Time-to-Event Outcomes
-24 | Thu 2018-04-12 | *To Be Determined*
--- | Fri 2018-04-13 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
+24 | Thu 2018-04-12 | Models for Time-to-Event Outcomes
+-- | Fri 2018-04-13 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
 25 | Tue 2018-04-17 | **Special Session**: Retrospective Power, Type S and Type M errrors
 -- | Tue 2018-04-17 | [Project 2 Registration/Scheduling Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) due at 5 PM
 26 | Thu 2018-04-19 | *To Be Determined* (project presentation dates announced)
---  | Fri 2018-04-20 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available by noon
---  | Mon 2018-04-23 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
 27 | Tue 2018-04-24 | *To Be Determined*
+-- | Tue 2018-04-24 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 5 PM
 28 | Thu 2018-04-26 | Final Class
+--  | Thu 2018-04-26 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) made available after class
+--  | Tue 2018-05-01 | [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes) due at noon
 -- | Thu 2018-05-03 | Student [Project 2 Presentations](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2), 1
 -- | Mon 2018-05-07 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2), 2
 -- | Tue 2018-05-08 | Student [Project Presentations](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2), 3
