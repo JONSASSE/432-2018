@@ -50,4 +50,6 @@ subject sex condition measurement
        2   F     cond2        11.1
 ```
 
-3. It's a log-normal world. I like [this Tweet from Nick Heitzman (@NickDoesData)](https://twitter.com/NickDoesData/status/979081537965654016)
+3. It's a log-normal world. I like [this Tweet from Nick Heitzman (@NickDoesData)](https://twitter.com/NickDoesData/status/979081537965654016) about this point, as well as several of the follow-up comments.
+
+4. [gglabeller](https://github.com/AliciaSchep/gglabeller?utm_content=buffer552f9&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer#gglabeller), from Alicia Schep, looks fantastic.
