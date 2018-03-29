@@ -49,3 +49,5 @@ subject sex condition measurement
        2   F     cond1        10.6
        2   F     cond2        11.1
 ```
+
+3. It's a log-normal world. I like [this Tweet from Nick Heitzman (@NickDoesData)](https://twitter.com/NickDoesData/status/979081537965654016)
