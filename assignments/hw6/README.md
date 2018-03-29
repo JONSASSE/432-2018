@@ -1,6 +1,6 @@
 # 432 Homework 6 for Spring 2018
 
-Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **1 PM on Friday 2018-04-06**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file. 
+Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **1 PM on Friday 2018-04-13**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file. 
 
 - Remember to **ask for help** if you are stuck, first by Googling, or visiting the wonderful cheatsheets under the Help menu on the top bar of R Studio, and then by contacting `431-help at case dot edu` or visiting TA office hours.
 - Start a separate R Project for Homework 6 as your first step, and place all of your work in that project's directory.
@@ -84,7 +84,7 @@ Build a reasonable linear or generalized linear model in your development sample
 
 # Question 4 (20 points)
 
-Divide the 86 counties in your development sample into three groups (low, middle and high) in a rational way in terms of the `years_lost_rate` outcome. Make that new grouping your outcome for an ordinal logistic regression model. Fit a model (using a carefully selected group of no more than 5 predictor variables) and assess its performance carefully. Do not include the `age65plus` variable as a predictor, as the `years_lost_rate` data are age-adjusted already. Demonstrate how well the model fits as well as the conclusions you draw from the model carefully. Be sure to discuss model assumptions. Then use the model to predict Cuyahoga County and Monroe County results, and assess the quality of those predictions.
+Divide the 86 counties in your development sample into three groups (low, middle and high) in a rational way in terms of the `years_lost_rate` outcome. Make that new grouping your outcome for an ordinal logistic regression model. Fit a model (using a carefully selected group of no more than 5 predictor variables) and assess its performance carefully. Do not include the `age65plus` variable as a predictor, as the `years_lost_rate` data are age-adjusted already. Demonstrate how well the model fits as well as the conclusions you draw from the model carefully. Then use the model to predict Cuyahoga County and Monroe County results, and assess the quality of those predictions.
 
 # Question 5 (20 points)
 
@@ -106,5 +106,4 @@ Ashland | **19.79** | **27.9** | 64.65 | Yes | 2
 Athens | 23.34 | **28.3** | **85.00** | **No** | 3
 Cuyahoga | **18.70** | **30.0** | **95.55** | **No** | 4
 
-
-Fit a Poisson regression model in your development sample to predict this count, using at least 3 and no more than 6 other predictors available in the data set. Note that a Poisson model isn't a great choice here, because it's difficult to believe that the four standards being described here are independent of each other, but we'll fit it anyway. Demonstrate how well the model fits as well as the conclusions you draw from the model carefully. Be sure to discuss model assumptions. Then use the model to predict Cuyahoga County and Monroe County results, and assess the quality of those predictions.
+Your job is to fit **two** possible regression models in your development sample to predict this count, using the same predictors (at least 3 and no more than 6 of those not used in the calculation of standards) available in the data set. Demonstrate how well each model fits the counts by developing a rootogram and other summaries that you deem useful, then select the model you prefer, specifying your reasons. Next, use your preferred model to predict Cuyahoga County and Monroe County results, and assess the quality of those predictions.
