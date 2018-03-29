@@ -261,7 +261,7 @@ smart.raw %>% count(MEDCOST, costprob)
 `CHECKUP1`, the Length of time since last routine checkup variable, is the response to "About how long has it been since you last visited a doctor for a routine checkup? [A routine checkup is a general physical exam, not an exam for a specific injury, illness, or condition.]"
 
 - 1 = Within past year (anytime less than 12 months ago)
-- 2 = WIthin past 2 years (1 year but less than 2 years ago)
+- 2 = Within past 2 years (1 year but less than 2 years ago)
 - 3 = Within past 5 years (2 years but less than 5 years ago)
 - 4 = 5 or more years ago
 - 7 = Don't know/Not sure
@@ -448,7 +448,7 @@ smart.raw %>% count(DIABAGE2, diab.age) %>% tail()
 `LASTDEN3`, the Last Visited Dentist or Dental Clinic variable, is the response to "How long has it been since you last visited a dentist or a dental clinic for any reason? Include visits to dental specialists, such as orthodontists."
 
 - 1 = Within past year (anytime less than 12 months ago)
-- 2 = WIthin past 2 years (1 year but less than 2 years ago)
+- 2 = Within past 2 years (1 year but less than 2 years ago)
 - 3 = Within past 5 years (2 years but less than 5 years ago)
 - 4 = 5 or more years ago
 - 7 = Don't know/Not sure
@@ -804,7 +804,7 @@ smart.raw %>% count(INTERNET, internet30)
 
 ### `WTKG3` is `weight_kg`
 
-`WTKG3` is computed by CDC, as the respondent's weight in kilgrams with two implied decimal places. We calculate the actual weight in kg, with the following:
+`WTKG3` is computed by CDC, as the respondent's weight in kilograms with two implied decimal places. We calculate the actual weight in kg, with the following:
 
 ```{r eda_WTKG3}
 smart.raw <- smart.raw %>% 
@@ -852,7 +852,7 @@ We'll then divide the respondents into adult BMI categories, in the usual way.
 - BMI < 18.5 indicates underweight
 - BMI from 18.5 up to 25 indicates normal weight
 - BMI from 25 up to 30 indicates overweight
-- BMI of 30 and higher indicatdes obesity
+- BMI of 30 and higher indicates obesity
 
 ```{r eda_bmigroup}
 smart.raw$bmigroup <- Hmisc::cut2(smart.raw$bmi, cuts = c(18.5, 25.0, 30.0))

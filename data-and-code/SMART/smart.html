@@ -10,7 +10,7 @@
 
 <meta name="author" content="Thomas E. Love" />
 
-<meta name="date" content="2018-03-18" />
+<meta name="date" content="2018-03-29" />
 
 <title>BRFSS Data (2016) and the SMART program</title>
 
@@ -126,7 +126,7 @@ img {
 <div id="header">
 <h1 class="title">BRFSS Data (2016) and the SMART program</h1>
 <h4 class="author"><em>Thomas E. Love</em></h4>
-<h4 class="date"><em>2018-03-18</em></h4>
+<h4 class="date"><em>2018-03-29</em></h4>
 </div>
 
 <div id="content">
@@ -150,6 +150,11 @@ img {
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(skimr) 
 <span class="kw">library</span>(broom); <span class="kw">library</span>(modelr)
 <span class="kw">library</span>(haven); <span class="kw">library</span>(tidyverse)</code></pre></div>
+<pre><code>Warning: package 'haven' was built under R version 3.4.4</code></pre>
+<pre><code>Warning: package 'tibble' was built under R version 3.4.4</code></pre>
+<pre><code>Warning: package 'tidyr' was built under R version 3.4.4</code></pre>
+<pre><code>Warning: package 'stringr' was built under R version 3.4.4</code></pre>
+<pre><code>Warning: package 'forcats' was built under R version 3.4.4</code></pre>
 <div id="the-national-data" class="section level2">
 <h2><span class="header-section-number">2.1</span> The National Data</h2>
 <p>Let’s use the <code>read_xpt</code> function from the <code>haven</code> package to bring in the SAS XPT data file that is provided by CDC.</p>
@@ -406,7 +411,7 @@ smart.raw <span class="op">%&gt;%</span><span class="st"> </span><span class="kw
 <p><code>CHECKUP1</code>, the Length of time since last routine checkup variable, is the response to “About how long has it been since you last visited a doctor for a routine checkup? [A routine checkup is a general physical exam, not an exam for a specific injury, illness, or condition.]”</p>
 <ul>
 <li>1 = Within past year (anytime less than 12 months ago)</li>
-<li>2 = WIthin past 2 years (1 year but less than 2 years ago)</li>
+<li>2 = Within past 2 years (1 year but less than 2 years ago)</li>
 <li>3 = Within past 5 years (2 years but less than 5 years ago)</li>
 <li>4 = 5 or more years ago</li>
 <li>7 = Don’t know/Not sure</li>
@@ -680,7 +685,7 @@ smart.raw <span class="op">%&gt;%</span><span class="st"> </span><span class="kw
 <p><code>LASTDEN3</code>, the Last Visited Dentist or Dental Clinic variable, is the response to “How long has it been since you last visited a dentist or a dental clinic for any reason? Include visits to dental specialists, such as orthodontists.”</p>
 <ul>
 <li>1 = Within past year (anytime less than 12 months ago)</li>
-<li>2 = WIthin past 2 years (1 year but less than 2 years ago)</li>
+<li>2 = Within past 2 years (1 year but less than 2 years ago)</li>
 <li>3 = Within past 5 years (2 years but less than 5 years ago)</li>
 <li>4 = 5 or more years ago</li>
 <li>7 = Don’t know/Not sure</li>
@@ -1210,7 +1215,7 @@ smart.raw <span class="op">%&gt;%</span><span class="st"> </span><span class="kw
 </div>
 <div id="wtkg3-is-weight_kg" class="section level3">
 <h3><span class="header-section-number">3.8.13</span> <code>WTKG3</code> is <code>weight_kg</code></h3>
-<p><code>WTKG3</code> is computed by CDC, as the respondent’s weight in kilgrams with two implied decimal places. We calculate the actual weight in kg, with the following:</p>
+<p><code>WTKG3</code> is computed by CDC, as the respondent’s weight in kilograms with two implied decimal places. We calculate the actual weight in kg, with the following:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">smart.raw &lt;-<span class="st"> </span>smart.raw <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">    </span><span class="kw">mutate</span>(<span class="dt">weight_kg =</span> WTKG3<span class="op">/</span><span class="dv">100</span>)
 
@@ -1291,7 +1296,7 @@ smart.raw <span class="op">%&gt;%</span><span class="st"> </span><span class="kw
 <li>BMI &lt; 18.5 indicates underweight</li>
 <li>BMI from 18.5 up to 25 indicates normal weight</li>
 <li>BMI from 25 up to 30 indicates overweight</li>
-<li>BMI of 30 and higher indicatdes obesity</li>
+<li>BMI of 30 and higher indicates obesity</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">smart.raw<span class="op">$</span>bmigroup &lt;-<span class="st"> </span>Hmisc<span class="op">::</span><span class="kw">cut2</span>(smart.raw<span class="op">$</span>bmi, <span class="dt">cuts =</span> <span class="kw">c</span>(<span class="fl">18.5</span>, <span class="fl">25.0</span>, <span class="fl">30.0</span>))
 
