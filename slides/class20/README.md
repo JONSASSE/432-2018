@@ -11,7 +11,7 @@ Today's class will address building regression models for count outcomes, in par
 
 To build rootograms to visualize the results of regression models on count outcomes, I will occasionally use the `countreg` package, which is currently available **on R-Forge only**.
 
-To install `countreg`, type `install.packages("countreg", repos="http://R-Forge.R-project.org")` into the R Console within R Studio.
+To install `countreg`, type `install.packages("countreg", repos="http://R-Forge.R-project.org")` into the R Console within R Studio. If that doesn't work today (and it might not) then wait a day, and try again. I believe an update will happen on 2018-03-30 at R-Forge that might address the problem. If not, I'll try to find a workaround.
 
 ## Announcements
 
