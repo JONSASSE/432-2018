@@ -16,7 +16,8 @@ To install `countreg`, type `install.packages("countreg", repos="http://R-Forge.
 ## Announcements
 
 1. There are **substantial** changes in the schedule of remaining deliverables:
-    - Homework 6 will now be due at 1 PM on **Friday** 2018-04-13, rather than on 2018-04-06.
+    - Homework 6 will now be due at 1 PM on **Friday** 2018-04-13, rather than on 2018-04-06. 
+        - Note that I also adjusted the wording of Question 5 in that Assignment on 2018-03-28.
     - Homework 7 will now be due at 5 PM on **Tuesday** 2018-04-26, rather than on 2018-04-13.
     - Quiz 2 will now be made available at the end of our final class, on 2018-04-26, and will be due on Tuesday 2018-05-01 at Noon.
     - The Project 2 deadlines are unaffected, and remain:
