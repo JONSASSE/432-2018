@@ -28,5 +28,24 @@ To install `countreg`, type `install.packages("countreg", repos="http://R-Forge.
 
 As always, the [Schedule page](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) is always the final word, if you are confused.
 
+2. [This is a nice cheat sheet](http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/) to help in converting data from wide to long format. I can never get `gather()` and `spread()` right without thinking about it, probably because I learned other methods first. Take a look.
 
+These data are arranged in **wide** format:
 
+```
+subject sex control cond1 cond2
+       1   M     7.9  12.3  10.7
+       2   F     6.3  10.6  11.1
+```
+
+And these are the same data in **long** format:
+
+```
+subject sex condition measurement
+       1   M   control         7.9
+       1   M     cond1        12.3
+       1   M     cond2        10.7
+       2   F   control         6.3
+       2   F     cond1        10.6
+       2   F     cond2        11.1
+```
