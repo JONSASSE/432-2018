@@ -1,6 +1,6 @@
 # 432 Homework 7 for Spring 2018
 
-Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **5 PM on Tuesday 2018-04-26**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file. 
+Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **5 PM on Tuesday 2018-04-24**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file. 
 
 - Remember to **ask for help** if you are stuck, first by Googling, or visiting the wonderful cheatsheets under the Help menu on the top bar of R Studio, and then by contacting `431-help at case dot edu` or visiting TA office hours.
 - Start a separate R Project for Homework 7 as your first step, and place all of your work in that project's directory.
