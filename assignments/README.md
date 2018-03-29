@@ -11,8 +11,8 @@ Link to Details | Due at 1 PM on | Material Covered in the Assignment
 [Homework 3](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw3) | Fri 2018-02-09 | Linear Regression, Data Visualization
 [Homework 4](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw4) | Fri 2018-02-23 | Logistic Regression
 [Homework 5](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw5) | Fri 2018-03-02 | Logistic Regression
-[Homework 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw6) | Fri 2018-04-06 | Generalized Linear Models 
-[Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) | Fri 2018-04-13 | Survival Analysis
+[Homework 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw6) | Fri 2018-04-13 | Generalized Linear Models / Data Viz 
+[Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) | Tue 2018-04-26 (**5 PM**) | Survival Analysis / Data Viz
 
 Homework 8 is cancelled.
 
