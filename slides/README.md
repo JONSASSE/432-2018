@@ -2,6 +2,7 @@
 
 Link  | Date  | Topics Discussed include...
 --------: | ---------- | -------------------------------------------------------------
+[Class 20](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class20) | 2018-03-29 | Models for Count Outcomes, 3
 [Class 19](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) | 2018-03-27 | Models for Count Outcomes, 2
 [Class 18](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class18) | 2018-03-22 | Models for Count Outcomes, 1
 [Class 17](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class17) | 2018-03-20 | Class Projects, Probit Models
