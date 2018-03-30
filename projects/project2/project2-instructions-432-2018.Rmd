@@ -172,7 +172,85 @@ Use the template well. When you submit your project to Canvas,
     + You will need to be agile in responding to me. Anticipate tough questions. Dr. Love will be looking for clear answers, motivated by your results. 
 - If you work as a team, Dr. Love will pick one of you at random, on the spot, to deliver the first half of the presentation, and the other will do the second half. Dr. Love will address questions to each of you.
 
+# Some Additional Comments
+
+## What sorts of transformations are allowed in Project 2?
+
+In project 2, restrict yourself to understandable transformations, and don't be a slave to the Box-Cox approach. The reasonable transformations to consider are 1/y, log y, sqrt y, and y^2. Anything more complicated than that should suggest that you consider a different modeling approach or revision to your outcome.
+
+## What kinds of interactions can I fit if I'm also fitting a spline to the same predictor?
+
+In project 2, if you're fitting an interaction term between variables a and b, where a is quantitative and b is categorical, while also fitting a spline for a, then you must, in project 2, restrict the interaction to a linear interaction a %ia% b, and not an interaction on the whole spline with `a*b`. These interactions that include all the spline elements are just too complex.
+
+## Am I allowed to use `echo=FALSE` in Project 2?
+
+The use of `echo = FALSE` is prohibited in Project 2. Everyone will use code-folding, so that the HTML can show or hide code as the reader desires.
+
+## Can I have a scrolling box in my HTML file to display code?
+
+In Project 2, you shouldn't need a scrolling box to display your code in the HTML file at any time in Project 2.
+    - Use spaces and (especially) the ENTER key while coding to solve this problem and keep the width of your code below the character limit of your output.
+    - If you're using the pipe, this is especially helpful advice - it makes your code much more readable to hit enter after every time you type `%>%`
+    - This happens a lot in setting up a spearman rho-squared plot, but such a thing can be built up in multiple lines.
+
+## Can I build larger nomograms, etc. than the default?
+
+Use the `fig.height` command in an R chunk name to increase the height of the nomogram you build so that it will be legible. Sometimes this is important in building residual plots, too.
+
+## Can I use best subsets?
+
+If you're using best subsets in a linear regression model, please do so only to identify multiple candidate models and then compare them not just with ANOVA or other significance tests in sample, but with validation in an outside sample, or at least cross-validation.
+    - Also, in best subsets, use the more recent graphical approach for best subsets, as described in Section 8.4 of the course notes, instead of the old "arrows" method.
+
+## What sort of scatterplot matrix do you prefer?
+
+If you're building a scatterplot matrix (and you probably should) use `GGally::ggpairs` especially if you have categorical predictors, rather than the old `pairs` method. 
+
+## Should I add the `sessionInfo()` command at the end of my presentation?
+
+Definitely yes. Take a look, if you haven't, at what this produces. Why might it be useful?
+
+## Does Project 2 have to include everything that we did in Project 1?
+
+In Project 2, you don't need to present everything in Project 1's Tasks 1-9, and you're not even required to format any of it in that way, but I would think you'd want to have most of that information at your fingertips in a presentation, so think carefully about what to keep and what to drop. Clearly, what is in Tasks 7 and 8 in Project 1 will need to be emulated using descriptions of your data (I doubt you can get away with not having a codebook) and your research questions to justify your modeling decisions.
+
+## Should I specify, prior to analyses, my guess as to the expected direction of relationships between outcomes and predictors?
+
+Yes, definitely. 
+
+## What should I name my models, and variables?
+
+Something memorable and consistent. If you want to avoid creativity, then call things Model 1 and Model 2, by all means, but do that in both the text descriptions and in your code. Don't call the same thing Model 1 (or my first model) in your text, but mod.6 in your code, as an example.
+
+## Is it critical to actually answer my research question(s) in the conclusions section?
+
+Yes. I was absolutely delighted by the few people in Project 1. who brought their conclusions back to proposed research questions explicitly. In Project 2, that should be something everyone does.
+
+## In the template, it says list the tibble. Is that really what you mean?
+
+Yes. In Project 1, I was OK with you instead providing a glimpse of the tibble. I prefer a listing, because that's how I know for sure that you have a tibble and not a data frame (in a tibble, only the first 10 lines print.)
+
+## Should I include sanity checks in my final portfolio?
+
+Sanity checks are an important part of your programming, but they don't belong in your final presentation. Neither do false starts, and explorations that don't lead anywhere.
+
+## How should I describe a restricted cubic spline that I've fit in a model? Do I write out that equation with the variablename' and variablename'' in it, or ... ?
+
+Tell me how many knots were involved and show me a graph that depicts the impact of the spline. No one explains splines without a graph. Make a graph and use it is excellent advice for many aspects of your presentation. Sensible graphs to accomplish this task in a multivariate regression model include the ggplot with Predict combination or a nomogram.
+
+## If I have two models that aren't very far apart in terms of validation, where Model 1 is much simpler but less good in terms of validation than Model 2, which model would you focus on?
+
+If the validation results are at all comparable, then I'd definitely focus on the simpler model.
+
+## If I have a C statistic, do I need to also plot the ROC curve?
+
+I can't think of a compelling reason to do so. This is one of the few places where the plot isn't much additional help.
+
+## I didn't get an A on Project 1. What recommendation do you have for me to improve my Project 2?
+
+The Number One thing I would suggest is that you read the entire [document on Project 1 Feedback](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/FEEDBACK.md). There are a lot of important details there that may affect you, and those of you who have already read that carefully will, I think, agree that this is a good idea.
+
 # Questions?
 
-Dr. Love will discuss Project 2 during class on 2018-03-27. Questions about Project 2 may be directed to 431-help and the TAs as well as to Dr. Love at any time.
+Questions about Project 2 may be directed to 431-help and the TAs as well as to Dr. Love at any time.
 
