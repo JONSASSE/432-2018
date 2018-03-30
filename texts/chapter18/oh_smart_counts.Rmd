@@ -1,7 +1,7 @@
 ---
 title: "Chapter 18: Modeling a Count Outcome in Ohio SMART"
 author: "Thomas E. Love"
-date: "`r Sys.Date()`"
+date: "`r Sys.time()`"
 mainfont: DejaVu Sans
 output:
     html_document:
@@ -456,7 +456,7 @@ The prediction for Harry is now 1.77 days, and for Sally is 0.41 days. The predi
 
 # A Poisson Regression Model
 
-The `physhealth` data describe a count. Specifically a count of the number of days where the subject felt poorly in the last 30. Why wouldn’t we model this count with linear regression?
+The `physhealth` data describe a count. Specifically a count of the number of days where the subject felt poorly in the last 30. Why wouldn't we model this count with linear regression?
 
 - A count can only be positive. Linear regression would estimate some subjects as having negative counts.
 - A count is unlikely to follow a Normal distribution. In fact, it’s far more likely that the log of the counts will follow a Poisson distribution.
@@ -566,7 +566,7 @@ sm_poiss1 %>%
 
 ## Rootogram: see the fit of a count regression model
 
-A **rootogram** is a very useful way to visualize the fit of a count regression model^[See http://data.library.virginia.edu/getting-started-with-negative-binomial-regression-modeling/]. The `rootogram` function in the `countreg` package makes this pretty straightforward. By default, this fits a hanging rootogram on the square ropot of the frequencies.
+A **rootogram** is a very useful way to visualize the fit of a count regression model^[See http://data.library.virginia.edu/getting-started-with-negative-binomial-regression-modeling/]. The `rootogram` function in the `countreg` package makes this pretty straightforward. By default, this fits a hanging rootogram on the square root of the frequencies.
 
 ```{r}
 rootogram(mod_poiss1, max = 30)
