@@ -2,7 +2,8 @@
 
 Project 2 Instructions are available in [this HTML document](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html), and here's [the R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/projects/project2/project2-instructions-432-2018.Rmd) used to generate them.
 
-- Dr. Love will discuss these instructions in class on 2017-03-27.
+- Dr. Love will discuss these instructions in class on 2018-03-27.
+- A substantial update to the document (Section 6: Some Additional Comments) happened on 2018-03-30.
 
 ## There are Three Deliverables for Project 2
 
