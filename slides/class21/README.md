@@ -33,4 +33,4 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 
 1. Some minor revisions (typos, mostly) to the [Chapter 17](https://thomaselove.github.io/432-notes/cleaning-the-brfss-smart-data.html) and [Chapter 18](https://thomaselove.github.io/432-notes/modeling-a-count-outcome-in-ohio-smart.html) Course Notes are now available.
 
-2. A substantial set of additional comments were added as Section 6 of the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html). Please, **please** read them.
+2. A substantial set of questions and answers were added as Section 6 of the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html). Please, **please** read them.
