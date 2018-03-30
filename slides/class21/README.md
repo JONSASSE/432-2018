@@ -7,9 +7,17 @@
 
 Today's class will address building regression models for *ordered* multi-categorical outcomes, using proportional odds logistic regression. 
 
+## Special Announcements
+
+1. As part of CWRU's National Public Health Week Speaker Series, I will deliver a presentation entitled **Adventures at Better Health Partnership: Learning as a Community (aided by Electronic Health Records) to make an impact on the Health of Northeast Ohio Adults** from Noon to 12:50 PM in room WRB-1223B this Thursday 2018-04-05. 
+    - The session will be part of a week-long event (04-02 through 04-06) bringing together students across the Schools of Dental Medicine and of Medicine to learn about various aspects of public health. 
+    - I will discuss things that I am not planning to discuss in 432, so the overlap should be minimal.
+
+2. Our 432 class will meet in **E301**, rather than our usual E321-323 on Thursday of this week, 2018-04-05.
+
 ## Remaining Deliverables This Semester
 
-The [Schedule] page is always the final word, if you are confused.
+The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) page is always the final word, if you are confused.
 
 - The Minute Paper after Class 22 will become available 2018-04-05 and is due at **10 AM Monday 2018-04-09**.
 - [Homework 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw6) is due at 1 PM on **Friday 2018-04-13**. Submit to [Canvas](https://canvas.case.edu/).
