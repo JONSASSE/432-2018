@@ -5,7 +5,7 @@
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class20) are posted.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class20) will appear when available.
 
-Today's class will address building regression models for *ordered* multi-categorical outcomes, using proportional odds logistic regression. 
+Today's class will address building regression models for *ordered* multi-categorical outcomes, using proportional odds logistic regression. [Chapter 19 of the Course Notes](https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter19/README.md) covers this topic.
 
 ## Special Announcements
 
@@ -33,6 +33,8 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 
 1. Some minor revisions (typos, mostly) to the [Chapter 17](https://thomaselove.github.io/432-notes/cleaning-the-brfss-smart-data.html) and [Chapter 18](https://thomaselove.github.io/432-notes/modeling-a-count-outcome-in-ohio-smart.html) Course Notes are now available.
 
-2. A substantial set of questions and answers were added as Section 6 of the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html). Please, **please** read them.
+2. [Course Notes Chapter 19](https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter19/README.md) is now posted. It's on proportional odds logistic regression models for ordinal multi-categorical outcomes.
 
-3. Your preparation for [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz2) will be aided by looking over the [Bonus Assignment after Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus), even if you weren't eligible to actually do that assignment. An **answer sketch** for that Bonus Assignment [will be posted here](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus) as soon as it is available.
+3. A substantial set of questions and answers were added as Section 6 of the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html). Please, **please** read them.
+
+4. Your preparation for [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz2) will be aided by looking over the [Bonus Assignment after Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus), even if you weren't eligible to actually do that assignment. An **answer sketch** for that Bonus Assignment [will be posted here](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus) as soon as it is available.
