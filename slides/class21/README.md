@@ -33,9 +33,9 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 
 ## New Materials
 
-1. Some minor revisions (typos, mostly) to the [Chapter 17](https://thomaselove.github.io/432-notes/cleaning-the-brfss-smart-data.html) and [Chapter 18](https://thomaselove.github.io/432-notes/modeling-a-count-outcome-in-ohio-smart.html) Course Notes are now available.
+1. [Chapters 17 and 18 of the Course Notes](https://thomaselove.github.io/432-notes/) are now fully part of the [main Course Notes](https://thomaselove.github.io/432-notes/) material. I've fixed some problems in those Chapters, and a few small things in prior Chapters.
 
-2. [Course Notes Chapter 19](https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter19/README.md) is now posted. It's on proportional odds logistic regression models for ordinal multi-categorical outcomes.
+2. [Course Notes Chapter 19](https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter19/README.md) is now posted, as a separate piece. It's on proportional odds logistic regression models for ordinal multi-categorical outcomes.
 
 3. A substantial set of questions and answers were added as Section 6 of the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html). Please, **please** read them.
 
