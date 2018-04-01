@@ -3,7 +3,7 @@
 ## Key Materials
 
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class20) are posted.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class20) will appear when available.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class20) are posted, as well.
 
 Today's class will address building regression models for count outcomes, in particular zero-inflated and hurdle models. We may also get to tobit models. See [Chapter 18 of the Course Notes](https://thomaselove.github.io/432-notes/modeling-a-count-outcome-in-ohio-smart.html#where-to-read-this-chapter-1) for more on regression for count outcomes.
 
