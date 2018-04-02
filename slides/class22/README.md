@@ -5,7 +5,7 @@
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class22) are posted.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class22) will appear when available.
 
-Today's class will address building regression models for multi-categorical outcomes, using multinomial models. 
+Today's class will address a famous data visualization from history, and then we'll discuss building regression models for multi-categorical outcomes, using multinomial models. I also have another example available using proportional odds logistic regression at the end of today's slides.
 
 ## Special Announcements
 
