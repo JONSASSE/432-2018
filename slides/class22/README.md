@@ -10,7 +10,8 @@ Today's class will address a famous data visualization from history, and then we
 
 An additional example of fitting a multinomial logistic model to predict a multi-categorical outcome is available in [Chapter 20 of the Course Notes](https://thomaselove.github.io/432-notes/). 
 
-- The example in that Chapter is based on the work of Jeffrey S. Simonoff (2003) Analyzing Categorical Data in Chapter 10. Related data and R code are available at http://people.stern.nyu.edu/jsimonof/AnalCatData/Splus/. Meanwhile, the data set and analysis are based on the work of Peng RD and Hengartner NW (2002) Quantitative analysis of literary styles, *The American Statistician*, 56, 175-185.
+- The example in that Chapter is based on the work of Jeffrey S. Simonoff (2003) Analyzing Categorical Data, in his Chapter 10. Related data and R code are available at http://people.stern.nyu.edu/jsimonof/AnalCatData/Splus/. 
+- The data set and analysis are based on the work of Peng RD and Hengartner NW (2002) Quantitative analysis of literary styles, *The American Statistician*, 56, 175-185.
 
 ## New Materials
 
