@@ -41,9 +41,9 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 -- | Fri 2018-03-23 | [Project 1](https://github.com/THOMASELOVE/432-2018/blob/master/projects/README.md) due at 1 PM
 19 | Tue 2018-03-27 | [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) instructions, Models for Count outcomes
 20 | Thu 2018-03-29 | Models for Count Outcomes
-21 | Tue 2018-04-03 | Models for Categorical Outcomes
+21 | Tue 2018-04-03 | Models for Ordinal Categorical Outcomes
 -- | Thu 2018-04-05 | *SPECIAL SEMINAR*: Adventures at Better Health Partnership. **Noon in WRB-1223B**.
-22 | Thu 2018-04-05 | Models for Categorical Outcomes **SPECIAL ROOM: Class to be held in E301**
+22 | Thu 2018-04-05 | Models for Nominal Categorical Outcomes **SPECIAL ROOM: Class to be held in E301**
 23 | Tue 2018-04-10 | Models for Time-to-Event Outcomes
 24 | Thu 2018-04-12 | Models for Time-to-Event Outcomes
 -- | Fri 2018-04-13 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
