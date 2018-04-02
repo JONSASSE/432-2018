@@ -28,4 +28,4 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 
 ## New Materials
 
-1. The image by Charles Joseph Minard that we'll look at today in some detail can be found [at this link](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard.png), and in the [Minard_large.png file] above.
+1. A reproduction of Charles Joseph Minard's map of Napoleon's disastrous losses suffered during the Russian campaign of 1812 that we'll look at today can be found [at this link](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard.png), and in the [Minard_large.png file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class22/Minard_large.png) above.
