@@ -7,6 +7,8 @@
 
 Today's class will address a famous data visualization from history, and then we'll discuss building regression models for multi-categorical outcomes, using multinomial models. I also have another example available using proportional odds logistic regression at the end of today's slides.
 
+An example of fitting a multinomial logistic model to predict a multi-categorical outcome is available in Chapter 20 of the Course Notes. That example is based on the work of Jeffrey S. Simonoff (2003) Analyzing Categorical Data in Chapter 10. Related data and R code are available at http://people.stern.nyu.edu/jsimonof/AnalCatData/Splus/. Meanwhile, the data set and analysis are based on the work of Peng RD and Hengartner NW (2002) Quantitative analysis of literary styles, The American Statistician, 56, 175-185.
+
 ## Special Announcements
 
 1. Our 432 class will meet in **E301** today, rather than our usual E321-323.
