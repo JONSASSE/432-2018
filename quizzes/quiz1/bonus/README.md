@@ -36,4 +36,4 @@ The 14 questions that comprise this [bonus assignment](https://github.com/THOMAS
 
 ## Answers?
 
-Once everyone who is doing this has completed it, we'll post answer sketches.
+Again, the answer sketch is available [at this link](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/bonus/quiz01_bonus_answers.html)
