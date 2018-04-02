@@ -1,5 +1,9 @@
 # Bonus Assignment for those looking to improve a poor grade on Quiz 1
 
+## The answer sketch is now available [at this link](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz1/bonus/quiz01_bonus_answers.html).
+
+## Below, the actual assignment...
+
 The assignment is **only available to those students who scored below 80 on Quiz 1**.
 
 ## Instructions
