@@ -2,8 +2,8 @@
 
 ## Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class20) are posted.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class20) will appear when available.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class21) are posted.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class21) will appear when available.
 
 Today's class will address building regression models for *ordered* multi-categorical outcomes, using proportional odds logistic regression. [Chapter 19 of the Course Notes](https://github.com/THOMASELOVE/432-2018/blob/master/texts/chapter19/README.md) covers this topic.
 
