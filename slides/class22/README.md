@@ -21,7 +21,7 @@ An additional example of fitting a multinomial logistic model to predict a multi
 
 ## There IS a minute paper after today's class.
 
-- The Minute Paper after Class 22 will become available 2018-04-05 and is due at **10 AM Monday 2018-04-09**.
+- The [Minute Paper after Class 22](https://goo.gl/forms/uAn6IQcZxT2l6Hbr2) is now available, and is due at **10 AM Monday 2018-04-09**.
 
 ## Remaining Deliverables This Semester
 
