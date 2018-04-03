@@ -23,6 +23,8 @@ An additional example of fitting a multinomial logistic model to predict a multi
 
 4. This set of comments by Rafael Irizarry on the [Draft NIH Strategic Plan for Data Science](https://simplystatistics.org/2018/04/02/input-on-the-draft-nih-strategic-plan-for-data-science/) was illuminating for me.
 
+5. The fastest-growing course in UC Berkeley’s history — Foundations of Data Science — [is being offered free online this spring](http://news.berkeley.edu/2018/03/29/berkeley-offers-its-fastest-growing-course-data-science-online-for-free/). The course teaches lots of useful stuff, all while coding in Python. [Very tempting](https://data.berkeley.edu/education/data-8x).
+
 ## There IS a minute paper after today's class.
 
 - The [Minute Paper after Class 22](https://goo.gl/forms/uAn6IQcZxT2l6Hbr2) is now available, and is due at **10 AM Monday 2018-04-09**.
