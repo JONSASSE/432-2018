@@ -19,10 +19,7 @@ An additional example of fitting a multinomial logistic model to predict a multi
 
 2. A reminder: [This is a nice cheat sheet](http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/) to help in converting data from wide to long format.
 
-3. As part of CWRU's National Public Health Week Speaker Series, I gave a presentation at noon today. 
-    - Here's [my repository for that talk](https://github.com/THOMASELOVE/adventures).
-    - The session will be part of a week-long event (04-02 through 04-06) bringing together students across the Schools of Dental Medicine and of Medicine to learn about various aspects of public health. Details on all of the week's activities [can be found here](http://thedaily.case.edu/national-public-health-week/).
-
+3. As part of [CWRU's National Public Health Week](http://thedaily.case.edu/national-public-health-week/) Speaker Series, I gave a presentation at noon today. Here's [my repository for that talk](https://github.com/THOMASELOVE/adventures).
 
 ## There IS a minute paper after today's class.
 
