@@ -37,9 +37,15 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 
 2. [Course Notes Chapter 19](https://thomaselove.github.io/432-notes/modeling-an-ordinal-categorical-outcome-in-ohio-smart.html) is now a full part of the Course Notes, too. It's on proportional odds logistic regression models for ordinal multi-categorical outcomes, which is our topic today.
 
-3. [Course Notes Chapter 20](https://thomaselove.github.io/432-notes/analyzing-literary-styles-with-multinomial-logistic-regression.html) is now a full part of the Course Notes, too. It's on multinomial logistic regression models for nominal multi-categorical outcomes, and we'll discuss that topic on Thursday.
+3. [Course Notes Chapter 20](https://thomaselove.github.io/432-notes/analyzing-literary-styles-with-multinomial-logistic-regression.html) is now a full part of the Course Notes, too. It's on multinomial logistic regression models for nominal multi-categorical outcomes, and we'll discuss that topic on Thursday. 
+    - Through Chapters 1-20, the Notes now weigh in at a way-too-long 532 pages. I'm really sorry about that. Logorrhea, asthma and obesity are my chronic illnesses.
 
 4. Substantial new stuff was added as Section 6 of the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html). Please, **please** read this before you turn in your registration and scheduling form (due 2018-04-17.) 
     - I also very strongly encourage you to carefully read the [general Post-Project 1 Feedback](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/FEEDBACK.md). It's worth your time.
 
 5. Your preparation for [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz2) will be aided by looking over the [Bonus Assignment after Quiz 1](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus), even if you weren't eligible to actually do that assignment. An **answer sketch** for that Bonus Assignment [is now available here](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz1/bonus).
+
+## Tweets of the Day
+
+- An old picture, worth revisiting, [tweeted by Michael Lopez](https://twitter.com/StatsbyLopez/status/979541310238535680).
+- And I also enjoyed this follow-up [tweet by Mara Averick](https://twitter.com/dataandme/status/979543312460845056?s=11)
