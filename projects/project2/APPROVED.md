@@ -7,6 +7,7 @@ Investigator(s) | Project 2 Title
 ---------------: | -----------------------------------------------------------------------------
 Ryan Honomichl | Predicting Hot/Cold Self-Regulation in Preschool Children Using the NICHD Early Childcare Study
 Carli Lehr | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
+Elina Misicka | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
 
 ## Proposals Still to Come
 
@@ -33,7 +34,6 @@ Kedar Mahajan
 Roberto Martinez
 John McDonnell
 Satyakam Mishra
-Elina Misicka
 Haeun Park
 Preeti Pathak
 Sarah Planchon Pope
