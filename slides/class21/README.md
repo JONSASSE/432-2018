@@ -15,6 +15,8 @@ Today's class will address building regression models for *ordered* multi-catego
 
 2. Our 432 class will meet in **E301**, rather than our usual E321-323 on Thursday of this week, 2018-04-05.
 
+3. A reminder: [This is a nice cheat sheet](http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/) to help in converting data from wide to long format.
+
 ## Remaining Deliverables This Semester
 
 The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) page is always the final word, if you are confused.
