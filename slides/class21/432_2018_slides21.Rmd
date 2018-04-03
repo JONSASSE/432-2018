@@ -326,7 +326,7 @@ Our outcome, `apply`, has three levels. Our model has two logit equations:
 - one estimating the log odds that `apply` will be less than or equal to 1 (`apply` = unlikely) 
 - one estimating the log odds that `apply` $\leq$ 2 (`apply` = unlikely or somewhat likely)
 
-That's all we need to estimate the three categories, since Pr(`apply` $\leq$ 3) = 1, because very likely is the maximum category for `genhealth`.
+That's all we need to estimate the three categories, since Pr(`apply` $\leq$ 3) = 1, because very likely is the maximum category for `apply`.
 
 - The parameters to be fit include two intercepts:
     - $\zeta_1$ will be the `unlikely|somewhat likely` parameter
@@ -414,7 +414,7 @@ BIC(m, m0)
 
 ## Testing the Proportional Odds Assumption
 
-One way to test the proportional odds assumption is to compare the fit of the proportional odds logistic regression to a model that does not make that assumption. A natural candidate is a **multinomial logit** model, which is typically used to model unordered multi-categorical outcomes, and fits a slope to each level of the `genh` outcome in this case, as opposed to the proportional odds logit, which fits only one slope across all levels.
+One way to test the proportional odds assumption is to compare the fit of the proportional odds logistic regression to a model that does not make that assumption. A natural candidate is a **multinomial logit** model, which is typically used to model unordered multi-categorical outcomes, and fits a slope to each level of the `apply` outcome in this case, as opposed to the proportional odds logit, which fits only one slope across all levels.
 
 Since the proportional odds logistic regression model is nested in the multinomial logit, we can perform a likelihood ratio test. To do this, we first fit the multinomial logit model, with the `multinom` function from the `nnet` package.
 
