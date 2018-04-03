@@ -2,7 +2,7 @@
 
 ## Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class21) are posted.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class21) are posted. I've corrected the problems referring to `genhealth` instead of `apply` as an outcome on slides 33 and 41.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class21) will appear when available.
 
 Today's class will address building regression models for *ordered* multi-categorical outcomes, using proportional odds logistic regression. [Chapter 19 of the Course Notes](https://thomaselove.github.io/432-notes/modeling-an-ordinal-categorical-outcome-in-ohio-smart.html) covers this topic.
