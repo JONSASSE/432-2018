@@ -1,6 +1,6 @@
 # Project 2 Proposals Approved by Dr. Love
 
-- Remember, the deadline for Project 2 Proposal Submission is 2018-04-17 at 5 PM.
+- Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
 
 Investigator(s) | Project 2 Title 
