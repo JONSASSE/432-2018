@@ -10,7 +10,7 @@ Today's class will address building regression models for *ordered* multi-catego
 ## Special Announcements
 
 1. As part of CWRU's National Public Health Week Speaker Series, I will deliver a presentation entitled **Adventures at Better Health Partnership: Learning as a Community (aided by Electronic Health Records) to make an impact on the Health of Northeast Ohio Adults** from Noon to 12:50 PM in room WRB-1223B this Thursday 2018-04-05. 
-    - The session will be part of a week-long event (04-02 through 04-06) bringing together students across the Schools of Dental Medicine and of Medicine to learn about various aspects of public health. 
+    - The session will be part of a week-long event (04-02 through 04-06) bringing together students across the Schools of Dental Medicine and of Medicine to learn about various aspects of public health. Details on all of the week's activities [can be found here](http://thedaily.case.edu/national-public-health-week/).
     - I will discuss things that I am not planning to discuss in 432, so the overlap should be minimal.
 
 2. Our 432 class will meet in **E301**, rather than our usual E321-323 on Thursday of this week, 2018-04-05.
