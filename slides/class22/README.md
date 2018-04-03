@@ -13,11 +13,11 @@ An additional example of fitting a multinomial logistic model to predict a multi
 - The example in that Chapter is based on the work of Jeffrey S. Simonoff (2003) Analyzing Categorical Data, in his Chapter 10. Related data and R code are available at http://people.stern.nyu.edu/jsimonof/AnalCatData/Splus/. 
 - The data set and analysis are based on the work of Peng RD and Hengartner NW (2002) Quantitative analysis of literary styles, *The American Statistician*, 56, 175-185.
 
-## New Materials
+## Announcements prior to class
 
 1. A reproduction of Charles Joseph Minard's map of Napoleon's disastrous losses suffered during the Russian campaign of 1812 that we'll look at today can be found [at this link](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard.png), and in the [Minard_large.png file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class22/Minard_large.png) above.
 
-2. [This is a nice cheat sheet](http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/) to help in converting data from wide to long format.
+2. A reminder: [This is a nice cheat sheet](http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/) to help in converting data from wide to long format.
 
 ## There IS a minute paper after today's class.
 
