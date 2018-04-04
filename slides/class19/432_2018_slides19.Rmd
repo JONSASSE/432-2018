@@ -321,7 +321,7 @@ z <- (mod_1_aug$visits - mod_1_aug$.fitted) /
     sqrt(mod_1_aug$.fitted)
 cat("overdispersion ratio is ", sum(z^2)/ (n - k), "\n")
 cat("p value of overdispersion test: ", 
-    pchisq(sum(z^2)/(n-k), n-k), "\n")
+    pchisq(sum(z^2), df = n-k, lower.tail = FALSE), "\n")
 ```
 
 ## Code used on previous slide
@@ -333,7 +333,7 @@ z <- (mod_1_aug$visits - mod_1_aug$.fitted) /
     sqrt(mod_1_aug$.fitted)
 cat("overdispersion ratio is ", sum(z^2)/ (n - k), "\n")
 cat("p value of overdispersion test: ", 
-    pchisq(sum(z^2)/(n-k), n-k), "\n")
+    pchisq(sum(z^2), df = n-k, lower.tail = FALSE), "\n")
 ```
 
 ## `glm.diag.plots` from `boot` for Model 1
