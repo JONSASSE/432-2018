@@ -29,7 +29,9 @@ An additional example of fitting a multinomial logistic model to predict a multi
     - It now is: `cat("p value of overdispersion test: ", pchisq(sum(z^2), n-k, lower.tail=FALSE), "\n")`
     - Section 18.8.1 of [the Course Notes](https://thomaselove.github.io/432-notes/) also needs correction on this point.
     
-7. If you are having trouble installing the `countreg` package, try [this workaround to put an old version of `countreg` on your machine](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/installing_countreg_workaround.pdf). You'll know it worked if you can successfully generate a rootogram.
+7. If you are having trouble installing the `countreg` package, first, make sure you've upgraded to **R 3.4.4**, and then [try the approach suggested on our PACKAGES page](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD). 
+    - If that doesn't work, try [this workaround to put an old version of `countreg` on your machine](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/installing_countreg_workaround.pdf). 
+    - You'll know it worked if you can successfully generate a rootogram.
 
 ## There IS a minute paper after today's class.
 
