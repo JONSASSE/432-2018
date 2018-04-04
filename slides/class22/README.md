@@ -25,6 +25,10 @@ An additional example of fitting a multinomial logistic model to predict a multi
 
 5. The fastest-growing course in UC Berkeley’s history — Foundations of Data Science — [is being offered free online this spring](http://news.berkeley.edu/2018/03/29/berkeley-offers-its-fastest-growing-course-data-science-online-for-free/). The course teaches lots of useful stuff, all while coding in Python. [Very tempting](https://data.berkeley.edu/education/data-8x).
 
+6. On 2018-04-04 I corrected an error in the specification of the *p* value for the overdispersion test in our Class 19 slides, specifically the slides numbered 38-39. 
+    - It now is: `cat("p value of overdispersion test: ", pchisq(sum(z^2), n-k, lower.tail=FALSE), "\n")`
+    - Section 18.8.1 of [the Course Notes](https://thomaselove.github.io/432-notes/) also needs correction on this point.
+
 ## There IS a minute paper after today's class.
 
 - The [Minute Paper after Class 22](https://goo.gl/forms/uAn6IQcZxT2l6Hbr2) is now available, and is due at **10 AM Monday 2018-04-09**.
