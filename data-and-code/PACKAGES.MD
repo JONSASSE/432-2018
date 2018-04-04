@@ -17,3 +17,5 @@ Note: If you want to install a single package, you can do so by finding the word
 To build rootograms to visualize the results of regression models on count outcomes, I will occasionally use the `countreg` package, which is currently available **on R-Forge only**.
 
 To install `countreg`, type `install.packages("countreg", repos="http://R-Forge.R-project.org")` into the R Console within R Studio.
+
+If that doesn't work, try [this workaround to put an old version of "countreg" on your machine](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/installing_countreg_workaround.pdf).
