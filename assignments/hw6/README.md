@@ -107,3 +107,5 @@ Athens | 23.34 | **28.3** | **85.00** | **No** | 3
 Cuyahoga | **18.70** | **30.0** | **95.55** | **No** | 4
 
 Your job is to fit **two** possible regression models in your development sample to predict this count, using the same predictors (at least 3 and no more than 6 of those not used in the calculation of standards) available in the data set. Demonstrate how well each model fits the counts by developing a rootogram and other summaries that you deem useful, then select the model you prefer, specifying your reasons. Next, use your preferred model to predict Cuyahoga County and Monroe County results, and assess the quality of those predictions.
+
+**Note**: If you are having trouble installing the `countreg` package, try [this workaround to put an old version of `countreg` on your machine](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/installing_countreg_workaround.pdf). You'll know it worked if you can successfully generate a rootogram.
