@@ -3,6 +3,7 @@
 ### Key Materials
 
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) are posted. We got through slide 31. The `medicare.csv` data are now up, as well. 
+    - On 2018-04-04 I corrected an error in the specification of the *p* value for the overdispersion test in slides 38-39. 
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class19) are now posted, too.
 
 Today's class will address:
