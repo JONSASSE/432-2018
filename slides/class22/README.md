@@ -25,17 +25,19 @@ An additional example of fitting a multinomial logistic model to predict a multi
 
 5. The fastest-growing course in UC Berkeley’s history — Foundations of Data Science — [is being offered free online this spring](http://news.berkeley.edu/2018/03/29/berkeley-offers-its-fastest-growing-course-data-science-online-for-free/). The course teaches lots of useful stuff, all while coding in Python. [Very tempting](https://data.berkeley.edu/education/data-8x).
 
-6. On 2018-04-04 I corrected an error in the specification of the *p* value for the overdispersion test in our Class 19 slides, specifically the slides numbered 38-39. 
+6. Tidy Tuesday is a [thing you might be interested in](https://github.com/rfordatascience/tidytuesday/blob/master/README.md).
+
+7. On 2018-04-04 I corrected an error in the specification of the *p* value for the overdispersion test in our Class 19 slides, specifically the slides numbered 38-39. 
     - It now is: `cat("p value of overdispersion test: ", pchisq(sum(z^2), n-k, lower.tail=FALSE), "\n")`
     - Section 18.8.1 of [the Course Notes](https://thomaselove.github.io/432-notes/) has now been corrected on this point, too.
     
-7. If you are having trouble installing the `countreg` package, first, make sure you've upgraded to **R 3.4.4**, and then [try the approach suggested on our PACKAGES page](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD). 
+8. If you are having trouble installing the `countreg` package, first, make sure you've upgraded to **R 3.4.4**, and then [try the approach suggested on our PACKAGES page](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD). 
     - If that doesn't work, try [this workaround to put an old version of `countreg` on your machine](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/installing_countreg_workaround.pdf). 
     - You'll know it worked if you can successfully generate a rootogram.
     
-8. If you don't have data for Project 2 yet, you might look at https://data.europa.eu/. It certainly seems like it might be useful.
+9. If you don't have data for Project 2 yet, you might look at https://data.europa.eu/. It certainly seems like it might be useful.
 
-9. “This class is supported by [DataCamp](https://www.datacamp.com/), the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.” Check your email for an invitation that will get you access to all of DataCamp until the end of September.
+10. “This class is supported by [DataCamp](https://www.datacamp.com/), the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.” **Check your email for an invitation** that will get you access to all of DataCamp until the end of September.
 
 ## There IS a minute paper after today's class.
 
