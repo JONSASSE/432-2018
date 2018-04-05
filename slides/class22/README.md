@@ -32,6 +32,10 @@ An additional example of fitting a multinomial logistic model to predict a multi
 7. If you are having trouble installing the `countreg` package, first, make sure you've upgraded to **R 3.4.4**, and then [try the approach suggested on our PACKAGES page](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/PACKAGES.MD). 
     - If that doesn't work, try [this workaround to put an old version of `countreg` on your machine](https://github.com/THOMASELOVE/432-2018/blob/master/data-and-code/installing_countreg_workaround.pdf). 
     - You'll know it worked if you can successfully generate a rootogram.
+    
+8. If you don't have data for Project 2 yet, you might look at https://data.europa.eu/. It certainly seems like it might be useful.
+
+9. “This class is supported by DataCamp, the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.”
 
 ## There IS a minute paper after today's class.
 
