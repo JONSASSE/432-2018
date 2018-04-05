@@ -23,4 +23,4 @@ Course notes are available at https://thomaselove.github.io/432-notes/. This, to
 - Teaching Assistant [Office Hours](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md#teaching-assistant-office-hours) begin 2018-01-23 and run on Tuesdays - Fridays.
 
 
-“This class is supported by DataCamp, the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.”
+“This class is supported by [DataCamp](https://www.datacamp.com/), the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.”
