@@ -35,7 +35,7 @@ An additional example of fitting a multinomial logistic model to predict a multi
     
 8. If you don't have data for Project 2 yet, you might look at https://data.europa.eu/. It certainly seems like it might be useful.
 
-9. “This class is supported by [DataCamp](https://www.datacamp.com/), the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.” Check your email for an invitation that will get you access to DataCamp for the next six months.
+9. “This class is supported by [DataCamp](https://www.datacamp.com/), the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.” Check your email for an invitation that will get you access to all of DataCamp until the end of September.
 
 ## There IS a minute paper after today's class.
 
