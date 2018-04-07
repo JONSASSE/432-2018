@@ -13,6 +13,8 @@ Today's class will begin with discussion of a data visualization, and then we'll
 
 2. Chapter 22 of the [Course Notes](https://thomaselove.github.io/432-notes/) is also available. It describes the main ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time. We will discuss this material starting in Class 24, and (I expect) continuing into Class 25.
 
+3. Need some help with using R's sometimes inscrutable Help pages? Check out this Appendix from [Kieran Healy's book on Data Visualization](http://socviz.co/appendix.html#a-little-more-about-r). Actually, the whole Appendix is well-designed and contains lots of useful tips for using R better, and doing things like managing projects, making maps, and a lot of other good stuff. I encourage you to look over [the whole book](http://socviz.co/index.html#preface). This summer, that'll be something I hope to do more closely.
+
 ## Discussion of the Minute Paper after Class 22
 
 Thank you for completing the Minute Paper. I really appreciate the feedback.
