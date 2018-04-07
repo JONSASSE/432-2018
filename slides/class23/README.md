@@ -5,7 +5,7 @@
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class23) will be posted as soon as they are available.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class23) will be posted as soon as they are available.
 
-Today's class will begin with discussion of a data visualization, and then we'll discuss methods for exploring time-to-event, or survival data. An additional example exploring the survival data ideas discussed today is available in [Chapter 21 of the Course Notes](https://thomaselove.github.io/432-notes/). 
+Today's class will begin with discussion of a data visualization, and then we'll discuss methods for exploring time-to-event, or survival data. The survival data ideas discussed today are (mostly) covered in [Chapter 21 of the Course Notes](https://thomaselove.github.io/432-notes/). 
 
 ## Announcements prior to class
 
