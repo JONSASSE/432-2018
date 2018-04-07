@@ -11,6 +11,8 @@ Today's class will begin with discussion of a data visualization, and then we'll
 
 1. Chapter 21 of the [Course Notes](https://thomaselove.github.io/432-notes/) is now available. It describes some of the fundamental ideas in dealing with time-to-event (survival) data, including survival functions, hazard functions, censoring and Kaplan-Meier estimates, and it demonstrates R code to complete some of these explorations.
 
+2. Chapter 22 of the [Course Notes](https://thomaselove.github.io/432-notes/) is also available. It describes the main ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time. We will discuss this material starting in Class 24, and (I expect) continuing into Class 25.
+
 ## Discussion of the Minute Paper after Class 22
 
 Thank you for completing the Minute Paper. I really appreciate the feedback.
