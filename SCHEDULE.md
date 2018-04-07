@@ -44,12 +44,12 @@ Class | Date | Topics, Reading Suggestions, Deliverables
 21 | Tue 2018-04-03 | Models for Ordinal Categorical Outcomes
 -- | Thu 2018-04-05 | *SPECIAL SEMINAR*: Adventures at Better Health Partnership. **Noon in WRB-1223B**.
 22 | Thu 2018-04-05 | Models for Nominal Categorical Outcomes **SPECIAL ROOM: Class to be held in E301**
-23 | Tue 2018-04-10 | Models for Time-to-Event Outcomes
-24 | Thu 2018-04-12 | Models for Time-to-Event Outcomes
+23 | Tue 2018-04-10 | Exploring Time-to-Event Data, Kaplan-Meier Estimation
+24 | Thu 2018-04-12 | Cox Regression Models for Time-to-Event Outcomes
 -- | Fri 2018-04-13 | [Assignment 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 1 PM
-25 | Tue 2018-04-17 | **Special Session**: Retrospective Power, Type S and Type M errrors
+25 | Tue 2018-04-17 | Cox Regression Models for Time-to-Event Outcomes
 -- | Tue 2018-04-17 | [Project 2 Registration/Scheduling Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) due at 5 PM
-26 | Thu 2018-04-19 | *To Be Determined* (project presentation dates announced)
+26 | Thu 2018-04-19 | Retrospective Power, Type S and Type M errors (project presentation dates announced)
 27 | Tue 2018-04-24 | *To Be Determined*
 -- | Tue 2018-04-24 | [Assignment 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments) due at 5 PM
 28 | Thu 2018-04-26 | Final Class
