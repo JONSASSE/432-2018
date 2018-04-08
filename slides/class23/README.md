@@ -28,6 +28,8 @@ For example, some people tried to use `median_income` in their models in Homewor
 
 As another example, some people tried using age-adjusted mortality to predict years lost rate, but if you divide the years lost rate into several ordinal categories, it's not hard to wind up in a situation where age-adjusted mortality is perfectly separated, so that if you know the mortality, it automatically specifies the years lost rate category in these data.
 
+5. I corrected a few errors on slide 52 of the [Class 20 Slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class20), where I had switched the coefficients for the truncated Poisson and logistic regression models, and where I had used min, when I meant max.
+
 ## Discussion of the Minute Paper after Class 22
 
 Thank you for completing the Minute Paper. I really appreciate the feedback.
@@ -37,7 +39,7 @@ Thank you for completing the Minute Paper. I really appreciate the feedback.
 Count | Response
 ----: | -------------------------------------------------------
 7 | Yes, and I've made some progress towards completing it.
-3 | Yes, I've looked at it, but not yet made any progress.
+4 | Yes, I've looked at it, but not yet made any progress.
 6 | No. I better get on that.
 
 ### Project 2 "nudges"
@@ -45,20 +47,20 @@ Count | Response
 Count | **Do you plan to work alone or in a team of two for Project 2?**
 ----: | --------------------------------------------------------------
 10 | I will definitely work alone.
-3 | I don't know for sure, but I expect to work alone.
+4 | I don't know for sure, but I expect to work alone.
 0 | I don't know for sure, but I expect to work with a partner.
 3 | I will definitely work with a partner.
 
 Count | **Have you read (carefully) the general Post-Project 1 Feedback?**
 ----: | ------------------------------------------------------------------
-14 | Yes, I've read it carefully.
+15 | Yes, I've read it carefully.
 2 | No, I haven't read it carefully. I should do that, too.
 
 
 Count | **Do you know what data you will use for Project 2?**
 ----: | -----------------------------------------------------
 9 | Yes, I have a definite plan for what data I will use.
-5 | Maybe, I have an idea about what I will do, but haven't settled on the details yet.
+6 | Maybe, I have an idea about what I will do, but haven't settled on the details yet.
 2 | No, I haven't gotten to that point yet in my thinking about Project 2.
 
 ### What is the most important thing you've learned recently from the course? (not yet edited, first 16 responses)
@@ -79,6 +81,7 @@ Count | **Do you know what data you will use for Project 2?**
 - Logit Model, poisson regression, Multinomial logistic Regression:
 - Regression for ordinal and non-ordinal multicategorical outcomes.
 - Learning how to build models for ordered (ordinal) categorical outcomes
+- How to interpret proportional odds logistic regression models.
 
 ### What question(s) about the course are uppermost in your mind now? (not yet edited, first 16 responses)
 
@@ -98,6 +101,7 @@ Count | **Do you know what data you will use for Project 2?**
 - what are the common peeking behaviors?
 - Will the survival analysis section of this course help me to better understand what's going on in my survival analysis course?
 - Not much in particular. Still trying to find out how to export spline functions on logistic regressions (and beyond) but that may be more of a personal issue...
+- I am curious about different types of graphics that can be used to demonstrate data to the reader.
 
 ## Remaining Deliverables This Semester
 
