@@ -50,31 +50,31 @@ Thank you for completing the Minute Paper. I really appreciate the feedback.
 Count | Response
 ----: | -------------------------------------------------------
 7 | Yes, and I've made some progress towards completing it.
-4 | Yes, I've looked at it, but not yet made any progress.
-6 | No. I better get on that.
+7 | Yes, I've looked at it, but not yet made any progress.
+7 | No. I better get on that.
 
 ### Project 2 "nudges"
 
 Count | **Do you plan to work alone or in a team of two for Project 2?**
 ----: | --------------------------------------------------------------
 10 | I will definitely work alone.
-4 | I don't know for sure, but I expect to work alone.
+8 | I don't know for sure, but I expect to work alone.
 0 | I don't know for sure, but I expect to work with a partner.
 3 | I will definitely work with a partner.
 
 Count | **Have you read (carefully) the general Post-Project 1 Feedback?**
 ----: | ------------------------------------------------------------------
-15 | Yes, I've read it carefully.
-2 | No, I haven't read it carefully. I should do that, too.
+18 | Yes, I've read it carefully.
+3 | No, I haven't read it carefully. I should do that, too.
 
 
 Count | **Do you know what data you will use for Project 2?**
 ----: | -----------------------------------------------------
 9 | Yes, I have a definite plan for what data I will use.
-6 | Maybe, I have an idea about what I will do, but haven't settled on the details yet.
-2 | No, I haven't gotten to that point yet in my thinking about Project 2.
+9 | Maybe, I have an idea about what I will do, but haven't settled on the details yet.
+3 | No, I haven't gotten to that point yet in my thinking about Project 2.
 
-### What is the most important thing you've learned recently from the course? (not yet edited, first 16 responses)
+### What is the most important thing you've learned recently from the course? (not yet edited, first 21 responses)
 
 - fitting different logistic model and use rootogram.
 - A lot, for example, how to evaluate logistic regression, how to use ggplot, how to do cross validation for simple linear regression models.
@@ -93,8 +93,12 @@ Count | **Do you know what data you will use for Project 2?**
 - Regression for ordinal and non-ordinal multicategorical outcomes.
 - Learning how to build models for ordered (ordinal) categorical outcomes
 - How to interpret proportional odds logistic regression models.
+- lrm works good with ordinary logistic regression as well - may I should stick to lrm whenever I run logistic regression.
+- regression on multi categorical outcome
+- How to make models for Multi-categorical variables.
+- Analyzing Literary Styles with Multinomial Logistic Regression
 
-### What question(s) about the course are uppermost in your mind now? (not yet edited, first 16 responses)
+### What question(s) about the course are uppermost in your mind now? (not yet edited, first 21 responses)
 
 - will we show our project1 in our presentation?
 - I wonder if I can use some other machine learning models that are not covered in class on my project, because it is on real data from my lab and I want to try my best using every possible model I can access. Thank you.
@@ -113,6 +117,9 @@ Count | **Do you know what data you will use for Project 2?**
 - Will the survival analysis section of this course help me to better understand what's going on in my survival analysis course?
 - Not much in particular. Still trying to find out how to export spline functions on logistic regressions (and beyond) but that may be more of a personal issue...
 - I am curious about different types of graphics that can be used to demonstrate data to the reader.
+- What would be the best way to choose the reference variable when we have more than 3 ordinary variables, is it the highest proportion? the most common in the sense of the study question? the most effective variable on the outcome?
+- can we use regression on multi categorical outcome when we have asymmetric presentations of the outcome?
+- How to make a good project 2?
 
 ## Remaining Deliverables This Semester
 
