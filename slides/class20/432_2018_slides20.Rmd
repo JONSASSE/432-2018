@@ -431,18 +431,17 @@ mod_5 <- hurdle(visits ~ hospital + health + chronic +
 Logistic Regression to predict log odds of zero visits...
 
 ```
-logit(visits = 0) = -1.4 + .15 hospital - .30 health = Exc
-   + .25 health = Poor + .10 chronic - .06 sex = male 
-   + .02 school + .08 insurance = yes
+logit(visits = 0) = .04 + .31 hospital - .29 health = Exc 
+        - .01 health = Poor + .54 chronic - .42 sex = male
+        + .06 school + .75 insurance = yes
 ```
 
 Truncated^[to produce only estimates greater than 0] Poisson model to predict log(visits)
 
 ```
-log(visits) = min( 0, 
-        .04 + .31 hospital = .29 health = Exc 
-        - .01 health = Poor + .54 chronic - .42 sex = male
-        + .06 school + .75 insurance = yes )
+log(visits) = max( 0, -1.4 + .15 hospital - .30 health = Exc
+   + .25 health = Poor + .10 chronic - .06 sex = male 
+   + .02 school + .08 insurance = yes )
 ```
 
 ## Confidence Intervals around coefficients
