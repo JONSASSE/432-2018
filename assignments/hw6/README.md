@@ -86,6 +86,19 @@ Build a reasonable linear or generalized linear model in your development sample
 
 Divide the 86 counties in your development sample into three groups (low, middle and high) in a rational way in terms of the `years_lost_rate` outcome. Make that new grouping your outcome for an ordinal logistic regression model. Fit a model (using a carefully selected group of no more than 5 predictor variables) and assess its performance carefully. Do not include the `age65plus` variable as a predictor, as the `years_lost_rate` data are age-adjusted already. Demonstrate how well the model fits as well as the conclusions you draw from the model carefully. Then use the model to predict Cuyahoga County and Monroe County results, and assess the quality of those predictions.
 
+## A Hint (for Questions 4 and 5, in particular)
+
+`polr` and several of the other modeling approaches we've worked on recently are finicky, at least in comparison to OLS. Sometimes, you'll get to the point where it seems like the model won't run, or won't summarize properly, or you have some extremely large or extremely small coefficient estimates or standard errors. Should this happen to you, the first thing I would do is try to identify which of your predictors is causing this problem, by running the model first with one predictor, then two, etc. until you figure out which predictors cause problems. Reasons why you could be having a problem include:
+
+1. a predictor has values that completely identify the category of your outcome variable, perfectly (e.g., one category's predictor values are inevitably lower than all of another category's predictor values, with no overlap)
+2. the scales of the predictors are wildly different, for instance one predictor has extremely large or extremely small values, causing the estimated standard errors to explode, which should cause you to think about reducing the impact of that, perhaps by changing the units, say from $s to $1000s or by standardizing the predictors
+3. intense collinearity between two or more of your predictors
+4. coding issues in setting up one or more of the variables.
+
+For example, some people tried to use `median_income` in their models in Homework 6 along with other variables that have much smaller scales (ranges). I would try rescaling those predictors with large ranges to have similar magnitudes to the other predictors, perhaps simply by expressing the median income in thousands of dollars (by dividing the raw data by 1000) rather than on its original scale, or perhaps by standardizing all of the coefficients.
+
+As another example, some people tried using age-adjusted mortality to predict years lost rate, but if you divide the years lost rate into several ordinal categories, it's not hard to wind up in a situation where age-adjusted mortality is perfectly separated, so that if you know the mortality, it automatically specifies the years lost rate category in these data.
+
 # Question 5 (20 points)
 
 Build a new outcome variable that is a count (possible values = 0-4) of whether the county meets each of the following standards:
