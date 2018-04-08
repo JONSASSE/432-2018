@@ -35,6 +35,12 @@ As another example, some people tried using age-adjusted mortality to predict ye
     - Approved projects are summarized at [this link](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/APPROVED.md).
     - If you have questions about Project 2, **PLEASE** ask them at 431-help, or at Office Hours, or after class or in minute papers. **WE WANT TO HELP YOU**.
 
+7. I've added four more papers to our [texts material](https://github.com/THOMASELOVE/432-2018/tree/master/texts), written by Peter Austin and colleagues. These include
+    - a look at the [number of subjects required to build a linear regression model](https://github.com/THOMASELOVE/432-2018/blob/master/texts/Austin%20Steyerberg%202015%20Subjects%20required%20in%20linear%20regression.pdf) which suggests that as few as two subjects per variable can be sufficient to guarantee unbiased estimation of coefficients and adjusted R^2^ values, but larger numbers for adequate statistical power and variable selection. (Good estimates for survival analysis are 10+ events per variable, and for logistic regression, at least 10 EPV for prediction and 50 for reliable variable selection where the events are the smaller of the (# of yes, # of no) in the binary outcome.)
+    - a look at the [calibration of logistic regression models using loess smooths](https://github.com/THOMASELOVE/432-2018/blob/master/texts/Austin%20Steyerberg%202013%20Calibration%20of%20Logistic%20Regression%20with%20loess.pdf) which encourages the increased usage of loess methods to identify a lack of calibration in external validation samples.
+    - a look at the use of [regression trees in predicting mortality in cardiovascular disease](https://github.com/THOMASELOVE/432-2018/blob/master/texts/Austin%20Lee%20Steyerberg%20Tu%202012%20Regression%20trees%20for%20predicting%20mortality%20in%20CVD.pdf), where trees and ensemble methods didn't really show meaningful improvement over logistic regression, and
+    - a look at [using data mining / machine learning technologies for disease classification](https://github.com/THOMASELOVE/432-2018/blob/master/texts/Austin%20Tu%20Ho%20Levy%20Lee%202013%20Using%20data%20mining%20and%20machine%20learning%20for%20disease%20classification%20in%20HF.pdf) where trees did well, but not much better than logistic regression.
+
 ## Discussion of the Minute Paper after Class 22
 
 Thank you for completing the Minute Paper. I really appreciate the feedback.
