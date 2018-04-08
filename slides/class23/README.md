@@ -15,6 +15,19 @@ Today's class will begin with discussion of a data visualization, and then we'll
 
 3. Need some help with using R's sometimes inscrutable Help pages? Check out this Appendix from [Kieran Healy's book on Data Visualization](http://socviz.co/appendix.html#a-little-more-about-r). Actually, the whole Appendix is well-designed and contains lots of useful tips for using R better, and doing things like managing projects, making maps, and a lot of other good stuff. I encourage you to look over [the whole book](http://socviz.co/index.html#preface). This summer, that'll be something I hope to do more closely.
 
+4. A hint for Homework 6 (and for your Project, potentially):
+
+`polr` and several of the other modeling pieces we've worked on recently are finicky, at least in comparison to OLS. Sometimes, you'll get to the point where it seems like the model won't run, or won't summarize properly, or you have some extremely large or extremely small coefficient estimates or standard errors. Should this happen to you, the first thing I would do is try to identify which of your predictors is causing this problem, by running the model first with one predictor, then two, etc. until you figure out which predictors cause problems. Reasons why you could be having a problem include:
+
+1. a predictor has values that completely identify the category of your outcome variable, perfectly (e.g., one category's predictor values are inevitably lower than all of another category's predictor values, with no overlap)
+2. the scales of the predictors are wildly different, for instance one predictor has extremely large or extremely small values, causing the estimated standard errors to explode, which should cause you to think about reducing the impact of that, perhaps by changing the units, say from $s to $1000s or by standardizing the predictors
+3. intense collinearity between two or more of your predictors
+4. coding issues in setting up one or more of the variables.
+
+For example, some people tried to use `median_income` in their models in Homework 6 along with other variables that have much smaller scales (ranges). I would try rescaling those variables with large ranges to have similar magnitudes to the other predictors, perhaps simply by expressing the median income in thousands of dollars (by dividing the raw data by 1000) rather than on its original scale, or perhaps by standardizing all of the coefficients.
+
+As another example, some people tried using age-adjusted mortality to predict years lost rate, but if you divide the years lost rate into several ordinal categories, it's not hard to wind up in a situation where age-adjusted mortality is perfectly separated, so that if you know the mortality, it automatically specifies the years lost rate category in these data.
+
 ## Discussion of the Minute Paper after Class 22
 
 Thank you for completing the Minute Paper. I really appreciate the feedback.
