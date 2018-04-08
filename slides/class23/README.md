@@ -33,7 +33,7 @@ As another example, some people tried using age-adjusted mortality to predict ye
 6. Remember that the Project 2 Registration (and Scheduling) [Google Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) is due 2018-04-17, but the sooner the better. A few people have completed it successfully, and others need to revise and resubmit (which you can do by editing the form using the link that is automatically emailed to you when you submit the form.) 
     - I've added some text to the questions on the form to make it a little clearer in terms of what I need in order to approve your work. In particular, I need more details about the data (particularly if it isn't freely available to me online) than some folks provided on their first try. 
     - Approved projects are summarized at [this link](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/APPROVED.md).
-    - If you have questions about Project 2, **PLEASE** ask them at 431-help, or at Office Hours. **WE WANT TO HELP YOU**.
+    - If you have questions about Project 2, **PLEASE** ask them at 431-help, or at Office Hours, or after class or in minute papers. **WE WANT TO HELP YOU**.
 
 ## Discussion of the Minute Paper after Class 22
 
