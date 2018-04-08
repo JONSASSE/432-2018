@@ -5,15 +5,15 @@
 
 Investigator(s) | Project 2 Title 
 --------------- | -----------------------------------------------------------------------------
+Zainab Albar | Marijuana exposure and depression among females in NHANES, 2009-2012
 Ryan Honomichl | Predicting Hot/Cold Self-Regulation in Preschool Children Using the NICHD Early Childcare Study
 Carli Lehr | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
 Elina Misicka | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
 
-## Proposals Still to Come
+## Proposals Still to Come or Under Revision
 
 ```
 Khaled Alayed
-Zainab Albar
 Haimeng Bai
 Laura Baldassari
 Shufen Cao
