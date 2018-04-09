@@ -50,83 +50,123 @@ As another example, some people tried using age-adjusted mortality to predict ye
 
 ## Discussion of the Minute Paper after Class 22
 
-Thank you for completing the Minute Paper. I really appreciate the feedback.
+Thank you to the 38/41 who completed the Minute Paper. I really appreciate the feedback.
 
 ### Have you looked at Homework 6 in a meaningful way yet?
 
 Count | Response
 ----: | -------------------------------------------------------
-7 | Yes, and I've made some progress towards completing it.
-7 | Yes, I've looked at it, but not yet made any progress.
-7 | No. I better get on that.
+15 (40%) | Yes, and I've made some progress towards completing it.
+14 (37%) | Yes, I've looked at it, but not yet made any progress.
+9  (24%) | No. I better get on that.
 
 ### Project 2 "nudges"
 
 Count | **Do you plan to work alone or in a team of two for Project 2?**
 ----: | --------------------------------------------------------------
-10 | I will definitely work alone.
-8 | I don't know for sure, but I expect to work alone.
-0 | I don't know for sure, but I expect to work with a partner.
-3 | I will definitely work with a partner.
+20 (53%) | I will definitely work alone.
+13 (34%) | I don't know for sure, but I expect to work alone.
+1 (3%) | I don't know for sure, but I expect to work with a partner.
+4 (11%) | I will definitely work with a partner.
 
 Count | **Have you read (carefully) the general Post-Project 1 Feedback?**
 ----: | ------------------------------------------------------------------
-18 | Yes, I've read it carefully.
-3 | No, I haven't read it carefully. I should do that, too.
-
+34 (90%) | Yes, I've read it carefully.
+4 (11%) | No, I haven't read it carefully. I should do that, too.
 
 Count | **Do you know what data you will use for Project 2?**
 ----: | -----------------------------------------------------
-9 | Yes, I have a definite plan for what data I will use.
-9 | Maybe, I have an idea about what I will do, but haven't settled on the details yet.
-3 | No, I haven't gotten to that point yet in my thinking about Project 2.
+17 (45%) | Yes, I have a definite plan for what data I will use.
+16 (42%) | Maybe, I have an idea about what I will do, but haven't settled on the details yet.
+5 (13%) | No, I haven't gotten to that point yet in my thinking about Project 2.
 
-### What is the most important thing you've learned recently from the course? (not yet edited, first 21 responses)
+### What is the most important thing you've learned recently from the course? (not yet edited, first 38 responses)
 
-- fitting different logistic model and use rootogram.
-- A lot, for example, how to evaluate logistic regression, how to use ggplot, how to do cross validation for simple linear regression models.
-- converting wide and long format data; joining commands to combine data sets
-- multinomial logistic regression
-- How to predict a categorical outcome
-- How to use a rootogram
-- New modeling techniques for different types of outcomes
-- How to graph multinomial logistic regression results 
-- Poisson Regression
-- How to deal with categorical outcomes and count outcomes. 
-- zero inflated model
-- Rootograms
-- poisson regression model 
-- Logit Model, poisson regression, Multinomial logistic Regression:
-- Regression for ordinal and non-ordinal multicategorical outcomes.
-- Learning how to build models for ordered (ordinal) categorical outcomes
-- How to interpret proportional odds logistic regression models.
-- lrm works good with ordinary logistic regression as well - may I should stick to lrm whenever I run logistic regression.
-- regression on multi categorical outcome
-- How to make models for Multi-categorical variables.
-- Analyzing Literary Styles with Multinomial Logistic Regression
+```
+fitting different logistic model and use rootogram.
+A lot, for example, how to evaluate logistic regression, how to use ggplot, how to do cross validation for simple linear regression models.
+converting wide and long format data; joining commands to combine data sets
+multinomial logistic regression
+How to predict a categorical outcome
+How to use a rootogram
+New modeling techniques for different types of outcomes
+How to graph multinomial logistic regression results 
+Poisson Regression
+How to deal with categorical outcomes and count outcomes. 
+zero inflated model
+Rootograms
+poisson regression model 
+Logit Model, poisson regression, Multinomial logistic Regression:
+Regression for ordinal and non-ordinal multicategorical outcomes.
+Learning how to build models for ordered (ordinal) categorical outcomes
+How to interpret proportional odds logistic regression models.
+lrm works good with ordinary logistic regression as well - may I should stick to lrm whenever I run logistic regression. 
+regression on multi categorical outcome
+How to make models for Multi-categorical variables. 
+Analyzing Literary Styles with Multinomial Logistic Regression
+multinomial regression
+Modeling of ordinal categorical outcome
+building model for multi-categorical outcomes 
+Rootogram and zero-inflated models
+Other models beyond linear and logistic regression
+Regression methods for count and multi-categorical outcomes.
+Multinomial Logistic Regression
+Learning more about using proportional odds logistic models.
+That the models for multi-categorical outcomes are really complex
+fitting and interpreting models that are for count outcomes 
+Proportional odds logistic regression
+Understanding when to use Poisson Regression, ordinal categorical regression and multinomial regression. 
+I could revisit some of the questions I asked with my Project 1 models more effectively (or in a different way) if I'd run multinomial logistic regression instead of linear regression.
+It's important to select the appropriate model based on type of outcome to be predicted
+Graphing categorical data visually is helpful for planning regression model for modeling categorical outcome.
+Models for Ordinal and Models for Nominal Multi-Categorical Outcomes
+Lots of new types of regression types for different contexts. 
+```
 
-### What question(s) about the course are uppermost in your mind now? (not yet edited, first 21 responses)
+### What question(s) about the course are uppermost in your mind now? (not yet edited, first 38 responses)
 
-- will we show our project1 in our presentation?
-- I wonder if I can use some other machine learning models that are not covered in class on my project, because it is on real data from my lab and I want to try my best using every possible model I can access. Thank you.
-- When using gridExtra::grid.arrange() to place plots next to each other, how do you increase the space between the plots?
-- excited to learn survival analysis!
-- n/a
-- I want to learn more methods of data visualization for a lay audience
-- Feeling a bit unsettled by the complete freedom for Project 2. Is there anything specific you want to see? How complex should the research questions be? I am nervous about having something too simple...
-- None
-- Is there ever a case where we could use either a Poisson OR an ordinal logistic regression? When does "counts" turn into "ordered categories" or vice versa?
-- If you have an outcome like a percentage that has a definite upper and lower limit is it always better to deal with it as a count outcome even if the distribution looks relatively normally distributed and without big walls and ceilings?
-- I don't have a lot of zero outcome. Can I still use zero inflated probit model?
-- Survival analysis
-- Is the outcome of Poisson regression model Poisson distribution?
-- what are the common peeking behaviors?
-- Will the survival analysis section of this course help me to better understand what's going on in my survival analysis course?
-- Not much in particular. Still trying to find out how to export spline functions on logistic regressions (and beyond) but that may be more of a personal issue...
-- I am curious about different types of graphics that can be used to demonstrate data to the reader.
-- What would be the best way to choose the reference variable when we have more than 3 ordinary variables, is it the highest proportion? the most common in the sense of the study question? the most effective variable on the outcome?
-- can we use regression on multi categorical outcome when we have asymmetric presentations of the outcome?
-- How to make a good project 2?
+```
+will we show our project1 in our presentation?
+I wonder if I can use some other machine learning models that are not covered in class on my project, because it is on real data from my lab and I want to try my best using every possible model I can access. Thank you.
+When using gridExtra::grid.arrange() to place plots next to each other, how do you increase the space between the plots? 
+excited to learn survival analysis!
+n/a
+I want to learn more methods of data visualization for a lay audience
+Feeling a bit unsettled by the complete freedom for Project 2. Is there anything specific you want to see? How complex should the research questions be? I am nervous about having something too simple...
+None
+Is there ever a case where we could use either a Poisson OR an ordinal logistic regression? When does "counts" turn into "ordered categories" or vice versa?
+If you have an outcome like a percentage that has a definite upper and lower limit is it always better to deal with it as a count outcome even if the distribution looks relatively normally distributed and without big walls and ceilings?
+I don't have a lot of zero outcome. Can I still use zero inflated probit model? 
+Survival analysis 
+Is the outcome of Poisson regression model Poisson distribution?
+what are the common peeking behaviors? 
+Will the survival analysis section of this course help me to better understand what's going on in my survival analysis course?
+Not much in particular.  Still trying to find out how to export spline functions on logistic regressions (and beyond) but that may be more of a personal issue...
+I am curious about different types of graphics that can be used to demonstrate data to the reader.
+What would be the best way to choose the reference variable when we have more than 3 ordinary variables, is it the highest proportion? the most common in the sense of the study question? the most effective variable on the outcome? 
+can we use regression on multi categorical outcome when we have asymmetric presentations of the outcome? 
+None as of now
+How to make a good project 2?
+Nothing comes to mind right now. 
+"linear mixed effect models, I would like to know about modeling for data that has  both  continuous and a stochastic in nature. Please have a look at:
+
+linear mixed effect models "
+Thank you
+Questions on hw 6 problems. How reasonable/meaningful predictors should I choose?
+Cox regression and propensity matching
+To get better understanding of the regression methods we learnt in last few weeks. 
+Homework 6 - quality data visualization 
+Do we graph model response probabilities for interpretive purposes or just for our own internal help with interpretation? It seems like we should be able to interpret the models from the output alone, but the visualizations are helpful. 
+What do you expect to see more in Project 2?
+nothing directed at you specifically, more generally "how am I going to get all this done?"
+None
+In multinomial regression or ordinal categorical regression. How do we count the number of degrees of freedom available to us? What are the rules? are they the same rule (1:20 or 1:100) for linear and logistic regression respectively? 
+Not truly a question, but learning how to cull out the most important predictor variables from a massive dataset such that there aren't 16-20 predictor terms in the final model.
+1) For count data, should I build ZIP, ZINB, Poisson, Hurdle etc every time to determine the best fit model? 2) Finding the appropriate project 2 data. 
+Will we have similar small group discussion on project 2 as project 1? 
+none
+My biggest concern is just making sure I pick a data set that actually aligns with the goals of my data analysis. 
+```
 
 ## Remaining Deliverables This Semester
 
