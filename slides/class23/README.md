@@ -80,48 +80,16 @@ Count | **Do you know what data you will use for Project 2?**
 16 (42%) | Maybe, I have an idea about what I will do, but haven't settled on the details yet.
 5 (13%) | No, I haven't gotten to that point yet in my thinking about Project 2.
 
-### What is the most important thing you've learned recently from the course? (not yet edited, first 38 responses)
+### What is the most important thing you've learned recently from the course? (edited)
 
-```
-fitting different logistic model and use rootogram.
-A lot, for example, how to evaluate logistic regression, how to use ggplot, how to do cross validation for simple linear regression models.
-converting wide and long format data; joining commands to combine data sets
-multinomial logistic regression
-How to predict a categorical outcome
-How to use a rootogram
-New modeling techniques for different types of outcomes
-How to graph multinomial logistic regression results 
-Poisson Regression
-How to deal with categorical outcomes and count outcomes. 
-zero inflated model
-Rootograms
-poisson regression model 
-Logit Model, poisson regression, Multinomial logistic Regression:
-Regression for ordinal and non-ordinal multicategorical outcomes.
-Learning how to build models for ordered (ordinal) categorical outcomes
-How to interpret proportional odds logistic regression models.
-lrm works good with ordinary logistic regression as well - may I should stick to lrm whenever I run logistic regression. 
-regression on multi categorical outcome
-How to make models for Multi-categorical variables. 
-Analyzing Literary Styles with Multinomial Logistic Regression
-multinomial regression
-Modeling of ordinal categorical outcome
-building model for multi-categorical outcomes 
-Rootogram and zero-inflated models
-Other models beyond linear and logistic regression
-Regression methods for count and multi-categorical outcomes.
-Multinomial Logistic Regression
-Learning more about using proportional odds logistic models.
-That the models for multi-categorical outcomes are really complex
-fitting and interpreting models that are for count outcomes 
-Proportional odds logistic regression
-Understanding when to use Poisson Regression, ordinal categorical regression and multinomial regression. 
-I could revisit some of the questions I asked with my Project 1 models more effectively (or in a different way) if I'd run multinomial logistic regression instead of linear regression.
-It's important to select the appropriate model based on type of outcome to be predicted
-Graphing categorical data visually is helpful for planning regression model for modeling categorical outcome.
-Models for Ordinal and Models for Nominal Multi-Categorical Outcomes
-Lots of new types of regression types for different contexts. 
-```
+- Developing and using a rootogram to assess the fit of a model for a count outcome to data.
+- The prediction of count outcomes with a wide variety of models based on Poisson and Negative Binomial regression.
+    - The notion of a "zero-inflated" model to account for a particular kind of overdispersion.
+- The prediction of ordinal multi-categorical outcomes with proportional odds logistic regression models.
+- The prediction of nominal multi-categorical outcomes with multinomial logistic regression models.
+- Converting data from "wide" format to "long" format.
+- "Joining" commands to combine multiple data sets.
+- Graphing and tabulating multi-categorical data.
 
 ### What question(s) about the course are uppermost in your mind now? (not yet edited, first 38 responses)
 
