@@ -39,6 +39,7 @@ As another example, some people tried using age-adjusted mortality to predict ye
 
 7. Remember that the Project 2 Registration (and Scheduling) [Google Form](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1) is due 2018-04-17, but the sooner the better. A few people have completed it successfully, and others need to revise and resubmit (which you can do by editing the form using the link that is automatically emailed to you when you submit the form.) 
     - I've added some text to the questions on the form to make it a little clearer in terms of what I need in order to approve your work. In particular, I need more details about the data (particularly if it isn't freely available to me online) than some folks provided on their first try. 
+    - In the Minute Papers, some people worried about whether their proposed research questions were too simple. That seems unlikely. Most people try to do too much, rather than too little. But, to frame the idea, you're looking for one or two questions that are amenable to building a prediction or regression model using a clear outcome and a clear set of predictors, perhaps with one key predictor (the "exposure" or "intervention" of interest) and several secondary predictors. If you have something like that in mind, good.
     - Approved projects are summarized at [this link](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/APPROVED.md).
     - If you have questions about Project 2, **PLEASE** ask them at 431-help, or at Office Hours, or after class or in minute papers. **WE WANT TO HELP YOU**.
 
@@ -93,64 +94,60 @@ Count | **Do you know what data you will use for Project 2?**
 
 ### What question(s) about the course are uppermost in your mind now? (not yet edited, first 38 responses)
 
-- Project 2
-    - Is our presentation about Project 1 **and** Project 2, or just Project 2? 
-        - Just Project 2.
-    - Is there anything specific you want to see in Project 2? 
-        1. Sure. There are about a dozen things. I want to see a clear statement of one or two research questions, preceded by an appropriate (but not at all lengthy) background section motivating those questions.
-        2. a clear description of the data to be used, with careful attention to cleaning the data to make the follow-up analyses as straightforward as possible.
-        3. the use of techniques from the 431-432 sequence for every stage of the data science process, from data ingest and tidying through the cycle of transformation, visualization and modeling, and then finally a careful communication of the end result.
-        4. the use of regression methods (which can include OLS, logistic models, and the more recently discussed methods for count, multi-categorical and (soon) survival outcomes) that are directly applicable to the research questions you posed at the start
-        5. the use of appropriate tools for diagnosing the quality of those models, including visualizations and summary statistics
-        6. identification and comparison of candidate models to address your research question(s) if there are real choices to be made (if you have a clear model in mind at the start, there's no need to use "best subsets" or something just to artificially create a competitor)
-        7. validation of your models in an appropriate way if prediction is relevant to your research question(s), as I expect it will be
-        8. clear evidence that you have thought hard, and well, about what pieces of output, specifically, think in terms of creating meaningful annotations for every single scrap of output that you generate and present: if you cannot think of anything to say about a piece of output easily, why are you including it?
-        9. a clear re-statement of the research questions you asked at the start, now with conclusions that answer those questions
-        10. a clear statement of the limitations of your approach, and
-        11. a clear statement about useful next steps that you would like to try on the data, moving forward
-        12. an extremely well-organized presentation of the portfolio, well-labeled, with good headings used throughout and making good use of the technology to create a table of contents that helps guide us to specific elements of your work quickly.
-        13. I've added all of these thoughts to the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html) document, which now includes section 4.1 entitled "What Dr. Love Wants to See" and section 4.2 entitled "A List of 12 Things I Definitely Want To See in Project 2" which, combined, say the same things in at least two different ways. Good luck!
-    - Can I use "this method not taught in 431 or 432" in my Project 2? 
-        - In your conclusions/discussion section, it's fine to bring up some other ideas that you'll follow up on in the future, but otherwise, no. Demonstrate what you can do with the tools taught in this course. Especially because not many "machine learning" methods actually beat well-tuned logistic regression or OLS models.
+#### Questions About Project 2, Specifically
 
+- Will we discuss our Project 2 work in small groups like we did with Project 1?
+    - I don't know. It would have to be on April 24 or 26. The main problems I see are that (a) students would have to have some sort of draft material in place quickly, when there are other things due and (b) what I could "cover" in lecture would be reduced a bit. But neither of those problems is serious to me. Let's do an instant poll. [What do you folks prefer?](https://goo.gl/forms/OhSDhLCrlmSUoLZ32)
+- My biggest concern is just making sure I pick a data set that actually aligns with the goals of my data analysis. 
+    - Good. That is a good thing to be focusing on. Developing a set of 1-2 research questions that can be addressed well with the data at hand is the most important thing. "[90% of directing a play/movie is casting](http://noamkroll.com/90-of-directing-is-casting-heres-why-you-need-to-prioritize-your-talent/)."
+- Is our presentation about Project 1 **and** Project 2, or just Project 2? 
+    - Just Project 2.
+- Can I use "this method not taught in 431 or 432" in my Project 2? 
+    - In your conclusions/discussion section, it's fine to bring up some other ideas that you'll follow up on in the future, but otherwise, no. Demonstrate what you can do with the tools taught in this course. Especially because not many "machine learning" methods actually beat well-tuned logistic regression or OLS models.
+- Is there anything specific you want to see in Project 2? 
+    1. Sure. There are about a dozen things. I want to see a clear statement of one or two research questions, preceded by an appropriate (but not at all lengthy) background section motivating those questions.
+    2. a clear description of the data to be used, with careful attention to cleaning the data to make the follow-up analyses as straightforward as possible.
+    3. the use of techniques from the 431-432 sequence for every stage of the data science process, from data ingest and tidying through the cycle of transformation, visualization and modeling, and then finally a careful communication of the end result.
+    4. the use of regression methods (which can include OLS, logistic models, and the more recently discussed methods for count, multi-categorical and (soon) survival outcomes) that are directly applicable to the research questions you posed at the start
+    5. the use of appropriate tools for diagnosing the quality of those models, including visualizations and summary statistics
+    6. identification and comparison of candidate models to address your research question(s) if there are real choices to be made (if you have a clear model in mind at the start, there's no need to use "best subsets" or something just to artificially create a competitor)
+    7. validation of your models in an appropriate way if prediction is relevant to your research question(s), as I expect it will be
+    8. clear evidence that you have thought hard, and well, about what pieces of output, specifically, think in terms of creating meaningful annotations for every single scrap of output that you generate and present: if you cannot think of anything to say about a piece of output easily, why are you including it?
+    9. a clear re-statement of the research questions you asked at the start, now with conclusions that answer those questions
+    10. a clear statement of the limitations of your approach, and
+    11. a clear statement about useful next steps that you would like to try on the data, moving forward
+    12. an extremely well-organized presentation of the portfolio, well-labeled, with good headings used throughout and making good use of the technology to create a table of contents that helps guide us to specific elements of your work quickly.
+    13. I've added all of these thoughts to the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html) document, which now includes section 4.1 entitled "What Dr. Love Wants to See" and section 4.2 entitled "A List of 12 Things I Definitely Want To See in Project 2" which, combined, say the same things in at least two different ways. Good luck!
+    
+#### More General Questions About Using The Tools We've Learned
+
+- Do we graph model response probabilities for interpretive purposes or just for our own internal help with interpretation?  
+    - Both, and more. What helps you helps the person for whom you're doing the analysis too, right? Some people are reluctant to accept the idea that some things are better done with visualization than with numerical summaries. Try not to be one of those people. I have a PhD in this stuff, and 30 years of practical experience. Graphs are great.
+- When using gridExtra::grid.arrange() to place plots next to each other, how do you increase the space between the plots? 
+    - This can be tricky. In my research work, I have started to use the `plot_grid` function in [the `cowplot` package](https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html) in this setting, to gain more control.
+- Is there ever a case where we could use either a Poisson or an ordinal logistic regression? When does "counts" turn into "ordered categories" or vice versa?
+    - There is certainly some potential for overlap. If the outcome is actually a count of something, it makes sense to run a model for a count outcome, otherwise not. Ordered categories include many things that aren't counts.
+- If you have an outcome like a percentage that has a definite upper and lower limit is it always better to deal with it as a count outcome even if the distribution looks relatively normally distributed and without big walls and ceilings?
+    - No. OLS is a perfectly reasonable way to deal with data that have theoretical but rarely reached boundaries. 
+- What would be the best way to choose the reference group when we have multiple (nominal) categories?
+    - It doesn't matter from a "how the model is fit" standpoint. R selects the first level in the factor. It is useful to think about how you want to interpret the results more than anything else. I usually use as the referent group the group that best describes the current "status quo" when such a thing exists.
+- For count outcomes, should I build ZIP, ZINB, Poisson, Hurdle etc every time to determine the best fit model?
+    - Certainly not. I'd start with a graph of the counts. If you have a clear floor at 0 with lots of 0 observations, then skip right ahead to a zero-inflated approach. If you don't, then try a Poisson model and check for overdispersion. If you see meaningful overdispersion, try a Negative Binomial model. Hurdle models are a last resort unless you really have an important ceiling and floor, because they're usually not a lot more effective than something like a ZINB. Tobit models are something beyond a last resort. You should usually be able to find a useful model (if there is one) in two fits.
+
+## Individual Responses Required
+
+- I don't have a lot of zero outcome. Can I still use zero inflated probit model? 
+- Is the outcome of Poisson regression model Poisson distribution?
+- Will the survival analysis section of this course help me to better understand what's going on in my survival analysis course?
+- Still trying to find out how to export spline functions on logistic regressions (and beyond) but that may be more of a personal issue...
+- Can we use regression on multi categorical outcome when we have asymmetric presentations of the outcome? 
 
 ```
-When using gridExtra::grid.arrange() to place plots next to each other, how do you increase the space between the plots? 
-I want to learn more methods of data visualization for a lay audience
-Feeling a bit unsettled by the complete freedom for Project 2. Is there anything specific you want to see? How complex should the research questions be? I am nervous about having something too simple...
-None
-Is there ever a case where we could use either a Poisson OR an ordinal logistic regression? When does "counts" turn into "ordered categories" or vice versa?
-If you have an outcome like a percentage that has a definite upper and lower limit is it always better to deal with it as a count outcome even if the distribution looks relatively normally distributed and without big walls and ceilings?
-I don't have a lot of zero outcome. Can I still use zero inflated probit model? 
-Survival analysis 
-Is the outcome of Poisson regression model Poisson distribution?
 what are the common peeking behaviors? 
-Will the survival analysis section of this course help me to better understand what's going on in my survival analysis course?
-Not much in particular.  Still trying to find out how to export spline functions on logistic regressions (and beyond) but that may be more of a personal issue...
 I am curious about different types of graphics that can be used to demonstrate data to the reader.
-What would be the best way to choose the reference variable when we have more than 3 ordinary variables, is it the highest proportion? the most common in the sense of the study question? the most effective variable on the outcome? 
-can we use regression on multi categorical outcome when we have asymmetric presentations of the outcome? 
-None as of now
-How to make a good project 2?
-Nothing comes to mind right now. 
-"linear mixed effect models, I would like to know about modeling for data that has  both  continuous and a stochastic in nature. Please have a look at:
-
-linear mixed effect models "
-Thank you
-Questions on hw 6 problems. How reasonable/meaningful predictors should I choose?
-Cox regression and propensity matching
-To get better understanding of the regression methods we learnt in last few weeks. 
-Homework 6 - quality data visualization 
-Do we graph model response probabilities for interpretive purposes or just for our own internal help with interpretation? It seems like we should be able to interpret the models from the output alone, but the visualizations are helpful. 
-What do you expect to see more in Project 2?
-nothing directed at you specifically, more generally "how am I going to get all this done?"
-None
 In multinomial regression or ordinal categorical regression. How do we count the number of degrees of freedom available to us? What are the rules? are they the same rule (1:20 or 1:100) for linear and logistic regression respectively? 
-Not truly a question, but learning how to cull out the most important predictor variables from a massive dataset such that there aren't 16-20 predictor terms in the final model.
-1) For count data, should I build ZIP, ZINB, Poisson, Hurdle etc every time to determine the best fit model? 2) Finding the appropriate project 2 data. 
 Will we have similar small group discussion on project 2 as project 1? 
 none
-My biggest concern is just making sure I pick a data set that actually aligns with the goals of my data analysis. 
 ```
 
 ## Remaining Deliverables This Semester
