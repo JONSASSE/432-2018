@@ -117,13 +117,14 @@ Count | **Do you know what data you will use for Project 2?**
     10. a clear statement of the limitations of your approach, and
     11. a clear statement about useful next steps that you would like to try on the data, moving forward
     12. an extremely well-organized presentation of the portfolio, well-labeled, with good headings used throughout and making good use of the technology to create a table of contents that helps guide us to specific elements of your work quickly.
-    13. I've added all of these thoughts to the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html) document, which now includes section 4.1 entitled "What Dr. Love Wants to See" and section 4.2 entitled "A List of 12 Things I Definitely Want To See in Project 2" which, combined, say the same things in at least two different ways. Good luck!
+
+I've added all of these thoughts to the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html) document, which now includes section 4.1 entitled "What Dr. Love Wants to See" and section 4.2 entitled "A List of 12 Things I Definitely Want To See in Project 2" which, combined, say the same things in at least two different ways. Good luck!
     
 #### More General Questions About Using The Tools We've Learned
 
 - Do we graph model response probabilities for interpretive purposes or just for our own internal help with interpretation?  
     - Both, and more. What helps you helps the person for whom you're doing the analysis too, right? Some people are reluctant to accept the idea that some things are better done with visualization than with numerical summaries. Try not to be one of those people. I have a PhD in this stuff, and 30 years of practical experience. Graphs are great.
-- When using gridExtra::grid.arrange() to place plots next to each other, how do you increase the space between the plots? 
+- When using `gridExtra::grid.arrange()` to place plots next to each other, how do you increase the space between the plots? 
     - This can be tricky. In my research work, I have started to use the `plot_grid` function in [the `cowplot` package](https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html) in this setting, to gain more control.
 - Is there ever a case where we could use either a Poisson or an ordinal logistic regression? When does "counts" turn into "ordered categories" or vice versa?
     - There is certainly some potential for overlap. If the outcome is actually a count of something, it makes sense to run a model for a count outcome, otherwise not. Ordered categories include many things that aren't counts.
