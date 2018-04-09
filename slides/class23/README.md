@@ -7,7 +7,7 @@
 
 Today's class will begin with discussion of animated data visualizations, and then we'll discuss methods for exploring time-to-event, or survival data. The survival data ideas discussed today are (mostly) covered in [Chapter 21 of the Course Notes](https://thomaselove.github.io/432-notes/). 
 
-- In a few minutes, I'll want you to take this [one-question instant poll](https://goo.gl/forms/OhSDhLCrlmSUoLZ32), so you might as well open it up so that when we get to it, you'll be all set. It asks [this question](https://github.com/THOMASELOVE/432-2018/blob/master/slides/class23/poll.PNG). Thanks.
+- **Instant Poll** In a few minutes, I'll want you to take this [one-question instant poll](https://goo.gl/forms/OhSDhLCrlmSUoLZ32), so you might as well open it up so that when we get to it, you'll be all set. It asks [this question](https://github.com/THOMASELOVE/432-2018/blob/master/slides/class23/poll.PNG). Thanks.
 
 Links to the visualizations we'll discuss today:
 
