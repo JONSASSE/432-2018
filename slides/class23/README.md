@@ -97,7 +97,7 @@ Count | **Do you know what data you will use for Project 2?**
 #### Questions About Project 2, Specifically
 
 - Will we discuss our Project 2 work in small groups like we did with Project 1?
-    - I don't know. It would have to be on April 24 or 26. The main problems I see are that (a) students would have to have some sort of draft material in place quickly, when there are other things due and (b) what I could "cover" in lecture would be reduced a bit. But neither of those problems is serious to me. Let's do an instant poll. [What do you folks prefer?](https://goo.gl/forms/OhSDhLCrlmSUoLZ32)
+    - I don't know. It would have to be on April 24 or 26. The main problems I see are that (a) students would have to have some sort of draft material in place quickly, when there are other things due and (b) what I could "cover" in lecture would be reduced a bit. But neither of those problems is serious to me. [Instant Poll: What do you folks prefer?](https://goo.gl/forms/OhSDhLCrlmSUoLZ32)
 - My biggest concern is just making sure I pick a data set that actually aligns with the goals of my data analysis. 
     - Good. That is a good thing to be focusing on. Developing a set of 1-2 research questions that can be addressed well with the data at hand is the most important thing. "[90% of directing a play/movie is casting](http://noamkroll.com/90-of-directing-is-casting-heres-why-you-need-to-prioritize-your-talent/)."
 - Is our presentation about Project 1 **and** Project 2, or just Project 2? 
@@ -133,21 +133,18 @@ Count | **Do you know what data you will use for Project 2?**
     - It doesn't matter from a "how the model is fit" standpoint. R selects the first level in the factor. It is useful to think about how you want to interpret the results more than anything else. I usually use as the referent group the group that best describes the current "status quo" when such a thing exists.
 - For count outcomes, should I build ZIP, ZINB, Poisson, Hurdle etc every time to determine the best fit model?
     - Certainly not. I'd start with a graph of the counts. If you have a clear floor at 0 with lots of 0 observations, then skip right ahead to a zero-inflated approach. If you don't, then try a Poisson model and check for overdispersion. If you see meaningful overdispersion, try a Negative Binomial model. Hurdle models are a last resort unless you really have an important ceiling and floor, because they're usually not a lot more effective than something like a ZINB. Tobit models are something beyond a last resort. You should usually be able to find a useful model (if there is one) in two fits.
+- In multinomial regression or ordinal categorical regression, how do we count the effective sample size?
+    - Events per variable is a useful summary for survival data and binary data, but not so helpful in this setting. I don't think I have a great answer, except to suggest that the binary approaches are still reasonable, but would suggest that the minimum category size is the key issue, which is daunting.
 
 ## Individual Responses Required
 
+```
 - I don't have a lot of zero outcome. Can I still use zero inflated probit model? 
 - Is the outcome of Poisson regression model Poisson distribution?
 - Will the survival analysis section of this course help me to better understand what's going on in my survival analysis course?
 - Still trying to find out how to export spline functions on logistic regressions (and beyond) but that may be more of a personal issue...
 - Can we use regression on multi categorical outcome when we have asymmetric presentations of the outcome? 
-
-```
-what are the common peeking behaviors? 
-I am curious about different types of graphics that can be used to demonstrate data to the reader.
-In multinomial regression or ordinal categorical regression. How do we count the number of degrees of freedom available to us? What are the rules? are they the same rule (1:20 or 1:100) for linear and logistic regression respectively? 
-Will we have similar small group discussion on project 2 as project 1? 
-none
+- What are the common peeking behaviors? 
 ```
 
 ## Remaining Deliverables This Semester
