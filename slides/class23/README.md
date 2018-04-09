@@ -77,6 +77,8 @@ Count | **Have you read (carefully) the general Post-Project 1 Feedback?**
 34 (90%) | Yes, I've read it carefully.
 4 (11%) | No, I haven't read it carefully. I should do that, too.
 
+I don't want to cast aspersions, but that doesn't match up too well with something else I know about views of that material.
+
 Count | **Do you know what data you will use for Project 2?**
 ----: | -----------------------------------------------------
 17 (45%) | Yes, I have a definite plan for what data I will use.
@@ -153,6 +155,3 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 - [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Presentations are on **2018-05-03**, **2018-05-07** and **2018-05-08**, and will be scheduled by 2018-04-19.
 - [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Revisions are due at Noon on **Wednesday 2018-05-09**. Whether you'll need to revise will be determined at your presentation.
 
-## Tweet of the Day
-
-To come.
