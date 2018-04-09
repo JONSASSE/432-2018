@@ -154,6 +154,23 @@ Use the template well. When you submit your project to Canvas,
     
         + [The template](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) provides some tips about what we are looking for in the Conclusions section.
 
+## A List of 12 Things I Definitely Want To See in Project 2
+
+I want to see:
+
+1. a clear statement of one or two research questions, preceded by an appropriate (but not at all lengthy) background section motivating those questions.
+2. a clear description of the data to be used, with careful attention to cleaning the data to make the follow-up analyses as straightforward as possible.
+3. the use of techniques from the 431-432 sequence for every stage of the data science process, from data ingest and tidying through the cycle of transformation, visualization and modeling, and then finally a careful communication of the end result.
+4. the use of regression methods (which can include OLS, logistic models, and the more recently discussed methods for count, multi-categorical and (soon) survival outcomes) that are directly applicable to the research questions you posed at the start
+5. the use of appropriate tools for diagnosing the quality of those models, including visualizations and summary statistics
+6. identification and comparison of candidate models to address your research question(s) if there are real choices to be made (if you have a clear model in mind at the start, there's no need to use "best subsets" or something just to artificially create a competitor)
+7. validation of your models in an appropriate way if prediction is relevant to your research question(s), as I expect it will be
+8. clear evidence that you have thought hard, and well, about what pieces of output, specifically, think in terms of creating meaningful annotations for every single scrap of output that you generate and present: if you cannot think of anything to say about a piece of output easily, why are you including it?
+9. a clear re-statement of the research questions you asked at the start, now with conclusions that answer those questions
+10. a clear statement of the limitations of your approach, and
+11. a clear statement about useful next steps that you would like to try on the data, moving forward
+12. an extremely well-organized presentation of the portfolio, well-labeled, with good headings used throughout and making good use of the technology to create a table of contents that helps guide us to specific elements of your work quickly.
+
 # Your Presentation on May 3, 7, or 8
 
 - You will submit your final work at least **3 hours before your presentation time** as an HTML file on [Canvas](https://canvas.case.edu/). The link becomes available on Canvas on 2017-04-15.
