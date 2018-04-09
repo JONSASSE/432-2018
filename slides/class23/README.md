@@ -139,17 +139,6 @@ I've added all of these thoughts to the [Project 2 Instructions](https://htmlpre
 - In multinomial regression or ordinal categorical regression, how do we count the effective sample size?
     - Events per variable is a useful summary for survival data and binary data, but not so helpful in this setting. I don't think I have a great answer, except to suggest that the binary approaches are still reasonable, but would suggest that the minimum category size is the key issue, which is daunting.
 
-## Individual Responses Required
-
-```
-- I don't have a lot of zero outcome. Can I still use zero inflated probit model? 
-- Is the outcome of Poisson regression model Poisson distribution?
-- Will the survival analysis section of this course help me to better understand what's going on in my survival analysis course?
-- Still trying to find out how to export spline functions on logistic regressions (and beyond) but that may be more of a personal issue...
-- Can we use regression on multi categorical outcome when we have asymmetric presentations of the outcome? 
-- What are the common peeking behaviors? 
-```
-
 ## Remaining Deliverables This Semester
 
 The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) page is always the final word, if you are confused.
