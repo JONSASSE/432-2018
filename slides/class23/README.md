@@ -16,7 +16,7 @@ Links to the visualizations we'll discuss today:
 
 ## Discussion of the Minute Paper after Class 22
 
-Thank you to the 38/41 who completed the Minute Paper. I really appreciate the feedback.
+Thank you to the 38 of you who completed the Minute Paper. I really appreciate the feedback.
 
 ### Have you looked at Homework 6 in a meaningful way yet?
 
@@ -30,21 +30,21 @@ Count | Response
 
 Count | **Do you plan to work alone or in a team of two for Project 2?**
 ----: | --------------------------------------------------------------
-20 (53%) | I will definitely work alone.
-13 (34%) | I don't know for sure, but I expect to work alone.
-1 (3%) | I don't know for sure, but I expect to work with a partner.
-4 (11%) | I will definitely work with a partner.
+**20 (53%)** | **I will definitely work alone.**
+13 | I don't know for sure, but I expect to work alone.
+1  | I don't know for sure, but I expect to work with a partner.
+4  | I will definitely work with a partner.
 
-Count | **Have you read (carefully) the general Post-Project 1 Feedback?**
+Count | **Have you read (carefully) the [general Post-Project 1 Feedback](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/FEEDBACK.md)?**
 ----: | ------------------------------------------------------------------
-34 (90%) | Yes, I've read it carefully.
-4 (11%) | No, I haven't read it carefully. I should do that, too.
+**34 (90%)** | **Yes, I've read it carefully.**
+4 | No, I haven't read it carefully. I should do that, too.
 
 I don't want to cast aspersions, but that doesn't match up too well with something else I know about views of that material.
 
 Count | **Do you know what data you will use for Project 2?**
 ----: | -----------------------------------------------------
-17 (45%) | Yes, I have a definite plan for what data I will use.
+**17 (45%)** | **Yes, I have a definite plan for what data I will use.**
 16 (42%) | Maybe, I have an idea about what I will do, but haven't settled on the details yet.
 5 (13%) | No, I haven't gotten to that point yet in my thinking about Project 2.
 
