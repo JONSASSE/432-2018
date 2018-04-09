@@ -44,7 +44,7 @@ pm2.5 | Average daily amount of fine particulate matter in micrograms per cubic 
 h2oviol | Presence of a water violation: Yes or No
 sev_housing | % of households with at least 1 of 4 housing problems: overcrowding, high housing costs, or lack of kitchen or plumbing facilities
 drive_alone | % of workers who drive alone to work
-age-adj-mortality | premature age-adjusted mortality
+age.adj.mortality | premature age-adjusted mortality
 dm_prev | % with a diabetes diagnosis
 freq_phys_distress | % in frequent physical distress
 freq_mental_distress | % in frequent mental distress
