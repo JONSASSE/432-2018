@@ -22,7 +22,7 @@ Links to the visualizations we'll discuss today:
 
 4. Speaking of visualizations, the `ggridges` package just got a substantial upgrade, and can now do [lots of new things](https://twitter.com/ClausWilke/status/981884867196669952). [Check it out](https://cran.r-project.org/package=ggridges).
 
-5. A hint for Homework 6 (and for your Project, potentially):
+5. A hint for [Homework 6](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw6) (and for your Project, potentially):
 
 `polr` and several of the other modeling pieces we've worked on recently are finicky, at least in comparison to OLS. Sometimes, you'll get to the point where it seems like the model won't run, or won't summarize properly, or you have some extremely large or extremely small coefficient estimates or standard errors. Should this happen to you, the first thing I would do is try to identify which of your predictors is causing this problem, by running the model first with one predictor, then two, etc. until you figure out which predictors cause problems. Reasons why you could be having a problem include:
 
