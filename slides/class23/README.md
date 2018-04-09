@@ -93,12 +93,29 @@ Count | **Do you know what data you will use for Project 2?**
 
 ### What question(s) about the course are uppermost in your mind now? (not yet edited, first 38 responses)
 
+- Project 2
+    - Is our presentation about Project 1 **and** Project 2, or just Project 2? 
+        - Just Project 2.
+    - Is there anything specific you want to see in Project 2? 
+        1. Sure. There are about a dozen things. I want to see a clear statement of one or two research questions, preceded by an appropriate (but not at all lengthy) background section motivating those questions.
+        2. a clear description of the data to be used, with careful attention to cleaning the data to make the follow-up analyses as straightforward as possible.
+        3. the use of techniques from the 431-432 sequence for every stage of the data science process, from data ingest and tidying through the cycle of transformation, visualization and modeling, and then finally a careful communication of the end result.
+        4. the use of regression methods (which can include OLS, logistic models, and the more recently discussed methods for count, multi-categorical and (soon) survival outcomes) that are directly applicable to the research questions you posed at the start
+        5. the use of appropriate tools for diagnosing the quality of those models, including visualizations and summary statistics
+        6. identification and comparison of candidate models to address your research question(s) if there are real choices to be made (if you have a clear model in mind at the start, there's no need to use "best subsets" or something just to artificially create a competitor)
+        7. validation of your models in an appropriate way if prediction is relevant to your research question(s), as I expect it will be
+        8. clear evidence that you have thought hard, and well, about what pieces of output, specifically, think in terms of creating meaningful annotations for every single scrap of output that you generate and present: if you cannot think of anything to say about a piece of output easily, why are you including it?
+        9. a clear re-statement of the research questions you asked at the start, now with conclusions that answer those questions
+        10. a clear statement of the limitations of your approach, and
+        11. a clear statement about useful next steps that you would like to try on the data, moving forward
+        12. an extremely well-organized presentation of the portfolio, well-labeled, with good headings used throughout and making good use of the technology to create a table of contents that helps guide us to specific elements of your work quickly.
+        13. I've added all of these thoughts to the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html) document, which now includes section 4.1 entitled "What Dr. Love Wants to See" and section 4.2 entitled "A List of 12 Things I Definitely Want To See in Project 2" which, combined, say the same things in at least two different ways. Good luck!
+    - Can I use "this method not taught in 431 or 432" in my Project 2? 
+        - In your conclusions/discussion section, it's fine to bring up some other ideas that you'll follow up on in the future, but otherwise, no. Demonstrate what you can do with the tools taught in this course. Especially because not many "machine learning" methods actually beat well-tuned logistic regression or OLS models.
+
+
 ```
-will we show our project1 in our presentation?
-I wonder if I can use some other machine learning models that are not covered in class on my project, because it is on real data from my lab and I want to try my best using every possible model I can access. Thank you.
 When using gridExtra::grid.arrange() to place plots next to each other, how do you increase the space between the plots? 
-excited to learn survival analysis!
-n/a
 I want to learn more methods of data visualization for a lay audience
 Feeling a bit unsettled by the complete freedom for Project 2. Is there anything specific you want to see? How complex should the research questions be? I am nervous about having something too simple...
 None
