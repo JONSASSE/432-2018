@@ -71,6 +71,10 @@ Count | **Do you know what data you will use for Project 2?**
     - Just Project 2.
 - Can I use "this method not taught in 431 or 432" in my Project 2? 
     - In your conclusions/discussion section, it's fine to bring up some other ideas that you'll follow up on in the future, but otherwise, no. Demonstrate what you can do with the tools taught in this course. Especially because not many "machine learning" methods actually beat well-tuned logistic regression or OLS models.
+- Does our data set need to be larger than the one we used in Project 1?
+    - Certainly not. If you are building regression models (any type) with a meaningful outcome, 6-8 predictors and 1000 observations, that's ample. Smaller is great, too. Much larger will be very slow to run and hard to diagnose, so you might consider sampling. 
+    - My #1 concern is that you'll try to do more than you can reasonbly present (or I can reasonably evaluate) in a 20-minute presentation window.
+    - My #2 concern is that you'll not manage to effectively link your research questions directly to a data set that can provide some potentially meaningful answers to those questions.
 - Is there anything specific you want to see in Project 2? 
     1. Sure. There are about a dozen things. I want to see a clear statement of one or two research questions, preceded by an appropriate (but not at all lengthy) background section motivating those questions.
     2. a clear description of the data to be used, with careful attention to cleaning the data to make the follow-up analyses as straightforward as possible.
