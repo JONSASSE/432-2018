@@ -1,7 +1,6 @@
-# Project 2 Proposals Approved by Dr. Love (8 proposals, 9 people)
+# Project 2 Proposal Status
 
-- Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
-- Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
+## Proposals that are Approved (8 proposals, 9 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -18,6 +17,10 @@ Paired Investigator(s) | Project 2 Title
 Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperformance in Multiple Sclerosis
 
 ## Proposals Still to Come or Under Revision (32)
+
+- Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
+- Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
+- If you've been asked to do a revision, edit your submission accordingly, again, by **2018-04-17 at 5 PM**.
 
 ```
 Khaled Alayed
