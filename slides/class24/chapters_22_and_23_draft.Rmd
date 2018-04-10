@@ -1,0 +1,702 @@
+---
+title: "Chapters 22 and 23 Draft Version"
+author: "Thomas E. Love"
+date: "Version: `r Sys.Date()`"
+output:
+  html_document:
+    theme: readable
+    highlight: kate
+    toc: true
+    number_sections: true
+---
+
+```{r set-options, echo=FALSE, cache=FALSE}
+knitr::opts_chunk$set(comment=NA, 
+                      message = FALSE, 
+                      warning = FALSE)
+```
+
+```{r add packages you need, message=FALSE}
+library(survival); library(OIsurv); library(survminer)
+library(rms); library(broom); library(tidyverse)
+```
+
+```{r import data}
+hem <- read.csv("data/hem.csv") %>% tbl_df
+leukem <- read.csv("data/leukem.csv") %>% tbl_df
+```
+
+
+# Cox Regression Models for Survival Data: Example 1
+
+The Cox proportional hazards (Cox regression) model fits survival data with a constant (i.e. not varying over time) covariate $x$ to a hazard function of the form:
+
+$$
+h(t | x) = h_0(t) exp[\beta_1 x]
+$$
+
+where we will estimate the unknown value of $\beta_1$ and where $h_0(t)$ is the baseline hazard, which is a non-parametric and unspecified value which depends on $t$ but not on $x$.
+
+- For particular $x$ values, we will be able to estimate the survival function if we have an estimate of the baseline survival function, $\hat{S_0}(t)$.
+
+The estimated survival function for an individual with covariate value $x_k$ turns out to be
+
+$$
+\hat{S}(t | x_k) = [\hat{S_0}(t)]^{exp(\beta_1 x_k)}
+$$
+
+From Wikipedia (yes, really) ...
+
+> Survival models can be viewed as consisting of two parts: the underlying hazard function, describing how the risk of event per time unit changes over time at baseline levels of covariates; and the effect parameters, describing how the hazard varies in response to explanatory covariates. 
+
+The key assumption in a Cox model is that the hazards are **proportional** - other types of survival models need not have this restriction.  Quoting the always reliable (well, it's better than you think) Wikipedia ...
+
+> In a proportional hazards model, the unique effect of a unit increase in a covariate is multiplicative with respect to the hazard rate. For example, taking a drug may halve one's hazard rate for a stroke occurring, or, changing the material from which a manufactured component is constructed may double its hazard rate for failure. 
+
+There are two main approaches to fitting Cox models in R.
+
+- the `coxph` function in the `survival` package, and 
+- the `cph` function in the `rms` package.
+
+## Sources used in building this material
+
+- David Diez's excellent supplement for the OpenIntro Statistics project, on [Survival Analysis in R](https://www.openintro.org/stat/surv.php). I've posted it on our web site, as well.
+- Some tools in R to do some fancier work can be viewed at https://cran.r-project.org/web/views/Survival.html
+- You might also look at these two blog posts, originally from the Just Another Data blog.
+    - https://www.r-bloggers.com/survival-analysis-1/  
+    - https://www.r-bloggers.com/survival-analysis-2/
+- https://rpubs.com/daspringate/survival has some great slides, and I've stolen from them quite a bit here.
+
+## Fitting a Cox Model in R with `coxph`
+
+As a first example, I'll fit a model to predict time to recurrence in the `hem` data, on the basis of a single predictor: `genotype`.
+
+```{r surv_hem_cfit_setup}
+cfit <- with(hem, coxph(Surv(time, recur) ~ genotype))
+cfit
+```
+
+This summary provides an overall comparison of the two genotypes, using a proportional hazards model.
+
+- The default approach in R is to use the "efron" method of breaking ties: other options include "breslow" and "exact".
+
+### Summarizing the Fit 
+
+```{r surv_hem_cfit_summary}
+summary(cfit)
+```
+
+This provides estimates of the $\beta$ value for `genotype`, including standard errors and $p$ values for a Wald test. Also included is an estimate of the hazard ratio and its confidence interval.
+
+- Here we have a hazard ratio estimate of `exp(coef) = 3.787`, with 95\% CI (1.24, 11.57).
+- The hazard ratio is the multiplicative effect of the covariate (here, having at least one of the $\epsilon 2$ or $\epsilon 4$ allele) on the hazard function for recurrent hemorrhage
+    + A hazard ratio of 1 indicates no effect
+    + A hazard ratio > 1 indicates an increase in the hazard as the covariate rises
+    + A hazard ratio < 1 indicates a decrease in the hazard as the covariate rises
+
+We can also `tidy` the hazard ratio estimate with the `broom` package.
+
+```{r surv_hem_cfit_tidy}
+tidy(cfit, exponentiate = TRUE)
+```
+
+In addition, we have several other summaries:
+
+- The *concordance* measure is only appropriate when we have at least one continuous predictor in our Cox model.
+- The Cox & Snell pseudo-R^2^ reflects the improvement of the model we've fit over the model with an intercept alone, but isn't a proportion of anything (hence the listing of the maximum possible value).
+- The Likelihood ratio, Wald and Score (logrank) tests provide insight into the overall significance of the model.
+
+We can obtain a more detailed description of the likelihood-ratio test of the model with `anova`.
+
+```{r surv_hem_cfit_anova}
+anova(cfit)
+```
+
+### Glancing at the model?
+
+```{r}
+glance(cfit)
+```
+
+Here, we obtain several additional summaries of the model, including most of the important information from a summary of `cfit`.
+
+
+### Plot the baseline survival function
+
+Here, we'll plot the time in terms of months, but scaled to 12 month (one year) groups.
+
+```{r}
+plot(survfit(cfit), xscale = 12,
+     xlab = "Years after initial hemorrhage",
+     ylab = "Proportion without recurrent hemorrhage",
+     main = "Baseline Hazard Curve")
+```
+
+### Plot the genotype effect
+
+There are several ways to build these plots. One approach follows. Another uses a `cph` fit and the `survplot` function from the `rms` package.
+
+```{r}
+newdat <- with(hem, 
+               data.frame(
+                 genotype = c(1, 0)
+               )
+)
+
+newdat
+```
+
+```{r}
+plot(survfit(cfit, newdata = newdat), xscale = 12,
+     conf.int = TRUE,
+     col = c("red", "blue"),
+     xlab = "Years after initial hemorrhage",
+     ylab = "Proportion without recurrent hemorrhage",
+     main = "Plotting the genotype effects from the cfit Model")
+legend(0.5, 0.2, 
+       legend=c(
+         expression(paste("Homozygous ", epsilon, "3 / ", 
+                   epsilon, "3")), 
+         expression(paste("At least one ", epsilon,"2 or ",
+                   epsilon,"4 Allele"))
+       ),
+       lty = 1, 
+       col = c("red", "blue"),
+       text.col = c("red", "blue"))
+```
+
+### Testing the Key Assumption: Proportional Hazards
+
+The `cox.zph` function in the `survival` package will test the proportionality of all of the predictors included in your model by creating interactions with time. 
+
+- A small $p$ value would indicate a violation of the proportionality assumption.
+   
+```{r surv_hem_cfit_coxzph_test}
+cox.zph(cfit, transform="km", global=TRUE)
+```
+
+Since the *p* value here is not significant, we may be all right. But it's sensible to focus further on plots derived from the model fit, rather than relying solely on this test.
+
+### Plotting the `cox.zph` results for the `cfit` model
+
+`cox.zph` function can be used to generate a plot for each of the individual predictors in the model. Of course, in this case, we have just one predictor: `genotype`. If the proportional hazards assumption is appropriate, then we should see a slope of essentially zero in each such plot. A slope that is seriously different from zero suggests a violation of the proportional hazards assumption. 
+
+```{r surv_hem_cfit_coxzph_plot}
+plot(cox.zph(cfit, transform="km", global=TRUE))
+```
+
+The plot suggests only a slight rise in the plotted values over time, suggesting no serious problem with the proportional hazards assumption. This combined testing and plotting approach is a reasonable starting place for assessing the proportional hazards assumption, but it's likely insufficient for good practical work. 
+
+We'll see an example of a model where the proportional hazards assumption fits the data less well later, and when we do, we'll demonstrate two relatively simple options for accounting for this.
+
+## Fitting a Cox Model using `cph` from the `rms` package
+
+To set up a `cph` fit for our comparison of genotypes in the `hem` data, we'll follow these steps.
+
+```{r}
+units(hem$time) <- "month"
+d <- datadist(hem)
+options(datadist = "d")
+
+hemsurv <- Surv(time = hem$time, event = hem$recur)
+
+model_hem <- cph(hemsurv ~ genotype, data = hem, 
+                 x = TRUE, y = TRUE, surv = TRUE)
+```
+
+Note that the `surv = TRUE` piece is required to get some of the follow-up analyses to work smoothly.
+
+### The Main `cph` results
+
+```{r}
+model_hem
+```
+
+Included here are likelihood ratio and score tests for the model as a whole (as compared to the intercept-only model), as well as the usual discrimination indexes. 
+
+- These include both an R^2^ analog due to Nagelkerke (which can go all the way up to 1), and 
+- Somers' $Dxy$, which can also produce an estimate of the C statistic  (area under the curve) via the formula C = 0.5 + Dxy / 2, so here C = 0.5 + (.244/2) = 0.622
+- For lots more on survival analysis C statistics, look at the `survAUC` package in R.
+
+These results are followed by a table of Wald tests for each of the coefficients in the model.
+
+### Using `anova` with `cph`
+
+As in other `rms` fits, we can use `anova` to obtain more detailed (in terms of combining nonlinear terms and, if available, interactions) tests.
+
+```{r surv_anova_model_hem}
+anova(model_hem)
+```
+
+### Effect Sizes after `cph` fit
+
+We can use `summary` on a `cph` object to get and plot effect size estimates (here, these are hazard ratios.)
+
+```{r surv_hem_cph_summary, fig.height = 3}
+summary(model_hem)
+
+plot(summary(model_hem))
+```
+
+### Validating `cph` summaries
+
+For details on these last few indices (D, U, Q, etc.), visit `?validate.cph` in R.
+
+```{r surv_validate_hem_model}
+set.seed(43201); validate(model_hem)
+```
+
+### Plotting Survival Functions for each Genotype
+
+Here is the `survplot` approach I mentioned earlier.
+
+```{r survplot_model_hem_plot1}
+survplot(model_hem, genotype, 
+         lty = c(1,2), n.risk=TRUE, time.inc=12,
+         col=c("magenta", "dodgerblue"),
+         xlab="Hemorrhage-Free Survival in Months")
+```
+
+We can add, for instance, confidence interval bars, with:
+
+```{r survplot_model_hem_plot2}
+survplot(model_hem, genotype, 
+         lwd=3, lty = c(1,2), conf.int=.95,
+         n.risk=TRUE, time.inc = 12, conf='bars',
+         col=c("magenta", "dodgerblue"),
+         xlab="Hemorrhage-Free Survival Time in Months")
+```
+
+For more details, check out R's help file on `survplot`.
+
+### Genotype's effect on log relative hazard
+
+```{r log_rel_haz_hem_model_plot}
+ggplot(Predict(model_hem, genotype))
+```
+
+### Nomogram of our simple `hem` model
+
+We can estimate 1-year and 3-year hemorrhage-free survival probabilities, for example, with this model, and incorporate these results into our nomogram.
+
+```{r nomogram_model_hem}
+survx <- Survival(model_hem)
+plot(nomogram(model_hem, fun=list(function(x) survx(12, x),
+                            function(x) survx(36, x)),
+            funlabel=c("12-month Pr(Survival)", 
+                       "36-month Pr(Survival)")))
+```
+
+Again, this is just a very simple model, with one binary predictor.
+
+### Assessing the Proportional Hazards Assumption
+
+```{r surv_cox_zph_model_hem}
+cox.zph(model_hem, transform="km")
+```
+
+- Consider using `transform="rank"` to transform the survival times by their ranks prior to performing the test. 
+- Or use `transform="identity"` as we'll do in the plot below.
+
+### Plot to Check PH Assumption
+
+```{r ph_plot_check_zph}
+plot(cox.zph(model_hem, "identity"))
+```
+
+# Cox Regression Models for Survival Data: Example 2
+
+## A Second Example: The `leukem` data
+
+```{r read in data sets you will use}
+leukem
+```
+
+The data describe 51 leukemia patients. The variables are:
+
+- `id`, a patient identification code
+- `age`, age at diagnosis
+- `pblasts`, the Smear differential percentage of blasts
+- `pinf`, the Percentage of absolute marrow leukemia infiltrate
+- `plab`, the Percentage labeling index of the bone marrow leukemia cells
+- `maxtemp`, Highest temperature prior to treatment (in $^\circ F$)
+- `months`, which is Survival time from diagnosis (in months)
+- `alive`, which indicates Status as of the end of the study (1 = alive and thus censored, 0 = dead)
+
+```{r glimpse of leukem}
+glimpse(leukem)
+```
+
+### Creating our response: A survival time object
+
+Regardless of how we're going to fit a survival model, we start by creating a *survival time* object that combines the information in `months` (the survival times, possibly censored) and `alive` (the censoring indicator) into a single variable we'll call `stime` in this example. 
+
+The function below correctly registers the survival time, and censors subjects who are alive at the end of the study (we need to indicate those whose times are known, and they are identified by `alive == 0`). All other subjects are alive for at least as long as we observe them, but their exact survival times are *right-censored*.
+
+```{r create survival object}
+stime <- Surv(leukem$months, leukem$alive == 0)
+stime
+```
+
+### Models We'll Fit
+
+We'll fit several models here, including:
+
+- Model A: A model for survival time using `age` at diagnosis alone.
+- Model B: A model for survival time using the main effects of 5 predictors, specifically, `age`, `pblasts`, `pinf`, `plab`, and `maxtemp`.
+- Model B2: The model we get after applying stepwise variable selection to Model B, which will include `age`, `pinf` and `plab`.
+- Model C: A model using `age` (with a restricted cubic spline), `plab` and `maxtemp`
+
+## Model A: `coxph` Model for Survival Time using `age` at diagnosis
+
+We'll start by using `age` at diagnosis to predict our survival object (survival time, accounting for censoring).
+
+```{r surv_leukem_modelA_fit}
+modA <- coxph(Surv(months, alive==0) ~ age, 
+              data=leukem, model=TRUE)
+
+summary(modA)
+```
+
+Across these 51 subjects, we observe 45 events (deaths) and 6 subjects are censored. The hazard ratio (shown under `exp(coef)`) is `r summary(modA)$coef[2]`, and this means each additional year of age at diagnosis is associated with a 1.03-fold increase in the hazard of death. 
+
+For this simple Cox regression model, we will focus on interpreting 
+
+1. the **hazard ratio** (specified by the `exp(coef)` result and associated confidence interval) as a measure of effect size,
+    + Here, the hazard ratio associated with a 1-year increase in `age` is `r round(summary(modA)$coef[2],3)`, and its 95\% confidence interval is: (`r round(summary(modA)$conf.int[3],3)`, `r round(summary(modA)$conf.int[4],3)`). 
+    + Since this confidence interval ratio does not include 1 (barely), we can conclude that there is a significant association between `age` and `stime` at the 5\% significance level.
+2. the **concordance** and **Rsquare** as measures of fit quality, and
+    + **concordance** is only appropriate when we have at least one continuous predictor in our Cox model, in which case it assesses the probability of agreement between the survival time and the risk score generated by the predictor (or set of predictors. A value of 1 indicates perfect agreement, but values of 0.6 to 0.7 are more common in survival data. 0.5 is an agreement that is no better than chance. Here, our concordance is `r round(summary(modA)$concordance[1], 3)`, which is a fairly typical value.
+    + **Rsquare** in this setting is Cox and Snell's pseudo-R^2^, which reflects the improvement of the model we have fit over the model with the intercept alone - a comparison that is tested by the likelihood ratio test. The maximum value of this statistic is often less than one, in which case R will tell you that. Here, our observed pseudo-R^2^ is `r round(summary(modA)$rsq[1],3)` and that is out of a possible maximum of `r round(summary(modA)$rsq[2],3)`.
+3. the significance tests, particularly the **Wald** test (shown next to the coefficient estimates in the position of a t test in linear regression), and the **Likelihood ratio** test at the bottom of the output, which compares this model to a null model which predicts the mean survival time for all subjects.
+    + The Wald test for an individual predictor compares the coefficient to its standard error, just like a t test in linear regression.
+    + The likelihood ratio test compares the entire model to the null model (intercept-only). Again, run an ANOVA (technically an analysis of deviance) to get more details on the likelihood-ratio test.
+
+```{r surv_leukem_modelA_anova}
+anova(modA)
+```
+
+### Plotting the Survival Curve implied by Model A
+
+```{r surv_leukem_modelA_plot}
+plot(survfit(modA), ylab="Probability of Survival",
+     xlab="Months in Study", col=c("red", "black", "black"))
+```
+
+### Testing the Proportional Hazards Assumption
+
+As we've noted, the key assumption in a Cox model is that the hazards are **proportional**. 
+
+```{r surv_leukem_modelA_zphtest}
+cox.zph(modA)
+```
+
+A significant result here would indicate a problem with the proportional hazards assumption - again, not the case here. We can also plot the results:
+
+```{r surv_leukem_modelA_zphplot}
+plot(cox.zph(modA))
+```
+
+We're looking for the smooth curve to be fairly level across the time horizon here, as opposed to substantially increasing or decreasing in level as time passes.
+
+## Building Model A with `cph` for the `leukem` data
+
+```{r surv_leukem_modelA_cph_fit}
+units(leukem$months) <- "month"
+d <- datadist(leukem)
+options(datadist="d")
+modA_cph <- cph(Surv(months, alive==0) ~ age, data=leukem, 
+              x=TRUE, y=TRUE, surv=TRUE, time.inc=12)
+```
+
+```{r surv_leukem_modelA_cph_coefficients}
+modA_cph
+exp(coef(modA_cph)) # hazard ratio estimate
+exp(confint(modA_cph)) # hazard ratio 95% CI
+```
+
+### Plotting the `age` effect implied by our model.
+
+We can plot the `age` effect implied by the model, using `ggplot2`, as follows...
+
+```{r surv_leukem_modelA_cph_ggplot}
+ggplot(Predict(modA_cph, age))
+```
+
+### Survival Plots (Kaplan-Meier) of the `age` effect
+
+The first survival plot I'll show displays 95% confidence intervals for the probability of survival at the median `age` at diagnosis in the sample, which turns out to be `r median(leukem$age)` years, with numbers of patients still at risk indicated every 12 months of time in the study. We can substitute in **conf = `bars`** to get a different flavor for this sort of plot. 
+
+```{r surv_leukem_modelA_cph_survplot1}
+survplot(modA_cph, age=median(leukem$age), conf.int=.95, 
+         col='blue', time.inc=12, n.risk=TRUE,
+         conf='bands', type="kaplan-meier", 
+         xlab="Study Survival Time in Months")
+```
+
+Or we can generate a survival plot that shows survival probabilities over time across a range of values for `age` at diagnosis, as follows...
+
+```{r surv_leukem_modelA_cph_survplot2}
+survplot(modA_cph, levels.only=TRUE, time.inc=12, 
+         type="kaplan-meier", 
+         xlab="Study Survival Time in Months")
+```
+
+This plot shows a series of modeled survival probabilities, for five different diagnosis `age` levels, as identified by the labels. Generally we see that the older the subject is at diagnosis, the longer their survival time in the study. 
+
+### ANOVA test for the `cph`-built model for `leukem`
+
+We can run a likelihood-ratio (drop in deviance) test of the significance of the `age` effect...
+
+```{r surv_leukem_modelA_cph_anova}
+anova(modA_cph)
+```
+
+### Summarizing the Effect Sizes from `modA_cph`
+
+We can generate the usual summaries of effect size in this context, too.
+
+```{r surv_leukem_modelA_cph_summaryandeffects, fig.height=3}
+summary(modA_cph)
+plot(summary(modA_cph))
+```
+
+As with all `rms` package effect estimates, this quantitative predictor (`age`) yields an effect comparing `age` at the 25th percentile of the sample (`age` = 35) to `age` at the 75th percentile (`age` = 61). So the hazard ratio is 2.32, with 95% CI (1.43, 3.77) for the effect of moving 26 years. Our `coxph` version of this same model showed a hazard ratio for the effect of moving just a single year.
+
+### Validating the Cox Model Summary Statistics
+
+```{r surv_leukem_modelA_cph_validate}
+set.seed(432410); validate(modA_cph)
+```
+
+The R^2^ statistic barely moves, and neither does the Somers' d estimate, so at least in this simple model, the nominal summary statistics are likely to hold up pretty well in new data.
+
+### Looking for Influential Points
+
+This plot shows the influence of each point, in terms of DFBETA - the impact on the coefficient of `age` in the model were that specific point to be removed from the data set. We can also identify the row numbers of the largest (positive and negative) DFBETAs.
+
+```{r surv_leukem_modelA_cph_influential_points}
+plot(residuals(modA_cph, type="dfbeta", 
+               collapse = leukem$id) ~ 
+       leukem$id, main="Index Plot of DFBETA for Age", 
+     type="h", ylab="DFBETA in modelA_cph")
+which.max(residuals(modA_cph, type="dfbeta"))
+which.min(residuals(modA_cph, type="dfbeta"))
+```
+
+The DFBETAs look very small here. Changes in the $\beta$ estimates as large as 0.002 don't have a meaningful impact in this case, so I don't see anything particularly influential.
+
+### Checking the Proportional Hazards Assumption
+
+As before, we can check the proportional hazards assumption with a test, or plot.
+
+```{r surv_leukem_modelA_cph_proportional_hazards_assumption}
+cox.zph(modA_cph)
+plot(cox.zph(modA_cph))
+```
+
+Still no serious signs of trouble, of course. We'll see what happens when we fit a bigger model.
+
+## Model B: Fitting a 5-Predictor Model with `coxph`
+
+Next, we use the `coxph` function from the `survival` package to apply a Cox regression model to predict the survival time using the main effects of the five predictors: `age`, `pblasts`, `pinf`, `plab` and `maxtemp`.
+
+```{r kitchen sink model linear}
+modB <- coxph(Surv(months, alive==0) ~ 
+          age + pblasts + pinf + plab + maxtemp, data=leukem)
+modB
+```
+
+The Wald tests suggest that `age` and perhaps `plab` are the only terms which appear to be significant after accounting for the other predictors in the model. 
+
+### Interpreting the Results from Model B
+
+```{r summary of model B}
+summary(modB)
+```
+
+Again, it appears that only `age` has a statistically significant effect, as last predictor in.
+
+```{r anova of model B}
+anova(modB)
+```
+
+At least taken in this order, none of the variables appear to add significant predictive value, given that we have already accounted for the preceding variables.
+
+
+
+### Plotting the Survival Curve implied by Model B
+
+```{r survival curves from Model B}
+plot(survfit(modB), ylab="Probability of Survival", 
+     xlab="Months in Study", col=c("red", "black", "black"))
+```
+
+The crosses in the plot indicate censoring points, while the drops indicate people who have died, and are thus no longer at risk.
+
+
+
+### Plotting the Cumulative Hazard implied by Model B
+
+```{r cumulative hazard from Model B}
+plot(survfit(modB, type="fleming"), col=c("blue", "black", "black"), 
+     fun="cumhaz", ylab="Cumulative Hazard", xlab="Months in Study")
+```
+
+### Testing the Proportional Hazards Assumption
+
+```{r test cox proportional hazards assumption model B}
+cox.zph(modB, transform="km", global=TRUE)
+```
+
+Note that we get a global test, and a separate test for each predictor. None show significant problems.
+
+### Assessing Collinearity
+
+Perhaps we have some collinearity here, which might imply that we could sensibly fit a smaller model, which would be appealing anyway, with only 45 actual events - we should probably be sticking to a model with no more than 2 or perhaps as many as 3 coefficients to be estimated.
+
+```{r collinearity of modB}
+vif(modB)
+```
+
+The variance inflation factors don't look enormous - it may be that removing one of these variables will help make the others look more significant. Let's consider a stepwise variable selection algorithm to see what results...
+
+- Note that the `leaps` library, which generates best subsets output, is designed for linear regression, as is the `lars` library, which generates the lasso. Either could be used here for some guidance, but not with the survival object `stime = Surv(months, age)` as the response, but instead only with `months` as the outcome, which ignores the censoring. The `step` procedure can be used on the survival object, though.
+
+## Model B2: A Stepwise Reduction of Model B
+
+```{r stepwise modB}
+step(modB)
+```
+
+The stepwise procedure lands on a model with three predictors. How does this result look, practically?
+
+```{r model B2}
+modB2 <- coxph(Surv(months, alive==0) ~ age + pinf + plab, data=leukem)
+summary(modB2)
+```
+
+### The Survival Curve implied by Model B2
+
+```{r survival curves from Model B2}
+plot(survfit(modB2), ylab="Probability of Survival", xlab="Months in Study", 
+     col=c("red", "black", "black"))
+```
+
+
+
+### Checking Proportional Hazards for Model B2
+
+```{r test proportional hazards for B2}
+cox.zph(modB2, transform="km", global=TRUE)
+par(mfrow=c(1,3))
+plot(cox.zph(modB2, transform="km", global=TRUE))
+par(mfrow=c(1,1))
+```
+
+## Model C: Using a Spearman Plot to pick a model
+
+If we want to use the **Spearman** $\rho^2$ plot to consider how we might perhaps incorporate non-linear terms describing any or all of the five potential predictors (`age`, `pblasts`, `pinf`, `plab` and `maxtemp`) for survival time, we need to do so on the raw `months` variable, rather than the survival object (`stime = Surv(months, alive==0))` which accounts for censoring...
+
+```{r spearman rho2 plot on months}
+plot(spearman2(months ~ age + pblasts + pinf + plab + maxtemp, data=leukem))
+```
+
+Recognizing that we can probably only fit a small model safely (since we observe only 45 actual [uncensored] survival times) I will consider a non-linear term in `age` (specifically a restricted cubic spline with 3 knots), along with linear terms for `plab` and `maxtemp`. I'm mostly just looking for a new model to study for this example.
+
+### Fitting Model C
+
+```{r model C}
+# still have datadist set up for leukem
+modC <- cph(Surv(months, alive==0) ~ rcs(age, 3) + plab + maxtemp, 
+            data=leukem, x=TRUE, y=TRUE, surv=TRUE, time.inc=12)
+modC
+```
+
+### ANOVA for Model C
+
+```{r anova for model C}
+anova(modC)
+```
+
+### Summarizing Model C Effect Sizes
+
+```{r effect summaries for model C}
+summary(modC)
+plot(summary(modC))
+```
+
+
+
+### Plotting the diagnosis `age` effect in Model C
+
+Of course, we're no longer assuming that the log relative hazard is linear in `age`, once we include a restricted cubic spline for `age` in our Model C. So our hazard ratio and confidence intervals for `age` are a bit trickier to understand.
+
+```{r model C hazard ratios}
+exp(coef(modC))
+exp(confint(modC))
+```
+
+We can use `ggplot` and the `Predict` function to produce plots of the log Relative Hazard associated with any of our predictors, while holding the others constant at their medians. The effects of `maxtemp` and `plab` in our Model C are linear in the log Relative Hazard, but `age`, thanks to our use of a restricted cubic spline with 3 knots, shows a single bend.
+
+```{r model C age effect, fig.height=4}
+ggplot(Predict(modC, age))
+```
+
+### Survival Plot associated with Model C
+
+Let's look at a survival plot associated with Model C for a subject with median values of our three predictors.
+
+```{r survplot for model C}
+survplot(modC, age=median(leukem$age), conf.int=0.95, col="blue", 
+         time.inc=12, n.risk=TRUE, conf='bands',
+         xlab="Study Time in Months")
+```
+
+As before, we could fit such a plot to compare results across multiple `age` values, if desired.
+
+### Checking the Proportional Hazards Assumption
+
+```{r test proportional hazards for C, fig.height=5.5}
+cox.zph(modC, transform="km", global=TRUE)
+par(mfrow=c(2,2))
+plot(cox.zph(modC, transform="km"))
+```
+
+### Model C Nomogram
+
+```{r nomogram of model C, fig.height=6}
+sv <- Survival(modC)
+surv12 <- function(x) sv(12, lp=x)
+surv24 <- function(x) sv(24, lp=x)
+
+plot(nomogram(modC, fun=list(surv12, surv24), 
+              funlabel=c('12-month survival', '24-month survival')))
+```
+
+### Validating Model C's Summary Statistics
+
+We can validate the model for Somers' $D_{xy}$, which is the rank correlation between the predicted log hazard and observed survival time, and for slope shrinkage.
+
+```{r validate model C}
+set.seed(43234); validate(modC, B=100)
+```
+
+### Calibration of Model C (12-month survival estimates)
+
+Finally, we validate the model for calibration accuracy in predicting the probability of surviving one year.
+
+Quoting Harrell (page 529, RMS second edition):
+
+> The bootstrap is used to estimate the optimism in how well predicted [one]-year survival from the final Cox model tracks flexible smooth estimates, without any binning of predicted survival probabilities or assuming proportional
+hazards.
+
+The `u` variable specifies the length of time at which we look at the calibration. I've specified the `units` earlier to be months.
+
+```{r calibration of model C, messages=FALSE, fig.height=6}
+set.seed(43233); plot(calibrate(modC, B = 10, u = 12))
+```
+
+The model seems neither especially well calibrated nor especially poorly so - looking at the comparison of the blue curve to the gray, our predictions basically aren't aggressive enough - more people are surviving to a year in our low predicted probability of 12 month survival group, and fewer people are surviving on the high end of the x-axis than should be the case.
+
+
