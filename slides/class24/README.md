@@ -5,7 +5,7 @@
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class24) are now posted.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class24) will be posted as soon as they are available.
 
-Today's class will begin with discussion of two more animated data visualizations, and then we'll discuss methods for exploring time-to-event / survival data with Cox proportional hazards regression models. Chapter 22 of the [Course Notes](https://thomaselove.github.io/432-notes/) is available. It describes the main ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time. We will discuss this material starting today, and (I expect) continuing into Class 25.
+Today's class will begin with discussion of two more animated data visualizations, and then we'll discuss methods for exploring time-to-event / survival data with Cox proportional hazards regression models. Chapters 22 and 23 of the [Course Notes](https://thomaselove.github.io/432-notes/) describe the main ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time.
 
 Links to the visualizations we'll discuss today:
 
