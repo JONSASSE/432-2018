@@ -108,7 +108,7 @@ I've added all of these thoughts to the [Project 2 Instructions](https://htmlpre
 
 1. Chapter 21 of the [Course Notes](https://thomaselove.github.io/432-notes/) is now available. It describes some of the fundamental ideas in dealing with time-to-event (survival) data, including survival functions, hazard functions, censoring and Kaplan-Meier estimates, and it demonstrates R code to complete some of these explorations.
 
-2. Chapter 22 of the [Course Notes](https://thomaselove.github.io/432-notes/) is also available. It describes the main ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time. We will discuss this material starting in Class 24, and (I expect) continuing into Class 25.
+2. Chapters 22 and 23 of the [Course Notes](https://thomaselove.github.io/432-notes/) are also available. Together, they describe some of the ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time. We will discuss this material starting in Class 24, and (I expect) continuing into Class 25.
 
 3. I corrected a few errors on slide 52 of the [Class 20 Slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class20), where I had switched the coefficients for the truncated Poisson and logistic regression models, and where I had used min, when I meant max.
 
