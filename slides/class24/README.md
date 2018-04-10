@@ -1,4 +1,4 @@
-# 432 Class 23: 2018-04-10
+# 432 Class 24: 2018-04-12
 
 ## Key Materials
 
