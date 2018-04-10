@@ -2,6 +2,7 @@
 
 Link  | Date  | Topics Discussed include...
 --------: | ---------- | -------------------------------------------------------------
+[Class 24](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class24) | 2018-04-12 | Cox Proportional Hazards Regression Models: An Introduction
 [Class 23](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class23) | 2018-04-10 | Exploring Time-to-Event Data, Kaplan-Meier Estimation
 [Class 22](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class22) | 2018-04-05 | Models for Nominal Multi-Categorical Outcomes
 [Class 21](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class21) | 2018-04-03 | Models for Ordinal Multi-Categorical Outcomes
