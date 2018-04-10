@@ -20,11 +20,11 @@ Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperfo
 
 - Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
-- If you've been asked to do a revision, edit your submission accordingly, again, by **2018-04-17 at 5 PM**.
+- *If you've been asked to do a revision*, edit your submission accordingly, again, by **2018-04-17 at 5 PM**.
 
 ```
 Khaled Alayed
-Haimeng Bai
+*Haimeng Bai
 Shufen Cao
 Laura Cremer
 Abhishek Deshpande
@@ -56,7 +56,7 @@ Andrew Tang
 Vinh Trinh
 Sneha Vakamudi
 Frances Wang
-Ruipeng Wei
+*Ruipeng Wei
 Peter Wilkinson
 
 Xin Xin Yu
