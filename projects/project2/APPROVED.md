@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (8 proposals, 9 people)
+## Proposals that are Approved (9 proposals, 10 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -11,12 +11,12 @@ Caroline El Sanadi | Modeling the probability of developing osteoporosis in the 
 Ryan Honomichl  | Predicting Hot/Cold Self-Regulation in Preschool Children Using the NICHD Early Childcare Study
 Carli Lehr      | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
-
+Nikolas Krieger | Predicting Life Satisfaction Based on Feelings towards the Other
 Investigative Team | Project 2 Title 
 -------------------------------------- | -----------------------------------------------------------------------------
 Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperformance in Multiple Sclerosis
 
-## Proposals Still to Come or Under Revision (32)
+## Proposals Still to Come or Under Revision (31)
 
 - Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
@@ -37,28 +37,27 @@ Jiajian Huang
 
 Maher Kazimi
 Hyun Jo Kim
-Nikolas Krieger
 Kedar Mahajan
 Roberto Martinez
-
 John McDonnell
+
 Satyakam Mishra
 Haeun Park
 Preeti Pathak
 Gabrielle Rieth
-
 Kaylee Sarna
+
 Andrew Shan
 Sandra Silva Camargo
 Connor Swingle
 Andrew Tang
-
 Vinh Trinh
+
 Sneha Vakamudi
 Frances Wang
 *Ruipeng Wei
 Peter Wilkinson
-
 Xin Xin Yu
+
 Bilal Zonjy
 ```
