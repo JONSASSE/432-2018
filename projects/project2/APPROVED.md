@@ -9,9 +9,10 @@ Estee Cramer    | Prediction Models for Outcomes Associated with Lymphatic Filar
 Vaishali Deo    | The impact of citizenship status on the general health of adult U.S. residents
 Caroline El Sanadi | Modeling the probability of developing osteoporosis in the Study of Women Across Nations
 Ryan Honomichl  | Predicting Hot/Cold Self-Regulation in Preschool Children Using the NICHD Early Childcare Study
+Nikolas Krieger | Predicting Life Satisfaction Based on Feelings towards the Other
 Carli Lehr      | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
-Nikolas Krieger | Predicting Life Satisfaction Based on Feelings towards the Other
+
 Investigative Team | Project 2 Title 
 -------------------------------------- | -----------------------------------------------------------------------------
 Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperformance in Multiple Sclerosis
