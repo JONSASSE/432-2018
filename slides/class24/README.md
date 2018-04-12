@@ -3,7 +3,7 @@
 ## Key Materials
 
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class24) are now posted.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class24) will be posted as soon as they are available.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class24) are also posted.
 
 Today's class will begin with discussion of two more animated data visualizations, and then we'll discuss methods for exploring time-to-event / survival data with Cox proportional hazards regression models. Chapters 22 and 23 of the [Course Notes](https://thomaselove.github.io/432-notes/) describe the main ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time.
 
