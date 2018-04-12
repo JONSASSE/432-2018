@@ -22,6 +22,8 @@ Links to the visualizations we'll discuss today:
 
 3. 431 materials are moving, in preparation for their disappearance in June. Most things are now linked from https://github.com/THOMASELOVE/431-2017. If you have trouble finding something you need, email 431-help.
 
+4. [Michael Lopez](https://twitter.com/StatsbyLopez/status/983355855692288001/photo/1) pointed me to an interesting part of [this NY Times article](https://www.nytimes.com/2018/04/09/upshot/car-seats-road-safety-us-sweden.html) entitled "Better Car Seats Are Just the Start: Road Safety Lessons From Sweden."
+
 4. As mentioned last time, Chapter 23 of the Course Notes is meant to have some images that aren't showing up yet in the Course Notes. Since I've yet to figure out the problem, I'm providing a draft version of both Chapters 22 and 23 where the images appear. See [the HTML here](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class24/chapters_22_and_23_draft.html), and [the R Markdown here](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/chapters_22_and_23_draft.Rmd).
 
 ## Remaining Deliverables This Semester
