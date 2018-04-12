@@ -16,7 +16,11 @@ Links to the visualizations we'll discuss today:
 
 1. There is a Minute Paper after today's class. Details to come.
 
-2. Chapter 23 of the Course Notes is meant to have some images that aren't showing up yet in the Course Notes. Since I've yet to figure out the problem, I'm providing a draft version of both Chapters 22 and 23 where the images appear. See [the HTML here](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class24/chapters_22_and_23_draft.html), and [the R Markdown here](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/chapters_22_and_23_draft.Rmd).
+2. I ran an insta-poll at last class. The results were, well, inconclusive...
+
+![](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/poll_result.png)
+
+3. As mentioned last time, Chapter 23 of the Course Notes is meant to have some images that aren't showing up yet in the Course Notes. Since I've yet to figure out the problem, I'm providing a draft version of both Chapters 22 and 23 where the images appear. See [the HTML here](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class24/chapters_22_and_23_draft.html), and [the R Markdown here](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/chapters_22_and_23_draft.Rmd).
 
 ## Remaining Deliverables This Semester
 
