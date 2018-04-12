@@ -14,9 +14,9 @@ Links to the visualizations we'll discuss today:
 
 ## Announcements at the start of class
 
-1. There is a Minute Paper after today's class. Details to come.
+1. There is a [Minute Paper after today's class](https://goo.gl/forms/blYi0wADJLUALvV03). Please complete the form by Monday at 10 AM.
 
-2. I ran an insta-poll at last class. The results were, well, inconclusive...
+2. I ran an insta-poll during last class. Thank you all for participating. The results were, well, inconclusive...
 
 ![](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/poll_result.png)
 
