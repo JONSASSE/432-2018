@@ -22,7 +22,8 @@ Links to the data visualization we'll discuss today are coming soon.
 - Remember that `tidyverse` loads `forcats`, so you shouldn't load `forcats` if you're loading `tidyverse`. Similarly, `rms` loads `Hmisc`, so you don't need to load that separately. 
 - There's really no reason for you to source in `Love-boost.R`, unless you actually need it to do something specific.
 
-4. I expect that some people in this class will be really interested in [this genome browser, created using Shiny](https://shiny.rstudio.com/gallery/genome-browser.html).
+4. I expect that some people in this class will be really interested in [this ICGC pancreatic cancer (ductal adenocarcinoma) genome browser, created using Shiny](https://shiny.rstudio.com/gallery/genome-browser.html). 
+    - If you want to learn Shiny, the best place to start is [this tutorial page at R Studio](http://shiny.rstudio.com/tutorial/), which guides you to lots of great resources.
 
 ## Minute Paper after Class 24 (first 24 responses, several questions not yet edited)
 
@@ -72,28 +73,26 @@ Count (%) | Response
 
 ### What question(s) about the course are uppermost in your mind now?
 
-- What do we do if PH assumptions are not met for survival analysis? (Feel like we will be covering that in the next class) 
-- How do we build the fancy moving plots we saw in class like the one from Huffington Post? 
-    - Is it possible in R shiny or are the graphics too fancy for it?
-- Making a bit of sense of the different ways to test the strength of the many different models we have learned recently. 
-    - Which functions allow the creation of nomograms, calibration charts, etc. I know some play well and others do not...
+1. How do we build the fancy moving plots we saw in class like the one from *Huffington Post*? Is it possible in R shiny or are the graphics too fancy for it?
+2. Can visualizations that have moving graphics be shown in html documents such as the income mobility example from class 23?
+3. Will we get some practice using shiny?
+    - If you want to learn Shiny, the best place to start is [this tutorial page at R Studio](http://shiny.rstudio.com/tutorial/), which guides you to lots of great resources.
+    - Another tool that might be of interest to you is [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) which lets you build interactive dashboards with help from R Markdown.
+4. I am planning to use NHANES data for project 2. I will analyze a subpopulation (specific age range, had both interview and exam performed, and had a specific lab test performed). Do I need to incorporate sample weights into my analysis? If so, is there a good example/tutorial that you know of for doing this in R?
+    - For project 2, the answer is no, you don't have to include sample weights, and I would recommend that you not do this as a first pass, but focus instead on topics we've covered more thoroughly. Now, you may still want to include the weights at some point. Incorporating survey weights in a linear or logistic regression model depends on the kind of weights available - you may just be doing a weighted linear regression or weighted logistic regression, and lm, glm, ols and lrm all can take weights, although they do so in slightly different ways. But what people usually do instead is use the survey package, and some details on this are available at https://stats.idre.ucla.edu/r/faq/how-can-i-do-regression-estimation-with-survey-data/ - this doesn't play so well with the rms packages, but can be used with lm and glm approaches in a pretty straightforward way. The gold mine in this area appears to be http://asdfree.com/ - if you go there, you'll see an obsessively crafted book called Analyze Survey Data for Free edited by Anthony Joseph Damico. In there, you'll find, among other things, detailed instructions on using survey data from NHANES. It's not perfect, and I'm not sure how complete it is, but there's a lot of stuff available.
+5. How will our final projects be weighted in comparison to the rest of our assignments?
+    - [The syllabus](https://thomaselove.github.io/432-syllabus/deliverables-and-grading.html#grading) is your friend here.
+6. Which functions allow the creation of nomograms, etc. I know some play well and others do not...
+    - Nomograms are built with the `rms` package, and work with models fit using `ols`, `lrm`, and `cph` that we've studied.
+
+
 - I would still like a little more clarity on when it is justified to peek at the relationship between a predictor and outcome before fitting a model, two by two tables, scatterplot matrices, other graphical exploration?
-- Just mildly curious as to whether or not we're going to end up having those meetings with other students during class time or not. 
-- How will our final projects be weighted in comparison to the rest of our assignments?
-- nothing at the moment
-- Will we get some practice using shiny?
+- Just mildly curious as to whether or not we're going to end up having those meetings with other students during class time or not.
 - how to tidy up real world data and make it survival analysis-friendly (but this is likely best answered by taking the separate survival analysis course)
-- I am not so satisfied with my current grades for 432. Is there any other extra task that I can improve my grades?
+- What do we do if PH assumptions are not met for survival analysis? 
 - gee model in R
 - How should I proceed if my covariates turn out to be more significant than my main predictor in my model? Should I then retain the main predictor or drop it from the final model?
-more clarity about the structure of the next quiz 
-- Can visualizations that have moving graphics be shown in html documents such as the income mobility example from class 23?
-- Do we have requirements as to number of quantitative/categorical predictor of the model for project 2 (like we did for project 1) ?
-none
 - In censoring, are there specific tests that can be done to compare the censored sample to the rest of the sample in the study. 
-- survival analysis not yet clear to me, but with more examples in next lecture I will be fine. Thank you.
-- I am planning to use NHANES data for project 2. I will analyze a subpopulation (specific age range, had both interview and exam performed, and had a specific lab test performed). Do I need to incorporate sample weights into my analysis? If so, is there a good example/tutorial that you know of for doing this in R?
-- How much R2 important in Poisson model?  
 
 ## Remaining Deliverables This Semester
 
