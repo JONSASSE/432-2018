@@ -24,11 +24,10 @@ Links to the data visualization we'll discuss today:
 2. Remember that a draft version of both Chapters 22 and 23 where all images appear is available. See [the HTML here](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class24/chapters_22_and_23_draft.html), and [the R Markdown here](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/chapters_22_and_23_draft.Rmd).
 
 3. **Project 2 Tip**: Most students should wind up using between 4 and 10 R packages in the project. 
-
-- Everyone, I think, will need to load `skimr`, `broom`, `rms` and the `tidyverse`. 
-- It's OK to load more, but **don't** load something else unless you actually need it. Don't just load everything we've used this semester. 
-- Remember that `tidyverse` loads `forcats`, so you shouldn't load `forcats` if you're loading `tidyverse`. Similarly, `rms` loads `Hmisc`, so you don't need to load that separately. 
-- There's really no reason for you to source in `Love-boost.R`, unless you actually need it to do something specific.
+    - Everyone, I think, will need to load `skimr`, `broom`, `rms` and the `tidyverse`. 
+    - It's OK to load more, but **don't** load something else unless you actually need it. Don't just load everything we've used this semester. 
+    - Remember that `tidyverse` loads `forcats`, so you shouldn't load `forcats` if you're loading `tidyverse`. Similarly, `rms` loads `Hmisc`, so you don't need to load that separately. 
+    - There's really no reason for you to source in `Love-boost.R`, unless you actually need it to do something specific.
 
 4. If you are interested in reading 32 pages of PDF notes I wrote in Spring 2016 on **longitudinal data analysis**, specifically about spaghetti plots, response feature analysis, repeated measures ANOVA, and the basics of generalized estimating equations (GEE), well, [here it is](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf). No warranties, but you're welcome to it.
 
