@@ -7,7 +7,15 @@
 
 Today's class will conclude our discussion of Cox proportional hazards regression models. As a reminder, Chapters 22 and 23 of the [Course Notes](https://thomaselove.github.io/432-notes/) describe the main ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time.
 
-Links to the data visualization we'll discuss today are coming soon.
+Links to the data visualization we'll discuss today:
+
+- Noah Veltman's [NFL Player Size](https://noahveltman.com/nflplayers/) visualization.
+- If you want to learn Shiny, the best place to start is [this tutorial page at R Studio](http://shiny.rstudio.com/tutorial/), which guides you to lots of great resources.
+- A few basic Shiny apps to learn from:
+    - [Old Faithful](https://shiny.rstudio.com/gallery/faithful.html)
+    - [K-Means Clustering in the Iris data](https://shiny.rstudio.com/gallery/kmeans-example.html)
+    - [Inline output as part of a Markdown-based Notebook](https://shiny.rstudio.com/gallery/inline-output.html)
+- I expect that some people in this class will be really interested in [this ICGC pancreatic cancer (ductal adenocarcinoma) genome browser, created using Shiny](https://shiny.rstudio.com/gallery/genome-browser.html). 
 
 ## Announcements at the start of class
 
@@ -21,9 +29,6 @@ Links to the data visualization we'll discuss today are coming soon.
 - It's OK to load more, but **don't** load something else unless you actually need it. Don't just load everything we've used this semester. 
 - Remember that `tidyverse` loads `forcats`, so you shouldn't load `forcats` if you're loading `tidyverse`. Similarly, `rms` loads `Hmisc`, so you don't need to load that separately. 
 - There's really no reason for you to source in `Love-boost.R`, unless you actually need it to do something specific.
-
-4. I expect that some people in this class will be really interested in [this ICGC pancreatic cancer (ductal adenocarcinoma) genome browser, created using Shiny](https://shiny.rstudio.com/gallery/genome-browser.html). 
-    - If you want to learn Shiny, the best place to start is [this tutorial page at R Studio](http://shiny.rstudio.com/tutorial/), which guides you to lots of great resources.
 
 ## Minute Paper after Class 24 (first 24 responses, several questions not yet edited)
 
