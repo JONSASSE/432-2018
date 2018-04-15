@@ -30,6 +30,8 @@ Links to the data visualization we'll discuss today:
 - Remember that `tidyverse` loads `forcats`, so you shouldn't load `forcats` if you're loading `tidyverse`. Similarly, `rms` loads `Hmisc`, so you don't need to load that separately. 
 - There's really no reason for you to source in `Love-boost.R`, unless you actually need it to do something specific.
 
+4. If you are interested in reading 32 pages of PDF notes I wrote in Spring 2016 on **longitudinal data analysis**, specifically about spaghetti plots, response feature analysis, repeated measures ANOVA, and the basics of generalized estimating equations (GEE), well, [here it is](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf). No warranties, but you're welcome to it.
+
 ## Minute Paper after Class 24 (first 24 responses, several questions not yet edited)
 
 ### Please describe your current Project 2 progress 
@@ -95,11 +97,10 @@ Count (%) | Response
 
 
 - I would still like a little more clarity on when it is justified to peek at the relationship between a predictor and outcome before fitting a model, two by two tables, scatterplot matrices, other graphical exploration?
-- Just mildly curious as to whether or not we're going to end up having those meetings with other students during class time or not.
-- how to tidy up real world data and make it survival analysis-friendly (but this is likely best answered by taking the separate survival analysis course)
-- What do we do if PH assumptions are not met for survival analysis? 
-- gee model in R
 - How should I proceed if my covariates turn out to be more significant than my main predictor in my model? Should I then retain the main predictor or drop it from the final model?
+- Just mildly curious as to whether or not we're going to end up having those meetings with other students during class time or not.
+- how to tidy up real world data and make it survival analysis-friendly
+- What do we do if PH assumptions are not met for survival analysis? 
 - In censoring, are there specific tests that can be done to compare the censored sample to the rest of the sample in the study. 
 
 ## Remaining Deliverables This Semester
