@@ -1,5 +1,11 @@
 # 432 Homework 6 for Spring 2018
 
+## Answer Sketch and Grading Rubric
+
+The Homework 6 Answer Sketch and Grading Rubric is now posted as an [HTML document you can view](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw6/hw6sketch.html), and as an [R Markdown file you can download](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw6/hw6sketch.Rmd).
+
+## The Assignment Follows...
+
 Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **1 PM on Friday 2018-04-13**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file. 
 
 - Remember to **ask for help** if you are stuck, first by Googling, or visiting the wonderful cheatsheets under the Help menu on the top bar of R Studio, and then by contacting `431-help at case dot edu` or visiting TA office hours.
