@@ -22,6 +22,8 @@ Links to the data visualization we'll discuss today are coming soon.
 - Remember that `tidyverse` loads `forcats`, so you shouldn't load `forcats` if you're loading `tidyverse`. Similarly, `rms` loads `Hmisc`, so you don't need to load that separately. 
 - There's really no reason for you to source in `Love-boost.R`, unless you actually need it to do something specific.
 
+4. I expect that some people in this class will be really interested in [this genome browser, created using Shiny](https://shiny.rstudio.com/gallery/genome-browser.html).
+
 ## Minute Paper after Class 24 (first 24 responses, several questions not yet edited)
 
 ### Please describe your current Project 2 progress 
