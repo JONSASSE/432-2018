@@ -7,16 +7,6 @@
 
 Today's class will conclude our discussion of Cox proportional hazards regression models. As a reminder, Chapters 22 and 23 of the [Course Notes](https://thomaselove.github.io/432-notes/) describe the main ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time.
 
-Links to the data visualization we'll discuss today:
-
-- Noah Veltman's [NFL Player Size](https://noahveltman.com/nflplayers/) visualization.
-- If you want to learn Shiny, the best place to start is [this tutorial page at R Studio](http://shiny.rstudio.com/tutorial/), which guides you to lots of great resources.
-- A few basic Shiny apps to learn from:
-    - [Old Faithful](https://shiny.rstudio.com/gallery/faithful.html)
-    - [K-Means Clustering in the Iris data](https://shiny.rstudio.com/gallery/kmeans-example.html)
-    - [Inline output as part of a Markdown-based Notebook](https://shiny.rstudio.com/gallery/inline-output.html)
-- I expect that some people in this class will be really interested in [this ICGC pancreatic cancer (ductal adenocarcinoma) genome browser, created using Shiny](https://shiny.rstudio.com/gallery/genome-browser.html). 
-
 ## Announcements at the start of class
 
 1. The Homework 6 Answer Sketch and Grading Rubric is now posted as an [HTML document you can view](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw6/hw6sketch.html), and as an [R Markdown file you can download](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw6/hw6sketch.Rmd).
@@ -101,6 +91,16 @@ Count (%) | Response
 - how to tidy up real world data and make it survival analysis-friendly
 - What do we do if PH assumptions are not met for survival analysis? 
 - In censoring, are there specific tests that can be done to compare the censored sample to the rest of the sample in the study. 
+
+## Today's Data Visualizations
+
+- Noah Veltman's [NFL Player Size](https://noahveltman.com/nflplayers/) visualization.
+- A few basic Shiny apps to learn from:
+    - [Old Faithful](https://shiny.rstudio.com/gallery/faithful.html)
+    - [K-Means Clustering in the Iris data](https://shiny.rstudio.com/gallery/kmeans-example.html)
+    - [Inline output as part of a Markdown-based Notebook](https://shiny.rstudio.com/gallery/inline-output.html)
+- I expect that some people in this class will be really interested in [this ICGC pancreatic cancer (ductal adenocarcinoma) genome browser, created using Shiny](https://shiny.rstudio.com/gallery/genome-browser.html). 
+- If you want to learn Shiny, the best place to start is [this tutorial page at R Studio](http://shiny.rstudio.com/tutorial/), which guides you to lots of great resources.
 
 ## Remaining Deliverables This Semester
 
