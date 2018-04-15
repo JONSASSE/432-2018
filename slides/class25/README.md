@@ -15,7 +15,7 @@ Links to the data visualization we'll discuss today are coming soon.
 
 2. Remember that a draft version of both Chapters 22 and 23 where all images appear is available. See [the HTML here](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class24/chapters_22_and_23_draft.html), and [the R Markdown here](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/chapters_22_and_23_draft.Rmd).
 
-3. A tip for your project 2. Most students should wind up using between 4 and 10 R packages in the project. 
+3. **Project 2 Tip**: Most students should wind up using between 4 and 10 R packages in the project. 
 
 - Everyone, I think, will need to load `skimr`, `broom`, `rms` and the `tidyverse`. 
 - It's OK to load more, but **don't** load something else unless you actually need it. Don't just load everything we've used this semester. 
