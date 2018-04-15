@@ -19,7 +19,7 @@ Today's class will conclude our discussion of Cox proportional hazards regressio
     - Remember that `tidyverse` loads `forcats`, so you shouldn't load `forcats` if you're loading `tidyverse`. Similarly, `rms` loads `Hmisc`, so you don't need to load that separately. 
     - There's really no reason for you to source in `Love-boost.R`, unless you actually need it to do something specific.
 
-4. If you are interested in reading 32 pages of PDF notes I wrote in Spring 2016 on **longitudinal data analysis**, specifically about spaghetti plots, response feature analysis, repeated measures ANOVA, and the basics of generalized estimating equations (GEE), well, [here it is](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf). No warranties, but you're welcome to it.
+4. If you are interested in reading [32 pages of PDF notes I wrote in Spring 2016 on **longitudinal data analysis**](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf), specifically about spaghetti plots, response feature analysis, repeated measures ANOVA, and the basics of generalized estimating equations (GEE), well, [I've posted it to our Texts page](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf). No warranties, but you're welcome to it.
 
 ## Minute Paper after Class 24 (first 24 responses, several questions not yet edited)
 
