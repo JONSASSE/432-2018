@@ -21,7 +21,14 @@ Investigative Team | Project 2 Title
 -------------------------------------- | -----------------------------------------------------------------------------
 Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperformance in Multiple Sclerosis
 
-## Proposals Still to Come or Under Revision (27)
+## Proposals Submitted but not yet Reviewed by Dr. Love (6 people)
+
+- Sneha Vakamudi
+- Andrew Tang
+- Dongze He and Andrew Shan
+- Abhishek Deshpande and Sandra Silva Camargo
+
+## Proposals Still to Come or Under Revision (21 people)
 
 - Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
@@ -31,31 +38,26 @@ Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperfo
 Khaled Alayed
 Shufen Cao
 Laura Cremer
-Abhishek Deshpande
 Katherine Dobbs
 Jenny Feng
-Dongze He
+
 Jiajian Huang
 Hyun Jo Kim
 Kedar Mahajan
-
 Roberto Martinez
 John McDonnell
+
 Satyakam Mishra
 Haeun Park
 Preeti Pathak
 Gabrielle Rieth
 Kaylee Sarna
-Andrew Shan
-Sandra Silva Camargo
-Connor Swingle
 
-Andrew Tang
+Connor Swingle
 Vinh Trinh
-Sneha Vakamudi
 Frances Wang
 Peter Wilkinson
-
 Xin Xin Yu
+
 Bilal Zonjy
 ```
