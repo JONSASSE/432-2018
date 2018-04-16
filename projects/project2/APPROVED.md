@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (16 proposals, 18 people)
+## Proposals that are Approved (18 proposals, 21 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -14,6 +14,7 @@ Ryan Honomichl  | Predicting Hot/Cold Self-Regulation in Preschool Children Usin
 Maher Kazimi    | Comparing graft failure for ice vs. pump during kidney transplant
 Nikolas Krieger | Predicting Life Satisfaction Based on Feelings towards the Other
 Carli Lehr      | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
+Roberto Martinez | The effect of multiple chronic conditions on key outcomes in hospitalized HIV-positive patients
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
 Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
 Sneha Vakamudi  | Hospital length of stay: What is more important, the patient or the picture? 
@@ -23,11 +24,9 @@ Investigative Team | Project 2 Title
 -------------------------------------- | -----------------------------------------------------------------------------
 Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperformance in Multiple Sclerosis
 Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
+Abhishek Deshpande & Sandra Silva Camargo | Predicting Hospital Quality Ratings in California, 2012-2015
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (3 people)
-
-- Abhishek Deshpande and Sandra Silva Camargo
-- Roberto Martinez
+## Proposals Submitted but not yet Reviewed by Dr. Love (0)
 
 ## Proposals Still to Come or Under Revision (20 people)
 
