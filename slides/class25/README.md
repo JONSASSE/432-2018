@@ -43,6 +43,25 @@ Count `(%)` | Response
 - Zero inflated Poisson Regression / Poisson Regression and other methods for count outcomes
 - Data Visualization
 
+### Do you have any advice for prospective students in next year's 431-432 sequence?
+
+There were many similar suggestions, which I'll boil down to the following for now, but I'll incorporate more individual pieces in what I provide to new students. Thank you!
+
+- **Workload**
+    - The course involves a lot of outside-of-class work. It requires a lot of attention, and some busy people don't have the time to do it without rearranging some things. 
+    - You really need to devote some time to this. 
+    - Coming to class, or at least listening to the audio is crucial. Lots of things happen in class that you wouldn't get just by reading the notes alone.
+    
+- **Getting Started Quickly**
+    - Becoming familiar with R before the class gets rolling is really helpful, and there are lots of good resources to help you, including courses online and at CWRU that seem valuable.
+    - Dr. Love should get as much of the required reading out to students in advance of the class as possible.
+    - Students have to not procrastinate, and start all assignments early.
+
+- **Use the available resources**
+    - Students need to get comfortable with using office hours and 431-help as much as they can, as opposed to trying to figure everything out on their own at the last minute.
+    - The course notes are really helpful. Read them.
+    - If you intend to take both courses, make sure you take Dr. Love's section of 431.
+
 ### What question(s) about the course are uppermost in your mind now?
 
 1. How do we build the fancy moving plots we saw in class like the one from *Huffington Post*? Is it possible in R shiny or are the graphics too fancy for it?
@@ -72,25 +91,6 @@ Count `(%)` | Response
         - Dr. Love will speed you up if he needs to, so you get your primary conclusions in before the time runs out, but you should plan your talk to last about 15 minutes. 
         - Then for the last few minutes, Dr. Love will make some general comments and ask you a couple of specific questions (usually these include how much of your time was spent cleaning vs. analyzing data, and what would you tell yourself now that you wish you'd known when you started the project.)
     - If you're a group of two, then one of you talks for a while, and then the other one talks for a while. **Dr. Love** determines who talks when, so you both need to be prepared to address the whole thing, and Dr. Love will ask questions of each of you at any time, so you can't fall asleep while the other person talks.
-
-### Do you have any advice for prospective students in next year's 431-432 sequence?
-
-There were many similar suggestions, which I'll boil down to the following for now, but I'll incorporate more individual pieces in what I provide to new students. Thank you!
-
-- **Workload**
-    - The course involves a lot of outside-of-class work. It requires a lot of attention, and some busy people don't have the time to do it without rearranging some things. 
-    - You really need to devote some time to this. 
-    - Coming to class, or at least listening to the audio is crucial. Lots of things happen in class that you wouldn't get just by reading the notes alone.
-    
-- **Getting Started Quickly**
-    - Becoming familiar with R before the class gets rolling is really helpful, and there are lots of good resources to help you, including courses online and at CWRU that seem valuable.
-    - Dr. Love should get as much of the required reading out to students in advance of the class as possible.
-    - Students have to not procrastinate, and start all assignments early.
-
-- **Use the available resources well**
-    - Students need to get comfortable with using office hours and 431-help as much as they can, as opposed to trying to figure everything out on their own at the last minute.
-    - The course notes are really helpful. Read them.
-    - If you intend to take both courses, make sure you take Dr. Love's section of 431.
 
 ## Today's Data Visualizations
 
