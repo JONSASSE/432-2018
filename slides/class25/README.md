@@ -77,7 +77,7 @@ There were many similar suggestions, which I'll boil down to the following for n
 5. What does a low value of R-square mean, in all of these new settings?
     - A really low value of R-square, be it an OLS R-square, or one of the various estimates available for generalized linear models, is mostly something to worry about because it suggests that there are a lot of "omitted variables" not included in the model that might have an impact. This might well mean that such things were never measured - usually it means that our understanding of the phenomenon the model is describing (or our measurements of it, at least) are weak.
 6. How will our final projects be weighted in comparison to the rest of our assignments?
-    - [The syllabus](https://thomaselove.github.io/432-syllabus/deliverables-and-grading.html#grading) is your friend here.
+    - [The syllabus](https://thomaselove.github.io/432-syllabus/deliverables-and-grading.html#grading) is your friend here. The projects, together, are 35% of your grade. The second project carries 60% of the weight of the two projects, with the first project carrying the remaining 40%.
 7. Which functions allow the creation of nomograms, etc. I know some play well and others do not...
     - Nomograms are built with the `rms` package, and work with models fit using `ols`, `lrm`, and `cph` that we've studied.
 8. Is there a way to calculate AIC and BIC for zero-inflated models?
