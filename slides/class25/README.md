@@ -80,13 +80,15 @@ There were many similar suggestions, which I'll boil down to the following for n
     - Nomograms are built with the `rms` package, and work with models fit using `ols`, `lrm`, and `cph` that we've studied.
 7. Is there a way to calculate AIC and BIC for zero-inflated models?
     - I don't know. I use Vuong's test to compare zero-inflated models to their non-zero-inflated counterparts. You could use a likelihood ratio test to compare a zero-inflated Poisson to a zero-inflated negative binomial with the same predictors, since the output does produce the log likelihood estimates.
-8. Just mildly curious as to whether or not we're going to end up having those meetings with other students during class time.
+8. Quiz 2. What's the plan?
+    - Still building it. **When it's done, I'll update this**, but the current plan is roughly 60% linear + (binary) logistic regression and roughly 40% everything else. I don't yet know the combination of "analysis you'll have to do" vs. "analysis I'll do that you'll interpret." I'd like it to be no more taxing than HW 6 was, certainly!
+9. Are we going to end up having those meetings with other students during class time?
     - No, we're not.
-9. Do we get to learn about propensity score matching?
+10. Do we get to learn about propensity score matching?
     - Next Tuesday was the day I plan to talk about it, but whether I'll do it Tuesday or Thursday next week depends on how things go this Thursday. Of course, I teach the 500 course every spring, and that's all about propensity score analysis. You'd be welcome to join us. Several students in this year's 432 class are finishing 500 as well now, and they can tell you all about it from the student perspective.
-10. In Project 2, do you prefer that we give a Powerpoint presentation?
+11. In Project 2, do you prefer that we give a Powerpoint presentation?
     - I prefer only that you give me a clear understanding of what you've done, in whatever way works **best for you**. Some people do well working with the results of their HTML exclusively, others prefer to gather their thoughts into a separate presentation. I've seen excellent results with lots of different approaches (HTML, Powerpoint, Prezi, PDF, Keynote, etc. etc.), and I don't want to get in the way of you putting your best foot forward. You do you.
-11. What's the format of the Project 2 presentation? What if it's done by two people?
+12. What's the format of the Project 2 presentation? What if it's done by two people?
     - In the 20 minutes you're in the room, expect Dr. Love to set a timer for 16 minutes, and let you lead the presentation **on your laptop** in that time while he occasionally asks questions (if there are two of you, one will speak for the first 8 minutes or so, then Dr. Love will switch over to the other speaker.) 
         - Dr. Love will speed you up if he needs to, so you get your primary conclusions in before the time runs out, but you should plan your talk to last about 15 minutes. 
         - Then for the last few minutes, Dr. Love will make some general comments and ask you a couple of specific questions (usually these include how much of your time was spent cleaning vs. analyzing data, and what would you tell yourself now that you wish you'd known when you started the project.)
