@@ -23,7 +23,7 @@ We'll also look at some data visualizations (before we get to the slides) and ad
 
 4. If you are interested in reading [32 pages of PDF notes I wrote in Spring 2016 on **longitudinal data analysis**](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf), specifically about spaghetti plots, response feature analysis, repeated measures ANOVA, and the basics of generalized estimating equations (GEE), well, [I've posted it to our Texts page](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf). No warranties, but you're welcome to it.
 
-## Minute Paper after Class 24 (40 responses, advice for prospective students not yet edited)
+## Minute Paper after Class 24 (n = 40 responses)
 
 ### Please describe your current Project 2 progress 
 
