@@ -2,10 +2,12 @@
 
 ## Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class25) will be posted as soon as they are available.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class25) are now posted.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class25) will be posted as soon as they are available.
 
 Today's class will conclude our discussion of Cox proportional hazards regression models. As a reminder, Chapters 22 and 23 of the [Course Notes](https://thomaselove.github.io/432-notes/) describe the main ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time.
+
+We'll also look at some data visualizations (before we get to the slides) and address three loose ends that have been hanging for a while, related to earlier materials in the course.
 
 ## Announcements at the start of class
 
