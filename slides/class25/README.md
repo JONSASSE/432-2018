@@ -74,21 +74,23 @@ There were many similar suggestions, which I'll boil down to the following for n
     - Now, you may still want to include the weights at some point. Incorporating survey weights in a linear or logistic regression model depends on the kind of weights available - you may just be doing a weighted linear regression or weighted logistic regression, and lm, glm, ols and lrm all can take weights, although they do so in slightly different ways. 
     - But what people usually do instead is use the survey package, and some details on this are available at https://stats.idre.ucla.edu/r/faq/how-can-i-do-regression-estimation-with-survey-data/ - this doesn't play so well with the rms packages, but can be used with lm and glm approaches in a pretty straightforward way. 
     - The gold mine in this area (if there is one) appears to be http://asdfree.com/ - if you go there, you'll see an obsessively crafted book called **Analyze Survey Data for Free** edited by Anthony Joseph Damico. In there, you'll find, among other things, detailed instructions on using survey data from NHANES. I'm not sure how complete it is, but there's a lot of stuff available.
-5. How will our final projects be weighted in comparison to the rest of our assignments?
+5. What does a low value of R-square mean, in all of these new settings?
+    - A really low value of R-square, be it an OLS R-square, or one of the various estimates available for generalized linear models, is mostly something to worry about because it suggests that there are a lot of "omitted variables" not included in the model that might have an impact. This might well mean that such things were never measured - usually it means that our understanding of the phenomenon the model is describing (or our measurements of it, at least) are weak.
+6. How will our final projects be weighted in comparison to the rest of our assignments?
     - [The syllabus](https://thomaselove.github.io/432-syllabus/deliverables-and-grading.html#grading) is your friend here.
-6. Which functions allow the creation of nomograms, etc. I know some play well and others do not...
+7. Which functions allow the creation of nomograms, etc. I know some play well and others do not...
     - Nomograms are built with the `rms` package, and work with models fit using `ols`, `lrm`, and `cph` that we've studied.
-7. Is there a way to calculate AIC and BIC for zero-inflated models?
+8. Is there a way to calculate AIC and BIC for zero-inflated models?
     - I don't know. I use Vuong's test to compare zero-inflated models to their non-zero-inflated counterparts. You could use a likelihood ratio test to compare a zero-inflated Poisson to a zero-inflated negative binomial with the same predictors, since the output does produce the log likelihood estimates.
-8. Quiz 2. What's the plan?
-    - Still building it. **When it's done, I'll update this**, but the current plan is roughly 60% linear + (binary) logistic regression and roughly 40% everything else. I don't yet know the combination of "analysis you'll have to do" vs. "analysis I'll do that you'll interpret." I'd like it to be no more taxing than HW 6 was, certainly!
-9. Are we going to end up having those meetings with other students during class time?
+9. Quiz 2. What's the plan?
+    - Still building it. **When it's done, I'll update this**, but the current plan is roughly 60% linear + (binary) logistic regression and roughly 40% everything else. I don't yet know the combination of "analysis you'll have to do" vs. "analysis I'll do that you'll interpret." I'd like it to be no more taxing than HW 6 was, certainly! The current aim is 40 questions.
+10. Are we going to end up having those meetings with other students during class time?
     - No, we're not.
-10. Do we get to learn about propensity score matching?
+11. Do we get to learn about propensity score matching?
     - Next Tuesday was the day I plan to talk about it, but whether I'll do it Tuesday or Thursday next week depends on how things go this Thursday. Of course, I teach the 500 course every spring, and that's all about propensity score analysis. You'd be welcome to join us. Several students in this year's 432 class are finishing 500 as well now, and they can tell you all about it from the student perspective.
-11. In Project 2, do you prefer that we give a Powerpoint presentation?
+12. In Project 2, do you prefer that we give a Powerpoint presentation?
     - I prefer only that you give me a clear understanding of what you've done, in whatever way works **best for you**. Some people do well working with the results of their HTML exclusively, others prefer to gather their thoughts into a separate presentation. I've seen excellent results with lots of different approaches (HTML, Powerpoint, Prezi, PDF, Keynote, etc. etc.), and I don't want to get in the way of you putting your best foot forward. You do you.
-12. What's the format of the Project 2 presentation? What if it's done by two people?
+13. What's the format of the Project 2 presentation? What if it's done by two people?
     - In the 20 minutes you're in the room, expect Dr. Love to set a timer for 16 minutes, and let you lead the presentation **on your laptop** in that time while he occasionally asks questions (if there are two of you, one will speak for the first 8 minutes or so, then Dr. Love will switch over to the other speaker.) 
         - Dr. Love will speed you up if he needs to, so you get your primary conclusions in before the time runs out, but you should plan your talk to last about 15 minutes. 
         - Then for the last few minutes, Dr. Love will make some general comments and ask you a couple of specific questions (usually these include how much of your time was spent cleaning vs. analyzing data, and what would you tell yourself now that you wish you'd known when you started the project.)
