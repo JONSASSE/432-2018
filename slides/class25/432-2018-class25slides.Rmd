@@ -23,6 +23,9 @@ library(rms)
 library(survival)
 library(OIsurv)
 library(survminer)
+library(aplore3) # for a data set
+library(ResourceSelection) # for Hosmer-Lemeshow test
+library(bestglm) # for a demonstration of all subsets
 library(broom)
 library(tidyverse)
 ```
@@ -293,6 +296,102 @@ Function(m1)
 
 where `pmax` is the maximum of the arguments inside its parentheses.
 
+# Asssessing the Quality of a Logistic Regression Model
+
+## A Quick Example
+
+SOURCE: Hosmer and Lemeshow (2000) Applied Logistic Regression: Second Edition. These data are copyrighted by John Wiley & Sons Inc. and must be acknowledged and used accordingly. Data were collected at Baystate Medical Center, Springfield, Massachusetts during 1986.
+
+```{r}
+# uses aplore3 package for data set
+lbw <- aplore3::lowbwt
+head(lbw,3)
+```
+
+## Fit a logistic regression model
+
+```{r}
+model_10 <- glm(low ~ lwt + ptl + ht, 
+                data = lbw, family = binomial)
+model_10
+```
+
+## What is this model predicting, exactly?
+
+```{r}
+levels(lbw$low)
+lbw %>% count(low)
+```
+
+The model predicts the probability of a LOW birth weight, because < 2500 g is listed second here.
+
+- Our `model_10` is a model fit to y = 1 when low < 2500 g
+- If y = 1 indicated that low >= 2500 g, this would be the opposite of our `model_10`.
+
+## Proving the direction of `model_10`
+
+```{r}
+lbw <- lbw %>% mutate(y1 = ifelse(low == "< 2500 g", 1, 0),
+               y2 = ifelse(low == ">= 2500 g", 1, 0))
+mod_1 <- glm(y1 ~ lwt + ptl + ht, 
+                data = lbw, family = binomial)
+mod_2 <- glm(y2 ~ lwt + ptl + ht, 
+                data = lbw, family = binomial)
+```
+
+- `mod_1` predicts Pr(birth weight < 2500 g)
+- `mod_2` predicts Pr(birth weight >= 2500 g)
+
+## So, what does `model_10` predict?
+
+- `mod_1` predicts Pr(birth weight < 2500 g)
+- `mod_2` predicts Pr(birth weight >= 2500 g)
+
+```{r}
+head(fitted(mod_1),3)
+head(fitted(mod_2),3)
+head(fitted(model_10),3)
+```
+
+## Classification Table for this Model
+
+```{r}
+table(fitted(model_10) >= 0.5, lbw$low)
+```
+
+## The Hosmer-Lemeshow Test of Goodness of Fit
+
+See [\textcolor{blue}{this link from Jonathan Bartlett}](http://thestatsgeek.com/2014/02/16/the-hosmer-lemeshow-goodness-of-fit-test-for-logistic-regression/).
+
+- The Hosmer-Lemeshow goodness of fit test is based on dividing the sample into g groups (g is often chosen to be 10) according to their predicted probabilities.
+- We then calculate the expected number of Y = 1 outcomes (based on the model probabilities of Y = 1 in the group) in each of the 10 groups, and compare those results to what is observed in the data using a Pearson goodness of fit statistic.
+- A significant result indicates statistically significant "lack of fit" but it's easy to criticize the test (among other things, if you change the choice of g, you can materially change the *p* value.)
+
+## Running the Hosmer-Lemeshow Test
+
+```{r}
+# requires ResourceSelection package
+hos <- hoslem.test(model_10$y, fitted(model_10), g = 10)
+hos
+```
+
+So there's no evidence of poor fit. We can also get a table of observed vs. expected.
+
+## Observed vs. Expected Table from H-L test
+
+```{r}
+cbind(hos$observed, hos$expected)
+```
+
+## Change the number of groups, *g*?
+
+```{r}
+for (i in 5:15) {
+  print(hoslem.test(model_10$y, 
+                    fitted(model_10), g=i)$p.value)
+}
+```
+
 # Can we use "best subsets" or "all subsets" in logistic regression?
 
 ## Using the `bestglm` package to do "best subsets" with logistic models
@@ -301,8 +400,98 @@ There are several available tools. If you're interested, I'd start with [\textco
 
 - The `bestglm` package does an exhaustive (all subsets) search through a glm (slowly) using AIC, BIC or cross-validation, for example.
 - This expects the data to be in a certain form, for instance, the outcome must be named *y* and you can have no extraneous variables present.
-- The tutorial you'll find at the link above is pre-tidyverse. I don't know how well `bestglm` works with the tidyverse, but it;s not likely to be much worse than `leaps` does.
+- The tutorial you'll find at the link above is pre-tidyverse. I don't know how well `bestglm` works with the tidyverse, but it's not likely to be much worse than `leaps` does.
+- This approach can also be used with linear models which include multi-categorical predictors.
+- `bestglm` is going to do an exhaustive search, which will be slow with large data sets, or large pools of predictors.
 - In addition to `bestglm` there are several other appealing tools for looking at large numbers of potential models quickly.
+
+## Preparing the Data Set
+
+```{r}
+lbw_for_bestglm <- lbw %>%
+    mutate(y = low) %>%
+    select(age, lwt, race, smoke, ptl, ht, ui, ftv, y)
+```
+
+Must include only the variables we want to include in the search, and then the outcome, which must be labeled y, in that order.
+
+
+## `lbw_for_bestglm` data: First few observations
+
+```{r}
+head(lbw_for_bestglm)
+```
+
+## Search through all subsets, with AIC as criterion
+
+```{r}
+res.best.logistic <-
+    bestglm(Xy = lbw_for_bestglm,
+            family = binomial,
+            IC = "AIC",
+            method = "exhaustive")
+```
+
+This approach (with a `gaussian` family) can also be used for OLS.
+
+## Show top 5 models chosen by AIC
+
+```{r}
+res.best.logistic$BestModels
+```
+  
+## Show result for best model, according to AIC
+
+![](figures/fig4.png)
+
+## Search all subsets, using BIC instead of AIC
+
+```{r}
+res.best.logistic2 <-
+    bestglm(Xy = lbw_for_bestglm,
+            family = binomial,
+            IC = "BIC",
+            method = "exhaustive")
+```
+
+## Show top 5 models by BIC
+
+```{r}
+res.best.logistic2$BestModels
+```
+
+## Show result for best model, according to BIC
+
+![](figures/fig5.png)
+
+## Best Models, by Criterion
+
+There are 8 predictors under consideration.
+
+- `age`, `lwt`, `race`, `smoke`, `ptl`, `ht`, `ui` and `ftv`
+
+
+Model (by AIC)              | Rank  | Model (by BIC)
+--------------------------: | :---: | ------------------
+`lwt`, `smoke`, `ptl`, `ht`, `ui`     | 1     | `lwt`, `ptl`, `ht`
+all except `ftv`                 | 2     | `ptl`
+`lwt`, `race`, `smoke`, `ptl`, `ht`   | 3     | `age`, `ptl`
+all except `ui`, `ftv`             | 4     | `lwt`, `ptl`
+`age`, `lwt`, `ptl`, `ht`, `ui`       | 5     | `lwt`, `ptl`, `ht`, `ui`
+
+## Search all subsets, using Cross-Validation
+
+Can be done when all predictors are continuous or binary, but **not** if you have categorical predictors with more than two levels.
+
+```{r, eval = FALSE}
+# not run here because we have
+# some multi-categorical predictors
+set.seed(432)
+res.best.logistic_cv <-
+    bestglm(Xy = lbw_for_bestglm,
+            family = binomial,
+            IC = "CV")
+```
 
 ## Next Time
 
