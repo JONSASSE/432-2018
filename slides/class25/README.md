@@ -43,45 +43,6 @@ Count `(%)` | Response
 - Zero inflated Poisson Regression / Poisson Regression and other methods for count outcomes
 - Data Visualization
 
-### Do you have any advice for prospective students in next year's 431-432 sequence?
-
-- Pay attention to interpretations of models.
-- Google and Dr. Love's notes/powerpoints are your best friends!  Never hesitate to google something that is sending you an error because chances are someone has asked about it (and risked getting flamed at) on StackOverflow.  Good luck-learn lots and have fun! 
-- Definitely take the Intro to R course. I had not coded anything (beyond simple basic in 9th grade--1982-83) before I took that class last summer. Without it, I think 431 would have killed me. Understanding a bit about what the code is trying to do was INCREDIBLY helpful! 
-- Taking 406 in the summer prior to starting the course so that you are familiar with R is extremely helpful. 
-- I would maybe provide students some of the "required reading" ahead of time--they may not do it, but I found the R4DS readings to be really helpful and they probably would provide some orientation at the beginning of the class.
-- start assignments and project early. 
-- Tell them it couldn't hurt if they learned the basics of base R (how it stores data, the different kinds of objects, etc.) and maybe Rmarkdown as well. Obviously, many wouldn't know where to start, but some eager beavers may benefit from this.
-- Utilize office hours and 431 help as much as you can!
-- I would recommend they do the easy (and free) "Introduction to R" at datacamp.  Learning how to use R is the hardest part of the course, and arguably the most important.  
-- I would advise them to do some basic R tutorials before the course starts. I hadn't had any experience with R and it made the first few assignments much more difficult, purely because of the software basics I didn't understand.
-- My advice would be not to procrastinate on the projects (especially for 431, since things were very busy towards the end of the semester). It was very advantageous to have them done earlier than the due date to help with time management for other things that were due (homework, quiz, etc). 
-- It's really an amazing course, thanks so much
-- They are very useful coursers and they will spend you some time to complete. If you are busy with other things, you may reschedule your plan. 
-- read the notes more
-- The course is very labor intensive and you learn a lot. You must go through the notes thoroughly before and after each class. It helps. 
-- let them know that it's a time consuming series- probably more than the rest of the other classes combined (while taking 2-3 other classes, 1 being a seminar)...but that it's well worth the time and effort 
-- I would recommend looking at resources online about how to simply tidy data. So much time and energy could have been saved by knowing - more basic data tidying concepts for me.
-- Taking 480 helps getting the basic mathematical background for the applications in 431 and 432 (mostly 431)
-- To start working on the assignments with enough time ahead. Use all the resources available to clarify doubs even if you think they are silly, getting familiar with R is challenging.
-- Starting to learn R before they get into the course would be very helpful. Particularly base R coding, not just using particular - packages. 
-- Just to follow you exactly, specially readme files, then notes and lectures.
-- The introduction to R programming course offered in the summer term was very helpful in preparing for 431/432. I think I would have really struggled if I hadn't taken it. 
-- Read the notes carefully. 
-- Read the class notes on the models that we do not use often (e.g. Poisson)
-- Focus during classes. Reading the course note is very helpful.
-- Allocate at least 4 hours a week for homework, readings, catching up. Attend every class or at least listen to online audio. 
-- It needs a lot of studying. 
-- Dr. Love is very helpful. His code is useful and he is willing to help with troubleshooting.
-- I found the data camp introduction lessons on R functions/basic data management to be very helpful even near the end of the second semester. Providing this resource to students new to R and those who could use refresher before the course begins might be a good idea.
-- Focused on everything in the class
-- Some kind of an Intro to R course is extremely beneficial before starting 431-432
-- Helping them find their data right from the start of the course may ease their burden.
-- Get R, RStudio installed, and start working with R as soon as possible. Time and effort is the only thing that helps when it comes to computer Languages. Start with Markdown right away, and soon, at least working with git within RStudio. Roger Peng has a good intro courses in coursera. Jeff Leek also has 2 courses called statistics boot camp that would be good to get the stats frame of mind going.  
-- Expect a lot of work outside of class and start projects/assignments early.
-- If you intend to take both courses, make sure you take Dr. Love's section of 431
-- Have a basic understanding of R will help. 
-
 ### What question(s) about the course are uppermost in your mind now?
 
 1. How do we build the fancy moving plots we saw in class like the one from *Huffington Post*? Is it possible in R shiny or are the graphics too fancy for it?
@@ -111,6 +72,25 @@ Count `(%)` | Response
         - Dr. Love will speed you up if he needs to, so you get your primary conclusions in before the time runs out, but you should plan your talk to last about 15 minutes. 
         - Then for the last few minutes, Dr. Love will make some general comments and ask you a couple of specific questions (usually these include how much of your time was spent cleaning vs. analyzing data, and what would you tell yourself now that you wish you'd known when you started the project.)
     - If you're a group of two, then one of you talks for a while, and then the other one talks for a while. **Dr. Love** determines who talks when, so you both need to be prepared to address the whole thing, and Dr. Love will ask questions of each of you at any time, so you can't fall asleep while the other person talks.
+
+### Do you have any advice for prospective students in next year's 431-432 sequence?
+
+There were many similar suggestions, which I'll boil down to the following for now, but I'll incorporate more individual pieces in what I provide to new students. Thank you!
+
+- **Workload**
+    - The course involves a lot of outside-of-class work. It requires a lot of attention, and some busy people don't have the time to do it without rearranging some things. 
+    - You really need to devote some time to this. 
+    - Coming to class, or at least listening to the audio is crucial. Lots of things happen in class that you wouldn't get just by reading the notes alone.
+    
+- **Getting Started Quickly**
+    - Becoming familiar with R before the class gets rolling is really helpful, and there are lots of good resources to help you, including courses online and at CWRU that seem valuable.
+    - Dr. Love should get as much of the required reading out to students in advance of the class as possible.
+    - Students have to not procrastinate, and start all assignments early.
+
+- **Use the available resources well**
+    - Students need to get comfortable with using office hours and 431-help as much as they can, as opposed to trying to figure everything out on their own at the last minute.
+    - The course notes are really helpful. Read them.
+    - If you intend to take both courses, make sure you take Dr. Love's section of 431.
 
 ## Today's Data Visualizations
 
