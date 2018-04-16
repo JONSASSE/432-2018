@@ -7,7 +7,7 @@
 
 Today's class will conclude our discussion of Cox proportional hazards regression models. As a reminder, Chapters 22 and 23 of the [Course Notes](https://thomaselove.github.io/432-notes/) describe the main ideas behind Cox proportional hazards regression models incorporating covariates that do not change over time.
 
-We'll also look at some data visualizations (before we get to the slides) and address three loose ends that have been hanging for a while, related to earlier materials in the course.
+We'll also look at some data visualizations (before we get to the slides) and address a few loose ends that have been hanging for a while, related to earlier materials in the course, specifically about the purpose of our models, restricted cubic splines, interpreting the fit of a logistic regression and variable selection for logistic regression.
 
 ## Announcements at the start of class
 
@@ -23,17 +23,17 @@ We'll also look at some data visualizations (before we get to the slides) and ad
 
 4. If you are interested in reading [32 pages of PDF notes I wrote in Spring 2016 on **longitudinal data analysis**](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf), specifically about spaghetti plots, response feature analysis, repeated measures ANOVA, and the basics of generalized estimating equations (GEE), well, [I've posted it to our Texts page](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf). No warranties, but you're welcome to it.
 
-## Minute Paper after Class 24 (first 34 responses, advice for prospective students not yet edited)
+## Minute Paper after Class 24 (40 responses, advice for prospective students not yet edited)
 
 ### Please describe your current Project 2 progress 
 
-Count (%) | Response
+Count `(%)` | Response
 ----------: | --------------------------------------------------------------------
-8 (24) | I have submitted a proposal and it's been approved and I've starting working with the data to produce the portfolio.
-5 (15) | I have submitted a proposal and it's been approved but that's it.  
-1 (3) | I have submitted a proposal and it's not yet approved.
-19 (56) | I am working on my proposal, and am nearing the point where I can submit it.
-1 (3) | I haven't really gotten rolling on the proposal yet.
+9 `(22.5)` | Proposal is approved and I've starting working with the data.
+5 `(12.5)` | Proposal is approved but that's it.  
+1 `(2.5)` | Proposal submitted but not yet approved.
+24 `(60.0)` | I am working on my proposal, and am nearing the point where I can submit it.
+1 `(2.5)` | I haven't really gotten rolling on the proposal yet.
 
 ### What is the most important thing you've learned recently from the course?
 
@@ -77,6 +77,10 @@ Count (%) | Response
 - Focused on everything in the class
 - Some kind of an Intro to R course is extremely beneficial before starting 431-432
 - Helping them find their data right from the start of the course may ease their burden.
+- Get R, RStudio installed, and start working with R as soon as possible. Time and effort is the only thing that helps when it comes to computer Languages. Start with Markdown right away, and soon, at least working with git within RStudio. Roger Peng has a good intro courses in coursera. Jeff Leek also has 2 courses called statistics boot camp that would be good to get the stats frame of mind going.  
+- Expect a lot of work outside of class and start projects/assignments early.
+- If you intend to take both courses, make sure you take Dr. Love's section of 431
+- Have a basic understanding of R will help. 
 
 ### What question(s) about the course are uppermost in your mind now?
 
@@ -94,12 +98,19 @@ Count (%) | Response
     - [The syllabus](https://thomaselove.github.io/432-syllabus/deliverables-and-grading.html#grading) is your friend here.
 6. Which functions allow the creation of nomograms, etc. I know some play well and others do not...
     - Nomograms are built with the `rms` package, and work with models fit using `ols`, `lrm`, and `cph` that we've studied.
-7. Just mildly curious as to whether or not we're going to end up having those meetings with other students during class time or not.
-    - The decision is no, we're not.
-8. Do we get to learn about propensity score matching?
+7. Is there a way to calculate AIC and BIC for zero-inflated models?
+    - I don't know. I use Vuong's test to compare zero-inflated models to their non-zero-inflated counterparts. You could use a likelihood ratio test to compare a zero-inflated Poisson to a zero-inflated negative binomial with the same predictors, since the output does produce the log likelihood estimates.
+8. Just mildly curious as to whether or not we're going to end up having those meetings with other students during class time.
+    - No, we're not.
+9. Do we get to learn about propensity score matching?
     - Next Tuesday was the day I plan to talk about it, but whether I'll do it Tuesday or Thursday next week depends on how things go this Thursday. Of course, I teach the 500 course every spring, and that's all about propensity score analysis. You'd be welcome to join us. Several students in this year's 432 class are finishing 500 as well now, and they can tell you all about it from the student perspective.
-9. In Project 2, do you prefer that we give a Powerpoint presentation?
-    - Well, no. I prefer only that you give me a clear understanding of what you've done, in whatever way works **best for you**. Some people do well working with the results of their HTML exclusively, others prefer to gather their thoughts into a separate presentation. I've seen excellent results with lots of different approaches, and I don't want to get in the way of you putting your best foot forward.
+10. In Project 2, do you prefer that we give a Powerpoint presentation?
+    - I prefer only that you give me a clear understanding of what you've done, in whatever way works **best for you**. Some people do well working with the results of their HTML exclusively, others prefer to gather their thoughts into a separate presentation. I've seen excellent results with lots of different approaches (HTML, Powerpoint, Prezi, PDF, Keynote, etc. etc.), and I don't want to get in the way of you putting your best foot forward. You do you.
+11. What's the format of the Project 2 presentation? What if it's done by two people?
+    - In the 20 minutes you're in the room, expect Dr. Love to set a timer for 16 minutes, and let you lead the presentation **on your laptop** in that time while he occasionally asks questions (if there are two of you, one will speak for the first 8 minutes or so, then Dr. Love will switch over to the other speaker.) 
+        - Dr. Love will speed you up if he needs to, so you get your primary conclusions in before the time runs out, but you should plan your talk to last about 15 minutes. 
+        - Then for the last few minutes, Dr. Love will make some general comments and ask you a couple of specific questions (usually these include how much of your time was spent cleaning vs. analyzing data, and what would you tell yourself now that you wish you'd known when you started the project.)
+    - If you're a group of two, then one of you talks for a while, and then the other one talks for a while. **Dr. Love** determines who talks when, so you both need to be prepared to address the whole thing, and Dr. Love will ask questions of each of you at any time, so you can't fall asleep while the other person talks.
 
 ## Today's Data Visualizations
 
