@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (13 proposals, 14 people)
+## Proposals that are Approved (16 proposals, 18 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -15,20 +15,21 @@ Maher Kazimi    | Comparing graft failure for ice vs. pump during kidney transpl
 Nikolas Krieger | Predicting Life Satisfaction Based on Feelings towards the Other
 Carli Lehr      | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
+Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
+Sneha Vakamudi  | Hospital length of stay: What is more important, the patient or the picture? 
 Ruipeng Wei     | Can blood components indicate the presence of chronic kidney disease?
 
 Investigative Team | Project 2 Title 
 -------------------------------------- | -----------------------------------------------------------------------------
 Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperformance in Multiple Sclerosis
+Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (6 people)
+## Proposals Submitted but not yet Reviewed by Dr. Love (3 people)
 
-- Sneha Vakamudi
-- Andrew Tang
-- Dongze He and Andrew Shan
 - Abhishek Deshpande and Sandra Silva Camargo
+- Roberto Martinez
 
-## Proposals Still to Come or Under Revision (21 people)
+## Proposals Still to Come or Under Revision (20 people)
 
 - Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
@@ -44,20 +45,18 @@ Jenny Feng
 Jiajian Huang
 Hyun Jo Kim
 Kedar Mahajan
-Roberto Martinez
 John McDonnell
-
 Satyakam Mishra
+
 Haeun Park
 Preeti Pathak
 Gabrielle Rieth
 Kaylee Sarna
-
 Connor Swingle
+
 Vinh Trinh
 Frances Wang
 Peter Wilkinson
 Xin Xin Yu
-
 Bilal Zonjy
 ```
