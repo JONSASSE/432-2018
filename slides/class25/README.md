@@ -23,17 +23,17 @@ We'll also look at some data visualizations (before we get to the slides) and ad
 
 4. If you are interested in reading [32 pages of PDF notes I wrote in Spring 2016 on **longitudinal data analysis**](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf), specifically about spaghetti plots, response feature analysis, repeated measures ANOVA, and the basics of generalized estimating equations (GEE), well, [I've posted it to our Texts page](https://github.com/THOMASELOVE/432-2018/blob/master/texts/432_notes_from_2016_on_longitudinal_data.pdf). No warranties, but you're welcome to it.
 
-## Minute Paper after Class 24 (first 24 responses, several questions not yet edited)
+## Minute Paper after Class 24 (first 34 responses, advice for prospective students not yet edited)
 
 ### Please describe your current Project 2 progress 
 
 Count (%) | Response
 ----------: | --------------------------------------------------------------------
-8 (33) | I have submitted a proposal and it's been approved and I've starting working with the data to produce the portfolio.
-5 (21) | I have submitted a proposal and it's been approved but that's it.  
-0 (-) | I have submitted a proposal and it's not yet approved.
-10 (42) | I am working on my proposal, and am nearing the point where I can submit it.
-1 (4) | I haven't really gotten rolling on the proposal yet.
+8 (24) | I have submitted a proposal and it's been approved and I've starting working with the data to produce the portfolio.
+5 (15) | I have submitted a proposal and it's been approved but that's it.  
+1 (3) | I have submitted a proposal and it's not yet approved.
+19 (56) | I am working on my proposal, and am nearing the point where I can submit it.
+1 (3) | I haven't really gotten rolling on the proposal yet.
 
 ### What is the most important thing you've learned recently from the course?
 
@@ -68,6 +68,15 @@ Count (%) | Response
 - Just to follow you exactly, specially readme files, then notes and lectures.
 - The introduction to R programming course offered in the summer term was very helpful in preparing for 431/432. I think I would have really struggled if I hadn't taken it. 
 - Read the notes carefully. 
+- Read the class notes on the models that we do not use often (e.g. Poisson)
+- Focus during classes. Reading the course note is very helpful.
+- Allocate at least 4 hours a week for homework, readings, catching up. Attend every class or at least listen to online audio. 
+- It needs a lot of studying. 
+- Dr. Love is very helpful. His code is useful and he is willing to help with troubleshooting.
+- I found the data camp introduction lessons on R functions/basic data management to be very helpful even near the end of the second semester. Providing this resource to students new to R and those who could use refresher before the course begins might be a good idea.
+- Focused on everything in the class
+- Some kind of an Intro to R course is extremely beneficial before starting 431-432
+- Helping them find their data right from the start of the course may ease their burden.
 
 ### What question(s) about the course are uppermost in your mind now?
 
@@ -85,14 +94,12 @@ Count (%) | Response
     - [The syllabus](https://thomaselove.github.io/432-syllabus/deliverables-and-grading.html#grading) is your friend here.
 6. Which functions allow the creation of nomograms, etc. I know some play well and others do not...
     - Nomograms are built with the `rms` package, and work with models fit using `ols`, `lrm`, and `cph` that we've studied.
-
-
-- I would still like a little more clarity on when it is justified to peek at the relationship between a predictor and outcome before fitting a model, two by two tables, scatterplot matrices, other graphical exploration?
-- How should I proceed if my covariates turn out to be more significant than my main predictor in my model? Should I then retain the main predictor or drop it from the final model?
-- Just mildly curious as to whether or not we're going to end up having those meetings with other students during class time or not.
-- how to tidy up real world data and make it survival analysis-friendly
-- What do we do if PH assumptions are not met for survival analysis? 
-- In censoring, are there specific tests that can be done to compare the censored sample to the rest of the sample in the study. 
+7. Just mildly curious as to whether or not we're going to end up having those meetings with other students during class time or not.
+    - The decision is no, we're not.
+8. Do we get to learn about propensity score matching?
+    - Next Tuesday was the day I plan to talk about it, but whether I'll do it Tuesday or Thursday next week depends on how things go this Thursday. Of course, I teach the 500 course every spring, and that's all about propensity score analysis. You'd be welcome to join us. Several students in this year's 432 class are finishing 500 as well now, and they can tell you all about it from the student perspective.
+9. In Project 2, do you prefer that we give a Powerpoint presentation?
+    - Well, no. I prefer only that you give me a clear understanding of what you've done, in whatever way works **best for you**. Some people do well working with the results of their HTML exclusively, others prefer to gather their thoughts into a separate presentation. I've seen excellent results with lots of different approaches, and I don't want to get in the way of you putting your best foot forward.
 
 ## Today's Data Visualizations
 
