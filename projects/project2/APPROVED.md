@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (26 proposals, 30 people)
+## Proposals that are Approved (27 proposals, 31 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ Jiajian Huang   | Predicting BMI and incidence of coronary heart disease in OMAS
 Maher Kazimi    | Comparing graft failure for ice vs. pump during kidney transplant
 Nikolas Krieger | Predicting Life Satisfaction Based on Feelings towards the Other
 Carli Lehr      | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
+Kedar Mahajan   | How does brain atrophy predict disability in progressive multiple sclerosis?
 Roberto Martinez | The effect of multiple chronic conditions on key outcomes in hospitalized HIV-positive patients
 Satyakam Mishra | Predicting Pedal Edema in patients from India 
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
@@ -41,12 +42,11 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 - Preeti Pathak
 - Connor Swingle
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (7)
+## Proposals Submitted but not yet Reviewed by Dr. Love (6)
 
 - Bilal Zonjy
 - Hyun Jo Kim
 - Laura Cremer
-- Kedar Mahajan
 - Gabrielle Rieth
 - Vinh Trinh
 - Khaled Alayed
