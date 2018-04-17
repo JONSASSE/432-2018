@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (30 proposals, 34 people)
+## Proposals that are Approved (31 proposals, 35 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -23,6 +23,7 @@ Satyakam Mishra | Predicting Pedal Edema in patients from India
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
 Haeun Park      | Who will get the flu shot?
 Preeti Pathak   | Do lifetime smoking or drinking exposures increase the risk of pregnancy loss?
+Gabrielle Rieth | Linking outcomes for head surgery patients to corticosteroid doses
 Kaylee Sarna    | Predicting vegetarian diet based on biochemical profile and health behaviors, in NHANES 2009-10
 Connor Swingle  | Race and eviction filings in Ohio
 Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
@@ -44,12 +45,11 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 
 - <none> 
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (5)
+## Proposals Submitted but not yet Reviewed by Dr. Love (4)
 
 - Bilal Zonjy
 - Hyun Jo Kim
 - Laura Cremer
-- Gabrielle Rieth
 - Khaled Alayed
 
 ## Proposals Still to Come or Under Revision (2 people)
