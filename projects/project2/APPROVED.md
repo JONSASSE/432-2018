@@ -38,31 +38,30 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 - Preeti Pathak
 - Connor Swingle
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (5)
+## Proposals Submitted but not yet Reviewed by Dr. Love (9)
 
 - Katherine Dobbs
 - Kaylee Sarna
 - Bilal Zonjy
 - Hyun Jo Kim
 - Shufen Cao
+- Laura Cremer
+- Kedar Mahajan
+- Gabrielle Rieth
+- Vinh Trinh
 
-## Proposals Still to Come or Under Revision (7 people)
+## Proposals Still to Come or Under Revision (3 people)
 
 - Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
 
 ```
 Khaled Alayed
-Laura Cremer
-Kedar Mahajan
 John McDonnell
-Gabrielle Rieth
-
-Vinh Trinh
 Peter Wilkinson
 ```
 
-## First Choice of Time Slot (through 30 scheduling submissions)
+## First Choice of Time Slot (through 34 scheduling submissions)
 
 Projects | Slot # | Date and Time
 -------: | -----: | ------------------------------------------------------------
@@ -74,12 +73,14 @@ Projects | Slot # | Date and Time
 **3** | 17 | 05-07 9:30 AM
 **5** | 19 | 05-07 10:20 AM
 1 | 21 | 05-07 11:20 AM
-1 | 23 | 05-07 12:10 PM
+**2** | 23 | 05-07 12:10 PM
 1 | 26 | 05-07 2:20 PM
 1 | 27 | 05-07 2:45 PM
 1 | 28 | 05-07 3:20 PM
+1 | 30 | 05-07 4:10 PM
 **2** | 33 | 05-08 11:30 AM
 1 | 36 | 05-08 12:45 PM
 **3** | 37 | 05-08 1:10 PM
+1 | 38 | 05-08 1:45 PM
 **2** | 39 | 05-08 2:10 PM
-
+1 | -- | No preference
