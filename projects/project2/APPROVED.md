@@ -23,21 +23,22 @@ Ruipeng Wei     | Can blood components indicate the presence of chronic kidney d
 Investigative Team | Project 2 Title 
 -------------------------------------- | -----------------------------------------------------------------------------
 Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperformance in Multiple Sclerosis
-Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
 Abhishek Deshpande & Sandra Silva Camargo | Predicting *C. diff.* infection in lung transplant recipients
+Jenny Feng & Xin Xin Yu | Factors Influencing Patient Satisfaction at VA Hospitals
+Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
 
-## Proposals Currently Under Revision (1)
+
+## Proposals Currently Under Revision (3)
 
 *If you've been asked to do a revision*, edit your submission accordingly, by the deadline of **2018-04-17 at 5 PM**.
 
-- Preeti Pathak
-
-## Proposals Submitted but not yet Reviewed by Dr. Love (5 people)
-
-- Jenny Feng and Xin Xin Yu
 - Satyakam Mishra
-- Jiajian Huang
+- Preeti Pathak
 - Connor Swingle
+
+## Proposals Submitted but not yet Reviewed by Dr. Love (1 person)
+
+- Jiajian Huang
 
 ## Proposals Still to Come or Under Revision (14 people)
 
