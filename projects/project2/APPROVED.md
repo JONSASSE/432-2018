@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (28 proposals, 32 people)
+## Proposals that are Approved (30 proposals, 34 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
