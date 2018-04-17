@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (18 proposals, 21 people)
+## Proposals that are Approved (21 proposals, 25 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -37,9 +37,7 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 - Preeti Pathak
 - Connor Swingle
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (1)
-
-- 
+## Proposals Submitted but not yet Reviewed by Dr. Love (0)
 
 ## Proposals Still to Come or Under Revision (13 people)
 
