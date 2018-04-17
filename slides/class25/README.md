@@ -82,8 +82,8 @@ There were many similar suggestions, which I'll boil down to the following for n
     - Nomograms are built with the `rms` package, and work with models fit using `ols`, `lrm`, and `cph` that we've studied.
 8. Is there a way to calculate AIC and BIC for zero-inflated models?
     - I don't know. I use Vuong's test to compare zero-inflated models to their non-zero-inflated counterparts. You could use a likelihood ratio test to compare a zero-inflated Poisson to a zero-inflated negative binomial with the same predictors, since the output does produce the log likelihood estimates.
-9. Quiz 2. What's the plan?
-    - Still building it. **When it's done, I'll update this**, but the current plan is roughly 60% linear + (binary) logistic regression and roughly 40% everything else. I don't yet know the combination of "analysis you'll have to do" vs. "analysis I'll do that you'll interpret." I'd like it to be no more taxing than HW 6 was, certainly! The current aim is 40 questions.
+9. If I have an outcome which is a measurement of time (like, say, length of stay in a hospital) but there's no censoring, should I treat that length of stay as a time to event (and thus use a Cox model) or as a quantitative variable (and fit, for instance, a linear regression?)
+    - Just because an outcome is a time to an event doesn't mean you have to fit a Cox model. A Cox model is specifically designed to deal with **censoring**. If there is no censoring, there's no reason to choose a Cox model over the much simpler OLS approach.
 10. Are we going to end up having those meetings with other students during class time?
     - No, we're not.
 11. Do we get to learn about propensity score matching?
@@ -95,6 +95,8 @@ There were many similar suggestions, which I'll boil down to the following for n
         - Dr. Love will speed you up if he needs to, so you get your primary conclusions in before the time runs out, but you should plan your talk to last about 15 minutes. 
         - Then for the last few minutes, Dr. Love will make some general comments and ask you a couple of specific questions (usually these include how much of your time was spent cleaning vs. analyzing data, and what would you tell yourself now that you wish you'd known when you started the project.)
     - If you're a group of two, then one of you talks for a while, and then the other one talks for a while. **Dr. Love** determines who talks when, so you both need to be prepared to address the whole thing, and Dr. Love will ask questions of each of you at any time, so you can't fall asleep while the other person talks.
+14. Quiz 2. What's the plan?
+    - Still building it. **When it's done, I'll update this**, but the current plan is roughly 60% linear + (binary) logistic regression and roughly 40% everything else. I don't yet know the combination of "analysis you'll have to do" vs. "analysis I'll do that you'll interpret." I'd like it to be no more taxing than HW 6 was, certainly! The current aim is 40 questions. 40 multiple choice questions, actually, but I don't know if I'll actually be able to do that.
 
 ## Today's Data Visualizations
 
