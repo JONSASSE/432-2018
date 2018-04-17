@@ -11,6 +11,7 @@ Vaishali Deo    | The impact of citizenship status on the general health of adul
 Gwendolyn Donley | Predicting Alzheimer's Disease Risk in Eastern Finnish Men
 Caroline El Sanadi | Modeling the probability of developing osteoporosis in the Study of Women Across Nations
 Ryan Honomichl  | Predicting Hot/Cold Self-Regulation in Preschool Children Using the NICHD Early Childcare Study
+Jiajian Huang   | Predicting BMI and incidence of coronary heart disease in OMAS data, 2015
 Maher Kazimi    | Comparing graft failure for ice vs. pump during kidney transplant
 Nikolas Krieger | Predicting Life Satisfaction Based on Feelings towards the Other
 Carli Lehr      | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
@@ -18,6 +19,7 @@ Roberto Martinez | The effect of multiple chronic conditions on key outcomes in 
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
 Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
 Sneha Vakamudi  | Hospital length of stay: What is more important, the patient or the picture? 
+Frances Wang    | Coronary Artery Calcification in predicting CHD Mortality in High-Risk Elderly Patients
 Ruipeng Wei     | Can blood components indicate the presence of chronic kidney disease?
 
 Investigative Team | Project 2 Title 
@@ -27,7 +29,6 @@ Abhishek Deshpande & Sandra Silva Camargo | Predicting *C. diff.* infection in l
 Jenny Feng & Xin Xin Yu | Factors Influencing Patient Satisfaction at VA Hospitals
 Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
 
-
 ## Proposals Currently Under Revision (3)
 
 *If you've been asked to do a revision*, edit your submission accordingly, by the deadline of **2018-04-17 at 5 PM**.
@@ -36,10 +37,9 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 - Preeti Pathak
 - Connor Swingle
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (2)
+## Proposals Submitted but not yet Reviewed by Dr. Love (1)
 
-- Jiajian Huang
-- Frances Wang
+- 
 
 ## Proposals Still to Come or Under Revision (13 people)
 
