@@ -39,26 +39,25 @@ Abhishek Deshpande & Sandra Silva Camargo | Predicting *C. diff.* infection in l
 Jenny Feng & Xin Xin Yu | Factors Influencing Patient Satisfaction at VA Hospitals
 Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
 
-## Proposals Currently Under Revision (0)
+## Proposals Currently Under Revision (1)
 
-*If you've been asked to do a revision*, edit your submission accordingly, by the deadline of **2018-04-17 at 5 PM**.
+*If you've been asked to do a revision*, edit your submission accordingly, by Wednesday **2018-04-18 at NOON**.
 
-- <none> 
+- Hyun Jo Kim
 
 ## Proposals Submitted but not yet Reviewed by Dr. Love (4)
 
 - Bilal Zonjy
-- Hyun Jo Kim
 - Laura Cremer
 - Khaled Alayed
+- John McDonnell
 
-## Proposals Still to Come or Under Revision (2 people)
+## Proposals Still to Come or Under Revision (1)
 
 - Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
 
 ```
-John McDonnell
 Peter Wilkinson
 ```
 
