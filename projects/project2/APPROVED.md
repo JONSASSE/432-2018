@@ -61,7 +61,7 @@ John McDonnell
 Peter Wilkinson
 ```
 
-## First Choice of Time Slot (through 34 scheduling submissions)
+## First Choice of Time Slot (through 35 scheduling submissions)
 
 Projects | Slot # | Date and Time
 -------: | -----: | ------------------------------------------------------------
@@ -71,7 +71,7 @@ Projects | Slot # | Date and Time
 **3** | 08 | 05-03 1:30 PM
 1 | 15 | 05-03 4:35 PM
 **3** | 17 | 05-07 9:30 AM
-**5** | 19 | 05-07 10:20 AM
+**6** | 19 | 05-07 10:20 AM
 1 | 21 | 05-07 11:20 AM
 **2** | 23 | 05-07 12:10 PM
 1 | 26 | 05-07 2:20 PM
