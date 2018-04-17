@@ -60,7 +60,7 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 Peter Wilkinson
 ```
 
-## First Choice of Time Slot (through 36 scheduling submissions)
+## First Choice of Time Slot (through 36 of 37 scheduling submissions)
 
 Projects | Slot # | Date and Time
 -------: | -----: | ------------------------------------------------------------
