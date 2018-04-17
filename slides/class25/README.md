@@ -11,7 +11,19 @@ We'll also look at some data visualizations (before we get to the slides) and ad
 
 ## Announcements at the start of class
 
-1. The Homework 6 Answer Sketch and Grading Rubric is now posted as an [HTML document you can view](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw6/hw6sketch.html), and as an [R Markdown file you can download](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw6/hw6sketch.Rmd).
+1. Don't forget that your Registration and Scheduling form for Project 2 is due TODAY at 5 PM. The [Google Form is here](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1). 
+    - You can see the status (and title) of proposals that have been reviewed and approved [by visiting this link](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/APPROVED.md).
+    - The most consistent problem I'm seeing is that people don't necessarily know how to write a research question.
+        - It should be a question, not a statement.
+        - It should clearly indicate the way in which you intend to answer it.
+        - It should clearly indicate the model you have in mind and how the data could be used to address the question.
+        - It should lead to a clear understanding of what it is you are actually going to do, and why.
+    - Here are three of the early and good research questions I've seen this year...
+        - Do social determinants of health (education, insurance type, disability, cigarette use) impact the severity of pre-transplant illness?
+        - How well can measures of hospital staff's ability to communicate with patients predict a hospital's readmission rates after an outpatient procedure?
+        - What is the impact of self-reported mental health, specifically anxiety and depression, on neuroperformance measures, specifically walking speed and manual dexterity, in multiple sclerosis?
+
+2. The Homework 6 Answer Sketch and Grading Rubric is now posted as an [HTML document you can view](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw6/hw6sketch.html), and as an [R Markdown file you can download](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw6/hw6sketch.Rmd).
 
 2. Remember that a draft version of both Chapters 22 and 23 where all images appear is available. See [the HTML here](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class24/chapters_22_and_23_draft.html), and [the R Markdown here](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/chapters_22_and_23_draft.Rmd).
 
