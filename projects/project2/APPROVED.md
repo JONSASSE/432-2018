@@ -24,38 +24,41 @@ Investigative Team | Project 2 Title
 -------------------------------------- | -----------------------------------------------------------------------------
 Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperformance in Multiple Sclerosis
 Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
-Abhishek Deshpande & Sandra Silva Camargo | Predicting Hospital Quality Ratings in California, 2012-2015
+Abhishek Deshpande & Sandra Silva Camargo | Predicting *C. diff.* infection in lung transplant recipients
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (0)
+## Proposals Currently Under Revision (1)
 
-## Proposals Still to Come or Under Revision (20 people)
+*If you've been asked to do a revision*, edit your submission accordingly, by the deadline of **2018-04-17 at 5 PM**.
+
+- Preeti Pathak
+
+## Proposals Submitted but not yet Reviewed by Dr. Love (5 people)
+
+- Jenny Feng and Xin Xin Yu
+- Satyakam Mishra
+- Jiajian Huang
+- Connor Swingle
+
+## Proposals Still to Come or Under Revision (14 people)
 
 - Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
-- *If you've been asked to do a revision*, edit your submission accordingly, by the deadline of **2018-04-17 at 5 PM**.
 
 ```
 Khaled Alayed
 Shufen Cao
 Laura Cremer
 Katherine Dobbs
-Jenny Feng
-
-Jiajian Huang
 Hyun Jo Kim
+
 Kedar Mahajan
 John McDonnell
-Satyakam Mishra
-
 Haeun Park
-Preeti Pathak
 Gabrielle Rieth
 Kaylee Sarna
-Connor Swingle
 
 Vinh Trinh
 Frances Wang
 Peter Wilkinson
-Xin Xin Yu
 Bilal Zonjy
 ```
