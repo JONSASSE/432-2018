@@ -24,6 +24,7 @@ Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient 
 Haeun Park      | Who will get the flu shot?
 Preeti Pathak   | Do lifetime smoking or drinking exposures increase the risk of pregnancy loss?
 Kaylee Sarna    | Predicting vegetarian diet based on biochemical profile and health behaviors, in NHANES 2009-10
+Connor Swingle  | Race and eviction filings in Ohio
 Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
 Vinh Trinh      | Seeking mental health care, depression and alcohol consumption in NHANES 2015-16
 Sneha Vakamudi  | Hospital length of stay: What is more important, the patient or the picture? 
@@ -37,11 +38,11 @@ Abhishek Deshpande & Sandra Silva Camargo | Predicting *C. diff.* infection in l
 Jenny Feng & Xin Xin Yu | Factors Influencing Patient Satisfaction at VA Hospitals
 Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
 
-## Proposals Currently Under Revision (1)
+## Proposals Currently Under Revision (0)
 
 *If you've been asked to do a revision*, edit your submission accordingly, by the deadline of **2018-04-17 at 5 PM**.
 
-- Connor Swingle
+- <none> 
 
 ## Proposals Submitted but not yet Reviewed by Dr. Love (5)
 
