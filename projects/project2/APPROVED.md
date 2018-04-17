@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (21 proposals, 25 people)
+## Proposals that are Approved (23 proposals, 27 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -16,7 +16,9 @@ Maher Kazimi    | Comparing graft failure for ice vs. pump during kidney transpl
 Nikolas Krieger | Predicting Life Satisfaction Based on Feelings towards the Other
 Carli Lehr      | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
 Roberto Martinez | The effect of multiple chronic conditions on key outcomes in hospitalized HIV-positive patients
+Satyakam Mishra | Predicting Pedal Edema in patients from India 
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
+Haeun Park      | Who will get the flu shot?
 Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
 Sneha Vakamudi  | Hospital length of stay: What is more important, the patient or the picture? 
 Frances Wang    | Coronary Artery Calcification in predicting CHD Mortality in High-Risk Elderly Patients
@@ -29,56 +31,55 @@ Abhishek Deshpande & Sandra Silva Camargo | Predicting *C. diff.* infection in l
 Jenny Feng & Xin Xin Yu | Factors Influencing Patient Satisfaction at VA Hospitals
 Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
 
-## Proposals Currently Under Revision (3)
+## Proposals Currently Under Revision (2)
 
 *If you've been asked to do a revision*, edit your submission accordingly, by the deadline of **2018-04-17 at 5 PM**.
 
-- Satyakam Mishra
 - Preeti Pathak
 - Connor Swingle
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (0)
+## Proposals Submitted but not yet Reviewed by Dr. Love (5)
 
-## Proposals Still to Come or Under Revision (13 people)
+- Katherine Dobbs
+- Kaylee Sarna
+- Bilal Zonjy
+- Hyun Jo Kim
+- Shufen Cao
+
+## Proposals Still to Come or Under Revision (7 people)
 
 - Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
 
 ```
 Khaled Alayed
-Shufen Cao
 Laura Cremer
-Katherine Dobbs
-Hyun Jo Kim
-
 Kedar Mahajan
 John McDonnell
-Haeun Park
 Gabrielle Rieth
-Kaylee Sarna
 
 Vinh Trinh
 Peter Wilkinson
-Bilal Zonjy
 ```
 
-## First Choice of Time Slot (through 24 scheduling submissions)
+## First Choice of Time Slot (through 30 scheduling submissions)
 
 Projects | Slot # | Date and Time
 -------: | -----: | ------------------------------------------------------------
 1 | -- | May 1
 1 | 02 | 05-03 8:55 AM
-**2** | 07 | 05-03 11:10 AM
+**3** | 07 | 05-03 11:10 AM
 **3** | 08 | 05-03 1:30 PM
+1 | 15 | 05-03 4:35 PM
 **3** | 17 | 05-07 9:30 AM
-**4** | 19 | 05-07 10:20 AM
+**5** | 19 | 05-07 10:20 AM
 1 | 21 | 05-07 11:20 AM
 1 | 23 | 05-07 12:10 PM
 1 | 26 | 05-07 2:20 PM
 1 | 27 | 05-07 2:45 PM
 1 | 28 | 05-07 3:20 PM
-1 | 33 | 05-08 11:30 AM
+**2** | 33 | 05-08 11:30 AM
 1 | 36 | 05-08 12:45 PM
-1 | 37 | 05-08 1:10 PM
+**3** | 37 | 05-08 1:10 PM
 **2** | 39 | 05-08 2:10 PM
 
