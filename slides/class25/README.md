@@ -22,6 +22,8 @@ We'll also look at some data visualizations (before we get to the slides) and ad
         - Do social determinants of health (education, insurance type, disability, cigarette use) impact the severity of pre-transplant illness?
         - How well can measures of hospital staff's ability to communicate with patients predict a hospital's readmission rates after an outpatient procedure?
         - What is the impact of self-reported mental health, specifically anxiety and depression, on neuroperformance measures, specifically walking speed and manual dexterity, in multiple sclerosis?
+    - The **Schedule** will be posted before class on Thursday of this week. If you (or your group) are the only people selecting your "first choice" time slot, my algorithm will give you a strong chance of getting it, so long as you have your project submitted by 5 PM Tuesday and I approve it. 
+    - If you want to see the slots that have been popular so far as part of some sort of ten-dimensional chess / game theory strategy, [click here](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/APPROVED.md#first-choice-of-time-slot-through-24-scheduling-submissions), but remember that there are still multiple projects still to come in, and the order in which I fill slots is determined at random across all submissions which are approved on time.
 
 2. The Homework 6 Answer Sketch and Grading Rubric is now posted as an [HTML document you can view](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw6/hw6sketch.html), and as an [R Markdown file you can download](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw6/hw6sketch.Rmd).
 
