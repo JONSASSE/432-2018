@@ -1,5 +1,12 @@
 # Project 2 Proposal Status
 
+## Proposals Currently Under Revision (2)
+
+*If you've been asked to do a revision*, edit your submission accordingly, by Wednesday **2018-04-18 at NOON**.
+
+- Hyun Jo Kim
+- Bilal Zonjy
+
 ## Proposals that are Approved (35 proposals, 39 people)
 
 Investigator | Project 2 Title 
@@ -42,13 +49,6 @@ Laura Baldassari & Sarah Planchon Pope | The Role of Mental Health in Neuroperfo
 Abhishek Deshpande & Sandra Silva Camargo | Predicting *C. diff.* infection in lung transplant recipients
 Jenny Feng & Xin Xin Yu | Factors Influencing Patient Satisfaction at VA Hospitals
 Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
-
-## Proposals Currently Under Revision (2)
-
-*If you've been asked to do a revision*, edit your submission accordingly, by Wednesday **2018-04-18 at NOON**.
-
-- Hyun Jo Kim
-- Bilal Zonjy
 
 ## First Choice of Time Slot (note that a schedule will be posted soon)
 
