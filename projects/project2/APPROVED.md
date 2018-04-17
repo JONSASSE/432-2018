@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (23 proposals, 27 people)
+## Proposals that are Approved (24 proposals, 28 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ Zainab Albar    | Marijuana exposure and depression among females in NHANES, 200
 Haimeng Bai     | Using Stroke Risk Score to predict Alzheimer's Disease Status
 Estee Cramer    | Prediction Models for Outcomes Associated with Lymphatic Filariasis in Papua New Guinea
 Vaishali Deo    | The impact of citizenship status on the general health of adult U.S. residents
+Katherine Dobbs | State Firearm-Related Laws and Firearm Homicide/Suicide Rates in the U.S., 2015
 Gwendolyn Donley | Predicting Alzheimer's Disease Risk in Eastern Finnish Men
 Caroline El Sanadi | Modeling the probability of developing osteoporosis in the Study of Women Across Nations
 Ryan Honomichl  | Predicting Hot/Cold Self-Regulation in Preschool Children Using the NICHD Early Childcare Study
@@ -40,7 +41,6 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 
 ## Proposals Submitted but not yet Reviewed by Dr. Love (9)
 
-- Katherine Dobbs
 - Kaylee Sarna
 - Bilal Zonjy
 - Hyun Jo Kim
@@ -49,14 +49,14 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 - Kedar Mahajan
 - Gabrielle Rieth
 - Vinh Trinh
+- Khaled Alayed
 
-## Proposals Still to Come or Under Revision (3 people)
+## Proposals Still to Come or Under Revision (2 people)
 
 - Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
 
 ```
-Khaled Alayed
 John McDonnell
 Peter Wilkinson
 ```
