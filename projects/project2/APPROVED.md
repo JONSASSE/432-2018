@@ -1,11 +1,12 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (25 proposals, 29 people)
+## Proposals that are Approved (26 proposals, 30 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
 Zainab Albar    | Marijuana exposure and depression among females in NHANES, 2009-2012
 Haimeng Bai     | Using Stroke Risk Score to predict Alzheimer's Disease Status
+Shufen Cao      | Assessing Risk Factors for Osteoporosis in NHANES 2013-14
 Estee Cramer    | Prediction Models for Outcomes Associated with Lymphatic Filariasis in Papua New Guinea
 Vaishali Deo    | The impact of citizenship status on the general health of adult U.S. residents
 Katherine Dobbs | State Firearm-Related Laws and Firearm Homicide/Suicide Rates in the U.S., 2015
@@ -40,11 +41,10 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 - Preeti Pathak
 - Connor Swingle
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (8)
+## Proposals Submitted but not yet Reviewed by Dr. Love (7)
 
 - Bilal Zonjy
 - Hyun Jo Kim
-- Shufen Cao
 - Laura Cremer
 - Kedar Mahajan
 - Gabrielle Rieth
