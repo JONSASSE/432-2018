@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (24 proposals, 28 people)
+## Proposals that are Approved (25 proposals, 29 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -20,6 +20,7 @@ Roberto Martinez | The effect of multiple chronic conditions on key outcomes in 
 Satyakam Mishra | Predicting Pedal Edema in patients from India 
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
 Haeun Park      | Who will get the flu shot?
+Kaylee Sarna    | Predicting vegetarian diet based on biochemical profile and health behaviors, in NHANES 2009-10
 Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
 Sneha Vakamudi  | Hospital length of stay: What is more important, the patient or the picture? 
 Frances Wang    | Coronary Artery Calcification in predicting CHD Mortality in High-Risk Elderly Patients
@@ -39,9 +40,8 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 - Preeti Pathak
 - Connor Swingle
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (9)
+## Proposals Submitted but not yet Reviewed by Dr. Love (8)
 
-- Kaylee Sarna
 - Bilal Zonjy
 - Hyun Jo Kim
 - Shufen Cao
