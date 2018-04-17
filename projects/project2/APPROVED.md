@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (34 proposals, 38 people)
+## Proposals that are Approved (35 proposals, 39 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -34,6 +34,7 @@ Vinh Trinh      | Seeking mental health care, depression and alcohol consumption
 Sneha Vakamudi  | Hospital length of stay: What is more important, the patient or the picture? 
 Frances Wang    | Coronary Artery Calcification in predicting CHD Mortality in High-Risk Elderly Patients
 Ruipeng Wei     | Can blood components indicate the presence of chronic kidney disease?
+Peter Wilkinson | Integrative Omics of HepB vaccine response in co-infection with parasites
 
 Investigative Team | Project 2 Title 
 -------------------------------------- | -----------------------------------------------------------------------------
@@ -49,18 +50,7 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 - Hyun Jo Kim
 - Bilal Zonjy
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (0)
-
-## Proposals Not Yet Submitted (1)
-
-- Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
-- Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
-
-```
-Peter Wilkinson
-```
-
-## First Choice of Time Slot (through 36 of 37 scheduling submissions)
+## First Choice of Time Slot (note that a schedule will be posted soon)
 
 Projects | Slot # | Date and Time
 -------: | -----: | ------------------------------------------------------------
@@ -75,6 +65,7 @@ Projects | Slot # | Date and Time
 **3** | 17 | 2018-05-07 9:30 AM to 9:50 AM
 **6** | 19 | 2018-05-07 10:20 AM to 10:40 AM
 1 | 21 | 2018-05-07 11:20 AM to 11:40 AM
+1 | 22 | 2018-05-07 11:45 AM to 12:05 PM
 **2** | **23** | 2018-05-07 12:10 PM to 12:30 PM
 1 | 26 | 2018-05-07 2:20 PM to 2:40 PM
 1 | 27 | 2018-05-07 2:45 PM to 3:05 PM
