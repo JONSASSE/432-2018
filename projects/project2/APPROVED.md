@@ -24,7 +24,7 @@ Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient 
 Haeun Park      | Who will get the flu shot?
 Kaylee Sarna    | Predicting vegetarian diet based on biochemical profile and health behaviors, in NHANES 2009-10
 Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
-Vinh Trinh      | Seeking mental health care and its relation to depression and alcohol consumption, NHANES 2015-16
+Vinh Trinh      | Seeking mental health care, depression and alcohol consumption in NHANES 2015-16
 Sneha Vakamudi  | Hospital length of stay: What is more important, the patient or the picture? 
 Frances Wang    | Coronary Artery Calcification in predicting CHD Mortality in High-Risk Elderly Patients
 Ruipeng Wei     | Can blood components indicate the presence of chronic kidney disease?
