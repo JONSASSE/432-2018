@@ -22,6 +22,7 @@ Roberto Martinez | The effect of multiple chronic conditions on key outcomes in 
 Satyakam Mishra | Predicting Pedal Edema in patients from India 
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
 Haeun Park      | Who will get the flu shot?
+Preeti Pathak   | Do lifetime smoking or drinking exposures increase the risk of pregnancy loss?
 Kaylee Sarna    | Predicting vegetarian diet based on biochemical profile and health behaviors, in NHANES 2009-10
 Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
 Vinh Trinh      | Seeking mental health care, depression and alcohol consumption in NHANES 2015-16
@@ -36,11 +37,10 @@ Abhishek Deshpande & Sandra Silva Camargo | Predicting *C. diff.* infection in l
 Jenny Feng & Xin Xin Yu | Factors Influencing Patient Satisfaction at VA Hospitals
 Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
 
-## Proposals Currently Under Revision (2)
+## Proposals Currently Under Revision (1)
 
 *If you've been asked to do a revision*, edit your submission accordingly, by the deadline of **2018-04-17 at 5 PM**.
 
-- Preeti Pathak
 - Connor Swingle
 
 ## Proposals Submitted but not yet Reviewed by Dr. Love (5)
