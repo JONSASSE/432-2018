@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (31 proposals, 35 people)
+## Proposals that are Approved (32 proposals, 36 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -19,6 +19,7 @@ Nikolas Krieger | Predicting Life Satisfaction Based on Feelings towards the Oth
 Carli Lehr      | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
 Kedar Mahajan   | How does brain atrophy predict disability in progressive multiple sclerosis?
 Roberto Martinez | The effect of multiple chronic conditions on key outcomes in hospitalized HIV-positive patients
+John McDonnell  | Predicting Need for Phototherapy in the Neonatal ICU
 Satyakam Mishra | Predicting Pedal Edema in patients from India 
 Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
 Haeun Park      | Who will get the flu shot?
@@ -45,12 +46,11 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 
 - Hyun Jo Kim
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (4)
+## Proposals Submitted but not yet Reviewed by Dr. Love (3)
 
 - Bilal Zonjy
 - Laura Cremer
 - Khaled Alayed
-- John McDonnell
 
 ## Proposals Still to Come or Under Revision (1)
 
@@ -61,7 +61,7 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 Peter Wilkinson
 ```
 
-## First Choice of Time Slot (through 35 scheduling submissions)
+## First Choice of Time Slot (through 36 scheduling submissions)
 
 Projects | Slot # | Date and Time
 -------: | -----: | ------------------------------------------------------------
@@ -84,3 +84,4 @@ Projects | Slot # | Date and Time
 1 | 38 | 05-08 1:45 PM
 **2** | 39 | 05-08 2:10 PM
 1 | -- | No preference
+1 | -- | Anytime May 8
