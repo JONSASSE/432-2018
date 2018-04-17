@@ -36,11 +36,12 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 - Preeti Pathak
 - Connor Swingle
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (1 person)
+## Proposals Submitted but not yet Reviewed by Dr. Love (2)
 
 - Jiajian Huang
+- Frances Wang
 
-## Proposals Still to Come or Under Revision (14 people)
+## Proposals Still to Come or Under Revision (13 people)
 
 - Remember, the deadline for Project 2 Proposal Submission is **2018-04-17 at 5 PM**.
 - Submit your Project 2 Proposal [at this link](https://goo.gl/forms/Zfgnq5pyAAzAlmUm1).
@@ -59,7 +60,6 @@ Gabrielle Rieth
 Kaylee Sarna
 
 Vinh Trinh
-Frances Wang
 Peter Wilkinson
 Bilal Zonjy
 ```
