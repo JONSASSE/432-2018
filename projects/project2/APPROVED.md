@@ -1,6 +1,6 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (27 proposals, 31 people)
+## Proposals that are Approved (28 proposals, 32 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -24,6 +24,7 @@ Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient 
 Haeun Park      | Who will get the flu shot?
 Kaylee Sarna    | Predicting vegetarian diet based on biochemical profile and health behaviors, in NHANES 2009-10
 Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
+Vinh Trinh      | Seeking mental health care and its relation to depression and alcohol consumption, NHANES 2015-16
 Sneha Vakamudi  | Hospital length of stay: What is more important, the patient or the picture? 
 Frances Wang    | Coronary Artery Calcification in predicting CHD Mortality in High-Risk Elderly Patients
 Ruipeng Wei     | Can blood components indicate the presence of chronic kidney disease?
@@ -42,13 +43,12 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 - Preeti Pathak
 - Connor Swingle
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (6)
+## Proposals Submitted but not yet Reviewed by Dr. Love (5)
 
 - Bilal Zonjy
 - Hyun Jo Kim
 - Laura Cremer
 - Gabrielle Rieth
-- Vinh Trinh
 - Khaled Alayed
 
 ## Proposals Still to Come or Under Revision (2 people)
