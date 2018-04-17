@@ -1,9 +1,10 @@
 # Project 2 Proposal Status
 
-## Proposals that are Approved (33 proposals, 37 people)
+## Proposals that are Approved (34 proposals, 38 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
+Khaled Alayed   | Bug Prediction Using Slice-Based Metrics vs. Code Metrics
 Zainab Albar    | Marijuana exposure and depression among females in NHANES, 2009-2012
 Haimeng Bai     | Using Stroke Risk Score to predict Alzheimer's Disease Status
 Shufen Cao      | Assessing Risk Factors for Osteoporosis in NHANES 2013-14
@@ -47,10 +48,9 @@ Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after su
 
 - Hyun Jo Kim
 
-## Proposals Submitted but not yet Reviewed by Dr. Love (2)
+## Proposals Submitted but not yet Reviewed by Dr. Love (1)
 
 - Bilal Zonjy
-- Khaled Alayed
 
 ## Proposals Still to Come or Under Revision (1)
 
