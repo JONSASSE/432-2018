@@ -42,6 +42,8 @@ Variable | Description
 
 Build a Cox model, using `treat` as a predictor, and spending degrees of freedom in any way you like with the rest of the available predictors (i.e. *everything but* `subject`, `lot`, `time` and `censor`) in the data set, so long as you do not exceed a total of 12 degrees of freedom, predicting the time to return to drug use. You'll probably want to use a Spearman rho-squared plot to make your selection, in which case you should stick with the model you develop using that tool, regardless of its eventual performance. Specify your model carefully, and interpret the hazard ratio for `treat` implied by your new model. 
 
+**Hint** When you build the Spearman rho-squared plot, use `time` but not the entire survival object as the "outcome."
+
 # Question 4 (10 points)
 
 Apply a Cox regression model to predict the time to return to drug use (incorporating censoring appropriately) using the information in `treat`, plus main effects of `age`, `beck`, `site`, `ivhx` and `ndrugtx`. Interpret the meaning of the hazard ratio for `treat`, after adjusting for the other five predictors. 
