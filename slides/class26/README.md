@@ -7,7 +7,7 @@
 
 Today's class will include:
 
-1. data visualization
+1. data visualization ideas from [flowingdata.com](http://flowingdata.com/)
 2. some specific issues related to logistic regression model selection and classification assessment
 3. some clarifying comments on spending degrees of freedom, the Spearman rho-squared plot, and how regression models should be built
 4. some discussion of retrospective power, Type S and Type M errors
