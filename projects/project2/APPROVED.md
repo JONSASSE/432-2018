@@ -1,13 +1,10 @@
 # Project 2 Proposal Status
 
-## Proposals Currently Under Revision (2)
+## Proposals Currently Under Revision (1)
 
-*If you've been asked to do a revision*, edit your submission accordingly, by Wednesday **2018-04-18 at NOON**.
-
-- Hyun Jo Kim
 - Bilal Zonjy
 
-## Proposals that are Approved (35 proposals, 39 people)
+## Proposals that are Approved (36 proposals, 40 people)
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
@@ -24,6 +21,7 @@ Caroline El Sanadi | Modeling the probability of developing osteoporosis in the 
 Ryan Honomichl  | Predicting Hot/Cold Self-Regulation in Preschool Children Using the NICHD Early Childcare Study
 Jiajian Huang   | Predicting BMI and incidence of coronary heart disease in OMAS data, 2015
 Maher Kazimi    | Comparing graft failure for ice vs. pump during kidney transplant
+Hyun Jo Kim     | Cardio-selective vs. Non-selective beta-blockers in patients with asthma
 Nikolas Krieger | Predicting Life Satisfaction Based on Feelings towards the Other
 Carli Lehr      | The Role of Social Determinants of Health in Severity of Disease and Survival After Lung Transplant
 Kedar Mahajan   | How does brain atrophy predict disability in progressive multiple sclerosis?
