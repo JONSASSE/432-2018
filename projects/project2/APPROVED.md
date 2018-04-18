@@ -48,30 +48,3 @@ Abhishek Deshpande & Sandra Silva Camargo | Predicting *C. diff.* infection in l
 Jenny Feng & Xin Xin Yu | Factors Influencing Patient Satisfaction at VA Hospitals
 Dongze He & Andrew Shan | Hyperlipidemia and fibrosis in obese patients after surgical intervention
 
-## First Choice of Time Slot (note that a schedule will be posted soon)
-
-Projects | Slot # | Date and Time
--------: | -----: | ------------------------------------------------------------
-1 | -- | May 1
-1 | -- | No preference
-1 | -- | May 8
-1 | 01 | 2018-05-03 8:30 AM to 8:50 AM
-1 | 02 | 2018-05-03 8:55 AM to 9:15 AM
-**3** | **07** | 2018-05-03 11:10 AM to 11:30 AM
-**2** | **08** | 2018-05-03 1:30 PM to 1:50 PM
-1 | 15 | 2018-05-03 4:35 PM to 4:55 PM
-**3** | 17 | 2018-05-07 9:30 AM to 9:50 AM
-**6** | 19 | 2018-05-07 10:20 AM to 10:40 AM
-1 | 21 | 2018-05-07 11:20 AM to 11:40 AM
-1 | 22 | 2018-05-07 11:45 AM to 12:05 PM
-**2** | **23** | 2018-05-07 12:10 PM to 12:30 PM
-1 | 26 | 2018-05-07 2:20 PM to 2:40 PM
-1 | 27 | 2018-05-07 2:45 PM to 3:05 PM
-1 | 28 | 2018-05-07 3:20 PM to 3:40 PM
-1 | 30 | 2018-05-07 4:10 PM to 4:30 PM
-**2** | **33** | 2018-05-08 11:30 AM to 11:50 AM
-1 | 36 | 2018-05-08 12:45 PM to 1:05 PM
-**3** | **37** | 2018-05-08 1:10 PM to 1:30 PM
-1 | 38 | 2018-05-08 1:45 PM to 2:05 PM
-**2** | **39** | 2018-05-08 2:10 PM to 2:30 PM
-
