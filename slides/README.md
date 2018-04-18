@@ -2,6 +2,7 @@
 
 Link  | Date  | Topics Discussed include...
 --------: | ---------- | -------------------------------------------------------------
+[Class 26](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) | 2018-04-19 | Making Inferences Effectively, Type S and Type M Errors
 [Class 25](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class25) | 2018-04-17 | Cox Proportional Hazards Regression Models, 2
 [Class 24](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class24) | 2018-04-12 | Cox Proportional Hazards Regression Models: An Introduction
 [Class 23](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class23) | 2018-04-10 | Exploring Time-to-Event Data, Kaplan-Meier Estimation
