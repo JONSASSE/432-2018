@@ -141,16 +141,24 @@ Tuesday 2018-05-08    | 30: John (Jack) McDonnell
 --------------------: | :-------------------------------------------------------------------------------------------
 11:30 AM to 11:50 AM  | Predicting Need for Phototherapy in the Neonatal ICU
 
+Tuesday 2018-05-08    | 31: Ruipeng Wei
+--------------------: | :-------------------------------------------------------------------------------------------
+11:55 AM to 12:15 PM  | Can blood components indicate the presence of chronic kidney disease?
+
+Tuesday 2018-05-08    | 32: Khaled Alayed   
+--------------------: | :-------------------------------------------------------------------------------------------
+12:20 PM to 12:40 PM  | Bug Prediction Using Slice-Based Metrics vs. Code Metrics
+
+Tuesday 2018-05-08    | 33: Connor Swingle
+--------------------: | :-------------------------------------------------------------------------------------------
+12:45 PM to 1:05 PM   | Race and eviction filings in Ohio
 
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
-Khaled Alayed   | Bug Prediction Using Slice-Based Metrics vs. Code Metrics
 Shufen Cao      | Assessing Risk Factors for Osteoporosis in NHANES 2013-14
 Estee Cramer    | Prediction Models for Outcomes Associated with Lymphatic Filariasis in Papua New Guinea
-Connor Swingle  | Race and eviction filings in Ohio
 Vinh Trinh      | Seeking mental health care, depression and alcohol consumption in NHANES 2015-16
-Ruipeng Wei     | Can blood components indicate the presence of chronic kidney disease?
 
 Investigative Team | Project 2 Title 
 -------------------------------------- | -----------------------------------------------------------------------------
