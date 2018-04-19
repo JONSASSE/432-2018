@@ -7,11 +7,7 @@
 
 Today's class will include:
 
-1. data visualization ideas from [flowingdata.com](http://flowingdata.com/), specifically on...
-    - [Visualizing Differences](https://flowingdata.com/2018/04/17/visualizing-differences/)
-        - [Relationships: The First Time...](http://flowingdata.com/2017/02/23/the-first-time/)
-    - [Visualizing Outliers](https://flowingdata.com/2018/03/07/visualizing-outliers/)
-        - [Why People Visit The Emergency Room](http://flowingdata.com/2016/02/09/why-people-visit-the-emergency-room/)
+1. data visualization ideas from [flowingdata.com](http://flowingdata.com/)
 2. some clarifying comments on spending degrees of freedom, the Spearman rho-squared plot, and how regression models should be built
 3. some specific issues related to logistic regression model selection and classification assessment
 4. some discussion of broader issues in scientific replicability and statistical significance
@@ -26,15 +22,20 @@ which will almost inevitably continue on into Class 27. There is no Minute Paper
 2. I posted a hint for question 3 on [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7). 
     - When you have a time-to-event outcome, you just use the survival time, and not the whole survival object (i.e. you ignore the censoring) in building a Spearman rho-squared plot.
 
-3. The version of Chapters 22 and 23 where all images appear is [available in HTML here](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class24/chapters_22_and_23_draft.html), and also [in R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/chapters_22_and_23_draft.Rmd).
+3. Just being sure this is clear...
 
-4. Those of you interested in Python probably already know that [PyCon 2018 is in Cleveland](https://us.pycon.org/2018/about/) May 9-17. Registration is $125 for students.
+- When you're fitting non-linear terms (based on a Spearman rho-squared plot) if the variable you're considering adding non-linearity to is quantitative, you might consider a restricted cubic spline, a polynomial function, or an interaction between the quantitative variable and a nearby categorical one.
+- But if the variable is categorical, your only option is an interaction term. Splines and polynomials make no sense with categorical variables.
 
-5. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found there.
-    - I [posted three articles](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) that are of particular importance.
-    - In today's slides, I also refer to [Roger Peng's blog post from Tuesday](https://simplystatistics.org/2018/04/17/what-is-a-successful-data-analysis/) about what makes a data analysis successful.
+4. The version of Chapters 22 and 23 where all images appear is [available in HTML here](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class24/chapters_22_and_23_draft.html), and also [in R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/chapters_22_and_23_draft.Rmd).
+
+5. Those of you interested in Python probably already know that [PyCon 2018 is in Cleveland](https://us.pycon.org/2018/about/) May 9-17. Registration is $125 for students.
+
+6. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found there.
+    - In the README for today's class [posted three articles](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) that are of particular importance, but many other things are linked from that other talk, if you're interested.
+    - In today's slides, I dp refer to [Roger Peng's blog post from Tuesday](https://simplystatistics.org/2018/04/17/what-is-a-successful-data-analysis/) about what makes a data analysis successful.
     - In today's slides, I also refer to the [Hack Your Way to Scientific Glory](https://projects.fivethirtyeight.com/p-hacking/) game at FiveThirtyEight.
-
+    
 ## Making Project 2 A Little Easier 
 
 **This note is now section 6.19 of the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html)**
@@ -64,6 +65,14 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 3. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Final Portfolio materials are due 3 hours prior to your Presentation to me. Submit to [Canvas](https://canvas.case.edu/).
 4. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Presentations are on **2018-05-03**, **2018-05-07** and **2018-05-08**, and the [complete schedule is here](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md).
 5. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Revisions are due at Noon on **Wednesday 2018-05-09**. Whether you'll need to revise will be determined at your presentation.
+
+## Today's Data Visualizations
+
+- We're touring some of the interesting work at [flowingdata.com](http://flowingdata.com/), specifically Nathan's thoughts on
+    - [Visualizing Differences](https://flowingdata.com/2018/04/17/visualizing-differences/)
+        - [Relationships: The First Time...](http://flowingdata.com/2017/02/23/the-first-time/)
+    - [Visualizing Outliers](https://flowingdata.com/2018/03/07/visualizing-outliers/)
+        - [Why People Visit The Emergency Room](http://flowingdata.com/2016/02/09/why-people-visit-the-emergency-room/)
 
 ## Project Presentation Order and Time Slot, Sorted by Student's Last Name
 
