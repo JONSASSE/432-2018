@@ -1,4 +1,6 @@
-# Final Project 2 Schedule and Logistics
+# Final Project 2 Portfolio Presentation Schedule
+
+## Logistics
 
 1. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Final Portfolio materials are due 3 hours prior to your Presentation. Submit to [Canvas](https://canvas.case.edu/).
 2. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Revisions are due via **Canvas** at Noon on **Wednesday 2018-05-09**. Whether you'll need to revise will be determined at your presentation.
@@ -25,7 +27,7 @@ Thursday 2018-05-03   | 03: Katherine Dobbs
 --------------------: | :-------------------------------------------------------------------------------------------
 9:20 AM to 9:40 AM    | State Firearm-Related Laws and Firearm Homicide/Suicide Rates in the U.S., 2015
 
-Thursday 2018-05-03   | 04: Dongze He & Andrew Shan
+Thursday 2018-05-03   | 04: Dongze (Zaza) He & Andrew Shan
 --------------------: | :-------------------------------------------------------------------------------------------
 9:45 AM to 10:05 AM   | Hyperlipidemia and fibrosis in obese patients after surgical intervention
 
@@ -153,13 +155,20 @@ Tuesday 2018-05-08    | 33: Connor Swingle
 --------------------: | :-------------------------------------------------------------------------------------------
 12:45 PM to 1:05 PM   | Race and eviction filings in Ohio
 
+Tuesday 2018-05-08    | 34: Estee Cramer
+--------------------: | :-------------------------------------------------------------------------------------------
+1:10 PM to 1:30 PM    | Prediction Models for Outcomes Associated with Lymphatic Filariasis in Papua New Guinea
 
-Investigator | Project 2 Title 
---------------- | ----------------------------------------------------------------------------------------------------
-Shufen Cao      | Assessing Risk Factors for Osteoporosis in NHANES 2013-14
-Estee Cramer    | Prediction Models for Outcomes Associated with Lymphatic Filariasis in Papua New Guinea
-Vinh Trinh      | Seeking mental health care, depression and alcohol consumption in NHANES 2015-16
+Tuesday 2018-05-08    | 35: Vinh Trinh
+--------------------: | :-------------------------------------------------------------------------------------------
+1:45 PM to 2:05 PM    | Seeking mental health care, depression and alcohol consumption in NHANES 2015-16
 
-Investigative Team | Project 2 Title 
--------------------------------------- | -----------------------------------------------------------------------------
-Jenny Feng & Xin Xin Yu | Factors Influencing Patient Satisfaction at VA Hospitals
+Tuesday 2018-05-08    | 36: Jenny Feng & Xin Xin Yu
+--------------------: | :-------------------------------------------------------------------------------------------
+2:10 PM to 2:30 PM    | Factors Influencing Patient Satisfaction at VA Hospitals
+
+Tuesday 2018-05-08    | 37: Shufen (Sophia) Cao
+--------------------: | :-------------------------------------------------------------------------------------------
+2:35 PM to 2:55 PM    | Assessing Risk Factors for Osteoporosis in NHANES 2013-14
+
+
