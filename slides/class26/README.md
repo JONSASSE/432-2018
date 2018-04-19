@@ -18,7 +18,7 @@ which may continue on into Class 27. There is no Minute Paper today.
 ## Announcements at the start of class
 
 1. The Project 2 [proposal status page](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/APPROVED.md) is available for your review.
-    - The **Project 2 Schedule** will be posted as soon as it is available.
+    - The Schedule of Project 2 Presentations (and some logistical information) [is now available](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md). Please take a look now, to verify that the time you're scheduled for works.
 
 2. I posted a hint for question 3 on [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7). 
     - When you have a time-to-event outcome, you just use the survival time, and not the whole survival object (i.e. you ignore the censoring) in building a Spearman rho-squared plot.
