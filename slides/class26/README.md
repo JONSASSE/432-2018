@@ -7,13 +7,17 @@
 
 Today's class will include:
 
-1. data visualization ideas from [flowingdata.com](http://flowingdata.com/)
-2. some specific issues related to logistic regression model selection and classification assessment
-3. some clarifying comments on spending degrees of freedom, the Spearman rho-squared plot, and how regression models should be built
-4. some discussion of retrospective power, Type S and Type M errors
-5. some discussion of broader issues in scientific replicability and statistical significance
+1. data visualization ideas from [flowingdata.com](http://flowingdata.com/), specifically on...
+    - [Visualizing Differences](https://flowingdata.com/2018/04/17/visualizing-differences/)
+        - [Relationships: The First Time...](http://flowingdata.com/2017/02/23/the-first-time/)
+    - [Visualizing Outliers](https://flowingdata.com/2018/03/07/visualizing-outliers/)
+        - [Why People Visit The Emergency Room](http://flowingdata.com/2016/02/09/why-people-visit-the-emergency-room/)
+2. some clarifying comments on spending degrees of freedom, the Spearman rho-squared plot, and how regression models should be built
+3. some specific issues related to logistic regression model selection and classification assessment
+4. some discussion of broader issues in scientific replicability and statistical significance
+5. some discussion of retrospective power, Type S and Type M errors
 
-which may continue on into Class 27. There is no Minute Paper today.
+which will almost inevitably continue on into Class 27. There is no Minute Paper today.
 
 ## Announcements at the start of class
 
