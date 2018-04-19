@@ -121,6 +121,23 @@ Monday 2018-05-07     | 25: Kaylee Sarna
 --------------------: | :-------------------------------------------------------------------------------------------
 3:20 PM to 3:40 PM    | Predicting vegetarian diet using biochemical profile and health behaviors (NHANES 2009-10)
 
+Monday 2018-05-07     | 26: Jiajian (J.J.) Huang
+--------------------: | :-------------------------------------------------------------------------------------------
+3:45 PM to 4:05 PM    | Predicting BMI and incidence of coronary heart disease in OMAS 2015
+
+Monday 2018-05-07     | 27: Laura Cremer
+--------------------: | :-------------------------------------------------------------------------------------------
+4:10 PM to 4:30 PM    | Can being a health-nut decrease your overall risk of cancer?
+
+Monday 2018-05-07     | 28: Abhishek Deshpande & Sandra Silva Camargo
+--------------------: | :-------------------------------------------------------------------------------------------
+4:35 PM to 4:55 PM    | Predicting *C. diff.* infection in lung transplant recipients
+
+Monday 2018-05-07     | 29: Gabrielle Rieth
+--------------------: | :-------------------------------------------------------------------------------------------
+5:00 PM to 5:20 PM    | Linking outcomes for head surgery patients to corticosteroid doses
+
+## 2018-05-08 Tuesday
 
 
 Investigator | Project 2 Title 
@@ -128,15 +145,12 @@ Investigator | Project 2 Title
 Khaled Alayed   | Bug Prediction Using Slice-Based Metrics vs. Code Metrics
 Shufen Cao      | Assessing Risk Factors for Osteoporosis in NHANES 2013-14
 Estee Cramer    | Prediction Models for Outcomes Associated with Lymphatic Filariasis in Papua New Guinea
-Laura Cremer    | Can being a health-nut decrease your overall risk of cancer?
-Jiajian Huang   | Predicting BMI and incidence of coronary heart disease in OMAS data, 2015
 John McDonnell  | Predicting Need for Phototherapy in the Neonatal ICU
-Gabrielle Rieth | Linking outcomes for head surgery patients to corticosteroid doses
+Gabrielle Rieth | 
 Connor Swingle  | Race and eviction filings in Ohio
 Vinh Trinh      | Seeking mental health care, depression and alcohol consumption in NHANES 2015-16
 Ruipeng Wei     | Can blood components indicate the presence of chronic kidney disease?
 
 Investigative Team | Project 2 Title 
 -------------------------------------- | -----------------------------------------------------------------------------
-Abhishek Deshpande & Sandra Silva Camargo | Predicting *C. diff.* infection in lung transplant recipients
 Jenny Feng & Xin Xin Yu | Factors Influencing Patient Satisfaction at VA Hospitals
