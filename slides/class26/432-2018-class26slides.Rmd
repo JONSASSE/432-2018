@@ -178,6 +178,99 @@ for (i in 5:15) {
 }
 ```
 
+# Building a Plot to Assess Model Accuracy in Logistic Regression
+
+## Motivation
+
+![](figures/fig6.png)
+
+## Dalton et al. (2017) Figure 2 (partial)
+
+![](figures/fig7.png)
+
+## Dalton et al. (2017) Caption
+
+> Perfect calibration of the PCERM is represented along the line y = x; points above this line indicate underestimation of risk by the PCERM in relation to observed event rates, and points below it indicate overestimation of risk. Concordance indices (C) and corresponding 95% CIs are displayed within each panel. The C ranges from 0.5 to 1.0, where a value of 0.5 represents no discrimination of events from nonevents and a value of 1.0 represents complete separation of outcomes.
+
+## Evaluating a Logistic Model's Accuracy 
+
+Dividing into 5 groups via quintiles of the predicted response (`.fitted`)...
+
+```{r}
+m10_aug <- augment(model_10, type.predict = "response")
+m10_aug$.obs <- model_10$y
+m10_aug$.cat5 <- Hmisc::cut2(m10_aug$.fitted, g = 5)
+
+(perform.1 <- m10_aug %>% select(low, .obs, .fitted, .cat5))
+```
+
+## Building the Accuracy Plot
+
+```{r, eval = FALSE}
+perform.1 %>% 
+    group_by(.cat5) %>%
+    summarize(obs_mean = mean(.obs), obs_sd = sd(.obs),
+              fit_mean = mean(.fitted)) %>%
+ ggplot(., aes(x = fit_mean, y = obs_mean, col = .cat5)) +
+  geom_point(size = 3) +
+  geom_linerange(aes(x = fit_mean, 
+                     ymin = pmax(0, obs_mean - obs_sd), 
+                     ymax = pmin(1, obs_mean + obs_sd))) +
+  geom_abline(slope = 1, linetype = "dashed") +
+  geom_rug(data = perform.1, aes(x = perform.1$.fitted, 
+                 y = perform.1$.obs), sides = "b") +
+  scale_color_discrete(name = "Predicted LBW Rate") +
+  lims(y = c(0,1), x = c(0, 1)) +
+  labs(y = "Observed Low Birth Weight Rate",
+      x = "Predicted Low Birth Weight Rate",
+      title = "Accuracy Plot (5 groups) for LBW study")
+```
+
+## The Logistic Regression Accuracy Plot
+
+```{r, echo = FALSE}
+perform.1 %>% 
+    group_by(.cat5) %>%
+    summarize(obs_mean = mean(.obs), obs_sd = sd(.obs),
+              fit_mean = mean(.fitted)) %>%
+ ggplot(., aes(x = fit_mean, y = obs_mean, col = .cat5)) +
+  geom_point(size = 3) +
+  geom_linerange(aes(x = fit_mean, 
+                     ymin = pmax(0, obs_mean - obs_sd), 
+                     ymax = pmin(1, obs_mean + obs_sd))) +
+  geom_abline(slope = 1, linetype = "dashed") +
+  geom_rug(data = perform.1, aes(x = perform.1$.fitted, 
+                 y = perform.1$.obs), sides = "b") +
+  scale_color_discrete(name = "Predicted LBW Rate") +
+  lims(y = c(0,1), x = c(0, 1)) +
+  labs(y = "Observed Low Birth Weight Rate",
+      x = "Predicted Low Birth Weight Rate",
+      title = "Accuracy Plot (5 groups) for LBW study")
+```
+
+## Accuracy Plot with 10 deciles
+
+```{r, echo = FALSE}
+m10_aug$.cat10 <- Hmisc::cut2(m10_aug$.fitted, g = 10)
+perform.2 <- m10_aug %>% select(low, .obs, .fitted, .cat10)
+perform.2 %>% 
+    group_by(.cat10) %>%
+    summarize(obs_mean = mean(.obs), fit_mean = mean(.fitted), obs_sd = sd(.obs)) %>%
+    ggplot(., aes(x = fit_mean, y = obs_mean, col = .cat10)) +
+    geom_point(size = 3) +
+    geom_linerange(aes(x = fit_mean, ymin = pmax(0, obs_mean - obs_sd), 
+                      ymax = pmin(1, obs_mean + obs_sd))) +
+    geom_abline(intercept = 0, slope = 1, linetype = "dashed") +
+    geom_rug(data = perform.2, aes(x = perform.2$.fitted, y = perform.2$.obs), sides = "b") +
+    scale_color_discrete(name = "Predicted LBW Rate") +
+    lims(y = c(0,1), x = c(0, 1)) +
+    theme_bw() +
+    labs(y = "Observed Low Birth Weight Rate",
+         x = "Predicted Low Birth Weight Rate",
+         title = "Accuracy Plot (10 groups) for LBW study")
+```
+
+
 # Can we use "best subsets" or "all subsets" in logistic regression?
 
 ## Using the `bestglm` package to do "best subsets" with logistic models
@@ -473,7 +566,7 @@ We propose to change the default P-value threshold for statistical significance 
 
 Motivations:
 
-- links to Bayes Factor intepretation
+- links to Bayes Factor interpretation
 - 0.005 is stringent enough to "break" the current system - makes it very difficult for researchers to reach threshold with noisy, useless studies.
 
 Visit the main [$\textcolor{blue}{article}$](https://psyarxiv.com/mky9j/). Visit an explanatory piece in [$\textcolor{blue}{Science}$](http://www.sciencemag.org/news/2017/07/it-will-be-much-harder-call-new-findings-significant-if-team-gets-its-way).
