@@ -12,7 +12,7 @@ Tuesday 2018-05-01    | 01: Laura Baldassari & Sarah Planchon Pope
 --------------------: | :-------------------------------------------------------------------------------------------
 3:00 PM to 3:20 PM       | The Role of Mental Health in Neuroperformance in Multiple Sclerosis
 
-## 2018-05-03 Thursday Morning
+## 2018-05-03 Thursday (Morning Session)
 
 Thursday 2018-05-03   | 02: Caroline El Sanadi
 --------------------: | :-------------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@ Thursday 2018-05-03   | 07: Frances Wang
 --------------------: | :-------------------------------------------------------------------------------------------
 11:10 AM to 11:30 AM  | Coronary Artery Calcification in predicting CHD Mortality in High-Risk Elderly Patients
 
-## 2018-05-03 Thursday Afternoon
+## 2018-05-03 Thursday (Afternoon Session)
 
 Thursday 2018-05-03   | 08: Ryan Honomichl  
 --------------------: | :-------------------------------------------------------------------------------------------
@@ -64,33 +64,63 @@ Thursday 2018-05-03   | 13: Bilal Zonjy
 --------------------: | :-------------------------------------------------------------------------------------------
 4:35 PM to 4:55 PM  | - 
 
-## 2018-05-07 Monday morning
+## 2018-05-07 Monday (First Session)
+
+Monday 2018-05-07     | 14: Andrew Tang  
+--------------------: | :-------------------------------------------------------------------------------------------
+9:30 AM to 9:50 AM  | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
+
+Monday 2018-05-07     | 15: Roberto Martinez
+--------------------: | :-------------------------------------------------------------------------------------------
+9:55 AM to 10:15 AM  | The effect of multiple chronic conditions on key outcomes in hospitalized HIV-positive patients
+
+Monday 2018-05-07     | 16: Sneha Vakamudi
+--------------------: | :-------------------------------------------------------------------------------------------
+10:20 AM to 10:40 AM  | Hospital length of stay: What is more important, the patient or the picture?
+
+Monday 2018-05-07     | 17: Elina Misicka
+--------------------: | :-------------------------------------------------------------------------------------------
+10:45 AM to 11:05 AM  | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
+
+Monday 2018-05-07     | 18: Vaishali Deo
+--------------------: | :-------------------------------------------------------------------------------------------
+11:20 AM to 11:40 AM  | The impact of citizenship status on the general health of adult U.S. residents
+
+Monday 2018-05-07     | 19: Peter Wilkinson
+--------------------: | :-------------------------------------------------------------------------------------------
+11:45 AM to 12:05 PM  | Integrative Omics of HepB vaccine response in co-infection with parasites
+
+Monday 2018-05-07     | 20: Kedar Mahajan
+--------------------: | :-------------------------------------------------------------------------------------------
+12:10 PM to 12:30 PM  | How does brain atrophy predict disability in progressive multiple sclerosis?
+
+## 2018-05-07 Monday (Second Session)
+
+Monday 2018-05-07     | 21: Zainab Albar  
+--------------------: | :-------------------------------------------------------------------------------------------
+1:30 PM to 1:50 PM    | Marijuana exposure and depression among females in NHANES, 2009-2012
+
+Monday 2018-05-07     | 22: Haimeng Bai 
+--------------------: | :-------------------------------------------------------------------------------------------
+1:55 PM to 2:15 PM    | Using Stroke Risk Score to predict Alzheimer's Disease Status
+
 
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
 Khaled Alayed   | Bug Prediction Using Slice-Based Metrics vs. Code Metrics
-Zainab Albar    | Marijuana exposure and depression among females in NHANES, 2009-2012
-Haimeng Bai     | Using Stroke Risk Score to predict Alzheimer's Disease Status
 Shufen Cao      | Assessing Risk Factors for Osteoporosis in NHANES 2013-14
 Estee Cramer    | Prediction Models for Outcomes Associated with Lymphatic Filariasis in Papua New Guinea
 Laura Cremer    | Can being a health-nut decrease your overall risk of cancer?
-Vaishali Deo    | The impact of citizenship status on the general health of adult U.S. residents
 Jiajian Huang   | Predicting BMI and incidence of coronary heart disease in OMAS data, 2015
-Kedar Mahajan   | How does brain atrophy predict disability in progressive multiple sclerosis?
-Roberto Martinez | The effect of multiple chronic conditions on key outcomes in hospitalized HIV-positive patients
 John McDonnell  | Predicting Need for Phototherapy in the Neonatal ICU
 Satyakam Mishra | Predicting Pedal Edema in patients from India 
-Elina Misicka   | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
 Preeti Pathak   | Do lifetime smoking or drinking exposures increase the risk of pregnancy loss?
 Gabrielle Rieth | Linking outcomes for head surgery patients to corticosteroid doses
 Kaylee Sarna    | Predicting vegetarian diet based on biochemical profile and health behaviors, in NHANES 2009-10
 Connor Swingle  | Race and eviction filings in Ohio
-Andrew Tang     | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
 Vinh Trinh      | Seeking mental health care, depression and alcohol consumption in NHANES 2015-16
-Sneha Vakamudi  | Hospital length of stay: What is more important, the patient or the picture? 
 Ruipeng Wei     | Can blood components indicate the presence of chronic kidney disease?
-Peter Wilkinson | Integrative Omics of HepB vaccine response in co-infection with parasites
 
 Investigative Team | Project 2 Title 
 -------------------------------------- | -----------------------------------------------------------------------------
