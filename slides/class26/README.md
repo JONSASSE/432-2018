@@ -67,6 +67,7 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 
 ## Today's Data Visualizations
 
+- While the rest of Homework 6 isn't yet graded, we have looked at Question 1, and identified a few of [your visualizations of the County Health Data that caught our eye](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw6/NICEVIZ.md).
 - We're touring some of the interesting work at [flowingdata.com](http://flowingdata.com/), specifically Nathan's thoughts on
     - [Visualizing Differences](https://flowingdata.com/2018/04/17/visualizing-differences/)
         - [Relationships: The First Time...](http://flowingdata.com/2017/02/23/the-first-time/)
