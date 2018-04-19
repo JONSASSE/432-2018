@@ -22,10 +22,9 @@ which will almost inevitably continue on into Class 27. There is no Minute Paper
 2. I posted a hint for question 3 on [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7). 
     - When you have a time-to-event outcome, you just use the survival time, and not the whole survival object (i.e. you ignore the censoring) in building a Spearman rho-squared plot.
 
-3. Just being sure this is clear...
-
-- When you're fitting non-linear terms (based on a Spearman rho-squared plot) if the variable you're considering adding non-linearity to is quantitative, you might consider a restricted cubic spline, a polynomial function, or an interaction between the quantitative variable and a nearby categorical one.
-- But if the variable is categorical, your only option is an interaction term. Splines and polynomials make no sense with categorical variables.
+3. Speaking of using Spearman rho-squared plots, just being sure this is clear...
+    - When you're fitting non-linear terms (based on a Spearman rho-squared plot) if the variable you're considering adding non-linearity to is quantitative, you might consider a restricted cubic spline, a polynomial function, or an interaction between the quantitative variable and a nearby categorical one.
+    - But if the variable is categorical, your only option is an interaction term. Splines and polynomials make no sense with categorical variables.
 
 4. The version of Chapters 22 and 23 where all images appear is [available in HTML here](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class24/chapters_22_and_23_draft.html), and also [in R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/chapters_22_and_23_draft.Rmd).
 
