@@ -26,6 +26,24 @@ which may continue on into Class 27. There is no Minute Paper today.
 
 4. Those of you interested in Python probably already know that [PyCon 2018 is in Cleveland](https://us.pycon.org/2018/about/) May 9-17. Registration is $125 for students.
 
+## Making Project 2 A Little Easier (This note is section 6.19 of the Project 2 Instructions)
+
+While you can fit a model including up to the complete set of predictors I approved in your proposal, I strongly recommend you restrain yourself to **no more than 8 actual predictors** in a final model regardless of your sample size. Anything more than that will be difficult to interpret at best.
+
+- If your number of main effects (predictors) that you want to include in your final model exceeds the number of degrees of freedom specified below, then don't add any non-linear terms.
+- If you do decide to include non-linear terms as determined based on a Spearman rho-squared plot, then adhere closely to the maximum degrees of freedom specified in the table below. These df limits include the intercept term(s).
+
+1. If you are fitting a regression to a **quantitative or count** outcome, let *n* = sample size. For this count and all of the counts here, do not include any data points where the outcome is missing.
+2. If you are fitting a regression to a **categorical** outcome, let *n* = # of observations in the category with the smallest sample size.
+3. If you are fitting a regression to a **time-to-event** outcome, let *n* = # of observations where the event occurred (was not censored).
+
+Value of *n* | 10-100 | 101-250 | 251-500 | 501-999 | 1000+
+-----------: | -----: | ------: | ------: | ------: | --------:
+Maximum *df* | 6 | 9 | 12 | 16 | 20
+
+- **For project 2**, don't worry about penalizing yourself for "peeking" at the data by running automated selection procedures or scatterplot matrices. 
+- If you are running either a linear regression or a (binary) logistic regression, you should run some sort of model validation, ideally one that generates estimated root mean squared prediction errors and mean absolute prediction errors comparing two or more models, but if not, at least validations of the summary statistics.
+
 ## Remaining Deliverables This Semester
 
 The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) page is always the final word, if you are confused.
