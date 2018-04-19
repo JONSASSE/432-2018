@@ -2,7 +2,7 @@
 
 ## Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) will be posted as soon as possible.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) are now available. I know, there are too many.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) will be posted as soon as possible.
 
 Today's class will include:
