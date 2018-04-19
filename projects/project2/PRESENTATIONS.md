@@ -1,10 +1,15 @@
 # Final Project 2 Schedule and Logistics
 
+1. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Final Portfolio materials are due 3 hours prior to your Presentation to me. Submit to [Canvas](https://canvas.case.edu/).
+2. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Presentations are on **2018-05-03**, **2018-05-07** and **2018-05-08**, and will be scheduled by 2018-04-19.
+3. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Revisions are due at Noon on **Wednesday 2018-05-09**. Whether you'll need to revise will be determined at your presentation.
+
 - All presentations are given in Dr. Love's office on the ground floor of the Wood building, in Room WG-82L.
 - Please arrive **10 minutes early** for your presentation, and bring a well-charged laptop. 
 - Please come in as soon as the person in front of you leaves.
 - If you have an emergency on the day of your presentation, or if you have a problem meeting at your scheduled time, please email Dr. Love as soon as you can.
-- Good luck to you all! 431-help will remain available to you through the final presentation on 2018-05-08.
+- **431-help** will remain available to you until **11 AM on Wednesday 2018-05-09**.
+- Good luck to you all! 
 
 ## 2018-05-01 Tuesday
 
@@ -104,6 +109,18 @@ Monday 2018-05-07     | 22: Haimeng Bai
 --------------------: | :-------------------------------------------------------------------------------------------
 1:55 PM to 2:15 PM    | Using Stroke Risk Score to predict Alzheimer's Disease Status
 
+Monday 2018-05-07     | 23: Satyakam Mishra
+--------------------: | :-------------------------------------------------------------------------------------------
+2:20 PM to 2:40 PM    | Predicting Pedal Edema in patients from India 
+
+Monday 2018-05-07     | 24: Preeti Pathak
+--------------------: | :-------------------------------------------------------------------------------------------
+2:45 PM to 3:05 PM    | Do lifetime smoking or drinking exposures increase the risk of pregnancy loss?
+
+Monday 2018-05-07     | 25: Kaylee Sarna
+--------------------: | :-------------------------------------------------------------------------------------------
+3:20 PM to 3:40 PM    | Predicting vegetarian diet based on biochemical profile and health behaviors, in NHANES 2009-10
+
 
 
 Investigator | Project 2 Title 
@@ -114,10 +131,7 @@ Estee Cramer    | Prediction Models for Outcomes Associated with Lymphatic Filar
 Laura Cremer    | Can being a health-nut decrease your overall risk of cancer?
 Jiajian Huang   | Predicting BMI and incidence of coronary heart disease in OMAS data, 2015
 John McDonnell  | Predicting Need for Phototherapy in the Neonatal ICU
-Satyakam Mishra | Predicting Pedal Edema in patients from India 
-Preeti Pathak   | Do lifetime smoking or drinking exposures increase the risk of pregnancy loss?
 Gabrielle Rieth | Linking outcomes for head surgery patients to corticosteroid doses
-Kaylee Sarna    | Predicting vegetarian diet based on biochemical profile and health behaviors, in NHANES 2009-10
 Connor Swingle  | Race and eviction filings in Ohio
 Vinh Trinh      | Seeking mental health care, depression and alcohol consumption in NHANES 2015-16
 Ruipeng Wei     | Can blood components indicate the presence of chronic kidney disease?
