@@ -1,15 +1,13 @@
 # Final Project 2 Schedule and Logistics
 
-1. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Final Portfolio materials are due 3 hours prior to your Presentation to me. Submit to [Canvas](https://canvas.case.edu/).
-2. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Presentations are on **2018-05-03**, **2018-05-07** and **2018-05-08**, and will be scheduled by 2018-04-19.
-3. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Revisions are due at Noon on **Wednesday 2018-05-09**. Whether you'll need to revise will be determined at your presentation.
-
-- All presentations are given in Dr. Love's office on the ground floor of the Wood building, in Room WG-82L.
-- Please arrive **10 minutes early** for your presentation, and bring a well-charged laptop. 
-- Please come in as soon as the person in front of you leaves.
-- If you have an emergency on the day of your presentation, or if you have a problem meeting at your scheduled time, please email Dr. Love as soon as you can.
-- **431-help** will remain available to you until **11 AM on Wednesday 2018-05-09**.
-- Good luck to you all! 
+1. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Final Portfolio materials are due 3 hours prior to your Presentation. Submit to [Canvas](https://canvas.case.edu/).
+2. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Revisions are due via **Canvas** at Noon on **Wednesday 2018-05-09**. Whether you'll need to revise will be determined at your presentation.
+3. All presentations are given in Dr. Love's office on the ground floor of the Wood building, in Room WG-82L.
+4. Please arrive **10 minutes early** for your presentation, and bring a well-charged laptop. 
+5. Please come in as soon as the person in front of you leaves.
+6. If you have an emergency on the day of your presentation, or if you have a problem meeting at your scheduled time, please email Dr. Love as soon as you can.
+7. **431-help** will remain available to you until **11 AM on Wednesday 2018-05-09**.
+8. Good luck to you all! 
 
 ## 2018-05-01 Tuesday
 
@@ -139,14 +137,17 @@ Monday 2018-05-07     | 29: Gabrielle Rieth
 
 ## 2018-05-08 Tuesday
 
+Tuesday 2018-05-08    | 30: John (Jack) McDonnell
+--------------------: | :-------------------------------------------------------------------------------------------
+11:30 AM to 11:50 AM  | Predicting Need for Phototherapy in the Neonatal ICU
+
+
 
 Investigator | Project 2 Title 
 --------------- | ----------------------------------------------------------------------------------------------------
 Khaled Alayed   | Bug Prediction Using Slice-Based Metrics vs. Code Metrics
 Shufen Cao      | Assessing Risk Factors for Osteoporosis in NHANES 2013-14
 Estee Cramer    | Prediction Models for Outcomes Associated with Lymphatic Filariasis in Papua New Guinea
-John McDonnell  | Predicting Need for Phototherapy in the Neonatal ICU
-Gabrielle Rieth | 
 Connor Swingle  | Race and eviction filings in Ohio
 Vinh Trinh      | Seeking mental health care, depression and alcohol consumption in NHANES 2015-16
 Ruipeng Wei     | Can blood components indicate the presence of chronic kidney disease?
