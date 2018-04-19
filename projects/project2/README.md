@@ -4,6 +4,7 @@ Project 2 Instructions are available in [this HTML document](https://htmlpreview
 
 - Dr. Love will discuss these instructions in class on 2018-03-27.
 - A substantial update to the document (Section 6: Some Additional Comments) happened on 2018-03-30.
+- A small update on spending degrees of freedom (Section 6.19) was added on 2018-04-18.
 
 ## There are Three Deliverables for Project 2
 
