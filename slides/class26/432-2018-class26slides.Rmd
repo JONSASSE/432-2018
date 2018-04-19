@@ -118,7 +118,7 @@ What are some of the reasons you might fit a linear (or generalized linear) mode
 - In either case, bias is very important, and you want to avoid it. Careful design of a comparison group (like I teach in 500) is a very good way to go about this work, but it's also true that there's a lot of epidemiology that goes into drawing causal conclusions, or even thinking hard about an association.
 - Often the details of modeling take a back seat here to the details of designing the study (and the comparison groups) in the first place.
 
-# Asssessing the Quality of a Logistic Regression Model
+# Assessing the Quality of a Logistic Regression Model
 
 ## A Quick Example
 
