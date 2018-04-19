@@ -7,7 +7,7 @@
 
 Today's class will include:
 
-1. data visualization ideas from your work on HW 6 and from [flowingdata.com](http://flowingdata.com/)
+1. data visualization ideas from [your work on HW 6](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw6/NICEVIZ.md) and from [flowingdata.com](http://flowingdata.com/)
 2. some clarifying comments on spending degrees of freedom, the Spearman rho-squared plot, and how regression models should be built
 3. some specific issues related to logistic regression model selection and classification assessment
 4. some discussion of broader issues in scientific replicability and statistical significance
