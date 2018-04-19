@@ -30,6 +30,11 @@ which will almost inevitably continue on into Class 27. There is no Minute Paper
 
 4. Those of you interested in Python probably already know that [PyCon 2018 is in Cleveland](https://us.pycon.org/2018/about/) May 9-17. Registration is $125 for students.
 
+5. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found there.
+    - I [posted three articles](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) that are of particular importance.
+    - In today's slides, I also refer to [Roger Peng's blog post from Tuesday](https://simplystatistics.org/2018/04/17/what-is-a-successful-data-analysis/) about what makes a data analysis successful.
+    - In today's slides, I also refer to the [Hack Your Way to Scientific Glory](https://projects.fivethirtyeight.com/p-hacking/) game at FiveThirtyEight.
+
 ## Making Project 2 A Little Easier 
 
 **This note is now section 6.19 of the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html)**
