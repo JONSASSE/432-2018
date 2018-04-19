@@ -119,7 +119,7 @@ Monday 2018-05-07     | 24: Preeti Pathak
 
 Monday 2018-05-07     | 25: Kaylee Sarna
 --------------------: | :-------------------------------------------------------------------------------------------
-3:20 PM to 3:40 PM    | Predicting vegetarian diet based on biochemical profile and health behaviors, in NHANES 2009-10
+3:20 PM to 3:40 PM    | Predicting vegetarian diet using biochemical profile and health behaviors (NHANES 2009-10)
 
 
 
