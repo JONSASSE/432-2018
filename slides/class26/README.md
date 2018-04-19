@@ -2,18 +2,16 @@
 
 ## Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) are now available. I know, there are too many.
+- The posted [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) now only cover what I actually discussed. The slides for Class 27 pick up the rest.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) will be posted as soon as possible.
 
-Today's class will include:
+Today's class included:
 
 1. data visualization ideas from [your work on HW 6](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw6/NICEVIZ.md) and from [flowingdata.com](http://flowingdata.com/)
 2. some clarifying comments on spending degrees of freedom, the Spearman rho-squared plot, and how regression models should be built
 3. some specific issues related to logistic regression model selection and classification assessment
-4. some discussion of broader issues in scientific replicability and statistical significance
-5. some discussion of retrospective power, Type S and Type M errors
 
-which will almost inevitably continue on into Class 27. There is no Minute Paper today.
+There is no Minute Paper today.
 
 ## Announcements at the start of class
 
@@ -29,12 +27,7 @@ which will almost inevitably continue on into Class 27. There is no Minute Paper
 4. The version of Chapters 22 and 23 where all images appear is [available in HTML here](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/slides/class24/chapters_22_and_23_draft.html), and also [in R Markdown](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/slides/class24/chapters_22_and_23_draft.Rmd).
 
 5. Those of you interested in Python probably already know that [PyCon 2018 is in Cleveland](https://us.pycon.org/2018/about/) May 9-17. Registration is $125 for students.
-
-6. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found there.
-    - In the README for today's class [posted three articles](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) that are of particular importance, but many other things are linked from that other talk, if you're interested.
-    - In today's slides, I dp refer to [Roger Peng's blog post from Tuesday](https://simplystatistics.org/2018/04/17/what-is-a-successful-data-analysis/) about what makes a data analysis successful.
-    - In today's slides, I also refer to the [Hack Your Way to Scientific Glory](https://projects.fivethirtyeight.com/p-hacking/) game at FiveThirtyEight.
-    
+  
 ## Making Project 2 A Little Easier 
 
 **This note is now section 6.19 of the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html)**
