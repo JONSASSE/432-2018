@@ -26,7 +26,9 @@ which may continue on into Class 27. There is no Minute Paper today.
 
 4. Those of you interested in Python probably already know that [PyCon 2018 is in Cleveland](https://us.pycon.org/2018/about/) May 9-17. Registration is $125 for students.
 
-## Making Project 2 A Little Easier (This note is section 6.19 of the Project 2 Instructions)
+## Making Project 2 A Little Easier 
+
+**This note is now section 6.19 of the [Project 2 Instructions](https://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/project2-instructions-432-2018.html)**
 
 While you can fit a model including up to the complete set of predictors I approved in your proposal, I strongly recommend you restrain yourself to **no more than 8 actual predictors** in a final model regardless of your sample size. Anything more than that will be difficult to interpret at best.
 
