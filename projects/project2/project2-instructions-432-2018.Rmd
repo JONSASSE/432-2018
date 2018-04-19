@@ -267,6 +267,25 @@ I can't think of a compelling reason to do so. This is one of the few places whe
 
 The Number One thing I would suggest is that you read the entire [document on Project 1 Feedback](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/FEEDBACK.md). There are a lot of important details there that may affect you, and those of you who have already read that carefully will, I think, agree that this is a good idea.
 
+## Spending Degrees of Freedom: Making Project 2 A Little Easier
+
+While you can fit a model including up to the complete set of predictors I approved in your proposal, I strongly recommend you restrain yourself to **no more than 8 actual predictors** in a final model regardless of your sample size. Anything more than that will be difficult to interpret at best.
+
+- If your number of main effects (predictors) that you want to include in your final model exceeds the number of degrees of freedom specified below, then don't add any non-linear terms.
+- If you do decide to include non-linear terms as determined based on a Spearman rho-squared plot, then adhere closely to the maximum degrees of freedom specified in the table below. These df limits include the intercept term(s).
+
+1. If you are fitting a regression to a **quantitative or count** outcome, let *n* = sample size. For this count and all of the counts here, do not include any data points where the outcome is missing.
+2. If you are fitting a regression to a **categorical** outcome, let *n* = # of observations in the category with the smallest sample size.
+3. If you are fitting a regression to a **time-to-event** outcome, let *n* = # of observations where the event occurred (was not censored).
+
+Value of *n* | 10-100 | 101-250 | 251-500 | 501-999 | 1000+
+-----------: | -----: | ------: | ------: | ------: | --------:
+Maximum *df* | 6 | 9 | 12 | 16 | 20
+
+- **For project 2**, don't worry about penalizing yourself for "peeking" at the data by running automated selection procedures or scatterplot matrices. 
+- If you are running either a linear regression or a (binary) logistic regression, you should run some sort of model validation, ideally one that generates estimated root mean squared prediction errors and mean absolute prediction errors comparing two or more models, but if not, at least validations of the summary statistics.
+
+
 # Questions?
 
 Questions about Project 2 may be directed to 431-help and the TAs as well as to Dr. Love at any time.

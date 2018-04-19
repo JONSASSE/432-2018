@@ -66,7 +66,7 @@ img {
 <div id="header">
 <h1 class="title">432 Project 2 Instructions for Spring 2018</h1>
 <h4 class="author"><em>Thomas E. Love</em></h4>
-<h4 class="date"><em>Version: 2018-04-09</em></h4>
+<h4 class="date"><em>Version: 2018-04-18</em></h4>
 </div>
 
 <div id="content">
@@ -357,6 +357,45 @@ img {
 <h2><span class="header-section-number">6.18</span> I didn’t get an A on Project 1. What recommendation do you have for me to improve my Project 2?</h2>
 <p>The Number One thing I would suggest is that you read the entire <a href="https://github.com/THOMASELOVE/432-2018/blob/master/projects/project1/FEEDBACK.md">document on Project 1 Feedback</a>. There are a lot of important details there that may affect you, and those of you who have already read that carefully will, I think, agree that this is a good idea.</p>
 </div>
+<div id="spending-degrees-of-freedom-making-project-2-a-little-easier" class="section level2">
+<h2><span class="header-section-number">6.19</span> Spending Degrees of Freedom: Making Project 2 A Little Easier</h2>
+<p>While you can fit a model including up to the complete set of predictors I approved in your proposal, I strongly recommend you restrain yourself to <strong>no more than 8 actual predictors</strong> in a final model regardless of your sample size. Anything more than that will be difficult to interpret at best.</p>
+<ul>
+<li>If your number of main effects (predictors) that you want to include in your final model exceeds the number of degrees of freedom specified below, then don’t add any non-linear terms.</li>
+<li>If you do decide to include non-linear terms as determined based on a Spearman rho-squared plot, then adhere closely to the maximum degrees of freedom specified in the table below. These df limits include the intercept term(s).</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>If you are fitting a regression to a <strong>quantitative or count</strong> outcome, let <em>n</em> = sample size. For this count and all of the counts here, do not include any data points where the outcome is missing.</li>
+<li>If you are fitting a regression to a <strong>categorical</strong> outcome, let <em>n</em> = # of observations in the category with the smallest sample size.</li>
+<li>If you are fitting a regression to a <strong>time-to-event</strong> outcome, let <em>n</em> = # of observations where the event occurred (was not censored).</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Value of <em>n</em></th>
+<th align="right">10-100</th>
+<th align="right">101-250</th>
+<th align="right">251-500</th>
+<th align="right">501-999</th>
+<th align="right">1000+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">Maximum <em>df</em></td>
+<td align="right">6</td>
+<td align="right">9</td>
+<td align="right">12</td>
+<td align="right">16</td>
+<td align="right">20</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>For project 2</strong>, don’t worry about penalizing yourself for “peeking” at the data by running automated selection procedures or scatterplot matrices.</li>
+<li>If you are running either a linear regression or a (binary) logistic regression, you should run some sort of model validation, ideally one that generates estimated root mean squared prediction errors and mean absolute prediction errors comparing two or more models, but if not, at least validations of the summary statistics.</li>
+</ul>
+</div>
 </div>
 <div id="questions" class="section level1">
 <h1><span class="header-section-number">7</span> Questions?</h1>
@@ -403,6 +442,7 @@ img {
         <li><a href="#if-i-have-two-models-that-arent-very-far-apart-in-terms-of-validation-where-model-1-is-much-simpler-but-less-good-in-terms-of-validation-than-model-2-which-model-would-you-focus-on"><span class="toc-section-number">6.16</span> If I have two models that aren’t very far apart in terms of validation, where Model 1 is much simpler but less good in terms of validation than Model 2, which model would you focus on?</a></li>
         <li><a href="#if-i-have-a-c-statistic-do-i-need-to-also-plot-the-roc-curve"><span class="toc-section-number">6.17</span> If I have a C statistic, do I need to also plot the ROC curve?</a></li>
         <li><a href="#i-didnt-get-an-a-on-project-1.-what-recommendation-do-you-have-for-me-to-improve-my-project-2"><span class="toc-section-number">6.18</span> I didn’t get an A on Project 1. What recommendation do you have for me to improve my Project 2?</a></li>
+        <li><a href="#spending-degrees-of-freedom-making-project-2-a-little-easier"><span class="toc-section-number">6.19</span> Spending Degrees of Freedom: Making Project 2 A Little Easier</a></li>
         </ul></li>
         <li><a href="#questions"><span class="toc-section-number">7</span> Questions?</a></li>
         </ul>
