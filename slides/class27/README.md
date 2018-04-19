@@ -7,8 +7,8 @@
 
 Today's class will include:
 
-1. some discussion of broader issues in scientific replicability and statistical significance
-2. some discussion of retrospective power, Type S and Type M errors
+1. scientific replicability and statistical significance
+2. retrospective power, Type S and Type M errors
 
 ## Announcements at the start of class
 
