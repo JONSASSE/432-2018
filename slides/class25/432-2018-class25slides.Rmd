@@ -50,7 +50,7 @@ brca <- read.csv("data/breast_cancer.csv") %>% tbl_df
 
 ## The `brca` trial
 
-The `brca` data describes a parallel randomized trial of three treats, adjuvant to surgery in the treat of patients with stage-2 carcinoma of the breast. The three treat groups are:
+The `brca` data describes a parallel randomized trial of three treatments, adjuvant to surgery in the treatment of patients with stage-2 carcinoma of the breast. The three treatment groups are:
 
 - `S+CT` = Surgery plus one year of chemotherapy
 - `S+IT` = Surgery plus one year of immunotherapy
@@ -70,7 +70,7 @@ brca
 
 ## Analytic Objectives
 
-This is a typical right-censored survival data set with interest in the comparative analysis of the three treats.
+This is a typical right-censored survival data set with interest in the comparative analysis of the three treatments.
 
 1. Does immunotherapy added to surgery plus chemotherapy improve survival? (Comparing S+CT+IT to S+CT)
 2. Does chemotherapy add efficacy to surgery plus immunotherapy? (S+CT+IT vs. S+IT)
@@ -190,68 +190,6 @@ ggcoxzph(cox.zph(modB))
 
 Visit https://cran.r-project.org/web/packages/survival/vignettes/timedep.pdf for details on building the relevant data sets and models, with examples.
 
-# Some Loose Ends
-
-## On Fitting Regression Models
-
-Some things are always true...
-
-- Being honest about your findings is important.
-- Identifying a stable phenomenon to study is crucial.
-- Measuring that phenomenon well is crucial.
-- Being transparent about your work is important. Describing your work so it can be replicated, and then actually replicating it, are good things. Sharing your data and your materials is a good idea.
-- Having a large sample size (*n*) is helpful in fitting models.
-
-but the impact of lots of other things changes depending on why you're fitting a regression model.
-
-## The Key Point
-
-Decide what your research question is, and use it to help you think about what's important in your modeling.
-
-- Models that account for only a few of the possibly important dimensions of a problem don't lead to causal conclusions, but can help screen out important from less important areas for future work.
-- Model development strategies that work well with large sample sizes (n) and small numbers of predictors to consider don't necessarily work well when the situation is reversed.
-- Most problems involve missing data, and problems in measurement. Getting those issues settled effectively is often overlooked.
-- The sample size you need to fit a regression model changes depending on your aims.
-
-## On Fitting Models 
-
-What are some of the reasons you might fit a linear (or generalized linear) model?
-
-1. (All prediction, no explanations) Because you want to make predictions about an outcome in new data based on some training data you have, but you're happy to take those predictions as emerging from a mysterious magic "black box" that cannot be peered into without spoiling the surprise. You don't care if your results are a little biased, so long as the predictions are strong. Parsimony doesn't matter to you.
-
-- Some especially useful tools here include: variable (feature) selection through cross-validation, stepwise approaches, AIC and BIC, machine learning tools like regression trees, and other means of quickly searching through many possible models.
-- Sample size is rarely a big issue here. The big problem is having more variables than you can possibly plot at once. You usually have enough data to partition into separate development and test samples.
-
-## On Fitting Models 
-
-2. (All description, external validity is irrelevant) Because you want to describe, as accurately as possible, the nature of the associations you observe in the available data, but you don't care much at all whether the conclusions you draw will hold up in new data.
-
-- Confidence intervals for coefficients (slopes, mostly), and sometimes you'll run the model on clinically relevant cutpoints rather than continuous predictors to see what's happening more simply. Simple polynomial models can be appealing, and you'll sometimes want to build this in the ANCOVA context, where you're looking for the impact of specific pre-specified interactions.
-- Residual plots play a big role here in deciding whether the model "fits" well enough, or identifying cases when it doesn't.
-- Cross-validation is useful, but not a big part of model selection or convincing people that the model is "right" or not.
-
-## On Fitting Models 
-
-3. (Clinical prediction) You want to do an excellent job predicting an outcome in new data, but you have a lot of prior knowledge about the predictors under consideration, and want to use that information to help produce prediction rules as effectively as possible. You welcome the fact that most relationships are non-linear, but would like to be parsimonious if possible, as data are often expensive.
-
-- Some especially useful tools here include: scatterplot matrices (when the number of predictors is modest), cross-validation, assessments of discrimination and calibration, Spearman's $\rho^2$ plot to point the way to non-linear terms that might be impactful if present, restricted cubic splines, polynomial functions, and graphical tools like nomograms
-- Most stepwise tools aren't helpful here. We try to not "peek" at the outcome-predictor relationships to maintain unbiased estimates of the relationship without extensive validation.
-
-## On Fitting Models 
-
-4. (Above all else, simplicity) You want the problem to look like one in a statistics textbook, where everything is fit with the simplest possible model, where every term adds statistically significant predictive value, and where obtaining an unbiased estimate of the outcome is especially important. You still care a bit about what happens in new data, but you're mostly concerned about parsimonious model development.
-
-- Some especially useful tools include best subsets, stepwise approaches, and methods for pruning a set of predictors with clustering or principal components analysis. These models usually make the (often incorrect) assumption that relationships are linear.
-- Often this approach is used by people who are trying to pre-specify their entire model in advance, and want to be sure they can "explain" the result when they are done. That may not be a reasonable thing to hope for. This is a place where the "rule of 20" can be very helpful in setting expectations in advance.
-
-## On Fitting Models 
-
-5. (Causal inference) You want to identify whether a particular causal pathway you have pre-specified matches up well with what you see in new data.
-6. (Risk Adjustment) You want to identify the impact of a particular exposure/predictor on an outcome, while controlling for the effects of a series of additional predictors. Perhaps you've done a randomized experiment / clinical trial, and want to identify whether particular results meet a standard for statistical (as well as clinical) significance. Power is very important.
-
-- In either case, bias is very important, and you want to avoid it. Careful design of a comparison group (like I teach in 500) is a very good way to go about this work, but it's also true that there's a lot of epidemiology that goes into drawing causal conclusions, or even thinking hard about an association.
-- Often the details of modeling take a back seat here to the details of designing the study (and the comparison groups) in the first place.
-
 # Using Restricted Cubic Splines
 
 ## Explaining a Model with a Restricted Cubic Spline
@@ -359,139 +297,6 @@ head(fitted(model_10),3)
 table(fitted(model_10) >= 0.5, lbw$low)
 ```
 
-## The Hosmer-Lemeshow Test of Goodness of Fit
-
-See [\textcolor{blue}{this link from Jonathan Bartlett}](http://thestatsgeek.com/2014/02/16/the-hosmer-lemeshow-goodness-of-fit-test-for-logistic-regression/).
-
-- The Hosmer-Lemeshow goodness of fit test is based on dividing the sample into g groups (g is often chosen to be 10) according to their predicted probabilities.
-- We then calculate the expected number of Y = 1 outcomes (based on the model probabilities of Y = 1 in the group) in each of the 10 groups, and compare those results to what is observed in the data using a Pearson goodness of fit statistic.
-- A significant result indicates statistically significant "lack of fit" but it's easy to criticize the test (among other things, if you change the choice of g, you can materially change the *p* value.)
-
-## Running the Hosmer-Lemeshow Test
-
-```{r}
-# requires ResourceSelection package
-hos <- hoslem.test(model_10$y, fitted(model_10), g = 10)
-hos
-```
-
-So there's no evidence of poor fit. We can also get a table of observed vs. expected.
-
-## Observed vs. Expected Table from H-L test
-
-```{r}
-cbind(hos$observed, hos$expected)
-```
-
-## Change the number of groups, *g*?
-
-```{r}
-for (i in 5:15) {
-  print(hoslem.test(model_10$y, 
-                    fitted(model_10), g=i)$p.value)
-}
-```
-
-# Can we use "best subsets" or "all subsets" in logistic regression?
-
-## Using the `bestglm` package to do "best subsets" with logistic models
-
-There are several available tools. If you're interested, I'd start with [\textcolor{blue}{this link}](https://rstudio-pubs-static.s3.amazonaws.com/2897_9220b21cfc0c43a396ff9abf122bb351.html).
-
-- The `bestglm` package does an exhaustive (all subsets) search through a glm (slowly) using AIC, BIC or cross-validation, for example.
-- This expects the data to be in a certain form, for instance, the outcome must be named *y* and you can have no extraneous variables present.
-- The tutorial you'll find at the link above is pre-tidyverse. I don't know how well `bestglm` works with the tidyverse, but it's not likely to be much worse than `leaps` does.
-- This approach can also be used with linear models which include multi-categorical predictors.
-- `bestglm` is going to do an exhaustive search, which will be slow with large data sets, or large pools of predictors.
-- In addition to `bestglm` there are several other appealing tools for looking at large numbers of potential models quickly.
-
-## Preparing the Data Set
-
-```{r}
-lbw_for_bestglm <- lbw %>%
-    mutate(y = low) %>%
-    select(age, lwt, race, smoke, ptl, ht, ui, ftv, y)
-```
-
-Must include only the variables we want to include in the search, and then the outcome, which must be labeled y, in that order.
-
-
-## `lbw_for_bestglm` data: First few observations
-
-```{r}
-head(lbw_for_bestglm)
-```
-
-## Search through all subsets, with AIC as criterion
-
-```{r}
-res.best.logistic <-
-    bestglm(Xy = lbw_for_bestglm,
-            family = binomial,
-            IC = "AIC",
-            method = "exhaustive")
-```
-
-This approach (with a `gaussian` family) can also be used for OLS.
-
-## Show top 5 models chosen by AIC
-
-```{r}
-res.best.logistic$BestModels
-```
-  
-## Show result for best model, according to AIC
-
-![](figures/fig4.png)
-
-## Search all subsets, using BIC instead of AIC
-
-```{r}
-res.best.logistic2 <-
-    bestglm(Xy = lbw_for_bestglm,
-            family = binomial,
-            IC = "BIC",
-            method = "exhaustive")
-```
-
-## Show top 5 models by BIC
-
-```{r}
-res.best.logistic2$BestModels
-```
-
-## Show result for best model, according to BIC
-
-![](figures/fig5.png)
-
-## Best Models, by Criterion
-
-There are 8 predictors under consideration.
-
-- `age`, `lwt`, `race`, `smoke`, `ptl`, `ht`, `ui` and `ftv`
-
-
-Model (by AIC)              | Rank  | Model (by BIC)
---------------------------: | :---: | ------------------
-`lwt`, `smoke`, `ptl`, `ht`, `ui`     | 1     | `lwt`, `ptl`, `ht`
-all except `ftv`                 | 2     | `ptl`
-`lwt`, `race`, `smoke`, `ptl`, `ht`   | 3     | `age`, `ptl`
-all except `ui`, `ftv`             | 4     | `lwt`, `ptl`
-`age`, `lwt`, `ptl`, `ht`, `ui`       | 5     | `lwt`, `ptl`, `ht`, `ui`
-
-## Search all subsets, using Cross-Validation
-
-Can be done when all predictors are continuous or binary, but **not** if you have categorical predictors with more than two levels.
-
-```{r, eval = FALSE}
-# not run here because we have
-# some multi-categorical predictors
-set.seed(432)
-res.best.logistic_cv <-
-    bestglm(Xy = lbw_for_bestglm,
-            family = binomial,
-            IC = "CV")
-```
 
 ## Next Time
 
