@@ -5,10 +5,13 @@
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class27) are now available.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class27) will be posted as soon as possible.
 
-Today's class will include:
+In today's class, I will be talking about:
 
 1. scientific replicability and statistical significance
 2. retrospective power, Type S and Type M errors
+
+There's no real discussion of data visualization today, for which I'm sorry, but the other material overwhelms. 
+- However, I will direct you to [Junk Charts](http://junkcharts.typepad.com/junk_charts/) by Kaiser Fung, who also runs a great [blog on Big Data called Numbers Rule Your World](http://junkcharts.typepad.com/numbersruleyourworld/). I recommend them both.
 
 ## Announcements at the start of class
 
