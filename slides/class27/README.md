@@ -11,7 +11,7 @@ In today's class, I will be talking about:
 2. retrospective power, Type S and Type M errors
 
 There's no real discussion of data visualization today, for which I'm sorry, but the other material overwhelms. 
-- However, I will direct you to [Junk Charts](http://junkcharts.typepad.com/junk_charts/) by Kaiser Fung, who also runs a great [blog on Big Data called Numbers Rule Your World](http://junkcharts.typepad.com/numbersruleyourworld/). I recommend them both.
+- I encourage you to look at [Junk Charts](http://junkcharts.typepad.com/junk_charts/) by Kaiser Fung, who also runs a great blog on statistics and Big Data called [Numbers Rule Your World](http://junkcharts.typepad.com/numbersruleyourworld/). I recommend them both.
 
 ## Announcements at the start of class
 
