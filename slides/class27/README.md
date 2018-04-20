@@ -26,9 +26,11 @@ There's no real discussion of data visualization today, for which I'm sorry, but
     - In today's slides, I refer to [Roger Peng's blog post from last week](https://simplystatistics.org/2018/04/17/what-is-a-successful-data-analysis/) about what makes a data analysis successful.
     - In today's slides, I also refer to the [Hack Your Way to Scientific Glory](https://projects.fivethirtyeight.com/p-hacking/) game at FiveThirtyEight.
     
-## Remaining Deliverables This Semester (after HW 7 due today at 5)
+## Remaining Deliverables This Semester
 
 The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) page is always the final word, if you are confused.
+
+**Remember that Homework 7 is due today at 5 PM. After that ...**
 
 1. [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz2) will go out after class on 2018-04-26, and is due at Noon on **Tuesday 2018-05-01**.
 2. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Final Portfolio materials are due 3 hours prior to your Presentation to me. Submit to [Canvas](https://canvas.case.edu/).
