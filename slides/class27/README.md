@@ -37,5 +37,6 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 1. [Quiz 2](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz2) will go out after class on 2018-04-26, and is due at Noon on **Tuesday 2018-05-01**.
 2. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Final Portfolio materials are due 3 hours prior to your Presentation to me. Submit to [Canvas](https://canvas.case.edu/).
 3. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Presentations are on **2018-05-03**, **2018-05-07** and **2018-05-08**, and the [complete schedule is here](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md).
-4. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Revisions are due at Noon on **Wednesday 2018-05-09**. Whether you'll need to revise will be determined at your presentation.
+4. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Revisions are due at Noon on **Wednesday 2018-05-09**. 
+    - Not all Projects require revision. Whether you'll need to revise will be determined at your presentation.
 
