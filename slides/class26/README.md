@@ -3,7 +3,7 @@
 ## Key Materials
 
 - The posted [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) now only cover what I actually discussed. The slides for Class 27 pick up the rest.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) will be posted as soon as possible.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) are now posted.
 
 Today's class included:
 
