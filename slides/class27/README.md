@@ -15,9 +15,9 @@ There's no real discussion of data visualization today, for which I'm sorry, but
 
 ## Announcements at the start of class
 
-1. You should receive a request from the University to fill out a Course Evaluation. Please do so.
+1. You should receive a request from the University to fill out a Course Evaluation. **Please** do so.
 
-2. I believe [the Course Notes](https://thomaselove.github.io/432-notes/) show all plots in all 23 chapters and that all of the typos I am aware of are resolved. Please let us know at 431-help if you find a problem.
+2. I believe [the Course Notes](https://thomaselove.github.io/432-notes/) show all plots in chapters 11, 21, and 23 and that all of the typos I am aware of are resolved. **Please** let us know at 431-help if you find a problem.
 
 3. Joseph Rickert put together a great post called [Survival Analysis with R](https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/) which has a nice demonstration of a few useful models, and many links to excellent resources for future study. I'll definitely use this in building up next year's version of the survival material.
 
