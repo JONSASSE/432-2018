@@ -19,11 +19,11 @@ There's no real discussion of data visualization today, for which I'm sorry, but
 
 2. I believe [the Course Notes](https://thomaselove.github.io/432-notes/) show all plots in chapters 11, 21, and 23 and that all of the typos I am aware of are resolved. **Please** let us know at 431-help if you find a problem.
 
-3. Joseph Rickert put together a great post called [Survival Analysis with R](https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/) which has a nice demonstration of a few useful models, and many links to excellent resources for future study. I'll definitely use this in building up next year's version of the survival material.
+3. The Schedule of Project 2 Presentations (and some logistical information) [is available](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md). Please take a look now, to verify that the time you're scheduled for works.
 
-4. The Schedule of Project 2 Presentations (and some logistical information) [is available](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md). Please take a look now, to verify that the time you're scheduled for works.
+4. [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is due today at 5. I posted a hint for question 3 last week. 
 
-5. [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is due today at 5. I posted a hint for question 3 last week. 
+5. Joseph Rickert put together a great post called [Survival Analysis with R](https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/) which has a nice demonstration of a few useful models, and many links to excellent resources for future study. I'll definitely use this in building up next year's version of the survival material.
 
 6. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found there.
     - In the README for today's class [posted three articles](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) that are of particular importance, but many other things are linked from that other talk, if you're interested.
