@@ -15,15 +15,17 @@ There's no real discussion of data visualization today, for which I'm sorry, but
 
 ## Announcements at the start of class
 
-1. I believe [the Course Notes](https://thomaselove.github.io/432-notes/) show all plots in all 23 chapters and that all of the typos I am aware of are resolved. Please let us know at 431-help if you find a problem.
+1. You should receive a request from the University to fill out a Course Evaluation. Please do so.
 
-2. Joseph Rickert put together a great post called [Survival Analysis with R](https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/) which has a nice demonstration of a few useful models, and many links to excellent resources for future study. I'll definitely use this in building up next year's version of the survival material.
+2. I believe [the Course Notes](https://thomaselove.github.io/432-notes/) show all plots in all 23 chapters and that all of the typos I am aware of are resolved. Please let us know at 431-help if you find a problem.
 
-3. The Schedule of Project 2 Presentations (and some logistical information) [is available](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md). Please take a look now, to verify that the time you're scheduled for works.
+3. Joseph Rickert put together a great post called [Survival Analysis with R](https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/) which has a nice demonstration of a few useful models, and many links to excellent resources for future study. I'll definitely use this in building up next year's version of the survival material.
 
-4. [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is due today at 5. I posted a hint for question 3 last week. 
+4. The Schedule of Project 2 Presentations (and some logistical information) [is available](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md). Please take a look now, to verify that the time you're scheduled for works.
 
-5. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found there.
+5. [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is due today at 5. I posted a hint for question 3 last week. 
+
+6. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found there.
     - In the README for today's class [posted three articles](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) that are of particular importance, but many other things are linked from that other talk, if you're interested.
     - In today's slides, I refer to [Roger Peng's blog post from last week](https://simplystatistics.org/2018/04/17/what-is-a-successful-data-analysis/) about what makes a data analysis successful.
     - In today's slides, I also refer to the [Hack Your Way to Scientific Glory](https://projects.fivethirtyeight.com/p-hacking/) game at FiveThirtyEight.
@@ -40,3 +42,4 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 4. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Revisions are due at Noon on **Wednesday 2018-05-09**. 
     - Not all Projects require revision. Whether you'll need to revise will be determined at your presentation.
 
+As mentioned, I'd also really appreciate it if you complete the University Course Evaluation. Thanks.
