@@ -442,7 +442,7 @@ survplot(modA_cph, levels.only=TRUE, time.inc=12,
          xlab="Study Survival Time in Months")
 ```
 
-This plot shows a series of modeled survival probabilities, for five different diagnosis `age` levels, as identified by the labels. Generally we see that the older the subject is at diagnosis, the longer their survival time in the study. 
+This plot shows a series of modeled survival probabilities, for five different diagnosis `age` levels, as identified by the labels. Generally we see that the younger the subject is at diagnosis, the longer their survival time in the study. 
 
 ### ANOVA test for the `cph`-built model for `leukem`
 
