@@ -23,9 +23,11 @@ There's no real discussion of data visualization today, for which I'm sorry, but
 
 4. [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is due today at 5. I posted a hint for question 3 last week. 
 
-5. Joseph Rickert put together a great post called [Survival Analysis with R](https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/) which has a nice demonstration of a few useful models, and many links to excellent resources for future study. I'll definitely use this in building up next year's version of the survival material.
+5. Some [Quiz 2](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz2/README.md) materials are now available, if you want to review them before you receive the Quiz on Thursday.
 
-6. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found there.
+6. Joseph Rickert put together a great post called [Survival Analysis with R](https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/) which has a nice demonstration of a few useful models, and many links to excellent resources for future study. I'll definitely use this in building up next year's version of the survival material.
+
+7. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found there.
     - In today's slides, I refer to [Roger Peng's post from 2018-04-17](https://simplystatistics.org/2018/04/17/what-is-a-successful-data-analysis/) about what makes a data analysis successful.
     - In today's slides, I also refer to the [Hack Your Way to Scientific Glory](https://projects.fivethirtyeight.com/p-hacking/) game at FiveThirtyEight.
     - I [posted three articles on this page](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) that are of particular importance, but many other things are [linked at my previous talk's repository](https://github.com/THOMASELOVE/rethink), if you're interested.
@@ -42,4 +44,4 @@ The [Schedule](https://github.com/THOMASELOVE/432-2018/blob/master/SCHEDULE.md) 
 4. [Project 2](https://github.com/THOMASELOVE/432-2018/tree/master/projects/project2) Revisions are due at Noon on **Wednesday 2018-05-09**. 
     - Not all Projects require revision. Whether you'll need to revise will be determined at your presentation.
 
-As mentioned, I'd also really appreciate it if you complete the University Course Evaluation. Thanks.
+As mentioned, I'd also really appreciate it if you complete the **University Course Evaluation**. Thanks.
