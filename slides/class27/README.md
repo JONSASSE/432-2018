@@ -27,7 +27,7 @@ There's no real discussion of data visualization today, for which I'm sorry, but
 
 6. Joseph Rickert put together a great post called [Survival Analysis with R](https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/) which has a nice demonstration of a few useful models, and many links to excellent resources for future study. I'll definitely use this in building up next year's version of the survival material.
 
-7. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found there.
+7. I gave a talk earlier this year on ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink). Slides, an audio recording and a more complete batch of references (including most of those cited today) can be found in [that talk's repository](https://github.com/THOMASELOVE/rethink).
     - In today's slides, I refer to [Roger Peng's post from 2018-04-17](https://simplystatistics.org/2018/04/17/what-is-a-successful-data-analysis/) about what makes a data analysis successful.
     - In today's slides, I also refer to the [Hack Your Way to Scientific Glory](https://projects.fivethirtyeight.com/p-hacking/) game at FiveThirtyEight.
     - I [posted three articles on this page](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) that are of particular importance, but many other things are [linked at my previous talk's repository](https://github.com/THOMASELOVE/rethink), if you're interested.
