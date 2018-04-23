@@ -2,7 +2,11 @@
 
 Quiz 2 will be available to you at the end of class on Thursday 2018-04-26 and is due at noon on Tuesday 2018-05-01.
 
-The link to take Quiz 2 is **to appear on 2018-04-26 after class.**
+## The Google Form
+
+The link to the Google Form to take Quiz 2 is **to appear on 2018-04-26 after class.**
+
+## Things You Will Need
 
 There are three data sets (.csv files) that you'll need, and they are:
 
@@ -16,7 +20,11 @@ You will also need to look at the following HTML file:
 
 Each of these files [can be downloaded here](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz2).
 
-Notes:
+## Will Dr. Love provide a PDF of the entire Quiz?
+
+Yes. I will provide a PDF containing the 40 questions, but you'll still need the HTML output and .csv files discussed above. The PDF will become available [with the data sets](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz2) when the link to the Google Form goes live. Remember that you must actually take the Quiz on the Google Form.
+
+## Some Notes
 
 - The Quiz has 40 questions.
 - Questions 1-36 are multiple choice questions, but Questions 37-40 require longer responses.
