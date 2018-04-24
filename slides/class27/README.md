@@ -2,8 +2,8 @@
 
 ## Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class27) are now available.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class27) will be posted as soon as possible.
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class27) are now available. I got up to Type S and Type M errors, which I will discuss on Thursday.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class27) are now available.
 
 In today's class, I will be talking about:
 
