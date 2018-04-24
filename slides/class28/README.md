@@ -11,7 +11,7 @@ In today's class, I will be talking about retrospective power, Type S and Type M
 
 1. You should receive a request from the University to fill out a Course Evaluation. **Please** do so.
 
-2. The answer sketch for Homework 7 will be posted.
+2. View the [Homework 7 Answer Sketch here](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw7/AnswerSketchHwk_7.html). The R Markdown file and data set for our Question 1 visualization [are here](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7).
 
 3. The Schedule of Project 2 Presentations (and some logistical information) [is available](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md). Please take a look now, to verify that the time you're scheduled for works.
 
