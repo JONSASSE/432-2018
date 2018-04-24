@@ -2,7 +2,9 @@
 
 Link  | Date  | Topics Discussed include...
 --------: | ---------- | -------------------------------------------------------------
-[Class 26](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) | 2018-04-19 | What's New? Power, Type S and Type M Errors, Second-generation *p* values
+[Class 28](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) | 2018-04-26 | Power, Type S and Type M Errors, Quiz 2
+[Class 27](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class27) | 2018-04-24 | What's New? Statistical Significance and Second-generation *p* values
+[Class 26](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class26) | 2018-04-19 | Cleaning Up Loose Ends, Best Subsets for Generalized Linear Models
 [Class 25](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class25) | 2018-04-17 | Cox Proportional Hazards Regression Models, 2
 [Class 24](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class24) | 2018-04-12 | Cox Proportional Hazards Regression Models: An Introduction
 [Class 23](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class23) | 2018-04-10 | Exploring Time-to-Event Data, Kaplan-Meier Estimation
