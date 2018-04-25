@@ -17,9 +17,11 @@ In today's class, I will be talking about retrospective power, Type S and Type M
 
 3. The Schedule of Project 2 Presentations (and some logistical information) [is available](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md). Please take a look now, to verify that the time you're scheduled for works.
 
-4. Some [Quiz 2](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz2/README.md) materials are now available, if you want to review them before you receive the Quiz on Thursday.
+4. [Quiz 2](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz2/README.md) materials are available.
 
 5. A reminder that the ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink) repository contains some of today's references.
+
+6. **An R Tip**: Suppose you're trying to use `case_when` to help you change a value like `99` to `NA`. As [this note suggests](https://github.com/tidyverse/dplyr/issues/3202), you need to use `99 ~ NA_real_`, rather than `99 ~ NA`.
    
 ## Remaining Deliverables This Semester
 
