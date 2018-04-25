@@ -17,7 +17,7 @@ In today's class, I will be talking about retrospective power, Type S and Type M
 
 3. The Schedule of Project 2 Presentations (and some logistical information) [is available](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md). Please take a look now, to verify that the time you're scheduled for works.
 
-4. [Quiz 2](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz2/README.md) materials are available.
+4. [Quiz 2](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz2/README.md) materials are available. Note that the Quiz now has 34 main questions (1-34) that are required, plus two optional BONUS questions (35-36).
 
 5. A reminder that the ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink) repository contains some of today's references.
 
