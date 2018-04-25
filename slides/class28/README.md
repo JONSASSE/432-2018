@@ -21,7 +21,9 @@ In today's class, I will be talking about retrospective power, Type S and Type M
 
 5. A reminder that the ["Rethinking Statistical Significance"](https://github.com/THOMASELOVE/rethink) repository contains some of today's references.
 
-6. **An R Tip**: Suppose you're trying to use `case_when` to help you change a value like `99` to `NA`. As [this note suggests](https://github.com/tidyverse/dplyr/issues/3202), you need to use `99 ~ NA_real_`, rather than `99 ~ NA`.
+6. `431-help` will be open through May 9 at 11 AM. The last day for TA office hours is Tuesday May 1.
+
+7. **An R Tip**: Suppose you're trying to use `case_when` to help you change a value like `99` to `NA`. As [this note suggests](https://github.com/tidyverse/dplyr/issues/3202), you need to use `99 ~ NA_real_`, rather than `99 ~ NA`.
    
 ## Remaining Deliverables This Semester
 
