@@ -1,5 +1,12 @@
 # 432 Homework 7 for Spring 2018
 
+## Post-Assignment Materials
+
+- The answer sketch (revised) is available for [viewing in HTML](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw7/hw7_sketch.html) or as a [R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw7/hw7_sketch.Rmd).
+- The grading rubric is [available as a PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw7/hw7_rubric.pdf)
+
+## The Actual Assignment Follows
+
 Submit your response via [canvas.case.edu](https://canvas.case.edu/) no later than **5 PM on Tuesday 2018-04-24**. Your response should include an R Markdown file and an HTML document that is the result of applying your R Markdown file. 
 
 - Remember to **ask for help** if you are stuck, first by Googling, or visiting the wonderful cheatsheets under the Help menu on the top bar of R Studio, and then by contacting `431-help at case dot edu` or visiting TA office hours.
@@ -54,7 +61,7 @@ Compare the two models you have fit in Questions 3 and 4, specifying which one y
 
 # Question 6 (20 points)
 
-The `remission.csv` file contains contains initial remission times, in days, for 44 leukemia patients who were randomly allocated to two different treatments, labeled A and B. Some patients were right-censored before their remission times could be fully determined, as indicated by values of `censored` = 1 in the data set. 
+The `remission.csv` file contains contains initial remission times, in days, for 44 leukemia patients who were randomly allocated to two different treatments, labeled A and B. Some patients were right-censored before their remission times could be fully determined, as indicated by values of `censored` = 1 in the data set. Note that remission is a good thing, so long times before remission are bad.
 
 Your task is to plot and compare appropriate estimates of the survival functions for the two treatments, including at least a Kaplan-Meier estimate and a log rank test. Compare median and (restricted) mean survival times appropriately. Write a complete sentence (or several) to accompany each of your estimates and plots. Do not use a regression model.
 
