@@ -22,7 +22,7 @@ Each of these files [can be downloaded here](https://github.com/THOMASELOVE/432-
 
 ## Will Dr. Love provide a PDF of the entire Quiz?
 
-Yes. I will provide a PDF containing the 36 questions, but you'll still need the HTML output and .csv files discussed above. The PDF will become available [with the data sets](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz2) when the link to the Google Form goes live. Remember that you must actually take the Quiz on the Google Form.
+Yes. Here is a PDF containing the 36 questions, but you'll still need the HTML output and .csv files discussed above. The PDF will become available [with the data sets](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz2) when the link to the Google Form goes live. Remember that you must actually take the Quiz on the Google Form.
 
 ## Some Notes
 
