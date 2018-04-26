@@ -12,7 +12,7 @@ In today's class, I will be talking about retrospective power, Type S and Type M
 is [this gif by Dana Page Seidel](https://raw.githubusercontent.com/dpseidel/tidytuesday/master/TidyWork/tuition2.gif).
 
 - is based on the data from the Week 1 [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) project on [Average Tuition and Educational Attainment in the U.S.](https://onlinembapage.com/average-tuition-and-educational-attainment-in-the-united-states/)
-- All of the details and credit at [Dana Page Seidel](https://github.com/dpseidel/tidytuesday/blob/master/TidyWork/Week1.md)
+- All of the details and code at [Dana Page Seidel](https://github.com/dpseidel/tidytuesday/blob/master/TidyWork/Week1.md)'s repository.
 
 ## Announcements at the start of class
 
