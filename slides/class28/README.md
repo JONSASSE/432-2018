@@ -3,7 +3,7 @@
 ## Key Materials
 
 - The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class28) include some leftover material from Class 27, plus some new things.
-- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class28) will go up as soon as they are available.
+- The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class28) are now available.
 
 In today's class, I will be talking about retrospective power, Type S and Type M errors, and classification and regression trees. Plus some thoughts on visualization, Quiz 2 and your Project 2 presentations.
 
