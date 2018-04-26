@@ -1,0 +1,529 @@
+---
+title: "432 Class 28 Slides"
+author: "github.com/THOMASELOVE/432-2018"
+date: "2018-04-26"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    colortheme: "lily"
+    fonttheme: "structurebold"
+    fig_caption: FALSE
+---
+
+```{r set-options, echo=FALSE, cache=FALSE}
+knitr::opts_chunk$set(comment=NA,
+                      message = FALSE,
+                      warning = FALSE)
+options(width = 60)
+```
+
+## Today's Agenda
+
+- Classification & Regression Trees and the Titanic
+- Doing Power Calculations After the Study is Over?
+    - Type S and Type M error: Saying something more useful
+
+
+### Today's Packages
+
+```{r, message=FALSE}
+library(readxl)
+library(Hmisc)
+library(rpart) # new today
+library(rpart.plot) # new today
+library(party) # new today
+library(tidyverse)
+```
+
+# Building Classification and Regression Trees
+
+## CART and the Titanic
+
+My goal with this material is to:
+
+1. take a batch of data about survival on the Titanic and 
+2. build a conditional inference tree to help classify passengers into groups in a way that makes accurate predictions.
+
+---
+
+![](images/tree-surv.png)
+
+## Sources and Resources
+
+There are three new libraries we'll use in this work, that you'll have to install, called `rpart`, `rpart.plot` and `party`. The rest of this is (generously) 10% original material from me. Sources:
+
+- [\textcolor{blue}{statmethods.net}](http://www.statmethods.net/advstats/cart.html) (lots of the descriptions are here)
+- [\textcolor{blue}{CART with rpart}](https://rpubs.com/minma/cart_with_rpart) (uses the titanic data)
+- [\textcolor{blue}{rpart vignette}](https://cran.r-project.org/web/packages/rpart/vignettes/longintro.pdf)
+- [\textcolor{blue}{party vignette}](https://cran.r-project.org/web/packages/party/vignettes/party.pdf)
+- [\textcolor{blue}{milbo.org}](http://www.milbo.org/rpart-plot/prp.pdf) (tutorial on rpart.plot for tree plotting)
+
+Less immediately useful for this document, but useful in other settings were:
+
+- [\textcolor{blue}{CART talk}](http://statweb.stanford.edu/~lpekelis/13_datafest_cart/13_datafest_cart_talk.pdf)
+- [\textcolor{blue}{RandomForests}](https://www.stat.berkeley.edu/~breiman/RandomForests/) is old, but still useful
+
+## The data set
+
+The dataset was compiled by Frank Harrell and Robert Dawson and Philip Hind, among others. 
+
+- The `titanic3.xls` data I provide on the course website describes the survival status of individual passengers on the Titanic.  The data frame does not contain information for the crew, but it does contain actual and estimated ages for almost 80% of the passengers. 
+
+- The data are available at [\textcolor{blue}{this link at Vanderbilt}](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic3.xls), and [\textcolor{blue}{see this file}](http://biostat.mc.vanderbilt.edu/twiki/pub/Main/DataSets/titanic3info.txt) for additional details.
+
+## Some initial tidying
+
+```{r}
+titan <- read_excel("data/titanic3.xls") %>%
+  mutate(pclass = factor(pclass, levels = c(1, 2, 3), 
+                         labels = c("1st", "2nd", "3rd")),
+         sex = factor(sex),
+         survived = factor(survived, levels = c(0, 1), 
+                          labels = c("died", "alive"))) %>%
+  select(pclass, survived, sex, age, sibsp, parch, name) %>%
+  na.omit
+```
+
+## The Variables
+
+We're just going to look at the first six variables here, ignoring the passenger's `name`.
+
+- **pclass** = passenger class (1 = 1st, 2 = 2nd, 3 = 3rd), this is a proxy for socio-economic status, with 1 = Upper, 2 = Middle, 3 = Lower
+- **survival** = survival (0 = No, 1 = Yes)
+- **sex** = male or female
+- **age**, in years
+- **sibsp**, the number of siblings/spouses aboard
+- **parch**, the number of parents/children aboard
+
+## Building a Classification Tree
+
+Recursive partitioning is a fundamental tool in data mining. It helps us explore the stucture of a set of data, while developing easy to visualize decision rules for predicting a categorical (classification tree) or continuous (regression tree) outcome. Paraphrasing the [\textcolor{blue}{rpart vignette}](https://cran.r-project.org/web/packages/rpart/vignettes/longintro.pdf): Classification and regression trees are built by the following process: 
+
+1. The single variable is found which best splits the data into two groups (so that the two groups are as "pure" as possible, essentially, is what we mean by "best splits").
+2. The data are separated, and then this process is applied separately to each subgroup.
+3. and so on recursively until the subgroups either reach a minimum size or until no improvement can be
+made.
+
+- The tree is trying to make the nodes as decisive as possible, with as few misclassifications as possible.
+
+## Step 1 Begin with a small cp value
+
+```{r}
+set.seed(432)
+tree <- rpart(survived ~ pclass + sex + age + sibsp + parch, 
+              data = titan, 
+     control = rpart.control(minsplit = 30, cp = 0.0001))
+```
+
+- `minsplit` is the minimum number of observations that must exist in a node in order for a split to be attempted. The default is only 20, but I would like to show you a relatively small tree here.
+- `cp` here stands for complexity parameter. Any split that does not decrease the overall lack of fit by a factor of `cp` is not attempted. You will eventually determine the value for this parameter to use through cross-validation.
+
+## Step 2 Pick the tree size that minimizes misclassification rate (prediction error)
+
+![](images/fig01.png)
+
+## Prune the tree to match `cp` suggestion
+
+```{r}
+bestcp <- tree$cptable[which.min
+                       (tree$cptable[,"xerror"]),"CP"]
+tree.pruned <- prune(tree, cp = bestcp)
+```
+
+### Building the Classification Tree Plot
+
+```{r, eval = FALSE}
+prp(tree.pruned, faclen = 0, cex = 0.8, extra = 1, 
+    main = "Classification Tree for 1,046 Titanic Passengers")
+## faclen = 0 means to use full names of the factor labels
+## extra = 1 adds number of observations at each node
+```
+
+## The Classification Tree
+
+```{r, echo = FALSE}
+prp(tree.pruned, faclen = 0, cex = 0.8, extra = 1, 
+    main = "Classification Tree for 1,046 Titanic Passengers")
+```
+
+## A Regression Tree
+
+Suppose we use the same data, but a continuous outcome: age, rather than survival.
+
+```{r}
+set.seed(0434)
+tree2 <- rpart(age ~ pclass + sex + survived + sibsp + parch, 
+              data = titan, 
+              control = rpart.control(minsplit = 20, 
+                                      cp = 0.0001))
+```
+
+### Now identify the best choice of cp, and prune
+
+```{r}
+bestcp2 <- tree2$cptable[which.min(
+                    tree2$cptable[,"xerror"]),"CP"]
+
+tree2.pruned <- prune(tree2, cp = bestcp)
+```
+
+## The Regression Tree
+
+```{r}
+prp(tree2.pruned, faclen = 0, cex = 0.8, extra = 1, 
+    main = "Pruned Regression Tree for Age")
+```
+
+## Conditional Inference Trees via `party`
+
+The `party` package gives us nonparametric regression trees for all sorts of outcomes. Let's look at our two examples:
+
+### Conditional Inference Tree for `survived` in Titanic data
+
+```{r, eval = FALSE}
+tree.sur <- ctree(survived ~ pclass + sex + age + 
+                      sibsp + parch, 
+              data = titan)
+plot(tree.sur, 
+     main = "Conditional Inference Tree for Titanic Survival")
+```
+
+## Resulting Tree for `survived`
+
+```{r, echo = FALSE}
+tree.sur <- ctree(survived ~ pclass + sex + age + sibsp + parch, 
+              data = titan)
+plot(tree.sur, main = "Conditional Inference Tree for Titanic Survival")
+```
+
+## Conditional Inference Tree for `age` in Titanic data
+
+```{r, eval = FALSE}
+tree.age <- ctree(age ~ pclass + sex + survived + 
+                      sibsp + parch, 
+              data = titan)
+plot(tree.age, 
+     main = "Conditional Inference Tree for Titanic Age")
+```
+
+## Resulting Tree for `age`
+
+```{r, echo = FALSE}
+tree.age <- ctree(age ~ pclass + sex + survived + 
+                      sibsp + parch, 
+              data = titan)
+plot(tree.age, 
+     main = "Conditional Inference Tree for Titanic Age")
+```
+
+
+# Doing Power Calculations After the Study?
+
+## Specifying effect sizes for power calculations
+
+1. **Empirical**: assuming an effect size equal to the estimate from a previous study or from the data at hand (if performed retrospectively).
+    + generally based on small samples
+    + when preliminary results look interesting, they are more likely biased towards unrealistically large effects
+
+2. **On the basis of goals**: assuming an effect size deemed to be substantively important or more specifically the minimum effect that would be substantively important.
+    + Can also lead to specifying effect sizes that are larger than what is likely to be the true effect.
+
+- Both lead to performing studies that are too small or misinterpretation of findings after completion.
+
+## Gelman and Carlin
+
+- The idea of a **design analysis** is to improve the design and evaluation of research, when you want to summarize your inference through concepts related to statistical significance.
+- Type 1 and Type 2 errors are tricky concepts and aren't easy to describe before data are collected, and are very difficult to use well after data are collected.
+- These problems are made worse when you have
+    + Noisy studies, where the signal may be overwhelmed,
+    + Small Sample Sizes
+    + No pre-registered (prior to data gathering) specifications for analysis
+- Top statisticians avoid "post hoc power analysis"...
+    + Why? It's usually crummy.
+
+## Why not post hoc power analysis?
+
+So you collected data and analyzed the results. Now you want to do an after data gathering (post hoc) power analysis.
+
+1. What will you use as your "true" effect size? 
+    - Often, point estimate from data - yuck - results very misleading - power is generally seriously overestimated when computed on the basis of statistically significant results.
+    - Much better (but rarer) to identify plausible effect sizes based on external information rather than on your sparkling new result.
+2. What are you trying to do? (too often)
+    - get researcher off the hook (I didn't get p < 0.05 because I had low power - an alibi to explain away non-significant findings) or
+    - encourage overconfidence in the finding.
+
+## Gelman and Carlin: Broader Design Ideas
+
+- A broader notion of design, though, can be useful before and after data are gathered.
+
+Gelman and Carlin recommend design calculations to estimate
+
+1. Type S (sign) error - the probability of an estimate being in the wrong direction, and
+2. Type M (magnitude) error, or exaggeration ratio - the factor by which the magnitude of an effect might be overestimated.
+
+- These can (and should) have value **both** before data collection/analysis and afterwards (especially when an apparently strong and significant effect is found.)
+- The big challenge remains identifying plausible effect sizes based on external information. Crucial to base our design analysis on an external estimate.
+
+## The Building Blocks
+
+You perform a study that yields estimate *d* with standard error *s*. Think of *d* as an estimated mean difference, for example.
+
+>- Looks significant if $|d/s| > 2$, which roughly corresponds to *p* < 0.05. Inconclusive otherwise.
+>- Now, consider a true effect size *D* (the value that *d* would take if you had an enormous sample)
+>- *D* is hypothesized based on *external* information (Other available data, Literature review, Modeling as appropriate, etc.)
+>- Define $d^{rep}$ as the estimate that would be observed in a hypothetical replication study with a design identical to our original study.
+
+## Design Analysis (Gelman and Carlin)
+
+![](images/design-analysis.png)
+
+## Retrodesign function (shown on next slide)
+
+Inputs to the function:
+
+- `D`, the hypothesized true effect size (actually called `A` in the function)
+- `s`, the standard error of the estimate
+- `alpha`, the statistical significance threshold (default 0.05)
+- `df`, the degrees of freedom (default assumption: infinite)
+
+Output:
+
+- the power
+- the Type S error rate
+- the exaggeration ratio
+
+## Retrodesign function (Gelman and Carlin)
+
+```{r retrodesign_function_again}
+retrodesign <- function(A, s, alpha=.05, df=Inf, 
+                        n.sims=10000){
+    z <- qt(1-alpha/2, df)
+    p.hi <- 1 - pt(z-A/s, df)
+    p.lo <- pt(-z-A/s, df)
+    power <- p.hi + p.lo
+    typeS <- p.lo/power
+    estimate <- A + s*rt(n.sims,df)
+    significant <- abs(estimate) > s*z
+    exaggeration <- mean(abs(estimate)[significant])/A
+    return(list(power=power, typeS=typeS, 
+                exaggeration=exaggeration))
+}
+```
+
+## What if we have a beautiful, unbiased study?
+
+Suppose the true effect is 2.8 standard errors away from zero, in a study built to have 80% power for that effect with 95% confidence.
+
+```{r retro unbiased}
+set.seed(201803161)
+retrodesign(A = 28, s = 10, alpha = 0.05)
+```
+
+## 80% power; large effect (2.8 SE above $H_0$)
+
+```{r setup for pictures, echo = FALSE}
+x <- seq(-40, 40, length = 100)
+hx0 <- dnorm(x, mean = 0, sd = 10)
+hx3 <- dnorm(x, mean = 3, sd = 10)
+hx12 <- dnorm(x, mean = 12, sd = 10)
+hx28 <- dnorm(x, mean = 28, sd = 10)
+hx2215 <- dnorm(x, mean = 22.15, sd = 10)
+dat <- data.frame(x, hx0, hx3, hx12, hx28, hx2215)
+```
+
+```{r pic2, echo = FALSE}
+ggplot(dat, aes(x, hx28)) +
+    geom_line(col = "blue") +
+    geom_segment(aes(x = 0, xend = 0, y = 0, yend = dnorm(0, mean = 28, sd = 10)), col = "red") +
+    geom_segment(aes(x = 28, xend = 28, y = 0, yend = dnorm(28, mean = 28, sd = 10)), col = "blue") +
+    geom_segment(aes(x = -40, xend = 40, y = 0, yend = 0)) +
+    geom_ribbon(data = subset(dat, x > 19.6), aes(ymax = hx28), ymin = 0, fill = "red", col = NA, alpha = 0.5) +
+    geom_ribbon(data = subset(dat, x < -19.6), aes(ymax = hx28), ymin = 0, fill = "red", col = NA, alpha = 0.5) +
+    geom_text(x = 30, y = 0.01, label = "Reject H_0", col = "white", size = 5) +
+    geom_text(x = -27, y = 0.003, label = "Reject H_0", col = "red", size = 5) +
+    theme(axis.ticks = element_blank(), axis.text.y = element_blank()) +
+    labs(x = "Estimated Effect Size", y = "", title = "True Effect 2.8 SE above Null Hypothesis (Strong Effect)", subtitle = "Power = 80%, Risk of Type S error near zero, Exaggeration Ratio near 1")
+```
+
+
+## What if we have a beautiful, unbiased study?
+
+```
+$typeS
+[1] 1.210843e-06
+
+$exaggeration
+[1] 1.12875
+```
+
+- With the power this high (80%), we have a type S error rate of 1.2 x 10^-6^ and an expected exaggeration factor of 1.13.
+- Nothing to worry about with either direction of a statistically significant estimate and the overestimation of the magnitude of the effect will be small.
+
+## Retrodesign for a true effect 1.2 SE above $H_0$
+
+```{r 1point2_se}
+set.seed(201803163)
+retrodesign(A = 12, s = 10)
+```
+
+## What 22.4% power looks like...
+
+```{r pic3, echo = FALSE}
+ggplot(dat, aes(x, hx12)) +
+    geom_line(col = "blue") +
+    geom_segment(aes(x = 0, xend = 0, y = 0, yend = dnorm(0, mean = 12, sd = 10)), col = "red") +
+    geom_segment(aes(x = 12, xend = 12, y = 0, yend = dnorm(12, mean = 12, sd = 10)), col = "blue") +
+    geom_segment(aes(x = -40, xend = 40, y = 0, yend = 0)) +
+    geom_ribbon(data = subset(dat, x > 19.6), aes(ymax = hx12), ymin = 0, fill = "red", col = NA, alpha = 0.5) +
+    geom_ribbon(data = subset(dat, x < -19.6), aes(ymax = hx12), ymin = 0, fill = "red", col = NA, alpha = 0.5) +
+    geom_text(x = 35, y = 0.015, label = "Reject H_0", col = "red", size = 5) +
+    geom_text(x = -27, y = 0.003, label = "Reject H_0", col = "red", size = 5) +
+    theme(axis.ticks = element_blank(), axis.text.y = element_blank()) +
+    labs(x = "Estimated Effect Size", y = "", title = "True Effect 1.2 SE above Null Hypothesis", subtitle = "Power = 22.4%, Risk of Type S error is 0.004, Exaggeration Ratio is 2.12")
+```
+
+## What 60% Power Looks Like
+
+```{r pic 4, echo = FALSE}
+ggplot(dat, aes(x, hx2215)) +
+    geom_line(col = "blue") +
+    geom_segment(aes(x = 0, xend = 0, y = 0, yend = dnorm(0, mean = 22.15, sd = 10)), col = "red") +
+    geom_segment(aes(x = 22.15, xend = 22.15, y = 0, yend = dnorm(22.15, mean = 22.15, sd = 10)), col = "blue") +
+    geom_segment(aes(x = -40, xend = 40, y = 0, yend = 0)) +
+    geom_ribbon(data = subset(dat, x > 19.6), aes(ymax = hx2215), ymin = 0, fill = "red", col = NA, alpha = 0.5) +
+    geom_ribbon(data = subset(dat, x < -19.6), aes(ymax = hx2215), ymin = 0, fill = "red", col = NA, alpha = 0.5) +
+    geom_text(x = 30, y = 0.01, label = "Reject H_0", col = "white", size = 5) +
+    geom_text(x = -27, y = 0.003, label = "Reject H_0", col = "red", size = 5) +
+    theme(axis.ticks = element_blank(), axis.text.y = element_blank()) +
+    labs(x = "Estimated Effect Size", y = "", title = "True Effect 2.215 SE above Null Hypothesis", subtitle = "Power = 0.60, Risk of Type S error is <0.01%, Exaggeration Ratio is about 1.3")
+```
+
+## Gelman & Carlin, Figure 2
+
+![](images/figure2.png)
+
+## Example: Beauty and Sex Ratios
+
+Kanazawa study of 2972 respondents from the National Longitudinal Study of Adolescent Health
+
+- Each subject was assigned an attractiveness rating on a 1-5 scale and then, years later, had at least one child.
+- Of the first-born children with parents in the most attractive category, 56% were girls, compared with 48% girls in the other groups.
+- So the estimated difference was 8 percentage points with a reported *p* = 0.015
+- Kanazawa stopped there, but Gelman and Carlin don't.
+
+## Beauty and Sex Ratios
+
+We need to postulate an effect size, which will not be 8 percentage points. Instead, Gelman and colleagues hypothesized a range of true effect sizes using the scientific literature.
+
+> There is a large literature on variation in the sex ratio of human births, and the effects that have
+been found have been on the order of 1 percentage point (for example, the probability of a girl birth
+shifting from 48.5 percent to 49.5 percent). 
+> Variation attributable to factors such as race, parental age, birth order, maternal weight, partnership status and season of birth is estimated at from less than 0.3 percentage points to about 2 percentage points, with larger changes (as high as 3 percentage points) arising under economic conditions of poverty and famine.
+> (There are) reliable findings that male fetuses (and also male babies and adults) are more likely than females to die under adverse conditions.
+
+## So, what is a reasonable effect size?
+
+- Small observed differences in sex ratios in a multitude of studies of other issues (much more like 1 percentage point, tops)
+- Noisiness of the subjective attractiveness rating (1-5) used in this particular study
+
+So, Gelman and colleagues hypothesized three potential effect sizes (0.1, 0.3 and 1.0 percentage points) and under each effect size, considered what might happen in a study with sample size equal to Kanazawa's study.
+
+### How big is the standard error?
+
+- From the reported estimate of 8 percentage points and p value of 0.015, the standard error of the difference is 3.29 percentage points.
+    + If *p* value = 0.015 (two-sided), then Z score =  `qnorm(p = 0.015/2, lower.tail=FALSE)` = 2.432
+    + Z = estimate/SE, and if estimate = 8 and Z = 2.432, then SE = 8/2.432 = 3.29
+
+## Retrodesign Results: Option 1
+
+- Assume true difference D = 0.1 percentage point (probability of girl births differing by 0.1 percentage points, comparing attractive with unattractive parents). 
+- Standard error assumed to be 3.29, and $\alpha$ = 0.05
+
+```{r retro_beauty}
+set.seed(201803164)
+retrodesign(A = 0.1, s = 3.29, alpha = 0.05)
+```
+
+## Option 1 Conclusions
+
+Assuming the true difference is 0.1 means that probability of girl births differs by 0.1 percentage points, comparing attractive with unattractive parents.
+
+If the estimate is statistically significant, then:
+
+1. There is a 46% chance it will have the wrong sign (from the Type S error rate).
+2. The power is 5% and the Type S error rate of 46%. Multiplying those gives a 2.3% probability that we will find a statistically significant result in the wrong direction. 
+3. We thus have a power - 2.3% = 2.7% probability of showing statistical significance in the correct direction.
+4. In expectation, a statistically significant result will be 78 times too high (the exaggeration ratio).
+
+## Retrodesign Results: Options 2 and 3
+
+Assumption | Power | Type S | Exaggeration Ratio
+----------: | ----: | ----: | -------:
+D = 0.1 | 0.05 | 0.46 | 78
+D = 0.3 | 0.05 | 0.39 | 25
+D = 1.0 | 0.06 | 0.19 | 7.8
+
+- Under a true difference of 1.0 percentage point, there would be 
+    + a 4.9% chance of the result being statistically significantly positive and a 1.1% chance of a statistically significantly negative result. 
+    + A statistically significant finding in this case has a 19% chance of appearing with the wrong sign, and 
+    + the magnitude of the true effect would be overestimated by an expected factor of 8.
+
+## What 6% power looks like...
+
+```{r pic 5, echo = FALSE}
+ggplot(dat, aes(x, hx3)) +
+    geom_line(col = "blue") +
+    geom_segment(aes(x = 0, xend = 0, y = 0, yend = dnorm(0, mean = 3, sd = 10)), col = "red") +
+    geom_segment(aes(x = 3, xend = 3, y = 0, yend = dnorm(3, mean = 3, sd = 10)), col = "blue") +
+    geom_segment(aes(x = -40, xend = 40, y = 0, yend = 0)) +
+    geom_ribbon(data = subset(dat, x > 19.6), aes(ymax = hx3), ymin = 0, fill = "red", col = NA, alpha = 0.5) +
+    geom_ribbon(data = subset(dat, x < -19.6), aes(ymax = hx3), ymin = 0, fill = "red", col = NA, alpha = 0.5) +
+    geom_text(x = 30, y = 0.005, label = "Reject H_0", col = "red", size = 5) +
+    geom_text(x = -30, y = 0.005, label = "Reject H_0", col = "red", size = 5) +
+    theme(axis.ticks = element_blank(), axis.text.y = element_blank()) +
+    labs(x = "Estimated Effect Size", y = "", title = "True Effect 0.3 SE above Null Hypothesis", subtitle = "Power = 6%, Risk of Type S error is 20%, Exaggeration Ratio is 7.9")
+```
+
+## Gelman's Chief Criticism: 6% Power = D.O.A.
+
+> Their effect size is tiny and their measurement error is huge. My best analogy is that they are trying to use a bathroom scale to weigh a feather ... and the feather is resting loosely in the pouch of a kangaroo that is vigorously jumping up and down.
+
+![](images/kangaroo.jpg)
+
+## But I do studies with 80% power?
+
+Based on some reasonable assumptions regarding main effects and interactions (specifically that the interactions are half the size of the main effects), you need **16 times** the sample size to estimate an interaction that you need to estimate a main effect.
+
+> And this implies a major, major problem with the usual plan of designing a study with a focus on the main effect, maybe even preregistering, and then looking to see what shows up in the interactions. Or, even worse, designing a study, not finding the anticipated main effect, and then using the interactions to bail you out. The problem is not just that this sort of analysis is "exploratory"; it's that these data are a lot noisier than you realize, so what you think of as interesting exploratory findings could be just a bunch of noise.
+
+- Gelman [\textcolor{blue}{2018-03-15}](http://andrewgelman.com/2018/03/15/need-16-times-sample-size-estimate-interaction-estimate-main-effect/)
+
+## What to do?
+
+In advance, **and** after the fact, think hard about what a plausible effect size might be.
+
+Then...
+
+- Analyze *all* your data.
+- Present *all* your comparisons, not just a select few.
+    + A big table, or even a graph, is what you want.
+- Make your data public.
+    + If the topic is worth studying, you should want others to be able to make rapid progress.
+
+## What I Think I Think Now
+
+- Null hypothesis significance testing is much harder than I thought.
+    - The null hypothesis is almost never a real thing.
+    - Rather than rejiggering the cutoff, I would mostly abandon the *p* value as a summary
+    - Replication is far more useful than I thought it was.
+- Some hills aren't worth dying on.
+    - Think about uncertainty intervals more than confidence or credible intervals
+    - Retrospective calculations about Type S (sign) and Type M (magnitude) errors can help me illustrate ideas.
+- Which method to use is far less important than finding better data
+    - The biggest mistake I make regularly is throwing away useful data
+    - I'm not the only one with this problem.
+- The best thing I do most days is communicate more clearly.
+    - When stuck in a design, I think about how to get better data.
+    - When stuck in an analysis, I try to turn a table into a graph.
+- I have A LOT to learn.
+
