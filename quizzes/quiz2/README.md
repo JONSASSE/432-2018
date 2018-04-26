@@ -22,7 +22,9 @@ Each of these files [can be downloaded here](https://github.com/THOMASELOVE/432-
 
 ## Will Dr. Love provide a PDF of the entire Quiz?
 
-Yes. Here is a PDF containing the 36 questions, but you'll still need the HTML output and .csv files discussed above. The PDF will become available [with the data sets](https://github.com/THOMASELOVE/432-2018/tree/master/quizzes/quiz2) when the link to the Google Form goes live. Remember that you must actually take the Quiz on the Google Form.
+Yes. [Here is a PDF containing the 36 questions](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz2/quiz02_for_offline_review.pdf), but you'll still need the HTML output and .csv files discussed above. 
+
+- Remember that you must actually take the Quiz on [the Google Form](https://goo.gl/forms/JG0zDu1BgAFpdICI2).
 
 ## Some Notes
 
@@ -36,7 +38,7 @@ Yes. Here is a PDF containing the 36 questions, but you'll still need the HTML o
     - If you answer all 36 questions correctly, your total score on the Quiz would be 112%. 
     - You are welcome to skip Questions 35 and 36 if you like.
 - The Quiz covers the entire 432 course through 2018-04-19.
-- You must complete this Quiz by NOON on Tuesday May 1. You will have the opportunity to edit your responses after completing the Quiz, but this must be completed by the deadline. Be sure to save your work. To save your work, you will have to select your name below, and also answer the final question - the attestation that you did your work alone, and then submit it. The software will then provide you (and automatically email you) with a link to return to the Quiz while retaining your answers so far.
+- You must complete this Quiz by NOON on Tuesday May 1. You will have the opportunity to edit your responses after completing the Quiz, but this must be completed by the deadline. Be sure to save your work. To save your work, you will have to select your name below, and also answer the final question - the attestation that you did your work alone, and then submit it. [The software](https://goo.gl/forms/JG0zDu1BgAFpdICI2) will then provide you (and automatically email you) with a link to return to the Quiz while retaining your answers so far.
 - Please select or type in your best response for each question.  You should try to answer all 36 questions, as there is no difference in score between an incorrect answer and a blank answer.
 - You are welcome to consult the materials provided on the course website, but you are NOT allowed to discuss the questions on this Quiz with anyone other than the teaching assistants, and Professor Love. As a reminder, you can contact us at `431-help at case dot edu`. We will try to answer all questions in a timely way, but you should not leave things to the last moment.
 - If you want to see a larger version of one of the Displays in this Quiz, I suggest you right click on the figure, and it should be possible to open  the figure in a new tab. I expect that will be sufficiently large. 
