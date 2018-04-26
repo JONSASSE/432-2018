@@ -4,7 +4,7 @@ Quiz 2 will be available to you at the end of class on Thursday 2018-04-26 and i
 
 ## The Google Form
 
-The link to the Google Form to take Quiz 2 is **to appear on 2018-04-26 after class.**
+The [link to the Google Form to take Quiz 2](https://goo.gl/forms/JG0zDu1BgAFpdICI2) is now available.
 
 ## Things You Will Need
 
