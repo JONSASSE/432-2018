@@ -62,7 +62,7 @@ As mentioned, I'd also really appreciate it if you complete the **University Cou
 - [Census Infographics and Visualizations](https://www.census.gov/library/visualizations.html)
 - [Gapminder](https://www.gapminder.org/)
 - [JunkCharts](http://junkcharts.typepad.com/junk_charts/) and [Numbers Rule Your World](http://junkcharts.typepad.com/numbersruleyourworld/) by Kaiser Fung
-- [Flowing Data](https://flowingdata.com/}
+- [Flowing Data](https://flowingdata.com/)
 - [Statistical Thinking](http://www.fharrell.com/) from Frank Harrell
 - [R Studio Community](https://community.rstudio.com/)
 - [EdwardTufte.com](https://www.edwardtufte.com/tufte/)
