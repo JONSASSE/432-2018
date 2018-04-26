@@ -2,10 +2,10 @@
 
 ## Key Materials
 
-- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class28) are just the continuation of the Slides from Class 27, which are reposted above. 
+- The [slides](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class28) include some leftover material from Class 27, plus some new things.
 - The [audio files](https://github.com/THOMASELOVE/432-2018/tree/master/slides/class28) will go up as soon as they are available.
 
-In today's class, I will be talking about retrospective power, Type S and Type M errors, and Quiz 2.
+In today's class, I will be talking about retrospective power, Type S and Type M errors, and classification and regression trees. Plus some thoughts on visualization, Quiz 2 and your Project 2 presentations.
 
 ## Announcements at the start of class
 
@@ -14,6 +14,7 @@ In today's class, I will be talking about retrospective power, Type S and Type M
 2. The answer sketch (revised) for [Homework 7](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7) is available for [viewing in HTML](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw7/hw7_sketch.html) or as a [R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw7/hw7_sketch.Rmd). 
    - The Homework 7 grading rubric is [available as a PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw7/hw7_rubric.pdf).
    - The data set and image for our Question 1 visualization [are also available](https://github.com/THOMASELOVE/432-2018/tree/master/assignments/hw7).
+   - [Grades for Homework 6](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw6/hw6grades.pdf) are now posted.
 
 3. The Schedule of Project 2 Presentations (and some logistical information) [is available](https://github.com/THOMASELOVE/432-2018/blob/master/projects/project2/PRESENTATIONS.md). Please take a look now, to verify that the time you're scheduled for works.
 
