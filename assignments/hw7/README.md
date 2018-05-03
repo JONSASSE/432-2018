@@ -4,6 +4,7 @@
 
 - The answer sketch (revised) is available for [viewing in HTML](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw7/hw7_sketch.html) or as a [R Markdown file](https://raw.githubusercontent.com/THOMASELOVE/432-2018/master/assignments/hw7/hw7_sketch.Rmd).
 - The grading rubric is [available as a PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw7/hw7_rubric.pdf)
+- The [grades for HW 7 are now available as a PDF](https://github.com/THOMASELOVE/432-2018/blob/master/assignments/hw7/hw7grades.pdf)
 
 ## The Actual Assignment Follows
 
