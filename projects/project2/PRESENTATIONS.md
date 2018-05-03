@@ -21,23 +21,23 @@ Tuesday 2018-05-01    | 01: Laura Baldassari & Sarah Planchon Pope
 
 Thursday 2018-05-03   | 02: Caroline El Sanadi
 --------------------: | :-------------------------------------------------------------------------------------------
-8:55 AM to 9:15 AM    | Modeling the probability of developing osteoporosis in the Study of Women Across Nations
+8:55 AM to 9:15 AM    | **Modeling the probability of developing osteoporosis in the Study of Women Across Nations**
 
 Thursday 2018-05-03   | 03: Katherine Dobbs 
 --------------------: | :-------------------------------------------------------------------------------------------
-9:20 AM to 9:40 AM    | State Firearm-Related Laws and Firearm Homicide/Suicide Rates in the U.S., 2015
+9:20 AM to 9:40 AM    | **State Firearm-Related Laws and Firearm Homicide/Suicide Rates in the U.S., 2015**
 
 Thursday 2018-05-03   | 04: Dongze (Zaza) He & Andrew Shan
 --------------------: | :-------------------------------------------------------------------------------------------
-9:45 AM to 10:05 AM   | Hyperlipidemia and fibrosis in obese patients after surgical intervention
+9:45 AM to 10:05 AM   | **Hyperlipidemia and fibrosis in obese patients after surgical intervention**
 
 Thursday 2018-05-03   | 05: Gwendolyn Donley
 --------------------: | :-------------------------------------------------------------------------------------------
-10:20 AM to 10:40 AM  | Predicting Alzheimer's Disease Risk in Eastern Finnish Men
+10:20 AM to 10:40 AM  | **Predicting Alzheimer's Disease Risk in Eastern Finnish Men**
 
 Thursday 2018-05-03   | 06: Haeun (Grace) Park
 --------------------: | :-------------------------------------------------------------------------------------------
-10:45 AM to 11:05 AM  | Who will get the flu shot?
+10:45 AM to 11:05 AM  | **Who will get the flu shot?**
 
 Thursday 2018-05-03   | 07: Frances Wang
 --------------------: | :-------------------------------------------------------------------------------------------
@@ -51,15 +51,15 @@ Thursday 2018-05-03   | 08: Ryan Honomichl
 
 Thursday 2018-05-03   | 09: Maher Kazimi    
 --------------------: | :-------------------------------------------------------------------------------------------
-1:55 PM to 2:15 PM  | Comparing graft failure for ice vs. pump during kidney transplant
+1:55 PM to 2:15 PM  | **Comparing graft failure for ice vs. pump during kidney transplant**
 
 Thursday 2018-05-03   | 10: Carli Lehr      
 --------------------: | :-------------------------------------------------------------------------------------------
-2:20 PM to 2:40 PM  | Social Determinants of Health, Disease Severity and Survival After Lung Transplant   
+2:20 PM to 2:40 PM  | **Social Determinants of Health, Disease Severity and Survival After Lung Transplant**
 
 Thursday 2018-05-03   | 11: Nikolas Krieger      
 --------------------: | :-------------------------------------------------------------------------------------------
-2:45 PM to 3:05 PM  | Predicting Life Satisfaction Based on Feelings towards the Other   
+2:45 PM to 3:05 PM  | **Predicting Life Satisfaction Based on Feelings towards the Other**
 
 Thursday 2018-05-03   | 12: Hyun Jo Kim     
 --------------------: | :-------------------------------------------------------------------------------------------
