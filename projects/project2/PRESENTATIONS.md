@@ -71,9 +71,9 @@ Thursday 2018-05-03   | 12: Hyun Jo Kim (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
 4:10 PM to 4:30 PM  | **Cardio-selective vs. Non-selective beta-blockers in patients with asthma** 
 
-Thursday 2018-05-03   | 13: Bilal Zonjy    
+Thursday 2018-05-03   | 13: Bilal Zonjy (revision to come) 
 --------------------: | :-------------------------------------------------------------------------------------------
-4:35 PM to 4:55 PM  | **Predicting copper prices** 
+4:35 PM to 4:55 PM  | **Predicting movements in copper indexes using changes in copper prices and other predictors** 
 
 ## 2018-05-07 Monday (First Session)
 
