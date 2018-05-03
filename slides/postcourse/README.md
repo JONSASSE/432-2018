@@ -20,8 +20,9 @@ Please arrive for your presentation 10 minutes early, and if the door is open an
 ### Quiz 2
 
 - The grading of Quiz 2 is complete.
-    - I have posted an answer sketch, which includes information on how the Quiz was graded.
-    - And here is a post containing the grades on the Quiz.
+    - [Quiz 2 answer sketch is here](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz2/quiz02_and_answer_sketch.pdf), and it explains how each item on the Quiz was graded. 
+        - The sketch uses an R package called [praise](https://github.com/rladies/praise) which provides "random" bits of praise when you (as a class) have done something good, or when you just need it. I apologize if this seems silly to you.
+    - Here is a post containing the [grades on Quiz 2](https://github.com/THOMASELOVE/432-2018/blob/master/quizzes/quiz2/quiz02grades.pdf). You should find your scores on Questions 35 and 36, plus your grade on the entire Quiz. 
     - If you have questions about your Quiz 2 grade, let Dr. Love know via email before May 9 at noon.
 
 ## Course Grade Information
