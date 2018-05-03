@@ -53,7 +53,7 @@ Project Titles **in bold** indicate that Dr. Love has seen that your work was po
 
 Thursday 2018-05-03   | 08: Ryan Honomichl  
 --------------------: | :-------------------------------------------------------------------------------------------
-1:30 PM to 1:50 PM  | Predicting Hot/Cold Self-Regulation in Preschool Children (NICHD Early Childcare Study)
+1:30 PM to 1:50 PM  | **Predicting Hot/Cold Self-Regulation in Preschool Children (NICHD Early Childcare Study)**
 
 Thursday 2018-05-03   | 09: Maher Kazimi    
 --------------------: | :-------------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ Thursday 2018-05-03   | 11: Nikolas Krieger
 
 Thursday 2018-05-03   | 12: Hyun Jo Kim     
 --------------------: | :-------------------------------------------------------------------------------------------
-4:10 PM to 4:30 PM  | Cardio-selective vs. Non-selective beta-blockers in patients with asthma 
+4:10 PM to 4:30 PM  | **Cardio-selective vs. Non-selective beta-blockers in patients with asthma** 
 
 Thursday 2018-05-03   | 13: Bilal Zonjy    
 --------------------: | :-------------------------------------------------------------------------------------------
