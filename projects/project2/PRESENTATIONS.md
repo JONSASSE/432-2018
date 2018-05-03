@@ -44,7 +44,7 @@ Thursday 2018-05-03   | 06: Haeun (Grace) Park
 
 Thursday 2018-05-03   | 07: Frances Wang
 --------------------: | :-------------------------------------------------------------------------------------------
-11:10 AM to 11:30 AM  | Coronary Artery Calcification in predicting CHD Mortality in High-Risk Elderly Patients
+11:10 AM to 11:30 AM  | **Coronary Artery Calcification in predicting CHD Mortality in High-Risk Elderly Patients**
 
 ## 2018-05-03 Thursday (Afternoon Session)
 
