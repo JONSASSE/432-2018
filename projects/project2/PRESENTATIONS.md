@@ -48,6 +48,8 @@ Thursday 2018-05-03   | 07: Frances Wang
 
 ## 2018-05-03 Thursday (Afternoon Session)
 
+Project Titles **in bold** indicate that Dr. Love has seen your work via Canvas.
+
 Thursday 2018-05-03   | 08: Ryan Honomichl  
 --------------------: | :-------------------------------------------------------------------------------------------
 1:30 PM to 1:50 PM  | Predicting Hot/Cold Self-Regulation in Preschool Children (NICHD Early Childcare Study)
