@@ -15,9 +15,12 @@
 
 Tuesday 2018-05-01    | 01: Laura Baldassari & Sarah Planchon Pope
 --------------------: | :-------------------------------------------------------------------------------------------
-3:00 PM to 3:20 PM       | The Role of Mental Health in Neuroperformance in Multiple Sclerosis
+3:00 PM to 3:20 PM       | **The Role of Mental Health in Neuroperformance in Multiple Sclerosis**
 
 ## 2018-05-03 Thursday (Morning Session)
+
+Project Titles **in bold** indicate that Dr. Love has seen your work via Canvas.
+
 
 Thursday 2018-05-03   | 02: Caroline El Sanadi
 --------------------: | :-------------------------------------------------------------------------------------------
