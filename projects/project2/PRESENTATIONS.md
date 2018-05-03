@@ -35,7 +35,7 @@ Thursday 2018-05-03   | 04: Dongze (Zaza) He & Andrew Shan (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
 9:45 AM to 10:05 AM   | **Hyperlipidemia and fibrosis in obese patients after surgical intervention**
 
-Thursday 2018-05-03   | 05: Gwendolyn Donley
+Thursday 2018-05-03   | 05: Gwendolyn Donley (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
 10:20 AM to 10:40 AM  | **Predicting Alzheimer's Disease Risk in Eastern Finnish Men**
 
