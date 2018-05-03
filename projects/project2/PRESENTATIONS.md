@@ -13,16 +13,17 @@
 
 ## 2018-05-01 Tuesday
 
+Project Titles **in bold** indicate that Dr. Love has seen that your work was posted to Canvas. The words (revision to come) after your name (if they appear) are there to remind Dr. Love that he requested during your presentation that you revise your project and repost it to Canvas by May 9.
+
 Tuesday 2018-05-01    | 01: Laura Baldassari & Sarah Planchon Pope
 --------------------: | :-------------------------------------------------------------------------------------------
 3:00 PM to 3:20 PM       | **The Role of Mental Health in Neuroperformance in Multiple Sclerosis**
 
 ## 2018-05-03 Thursday (Morning Session)
 
-Project Titles **in bold** indicate that Dr. Love has seen your work via Canvas.
+Project Titles **in bold** indicate that Dr. Love has seen that your work was posted to Canvas. The words (revision to come) after your name (if they appear) are there to remind Dr. Love that he requested during your presentation that you revise your project and repost it to Canvas by May 9.
 
-
-Thursday 2018-05-03   | 02: Caroline El Sanadi
+Thursday 2018-05-03   | 02: Caroline El Sanadi (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
 8:55 AM to 9:15 AM    | **Modeling the probability of developing osteoporosis in the Study of Women Across Nations**
 
@@ -30,7 +31,7 @@ Thursday 2018-05-03   | 03: Katherine Dobbs
 --------------------: | :-------------------------------------------------------------------------------------------
 9:20 AM to 9:40 AM    | **State Firearm-Related Laws and Firearm Homicide/Suicide Rates in the U.S., 2015**
 
-Thursday 2018-05-03   | 04: Dongze (Zaza) He & Andrew Shan
+Thursday 2018-05-03   | 04: Dongze (Zaza) He & Andrew Shan (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
 9:45 AM to 10:05 AM   | **Hyperlipidemia and fibrosis in obese patients after surgical intervention**
 
@@ -48,7 +49,7 @@ Thursday 2018-05-03   | 07: Frances Wang
 
 ## 2018-05-03 Thursday (Afternoon Session)
 
-Project Titles **in bold** indicate that Dr. Love has seen your work via Canvas.
+Project Titles **in bold** indicate that Dr. Love has seen that your work was posted to Canvas. The words (revision to come) after your name (if they appear) are there to remind Dr. Love that he requested during your presentation that you revise your project and repost it to Canvas by May 9.
 
 Thursday 2018-05-03   | 08: Ryan Honomichl  
 --------------------: | :-------------------------------------------------------------------------------------------
@@ -75,6 +76,8 @@ Thursday 2018-05-03   | 13: Bilal Zonjy
 4:35 PM to 4:55 PM  | - 
 
 ## 2018-05-07 Monday (First Session)
+
+Project Titles **in bold** indicate that Dr. Love has seen that your work was posted to Canvas. The words (revision to come) after your name (if they appear) are there to remind Dr. Love that he requested during your presentation that you revise your project and repost it to Canvas by May 9.
 
 Monday 2018-05-07     | 14: Andrew Tang  
 --------------------: | :-------------------------------------------------------------------------------------------
@@ -105,6 +108,8 @@ Monday 2018-05-07     | 20: Kedar Mahajan
 12:10 PM to 12:30 PM  | How does brain atrophy predict disability in progressive multiple sclerosis?
 
 ## 2018-05-07 Monday (Second Session)
+
+Project Titles **in bold** indicate that Dr. Love has seen that your work was posted to Canvas. The words (revision to come) after your name (if they appear) are there to remind Dr. Love that he requested during your presentation that you revise your project and repost it to Canvas by May 9.
 
 Monday 2018-05-07     | 21: Zainab Albar  
 --------------------: | :-------------------------------------------------------------------------------------------
@@ -143,6 +148,8 @@ Monday 2018-05-07     | 29: Gabrielle Rieth
 5:00 PM to 5:20 PM    | Linking outcomes for head surgery patients to corticosteroid doses
 
 ## 2018-05-08 Tuesday
+
+Project Titles **in bold** indicate that Dr. Love has seen that your work was posted to Canvas. The words (revision to come) after your name (if they appear) are there to remind Dr. Love that he requested during your presentation that you revise your project and repost it to Canvas by May 9.
 
 Tuesday 2018-05-08    | 30: John (Jack) McDonnell
 --------------------: | :-------------------------------------------------------------------------------------------
