@@ -67,13 +67,13 @@ Thursday 2018-05-03   | 11: Nikolas Krieger
 --------------------: | :-------------------------------------------------------------------------------------------
 2:45 PM to 3:05 PM  | **Predicting Life Satisfaction Based on Feelings towards the Other**
 
-Thursday 2018-05-03   | 12: Hyun Jo Kim     
+Thursday 2018-05-03   | 12: Hyun Jo Kim (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
 4:10 PM to 4:30 PM  | **Cardio-selective vs. Non-selective beta-blockers in patients with asthma** 
 
 Thursday 2018-05-03   | 13: Bilal Zonjy    
 --------------------: | :-------------------------------------------------------------------------------------------
-4:35 PM to 4:55 PM  | - 
+4:35 PM to 4:55 PM  | **Predicting copper prices** 
 
 ## 2018-05-07 Monday (First Session)
 
