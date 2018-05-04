@@ -4,7 +4,7 @@
 
 You can easily complete your course evaluations by navigating to https://webapps.case.edu/courseevals/ from your computer, smartphone or tablet. **PLEASE DO SO.** The evaluation window closes at 11:59 PM on Thursday May 10.
 
-- As of 2018-05-03 at 1 PM, only 9 people out of the 41 in the class have completed a course evaluation. 
+- As of 2018-05-04 at 10 AM, only 11 people out of the 41 in the class have completed a course evaluation. 
 
 ## Project Presentations
 
