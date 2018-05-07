@@ -119,7 +119,7 @@ Monday 2018-05-07     | 22: Haimeng Bai
 --------------------: | :-------------------------------------------------------------------------------------------
 1:55 PM to 2:15 PM    | **Using Stroke Risk Score to predict Alzheimer's Disease Status**
 
-Monday 2018-05-07     | 23: Satyakam Mishra
+Monday 2018-05-07     | 23: Satyakam Mishra (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
 2:20 PM to 2:40 PM    | **Predicting Pedal Edema in patients from India**
 
