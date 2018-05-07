@@ -117,11 +117,11 @@ Monday 2018-05-07     | 21: Zainab Albar
 
 Monday 2018-05-07     | 22: Haimeng Bai 
 --------------------: | :-------------------------------------------------------------------------------------------
-1:55 PM to 2:15 PM    | Using Stroke Risk Score to predict Alzheimer's Disease Status
+1:55 PM to 2:15 PM    | **Using Stroke Risk Score to predict Alzheimer's Disease Status**
 
 Monday 2018-05-07     | 23: Satyakam Mishra
 --------------------: | :-------------------------------------------------------------------------------------------
-2:20 PM to 2:40 PM    | Predicting Pedal Edema in patients from India 
+2:20 PM to 2:40 PM    | **Predicting Pedal Edema in patients from India**
 
 Monday 2018-05-07     | 24: Preeti Pathak
 --------------------: | :-------------------------------------------------------------------------------------------
