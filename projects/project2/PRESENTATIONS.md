@@ -25,7 +25,7 @@ Project Titles **in bold** indicate that Dr. Love has seen that your work was po
 
 Thursday 2018-05-03   | 02: Caroline El Sanadi (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
-8:55 AM to 9:15 AM    | **Modeling the probability of developing osteoporosis in the Study of Women Across Nations**
+8:55 AM to 9:15 AM    | **The probability of developing osteoporosis in the Study of Women Across Nations**
 
 Thursday 2018-05-03   | 03: Katherine Dobbs 
 --------------------: | :-------------------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ Thursday 2018-05-03   | 12: Hyun Jo Kim (revision to come)
 
 Thursday 2018-05-03   | 13: Bilal Zonjy (revision to come) 
 --------------------: | :-------------------------------------------------------------------------------------------
-4:35 PM to 4:55 PM  | **Predicting movements in copper indexes using changes in copper prices and other predictors** 
+4:35 PM to 4:55 PM  | **Predicting movements in copper indexes using changes in copper prices** 
 
 ## 2018-05-07 Monday (First Session)
 
@@ -85,7 +85,7 @@ Monday 2018-05-07     | 14: Andrew Tang
 
 Monday 2018-05-07     | 15: Roberto Martinez (revision to come) 
 --------------------: | :-------------------------------------------------------------------------------------------
-9:55 AM to 10:15 AM  | **The effect of multiple chronic conditions on key outcomes in hospitalized HIV-positive patients**
+9:55 AM to 10:15 AM  | **The effect of multiple chronic conditions on outcomes in hospitalized HIV+ patients**
 
 Monday 2018-05-07     | 16: Sneha Vakamudi
 --------------------: | :-------------------------------------------------------------------------------------------
@@ -95,7 +95,7 @@ Monday 2018-05-07     | 17: Elina Misicka
 --------------------: | :-------------------------------------------------------------------------------------------
 10:45 AM to 11:05 AM  | **The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates**
 
-Monday 2018-05-07     | 18: Vaishali Deo
+Monday 2018-05-07     | 18: Vaishali Deo (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
 11:20 AM to 11:40 AM  | **The impact of citizenship status on the general health of adult U.S. residents**
 
