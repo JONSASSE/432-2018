@@ -137,15 +137,15 @@ Monday 2018-05-07     | 26: Jiajian (J.J.) Huang
 
 Monday 2018-05-07     | 27: Laura Cremer
 --------------------: | :-------------------------------------------------------------------------------------------
-4:10 PM to 4:30 PM    | Can being a health-nut decrease your overall risk of cancer?
+4:10 PM to 4:30 PM    | **Can being a health-nut decrease your overall risk of cancer?**
 
 Monday 2018-05-07     | 28: Abhishek Deshpande & Sandra Silva Camargo
 --------------------: | :-------------------------------------------------------------------------------------------
-4:35 PM to 4:55 PM    | Predicting *C. diff.* infection in lung transplant recipients
+4:35 PM to 4:55 PM    | **Predicting *C. diff.* infection in lung transplant recipients**
 
 Monday 2018-05-07     | 29: Gabrielle Rieth
 --------------------: | :-------------------------------------------------------------------------------------------
-5:00 PM to 5:20 PM    | Linking outcomes for head surgery patients to corticosteroid doses
+5:00 PM to 5:20 PM    | **Linking outcomes for head surgery patients to corticosteroid doses**
 
 ## 2018-05-08 Tuesday
 
