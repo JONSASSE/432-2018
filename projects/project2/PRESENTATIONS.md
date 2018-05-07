@@ -81,31 +81,31 @@ Project Titles **in bold** indicate that Dr. Love has seen that your work was po
 
 Monday 2018-05-07     | 14: Andrew Tang  
 --------------------: | :-------------------------------------------------------------------------------------------
-9:30 AM to 9:50 AM  | Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015
+9:30 AM to 9:50 AM  | **Upstaging trends in surgically-resected Non-Small Cell Lung Cancer, 2004-2015**
 
-Monday 2018-05-07     | 15: Roberto Martinez
+Monday 2018-05-07     | 15: Roberto Martinez (revision to come) 
 --------------------: | :-------------------------------------------------------------------------------------------
-9:55 AM to 10:15 AM  | The effect of multiple chronic conditions on key outcomes in hospitalized HIV-positive patients
+9:55 AM to 10:15 AM  | **The effect of multiple chronic conditions on key outcomes in hospitalized HIV-positive patients**
 
 Monday 2018-05-07     | 16: Sneha Vakamudi
 --------------------: | :-------------------------------------------------------------------------------------------
-10:20 AM to 10:40 AM  | Hospital length of stay: What is more important, the patient or the picture?
+10:20 AM to 10:40 AM  | **Hospital length of stay: What is more important, the patient or the picture?**
 
 Monday 2018-05-07     | 17: Elina Misicka
 --------------------: | :-------------------------------------------------------------------------------------------
-10:45 AM to 11:05 AM  | The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates
+10:45 AM to 11:05 AM  | **The Role of Patient-Staff Interactions in Hospital Outpatient Readmission Rates**
 
 Monday 2018-05-07     | 18: Vaishali Deo
 --------------------: | :-------------------------------------------------------------------------------------------
-11:20 AM to 11:40 AM  | The impact of citizenship status on the general health of adult U.S. residents
+11:20 AM to 11:40 AM  | **The impact of citizenship status on the general health of adult U.S. residents**
 
 Monday 2018-05-07     | 19: Peter Wilkinson
 --------------------: | :-------------------------------------------------------------------------------------------
-11:45 AM to 12:05 PM  | Integrative Omics of HepB vaccine response in co-infection with parasites
+11:45 AM to 12:05 PM  | **Integrative Omics of HepB vaccine response in co-infection with parasites**
 
 Monday 2018-05-07     | 20: Kedar Mahajan
 --------------------: | :-------------------------------------------------------------------------------------------
-12:10 PM to 12:30 PM  | How does brain atrophy predict disability in progressive multiple sclerosis?
+12:10 PM to 12:30 PM  | **How does brain atrophy predict disability in progressive multiple sclerosis?**
 
 ## 2018-05-07 Monday (Second Session)
 
@@ -113,7 +113,7 @@ Project Titles **in bold** indicate that Dr. Love has seen that your work was po
 
 Monday 2018-05-07     | 21: Zainab Albar  
 --------------------: | :-------------------------------------------------------------------------------------------
-1:30 PM to 1:50 PM    | Marijuana exposure and depression among females in NHANES, 2009-2012
+1:30 PM to 1:50 PM    | **Marijuana exposure and depression among females in NHANES, 2009-2012**
 
 Monday 2018-05-07     | 22: Haimeng Bai 
 --------------------: | :-------------------------------------------------------------------------------------------
@@ -125,15 +125,15 @@ Monday 2018-05-07     | 23: Satyakam Mishra
 
 Monday 2018-05-07     | 24: Preeti Pathak
 --------------------: | :-------------------------------------------------------------------------------------------
-2:45 PM to 3:05 PM    | Do lifetime smoking or drinking exposures increase the risk of pregnancy loss?
+2:45 PM to 3:05 PM    | **Do lifetime smoking or drinking exposures increase the risk of pregnancy loss?**
 
 Monday 2018-05-07     | 25: Kaylee Sarna
 --------------------: | :-------------------------------------------------------------------------------------------
-3:20 PM to 3:40 PM    | Predicting vegetarian diet using biochemical profile and health behaviors (NHANES 2009-10)
+3:20 PM to 3:40 PM    | **Predicting vegetarian diet using biochemical profile and health behaviors (NHANES 2009-10)**
 
 Monday 2018-05-07     | 26: Jiajian (J.J.) Huang
 --------------------: | :-------------------------------------------------------------------------------------------
-3:45 PM to 4:05 PM    | Predicting BMI and incidence of coronary heart disease in OMAS 2015
+3:45 PM to 4:05 PM    | **Predicting BMI and incidence of coronary heart disease in OMAS 2015**
 
 Monday 2018-05-07     | 27: Laura Cremer
 --------------------: | :-------------------------------------------------------------------------------------------
