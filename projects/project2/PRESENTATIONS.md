@@ -135,7 +135,7 @@ Monday 2018-05-07     | 26: Jiajian (J.J.) Huang
 --------------------: | :-------------------------------------------------------------------------------------------
 3:45 PM to 4:05 PM    | **Predicting BMI and incidence of coronary heart disease in OMAS 2015**
 
-Monday 2018-05-07     | 27: Laura Cremer
+Monday 2018-05-07     | 27: Laura Cremer (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
 4:10 PM to 4:30 PM    | **Can being a health-nut decrease your overall risk of cancer?**
 
@@ -143,7 +143,7 @@ Monday 2018-05-07     | 28: Abhishek Deshpande & Sandra Silva Camargo
 --------------------: | :-------------------------------------------------------------------------------------------
 4:35 PM to 4:55 PM    | **Predicting *C. diff.* infection in lung transplant recipients**
 
-Monday 2018-05-07     | 29: Gabrielle Rieth
+Monday 2018-05-07     | 29: Gabrielle Rieth (revision to come)
 --------------------: | :-------------------------------------------------------------------------------------------
 5:00 PM to 5:20 PM    | **Linking outcomes for head surgery patients to corticosteroid doses**
 
